@@ -1,0 +1,467 @@
+package compiler.ast.syntactic;
+
+import java.io.InputStream;
+import compiler.ast.nodes*;
+
+action code {:
+	static void dealWithType(Decl d, Type t)
+		if (d.type == null) d.type = t;
+		else d.type.bury(t);
+:};
+
+parser code {:
+	public void report_error(String message, Object info) {
+		StringBuffer m = new StringBuffer("\tParsing error");
+		if (info instanceof java_cup.runtime.Symbol) {
+			java_cup.runtime.Symbol s = (java_cup.runtime.Symbol) info;
+
+			if (s.left >= 0) {
+				m.append(" in line " + (s.left +1 ));
+				if (s.right >= 0) {
+					m.append(", column " + (s.right + 1));
+				}
+			}
+		}
+		m.append(" : " + message);
+		System.err.println(m);
+	}
+
+	public Parser(InputStream inp) {
+		this(new Yylex(inp));
+	}
+:};
+
+/* ------------------------------------------------- */
+/* keywords */
+terminal 				VOID, CHAR, INT, STRUCT, UNION, IF, ELSE, WHILE,
+						FOR, CONTINUE, BREAK, RETURN, SIZEOF;
+
+ /* single-character operations */
+ terminal				LPAREN, RPAREN, SEMICOLON, COMMA, ASSIGN, LBRACE,
+ 						RBRACE, LBRACKET, RBRACKET, ASTERISH, VBAR, CARET,
+ 						AMPERS, LT, GT, PLUS, MINUS, DIV, MOD, TILDE,
+ 						EXCLAM, DOT;
+
+/* multi-character operations */
+terminal				OR, AND, EQ, NE, LE, GE, SHL, SHR, INC, DEC, PTR;
+terminal 				MUL_ASSIGN, DIV_ASSIGN, MOD_ASSIGN, SUB_ASSIGN,
+						SHL_ASSIGN, SHR_ASSIGN, AND_ASSIGN, XOR_ASSIGN,
+						OR_ASSIGN;
+
+terminal String			IDENTIFIER, STRING_LITERAL;
+terminal Interger		INTEGER;
+terminal char			CHARACTER_LITERAL;
+
+/* ---------------------------------------------------- */
+non terminal AST					program;
+non terminal DeclList				decl;
+non terminal DeclList				delcs;
+non terminal FunctionDef			functionDef;
+non terminal DeclList				prmtrs;
+non terminal DeclList				declrs;
+non terminal DeclList				initDeclrs;
+non terminal Decl					initDeclr;
+non terminal Initializer			initializer;
+non terminal InitList				initList;
+non terminal Type					typeSpecf;
+non terminal DeclList				record;
+non terminal DeclList				plnDecl;
+non terminal Decl					declr;
+non terminal Decl					tmpDeclr;
+non terminal Stmt					stmt;
+non terminal StmtList				stmts;
+non terminal Expr					exprStmt;
+non terminal CompoundStmt			compoundStmt;
+non terminal Stmt					selectionStmt;
+non terminal Stmt					iterationStmt;
+non terminal Stmt					jumpStmt;
+non terminal EmptyExpr 				expr;
+non terminal BinaryExpr				assignmentExpr;
+non terminal BinaryOp				assignmentOp;
+non terminal Expr					constantExpr;
+non terminal BinaryExpr				logicalOrExpr;
+non terminal BinaryExpr				logicalAndExpr;
+non terminal BinaryExpr				inclusiveOrExpr;
+non terminal BinaryExpr				exclusiveOrExpr;
+non terminal BinaryExpr				andExpr;
+non terminal BinaryExpr				equalityExpr;
+non terminal BinaryOp				equalityOp;
+non terminal BinaryExpr				relationalExpr;
+non terminal BinaryOp				relationalOp;
+non terminal BinaryExpr				shiftExpr;
+non terminal BinaryOp				shiftOp;
+non terminal BinaryExpr 			addExpr;
+non terminal BinaryOp				addOp;
+non terminal BinaryExpr				multiExpr;
+non terminal BinaryOp				multiOp;
+non terminal CastExpr				castExpr;
+non terminal Type					typeName;
+non terminal UnaryExpr				unaryExpr;
+non terminal UnaryOp				unaryOp;
+non terminal UnaryExpr				postfixExpr;
+non terminal UnaryOp				postfix;
+non terminal ExprList				arguments;
+non terminal Expr					primaryExpr;
+non terminal Expr					constant;
+
+/* It seems that the following part is not necessary */
+/*
+precedence left					COMMA;
+precedence left					ASSIGN, MUL_ASSIGN, DIV_ASSIGN,
+								MOD_ASSIGN, SUB_ASSIGN, SHL_ASSIGN,
+								SHR_ASSIGN, AND_ASSIGN, XOR_ASSIGN,
+								OR_ASSIGN, PLUS_ASSIGN;
+precedence left					OR;
+precedence left					AND;
+precedence left					VBAR;
+precedence left					CARET;
+precedence left					AMPERS;
+precedence left					EQ, NE;
+precedence left					LT, GT, LE, GE;
+precedence left 				SHL, SHR;
+precedence left					PLUS, MINUS;
+precedence left					MULTI, DIV, MOD;
+precedence right
+*/
+precedence nonassoc				ELSE;
+
+/* grammar */
+/* declaration */
+program ::= program:p decl:d
+			{: p.decls.add(d); RESULT = p; :}
+		  |	program:p functionDef:d
+			{: p.decls.add(d); RESULT = p; :}
+	      |	decl:d
+	        {: RESULT = new AST(new DeclList(d)); :}
+		  |	functionDef:d
+	        {: RESULT = new AST(new DeclList(d)); :}
+		  ;
+decl ::= typeSpecf:t initDeclrs:init SEMICOLON
+		 {:
+		 	for (i : init.declrs) dealWithType(i, t);
+		 	RESULT = init;
+		 :}
+ 	   | typeSpecf:t SEMICOLON
+ 	   	 {:
+ 	   	 	DeclList tmp = new DeclList();
+ 	   	 	tmp.add(new TypeDecl(t));
+ 	   	 	RESULT = tmp;
+ 	   	 :}
+ 	   ;
+decls ::= /* empty */
+		{: RESULT = new DeclList(); :}
+		| decls:ds decl:d
+		{: ds.add(d); RESULT = ds; :}
+		;
+functionDef ::= typeSpecf:t plnDeclr: pdr LPAREN prmtrs:par RPAREN compoundStmt:c
+		      {: dealWithType(pdr ,t); RESULT = new FunctionDef(pdr.type, pdr.name, par, c); :}
+			  | typeSpecf:t plnDeclr:pdr LPAREN RPAREN compoundStmt:c
+			  {: dealWithType(pdr, t); RESULT = new FunctionDef(pdr.type, pdr.name, new DeclList(), c); :}
+			  ;
+prmtrs ::= plnDecl:pl
+		   {: RESULT = new DeclList(pl); :}
+		 | prmtrs:ps COMMA plnDecl:pl
+		   {: ps.add(pl); RESULT = ps; :}
+		 ;
+declrs ::= declr:d
+		   {: RESULT = (new DeclList()).add(d); :}
+		 | declrs:ds COMMA declr:d
+		   {: ds.add(d); RESULT = ds; :}
+		 ;
+initDeclrs ::= initDeclr:i
+		       {: RESULT = new DeclList(i); :}
+		     | initDeclrs:is COMMA initDeclr:i
+		       {: is.add(i); RESULT = is; :}
+			 ;
+initDeclr ::= declr:d ASSIGN initializer:init
+			  {: d.init = init; RESULT = d; :}
+		    | declr:d
+		      {: RESULT = d; :}
+		    ;
+
+initializer ::= assignmentExpr:e
+				{: RESULT = new InitValue(e); :}
+			  | LBRACKET initList:is RBRACKET
+			    {: RESULT = new InitList(is); :}
+			  ;
+initList ::= initializer:i:
+			 {: RESULT = (new InitList()).add(i); :}
+		   | initList:is COMMA initializer:i
+		   	 {: is.add(i); RESULT = is; :}
+		   ;
+typeSpecf ::= VOID
+			  {: RESULT = new VoidType(); :}
+			| CHAR
+			  {: RESULT = new CharType(); :}
+			| INT
+			  {: RESULT = new IntType(); :}
+			| STRUCT IDENTIFIER:id
+			  {: RESULT = new StructType(new Symbol(id), new DeclList()); :}
+			| UNION IDENTIFIER:id
+			  {: RESULT = new UnionType(new Symbol(id), new DeclList()); :}
+			| STRUCT LBRACKET record:r RBRACKET
+			  {: RESULT = new StructType(new Symbol(""), r); :}
+			| UNION LBRACKET record:r RBRACKET
+			  {: RESULT = new UnionType(new Symbol(""), r); :}
+			| STRUCT IDENTIFIER:id LBRACKET record:r RBRACKET
+			  {: RESULT = new StructType(new Symbol(id), r); :}
+			| UNION IDENTIFIER:id LBRACKET record:r RBRACKET
+		      {: RESULT = new UnionType(new Symbol(id), r); :}
+			;
+record ::= typeSpecf:t declrs:ds SEMICOLON
+		   {: for (d : ds) dealWithType(d, t); RESULT = ds;  :}
+		 | record:r typeSpecf:t declrs:ds SEMICOLON
+		   {: for (d : ds) dealWithType(d, t); r.add(ds); RESULT = r; :}
+		 ;
+
+plnDecl ::= typeSpecf:t declr:d
+			{: dealWithType(d, t); RESULT = t; :}
+ 		  ;
+declr ::= tmpDeclr:d
+		  {: RESULT = d; :}
+		| MULTI declr:d;
+		  {: d.type = new PointerType(d.type); RESULT =  d; :}
+tmpDeclr ::= IDENTIFIER:id
+		     {: RESULT = new VarDecl(null, new Symbol(id), new InitList()); :}
+		   | IDENTIFIER:id LPAREN prmtrs:para RPAREN
+		   	 {: RESULT = new FuncDecl(null, new Symbol(id), para); :}
+		   | IDENTIFIER:id LPAREN RPAREN
+		     {: RESULT = new FuncDecl(null, new Symbol(id), new DeclList()); :}
+		   | tmpDeclr:t RBRACE constantExpr:e RBRACE
+		     {: RESULT = new VarDecl(new ArrayType(t.type, e), t.name, new InitList()); :}
+
+
+/* statement */
+stmt ::= exprStmt:e
+		 {: RESULT = new Stmt(e); :}
+	   | compoundStmt:c
+	   	 {: RESULT = new CompoundStmt(c); :}
+	   | selectionStmt:s
+	     {: RESULT = new Stmt(s); :}
+	   | iterationStmt:s
+	     {: RESULT = new Stmt(s); :}
+	   | jumpStmt:s
+	     {: RESULT = new Stmt(s); :}
+	   ;
+stmts ::= /* empty */
+		  { RESULT = new StmtList(); }
+		| stmt:s stmts:ss
+		  {: ss.add(s); RESULT = ss; :}
+		;
+exprStmt ::= expr:e SEMICOLON
+			 {: RESULT = e; :}
+		   | SEMICOLON
+		     {: RESULT = new EmptyExpr(); :}
+		   ;
+compoundStmt ::= LBRACKET decls:ds stmts:ss RBRACKET
+			     {: RESULT = new CompoundStmt(ds, ss); :}
+			   ;
+selectionStmt ::= IF LPAREN expr:e RPAREN stmt:s
+				  {: RESULT = new IfStmt(e, s, new EmptyExpr()); :}
+				| IF LPAREN expr:e RPAREN stmt:s1 ELSE stmt:s2
+				  {: RESULT = new IfStmt(e, s1, s2); :}
+				;
+iterationStmt ::= WHLIE LPAREN expr:e RPAREN stmt:s
+  				  {: RESULT = new WhileLoop(e, s); :}
+				| FOR LPAREN exprStmt:es1 SEMICOLON exprStmt:es2 SEMICOLON expr:e RPAREN stmt:s
+				  {: RESULT = new ForLoop(es1, es2, e, s); :}
+				| FOR LPAREN exprStmt:es1 SEMICOLON exprStmt:es2 SEMICOLON RPAREN stmt:s
+				  {: RESULT = new ForLoop(es1, es2, new EmptyExpr(), s); :}
+				;
+jumpStmt ::= CONTINUE SEMICOLON
+			 {: RESULT = new ContinueStmt(); :}
+		   | BREAK SEMICOLON
+		     {: RESULT = new BreakStmt(); :}
+		   | RETURN exprStmt:e SEMICOLON
+		   	 {: RESULT = new ReturnStmt(e); :}
+		   ;
+
+/* expressions */
+expr ::= assignmentExpr:e
+		 {: RESULT = e; :}
+	   | expr:e1 COMMA assignmentExpr:e2
+	     {: RESULT = new BinaryExpr(e1, BinaryOp.COMMA, e2); :}
+	   ;
+assignmentExpr ::= logicalOrExpr:e
+				   {: RESULT = e; :}
+				 | unaryExpr:e1 assignmentOp:op assignmentExpr:e2
+				   {: RESULT = new BinaryExpr(e1, op, e2); :}
+				 ;
+assignmentOp ::= ASSIGN
+			     {: RESULT = BinaryOp.ASSIGN; :}
+			   | MUL_ASSIGN
+			     {: RESULT = BinaryOp.MUL_ASSIGN; :}
+			   | DIV_ASSIGN
+			     {: RESULT = BinaryOp.DIV_ASSIGN; :}
+			   | MOD_ASSIGN
+			     {: RESULT = BinaryOp.MOD_ASSIGN; :}
+			   | PLUS_ASSIGN
+			     {: RESULT = BinaryOp.PLUS_ASSIGN; :}
+			   | SUB_ASSIGN
+			     {: RESULT = BinaryOp.SUB_ASSIGN; :}
+			   | SHL_ASSIGN
+			     {: RESULT = BinaryOp.SHL_ASSIGN; :}
+			   | SHR_ASSIGN
+			     {: RESULT = BinaryOp.SHR_ASSIGN; :}
+			   | AND_ASSIGN
+			     {: RESULT = BinaryOp.AND_ASSIGN; :}
+			   | XOR_ASSIGN
+			     {: RESULT = BinaryOp.XOR_ASSIGN; :}
+			   | OR_ASSIGN
+			     {: RESULT = BinaryOp.OR_ASSIGN; :}
+			   ;
+constantExpr ::= logicalOrExpr:e
+				 {: RESULT = e; :}
+			   ;
+logicalOrExpr ::= logicalAndExpr:e
+				  {: RESULT = e; :}
+				| logicalOrExpr:e1 OR logicalAndExpr:e2
+				  {: RESULT = new BinaryExpr(e1, BinaryOp.OR, e2); :}
+				;
+logicalAndExpr ::= inclusiveOrExpr:e
+				   {: RESULT = e; :}
+				 | logicalAndExpr:e1 AND inclusiveOrExpr:e2
+   				   {: RESULT = new BinaryExpr(e1, BinaryOp.AND, e2); :}
+				 ;
+inclusiveOrExpr ::= exclusiveOrExpr:e
+				    {: RESULT = e; :}
+				  | inclusiveOrExpr:e1 VBAR exclusiveOrExpr:e2
+				    {: RESULT = new BinaryEXpr(e1, BinaryOp.LOGICAL_OR, e2); :}
+				  ;
+exclusiveOrExpr ::= andExpr:e
+				    {: RESULT = e; :}
+				  | exclusiveOrExpr:e1 CARET andExpr:e2
+				    {: RESULT = new BinaryExpr(e1, BinaryOp.LOGICAL_XOR, e2); :}
+				  ;
+andExpr ::= equalityExpr:e
+		    {: RESULT = e; :}
+		  | andExpr:e1 AMPERS equalityExpr:e2
+		    {: RESULT = new BinaryExpr(e1, BinaryOp.LOGICAL_AND, e2); :}
+		  ;
+equalityExpr ::= relationalExpr:e
+				 {: RESULT = e; :}
+			   | equalityExpr:e1 equalityOp relationalExpr:e2
+			     {: RESULT = new BinaryExpr(e1, BinaryOp.EQUAL, e2); :}
+			   ;
+equalityOp ::= EQ
+   			   {: RESULT = BinaryOp.EQ; :}
+			 | NE
+			   {: RESULT = BinaryOp.NE; :}
+			 ;
+relationalExpr ::= shiftExpr:e
+				   {: RESULT = e; :}
+				 | relationalExpr:e1 equalityOp:op shiftExpr:e2
+				   {: RESULT = new BinaryExpr(e1, op, e2); :}
+				 ;
+relationalOp ::= LT
+ 				 {: RESULT = BinaryOp.LT; :}
+		       | GT
+ 				 {: RESULT = BinaryOp.GT; :}
+		       | LE
+ 				 {: RESULT = BinaryOp.LE; :}
+		       | GE
+ 				 {: RESULT = BinaryOp.GE; :}
+		       ;
+shiftExpr ::= addExpr:e
+			  {: RESULT = e; :}
+			| shiftExpr:e1 shiftOp:op addExpr:e2
+			  {: RESULT = new BinaryExpr(e1, op, e2); :}
+			;
+shiftOp ::= SHR
+ 			{: RESULT = BinaryOp.SHR; :}
+		  | SHL
+ 		    {: RESULT = BinaryOp.SHL; :}
+		  ;
+addExpr ::= multiExpr:e
+			{: RESULT = e :}
+		  | addExpr:e1 addOp:op multiExpr:e2
+			{: RESULT = new BinaryExpr(e1, op, e2); :}
+		  ;
+addOp ::= PLUS
+		  {: RESULT = BinaryOp.PLUS; :}
+		| MINUS
+		  {: RESULT = BinaryOp.SUB; :}
+		;
+multiExpr ::= castExpr:e
+  			  {: RESULT = e; :}
+			| multiExpr:e1 multiOp:op castExpr:e2
+			  {: RESULT = new BinaryExpr(e1, op, e2); :}
+			;
+multiOp ::= MULTI
+ 			{: RESULT = BinaryOp.MUL :}
+		  | DIV
+ 			{: RESULT = BinaryOp.DIV :}
+		  | MOD
+ 			{: RESULT = BinaryOp.MOD :}
+		  ;
+castExpr ::= unaryExpr:e
+			 {: RESULT = e; :}
+		   | LPAREN typeName:t RPAREN castExpr:e
+		     {: RESULT = new CastExpr(t, e); :}
+		   ;
+typeName ::= typeSpecf:t
+			 {: RESULT = t; :}
+		   | typeName:t MULTI
+		   	 {: RESULT = new PointerType(t); :}
+		   ;
+unaryExpr ::= postfixExpr:e
+			  {: RESULT = e :}
+			| INC unaryExpr:e
+			  {: RESULT = new SelfIncrement(e); :}
+		 	| DEC unaryExpr:e
+		 	  {: RESULT = new SelfDecrement(e); :}
+		 	| unaryOp:op castExpr:e
+		 	  {: RESULT = new UnaryExpr(op, e); :}
+		 	| SIZEOF unaryExpr:e
+		 	  {: RESULT = new UnaryExpr(UnaryOp.SIZEOF, e); :}
+		 	| SIZEOF LPAREN typeName:t RPAREN
+		 	  {: RESULT = new SizeofExpr(t); :}
+		 	;
+unaryOp ::= AMPERS
+ 			{: RESULT = UnaryOp.AMPERSAND; :}
+ 		  | MULTI
+ 		    {: RESULT = UnaryOp.ASTERISK; :}
+ 		  | PLUS
+ 		    {: RESULT = UnaryOp.PLUS; :}
+ 		  | MINUS
+ 		    {: RESULT = UnaryOp.MINUS; :}
+ 		  | TILDE
+ 		    {: RESULT = UnaryOp.TILDE; :}
+ 		  | EXCLAM
+ 		    {: RESULT = UnaryOp.NOT; :}
+ 		  ;
+
+postfixExpr ::= primaryExpr:e
+  				{: RESULT = e; :}
+	 		  | postfixExpr:e1 LBRACE expr:e2 RBRACE
+	 		    {: RESULT = new ArrayAccess(e1, e2); :}
+	 		  | postfixExpr:e LPAREN arguments:a RPAREN
+	 		    {: RESULT = new FunctionCall(e, a); :}
+	 		  | postfixExpr:e LPAREN RPAREN
+	 		    {: RESULT = new FunctionCall(e, new ExprList()); :}
+	 		  | postfixExpr:e DOT IDENTIFIER:id
+	 		    {: RESULT = new RecordAccess(e, new Symbol(id)); :}
+	 		  | postfixExpr:e PTR IDENTIFIER:id
+	 		    {: RESULT = new PointerAccess(e, new Symbol(id)); :}
+	 		  | postfixExpr:e INC
+	 		    {: RESULT = new SelfIncrement(e); :}
+	 		  | postfixExpr:e DEC
+	 		    {: RESULT = new SelfDecrement(e); :}
+	     	  ;
+arguments ::= assignmentExpr:e
+			  {: RESULT = (new ExprList()).add(e); :}
+			| arguments:l COMMA assignmentExpr:e
+			  {: l.add(e); RESULT = l; :}
+			;
+primaryExpr ::= IDENTIFIER:id
+  			  | {: RESULT = new Identifier(new Symbol(id)); :}
+			  | INTEGER:i
+			  	{: RESULT = new IntConst(i.toInt()); :}
+			  | CHARACTER_LITERAL:c
+			  	{: RESULT = new CharConst(c); :}
+			  | STRING_LITERAL:s
+			  	{: RESULT = new StringConst(s); :}
+			  | LPAREN expr:e RPAREN
+			  	{: RESULT = e;  :}
+			  ;
+
