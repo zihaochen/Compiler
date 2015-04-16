@@ -1,12 +1,13 @@
 package compiler.ast.syntactic;
 
 import java.io.InputStream;
-import compiler.ast.nodes*;
+import compiler.ast.nodes.*;
 
 action code {:
-	static void dealWithType(Decl d, Type t)
+	void dealWithType(Decl d, Type t){
 		if (d.type == null) d.type = t;
-		else d.type.bury(t);
+		else d.type.dig(t);
+	}
 :};
 
 parser code {:
@@ -39,23 +40,23 @@ terminal 				VOID, CHAR, INT, STRUCT, UNION, IF, ELSE, WHILE,
  /* single-character operations */
  terminal				LPAREN, RPAREN, SEMICOLON, COMMA, ASSIGN, LBRACE,
  						RBRACE, LBRACKET, RBRACKET, ASTERISH, VBAR, CARET,
- 						AMPERS, LT, GT, PLUS, MINUS, DIV, MOD, TILDE,
+ 						AMPERS, LT, GT, PLUS, MINUS, DIV, MULTI, MOD, TILDE,
  						EXCLAM, DOT;
 
 /* multi-character operations */
 terminal				OR, AND, EQ, NE, LE, GE, SHL, SHR, INC, DEC, PTR;
 terminal 				MUL_ASSIGN, DIV_ASSIGN, MOD_ASSIGN, SUB_ASSIGN,
 						SHL_ASSIGN, SHR_ASSIGN, AND_ASSIGN, XOR_ASSIGN,
-						OR_ASSIGN;
+						OR_ASSIGN, PLUS_ASSIGN;
 
 terminal String			IDENTIFIER, STRING_LITERAL;
 terminal Interger		INTEGER;
-terminal char			CHARACTER_LITERAL;
+terminal char			CHAR_LITERAL;
 
 /* ---------------------------------------------------- */
 non terminal AST					program;
 non terminal DeclList				decl;
-non terminal DeclList				delcs;
+non terminal DeclList				decls;
 non terminal FunctionDef			functionDef;
 non terminal DeclList				prmtrs;
 non terminal DeclList				declrs;
@@ -75,7 +76,7 @@ non terminal CompoundStmt			compoundStmt;
 non terminal Stmt					selectionStmt;
 non terminal Stmt					iterationStmt;
 non terminal Stmt					jumpStmt;
-non terminal EmptyExpr 				expr;
+non terminal Expr	 				expr;
 non terminal BinaryExpr				assignmentExpr;
 non terminal BinaryOp				assignmentOp;
 non terminal Expr					constantExpr;
@@ -98,13 +99,11 @@ non terminal CastExpr				castExpr;
 non terminal Type					typeName;
 non terminal UnaryExpr				unaryExpr;
 non terminal UnaryOp				unaryOp;
-non terminal UnaryExpr				postfixExpr;
-non terminal UnaryOp				postfix;
+non terminal Expr					postfixExpr;
 non terminal ExprList				arguments;
 non terminal Expr					primaryExpr;
 non terminal Expr					constant;
 
-/* It seems that the following part is not necessary */
 /*
 precedence left					COMMA;
 precedence left					ASSIGN, MUL_ASSIGN, DIV_ASSIGN,
@@ -121,24 +120,27 @@ precedence left					LT, GT, LE, GE;
 precedence left 				SHL, SHR;
 precedence left					PLUS, MINUS;
 precedence left					MULTI, DIV, MOD;
+precedence right 				POINTERTYPE;
 precedence right
+precedence left					INC, DEC, DOT, PTR;
 */
+
 precedence nonassoc				ELSE;
 
 /* grammar */
 /* declaration */
 program ::= program:p decl:d
-			{: p.decls.add(d); RESULT = p; :}
+			{: p.decls.add(d.decls); RESULT = p; :}
 		  |	program:p functionDef:d
 			{: p.decls.add(d); RESULT = p; :}
 	      |	decl:d
-	        {: RESULT = new AST(new DeclList(d)); :}
+	        {: RESULT = new AST(d); :}
 		  |	functionDef:d
-	        {: RESULT = new AST(new DeclList(d)); :}
+	        {: RESULT = new AST(d); :}
 		  ;
 decl ::= typeSpecf:t initDeclrs:init SEMICOLON
 		 {:
-		 	for (i : init.declrs) dealWithType(i, t);
+		 	for (Decl i : init.declrs) dealWithType(i, t);
 		 	RESULT = init;
 		 :}
  	   | typeSpecf:t SEMICOLON
@@ -148,15 +150,15 @@ decl ::= typeSpecf:t initDeclrs:init SEMICOLON
  	   	 	RESULT = tmp;
  	   	 :}
  	   ;
-decls ::= /* empty */
-		{: RESULT = new DeclList(); :}
+decls ::= decl:d
+		{: RESULT = (new DeclList()).add(d); :}
 		| decls:ds decl:d
 		{: ds.add(d); RESULT = ds; :}
 		;
-functionDef ::= typeSpecf:t plnDeclr: pdr LPAREN prmtrs:par RPAREN compoundStmt:c
-		      {: dealWithType(pdr ,t); RESULT = new FunctionDef(pdr.type, pdr.name, par, c); :}
-			  | typeSpecf:t plnDeclr:pdr LPAREN RPAREN compoundStmt:c
-			  {: dealWithType(pdr, t); RESULT = new FunctionDef(pdr.type, pdr.name, new DeclList(), c); :}
+functionDef ::= typeSpecf:t declr:d LPAREN prmtrs:par RPAREN compoundStmt:c
+		      {: dealWithType(d ,t); RESULT = new FunctionDef(d.type, d.name, par, c); :}
+			  | typeSpecf:t declr:d LPAREN RPAREN compoundStmt:c
+			  {: dealWithType(d, t); RESULT = new FunctionDef(d.type, d.name, new DeclList(), c); :}
 			  ;
 prmtrs ::= plnDecl:pl
 		   {: RESULT = new DeclList(pl); :}
@@ -164,7 +166,7 @@ prmtrs ::= plnDecl:pl
 		   {: ps.add(pl); RESULT = ps; :}
 		 ;
 declrs ::= declr:d
-		   {: RESULT = (new DeclList()).add(d); :}
+		   {: RESULT = new DeclList(d); :}
 		 | declrs:ds COMMA declr:d
 		   {: ds.add(d); RESULT = ds; :}
 		 ;
@@ -178,13 +180,12 @@ initDeclr ::= declr:d ASSIGN initializer:init
 		    | declr:d
 		      {: RESULT = d; :}
 		    ;
-
 initializer ::= assignmentExpr:e
 				{: RESULT = new InitValue(e); :}
 			  | LBRACKET initList:is RBRACKET
 			    {: RESULT = new InitList(is); :}
 			  ;
-initList ::= initializer:i:
+initList ::= initializer:i
 			 {: RESULT = (new InitList()).add(i); :}
 		   | initList:is COMMA initializer:i
 		   	 {: is.add(i); RESULT = is; :}
@@ -219,8 +220,9 @@ plnDecl ::= typeSpecf:t declr:d
  		  ;
 declr ::= tmpDeclr:d
 		  {: RESULT = d; :}
-		| MULTI declr:d;
-		  {: d.type = new PointerType(d.type); RESULT =  d; :}
+		| MULTI declr:d  /* %prec POITERTYPE */
+		  {: d.type = new PointerType(d.type); RESULT = d; :}
+		;
 tmpDeclr ::= IDENTIFIER:id
 		     {: RESULT = new VarDecl(null, new Symbol(id), new InitList()); :}
 		   | IDENTIFIER:id LPAREN prmtrs:para RPAREN
@@ -229,8 +231,7 @@ tmpDeclr ::= IDENTIFIER:id
 		     {: RESULT = new FuncDecl(null, new Symbol(id), new DeclList()); :}
 		   | tmpDeclr:t RBRACE constantExpr:e RBRACE
 		     {: RESULT = new VarDecl(new ArrayType(t.type, e), t.name, new InitList()); :}
-
-
+			;
 /* statement */
 stmt ::= exprStmt:e
 		 {: RESULT = new Stmt(e); :}
@@ -243,9 +244,9 @@ stmt ::= exprStmt:e
 	   | jumpStmt:s
 	     {: RESULT = new Stmt(s); :}
 	   ;
-stmts ::= /* empty */
-		  { RESULT = new StmtList(); }
-		| stmt:s stmts:ss
+stmts ::= stmt:s
+		  {: RESULT = (new StmtList()).add(s); :}
+		| stmts:ss stmt:ss
 		  {: ss.add(s); RESULT = ss; :}
 		;
 exprStmt ::= expr:e SEMICOLON
@@ -261,7 +262,7 @@ selectionStmt ::= IF LPAREN expr:e RPAREN stmt:s
 				| IF LPAREN expr:e RPAREN stmt:s1 ELSE stmt:s2
 				  {: RESULT = new IfStmt(e, s1, s2); :}
 				;
-iterationStmt ::= WHLIE LPAREN expr:e RPAREN stmt:s
+iterationStmt ::= WHILE LPAREN expr:e RPAREN stmt:s
   				  {: RESULT = new WhileLoop(e, s); :}
 				| FOR LPAREN exprStmt:es1 SEMICOLON exprStmt:es2 SEMICOLON expr:e RPAREN stmt:s
 				  {: RESULT = new ForLoop(es1, es2, e, s); :}
@@ -457,11 +458,10 @@ primaryExpr ::= IDENTIFIER:id
   			  | {: RESULT = new Identifier(new Symbol(id)); :}
 			  | INTEGER:i
 			  	{: RESULT = new IntConst(i.toInt()); :}
-			  | CHARACTER_LITERAL:c
+			  | CHAR_LITERAL:c
 			  	{: RESULT = new CharConst(c); :}
 			  | STRING_LITERAL:s
 			  	{: RESULT = new StringConst(s); :}
 			  | LPAREN expr:e RPAREN
 			  	{: RESULT = e;  :}
 			  ;
-

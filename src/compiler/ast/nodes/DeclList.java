@@ -9,7 +9,7 @@ public class DeclList implements House{
     public List<Decl> decls;
 
     public DeclList() {
-        decls = new LinkedList<Decl>();
+        decls = new LinkedList<>();
     }
 
     public DeclList(List<Decl> decls) {
@@ -17,8 +17,13 @@ public class DeclList implements House{
     }
 
     public DeclList(Decl decl) {
-        decls = new LinkedList<Decl>();
+        decls = new LinkedList<>();
         decls.add(decl);
+    }
+
+    public DeclList(DeclList dd) {
+        decls = new LinkedList<>();
+        decls.addAll(dd.decls);
     }
 
     public DeclList add(List<Decl> d){
@@ -28,6 +33,11 @@ public class DeclList implements House{
 
     public DeclList add(Decl d){
         decls.add(d);
+        return this;
+    }
+
+    public DeclList add(DeclList dl){
+        this.decls.addAll(dl.decls);
         return this;
     }
 

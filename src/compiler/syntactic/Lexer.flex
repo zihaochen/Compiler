@@ -9,7 +9,7 @@ import java_cup.runtime.*;
 %line
 %column
 %cup
-%implements Symbols
+%implements sym
 
 %{
     private int CommentCount = 0;

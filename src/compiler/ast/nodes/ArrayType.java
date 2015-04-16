@@ -2,8 +2,7 @@ package compiler.ast.nodes;
 
 import compiler.ast.visitor.Visitor;
 
-public class ArrayType extends Type implements House{
-    public Type baseType;
+public class ArrayType extends TypeDig implements House{
     public Expr arraySize;
 
     public ArrayType() {

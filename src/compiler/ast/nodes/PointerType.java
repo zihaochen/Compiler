@@ -2,7 +2,7 @@ package compiler.ast.nodes;
 
 import compiler.ast.visitor.Visitor;
 
-public class PointerType extends Type implements House{
+public class PointerType extends TypeDig implements House{
     public Type baseType;
 
     public PointerType() {
