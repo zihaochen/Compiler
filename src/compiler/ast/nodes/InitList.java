@@ -1,5 +1,6 @@
 package compiler.ast.nodes;
 
+import java.util.LinkedList;
 import java.util.List;
 import compiler.ast.visitor.Visitor;
 
@@ -7,7 +8,7 @@ public class InitList extends Initializer implements House{
     public List<Initializer> inits;
 
     public InitList() {
-        inits = null;
+        inits = new LinkedList<>();
     }
 
     public InitList(List<Initializer> inits) {
@@ -19,6 +20,7 @@ public class InitList extends Initializer implements House{
     }
 
     public InitList add(Initializer init){
+
         this.inits.add(init);
         return this;
     }

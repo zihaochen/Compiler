@@ -1,0 +1,11 @@
+<AST> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: main> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: helloworld
+> 
+					<ReturnStmt> 
+						<IntConst: 0> 

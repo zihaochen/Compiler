@@ -2,6 +2,7 @@ package compiler.syntactic;
 
 import java.io.InputStream;
 import compiler.ast.nodes.*;
+import java.io.Reader;
 
 action code {:
 	void dealWithType(Decl d, Type t){
@@ -25,10 +26,15 @@ parser code {:
 		}
 		m.append(" : " + message);
 		System.err.println(m);
+
 	}
 
 	public parser(InputStream inp) {
 		this(new Yylex(inp));
+	}
+
+	public parser(Reader r) {
+		this(new Yylex(r));
 	}
 :};
 
@@ -104,28 +110,7 @@ non terminal ExprList				arguments;
 non terminal Expr					primaryExpr;
 non terminal Expr					constant;
 
-/*
-precedence left					COMMA;
-precedence left					ASSIGN, MUL_ASSIGN, DIV_ASSIGN,
-								MOD_ASSIGN, SUB_ASSIGN, SHL_ASSIGN,
-								SHR_ASSIGN, AND_ASSIGN, XOR_ASSIGN,
-								OR_ASSIGN, PLUS_ASSIGN;
-precedence left					OR;
-precedence left					AND;
-precedence left					VBAR;
-precedence left					CARET;
-precedence left					AMPERS;
-precedence left					EQ, NE;
-precedence left					LT, GT, LE, GE;
-precedence left 				SHL, SHR;
-precedence left					PLUS, MINUS;
-precedence left					MULTI, DIV, MOD;
-precedence right 				POINTERTYPE;
-precedence right
-precedence left					INC, DEC, DOT, PTR;
-*/
-
-precedence nonassoc				ELSE;
+precedence nonassoc ELSE;
 
 /* grammar */
 /* declaration */
@@ -140,7 +125,8 @@ program ::= program:p decl:d
 		  ;
 decl ::= typeSpecf:t initDeclrs:init SEMICOLON
 		 {:
-		 	for (Decl i : init.decls) dealWithType(i, t);
+		 	for (Decl i : init.decls)
+		 	 dealWithType(i, t);
 		 	RESULT = init;
 		 :}
  	   | typeSpecf:t SEMICOLON
@@ -151,12 +137,12 @@ decl ::= typeSpecf:t initDeclrs:init SEMICOLON
  	   	 :}
  	   ;
 decls ::= decl:d
-		{: RESULT = (new DeclList()).add(d); :}
+		  {: RESULT = (new DeclList()).add(d); :}
 		| decls:ds decl:d
-		{: ds.add(d); RESULT = ds; :}
+		  {: ds.add(d); RESULT = ds; :}
 		;
 functionDef ::= typeSpecf:t declr:d compoundStmt:c
-		      {: dealWithType(d,t); RESULT = new FunctionDef(d.type, d.name, ((FunctionDecl) d).prmtrs, c); :}
+	 			{: dealWithType(d,t); RESULT = new FunctionDef(d.type, d.name, ((FunctionDecl) d).prmtrs, c); :}
 			  ;
 prmtrs ::= plnDecl:pl
 		   {: RESULT = new DeclList(pl); :}
@@ -180,7 +166,7 @@ initDeclr ::= declr:d ASSIGN initializer:init
 		    ;
 initializer ::= assignmentExpr:e
 				{: RESULT = new InitValue(e); :}
-			  | LBRACKET initList:is RBRACKET
+			  | LBRACE initList:is RBRACE
 			    {: RESULT = new InitList(is); :}
 			  ;
 initList ::= initializer:i
@@ -198,13 +184,13 @@ typeSpecf ::= VOID
 			  {: RESULT = new StructType(new Symbol(id), new DeclList()); :}
 			| UNION IDENTIFIER:id
 			  {: RESULT = new UnionType(new Symbol(id), new DeclList()); :}
-			| STRUCT LBRACKET record:r RBRACKET
+			| STRUCT LBRACE record:r RBRACE
 			  {: RESULT = new StructType(new Symbol(""), r); :}
-			| UNION LBRACKET record:r RBRACKET
+			| UNION LBRACE record:r RBRACE
 			  {: RESULT = new UnionType(new Symbol(""), r); :}
-			| STRUCT IDENTIFIER:id LBRACKET record:r RBRACKET
+			| STRUCT IDENTIFIER:id LBRACE record:r RBRACE
 			  {: RESULT = new StructType(new Symbol(id), r); :}
-			| UNION IDENTIFIER:id LBRACKET record:r RBRACKET
+			| UNION IDENTIFIER:id LBRACE record:r RBRACE
 		      {: RESULT = new UnionType(new Symbol(id), r); :}
 			;
 record ::= typeSpecf:t declrs:ds SEMICOLON
@@ -214,12 +200,13 @@ record ::= typeSpecf:t declrs:ds SEMICOLON
 		 ;
 
 plnDecl ::= typeSpecf:t declr:d
-			{: dealWithType(d, t); RESULT = new DeclList(d); :}
+			{: dealWithType(d, t);
+			RESULT = new DeclList(d); :}
  		  ;
 declr ::= tmpDeclr:d
 		  {: RESULT = d; :}
-		| MULTI declr:d  /* %prec POITERTYPE */
-		  {: d.type = new PointerType(d.type); RESULT = d; :}
+		| MULTI declr:d
+		  {: d.type = new PointerType(d.type); RESULT = d;:}
 		;
 tmpDeclr ::= IDENTIFIER:id
 		     {: RESULT = new VarDecl(null, new Symbol(id), new InitList()); :}
@@ -227,7 +214,7 @@ tmpDeclr ::= IDENTIFIER:id
 		   	 {: RESULT = new FunctionDecl(null, new Symbol(id), para); :}
 		   | IDENTIFIER:id LPAREN RPAREN
 		     {: RESULT = new FunctionDecl(null, new Symbol(id), new DeclList()); :}
-		   | tmpDeclr:t RBRACE constantExpr:e RBRACE
+		   | tmpDeclr:t LBRACKET constantExpr:e RBRACKET
 		     {: RESULT = new VarDecl(new ArrayType(t.type, e), t.name, new InitList()); :}
 			;
 /* statement */
@@ -252,8 +239,14 @@ exprStmt ::= expr:e SEMICOLON
 		   | SEMICOLON
 		     {: RESULT = new EmptyExpr(); :}
 		   ;
-compoundStmt ::= LBRACKET decls:ds stmts:ss RBRACKET
+compoundStmt ::= LBRACE decls:ds stmts:ss RBRACE
 			     {: RESULT = new CompoundStmt(ds, ss); :}
+			   | LBRACE decls:ds RBRACE
+			     {: RESULT = new CompoundStmt(ds, new StmtList()); :}
+			   | LBRACE stmts:ss RBRACE
+			     {: RESULT = new CompoundStmt(new DeclList(), ss); :}
+			   | LBRACE RBRACE
+			   	 {: RESULT = new CompoundStmt(new DeclList(), new StmtList()); :}
 			   ;
 selectionStmt ::= IF LPAREN expr:e RPAREN stmt:s
 				  {: RESULT = new IfStmt(e, s, new EmptyExpr()); :}
@@ -262,16 +255,16 @@ selectionStmt ::= IF LPAREN expr:e RPAREN stmt:s
 				;
 iterationStmt ::= WHILE LPAREN expr:e RPAREN stmt:s
   				  {: RESULT = new WhileLoop(e, s); :}
-				| FOR LPAREN exprStmt:es1 SEMICOLON exprStmt:es2 SEMICOLON expr:e RPAREN stmt:s
+				| FOR LPAREN exprStmt:es1  exprStmt:es2  expr:e RPAREN stmt:s
 				  {: RESULT = new ForLoop(es1, es2, e, s); :}
-				| FOR LPAREN exprStmt:es1 SEMICOLON exprStmt:es2 SEMICOLON RPAREN stmt:s
+				| FOR LPAREN exprStmt:es1  exprStmt:es2  RPAREN stmt:s
 				  {: RESULT = new ForLoop(es1, es2, new EmptyExpr(), s); :}
 				;
 jumpStmt ::= CONTINUE SEMICOLON
 			 {: RESULT = new ContinueStmt(); :}
 		   | BREAK SEMICOLON
 		     {: RESULT = new BreakStmt(); :}
-		   | RETURN exprStmt:e SEMICOLON
+		   | RETURN exprStmt:e
 		   	 {: RESULT = new ReturnStmt(e); :}
 		   ;
 /* expressions */
@@ -431,7 +424,7 @@ unaryOp ::= AMPERS
 
 postfixExpr ::= primaryExpr:e
   				{: RESULT = e; :}
-	 		  | postfixExpr:e1 LBRACE expr:e2 RBRACE
+	 		  | postfixExpr:e1 LBRACKET expr:e2 RBRACKET
 	 		    {: RESULT = new ArrayAccess(e1, e2); :}
 	 		  | postfixExpr:e LPAREN arguments:a RPAREN
 	 		    {: RESULT = new FunctionCall(e, a); :}
@@ -452,7 +445,7 @@ arguments ::= assignmentExpr:e
 			  {: l.add(e); RESULT = l; :}
 			;
 primaryExpr ::= IDENTIFIER:id
-  			  	{: RESULT = new Identifier(new Symbol(id)); :}
+			 	{: RESULT = new Identifier(new Symbol(id)); :}
 			  | INTEGER:i
 			  	{: RESULT = new IntConst(i.intValue()); :}
 			  | CHAR_LITERAL:c

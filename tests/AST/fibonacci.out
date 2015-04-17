@@ -1,0 +1,63 @@
+<AST> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: fib> 
+				<VarDecl> 
+					<IntType> 
+					<Id: n> 
+					<InitList> 
+					<If> 
+						<BinaryExpr> 
+							<OR> 
+							<BinaryExpr> 
+								<EQ> 
+								<Id: n> 
+								<IntConst: 0> 
+							<BinaryExpr> 
+								<EQ> 
+								<Id: n> 
+								<IntConst: 1> 
+								<ReturnStmt> 
+									<IntConst: 1> 
+								<ReturnStmt> 
+									<BinaryExpr> 
+										<ADD> 
+										<FunctionCall> 
+											<Id: fib> 
+											<ExprList> 
+												<BinaryExpr> 
+													<SUB> 
+													<Id: n> 
+													<IntConst: 1> 
+										<FunctionCall> 
+											<Id: fib> 
+											<ExprList> 
+												<BinaryExpr> 
+													<SUB> 
+													<Id: n> 
+													<IntConst: 2> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: main> 
+					<VarDecl> 
+						<IntType> 
+						<Id: n> 
+						<InitList> 
+					<FunctionCall> 
+						<Id: scanf> 
+						<ExprList> 
+							<StringConst: %d> 
+							<UnaryExpr> 
+								<AMPERSAND> 
+								<Id: n> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: %d
+> 
+							<FunctionCall> 
+								<Id: fib> 
+								<ExprList> 
+									<Id: n> 
+					<ReturnStmt> 
+						<IntConst: 0> 

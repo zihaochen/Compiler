@@ -10,7 +10,11 @@ public abstract class TypeDig extends Type implements House{
 
     @Override
     public void dig(Type t) {
-        if (baseType == null) baseType = t;
-            else baseType.dig(t);
+        if (baseType == null) {
+            baseType = t;
+        }
+            else {
+            baseType.dig(t);
+        }
     }
 }

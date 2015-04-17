@@ -1,0 +1,266 @@
+<AST> 
+		<VarDecl> 
+			<ArrayType> 
+				<IntType> 
+				<IntConst: 1005> 
+			<Id: a> 
+			<InitList> 
+		<FunctionDef> 
+			<VoidType> 
+			<Id: swap> 
+				<VarDecl> 
+					<PointerType> 
+						<IntType> 
+					<Id: a> 
+					<InitList> 
+				<VarDecl> 
+					<PointerType> 
+						<IntType> 
+					<Id: b> 
+					<InitList> 
+					<VarDecl> 
+						<IntType> 
+						<Id: tmp> 
+						<InitValue> 
+							<UnaryExpr> 
+								<ASTERISK> 
+								<Id: a> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<UnaryExpr> 
+							<ASTERISK> 
+							<Id: a> 
+						<UnaryExpr> 
+							<ASTERISK> 
+							<Id: b> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<UnaryExpr> 
+							<ASTERISK> 
+							<Id: b> 
+						<Id: tmp> 
+		<FunctionDef> 
+			<VoidType> 
+			<Id: quicksort> 
+				<VarDecl> 
+					<ArrayType> 
+						<IntType> 
+						<IntConst: 1005> 
+					<Id: a> 
+					<InitList> 
+				<VarDecl> 
+					<IntType> 
+					<Id: left> 
+					<InitList> 
+				<VarDecl> 
+					<IntType> 
+					<Id: right> 
+					<InitList> 
+					<VarDecl> 
+						<IntType> 
+						<Id: i> 
+						<InitValue> 
+							<Id: left> 
+					<VarDecl> 
+						<IntType> 
+						<Id: j> 
+						<InitValue> 
+							<Id: right> 
+					<VarDecl> 
+						<IntType> 
+						<Id: bar> 
+						<InitValue> 
+							<ArrayAccess> 
+								<Id: a> 
+								<Id: left> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: %d %d
+> 
+							<Id: left> 
+							<Id: right> 
+					<If> 
+						<BinaryExpr> 
+							<LE> 
+							<BinaryExpr> 
+								<SUB> 
+								<Id: right> 
+								<Id: left> 
+							<IntConst: 1> 
+								<ReturnStmt> 
+					<WhileLoop> 
+						<BinaryExpr> 
+							<LT> 
+							<Id: i> 
+							<Id: j> 
+								<WhileLoop> 
+									<BinaryExpr> 
+										<AND> 
+										<BinaryExpr> 
+											<LT> 
+											<Id: i> 
+											<Id: j> 
+										<BinaryExpr> 
+											<GT> 
+											<Id: bar> 
+											<ArrayAccess> 
+												<Id: a> 
+												<Id: i> 
+											<UnaryExpr> 
+												<INC> 
+												<Id: i> 
+								<WhileLoop> 
+									<BinaryExpr> 
+										<AND> 
+										<BinaryExpr> 
+											<LT> 
+											<Id: i> 
+											<Id: j> 
+										<BinaryExpr> 
+											<LT> 
+											<Id: bar> 
+											<ArrayAccess> 
+												<Id: a> 
+												<Id: j> 
+											<UnaryExpr> 
+												<DEC> 
+												<Id: j> 
+								<If> 
+									<BinaryExpr> 
+										<LT> 
+										<Id: i> 
+										<Id: j> 
+											<FunctionCall> 
+												<Id: swap> 
+												<ExprList> 
+													<BinaryExpr> 
+														<ADD> 
+														<Id: a> 
+														<Id: i> 
+													<BinaryExpr> 
+														<ADD> 
+														<Id: a> 
+														<Id: j> 
+											<If> 
+												<BinaryExpr> 
+													<EQ> 
+													<ArrayAccess> 
+														<Id: a> 
+														<Id: i> 
+													<Id: bar> 
+														<UnaryExpr> 
+															<DEC> 
+															<Id: j> 
+												<If> 
+													<BinaryExpr> 
+														<EQ> 
+														<ArrayAccess> 
+															<Id: a> 
+															<Id: j> 
+														<Id: bar> 
+															<UnaryExpr> 
+																<INC> 
+																<Id: i> 
+															<BinaryExpr> 
+																<COMMA> 
+																<SelfIncrement> 
+																	<Id: i> 
+																<SelfDecrement> 
+																	<Id: j> 
+					<If> 
+						<BinaryExpr> 
+							<LT> 
+							<Id: i> 
+							<Id: right> 
+						<FunctionCall> 
+							<Id: quicksort> 
+							<ExprList> 
+								<Id: a> 
+								<BinaryExpr> 
+									<ADD> 
+									<Id: i> 
+									<IntConst: 1> 
+								<Id: right> 
+					<If> 
+						<BinaryExpr> 
+							<GT> 
+							<Id: j> 
+							<Id: left> 
+						<FunctionCall> 
+							<Id: quicksort> 
+							<ExprList> 
+								<Id: a> 
+								<Id: left> 
+								<BinaryExpr> 
+									<SUB> 
+									<Id: j> 
+									<IntConst: 1> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: main> 
+					<VarDecl> 
+						<IntType> 
+						<Id: n> 
+						<InitList> 
+					<VarDecl> 
+						<IntType> 
+						<Id: i> 
+						<InitList> 
+					<FunctionCall> 
+						<Id: scanf> 
+						<ExprList> 
+							<StringConst: %d> 
+							<UnaryExpr> 
+								<AMPERSAND> 
+								<Id: n> 
+					<ForLoop> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: i> 
+							<IntConst: 0> 
+						<BinaryExpr> 
+							<LT> 
+							<Id: i> 
+							<Id: n> 
+						<UnaryExpr> 
+							<INC> 
+							<Id: i> 
+								<FunctionCall> 
+									<Id: scanf> 
+									<ExprList> 
+										<StringConst: %d> 
+										<BinaryExpr> 
+											<ADD> 
+											<Id: a> 
+											<Id: i> 
+					<FunctionCall> 
+						<Id: quicksort> 
+						<ExprList> 
+							<Id: a> 
+							<IntConst: 0> 
+							<BinaryExpr> 
+								<SUB> 
+								<Id: n> 
+								<IntConst: 1> 
+					<ForLoop> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: i> 
+							<IntConst: 0> 
+						<BinaryExpr> 
+							<LT> 
+							<Id: i> 
+							<Id: n> 
+						<UnaryExpr> 
+							<INC> 
+							<Id: i> 
+								<FunctionCall> 
+									<Id: printf> 
+									<ExprList> 
+										<StringConst: %d > 
+										<ArrayAccess> 
+											<Id: a> 
+											<Id: i> 
+					<ReturnStmt> 
+						<IntConst: 0> 

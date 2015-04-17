@@ -1,0 +1,224 @@
+<AST> 
+		<VarDecl> 
+			<IntType> 
+			<Id: n> 
+			<InitList> 
+		<VarDecl> 
+			<ArrayType> 
+				<ArrayType> 
+					<IntType> 
+					<IntConst: 105> 
+				<IntConst: 105> 
+			<Id: a> 
+			<InitList> 
+		<VarDecl> 
+			<ArrayType> 
+				<ArrayType> 
+					<IntType> 
+					<IntConst: 105> 
+				<IntConst: 105> 
+			<Id: b> 
+			<InitList> 
+		<VarDecl> 
+			<ArrayType> 
+				<ArrayType> 
+					<IntType> 
+					<IntConst: 105> 
+				<IntConst: 105> 
+			<Id: c> 
+			<InitList> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: main> 
+					<VarDecl> 
+						<IntType> 
+						<Id: i> 
+						<InitList> 
+					<VarDecl> 
+						<IntType> 
+						<Id: j> 
+						<InitList> 
+					<VarDecl> 
+						<IntType> 
+						<Id: k> 
+						<InitList> 
+					<FunctionCall> 
+						<Id: scanf> 
+						<ExprList> 
+							<StringConst: %d> 
+							<UnaryExpr> 
+								<AMPERSAND> 
+								<Id: n> 
+					<ForLoop> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: i> 
+							<IntConst: 0> 
+						<BinaryExpr> 
+							<LT> 
+							<Id: i> 
+							<Id: n> 
+						<UnaryExpr> 
+							<INC> 
+							<Id: i> 
+								<ForLoop> 
+									<BinaryExpr> 
+										<ASSIGN> 
+										<Id: j> 
+										<IntConst: 0> 
+									<BinaryExpr> 
+										<LT> 
+										<Id: j> 
+										<Id: n> 
+									<UnaryExpr> 
+										<INC> 
+										<Id: j> 
+											<FunctionCall> 
+												<Id: scanf> 
+												<ExprList> 
+													<StringConst: %d> 
+													<UnaryExpr> 
+														<AMPERSAND> 
+														<ArrayAccess> 
+															<ArrayAccess> 
+																<Id: a> 
+																<Id: i> 
+															<Id: j> 
+					<ForLoop> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: i> 
+							<IntConst: 0> 
+						<BinaryExpr> 
+							<LT> 
+							<Id: i> 
+							<Id: n> 
+						<UnaryExpr> 
+							<INC> 
+							<Id: i> 
+								<ForLoop> 
+									<BinaryExpr> 
+										<ASSIGN> 
+										<Id: j> 
+										<IntConst: 0> 
+									<BinaryExpr> 
+										<LT> 
+										<Id: j> 
+										<Id: n> 
+									<UnaryExpr> 
+										<INC> 
+										<Id: j> 
+											<FunctionCall> 
+												<Id: scanf> 
+												<ExprList> 
+													<StringConst: %d> 
+													<UnaryExpr> 
+														<AMPERSAND> 
+														<ArrayAccess> 
+															<ArrayAccess> 
+																<Id: b> 
+																<Id: i> 
+															<Id: j> 
+					<ForLoop> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: i> 
+							<IntConst: 0> 
+						<BinaryExpr> 
+							<LT> 
+							<Id: i> 
+							<Id: n> 
+						<UnaryExpr> 
+							<INC> 
+							<Id: i> 
+								<ForLoop> 
+									<BinaryExpr> 
+										<ASSIGN> 
+										<Id: j> 
+										<IntConst: 0> 
+									<BinaryExpr> 
+										<LT> 
+										<Id: j> 
+										<Id: n> 
+									<UnaryExpr> 
+										<INC> 
+										<Id: j> 
+											<BinaryExpr> 
+												<ASSIGN> 
+												<ArrayAccess> 
+													<ArrayAccess> 
+														<Id: c> 
+														<Id: i> 
+													<Id: j> 
+												<IntConst: 0> 
+											<ForLoop> 
+												<BinaryExpr> 
+													<ASSIGN> 
+													<Id: k> 
+													<IntConst: 0> 
+												<BinaryExpr> 
+													<LT> 
+													<Id: k> 
+													<Id: n> 
+												<UnaryExpr> 
+													<INC> 
+													<Id: k> 
+														<BinaryExpr> 
+															<ASSIGN_ADD> 
+															<ArrayAccess> 
+																<ArrayAccess> 
+																	<Id: c> 
+																	<Id: i> 
+																<Id: j> 
+															<BinaryExpr> 
+																<MUL> 
+																<ArrayAccess> 
+																	<ArrayAccess> 
+																		<Id: a> 
+																		<Id: i> 
+																	<Id: k> 
+																<ArrayAccess> 
+																	<ArrayAccess> 
+																		<Id: b> 
+																		<Id: k> 
+																	<Id: j> 
+					<ForLoop> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: i> 
+							<IntConst: 0> 
+						<BinaryExpr> 
+							<LT> 
+							<Id: i> 
+							<Id: n> 
+						<UnaryExpr> 
+							<INC> 
+							<Id: i> 
+								<ForLoop> 
+									<BinaryExpr> 
+										<ASSIGN> 
+										<Id: j> 
+										<IntConst: 0> 
+									<BinaryExpr> 
+										<LT> 
+										<Id: j> 
+										<Id: n> 
+									<UnaryExpr> 
+										<INC> 
+										<Id: j> 
+											<FunctionCall> 
+												<Id: printf> 
+												<ExprList> 
+													<StringConst: %d > 
+													<ArrayAccess> 
+														<ArrayAccess> 
+															<Id: c> 
+															<Id: i> 
+														<Id: j> 
+								<FunctionCall> 
+									<Id: printf> 
+									<ExprList> 
+										<StringConst: 
+> 
+					<ReturnStmt> 
+						<IntConst: 0> 

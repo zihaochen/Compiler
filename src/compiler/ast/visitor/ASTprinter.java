@@ -2,6 +2,8 @@ package compiler.ast.visitor;
 
 import compiler.ast.nodes.*;
 
+import java.io.IOException;
+import java.io.OutputStream;
 import java.io.PrintStream;
 
 /**
@@ -11,11 +13,10 @@ public class ASTprinter implements Visitor{
 
     public int level;
 
-    public PrintStream out;
+    public OutputStream out;
 
-    public ASTprinter(PrintStream out) {
+    public void setOutputStream(OutputStream out){
         this.out = out;
-        level = 0;
     }
 
     public ASTprinter() {
@@ -23,9 +24,14 @@ public class ASTprinter implements Visitor{
     }
 
     public void print(String string) {
-        for (int i = 0; i < level; i++)
-            out.print("\t");
-        out.println("<" + string + ">");
+        try {
+            for (int i = 0; i < level; i++)
+                out.write("\t".getBytes());
+            out.write(("<" + string + "> \n").getBytes());
+        } catch (IOException e){
+            System.out.println("Unexpected IOException!!");
+            e.printStackTrace();
+        }
     }
 
     public void visit(AST ast){
@@ -36,12 +42,10 @@ public class ASTprinter implements Visitor{
     }
 
     public void visit(DeclList declList){
-        print("DeclList");
+        //print("DeclList");
         level++;
         for (Decl decl : declList.decls){
-            decl.type.accept(this);
-            decl.name.accept(this);
-            decl.init.accept(this);
+            decl.accept(this);
         }
         level--;
     }
@@ -151,7 +155,7 @@ public class ASTprinter implements Visitor{
     public void visit(BinaryExpr binaryExpr){
         print("BinaryExpr");
         level++;
-        print(BinaryOpToString.get((binaryExpr.op.ordinal())));
+        print((new BinaryOpToString()).get((binaryExpr.op.ordinal())));
         binaryExpr.left.accept(this);
         binaryExpr.right.accept(this);
         level--;
@@ -178,7 +182,7 @@ public class ASTprinter implements Visitor{
     public void visit(UnaryExpr unaryExpr){
         print("UnaryExpr");
         level++;
-        print(UnaryOpToString.get((unaryExpr.op.ordinal())));
+        print((new UnaryOpToString()).get((unaryExpr.op.ordinal())));
         unaryExpr.expr.accept(this);
         level--;
     }
@@ -230,10 +234,8 @@ public class ASTprinter implements Visitor{
     }
 
     public void visit(Identifier identifier){
-        print("Identifier");
-        level++;
-        identifier.accept(this);
-        level--;
+       // print("Identifier");
+        identifier.symbol.accept(this);
     }
 
     public void visit(IntConst intConst){
@@ -249,11 +251,11 @@ public class ASTprinter implements Visitor{
     }
 
     public void visit(Symbol symbol){
-        print(symbol.toString());
+        print("Id: " + symbol.toString());
     }
 
     public void visit(StmtList stmtList){
-        print("StmtList");
+       // print("StmtList");
         level++;
         for (Stmt s : stmtList.stmts)
             s.accept(this);
@@ -303,7 +305,7 @@ public class ASTprinter implements Visitor{
     }
 
     public void visit(CompoundStmt compoundStmt) {
-        print("CompoundStmt");
+       // print("CompoundStmt");
         level++;
         compoundStmt.decls.accept(this);
         compoundStmt.stmts.accept(this);

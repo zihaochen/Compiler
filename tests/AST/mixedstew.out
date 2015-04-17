@@ -1,0 +1,302 @@
+<AST> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: main> 
+					<VarDecl> 
+						<IntType> 
+						<Id: a> 
+						<InitList> 
+					<VarDecl> 
+						<IntType> 
+						<Id: b> 
+						<InitList> 
+					<VarDecl> 
+						<IntType> 
+						<Id: c> 
+						<InitList> 
+					<VarDecl> 
+						<IntType> 
+						<Id: ab> 
+						<InitList> 
+					<VarDecl> 
+						<IntType> 
+						<Id: xy> 
+						<InitList> 
+					<VarDecl> 
+						<IntType> 
+						<Id: xz> 
+						<InitList> 
+					<VarDecl> 
+						<ArrayType> 
+							<CharType> 
+							<IntConst: 50> 
+						<Id: QQ641053434> 
+						<InitValue> 
+							<StringConst: This is the qq of the author.> 
+					<VarDecl> 
+						<ArrayType> 
+							<CharType> 
+							<IntConst: 50> 
+						<Id: BD20140222> 
+						<InitValue> 
+							<StringConst: Birthday of whom?> 
+					<VarDecl> 
+						<CharType> 
+						<Id: symbol_symbol$symbols> 
+						<InitList> 
+					<IntConst: 123> 
+					<IntConst: 456> 
+					<IntConst: 789> 
+					<IntConst: 83> 
+					<IntConst: 302> 
+					<IntConst: 511> 
+					<IntConst: 291> 
+					<IntConst: 1110> 
+					<IntConst: 1929> 
+					<BinaryExpr> 
+						<COMMA> 
+						<BinaryExpr> 
+							<COMMA> 
+							<CharConst: g> 
+							<CharConst: h> 
+						<CharConst: j> 
+					<BinaryExpr> 
+						<COMMA> 
+						<BinaryExpr> 
+							<COMMA> 
+							<CharConst: 
+> 
+							<CharConst: 	> 
+						<CharConst: > 
+					<BinaryExpr> 
+						<COMMA> 
+						<CharConst: 2> 
+						<CharConst:  > 
+					<StringConst: string> 
+					<StringConst: longerstring> 
+					<StringConst: whatisyourname
+> 
+					<StringConst: for science!!> 
+		<TypeDecl> 
+			<StructType> 
+				<Id: Lesson> 
+					<VarDecl> 
+						<CharType> 
+						<Id: name> 
+						<InitList> 
+					<VarDecl> 
+						<IntType> 
+						<Id: score> 
+						<InitList> 
+					<VarDecl> 
+						<UnionType> 
+							<Id: > 
+								<VarDecl> 
+									<IntType> 
+									<Id: a> 
+									<InitList> 
+								<VarDecl> 
+									<CharType> 
+									<Id: b> 
+									<InitList> 
+						<Id: comment> 
+						<InitList> 
+		<FunctionDef> 
+			<VoidType> 
+			<Id: getMoreGPA> 
+				<VarDecl> 
+					<IntType> 
+					<Id: compiler> 
+					<InitList> 
+					<VarDecl> 
+						<IntType> 
+						<Id: i> 
+						<InitList> 
+					<If> 
+						<BinaryExpr> 
+							<GE> 
+							<RecordAccess> 
+								<Id: compiler> 
+								<Id: score> 
+							<IntConst: 95> 
+								<FunctionCall> 
+									<Id: printf> 
+									<ExprList> 
+										<StringConst: target achieved
+> 
+								<FunctionCall> 
+									<Id: printf> 
+									<ExprList> 
+										<StringConst: How can I become a CS scientist if I get this score on this course!
+> 
+					<WhileLoop> 
+						<Id: true> 
+								<BreakStmt> 
+					<ForLoop> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: i> 
+							<IntConst: 1> 
+						<BinaryExpr> 
+							<LT> 
+							<Id: i> 
+							<IntConst: 10> 
+						<UnaryExpr> 
+							<INC> 
+							<Id: i> 
+								<ContinueStmt> 
+					<SizeofExpr> 
+						<CharType> 
+					<ReturnStmt> 
+		<FunctionDef> 
+			<VoidType> 
+			<Id: moreTests> 
+					<VarDecl> 
+						<IntType> 
+						<Id: a> 
+						<InitValue> 
+							<BinaryExpr> 
+								<ADD> 
+								<IntConst: 1> 
+								<IntConst: 1> 
+					<VarDecl> 
+						<IntType> 
+						<Id: b> 
+						<InitValue> 
+							<BinaryExpr> 
+								<ADD> 
+								<IntConst: 2> 
+								<IntConst: 2> 
+					<VarDecl> 
+						<ArrayType> 
+							<IntType> 
+							<IntConst: 20> 
+						<Id: c> 
+						<InitList> 
+							<InitValue> 
+								<BinaryExpr> 
+									<MUL> 
+									<IntConst: 1> 
+									<IntConst: 2> 
+							<InitValue> 
+								<BinaryExpr> 
+									<DIV> 
+									<IntConst: 2> 
+									<IntConst: 1> 
+							<InitValue> 
+								<BinaryExpr> 
+									<MOD> 
+									<IntConst: 3> 
+									<IntConst: 2> 
+							<InitValue> 
+								<BinaryExpr> 
+									<LOGICAL_OR> 
+									<IntConst: 7> 
+									<IntConst: 4> 
+							<InitValue> 
+								<BinaryExpr> 
+									<LOGICAL_AND> 
+									<IntConst: 8> 
+									<IntConst: 1> 
+							<InitValue> 
+								<UnaryExpr> 
+									<TILDE> 
+									<IntConst: 8> 
+							<InitValue> 
+								<UnaryExpr> 
+									<NOT> 
+									<IntConst: 9> 
+					<VarDecl> 
+						<IntType> 
+						<Id: t> 
+						<InitList> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<RecordAccess> 
+							<RecordAccess> 
+								<Id: t> 
+								<Id: comment> 
+							<Id: a> 
+						<Id: a> 
+					<BinaryExpr> 
+						<OR> 
+						<Id: a> 
+						<BinaryExpr> 
+							<AND> 
+							<Id: b> 
+							<BinaryExpr> 
+								<EQ> 
+								<ArrayAccess> 
+									<Id: c> 
+									<IntConst: 0> 
+								<ArrayAccess> 
+									<Id: c> 
+									<IntConst: 1> 
+					<BinaryExpr> 
+						<NE> 
+						<Id: a> 
+						<Id: b> 
+					<BinaryExpr> 
+						<LE> 
+						<Id: a> 
+						<Id: b> 
+					<BinaryExpr> 
+						<GE> 
+						<Id: a> 
+						<Id: b> 
+					<BinaryExpr> 
+						<SHR> 
+						<Id: a> 
+						<Id: b> 
+					<BinaryExpr> 
+						<SHL> 
+						<Id: a> 
+						<Id: b> 
+					<BinaryExpr> 
+						<COMMA> 
+						<UnaryExpr> 
+							<INC> 
+							<Id: a> 
+						<UnaryExpr> 
+							<DEC> 
+							<Id: b> 
+					<BinaryExpr> 
+						<ASSIGN_MUL> 
+						<Id: a> 
+						<Id: b> 
+					<BinaryExpr> 
+						<ASSIGN_DIV> 
+						<Id: a> 
+						<Id: b> 
+					<BinaryExpr> 
+						<ASSIGN_MOD> 
+						<Id: a> 
+						<Id: b> 
+					<BinaryExpr> 
+						<ASSIGN_ADD> 
+						<Id: a> 
+						<Id: b> 
+					<BinaryExpr> 
+						<ASSIGN_SUB> 
+						<Id: a> 
+						<Id: b> 
+					<BinaryExpr> 
+						<ASSIGN_SHL> 
+						<Id: a> 
+						<Id: b> 
+					<BinaryExpr> 
+						<ASSIGN_SHR> 
+						<Id: a> 
+						<Id: b> 
+					<BinaryExpr> 
+						<ASSIGN_AND> 
+						<Id: a> 
+						<Id: b> 
+					<BinaryExpr> 
+						<ASSIGN_XOR> 
+						<Id: a> 
+						<Id: b> 
+					<BinaryExpr> 
+						<ASSIGN_OR> 
+						<Id: a> 
+						<Id: b> 

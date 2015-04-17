@@ -1,0 +1,223 @@
+<AST> 
+		<VarDecl> 
+			<IntType> 
+			<Id: n> 
+			<InitList> 
+		<VarDecl> 
+			<ArrayType> 
+				<ArrayType> 
+					<IntType> 
+					<IntConst: 105> 
+				<IntConst: 105> 
+			<Id: g> 
+			<InitList> 
+		<VarDecl> 
+			<ArrayType> 
+				<IntType> 
+				<IntConst: 105> 
+			<Id: q> 
+			<InitList> 
+		<VarDecl> 
+			<IntType> 
+			<Id: qhead> 
+			<InitList> 
+		<VarDecl> 
+			<IntType> 
+			<Id: qtail> 
+			<InitList> 
+		<VarDecl> 
+			<ArrayType> 
+				<IntType> 
+				<IntConst: 105> 
+			<Id: dis> 
+			<InitList> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: main> 
+					<VarDecl> 
+						<IntType> 
+						<Id: m> 
+						<InitList> 
+					<VarDecl> 
+						<IntType> 
+						<Id: i> 
+						<InitList> 
+					<FunctionCall> 
+						<Id: scanf> 
+						<ExprList> 
+							<StringConst: %d%d> 
+							<UnaryExpr> 
+								<AMPERSAND> 
+								<Id: n> 
+							<UnaryExpr> 
+								<AMPERSAND> 
+								<Id: m> 
+					<ForLoop> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: i> 
+							<IntConst: 0> 
+						<BinaryExpr> 
+							<LT> 
+							<Id: i> 
+							<Id: n> 
+						<UnaryExpr> 
+							<INC> 
+							<Id: i> 
+								<BinaryExpr> 
+									<ASSIGN> 
+									<ArrayAccess> 
+										<Id: dis> 
+										<Id: i> 
+									<UnaryExpr> 
+										<MINUS> 
+										<IntConst: 1> 
+					<ForLoop> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: i> 
+							<IntConst: 0> 
+						<BinaryExpr> 
+							<LT> 
+							<Id: i> 
+							<Id: m> 
+						<UnaryExpr> 
+							<INC> 
+							<Id: i> 
+								<VarDecl> 
+									<IntType> 
+									<Id: u> 
+									<InitList> 
+								<VarDecl> 
+									<IntType> 
+									<Id: v> 
+									<InitList> 
+								<FunctionCall> 
+									<Id: scanf> 
+									<ExprList> 
+										<StringConst: %d%d> 
+										<UnaryExpr> 
+											<AMPERSAND> 
+											<Id: u> 
+										<UnaryExpr> 
+											<AMPERSAND> 
+											<Id: v> 
+								<BinaryExpr> 
+									<ASSIGN> 
+									<ArrayAccess> 
+										<ArrayAccess> 
+											<Id: g> 
+											<Id: u> 
+										<Id: v> 
+									<BinaryExpr> 
+										<ASSIGN> 
+										<ArrayAccess> 
+											<ArrayAccess> 
+												<Id: g> 
+												<Id: v> 
+											<Id: u> 
+										<IntConst: 1> 
+					<BinaryExpr> 
+						<COMMA> 
+						<BinaryExpr> 
+							<COMMA> 
+							<BinaryExpr> 
+								<COMMA> 
+								<BinaryExpr> 
+									<ASSIGN> 
+									<Id: qhead> 
+									<IntConst: 0> 
+								<BinaryExpr> 
+									<ASSIGN> 
+									<Id: qtail> 
+									<IntConst: 1> 
+							<BinaryExpr> 
+								<ASSIGN> 
+								<ArrayAccess> 
+									<Id: q> 
+									<IntConst: 0> 
+								<IntConst: 0> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<ArrayAccess> 
+								<Id: dis> 
+								<IntConst: 0> 
+							<IntConst: 0> 
+					<WhileLoop> 
+						<BinaryExpr> 
+							<LT> 
+							<Id: qhead> 
+							<Id: qtail> 
+								<VarDecl> 
+									<IntType> 
+									<Id: u> 
+									<InitValue> 
+										<ArrayAccess> 
+											<Id: q> 
+											<SelfIncrement> 
+												<Id: qhead> 
+								<VarDecl> 
+									<IntType> 
+									<Id: v> 
+									<InitList> 
+								<ForLoop> 
+									<BinaryExpr> 
+										<ASSIGN> 
+										<Id: v> 
+										<IntConst: 0> 
+									<BinaryExpr> 
+										<LT> 
+										<Id: v> 
+										<Id: n> 
+									<UnaryExpr> 
+										<INC> 
+										<Id: v> 
+											<If> 
+												<BinaryExpr> 
+													<AND> 
+													<BinaryExpr> 
+														<EQ> 
+														<ArrayAccess> 
+															<ArrayAccess> 
+																<Id: g> 
+																<Id: u> 
+															<Id: v> 
+														<IntConst: 1> 
+													<BinaryExpr> 
+														<EQ> 
+														<ArrayAccess> 
+															<Id: dis> 
+															<Id: v> 
+														<UnaryExpr> 
+															<MINUS> 
+															<IntConst: 1> 
+														<BinaryExpr> 
+															<ASSIGN> 
+															<ArrayAccess> 
+																<Id: q> 
+																<SelfIncrement> 
+																	<Id: qtail> 
+															<Id: v> 
+					<ForLoop> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: i> 
+							<IntConst: 0> 
+						<BinaryExpr> 
+							<LT> 
+							<Id: i> 
+							<Id: n> 
+						<UnaryExpr> 
+							<INC> 
+							<Id: i> 
+								<FunctionCall> 
+									<Id: printf> 
+									<ExprList> 
+										<StringConst: %d : %d
+> 
+										<Id: i> 
+										<ArrayAccess> 
+											<Id: dis> 
+											<Id: i> 
+					<ReturnStmt> 
+						<IntConst: 0> 

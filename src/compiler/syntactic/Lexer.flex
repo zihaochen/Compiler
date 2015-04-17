@@ -20,10 +20,12 @@ import java_cup.runtime.*;
     }
 
     private Symbol tok (int type){
+     //   System.out.println("Token found: " + type);
         return new Symbol(type, yyline, yycolumn);
     }
 
     private Symbol tok (int type, Object value){
+    //    System.out.println("Token found: " + type + " <" + value + "> ");
         return new Symbol(type, yyline, yycolumn, value);
     }
 %}
@@ -36,19 +38,19 @@ import java_cup.runtime.*;
 %eofval}
 
 LineTerminator = \n|\r|\r\n
-WhiteSpace = [\t\f\r\n\v]
+WhiteSpace = [ \t\f\r\n\v]
 InputCharacter = [^\r\n]
 SingleComment = "//"{InputCharacter}* {LineTerminator}
 
 /* constants */
-Identifier = [a-zA-Z] [a-zA-Z_0-9]*
+Identifier = [:jletter:] [:jletterdigit:]*
 DecIntegerLiteral = [1-9][0-9]*|0
 OctIntegerLiteral = 0[0-7]+
-HexIntegerLiteral = 0(X|x)[0-9a-fA-F]+
+HexIntegerLiteral = 0[xX][0-9a-fA-F]+
 
 
-%state STRING
-%state CHAR
+%state STRING_STAGE
+%state CHAR_STAGE
 %state MULTICOMMENT
 
 %%
@@ -130,21 +132,21 @@ HexIntegerLiteral = 0(X|x)[0-9a-fA-F]+
 /* literals */
     {DecIntegerLiteral}     { return tok(INTEGER, Integer.valueOf(yytext(), 10)); }
     {OctIntegerLiteral}     { return tok(INTEGER, Integer.valueOf(yytext(), 8)); }
-    {HexIntegerLiteral}     { return tok(INTEGER, Integer.valueOf(yytext(), 16)); }
+    {HexIntegerLiteral}     { return tok(INTEGER, Integer.valueOf(yytext().substring(2), 16)); }
 
 /* string & char */
-    \"                      { string.setLength(0); yybegin(STRING); }
-    \'                      { string.setLength(0); yybegin(CHAR); }
+    \"                      { string.setLength(0); yybegin(STRING_STAGE); }
+    \'                      { string.setLength(0); yybegin(CHAR_STAGE); }
 
 /* some trivail things */
     {WhiteSpace}            { /* skip */ }
     {LineTerminator}        { /* skip */ }
 
 /* error */
-    [^]                     { err("Illegal character" + yytext()); }
+   [^]                     { err("Illegal character" + yytext()); }
 }
 
-<STRING> {
+<STRING_STAGE> {
     \"                      { yybegin(YYINITIAL);
                               return tok(STRING_LITERAL, string.toString()); }
     [^\n\r\"\\]+            { string.append(yytext()); }
@@ -165,7 +167,7 @@ HexIntegerLiteral = 0(X|x)[0-9a-fA-F]+
 
 }
 
-<CHAR> {
+<CHAR_STAGE> {
     [^'\n\r\\]'             { yybegin(YYINITIAL);
                               return tok(CHAR_LITERAL,yytext().charAt(0)); }
  //   \\a'                    { yybegin(YYINITIAL);

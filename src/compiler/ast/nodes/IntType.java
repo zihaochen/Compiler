@@ -7,4 +7,9 @@ public class IntType extends Type implements House{
     public void accept(Visitor v) {
         v.visit(this);
     }
+
+    @Override
+    public void printName() {
+        System.out.println("IntType");
+    }
 }

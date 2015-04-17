@@ -5,51 +5,54 @@ package compiler.ast.visitor;
  */
 import  compiler.ast.nodes.*;
 
+import java.io.OutputStream;
+
 public interface Visitor {
-    public void visit(AST ast);
+    void setOutputStream(OutputStream out);
+    void visit(AST ast);
 
-    public void visit(DeclList declList);
-    public void visit(VarDecl varDecl);
-    public void visit(FunctionDecl functionDecl);
-    public void visit(FunctionDef functionDef);
-    public void visit(TypeDecl typeDecl);
+    void visit(DeclList declList);
+    void visit(VarDecl varDecl);
+    void visit(FunctionDecl functionDecl);
+    void visit(FunctionDef functionDef);
+    void visit(TypeDecl typeDecl);
 
-    public void visit(InitValue initValue);
-    public void visit(InitList initList);
+    void visit(InitValue initValue);
+    void visit(InitList initList);
 
-    public void visit(ArrayType arrayType);
-    public void visit(CharType charType);
-    public void visit(IntType intType);
-    public void visit(VoidType voidType);
-    public void visit(PointerType pointerType);
-    public void visit(StructType structType);
-    public void visit(UnionType unionType);
+    void visit(ArrayType arrayType);
+    void visit(CharType charType);
+    void visit(IntType intType);
+    void visit(VoidType voidType);
+    void visit(PointerType pointerType);
+    void visit(StructType structType);
+    void visit(UnionType unionType);
 
-    public void visit(ExprList exprList);
-    public void visit(BinaryExpr binaryExpr);
-    public void visit(EmptyExpr  emptyExpr);
-    public void visit(SizeofExpr sizeofExpr);
-    public void visit(CastExpr castExpr);
-    public void visit(UnaryExpr unaryExpr);
-    public void visit(PointerAccess pointerAccess);
-    public void visit(RecordAccess recordAccess);
-    public void visit(SelfDecrement selfDecrement);
-    public void visit(SelfIncrement selfIncrement);
-    public void visit(ArrayAccess arrayAccess);
-    public void visit(FunctionCall functionCall);
-    public void visit(Identifier identifier);
-    public void visit(IntConst intConst);
-    public void visit(CharConst charConst);
-    public void visit(StringConst stringConst);
-    public void visit(Symbol symbol);
+    void visit(ExprList exprList);
+    void visit(BinaryExpr binaryExpr);
+    void visit(EmptyExpr  emptyExpr);
+    void visit(SizeofExpr sizeofExpr);
+    void visit(CastExpr castExpr);
+    void visit(UnaryExpr unaryExpr);
+    void visit(PointerAccess pointerAccess);
+    void visit(RecordAccess recordAccess);
+    void visit(SelfDecrement selfDecrement);
+    void visit(SelfIncrement selfIncrement);
+    void visit(ArrayAccess arrayAccess);
+    void visit(FunctionCall functionCall);
+    void visit(Identifier identifier);
+    void visit(IntConst intConst);
+    void visit(CharConst charConst);
+    void visit(StringConst stringConst);
+    void visit(Symbol symbol);
 
-    public void visit(StmtList stmtList);
-    public void visit(BreakStmt breakStmt);
-    public void visit(ContinueStmt continueStmt);
-    public void visit(IfStmt ifStmt);
-    public void visit(ForLoop forLoop);
-    public void visit(WhileLoop whileLoop);
-    public void visit(ReturnStmt returnStmt);
-    public void visit(CompoundStmt compoundStmt);
+    void visit(StmtList stmtList);
+    void visit(BreakStmt breakStmt);
+    void visit(ContinueStmt continueStmt);
+    void visit(IfStmt ifStmt);
+    void visit(ForLoop forLoop);
+    void visit(WhileLoop whileLoop);
+    void visit(ReturnStmt returnStmt);
+    void visit(CompoundStmt compoundStmt);
 
 }
