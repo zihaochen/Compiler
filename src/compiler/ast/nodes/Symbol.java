@@ -5,11 +5,11 @@ import compiler.ast.visitor.Visitor;
 public class Symbol implements House{
     private String name;
 
-    private Symbol(String s) {
+    public Symbol(String s) {
         this.name = s;
     }
 
-    private static java.util.Map<String, Symbol> dict = new java.util.HashMap<String, Symbol>();
+    private static java.util.Map<String, Symbol> dict = new java.util.HashMap<>();
 
     public static Symbol get(String s) {
         String t = s.intern();

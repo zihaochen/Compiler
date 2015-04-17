@@ -224,7 +224,7 @@ public class ASTprinter implements Visitor{
     public void visit(FunctionCall functionCall){
         print("FunctionCall");
         level++;
-        functionCall.body.accept(this);
+        functionCall.expr.accept(this);
         functionCall.args.accept(this);
         level--;
     }

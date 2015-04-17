@@ -1,10 +1,9 @@
-package compiler.ast.syntactic;
+package compiler.syntactic;
 
 import java_cup.runtime.*;
 
 %%
 
-%class Lexer
 %unicode
 %line
 %column
@@ -14,11 +13,10 @@ import java_cup.runtime.*;
 %{
     private int CommentCount = 0;
 
-    StringBuffer string = new StrngBuffer();
+    StringBuffer string = new StringBuffer();
 
     private void err(String message) throws RuntimeException {
-        throw new RuntimeException(message + "Scanning error in the line" + yyline + ",
-        column" + yycolumn + ": ");
+        throw new RuntimeException(message + "Scanning error in the line" + yyline + ",column" + yycolumn + ": ");
     }
 
     private Symbol tok (int type){
@@ -35,7 +33,6 @@ import java_cup.runtime.*;
     if (yystate() ==  MULTICOMMENT)
         err("Comment symbol do not match (EOF)!");
     return tok(EOF, null);
-    }
 %eofval}
 
 LineTerminator = \n|\r|\r\n
@@ -45,9 +42,9 @@ SingleComment = "//"{InputCharacter}* {LineTerminator}
 
 /* constants */
 Identifier = [a-zA-Z] [a-zA-Z_0-9]*
-DecIntegerLiteral = [-]?[0-9]+
-OctIntegerLiteral = [-]?[0-9]+
-HexIntegerLiteral = [-]?0(X|x)[0-9a-fA-F]+
+DecIntegerLiteral = [1-9][0-9]*|0
+OctIntegerLiteral = 0[0-7]+
+HexIntegerLiteral = 0(X|x)[0-9a-fA-F]+
 
 
 %state STRING
@@ -63,30 +60,11 @@ HexIntegerLiteral = [-]?0(X|x)[0-9a-fA-F]+
     "*/"                    { err("comment symbol do not match!"); }
     {SingleComment}         { /* skip */ }
 
-/* identifiers */
-    {Identifier}            { return tok(IDENTIFIER, yytext()); }
-
-/* literals */
-    {DecIntegerLiteral}     { return tok(INTEGER), new Integer(yytext()); }
-    {OctIntegerLiteral}     { return tok(INTEGER),
-                              new Integer(valueOf(yytext(), 8)); }
-    {HexIntegerLiteral}     { return tok(INTEGER),
-                              new Integer(valueOf(yyetext(), 16)); }
-
-/* string & char */
-    \"                      { string.setLength(0); yybegin{STRING}; }
-    \'                      { string.setLength(0); yybegin{CHAR}; }
-
-/* some trivail things */
-    {WhiteSpace}            { /* skip */ }
-    {LineTerminator}        { /* skip */ }
-
-
 /* keywords */
     "void"                  { return tok(VOID); }
     "char"                  { return tok(CHAR); }
     "int"                   { return tok(INT); }
-    "struct"                { reuturn tok(STRUCT); }
+    "struct"                { return tok(STRUCT); }
     "union"                 { return tok(UNION); }
     "if"                    { return tok(IF); }
     "else"                  { return tok(ELSE); }
@@ -107,7 +85,6 @@ HexIntegerLiteral = [-]?0(X|x)[0-9a-fA-F]+
     "}"                     { return tok(RBRACE); }
     "["                     { return tok(LBRACKET); }
     "]"                     { return tok(RBRACKET); }
-    "*"                     { return tok(ASTERISH); }
     "|"                     { return tok(VBAR); }
     "^"                     { return tok(CARET); }
     "&"                     { return tok(AMPERS); }
@@ -146,38 +123,53 @@ HexIntegerLiteral = [-]?0(X|x)[0-9a-fA-F]+
     "^="                    { return tok(XOR_ASSIGN); }
     "|="                    { return tok(OR_ASSIGN); }
 
+
+/* identifiers */
+    {Identifier}            { return tok(IDENTIFIER, yytext()); }
+
+/* literals */
+    {DecIntegerLiteral}     { return tok(INTEGER, Integer.valueOf(yytext(), 10)); }
+    {OctIntegerLiteral}     { return tok(INTEGER, Integer.valueOf(yytext(), 8)); }
+    {HexIntegerLiteral}     { return tok(INTEGER, Integer.valueOf(yytext(), 16)); }
+
+/* string & char */
+    \"                      { string.setLength(0); yybegin(STRING); }
+    \'                      { string.setLength(0); yybegin(CHAR); }
+
+/* some trivail things */
+    {WhiteSpace}            { /* skip */ }
+    {LineTerminator}        { /* skip */ }
+
 /* error */
     [^]                     { err("Illegal character" + yytext()); }
 }
 
 <STRING> {
-    \"                      { yybegin{YYINITIAL};
-                              return tok(STRING_LITERAL,
-                              string.toString()); }
+    \"                      { yybegin(YYINITIAL);
+                              return tok(STRING_LITERAL, string.toString()); }
     [^\n\r\"\\]+            { string.append(yytext()); }
-    \\a                     { string.append('\a'); }
+  //  \\a                     { string.append('\a'); }
     \\b                     { string.append('\b'); }
     \\f                     { string.append('\f'); }
     \\n                     { string.append ('\n'); }
     \\r                     { string.append('\r'); }
     \\t                     { string.append('\t'); }
-    \\v                     { string.append('\v'); }
+  //  \\v                     { string.append('\v'); }
     \\\                     { string.append('\\'); }
     \\'                     { string.append('\''); }
     \\\"                    { string.append('\"'); }
 
-    \\[0-7]{1,3}            { string.append((char) Integer.valueOf(yytext().subString(1, yytext().length()), 8).intValue()); }
-    \\x[0-9a-fA-F]{1,2}     { string.append((char) Integer.valueOf(yytext().subString(2, yytext().length()), 16).intValue()); }
+    \\[0-7]{1,3}            { string.append((char) Integer.valueOf(yytext().substring(1, yytext().length()), 8).intValue()); }
+    \\x[0-9a-fA-F]{1,2}     { string.append((char) Integer.valueOf(yytext().substring(2, yytext().length()), 16).intValue()); }
     [^]                     { err("Illegal character" + yytext()); }
 
 }
 
 <CHAR> {
     [^'\n\r\\]'             { yybegin(YYINITIAL);
-                              return tok(CHAR_LITERAL,
-                              yytext().charAt(0)); }
-    \\a'                    { yybegin(YYINITIAL);
-                              return tok(CHAR_LITERAL, '\a'); }
+                              return tok(CHAR_LITERAL,yytext().charAt(0)); }
+ //   \\a'                    { yybegin(YYINITIAL);
+ //                             return tok(CHAR_LITERAL, '\a'); }
     \\b'                    { yybegin(YYINITIAL);
                               return tok(CHAR_LITERAL, '\b'); }
     \\f'                    { yybegin(YYINITIAL);
@@ -188,8 +180,8 @@ HexIntegerLiteral = [-]?0(X|x)[0-9a-fA-F]+
                               return tok(CHAR_LITERAL, '\r'); }
     \\t'                    { yybegin(YYINITIAL);
                               return tok(CHAR_LITERAL, '\t'); }
-    \\v'                    { yybegin(YYINITIAL);
-                              return tok(CHAR_LITERAL, '\v'); }
+ //   \\v'                    { yybegin(YYINITIAL);
+ //                             return tok(CHAR_LITERAL, '\v'); }
     \\''                    { yybegin(YYINITIAL);
                               return tok(CHAR_LITERAL, '\''); }
     \\\"'                   { yybegin(YYINITIAL);
@@ -197,13 +189,11 @@ HexIntegerLiteral = [-]?0(X|x)[0-9a-fA-F]+
     \\\\'                   { yybegin(YYINITIAL);
                               return tok(CHAR_LITERAL, '\\'); }
 
-    \\[0-7]{1,3}'           { yybegin{YYINITIAL};
-                              return tok(CHAR_LITERAL,
-                              (char) Integer.valueOf(yytext().subString(1, yytext().length() - 1), 8).intValue()); }
+    \\[0-7]{1,3}'           { yybegin(YYINITIAL);
+                              return tok(CHAR_LITERAL, (char) Integer.valueOf(yytext().substring(1, yytext().length() - 1), 8).intValue()); }
 
-    \\x[0-9a-fA-F]{1,2}'    { yybegin{YYINITIAL};
-                              return tok(CHAR_LITERAL,
-                              (char) Integer.valueOf(yytext().subString(2, yytext().length() - 1), 16).intValue()); }
+    \\x[0-9a-fA-F]{1,2}'    { yybegin(YYINITIAL);
+                              return tok(CHAR_LITERAL, (char) Integer.valueOf(yytext().substring(2, yytext().length() - 1), 16).intValue()); }
 
     [^]                     { err("Illegal character" + yytext()); }
 }

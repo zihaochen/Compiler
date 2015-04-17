@@ -14,6 +14,10 @@ public class InitList extends Initializer implements House{
         this.inits = inits;
     }
 
+    public InitList(InitList i){
+        this.inits = i.inits;
+    }
+
     public InitList add(Initializer init){
         this.inits.add(init);
         return this;

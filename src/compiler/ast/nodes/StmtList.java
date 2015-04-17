@@ -11,7 +11,7 @@ public class StmtList implements House{
     public List<Stmt> stmts;
 
     public StmtList() {
-        stmts = new LinkedList<Stmt>();
+        stmts = new LinkedList<>();
     }
 
     public StmtList add(Stmt stmt) {
@@ -23,6 +23,10 @@ public class StmtList implements House{
         this.stmts = stmts;
     }
 
+    public StmtList add(StmtList ss){
+        stmts.addAll(ss.stmts);
+        return this;
+    }
     @Override
     public void accept(Visitor v) {
         v.visit(this);

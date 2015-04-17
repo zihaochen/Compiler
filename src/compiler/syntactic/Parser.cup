@@ -1,4 +1,4 @@
-package compiler.ast.syntactic;
+package compiler.syntactic;
 
 import java.io.InputStream;
 import compiler.ast.nodes.*;
@@ -27,7 +27,7 @@ parser code {:
 		System.err.println(m);
 	}
 
-	public Parser(InputStream inp) {
+	public parser(InputStream inp) {
 		this(new Yylex(inp));
 	}
 :};
@@ -39,7 +39,7 @@ terminal 				VOID, CHAR, INT, STRUCT, UNION, IF, ELSE, WHILE,
 
  /* single-character operations */
  terminal				LPAREN, RPAREN, SEMICOLON, COMMA, ASSIGN, LBRACE,
- 						RBRACE, LBRACKET, RBRACKET, ASTERISH, VBAR, CARET,
+ 						RBRACE, LBRACKET, RBRACKET, VBAR, CARET,
  						AMPERS, LT, GT, PLUS, MINUS, DIV, MULTI, MOD, TILDE,
  						EXCLAM, DOT;
 
@@ -50,7 +50,7 @@ terminal 				MUL_ASSIGN, DIV_ASSIGN, MOD_ASSIGN, SUB_ASSIGN,
 						OR_ASSIGN, PLUS_ASSIGN;
 
 terminal String			IDENTIFIER, STRING_LITERAL;
-terminal Interger		INTEGER;
+terminal Integer		INTEGER;
 terminal char			CHAR_LITERAL;
 
 /* ---------------------------------------------------- */
@@ -77,27 +77,27 @@ non terminal Stmt					selectionStmt;
 non terminal Stmt					iterationStmt;
 non terminal Stmt					jumpStmt;
 non terminal Expr	 				expr;
-non terminal BinaryExpr				assignmentExpr;
+non terminal Expr				assignmentExpr;
 non terminal BinaryOp				assignmentOp;
 non terminal Expr					constantExpr;
-non terminal BinaryExpr				logicalOrExpr;
-non terminal BinaryExpr				logicalAndExpr;
-non terminal BinaryExpr				inclusiveOrExpr;
-non terminal BinaryExpr				exclusiveOrExpr;
-non terminal BinaryExpr				andExpr;
-non terminal BinaryExpr				equalityExpr;
+non terminal Expr				logicalOrExpr;
+non terminal Expr				logicalAndExpr;
+non terminal Expr				inclusiveOrExpr;
+non terminal Expr				exclusiveOrExpr;
+non terminal Expr				andExpr;
+non terminal Expr				equalityExpr;
 non terminal BinaryOp				equalityOp;
-non terminal BinaryExpr				relationalExpr;
+non terminal Expr				relationalExpr;
 non terminal BinaryOp				relationalOp;
-non terminal BinaryExpr				shiftExpr;
+non terminal Expr				shiftExpr;
 non terminal BinaryOp				shiftOp;
-non terminal BinaryExpr 			addExpr;
+non terminal Expr 			addExpr;
 non terminal BinaryOp				addOp;
-non terminal BinaryExpr				multiExpr;
+non terminal Expr				multiExpr;
 non terminal BinaryOp				multiOp;
-non terminal CastExpr				castExpr;
+non terminal Expr				castExpr;
 non terminal Type					typeName;
-non terminal UnaryExpr				unaryExpr;
+non terminal Expr				unaryExpr;
 non terminal UnaryOp				unaryOp;
 non terminal Expr					postfixExpr;
 non terminal ExprList				arguments;
@@ -140,7 +140,7 @@ program ::= program:p decl:d
 		  ;
 decl ::= typeSpecf:t initDeclrs:init SEMICOLON
 		 {:
-		 	for (Decl i : init.declrs) dealWithType(i, t);
+		 	for (Decl i : init.decls) dealWithType(i, t);
 		 	RESULT = init;
 		 :}
  	   | typeSpecf:t SEMICOLON
@@ -155,10 +155,8 @@ decls ::= decl:d
 		| decls:ds decl:d
 		{: ds.add(d); RESULT = ds; :}
 		;
-functionDef ::= typeSpecf:t declr:d LPAREN prmtrs:par RPAREN compoundStmt:c
-		      {: dealWithType(d ,t); RESULT = new FunctionDef(d.type, d.name, par, c); :}
-			  | typeSpecf:t declr:d LPAREN RPAREN compoundStmt:c
-			  {: dealWithType(d, t); RESULT = new FunctionDef(d.type, d.name, new DeclList(), c); :}
+functionDef ::= typeSpecf:t declr:d compoundStmt:c
+		      {: dealWithType(d,t); RESULT = new FunctionDef(d.type, d.name, ((FunctionDecl) d).prmtrs, c); :}
 			  ;
 prmtrs ::= plnDecl:pl
 		   {: RESULT = new DeclList(pl); :}
@@ -210,13 +208,13 @@ typeSpecf ::= VOID
 		      {: RESULT = new UnionType(new Symbol(id), r); :}
 			;
 record ::= typeSpecf:t declrs:ds SEMICOLON
-		   {: for (d : ds) dealWithType(d, t); RESULT = ds;  :}
+		   {: for (Decl d : ds.decls) dealWithType(d, t); RESULT = ds;  :}
 		 | record:r typeSpecf:t declrs:ds SEMICOLON
-		   {: for (d : ds) dealWithType(d, t); r.add(ds); RESULT = r; :}
+		   {: for (Decl d : ds.decls) dealWithType(d, t); r.add(ds); RESULT = r; :}
 		 ;
 
 plnDecl ::= typeSpecf:t declr:d
-			{: dealWithType(d, t); RESULT = t; :}
+			{: dealWithType(d, t); RESULT = new DeclList(d); :}
  		  ;
 declr ::= tmpDeclr:d
 		  {: RESULT = d; :}
@@ -226,27 +224,27 @@ declr ::= tmpDeclr:d
 tmpDeclr ::= IDENTIFIER:id
 		     {: RESULT = new VarDecl(null, new Symbol(id), new InitList()); :}
 		   | IDENTIFIER:id LPAREN prmtrs:para RPAREN
-		   	 {: RESULT = new FuncDecl(null, new Symbol(id), para); :}
+		   	 {: RESULT = new FunctionDecl(null, new Symbol(id), para); :}
 		   | IDENTIFIER:id LPAREN RPAREN
-		     {: RESULT = new FuncDecl(null, new Symbol(id), new DeclList()); :}
+		     {: RESULT = new FunctionDecl(null, new Symbol(id), new DeclList()); :}
 		   | tmpDeclr:t RBRACE constantExpr:e RBRACE
 		     {: RESULT = new VarDecl(new ArrayType(t.type, e), t.name, new InitList()); :}
 			;
 /* statement */
 stmt ::= exprStmt:e
-		 {: RESULT = new Stmt(e); :}
+		 {: RESULT = e; :}
 	   | compoundStmt:c
-	   	 {: RESULT = new CompoundStmt(c); :}
+	   	 {: RESULT = c; :}
 	   | selectionStmt:s
-	     {: RESULT = new Stmt(s); :}
+	     {: RESULT = s; :}
 	   | iterationStmt:s
-	     {: RESULT = new Stmt(s); :}
+	     {: RESULT = s; :}
 	   | jumpStmt:s
-	     {: RESULT = new Stmt(s); :}
+	     {: RESULT = s; :}
 	   ;
 stmts ::= stmt:s
 		  {: RESULT = (new StmtList()).add(s); :}
-		| stmts:ss stmt:ss
+		| stmts:ss stmt:s
 		  {: ss.add(s); RESULT = ss; :}
 		;
 exprStmt ::= expr:e SEMICOLON
@@ -276,7 +274,6 @@ jumpStmt ::= CONTINUE SEMICOLON
 		   | RETURN exprStmt:e SEMICOLON
 		   	 {: RESULT = new ReturnStmt(e); :}
 		   ;
-
 /* expressions */
 expr ::= assignmentExpr:e
 		 {: RESULT = e; :}
@@ -291,25 +288,25 @@ assignmentExpr ::= logicalOrExpr:e
 assignmentOp ::= ASSIGN
 			     {: RESULT = BinaryOp.ASSIGN; :}
 			   | MUL_ASSIGN
-			     {: RESULT = BinaryOp.MUL_ASSIGN; :}
+			     {: RESULT = BinaryOp.ASSIGN_MUL; :}
 			   | DIV_ASSIGN
-			     {: RESULT = BinaryOp.DIV_ASSIGN; :}
+			     {: RESULT = BinaryOp.ASSIGN_DIV; :}
 			   | MOD_ASSIGN
-			     {: RESULT = BinaryOp.MOD_ASSIGN; :}
+			     {: RESULT = BinaryOp.ASSIGN_MOD; :}
 			   | PLUS_ASSIGN
-			     {: RESULT = BinaryOp.PLUS_ASSIGN; :}
+			     {: RESULT = BinaryOp.ASSIGN_ADD; :}
 			   | SUB_ASSIGN
-			     {: RESULT = BinaryOp.SUB_ASSIGN; :}
+			     {: RESULT = BinaryOp.ASSIGN_SUB; :}
 			   | SHL_ASSIGN
-			     {: RESULT = BinaryOp.SHL_ASSIGN; :}
+			     {: RESULT = BinaryOp.ASSIGN_SHL; :}
 			   | SHR_ASSIGN
-			     {: RESULT = BinaryOp.SHR_ASSIGN; :}
+			     {: RESULT = BinaryOp.ASSIGN_SHR; :}
 			   | AND_ASSIGN
-			     {: RESULT = BinaryOp.AND_ASSIGN; :}
+			     {: RESULT = BinaryOp.ASSIGN_AND; :}
 			   | XOR_ASSIGN
-			     {: RESULT = BinaryOp.XOR_ASSIGN; :}
+			     {: RESULT = BinaryOp.ASSIGN_XOR; :}
 			   | OR_ASSIGN
-			     {: RESULT = BinaryOp.OR_ASSIGN; :}
+			     {: RESULT = BinaryOp.ASSIGN_OR; :}
 			   ;
 constantExpr ::= logicalOrExpr:e
 				 {: RESULT = e; :}
@@ -327,12 +324,12 @@ logicalAndExpr ::= inclusiveOrExpr:e
 inclusiveOrExpr ::= exclusiveOrExpr:e
 				    {: RESULT = e; :}
 				  | inclusiveOrExpr:e1 VBAR exclusiveOrExpr:e2
-				    {: RESULT = new BinaryEXpr(e1, BinaryOp.LOGICAL_OR, e2); :}
+				    {: RESULT = new BinaryExpr(e1, BinaryOp.LOGICAL_OR, e2); :}
 				  ;
 exclusiveOrExpr ::= andExpr:e
 				    {: RESULT = e; :}
 				  | exclusiveOrExpr:e1 CARET andExpr:e2
-				    {: RESULT = new BinaryExpr(e1, BinaryOp.LOGICAL_XOR, e2); :}
+				    {: RESULT = new BinaryExpr(e1, BinaryOp.XOR, e2); :}
 				  ;
 andExpr ::= equalityExpr:e
 		    {: RESULT = e; :}
@@ -341,8 +338,8 @@ andExpr ::= equalityExpr:e
 		  ;
 equalityExpr ::= relationalExpr:e
 				 {: RESULT = e; :}
-			   | equalityExpr:e1 equalityOp relationalExpr:e2
-			     {: RESULT = new BinaryExpr(e1, BinaryOp.EQUAL, e2); :}
+			   | equalityExpr:e1 equalityOp:op relationalExpr:e2
+			     {: RESULT = new BinaryExpr(e1, op, e2); :}
 			   ;
 equalityOp ::= EQ
    			   {: RESULT = BinaryOp.EQ; :}
@@ -351,7 +348,7 @@ equalityOp ::= EQ
 			 ;
 relationalExpr ::= shiftExpr:e
 				   {: RESULT = e; :}
-				 | relationalExpr:e1 equalityOp:op shiftExpr:e2
+				 | relationalExpr:e1 relationalOp:op shiftExpr:e2
 				   {: RESULT = new BinaryExpr(e1, op, e2); :}
 				 ;
 relationalOp ::= LT
@@ -374,12 +371,12 @@ shiftOp ::= SHR
  		    {: RESULT = BinaryOp.SHL; :}
 		  ;
 addExpr ::= multiExpr:e
-			{: RESULT = e :}
+			{: RESULT = e; :}
 		  | addExpr:e1 addOp:op multiExpr:e2
 			{: RESULT = new BinaryExpr(e1, op, e2); :}
 		  ;
 addOp ::= PLUS
-		  {: RESULT = BinaryOp.PLUS; :}
+		  {: RESULT = BinaryOp.ADD; :}
 		| MINUS
 		  {: RESULT = BinaryOp.SUB; :}
 		;
@@ -389,11 +386,11 @@ multiExpr ::= castExpr:e
 			  {: RESULT = new BinaryExpr(e1, op, e2); :}
 			;
 multiOp ::= MULTI
- 			{: RESULT = BinaryOp.MUL :}
+ 			{: RESULT = BinaryOp.MUL; :}
 		  | DIV
- 			{: RESULT = BinaryOp.DIV :}
+ 			{: RESULT = BinaryOp.DIV; :}
 		  | MOD
- 			{: RESULT = BinaryOp.MOD :}
+ 			{: RESULT = BinaryOp.MOD; :}
 		  ;
 castExpr ::= unaryExpr:e
 			 {: RESULT = e; :}
@@ -406,11 +403,11 @@ typeName ::= typeSpecf:t
 		   	 {: RESULT = new PointerType(t); :}
 		   ;
 unaryExpr ::= postfixExpr:e
-			  {: RESULT = e :}
+			  {: RESULT = e; :}
 			| INC unaryExpr:e
-			  {: RESULT = new SelfIncrement(e); :}
+			  {: RESULT = new UnaryExpr(UnaryOp.INC, e); :}
 		 	| DEC unaryExpr:e
-		 	  {: RESULT = new SelfDecrement(e); :}
+		 	  {: RESULT = new UnaryExpr(UnaryOp.DEC, e); :}
 		 	| unaryOp:op castExpr:e
 		 	  {: RESULT = new UnaryExpr(op, e); :}
 		 	| SIZEOF unaryExpr:e
@@ -455,9 +452,9 @@ arguments ::= assignmentExpr:e
 			  {: l.add(e); RESULT = l; :}
 			;
 primaryExpr ::= IDENTIFIER:id
-  			  | {: RESULT = new Identifier(new Symbol(id)); :}
+  			  	{: RESULT = new Identifier(new Symbol(id)); :}
 			  | INTEGER:i
-			  	{: RESULT = new IntConst(i.toInt()); :}
+			  	{: RESULT = new IntConst(i.intValue()); :}
 			  | CHAR_LITERAL:c
 			  	{: RESULT = new CharConst(c); :}
 			  | STRING_LITERAL:s

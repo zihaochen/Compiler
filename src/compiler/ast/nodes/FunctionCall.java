@@ -5,16 +5,16 @@ import compiler.ast.visitor.Visitor;
 import java.util.List;
 
 public class FunctionCall extends Expr implements House{
-    public Symbol body;
+    public Expr expr;
     public ExprList args;
 
     public FunctionCall() {
-        body = null;
+        expr = null;
         args = null;
     }
 
-    public FunctionCall(Symbol body, ExprList args) {
-        this.body = body;
+    public FunctionCall(Expr Expr, ExprList args) {
+        this.expr = Expr;
         this.args = args;
     }
 

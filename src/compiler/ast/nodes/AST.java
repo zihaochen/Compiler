@@ -12,6 +12,10 @@ public class AST implements House{
         this.decls = decls;
     }
 
+    public AST(Decl decl){
+        this.decls = new DeclList(decl);
+    }
+
     @Override
     public void accept(Visitor v) {
         v.visit(this);

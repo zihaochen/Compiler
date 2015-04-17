@@ -12,6 +12,9 @@ public class CharConst extends Expr implements House{
         this.value = value;
     }
 
+    public CharConst(char value) {
+        this.value = ""+value;
+    }
     @Override
     public void accept(Visitor v) {
         v.visit(this);
