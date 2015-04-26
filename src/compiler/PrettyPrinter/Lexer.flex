@@ -1,0 +1,213 @@
+package compiler.PrettyPrinter;
+
+import compiler.PrettyPrinter.Symbol;
+
+%%
+
+%unicode
+%line
+%column
+%implements prettySym
+%class prettyLexer
+%type Symbol
+
+%{
+    private int CommentCount = 0;
+
+    StringBuffer string = new StringBuffer();
+
+    StringBuffer comment = new StringBuffer();
+
+    private void err(String message) throws RuntimeException {
+        throw new RuntimeException(message + "Scanning error in the line" + yyline + ",column" + yycolumn + ": ");
+    }
+
+
+    private Symbol tok (int type){
+     //   System.out.println("Token found: " + type);
+        return new Symbol(type);
+    }
+
+    private Symbol tok (int type, Object value){
+    //    System.out.println("Token found: " + type + " <" + value + "> ");
+        return new Symbol(type, value);
+    }
+%}
+
+
+%eofval{
+    if (yystate() ==  MULTICOMMENT)
+        err("Comment symbol do not match (EOF)!");
+    return tok(EOF, null);
+%eofval}
+
+LineTerminator = \n|\r|\r\n
+WhiteSpace = [ \t\f\r\n\v]
+InputCharacter = [^\r\n]
+SingleComment = "//"{InputCharacter}* {LineTerminator}
+
+/* constants */
+Identifier = [:jletter:] [:jletterdigit:]*
+DecIntegerLiteral = [1-9][0-9]*|0
+OctIntegerLiteral = 0[0-7]+
+HexIntegerLiteral = 0[xX][0-9a-fA-F]+
+Include = "#"{InputCharacter}*
+
+%state STRING_STAGE
+%state CHAR_STAGE
+%state MULTICOMMENT
+
+%%
+
+<YYINITIAL> {
+
+    {Include}               { return tok(INCLUDE, yytext()); }
+/* comments */
+    "/*"                    { CommentCount = 1; yybegin(MULTICOMMENT); }
+    "*/"                    { err("comment symbol do not match!"); }
+    {SingleComment}         { return tok(COMMENT, yytext().substring(0, yytext().length() - 1)); }
+
+/* keywords */
+    "void"                  { return tok(VOID); }
+    "char"                  { return tok(CHAR); }
+    "int"                   { return tok(INT); }
+    "struct"                { return tok(STRUCT); }
+    "union"                 { return tok(UNION); }
+    "if"                    { return tok(IF); }
+    "else"                  { return tok(ELSE); }
+    "while"                 { return tok(WHILE); }
+    "for"                   { return tok(FOR); }
+    "continue"              { return tok(CONTINUE); }
+    "break"                 { return tok(BREAK); }
+    "return"                { return tok(RETURN); }
+    "sizeof"                { return tok(SIZEOF); }
+
+/* single-character operators */
+    "("                     { return tok(LPAREN); }
+    ")"                     { return tok(RPAREN); }
+    ";"                     { return tok(SEMICOLON); }
+    ","                     { return tok(COMMA); }
+    "="                     { return tok(ASSIGN); }
+    "{"                     { return tok(LBRACE); }
+    "}"                     { return tok(RBRACE); }
+    "["                     { return tok(LBRACKET); }
+    "]"                     { return tok(RBRACKET); }
+    "|"                     { return tok(VBAR); }
+    "^"                     { return tok(CARET); }
+    "&"                     { return tok(AMPERS); }
+    "<"                     { return tok(LT); }
+    ">"                     { return tok(GT); }
+    "+"                     { return tok(PLUS); }
+    "-"                     { return tok(MINUS); }
+    "*"                     { return tok(MULTI); }
+    "/"                     { return tok(DIV); }
+    "%"                     { return tok(MOD); }
+    "~"                     { return tok(TILDE); }
+    "!"                     { return tok(EXCLAM); }
+    "."                     { return tok(DOT); }
+
+/* multi-character operations */
+    "||"                    { return tok(OR); }
+    "&&"                    { return tok(AND); }
+    "=="                    { return tok(EQ); }
+    "!="                    { return tok(NE); }
+    "<="                    { return tok(LE); }
+    ">="                    { return tok(GE); }
+    "<<"                    { return tok(SHL); }
+    ">>"                    { return tok(SHR); }
+    "++"                    { return tok(INC); }
+    "--"                    { return tok(DEC); }
+    "->"                    { return tok(PTR); }
+
+    "*="                    { return tok(MUL_ASSIGN); }
+    "/="                    { return tok(DIV_ASSIGN); }
+    "%="                    { return tok(MOD_ASSIGN); }
+    "+="                    { return tok(PLUS_ASSIGN); }
+    "-="                    { return tok(SUB_ASSIGN); }
+    "<<="                   { return tok(SHL_ASSIGN); }
+    ">>="                   { return tok(SHR_ASSIGN); }
+    "&="                    { return tok(AND_ASSIGN); }
+    "^="                    { return tok(XOR_ASSIGN); }
+    "|="                    { return tok(OR_ASSIGN); }
+
+
+/* identifiers */
+    {Identifier}            { return tok(IDENTIFIER, yytext()); }
+
+/* literals */
+    {DecIntegerLiteral}     { return tok(DECINTEGER, yytext()); }
+    {OctIntegerLiteral}     { return tok(OCTINTEGER, yytext()); }
+    {HexIntegerLiteral}     { return tok(HEXINTEGER, yytext()); }
+
+/* string & char */
+    \"                      { string.setLength(0); yybegin(STRING_STAGE); string.append("\""); }
+    \'                      { string.setLength(0); yybegin(CHAR_STAGE); string.append("\'"); }
+
+/* some trivail things */
+    {WhiteSpace}            { /* skip */ }
+    {LineTerminator}        { /* skip */ }
+
+/* error */
+   [^]                     { err("Illegal character" + yytext()); }
+}
+
+<STRING_STAGE> {
+    \"                      { yybegin(YYINITIAL);
+                              return tok(STRING_LITERAL, string.toString() + "\""); }
+    [^\n\r\"\\]+            { string.append(yytext()); }
+    \\b                     { string.append("\\b"); }
+    \\f                     { string.append("\\f"); }
+    \\n                     { string.append ("\\n"); }
+    \\r                     { string.append("\\r"); }
+    \\t                     { string.append("\\t"); }
+    \\\                     { string.append("\\"); }
+    \\'                     { string.append("\\\'"); }
+    \\\"                    { string.append("\\\""); }
+
+    \\[0-7]{1,3}            { string.append(yytext()); }
+    \\x[0-9a-fA-F]{1,2}     { string.append(yytext()); }
+    [^]                     { err("Illegal character" + yytext()); }
+
+}
+
+<CHAR_STAGE> {
+    [^'\n\r\\]'             { yybegin(YYINITIAL);
+                              return tok(CHAR_LITERAL,yytext().charAt(0)); }
+ //   \\a'                    { yybegin(YYINITIAL);
+ //                             return tok(CHAR_LITERAL, '\a'); }
+    \\b'                    { yybegin(YYINITIAL);
+                              return tok(CHAR_LITERAL, '\b'); }
+    \\f'                    { yybegin(YYINITIAL);
+                              return tok(CHAR_LITERAL, '\f'); }
+    \\n'                    { yybegin(YYINITIAL);
+                              return tok(CHAR_LITERAL, '\n'); }
+    \\r'                    { yybegin(YYINITIAL);
+                              return tok(CHAR_LITERAL, '\r'); }
+    \\t'                    { yybegin(YYINITIAL);
+                              return tok(CHAR_LITERAL, '\t'); }
+ //   \\v'                    { yybegin(YYINITIAL);
+ //                             return tok(CHAR_LITERAL, '\v'); }
+    \\''                    { yybegin(YYINITIAL);
+                              return tok(CHAR_LITERAL, '\''); }
+    \\\"'                   { yybegin(YYINITIAL);
+                              return tok(CHAR_LITERAL, '\"'); }
+    \\\\'                   { yybegin(YYINITIAL);
+                              return tok(CHAR_LITERAL, '\\'); }
+
+    \\[0-7]{1,3}'            {yybegin(YYINITIAL); string.append(yytext()); return tok(STRING_LITERAL, string.toString());}
+    \\x[0-9a-fA-F]{1,2}'     {yybegin(YYINITIAL); string.append(yytext()); return tok(STRING_LITERAL, string.toString()); }
+    [^]                     { err("Illegal character" + yytext()); }
+}
+
+<MULTICOMMENT> {
+    "/*"            { CommentCount++; }
+    "*/"            {
+                        CommentCount--;
+                        if (CommentCount == 0) {
+                             yybegin(YYINITIAL);
+                             return tok(COMMENT, "/*" + comment + "*/\n");
+                        }
+                    }
+    [^]             { comment.append(yytext()); }
+}
+
