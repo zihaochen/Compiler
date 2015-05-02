@@ -3,6 +3,7 @@ package compiler.ast.visitor;
 /**
  * Created by Chen on 2015/4/14.
  */
+import com.sun.org.apache.xpath.internal.compiler.FunctionTable;
 import  compiler.ast.nodes.*;
 
 import java.io.OutputStream;
@@ -20,6 +21,8 @@ public interface Visitor {
     void visit(InitValue initValue);
     void visit(InitList initList);
 
+    void visit(MarkerType markerType);
+    void visit(FunctionType functionType);
     void visit(ArrayType arrayType);
     void visit(CharType charType);
     void visit(IntType intType);

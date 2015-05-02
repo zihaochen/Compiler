@@ -3,17 +3,17 @@ package compiler.ast.nodes;
 import compiler.ast.visitor.Visitor;
 
 public class CharConst extends Expr implements House{
-    public String value;
+    public Object value;
 
     public CharConst() {
     }
 
-    public CharConst(String value) {
+    public CharConst(Object value) {
         this.value = value;
     }
 
     public CharConst(char value) {
-        this.value = ""+value;
+        this.value =  (int) value;
     }
     @Override
     public void accept(Visitor v) {

@@ -1,8 +1,7 @@
 package compiler.ast;
 
-import compiler.ast.nodes.AST;
-import compiler.ast.visitor.ASTprinter;
-import compiler.ast.visitor.Visitor;
+import compiler.ast.nodes.*;
+import compiler.ast.visitor.*;
 import compiler.syntactic.parser;
 
 import java.io.*;
@@ -34,7 +33,7 @@ public class ASTTester {
     public static void main(String argv[]) throws IOException {
         String path = "D:\\Codes\\Compiler\\tests\\AST\\";
         ArrayList<String> names = new ArrayList<>();
-        names.add("ta");
+        names.add("test");
         names.add("helloworld");
         names.add("fibonacci");
         names.add("quicksort");

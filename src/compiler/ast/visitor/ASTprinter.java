@@ -55,7 +55,8 @@ public class ASTprinter implements Visitor{
         level++;
         varDecl.type.accept(this);
         varDecl.name.accept(this);
-        varDecl.init.accept(this);
+        if (varDecl.init != null)
+            varDecl.init.accept(this);
         level--;
     }
 
@@ -64,7 +65,6 @@ public class ASTprinter implements Visitor{
         level++;
         functionDecl.type.accept(this);
         functionDecl.name.accept(this);
-        functionDecl.init.accept(this);
         functionDecl.prmtrs.accept(this);
         level--;
     }
@@ -101,6 +101,12 @@ public class ASTprinter implements Visitor{
         level--;
     }
 
+    public void visit(MarkerType markerType) {
+    }
+
+    public void visit(FunctionType functionType) {
+    }
+
     public void visit(ArrayType arrayType){
         print("ArrayType");
         level++;
@@ -132,7 +138,7 @@ public class ASTprinter implements Visitor{
         print("StructType");
         level++;
         structType.name.accept(this);
-        structType.declrs.accept(this);
+        if (structType.declrs != null) structType.declrs.accept(this);
         level--;
     }
 
@@ -140,7 +146,7 @@ public class ASTprinter implements Visitor{
         print("UnionType");
         level++;
         unionType.name.accept(this);
-        unionType.declrs.accept(this);
+        if (unionType.declrs != null) unionType.declrs.accept(this);
         level--;
     }
 
@@ -229,7 +235,7 @@ public class ASTprinter implements Visitor{
         print("FunctionCall");
         level++;
         functionCall.expr.accept(this);
-        functionCall.args.accept(this);
+        if (functionCall.args != null) functionCall.args.accept(this);
         level--;
     }
 

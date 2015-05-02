@@ -226,9 +226,12 @@ public class prettyPrinter implements prettySym{
 
                 case LBRACE:
                     result.add("{");
-                    if (input.get(cur - 1).sym != ASSIGN) result.add("\n");
-                    if (!(cur - 1 >= 0 && input.get(cur - 1).sym == ASSIGN))
+                    if (input.get(cur - 1).sym != ASSIGN && input.get(cur - 1).sym != LBRACE && input.get(cur - 1).sym != COMMA) {
+                        result.add("\n");
                         result.add(addIndent);
+                    }
+                //    if (!(input.get(cur - 1).sym == ASSIGN || input.get(cur - 1).sym == LBRACE || input.get(cur - 1).sym == COMMA))
+                //        result.add(addIndent);
                     cur++;
                     break;
 
@@ -513,7 +516,10 @@ public class prettyPrinter implements prettySym{
     public static void main(String argv[]) throws IOException{
         String path = "D:\\Codes\\Compiler\\tests\\PrettyPrinter\\";
         ArrayList<String> names = new ArrayList<>();
-        names.add("argly");
+        names.add("madcalc");
+        names.add("test01");
+        names.add("test02");
+        names.add("test03");
         for (String file : names){
             prettyLexer lexer;
             Reader input = new BufferedReader(new FileReader(path + file + ".c"));

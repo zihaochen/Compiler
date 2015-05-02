@@ -1,5 +1,7 @@
 package compiler.syntactic;
 
+import compiler.ast.nodes.Symbol;
+
 import java.io.*;
 
 /**
@@ -25,8 +27,7 @@ public class ParserTest {
     }
 
     public static void main(String argv[]) throws IOException{
-        parse("D:\\Codes\\Compiler\\tests\\AST\\quicksort.c");
-        parse("D:\\Codes\\Compiler\\tests\\parser\\test02.c");
+        parse("D:\\Codes\\Compiler\\tests\\parser\\test06.c");
         parse("D:\\Codes\\Compiler\\tests\\parser\\test03.c");
         parse("D:\\Codes\\Compiler\\tests\\parser\\test04.c");
         parse("D:\\Codes\\Compiler\\tests\\parser\\test05.c");

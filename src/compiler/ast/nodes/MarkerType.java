@@ -2,16 +2,18 @@ package compiler.ast.nodes;
 
 import compiler.ast.visitor.Visitor;
 
-public class VoidType extends Type implements House{
-
+/**
+ * Created by Chen on 2015/5/1.
+ */
+public class MarkerType extends Type{
     @Override
     public Type clone() {
         Type ret;
-        ret = new VoidType();
-        ret.size = this.size;
-        ret.value = this.value;
-        ret.isConst = this.isConst;
-        ret.isLeft = this.isLeft;
+        ret = new MarkerType();
+        ret.isConst = isConst;
+        ret.isLeft = isLeft;
+        ret.size = size;
+        ret.value = value;
         return ret;
     }
 

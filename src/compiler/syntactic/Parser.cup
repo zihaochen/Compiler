@@ -142,7 +142,7 @@ decls ::= decl:d
 		  {: ds.add(d); RESULT = ds; :}
 		;
 functionDef ::= typeSpecf:t declr:d compoundStmt:c
-	 			{: dealWithType(d,t); RESULT = new FunctionDef(d.type, d.name, ((FunctionDecl) d).prmtrs, c); :}
+	 			{:  dealWithType(d, t); RESULT = new FunctionDef((FunctionType) d.type, d.name, ((FunctionDecl) d).prmtrs, c); :}
 			  ;
 prmtrs ::= plnDecl:pl
 		   {: RESULT = new DeclList(pl); :}
@@ -181,9 +181,9 @@ typeSpecf ::= VOID
 			| INT
 			  {: RESULT = new IntType(); :}
 			| STRUCT IDENTIFIER:id
-			  {: RESULT = new StructType(new Symbol(id), new DeclList()); :}
+			  {: RESULT = new StructType(new Symbol(id), null); :}
 			| UNION IDENTIFIER:id
-			  {: RESULT = new UnionType(new Symbol(id), new DeclList()); :}
+			  {: RESULT = new UnionType(new Symbol(id), null); :}
 			| STRUCT LBRACE record:r RBRACE
 			  {: RESULT = new StructType(new Symbol(""), r); :}
 			| UNION LBRACE record:r RBRACE
@@ -206,16 +206,21 @@ plnDecl ::= typeSpecf:t declr:d
 declr ::= tmpDeclr:d
 		  {: RESULT = d; :}
 		| MULTI declr:d
-		  {: d.type = new PointerType(d.type); RESULT = d;:}
+		  {:
+		  	if (d.type instanceof FunctionType)
+		  		dealWithType(d, new PointerType());
+		  	else d.type = new PointerType(d.type);
+		  	RESULT = d;
+		  	:}
 		;
 tmpDeclr ::= IDENTIFIER:id
-		     {: RESULT = new VarDecl(null, new Symbol(id), new InitList()); :}
+		     {: RESULT = new VarDecl(null, new Symbol(id), null); :}
 		   | IDENTIFIER:id LPAREN prmtrs:para RPAREN
-		   	 {: RESULT = new FunctionDecl(null, new Symbol(id), para); :}
+		   	 {: RESULT = new FunctionDecl(new FunctionType(null, para), new Symbol(id), para); :}
 		   | IDENTIFIER:id LPAREN RPAREN
-		     {: RESULT = new FunctionDecl(null, new Symbol(id), new DeclList()); :}
+		     {: RESULT = new FunctionDecl(new FunctionType(null, new DeclList()), new Symbol(id), new DeclList()); :}
 		   | tmpDeclr:t LBRACKET constantExpr:e RBRACKET
-		     {: RESULT = new VarDecl(new ArrayType(t.type, e), t.name, new InitList()); :}
+		     {: dealWithType(t, new ArrayType(null, e)); RESULT = t; :}
 			;
 /* statement */
 stmt ::= exprStmt:e

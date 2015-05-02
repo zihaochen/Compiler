@@ -8,7 +8,6 @@ package compiler.ast.nodes;
 import compiler.ast.visitor.Visitor;
 
 public class TypeDecl extends Decl implements House{
-    public Type type;
 
     public TypeDecl(Type type) {
         this.type = type;

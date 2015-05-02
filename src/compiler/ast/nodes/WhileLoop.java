@@ -2,7 +2,7 @@ package compiler.ast.nodes;
 
 import compiler.ast.visitor.Visitor;
 
-public class WhileLoop extends Stmt implements House{
+public class WhileLoop extends ItrStmt implements House{
     public Expr condition;
     public Stmt body;
 

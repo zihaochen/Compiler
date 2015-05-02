@@ -1,6 +1,5 @@
 package compiler.ast.nodes;
 
-import compiler.ast.visitor.Visitor;
 
 /**
  * Created by Chen on 2015/4/15.

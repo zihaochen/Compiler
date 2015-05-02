@@ -64,7 +64,6 @@ Include = "#"{InputCharacter}*
     {Include}               { return tok(INCLUDE, yytext()); }
 /* comments */
     "/*"                    { CommentCount = 1; yybegin(MULTICOMMENT); }
-    "*/"                    { err("comment symbol do not match!"); }
     {SingleComment}         { return tok(COMMENT, yytext().substring(0, yytext().length() - 1)); }
 
 /* keywords */

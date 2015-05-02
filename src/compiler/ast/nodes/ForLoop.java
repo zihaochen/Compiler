@@ -2,7 +2,7 @@ package compiler.ast.nodes;
 
 import compiler.ast.visitor.Visitor;
 
-public class ForLoop extends Stmt implements House{
+public class ForLoop extends ItrStmt implements House{
     public Expr init;
     public Expr condition;
     public Expr step;

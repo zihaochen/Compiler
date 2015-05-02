@@ -48,6 +48,7 @@ DecIntegerLiteral = [1-9][0-9]*|0
 OctIntegerLiteral = 0[0-7]+
 HexIntegerLiteral = 0[xX][0-9a-fA-F]+
 
+Include = "#"{InputCharacter}*
 
 %state STRING_STAGE
 %state CHAR_STAGE
@@ -57,9 +58,10 @@ HexIntegerLiteral = 0[xX][0-9a-fA-F]+
 
 <YYINITIAL> {
 
+    {Include}               { /* skip */ }
 /* comments */
     "/*"                    { CommentCount = 1; yybegin(MULTICOMMENT); }
-    "*/"                    { err("comment symbol do not match!"); }
+   // "*/"                    { err("comment symbol do not match!"); }
     {SingleComment}         { /* skip */ }
 
 /* keywords */
@@ -201,7 +203,7 @@ HexIntegerLiteral = 0[xX][0-9a-fA-F]+
 }
 
 <MULTICOMMENT> {
-    "/*"            { CommentCount++; }
+  //  "/*"            { CommentCount++; }
     "*/"            { CommentCount--;
                       if (CommentCount == 0) yybegin(YYINITIAL); }
     [^]             {}
