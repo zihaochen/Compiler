@@ -4,7 +4,6 @@
 				<IntType> 
 				<IntConst: 1005> 
 			<Id: a> 
-			<InitList> 
 		<FunctionDef> 
 			<VoidType> 
 			<Id: swap> 
@@ -12,12 +11,10 @@
 					<PointerType> 
 						<IntType> 
 					<Id: a> 
-					<InitList> 
 				<VarDecl> 
 					<PointerType> 
 						<IntType> 
 					<Id: b> 
-					<InitList> 
 					<VarDecl> 
 						<IntType> 
 						<Id: tmp> 
@@ -47,15 +44,12 @@
 						<IntType> 
 						<IntConst: 1005> 
 					<Id: a> 
-					<InitList> 
 				<VarDecl> 
 					<IntType> 
 					<Id: left> 
-					<InitList> 
 				<VarDecl> 
 					<IntType> 
 					<Id: right> 
-					<InitList> 
 					<VarDecl> 
 						<IntType> 
 						<Id: i> 
@@ -202,11 +196,9 @@
 					<VarDecl> 
 						<IntType> 
 						<Id: n> 
-						<InitList> 
 					<VarDecl> 
 						<IntType> 
 						<Id: i> 
-						<InitList> 
 					<FunctionCall> 
 						<Id: scanf> 
 						<ExprList> 

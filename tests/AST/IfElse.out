@@ -1,0 +1,38 @@
+<AST> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: main> 
+					<VarDecl> 
+						<IntType> 
+						<Id: a> 
+						<InitValue> 
+							<IntConst: 5> 
+					<VarDecl> 
+						<IntType> 
+						<Id: b> 
+						<InitValue> 
+							<IntConst: 6> 
+					<VarDecl> 
+						<IntType> 
+						<Id: c> 
+						<InitValue> 
+							<IntConst: 7> 
+					<If> 
+						<BinaryExpr> 
+							<LT> 
+							<Id: a> 
+							<Id: b> 
+						<If> 
+							<BinaryExpr> 
+								<GT> 
+								<Id: b> 
+								<Id: c> 
+							<BinaryExpr> 
+								<ASSIGN> 
+								<Id: a> 
+								<Id: b> 
+							<FunctionCall> 
+								<Id: printf> 
+								<ExprList> 
+									<StringConst: RIGHT
+> 

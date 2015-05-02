@@ -1,5 +1,5 @@
 
-int g[105][105];
+int g[105][1005];
 
 int main() {
     int n, i, j, k;

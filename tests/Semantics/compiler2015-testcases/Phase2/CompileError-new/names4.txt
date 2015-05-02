@@ -1,0 +1,9 @@
+defcomment.c
+funcini.c
+funcstruct.c
+inilist2.c
+maincall.c
+negdef.c
+recursive.c
+simpleesc.c
+structspec.c

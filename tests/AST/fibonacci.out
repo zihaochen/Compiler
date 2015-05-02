@@ -5,7 +5,6 @@
 				<VarDecl> 
 					<IntType> 
 					<Id: n> 
-					<InitList> 
 					<If> 
 						<BinaryExpr> 
 							<OR> 
@@ -42,7 +41,6 @@
 					<VarDecl> 
 						<IntType> 
 						<Id: n> 
-						<InitList> 
 					<FunctionCall> 
 						<Id: scanf> 
 						<ExprList> 

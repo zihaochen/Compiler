@@ -2,7 +2,6 @@
 		<VarDecl> 
 			<IntType> 
 			<Id: n> 
-			<InitList> 
 		<VarDecl> 
 			<ArrayType> 
 				<ArrayType> 
@@ -10,38 +9,31 @@
 					<IntConst: 105> 
 				<IntConst: 105> 
 			<Id: g> 
-			<InitList> 
 		<VarDecl> 
 			<ArrayType> 
 				<IntType> 
 				<IntConst: 105> 
 			<Id: q> 
-			<InitList> 
 		<VarDecl> 
 			<IntType> 
 			<Id: qhead> 
-			<InitList> 
 		<VarDecl> 
 			<IntType> 
 			<Id: qtail> 
-			<InitList> 
 		<VarDecl> 
 			<ArrayType> 
 				<IntType> 
 				<IntConst: 105> 
 			<Id: dis> 
-			<InitList> 
 		<FunctionDef> 
 			<IntType> 
 			<Id: main> 
 					<VarDecl> 
 						<IntType> 
 						<Id: m> 
-						<InitList> 
 					<VarDecl> 
 						<IntType> 
 						<Id: i> 
-						<InitList> 
 					<FunctionCall> 
 						<Id: scanf> 
 						<ExprList> 
@@ -87,11 +79,9 @@
 								<VarDecl> 
 									<IntType> 
 									<Id: u> 
-									<InitList> 
 								<VarDecl> 
 									<IntType> 
 									<Id: v> 
-									<InitList> 
 								<FunctionCall> 
 									<Id: scanf> 
 									<ExprList> 
@@ -159,7 +149,6 @@
 								<VarDecl> 
 									<IntType> 
 									<Id: v> 
-									<InitList> 
 								<ForLoop> 
 									<BinaryExpr> 
 										<ASSIGN> 

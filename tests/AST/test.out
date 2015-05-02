@@ -1,0 +1,61 @@
+<AST> 
+		<TypeDecl> 
+			<StructType> 
+				<Id: T> 
+					<VarDecl> 
+						<PointerType> 
+							<StructType> 
+								<Id: T> 
+						<Id: t> 
+					<VarDecl> 
+						<IntType> 
+						<Id: tt> 
+		<FunctionDef> 
+			<StructType> 
+				<Id: T> 
+			<Id: hahaha> 
+				<VarDecl> 
+					<IntType> 
+					<Id: x> 
+					<If> 
+						<BinaryExpr> 
+							<GT> 
+							<Id: x> 
+							<IntConst: 0> 
+								<VarDecl> 
+									<StructType> 
+										<Id: T> 
+									<Id: t> 
+								<ReturnStmt> 
+									<FunctionCall> 
+										<Id: hahaha> 
+										<ExprList> 
+											<BinaryExpr> 
+												<SUB> 
+												<Id: x> 
+												<IntConst: 1> 
+								<VarDecl> 
+									<PointerType> 
+										<StructType> 
+											<Id: T> 
+									<Id: t> 
+								<BinaryExpr> 
+									<ASSIGN> 
+									<RecordAccess> 
+										<Id: t> 
+										<Id: tt> 
+									<IntConst: 23333> 
+								<ReturnStmt> 
+									<Id: t> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: main> 
+					<VarDecl> 
+						<StructType> 
+							<Id: T> 
+						<Id: t> 
+						<InitValue> 
+							<FunctionCall> 
+								<Id: hahaha> 
+								<ExprList> 
+									<IntConst: 30> 

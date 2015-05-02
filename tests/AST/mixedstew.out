@@ -5,27 +5,21 @@
 					<VarDecl> 
 						<IntType> 
 						<Id: a> 
-						<InitList> 
 					<VarDecl> 
 						<IntType> 
 						<Id: b> 
-						<InitList> 
 					<VarDecl> 
 						<IntType> 
 						<Id: c> 
-						<InitList> 
 					<VarDecl> 
 						<IntType> 
 						<Id: ab> 
-						<InitList> 
 					<VarDecl> 
 						<IntType> 
 						<Id: xy> 
-						<InitList> 
 					<VarDecl> 
 						<IntType> 
 						<Id: xz> 
-						<InitList> 
 					<VarDecl> 
 						<ArrayType> 
 							<CharType> 
@@ -43,7 +37,6 @@
 					<VarDecl> 
 						<CharType> 
 						<Id: symbol_symbol$symbols> 
-						<InitList> 
 					<IntConst: 123> 
 					<IntConst: 456> 
 					<IntConst: 789> 
@@ -57,21 +50,20 @@
 						<COMMA> 
 						<BinaryExpr> 
 							<COMMA> 
-							<CharConst: g> 
-							<CharConst: h> 
-						<CharConst: j> 
+							<CharConst: 103> 
+							<CharConst: 104> 
+						<CharConst: 106> 
 					<BinaryExpr> 
 						<COMMA> 
 						<BinaryExpr> 
 							<COMMA> 
-							<CharConst: 
-> 
-							<CharConst: 	> 
-						<CharConst: > 
+							<CharConst: 10> 
+							<CharConst: 9> 
+						<CharConst: 8> 
 					<BinaryExpr> 
 						<COMMA> 
-						<CharConst: 2> 
-						<CharConst:  > 
+						<CharConst: 50> 
+						<CharConst: 32> 
 					<StringConst: string> 
 					<StringConst: longerstring> 
 					<StringConst: whatisyourname
@@ -83,35 +75,32 @@
 					<VarDecl> 
 						<CharType> 
 						<Id: name> 
-						<InitList> 
 					<VarDecl> 
 						<IntType> 
 						<Id: score> 
-						<InitList> 
 					<VarDecl> 
 						<UnionType> 
 							<Id: > 
 								<VarDecl> 
 									<IntType> 
 									<Id: a> 
-									<InitList> 
 								<VarDecl> 
 									<CharType> 
 									<Id: b> 
-									<InitList> 
 						<Id: comment> 
-						<InitList> 
+		<VarDecl> 
+			<StructType> 
+				<Id: Lesson> 
+			<Id: ll> 
 		<FunctionDef> 
 			<VoidType> 
 			<Id: getMoreGPA> 
 				<VarDecl> 
 					<IntType> 
 					<Id: compiler> 
-					<InitList> 
 					<VarDecl> 
 						<IntType> 
 						<Id: i> 
-						<InitList> 
 					<If> 
 						<BinaryExpr> 
 							<GE> 
@@ -209,7 +198,6 @@
 					<VarDecl> 
 						<IntType> 
 						<Id: t> 
-						<InitList> 
 					<BinaryExpr> 
 						<ASSIGN> 
 						<RecordAccess> 

@@ -1,0 +1,13 @@
+arrovf.c
+expcomment.c
+fact.c
+infloop.c
+inidef.c
+inilist1.c
+madcalc.c
+names.txt
+pntarith.c
+pntloop.c
+toolong.c
+typchk.c
+voidpnt2.c

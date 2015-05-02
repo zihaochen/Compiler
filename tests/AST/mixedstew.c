@@ -58,6 +58,8 @@ struct Lesson {
     } comment;
 };
 
+struct Lesson ll;
+
 void getMoreGPA(int compiler) {
     int i;
     if (compiler.score >= 95) {

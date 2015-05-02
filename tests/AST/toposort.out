@@ -2,44 +2,36 @@
 		<VarDecl> 
 			<IntType> 
 			<Id: n> 
-			<InitList> 
 		<VarDecl> 
 			<IntType> 
 			<Id: m> 
-			<InitList> 
 		<VarDecl> 
 			<IntType> 
 			<Id: top> 
-			<InitList> 
 		<VarDecl> 
 			<ArrayType> 
 				<IntType> 
 				<IntConst: 10005> 
 			<Id: to> 
-			<InitList> 
 		<VarDecl> 
 			<ArrayType> 
 				<IntType> 
 				<IntConst: 10005> 
 			<Id: next> 
-			<InitList> 
 		<VarDecl> 
 			<ArrayType> 
 				<IntType> 
 				<IntConst: 105> 
 			<Id: head> 
-			<InitList> 
 		<FunctionDef> 
 			<VoidType> 
 			<Id: addedge> 
 				<VarDecl> 
 					<IntType> 
 					<Id: u> 
-					<InitList> 
 				<VarDecl> 
 					<IntType> 
 					<Id: v> 
-					<InitList> 
 					<BinaryExpr> 
 						<COMMA> 
 						<BinaryExpr> 
@@ -70,18 +62,15 @@
 				<IntType> 
 				<IntConst: 105> 
 			<Id: dgr> 
-			<InitList> 
 		<FunctionDef> 
 			<IntType> 
 			<Id: main> 
 					<VarDecl> 
 						<IntType> 
 						<Id: i> 
-						<InitList> 
 					<VarDecl> 
 						<IntType> 
 						<Id: j> 
-						<InitList> 
 					<FunctionCall> 
 						<Id: scanf> 
 						<ExprList> 
@@ -133,11 +122,9 @@
 								<VarDecl> 
 									<IntType> 
 									<Id: u> 
-									<InitList> 
 								<VarDecl> 
 									<IntType> 
 									<Id: v> 
-									<InitList> 
 								<FunctionCall> 
 									<Id: scanf> 
 									<ExprList> 

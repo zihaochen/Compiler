@@ -3,29 +3,24 @@
 			<ArrayType> 
 				<ArrayType> 
 					<IntType> 
-					<IntConst: 105> 
+					<IntConst: 1005> 
 				<IntConst: 105> 
 			<Id: g> 
-			<InitList> 
 		<FunctionDef> 
 			<IntType> 
 			<Id: main> 
 					<VarDecl> 
 						<IntType> 
 						<Id: n> 
-						<InitList> 
 					<VarDecl> 
 						<IntType> 
 						<Id: i> 
-						<InitList> 
 					<VarDecl> 
 						<IntType> 
 						<Id: j> 
-						<InitList> 
 					<VarDecl> 
 						<IntType> 
 						<Id: k> 
-						<InitList> 
 					<FunctionCall> 
 						<Id: scanf> 
 						<ExprList> 

@@ -1,7 +1,6 @@
 package compiler.ast.nodes;
 
 import compiler.ast.visitor.Visitor;
-import compiler.semantic.MemberTable;
 
 
 public class UnionType extends RecordType implements House{

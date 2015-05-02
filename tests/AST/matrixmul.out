@@ -2,7 +2,6 @@
 		<VarDecl> 
 			<IntType> 
 			<Id: n> 
-			<InitList> 
 		<VarDecl> 
 			<ArrayType> 
 				<ArrayType> 
@@ -10,7 +9,6 @@
 					<IntConst: 105> 
 				<IntConst: 105> 
 			<Id: a> 
-			<InitList> 
 		<VarDecl> 
 			<ArrayType> 
 				<ArrayType> 
@@ -18,7 +16,6 @@
 					<IntConst: 105> 
 				<IntConst: 105> 
 			<Id: b> 
-			<InitList> 
 		<VarDecl> 
 			<ArrayType> 
 				<ArrayType> 
@@ -26,22 +23,18 @@
 					<IntConst: 105> 
 				<IntConst: 105> 
 			<Id: c> 
-			<InitList> 
 		<FunctionDef> 
 			<IntType> 
 			<Id: main> 
 					<VarDecl> 
 						<IntType> 
 						<Id: i> 
-						<InitList> 
 					<VarDecl> 
 						<IntType> 
 						<Id: j> 
-						<InitList> 
 					<VarDecl> 
 						<IntType> 
 						<Id: k> 
-						<InitList> 
 					<FunctionCall> 
 						<Id: scanf> 
 						<ExprList> 
