@@ -677,7 +677,7 @@ public class SemanticCheck implements Visitor {
 
     public Object castValue(Type type, Integer integer) throws RuntimeException{
         if (!checkIC(type))
-            throw new RuntimeException("Somthing is wrong in castValue");
+            throw new RuntimeException("Something is wrong in castValue");
         if (type instanceof IntType)
             return integer;
         if (type instanceof CharType)
@@ -708,7 +708,7 @@ public class SemanticCheck implements Visitor {
     }
 
     public Type checkUnExpr(UnaryOp op, Type type) throws RuntimeException{
-        Type ret = null;
+        Type ret;
         switch (op){
             case ASTERISK:
                 if (!(type instanceof PointerType)){
@@ -804,11 +804,10 @@ public class SemanticCheck implements Visitor {
             if (!(type instanceof RecordType))
                 throw new RuntimeException("Pointer in PointerAccess must be a pointer to a record type");
             else {
-                RecordType recordType = (RecordType) type;
-                if (!recordType.members.contains(pointerAccess.attribute.num))
+                if (!((RecordType) type).members.contains(pointerAccess.attribute.num))
                     throw new RuntimeException(pointerAccess.attribute.toString() + "not found in the filed list");
                 else {
-                    pointerAccess.returnType = recordType.members.getType(pointerAccess.attribute.num).clone();
+                    pointerAccess.returnType = ((RecordType) type).members.getType(pointerAccess.attribute.num).clone();
                     pointerAccess.returnType.isConst = false;
                     pointerAccess.returnType.isLeft = true;
                 }
