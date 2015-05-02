@@ -1,5 +1,5 @@
 all:
-	cd src/ ; javac -cp "../lib/java-cup-11a-runtime.jar": -d ../bin/ **/*.java
+	ant all
 
 clean:
-	rm -r bin/*
+	ant clean
