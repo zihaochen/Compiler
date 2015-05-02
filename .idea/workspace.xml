@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef921a38-bb99-415c-8ed8-767f2b738347" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\Codes\Compiler\.idea\workspace.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
-      <change type="MOVED" beforePath="D:\Codes\Compiler\src\compiler\STL\getChar.java" afterPath="$PROJECT_DIR$/src/compiler/STL/Getchar.java" />
-      <change type="MOVED" beforePath="D:\Codes\Compiler\src\compiler\STL\malloc.java" afterPath="$PROJECT_DIR$/src/compiler/STL/Malloc.java" />
-      <change type="MOVED" beforePath="D:\Codes\Compiler\src\compiler\STL\printf.java" afterPath="$PROJECT_DIR$/src/compiler/STL/Printf.java" />
-      <change type="MOVED" beforePath="D:\Codes\Compiler\src\compiler\semantic\memberTable.java" afterPath="$PROJECT_DIR$/src/compiler/semantic/MemberTable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Compiler.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -241,6 +236,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="STL" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -666,7 +701,7 @@
       <workItem from="1430532357688" duration="20715000" />
       <workItem from="1430563995504" duration="529000" />
       <workItem from="1430570363836" duration="2102000" />
-      <workItem from="1430577109459" duration="2800000" />
+      <workItem from="1430577109459" duration="3091000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, most files finished, but not compiled yet.">
       <created>1429098593928</created>
@@ -732,7 +767,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="284748000" />
+    <option name="totallyTimeSpent" value="285039000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
