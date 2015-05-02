@@ -701,7 +701,7 @@
       <workItem from="1430532357688" duration="20715000" />
       <workItem from="1430563995504" duration="529000" />
       <workItem from="1430570363836" duration="2102000" />
-      <workItem from="1430577109459" duration="3283000" />
+      <workItem from="1430577109459" duration="3332000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, most files finished, but not compiled yet.">
       <created>1429098593928</created>
@@ -769,11 +769,17 @@
       <option name="project" value="LOCAL" />
       <updated>1430580498808</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="PHASE2 DONE!">
+      <created>1430580691090</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1430580691090</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="285231000" />
+    <option name="totallyTimeSpent" value="285280000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
