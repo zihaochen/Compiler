@@ -23,8 +23,8 @@ public class MemberTable {
     }
 
     public boolean contains(Integer integer) {
-        return list.containsKey(integer);
-    }
+         return list.containsKey(integer);
+     }
 
     public Type getType(Integer key) {
         return list.get(key);
