@@ -4,7 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/compiler/ast/nodes/BinaryOpToString.java" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef921a38-bb99-415c-8ed8-767f2b738347" name="Default" comment="PHASE2 DONE!">
+    <list default="true" id="ef921a38-bb99-415c-8ed8-767f2b738347" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/semantic/semanticTester.java" afterPath="$PROJECT_DIR$/src/compiler/semantic/semanticTester.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -93,8 +93,8 @@
       <file leaf-file-name="semanticTester.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/compiler/semantic/semanticTester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31408775">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5103926">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -688,7 +688,7 @@
       <workItem from="1430532357688" duration="20715000" />
       <workItem from="1430563995504" duration="529000" />
       <workItem from="1430570363836" duration="2102000" />
-      <workItem from="1430577109459" duration="3717000" />
+      <workItem from="1430577109459" duration="3900000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, most files finished, but not compiled yet.">
       <created>1429098593928</created>
@@ -768,11 +768,17 @@
       <option name="project" value="LOCAL" />
       <updated>1430580740964</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="PHASE2 DONE!">
+      <created>1430581143077</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1430581143077</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="285665000" />
+    <option name="totallyTimeSpent" value="285848000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1280,8 +1286,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/semantic/semanticTester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31408775">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5103926">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
