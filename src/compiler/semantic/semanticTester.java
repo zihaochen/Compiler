@@ -11,7 +11,6 @@ import java.util.ArrayList;
  * Created by Chen on 2015/5/1.
  */
 public class semanticTester {
-
     public static void test(String inputFile, Visitor visitor) throws IOException {
         Reader input = new BufferedReader(new FileReader(inputFile));
         AST ast = null;
