@@ -3,7 +3,6 @@ package compiler.ast.nodes;
 import compiler.ast.visitor.Visitor;
 
 public class StructType extends RecordType implements House{
-    public Symbol name;
     public DeclList declrs;
 
     public StructType(Symbol name, DeclList declrs) {

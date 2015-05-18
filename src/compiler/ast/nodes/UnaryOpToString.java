@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class UnaryOpToString {
 
-    public static List<String> list;
+    public static List<String> list= new ArrayList<>(Arrays.asList("INC", "DEC", "SIZEOF", "AMPERSAND", "ASTERISK", "PLUS", "MINUS", "TILDE", "NOT"));
 
     public UnaryOpToString() {
 

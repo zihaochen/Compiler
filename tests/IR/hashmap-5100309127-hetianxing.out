@@ -1,0 +1,152 @@
+hashsize = 100
+Temp1031 = n MUL 237
+Temp1032 = Temp1031 MOD hashsize
+Return BasicParam Temp1032
+
+ptr = 0
+BasicParam key
+call getHash , 1
+p = Temp1034
+Temp1033 = p
+Temp1035 = 0
+Temp1036 = p MUL 12
+Temp1035 = Temp1035 ADD Temp1036
+Temp1037 = table ADD Temp1035
+Temp1038 = Temp1037
+Temp1039 = Temp1038 EQ 0
+If Not Equal to Zero Temp1039 Goto Label :115	
+Goto label:116
+Label :115	BasicParam 12
+call malloc , 1
+Temp1042 = 0
+Temp1043 = p MUL 12
+Temp1042 = Temp1042 ADD Temp1043
+Temp1044 = table ADD Temp1042
+Temp1045 = Temp1044
+Temp1044 = Temp1041
+Temp1047 = 0
+Temp1048 = p MUL 12
+Temp1047 = Temp1047 ADD Temp1048
+Temp1049 = table ADD Temp1047
+Temp1050 = Temp1049
+Temp1051 = *Temp1050, 12
+Temp1051[0] = key , 4
+Temp1053 = 0
+Temp1054 = p MUL 12
+Temp1053 = Temp1053 ADD Temp1054
+Temp1055 = table ADD Temp1053
+Temp1056 = Temp1055
+Temp1057 = *Temp1056, 12
+Temp1057[4] = data , 4
+Temp1059 = 0
+Temp1060 = p MUL 12
+Temp1059 = Temp1059 ADD Temp1060
+Temp1061 = table ADD Temp1059
+Temp1062 = Temp1061
+Temp1063 = *Temp1062, 12
+Temp1063[8] = 0 , 4
+Return 
+Goto label:114
+Label :116	Label :114	Temp1065 = 0
+Temp1066 = p MUL 12
+Temp1065 = Temp1065 ADD Temp1066
+Temp1067 = table ADD Temp1065
+Temp1068 = Temp1067
+ptr = Temp1068
+Temp1064 = ptr
+Label :118	Temp1069 = *ptr, 12
+Temp1070 = Temp1069[0] , 4
+Temp1071 = Temp1070 NE key
+If Not Equal to Zero Temp1071 Goto Label :119	
+Goto label:117
+Label :119	Temp1072 = *ptr, 12
+Temp1073 = Temp1072[8] , 4
+Temp1074 = Temp1073 EQ 0
+If Not Equal to Zero Temp1074 Goto Label :121	
+Goto label:122
+Label :121	BasicParam 12
+call malloc , 1
+Temp1077 = *ptr, 12
+Temp1077[8] = Temp1076 , 4
+Temp1079 = *ptr, 12
+Temp1080 = Temp1079[8] , 4
+Temp1081 = *Temp1080, 8
+Temp1081[0] = key , 4
+Temp1083 = *ptr, 12
+Temp1084 = Temp1083[8] , 4
+Temp1085 = *Temp1084, 8
+Temp1085[8] = 0 , 4
+Goto label:120
+Label :122	Label :120	Temp1087 = *ptr, 12
+Temp1088 = Temp1087[8] , 4
+ptr = Temp1088
+Temp1086 = ptr
+Goto label:118
+Label :117	Temp1090 = *ptr, 12
+Temp1090[4] = data , 4
+ptr = 0
+BasicParam key
+call getHash , 1
+Temp1093 = 0
+Temp1094 = Temp1092 MUL 12
+Temp1093 = Temp1093 ADD Temp1094
+Temp1095 = table ADD Temp1093
+Temp1096 = Temp1095
+ptr = Temp1096
+Temp1091 = ptr
+Label :124	Temp1097 = *ptr, 12
+Temp1098 = Temp1097[0] , 4
+Temp1099 = Temp1098 NE key
+If Not Equal to Zero Temp1099 Goto Label :125	
+Goto label:123
+Label :125	Temp1101 = *ptr, 12
+Temp1102 = Temp1101[8] , 4
+ptr = Temp1102
+Temp1100 = ptr
+Goto label:124
+Label :123	Temp1103 = *ptr, 12
+Temp1104 = Temp1103[4] , 4
+Return BasicParam Temp1104
+
+i = 0
+Temp1105 = i
+Label :127	Temp1106 = i LT hashsize
+If Not Equal to Zero Temp1106 Goto Label :128	
+Goto label:126
+Label :128	Temp1108 = 0
+Temp1109 = i MUL 12
+Temp1108 = Temp1108 ADD Temp1109
+Temp1110 = table ADD Temp1108
+Temp1111 = Temp1110
+Temp1110 = 0
+Temp1112 = i
+i = i ADD 1
+Goto label:127
+Label :126	i = 0
+Temp1113 = i
+Label :130	Temp1114 = i LT 1000
+If Not Equal to Zero Temp1114 Goto Label :131	
+Goto label:129
+Label :131	BasicParam i
+BasicParam i
+call put , 2
+Temp1116 = i
+i = i ADD 1
+Goto label:130
+Label :129	i = 0
+Temp1117 = i
+Label :133	Temp1118 = i LT 1000
+If Not Equal to Zero Temp1118 Goto Label :134	
+Goto label:132
+Label :134	Temp1119 = &"%d %d
+"
+BasicParam i
+call get , 1
+BasicParam Temp1119
+BasicParam i
+BasicParam Temp1120
+call printf , 3
+Temp1122 = i
+i = i ADD 1
+Goto label:133
+Label :132	

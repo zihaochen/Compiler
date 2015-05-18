@@ -1,0 +1,6 @@
+Temp1300 = &"Hello, world!
+"
+BasicParam Temp1300
+call printf , 1
+Return BasicParam 0
+

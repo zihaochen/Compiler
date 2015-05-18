@@ -1,0 +1,86 @@
+i = 1
+Temp1757 = i
+Label :281	Temp1758 = pos SUB 1
+Temp1759 = i LE Temp1758
+If Not Equal to Zero Temp1759 Goto Label :282	
+Goto label:280
+Label :282	Temp1760 = &" ."
+BasicParam Temp1760
+call printf , 1
+i = i ADD 1
+Goto label:281
+Label :280	Temp1762 = &" O"
+BasicParam Temp1762
+call printf , 1
+Temp1765 = pos ADD 1
+i = Temp1765
+Temp1764 = i
+Label :284	Temp1766 = i LE c
+If Not Equal to Zero Temp1766 Goto Label :285	
+Goto label:283
+Label :285	Temp1767 = &" ."
+BasicParam Temp1767
+call printf , 1
+Temp1769 = i
+i = i ADD 1
+Goto label:284
+Label :283	Temp1770 = &"
+"
+BasicParam Temp1770
+call printf , 1
+Return BasicParam 0
+
+i = 0
+c = n
+Temp1772 = n MOD 2
+odd = Temp1772
+Temp1773 = n DIV 2
+Temp1774 = Temp1773 MOD 3
+Temp1775 = Temp1774 NE 1
+If Not Equal to Zero Temp1775 Goto Label :287	
+Goto label:286
+Label :287	BasicParam 2
+BasicParam c
+call printrow , 2
+i = 4
+Temp1777 = i
+Label :289	Temp1778 = i LE n
+If Not Equal to Zero Temp1778 Goto Label :290	
+Goto label:288
+Label :290	BasicParam i
+BasicParam c
+call printrow , 2
+Temp1781 = i ADD 2
+i = Temp1781
+Temp1780 = i
+Goto label:289
+Label :288	i = 1
+Temp1782 = i
+Label :292	Temp1783 = i LE n
+If Not Equal to Zero Temp1783 Goto Label :293	
+Goto label:291
+Label :293	BasicParam i
+BasicParam c
+call printrow , 2
+Temp1786 = i ADD 2
+i = Temp1786
+Temp1785 = i
+Goto label:292
+Label :291	Label :286	Temp1787 = &"
+"
+BasicParam Temp1787
+call printf , 1
+Return BasicParam 0
+
+n = 6
+Temp1789 = n
+Label :295	Temp1790 = n LE 11
+If Not Equal to Zero Temp1790 Goto Label :296	
+Goto label:294
+Label :296	BasicParam n
+call nqueen , 1
+Temp1792 = n
+n = n ADD 1
+Goto label:295
+Label :294	Return BasicParam 0
+

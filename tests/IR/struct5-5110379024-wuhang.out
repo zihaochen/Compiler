@@ -1,0 +1,386 @@
+size1 = 5
+size2 = 5
+Temp4504 = in1[0] , 4
+Temp4505 = in2[0] , 4
+Temp4506 = Temp4504 NE Temp4505
+If Not Equal to Zero Temp4506 Goto Label :462	
+Goto label:461
+Label :462	Return BasicParam 0
+
+Label :461	j = 0
+i = 0
+Temp4507 = i
+Label :464	Temp4508 = i LT size1
+If Not Equal to Zero Temp4508 Goto Label :465	
+Goto label:463
+Label :465	j = 0
+Temp4509 = j
+Label :467	Temp4510 = j LT size1
+If Not Equal to Zero Temp4510 Goto Label :468	
+Goto label:466
+Label :468	Temp4511 = node1[0] , 100
+Temp4512 = 0
+Temp4513 = j MUL 4
+Temp4512 = Temp4512 ADD Temp4513
+Temp4514 = i MUL 20
+Temp4512 = Temp4512 ADD Temp4514
+Temp4515 = Temp4511 ADD Temp4512
+Temp4516 = *Temp4515, 4
+Temp4517 = node2[0] , 100
+Temp4518 = 0
+Temp4519 = j MUL 4
+Temp4518 = Temp4518 ADD Temp4519
+Temp4520 = i MUL 20
+Temp4518 = Temp4518 ADD Temp4520
+Temp4521 = Temp4517 ADD Temp4518
+Temp4522 = *Temp4521, 4
+Temp4523 = Temp4516 NE Temp4522
+If Not Equal to Zero Temp4523 Goto Label :470	
+Goto label:471
+Label :470	Return BasicParam 0
+
+Goto label:469
+Label :471	Label :469	j = j ADD 1
+Goto label:467
+Label :466	i = i ADD 1
+Goto label:464
+Label :463	Temp4524 = node1[100] , 2
+Temp4525 = *Temp4524, 1
+Temp4526 = node2[100] , 2
+Temp4527 = *Temp4526, 1
+Temp4528 = Temp4525 NE Temp4527
+If Not Equal to Zero Temp4528 Goto Label :473	
+Goto label:472
+Label :473	Return BasicParam 0
+
+Label :472	Temp4529 =  MINUS 1
+Return BasicParam Temp4529
+
+Temp4530 = 0
+Temp4531 = i MUL 112
+Temp4530 = Temp4530 ADD Temp4531
+Temp4532 = a ADD Temp4530
+Temp4533 = *Temp4532, 112
+Temp4534 = Temp4533[102] , 4
+Temp4535 = Temp4534
+Temp4534 = Temp4534 ADD 1
+Temp4536 = 0
+Temp4537 = i MUL 112
+Temp4536 = Temp4536 ADD Temp4537
+Temp4538 = a ADD Temp4536
+Temp4539 = *Temp4538, 112
+Return MemoryParam Temp4539 ,112
+
+Temp4540 = *node1, 112
+temp = Temp4540
+Temp4542 = *node2, 112
+Temp4543 = *node1, 112
+*node1 = Temp4542 , 112
+Temp4545 = *node2, 112
+*node2 = temp , 112
+BasicParam i
+call getNode , 1
+node1 = Temp4546
+BasicParam j
+call getNode , 1
+node2 = Temp4547
+m = 0
+n = 0
+Label :475	Temp4548 = m LT size1
+If Not Equal to Zero Temp4548 Goto Label :476	
+Goto label:474
+Label :476	Label :478	Temp4549 = n LT size1
+If Not Equal to Zero Temp4549 Goto Label :479	
+Goto label:477
+Label :479	Temp4550 = node1[0] , 100
+Temp4551 = 0
+Temp4552 = n MUL 4
+Temp4551 = Temp4551 ADD Temp4552
+Temp4553 = m MUL 20
+Temp4551 = Temp4551 ADD Temp4553
+Temp4554 = Temp4550 ADD Temp4551
+Temp4555 = *Temp4554, 4
+Temp4556 = node2[0] , 100
+Temp4557 = 0
+Temp4558 = n MUL 4
+Temp4557 = Temp4557 ADD Temp4558
+Temp4559 = m MUL 20
+Temp4557 = Temp4557 ADD Temp4559
+Temp4560 = Temp4556 ADD Temp4557
+Temp4561 = *Temp4560, 4
+Temp4562 = Temp4555 GT Temp4561
+If Not Equal to Zero Temp4562 Goto Label :481	
+Goto label:482
+Label :481	Temp4563 = &node1
+Temp4564 = &node2
+BasicParam Temp4563
+BasicParam Temp4564
+call exchange , 2
+Temp4566 = node1[106] , 4
+Temp4567 = Temp4566[0] , 4
+Temp4568 = Temp4567
+Temp4567 = Temp4567 ADD 1
+Temp4569 = node2[106] , 4
+Temp4570 = Temp4569[0] , 4
+Temp4571 = Temp4570
+Temp4570 = Temp4570 SUB 1
+Goto label:480
+Label :482	Label :480	n = n ADD 1
+Goto label:478
+Label :477	m = m ADD 1
+Goto label:475
+Label :474	i = 0
+Temp4572 = i
+Label :484	Temp4573 = i LT size1
+If Not Equal to Zero Temp4573 Goto Label :485	
+Goto label:483
+Label :485	j = 0
+Temp4574 = j
+Label :487	Temp4575 = j LT size1
+If Not Equal to Zero Temp4575 Goto Label :488	
+Goto label:486
+Label :488	Temp4576 = &"%d	"
+Temp4577 = 0
+Temp4578 = k MUL 112
+Temp4577 = Temp4577 ADD Temp4578
+Temp4579 = a ADD Temp4577
+Temp4580 = *Temp4579, 112
+Temp4581 = Temp4580[0] , 100
+Temp4582 = 0
+Temp4583 = j MUL 4
+Temp4582 = Temp4582 ADD Temp4583
+Temp4584 = i MUL 20
+Temp4582 = Temp4582 ADD Temp4584
+Temp4585 = Temp4581 ADD Temp4582
+Temp4586 = *Temp4585, 4
+BasicParam Temp4576
+BasicParam Temp4586
+call printf , 2
+j = j ADD 1
+Goto label:487
+Label :486	Temp4588 = &"
+"
+BasicParam Temp4588
+call printf , 1
+i = i ADD 1
+Goto label:484
+Label :483	Temp4590 = &"%c %c %d, %d
+"
+Temp4591 = 0
+Temp4592 = k MUL 112
+Temp4591 = Temp4591 ADD Temp4592
+Temp4593 = a ADD Temp4591
+Temp4594 = *Temp4593, 112
+Temp4595 = Temp4594[100] , 2
+Temp4596 = *Temp4595, 1
+Temp4597 = 0
+Temp4598 = k MUL 112
+Temp4597 = Temp4597 ADD Temp4598
+Temp4599 = a ADD Temp4597
+Temp4600 = *Temp4599, 112
+Temp4601 = Temp4600[100] , 2
+Temp4602 = Temp4601[1] , 1
+Temp4603 = 0
+Temp4604 = k MUL 112
+Temp4603 = Temp4603 ADD Temp4604
+Temp4605 = a ADD Temp4603
+Temp4606 = *Temp4605, 112
+Temp4607 = Temp4606[102] , 4
+Temp4608 = 0
+Temp4609 = k MUL 112
+Temp4608 = Temp4608 ADD Temp4609
+Temp4610 = a ADD Temp4608
+Temp4611 = *Temp4610, 112
+Temp4612 = Temp4611[106] , 4
+Temp4613 = Temp4612[0] , 4
+BasicParam Temp4590
+BasicParam Temp4596
+BasicParam Temp4602
+BasicParam Temp4607
+BasicParam Temp4613
+call printf , 5
+q = 7
+k = 0
+Temp4615 = k
+Label :490	Temp4616 = k LT size2
+If Not Equal to Zero Temp4616 Goto Label :491	
+Goto label:489
+Label :491	i = 0
+Temp4617 = i
+Label :493	Temp4618 = i LT size1
+If Not Equal to Zero Temp4618 Goto Label :494	
+Goto label:492
+Label :494	j = 0
+Temp4619 = j
+Label :496	Temp4620 = j LT size1
+If Not Equal to Zero Temp4620 Goto Label :497	
+Goto label:495
+Label :497	Temp4622 = i MUL 5110
+Temp4623 = Temp4622 ADD j
+Temp4624 = 34 SUB k
+Temp4625 = Temp4623 MOD Temp4624
+Temp4626 = Temp4625 ADD 1
+Temp4627 = 0
+Temp4628 = k MUL 112
+Temp4627 = Temp4627 ADD Temp4628
+Temp4629 = a ADD Temp4627
+Temp4630 = *Temp4629, 112
+Temp4631 = Temp4630[0] , 100
+Temp4632 = 0
+Temp4633 = j MUL 4
+Temp4632 = Temp4632 ADD Temp4633
+Temp4634 = i MUL 20
+Temp4632 = Temp4632 ADD Temp4634
+Temp4635 = Temp4631 ADD Temp4632
+*Temp4635 = Temp4626 , 4
+Temp4638 = i MUL i
+Temp4639 = Temp4638 MUL i
+Temp4640 = k ADD Temp4639
+Temp4641 = 0
+Temp4642 = k MUL 112
+Temp4641 = Temp4641 ADD Temp4642
+Temp4643 = a ADD Temp4641
+Temp4644 = *Temp4643, 112
+Temp4645 = Temp4644[100] , 2
+*Temp4645 = Temp4640 , 1
+Temp4648 = j ADD i
+Temp4649 = Temp4648 ADD k
+Temp4650 = Temp4649 SHL 1
+Temp4651 = 0
+Temp4652 = k MUL 112
+Temp4651 = Temp4651 ADD Temp4652
+Temp4653 = a ADD Temp4651
+Temp4654 = *Temp4653, 112
+Temp4655 = Temp4654[100] , 2
+Temp4655[1] = Temp4650 , 1
+Temp4658 =  TILDE i
+Temp4659 = k ADD Temp4658
+Temp4660 = Temp4659 LOGICAL_OR j
+Temp4661 = 0
+Temp4662 = k MUL 112
+Temp4661 = Temp4661 ADD Temp4662
+Temp4663 = a ADD Temp4661
+Temp4664 = *Temp4663, 112
+Temp4665 = Temp4664[106] , 4
+Temp4665[0] = Temp4660 , 4
+Temp4667 = 0
+Temp4668 = k MUL 112
+Temp4667 = Temp4667 ADD Temp4668
+Temp4669 = a ADD Temp4667
+Temp4670 = *Temp4669, 112
+Temp4671 = Temp4670[100] , 2
+Temp4672 = *Temp4671, 1
+Temp4673 = Temp4672 MOD 26
+Temp4674 = Temp4673 ADD 97
+Temp4675 = 0
+Temp4676 = k MUL 112
+Temp4675 = Temp4675 ADD Temp4676
+Temp4677 = a ADD Temp4675
+Temp4678 = *Temp4677, 112
+Temp4679 = Temp4678[100] , 2
+*Temp4679 = Temp4674 , 1
+Temp4682 = 0
+Temp4683 = k MUL 112
+Temp4682 = Temp4682 ADD Temp4683
+Temp4684 = a ADD Temp4682
+Temp4685 = *Temp4684, 112
+Temp4686 = Temp4685[100] , 2
+Temp4687 = Temp4686[1] , 1
+Temp4688 = Temp4687 MOD 26
+Temp4689 = Temp4688 ADD 65
+Temp4690 = 0
+Temp4691 = k MUL 112
+Temp4690 = Temp4690 ADD Temp4691
+Temp4692 = a ADD Temp4690
+Temp4693 = *Temp4692, 112
+Temp4694 = Temp4693[100] , 2
+Temp4694[1] = Temp4689 , 1
+j = j ADD 1
+Goto label:496
+Label :495	i = i ADD 1
+Goto label:493
+Label :492	k = k ADD 1
+Goto label:490
+Label :489	i = 0
+Temp4696 = i
+Label :499	Temp4697 = i LT size2
+If Not Equal to Zero Temp4697 Goto Label :500	
+Goto label:498
+Label :500	j = 0
+Temp4698 = j
+Label :502	Temp4699 = j LT size2
+If Not Equal to Zero Temp4699 Goto Label :503	
+Goto label:501
+Label :503	BasicParam i
+BasicParam j
+call comp , 2
+j = j ADD 1
+Goto label:502
+Label :501	i = i ADD 1
+Goto label:499
+Label :498	k = 0
+Temp4701 = k
+Label :505	Temp4702 = k LT size2
+If Not Equal to Zero Temp4702 Goto Label :506	
+Goto label:504
+Label :506	BasicParam k
+call show , 1
+k = k ADD 1
+Goto label:505
+Label :504	Temp4705 = size2 SUB 1
+i = Temp4705
+Temp4704 = i
+Label :508	Temp4706 = i GT -1
+If Not Equal to Zero Temp4706 Goto Label :509	
+Goto label:507
+Label :509	Temp4707 = i MOD 3
+Temp4708 = Temp4707 EQ 0
+If Not Equal to Zero Temp4708 Goto Label :511	
+Goto label:510
+Label :511	Temp4710 = i ADD 3
+Temp4711 = Temp4710 MOD size2
+BasicParam Temp4711
+call getNode , 1
+Temp4713 = 0
+Temp4714 = i MUL 112
+Temp4713 = Temp4713 ADD Temp4714
+Temp4715 = a ADD Temp4713
+*Temp4715 = Temp4712 , 112
+Label :510	Temp4717 = i
+i = i SUB 1
+Goto label:508
+Label :507	Temp4718 = &"
+"
+BasicParam Temp4718
+call printf , 1
+i = 0
+Temp4720 = i
+Label :513	Temp4721 = i LT size2
+If Not Equal to Zero Temp4721 Goto Label :514	
+Goto label:512
+Label :514	j = 0
+Temp4722 = j
+Label :516	Temp4723 = j LT size2
+If Not Equal to Zero Temp4723 Goto Label :517	
+Goto label:515
+Label :517	Temp4724 = &"%d "
+BasicParam i
+call getNode , 1
+BasicParam j
+call getNode , 1
+MemoryParam Temp4725 ,112
+MemoryParam Temp4726 ,112
+call compare , 2
+BasicParam Temp4724
+BasicParam Temp4727
+call printf , 2
+j = j ADD 1
+Goto label:516
+Label :515	Temp4729 = &"
+"
+BasicParam Temp4729
+call printf , 1
+i = i ADD 1
+Goto label:513
+Label :512	Return BasicParam 0
+

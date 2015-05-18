@@ -1,0 +1,27 @@
+a = 51
+b = 17658
+d = 11
+e = 8
+f = 10
+g = 40
+Temp1794 = g ADD f
+g = Temp1794
+Temp1793 = g
+Temp1795 = &"%d %d %d %d
+"
+BasicParam Temp1795
+BasicParam a
+BasicParam b
+BasicParam d
+BasicParam e
+call printf , 5
+Temp1797 = &"%c %d %d %c
+"
+BasicParam Temp1797
+BasicParam a
+BasicParam e
+BasicParam 4
+BasicParam g
+call printf , 5
+Return BasicParam 0
+

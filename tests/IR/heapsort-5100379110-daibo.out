@@ -1,0 +1,259 @@
+n = 10000
+Temp1124 = x MUL 4
+Temp1123 = a ADD Temp1124
+Temp1125 = *Temp1123, 4
+t = Temp1125
+Temp1128 = y MUL 4
+Temp1127 = a ADD Temp1128
+Temp1129 = *Temp1127, 4
+Temp1131 = x MUL 4
+Temp1130 = a ADD Temp1131
+Temp1132 = *Temp1130, 4
+*Temp1130 = Temp1129 , 4
+Temp1135 = y MUL 4
+Temp1134 = a ADD Temp1135
+Temp1136 = *Temp1134, 4
+*Temp1134 = t , 4
+Temp1138 = n SUB 1
+Temp1139 = Temp1138 DIV 2
+i = Temp1139
+Temp1137 = i
+j = 0
+Temp1141 = j
+t = Temp1141
+Temp1140 = t
+Label :137	Temp1142 = i GE 0
+If Not Equal to Zero Temp1142 Goto Label :138	
+Goto label:136
+Label :138	Temp1144 = i MUL 2
+j = Temp1144
+Temp1143 = j
+Temp1145 = i MUL 2
+Temp1146 = Temp1145 ADD 1
+Temp1147 = Temp1146 LT n
+If Not Equal to Zero Temp1147 Goto Label :140	
+Goto label:141
+Label :142	Temp1148 = i MUL 2
+Temp1149 = Temp1148 ADD 1
+Temp1150 = 0
+Temp1151 = Temp1149 MUL 4
+Temp1150 = Temp1150 ADD Temp1151
+Temp1152 = a ADD Temp1150
+Temp1153 = *Temp1152, 4
+Temp1154 = i MUL 2
+Temp1155 = 0
+Temp1156 = Temp1154 MUL 4
+Temp1155 = Temp1155 ADD Temp1156
+Temp1157 = a ADD Temp1155
+Temp1158 = *Temp1157, 4
+Temp1159 = Temp1153 LT Temp1158
+If Not Equal to Zero Temp1159 Goto Label :140	
+Goto label:141
+Label :140	Temp1161 = i MUL 2
+Temp1162 = Temp1161 ADD 1
+j = Temp1162
+Temp1160 = j
+Goto label:139
+Label :141	Label :139	Temp1163 = 0
+Temp1164 = i MUL 4
+Temp1163 = Temp1163 ADD Temp1164
+Temp1165 = a ADD Temp1163
+Temp1166 = *Temp1165, 4
+Temp1167 = 0
+Temp1168 = j MUL 4
+Temp1167 = Temp1167 ADD Temp1168
+Temp1169 = a ADD Temp1167
+Temp1170 = *Temp1169, 4
+Temp1171 = Temp1166 GT Temp1170
+If Not Equal to Zero Temp1171 Goto Label :144	
+Goto label:145
+Label :144	BasicParam i
+BasicParam j
+call exchange , 2
+Goto label:143
+Label :145	Label :143	Temp1174 = i SUB 1
+i = Temp1174
+Temp1173 = i
+Goto label:137
+Label :136	Return BasicParam 0
+
+t = 0
+Temp1177 = t
+j = Temp1177
+Temp1176 = j
+i = Temp1176
+Temp1175 = i
+Label :147	Temp1178 = i MUL 2
+Temp1179 = Temp1178 LT n
+If Not Equal to Zero Temp1179 Goto Label :148	
+Goto label:146
+Label :148	Temp1181 = i MUL 2
+j = Temp1181
+Temp1180 = j
+Temp1182 = i MUL 2
+Temp1183 = Temp1182 ADD 1
+Temp1184 = Temp1183 LT n
+If Not Equal to Zero Temp1184 Goto Label :150	
+Goto label:151
+Label :152	Temp1185 = i MUL 2
+Temp1186 = Temp1185 ADD 1
+Temp1187 = 0
+Temp1188 = Temp1186 MUL 4
+Temp1187 = Temp1187 ADD Temp1188
+Temp1189 = a ADD Temp1187
+Temp1190 = *Temp1189, 4
+Temp1191 = i MUL 2
+Temp1192 = 0
+Temp1193 = Temp1191 MUL 4
+Temp1192 = Temp1192 ADD Temp1193
+Temp1194 = a ADD Temp1192
+Temp1195 = *Temp1194, 4
+Temp1196 = Temp1190 LT Temp1195
+If Not Equal to Zero Temp1196 Goto Label :150	
+Goto label:151
+Label :150	Temp1198 = i MUL 2
+Temp1199 = Temp1198 ADD 1
+j = Temp1199
+Temp1197 = j
+Goto label:149
+Label :151	Label :149	Temp1200 = 0
+Temp1201 = i MUL 4
+Temp1200 = Temp1200 ADD Temp1201
+Temp1202 = a ADD Temp1200
+Temp1203 = *Temp1202, 4
+Temp1204 = 0
+Temp1205 = j MUL 4
+Temp1204 = Temp1204 ADD Temp1205
+Temp1206 = a ADD Temp1204
+Temp1207 = *Temp1206, 4
+Temp1208 = Temp1203 GT Temp1207
+If Not Equal to Zero Temp1208 Goto Label :154	
+Goto label:153
+Label :154	Temp1210 = 0
+Temp1211 = i MUL 4
+Temp1210 = Temp1210 ADD Temp1211
+Temp1212 = a ADD Temp1210
+Temp1213 = *Temp1212, 4
+Temp1214 = 0
+Temp1215 = j MUL 4
+Temp1214 = Temp1214 ADD Temp1215
+Temp1216 = a ADD Temp1214
+Temp1217 = *Temp1216, 4
+Temp1218 = Temp1213 XOR Temp1217
+Temp1219 = 0
+Temp1220 = i MUL 4
+Temp1219 = Temp1219 ADD Temp1220
+Temp1221 = a ADD Temp1219
+*Temp1221 = Temp1218 , 4
+Temp1224 = 0
+Temp1225 = j MUL 4
+Temp1224 = Temp1224 ADD Temp1225
+Temp1226 = a ADD Temp1224
+Temp1227 = *Temp1226, 4
+Temp1228 = 0
+Temp1229 = i MUL 4
+Temp1228 = Temp1228 ADD Temp1229
+Temp1230 = a ADD Temp1228
+Temp1231 = *Temp1230, 4
+Temp1232 = Temp1227 XOR Temp1231
+Temp1233 = 0
+Temp1234 = j MUL 4
+Temp1233 = Temp1233 ADD Temp1234
+Temp1235 = a ADD Temp1233
+*Temp1235 = Temp1232 , 4
+Temp1238 = 0
+Temp1239 = i MUL 4
+Temp1238 = Temp1238 ADD Temp1239
+Temp1240 = a ADD Temp1238
+Temp1241 = *Temp1240, 4
+Temp1242 = 0
+Temp1243 = j MUL 4
+Temp1242 = Temp1242 ADD Temp1243
+Temp1244 = a ADD Temp1242
+Temp1245 = *Temp1244, 4
+Temp1246 = Temp1241 XOR Temp1245
+Temp1247 = 0
+Temp1248 = i MUL 4
+Temp1247 = Temp1247 ADD Temp1248
+Temp1249 = a ADD Temp1247
+*Temp1249 = Temp1246 , 4
+i = j
+Temp1251 = i
+Label :153	Goto label:147
+Label :146	Return BasicParam 0
+
+t = 0
+Temp1252 = t
+k = 0
+Temp1253 = k
+Label :156	Temp1254 = k LT n
+If Not Equal to Zero Temp1254 Goto Label :157	
+Goto label:155
+Label :157	Temp1256 = *a, 4
+t = Temp1256
+Temp1255 = t
+Temp1258 = n SUB k
+Temp1259 = Temp1258 SUB 1
+Temp1260 = 0
+Temp1261 = Temp1259 MUL 4
+Temp1260 = Temp1260 ADD Temp1261
+Temp1262 = a ADD Temp1260
+Temp1263 = *Temp1262, 4
+*a = Temp1263 , 4
+Temp1266 = n SUB k
+Temp1267 = Temp1266 SUB 1
+Temp1268 = 0
+Temp1269 = Temp1267 MUL 4
+Temp1268 = Temp1268 ADD Temp1269
+Temp1270 = a ADD Temp1268
+*Temp1270 = t , 4
+Temp1272 = n SUB k
+Temp1273 = Temp1272 SUB 1
+BasicParam Temp1273
+call adjustHeap , 1
+Temp1276 = k ADD 1
+k = Temp1276
+Temp1275 = k
+Goto label:156
+Label :155	Return BasicParam 0
+
+i = 0
+Temp1277 = i
+Label :159	Temp1278 = i LT n
+If Not Equal to Zero Temp1278 Goto Label :160	
+Goto label:158
+Label :160	Temp1280 = 0
+Temp1281 = i MUL 4
+Temp1280 = Temp1280 ADD Temp1281
+Temp1282 = a ADD Temp1280
+*Temp1282 = i , 4
+Temp1285 = i ADD 1
+i = Temp1285
+Temp1284 = i
+Goto label:159
+Label :158	call makeHeap , 0
+call heapSort , 0
+i = 0
+Temp1288 = i
+Label :162	Temp1289 = i LT n
+If Not Equal to Zero Temp1289 Goto Label :163	
+Goto label:161
+Label :163	Temp1290 = &"%d "
+Temp1291 = 0
+Temp1292 = i MUL 4
+Temp1291 = Temp1291 ADD Temp1292
+Temp1293 = a ADD Temp1291
+Temp1294 = *Temp1293, 4
+BasicParam Temp1290
+BasicParam Temp1294
+call printf , 2
+Temp1297 = i ADD 1
+i = Temp1297
+Temp1296 = i
+Goto label:162
+Label :161	Temp1298 = &"
+"
+BasicParam Temp1298
+call printf , 1
+Return BasicParam 0
+

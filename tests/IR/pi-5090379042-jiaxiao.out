@@ -1,0 +1,74 @@
+a = 10000
+b = 0
+c = 2800
+d = 0
+e = 0
+g = 0
+Label :300	Temp1799 = b SUB c
+If Not Equal to Zero Temp1799 Goto Label :301	
+Goto label:299
+Label :301	Temp1801 = a DIV 5
+Temp1802 = b
+b = b ADD 1
+Temp1803 = 0
+Temp1804 = Temp1802 MUL 4
+Temp1803 = Temp1803 ADD Temp1804
+Temp1805 = f ADD Temp1803
+*Temp1805 = Temp1801 , 4
+Goto label:300
+Label :299	Label :303	d = 0
+Temp1807 = d
+Temp1809 = c MUL 2
+g = Temp1809
+Temp1808 = g
+If Not Equal to Zero Temp1808 Goto Label :304	
+Goto label:302
+Label :304	b = c
+Temp1810 = b
+Label :306	Temp1812 = 0
+Temp1813 = b MUL 4
+Temp1812 = Temp1812 ADD Temp1813
+Temp1814 = f ADD Temp1812
+Temp1815 = *Temp1814, 4
+Temp1816 = Temp1815 MUL a
+Temp1817 = d ADD Temp1816
+d = Temp1817
+Temp1811 = d
+g = g SUB 1
+Temp1819 = d MOD g
+Temp1820 = 0
+Temp1821 = b MUL 4
+Temp1820 = Temp1820 ADD Temp1821
+Temp1822 = f ADD Temp1820
+*Temp1822 = Temp1819 , 4
+Temp1825 = g
+g = g SUB 1
+Temp1826 = d DIV Temp1825
+d = Temp1826
+Temp1824 = d
+b = b SUB 1
+If Not Equal to Zero b Goto Label :307	
+Goto label:305
+Label :307	Temp1828 = d MUL b
+d = Temp1828
+Temp1827 = d
+Goto label:306
+Label :305	Temp1830 = c SUB 14
+c = Temp1830
+Temp1829 = c
+Temp1831 = &"%04d"
+Temp1832 = d DIV a
+Temp1833 = e ADD Temp1832
+BasicParam Temp1831
+BasicParam Temp1833
+call printf , 2
+Temp1836 = d MOD a
+e = Temp1836
+Temp1835 = e
+Goto label:303
+Label :302	Temp1837 = &"
+"
+BasicParam Temp1837
+call printf , 1
+Return BasicParam 0
+

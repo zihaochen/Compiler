@@ -1,0 +1,31 @@
+Temp1024 = d EQ 1
+If Not Equal to Zero Temp1024 Goto Label :112	
+Goto label:111
+Label :112	Temp1025 = &"move %c --> %c
+"
+BasicParam Temp1025
+BasicParam a
+BasicParam c
+call printf , 3
+Temp1027 = sum
+sum = sum ADD 1
+Label :111	Return BasicParam sum
+
+a = 65
+b = 66
+c = 67
+d = 10
+BasicParam d
+BasicParam a
+BasicParam b
+BasicParam c
+BasicParam 0
+call cd , 5
+sum = Temp1028
+Temp1029 = &"%d
+"
+BasicParam Temp1029
+BasicParam sum
+call printf , 2
+Return BasicParam 0
+

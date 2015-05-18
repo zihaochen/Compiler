@@ -1,0 +1,33 @@
+N = 3
+i = 0
+Label :29	Temp37 = i LT sz
+If Not Equal to Zero Temp37 Goto Label :30	
+Goto label:28
+Label :30	j = 0
+Label :32	Temp38 = j LT sz
+If Not Equal to Zero Temp38 Goto Label :33	
+Goto label:31
+Label :33	Temp39 = &"%d "
+Temp40 = 0
+Temp41 = i MUL 4
+Temp40 = Temp40 ADD Temp41
+Temp42 = j MUL 4
+Temp40 = Temp40 ADD Temp42
+Temp43 = board ADD Temp40
+Temp44 = *Temp43, 4
+BasicParam Temp39
+BasicParam Temp44
+call 7 , 2
+Temp45 = j
+j = j ADD 1
+Goto label:32
+Label :31	Temp46 = &"
+"
+BasicParam Temp46
+call 7 , 1
+Temp47 = i
+i = i ADD 1
+Goto label:29
+Label :28	Return BasicParam 0
+Temp48 = x GE x1
+If Not Equal to Zero Temp48 Goto Label :35	

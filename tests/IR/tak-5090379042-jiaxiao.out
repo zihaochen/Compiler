@@ -1,0 +1,36 @@
+Temp4813 = y LT x
+If Not Equal to Zero Temp4813 Goto Label :583	
+Goto label:582
+Label :583	Temp4814 = x SUB 1
+BasicParam Temp4814
+BasicParam y
+BasicParam z
+call tak , 3
+Temp4816 = y SUB 1
+BasicParam Temp4816
+BasicParam z
+BasicParam x
+call tak , 3
+Temp4818 = z SUB 1
+BasicParam Temp4818
+BasicParam x
+BasicParam y
+call tak , 3
+BasicParam Temp4815
+BasicParam Temp4817
+BasicParam Temp4819
+call tak , 3
+Temp4821 = 1 ADD Temp4820
+Return BasicParam Temp4821
+
+Label :582	Temp4822 = &"%d
+"
+BasicParam 18
+BasicParam 12
+BasicParam 6
+call tak , 3
+BasicParam Temp4822
+BasicParam Temp4823
+call printf , 2
+Return BasicParam 0
+

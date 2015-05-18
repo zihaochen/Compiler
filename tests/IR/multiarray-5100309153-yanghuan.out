@@ -1,0 +1,125 @@
+Temp1685 = &"%d"
+BasicParam Temp1685
+BasicParam num
+call printf , 2
+Temp1687 = &"
+"
+BasicParam Temp1687
+call printf , 1
+i = 0
+Temp1689 = i
+Label :259	Temp1690 = i LT 4
+If Not Equal to Zero Temp1690 Goto Label :260	
+Goto label:258
+Label :260	j = 0
+Temp1691 = j
+Label :262	Temp1692 = j LT 10
+If Not Equal to Zero Temp1692 Goto Label :263	
+Goto label:261
+Label :263	Temp1694 = 0
+Temp1695 = j MUL 4
+Temp1694 = Temp1694 ADD Temp1695
+Temp1696 = i MUL 40
+Temp1694 = Temp1694 ADD Temp1696
+Temp1697 = a ADD Temp1694
+*Temp1697 = 888 , 4
+Temp1699 = j
+j = j ADD 1
+Goto label:262
+Label :261	Temp1700 = i
+i = i ADD 1
+Goto label:259
+Label :258	i = 0
+Temp1701 = i
+Label :265	Temp1702 = i LT 5
+If Not Equal to Zero Temp1702 Goto Label :266	
+Goto label:264
+Label :266	Temp1704 = 0
+Temp1705 = i MUL 8
+Temp1704 = Temp1704 ADD Temp1705
+Temp1706 = b ADD Temp1704
+Temp1707 = *Temp1706, 8
+Temp1707[0] = -1 , 4
+Temp1708 = i
+i = i ADD 1
+Goto label:265
+Label :264	Temp1709 = a[156] , 4
+BasicParam Temp1709
+call printNum , 1
+i = 0
+Temp1711 = i
+Label :268	Temp1712 = i LE 3
+If Not Equal to Zero Temp1712 Goto Label :269	
+Goto label:267
+Label :269	j = 0
+Temp1713 = j
+Label :271	Temp1714 = j LE 9
+If Not Equal to Zero Temp1714 Goto Label :272	
+Goto label:270
+Label :272	Temp1716 = i MUL 10
+Temp1717 = Temp1716 ADD j
+Temp1718 = 0
+Temp1719 = j MUL 4
+Temp1718 = Temp1718 ADD Temp1719
+Temp1720 = i MUL 40
+Temp1718 = Temp1718 ADD Temp1720
+Temp1721 = a ADD Temp1718
+*Temp1721 = Temp1717 , 4
+Temp1723 = j
+j = j ADD 1
+Goto label:271
+Label :270	Temp1724 = i
+i = i ADD 1
+Goto label:268
+Label :267	i = 0
+Temp1725 = i
+Label :274	Temp1726 = i LE 3
+If Not Equal to Zero Temp1726 Goto Label :275	
+Goto label:273
+Label :275	j = 0
+Temp1727 = j
+Label :277	Temp1728 = j LE 9
+If Not Equal to Zero Temp1728 Goto Label :278	
+Goto label:276
+Label :278	Temp1729 = 0
+Temp1730 = j MUL 4
+Temp1729 = Temp1729 ADD Temp1730
+Temp1731 = i MUL 40
+Temp1729 = Temp1729 ADD Temp1731
+Temp1732 = a ADD Temp1729
+Temp1733 = *Temp1732, 4
+BasicParam Temp1733
+call printNum , 1
+Temp1735 = j
+j = j ADD 1
+Goto label:277
+Label :276	Temp1736 = i
+i = i ADD 1
+Goto label:274
+Label :273	a[120] = 0 , 4
+Temp1739 = a[120] , 4
+BasicParam Temp1739
+call printNum , 1
+Temp1741 = &"
+"
+BasicParam Temp1741
+call printf , 1
+Temp1744 = *b, 8
+Temp1744[0] = -2 , 4
+Temp1746 = a[120] , 4
+Temp1747 = 0
+Temp1748 = Temp1746 MUL 8
+Temp1747 = Temp1747 ADD Temp1748
+Temp1749 = b ADD Temp1747
+Temp1750 = *Temp1749, 8
+Temp1750[0] = -10 , 4
+Temp1751 = *b, 8
+Temp1752 = Temp1751[0] , 4
+BasicParam Temp1752
+call printNum , 1
+Temp1754 = b[8] , 8
+Temp1755 = Temp1754[0] , 4
+BasicParam Temp1755
+call printNum , 1
+Return BasicParam 0
+

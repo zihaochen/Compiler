@@ -1,0 +1,52 @@
+sumBig = 0
+Temp4980 = *ptr, 4
+Temp4981 = Temp4980 ADD 1
+Temp4982 = *ptr, 4
+*ptr = Temp4981 , 4
+sumSmall = 0
+i = 1
+Temp4983 = i
+Label :635	Temp4984 = i LE 10
+If Not Equal to Zero Temp4984 Goto Label :636	
+Goto label:634
+Label :636	Temp4985 = &sumSmall
+BasicParam Temp4985
+call addSmall , 1
+Temp4988 = sumSmall ADD 1
+sumSmall = Temp4988
+Temp4987 = sumSmall
+Temp4989 = i
+i = i ADD 1
+Goto label:635
+Label :634	Temp4991 = *ptr, 4
+Temp4992 = Temp4991 ADD sumSmall
+Temp4993 = *ptr, 4
+*ptr = Temp4992 , 4
+Temp4994 = &sumBig
+ptr = Temp4994
+i = 1
+Temp4995 = i
+Label :638	Temp4996 = i LE 10
+If Not Equal to Zero Temp4996 Goto Label :639	
+Goto label:637
+Label :639	sumMiddle = 0
+Temp4997 = &sumMiddle
+BasicParam Temp4997
+call addMiddle , 1
+Temp5000 = *ptr, 4
+Temp5001 = Temp5000 ADD sumMiddle
+Temp5002 = *ptr, 4
+*ptr = Temp5001 , 4
+Temp5004 = sumBig ADD 1
+sumBig = Temp5004
+Temp5003 = sumBig
+Temp5005 = &"%d %d
+"
+BasicParam Temp5005
+BasicParam i
+BasicParam sumBig
+call printf , 3
+Temp5007 = i
+i = i ADD 1
+Goto label:638
+Label :637	

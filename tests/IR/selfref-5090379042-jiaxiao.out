@@ -1,0 +1,12 @@
+Return BasicParam 0
+
+BasicParam x
+call f , 1
+x = Temp2405
+Temp2406 = &"%d
+"
+BasicParam Temp2406
+BasicParam x
+call printf , 2
+Return BasicParam x
+

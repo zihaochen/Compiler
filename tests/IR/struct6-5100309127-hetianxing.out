@@ -1,0 +1,28 @@
+d = 3
+Temp4732 = &d
+a[0] = Temp4732 , 4
+Temp4734 = a[4] , 80
+*Temp4734 = 2 , 4
+b = a
+Temp4737 = b
+c = Temp4737
+Temp4736 = c
+Temp4739 = c[4] , 80
+*Temp4739 = 3 , 4
+Temp4741 = &"%d %d
+"
+Temp4742 = c[4] , 80
+Temp4743 = *Temp4742, 4
+Temp4744 = c[0] , 4
+Temp4745 = *Temp4744, 4
+BasicParam Temp4741
+BasicParam Temp4743
+BasicParam Temp4745
+call printf , 3
+Temp4747 = &"%d
+"
+Temp4748 = a[4] , 80
+Temp4749 = *Temp4748, 4
+BasicParam Temp4747
+BasicParam Temp4749
+call printf , 2

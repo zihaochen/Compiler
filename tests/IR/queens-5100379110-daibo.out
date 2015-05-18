@@ -1,0 +1,44 @@
+N = 8
+i = 0
+Temp2383 = i
+Label :446	Temp2384 = i LT N
+If Not Equal to Zero Temp2384 Goto Label :447	
+Goto label:445
+Label :447	j = 0
+Temp2385 = j
+Label :449	Temp2386 = j LT N
+If Not Equal to Zero Temp2386 Goto Label :450	
+Goto label:448
+Label :450	Temp2387 = 0
+Temp2388 = i MUL 4
+Temp2387 = Temp2387 ADD Temp2388
+Temp2389 = col ADD Temp2387
+Temp2390 = *Temp2389, 4
+Temp2391 = Temp2390 EQ j
+If Not Equal to Zero Temp2391 Goto Label :452	
+Goto label:451
+Label :452	Temp2392 = &" O"
+BasicParam Temp2392
+call printf , 1
+Label :451	Temp2394 = j
+j = j ADD 1
+Goto label:449
+Label :448	Temp2395 = &"
+"
+BasicParam Temp2395
+call printf , 1
+Temp2397 = i
+i = i ADD 1
+Goto label:446
+Label :445	Temp2398 = &"
+"
+BasicParam Temp2398
+call printf , 1
+Temp2400 = c EQ N
+If Not Equal to Zero Temp2400 Goto Label :454	
+Goto label:453
+Label :454	call printBoard , 0
+Label :453	BasicParam 0
+call search , 1
+Return BasicParam 0
+

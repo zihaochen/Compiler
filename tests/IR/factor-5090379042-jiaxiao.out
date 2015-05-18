@@ -1,0 +1,15 @@
+Temp1002 = n EQ 0
+If Not Equal to Zero Temp1002 Goto Label :100	
+Goto label:99
+Label :100	Return BasicParam 1
+
+Label :99	BasicParam 6
+call nfactor , 1
+a = Temp1003
+Temp1004 = &"%d
+"
+BasicParam Temp1004
+BasicParam a
+call printf , 2
+Return BasicParam a
+

@@ -1,0 +1,9 @@
+Temp2403 = &"#include <stdio.h>%cchar*f=%c%s%c;int main(){printf(f,10,34,f,34,10);}%c"
+f = Temp2403
+BasicParam f
+BasicParam 10
+BasicParam 34
+BasicParam f
+BasicParam 34
+BasicParam 10
+call printf , 6

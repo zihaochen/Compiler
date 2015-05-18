@@ -1,0 +1,31 @@
+Temp1006 = x MOD y
+Temp1007 = Temp1006 EQ 0
+If Not Equal to Zero Temp1007 Goto Label :103	
+Goto label:102
+Label :103	Return BasicParam y
+
+Label :102	Temp1008 = &"%d
+%d
+%d
+%d
+"
+BasicParam 10
+BasicParam 1
+call gcd , 2
+BasicParam 50
+BasicParam 35
+call gcd , 2
+BasicParam 34986
+BasicParam 3087
+call gcd , 2
+BasicParam 2907
+BasicParam 1539
+call gcd , 2
+BasicParam Temp1008
+BasicParam Temp1009
+BasicParam Temp1010
+BasicParam Temp1011
+BasicParam Temp1012
+call printf , 5
+Return BasicParam 0
+

@@ -9,11 +9,13 @@ public class UnaryExpr extends Expr implements House{
     public UnaryExpr() {
         op = null;
         expr = null;
+        True = False = null;
     }
 
     public UnaryExpr(UnaryOp op, Expr expr) {
         this.op = op;
         this.expr = expr;
+        True = False = null;
     }
 
     @Override

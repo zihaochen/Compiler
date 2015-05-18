@@ -11,12 +11,16 @@ public class BinaryExpr extends Expr implements House{
         left = null;
         op = null;
         right = null;
+        True = null;
+        False = null;
     }
 
     public BinaryExpr(Expr left, BinaryOp op, Expr right) {
         this.left = left;
         this.op = op;
         this.right = right;
+        this.True = null;
+        this.False = null;
     }
 
     @Override

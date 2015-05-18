@@ -12,7 +12,7 @@ import compiler.ast.nodes.*;
 public class Printf extends FunctionDef{
     public Printf() {
         super(
-                new FunctionType(new IntType(), new DeclList()),
+                new FunctionType(new VoidType(), new DeclList()),
                 new Symbol("printf") ,
                 new DeclList(),
                 new CompoundStmt(new DeclList(), new StmtList())

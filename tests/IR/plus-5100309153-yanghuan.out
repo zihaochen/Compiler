@@ -1,0 +1,30 @@
+i = 10283
+Temp1839 = &"%d"
+Temp1840 = 3 ADD i
+BasicParam Temp1839
+BasicParam Temp1840
+call printf , 2
+Temp1842 = &"
+"
+BasicParam Temp1842
+call printf , 1
+Temp1844 = &"%d"
+Temp1845 = 3 MUL 5
+BasicParam Temp1844
+BasicParam Temp1845
+call printf , 2
+Temp1847 = &"
+"
+BasicParam Temp1847
+call printf , 1
+Temp1849 = &"%d"
+Temp1850 = 6 DIV 2
+BasicParam Temp1849
+BasicParam Temp1850
+call printf , 2
+Temp1852 = &"
+"
+BasicParam Temp1852
+call printf , 1
+Return BasicParam 0
+

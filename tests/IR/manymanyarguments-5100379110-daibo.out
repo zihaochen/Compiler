@@ -1,0 +1,39 @@
+Temp1538 = a1 ADD a2
+Temp1539 = Temp1538 ADD a3
+Temp1540 = Temp1539 ADD a4
+Temp1541 = Temp1540 ADD a5
+Temp1542 = Temp1541 ADD a6
+Temp1543 = Temp1542 ADD a7
+Temp1544 = Temp1543 ADD a8
+Temp1545 = Temp1544 ADD a9
+Temp1546 = Temp1545 ADD a10
+Temp1547 = Temp1546 ADD a11
+Temp1548 = Temp1547 ADD a12
+Temp1549 = Temp1548 ADD a13
+Temp1550 = Temp1549 ADD a14
+Temp1551 = Temp1550 ADD a15
+Return BasicParam Temp1551
+
+Temp1552 = &"%d
+"
+BasicParam 1
+BasicParam 2
+BasicParam 3
+BasicParam 4
+BasicParam 5
+BasicParam 6
+BasicParam 7
+BasicParam 8
+BasicParam 9
+BasicParam 10
+BasicParam 11
+BasicParam 12
+BasicParam 13
+BasicParam 14
+BasicParam 15
+call a , 15
+BasicParam Temp1552
+BasicParam Temp1553
+call printf , 2
+Return BasicParam 0
+

@@ -1,0 +1,44 @@
+Temp1521 = &"%d "
+BasicParam Temp1521
+BasicParam a
+call printf , 2
+Temp1523 = &"%d "
+BasicParam Temp1523
+BasicParam b
+call printf , 2
+Temp1525 = &"%d "
+BasicParam Temp1525
+BasicParam c
+call printf , 2
+Temp1527 = &"%d "
+BasicParam Temp1527
+BasicParam d
+call printf , 2
+Temp1529 = &"%d "
+BasicParam Temp1529
+BasicParam e
+call printf , 2
+Temp1531 = &"%d
+"
+BasicParam Temp1531
+BasicParam f
+call printf , 2
+Temp1533 = 5 ADD 6
+BasicParam 0
+BasicParam 1
+BasicParam 2
+BasicParam 3
+BasicParam 4
+BasicParam Temp1533
+call manyArguments , 6
+Temp1535 = 7 ADD 5
+Temp1536 = 5 SUB 6
+BasicParam 0
+BasicParam 1
+BasicParam 2
+BasicParam Temp1535
+BasicParam 4
+BasicParam Temp1536
+call manyArguments , 6
+Return BasicParam 0
+

@@ -5,7 +5,6 @@ import compiler.ast.visitor.Visitor;
 
 public class UnionType extends RecordType implements House{
 
-    public Symbol name;
     public DeclList declrs;
 
     public UnionType(Symbol name, DeclList declrs) {

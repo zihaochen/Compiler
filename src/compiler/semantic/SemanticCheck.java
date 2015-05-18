@@ -7,10 +7,16 @@ import compiler.STL.Printf;
 import compiler.ast.nodes.*;
 import compiler.ast.nodes.Symbol;
 import compiler.ast.visitor.Visitor;
+import compiler.tables.MemberTable;
+import compiler.tables.SUTable;
+import compiler.tables.VarTable;
 
 import java.io.OutputStream;
 import java.util.LinkedList;
 import java.util.List;
+
+import static java.lang.Integer.max;
+import static java.lang.Integer.min;
 
 /**
  * Created by Chen on 2015/4/27.
@@ -323,6 +329,7 @@ public class SemanticCheck implements Visitor {
 
     public void visit(FunctionType functionType) throws RuntimeException {
         functionType.returnType.accept(this);
+        functionType.size = functionType.returnType.size;
         if (functionType.returnType instanceof ArrayType)
             throw new RuntimeException("The return type of a function cannot be an array");
         else {
@@ -404,9 +411,19 @@ public class SemanticCheck implements Visitor {
                     decl.type.isLeft = true;
                     if (structType.members.contains(decl.name.num))
                         throw new RuntimeException("Redefine the variable" + decl.name.toString() + "in member table of struct" + structType.name.toString());
-                    else structType.members.add(decl.name.num, decl.type);
-                    structType.size += decl.type.size;
+                 /*
+                    int maxSize = 0;
+                    int offset = structType.size;
+                    maxSize = max(maxSize, min(decl.type.size, 4));
+                    if (offset % min(decl.type.size, 4) != 0)
+                        offset = offset + min(decl.type.size, 4) - offset % min(decl.type.size, 4);
+                 */
+                    int offset = structType.size;
+                    structType.members.add(decl.name.num, decl.type, offset);
+                    structType.size = decl.type.size + offset;
                 }
+                if (structType.size % 4 != 0)
+                    structType.size += 4 - (structType.size % 4);
             }
         }
     }
@@ -436,8 +453,8 @@ public class SemanticCheck implements Visitor {
                     decl.type.isLeft = true;
                     if (unionType.members.contains(decl.name.num))
                         throw new RuntimeException("Redefine the variable" + decl.name.toString() + "in member table of struct" + unionType.name.toString());
-                    else unionType.members.add(decl.name.num, decl.type);
-                    unionType.size += decl.type.size;
+                    else unionType.members.add(decl.name.num, decl.type, 0);
+                    unionType.size = max(decl.type.size, unionType.size);
                 }
             }
         }
@@ -465,9 +482,11 @@ public class SemanticCheck implements Visitor {
                     if (typeEqual(t1, t2) || (checkICP(t1) && checkICP(t2))) {
                         ret = t1.clone();
                     }
-                    else
+                    else {
+//                        System.out.println(t1.getClass() + "  " + t2.getClass());
                         throw new RuntimeException("The left and right side of ASSIGN must be consistent");
                     }
+                }
                 break;
 
 
@@ -655,6 +674,14 @@ public class SemanticCheck implements Visitor {
     public void visit(BinaryExpr binaryExpr) throws RuntimeException{
         binaryExpr.left.accept(this);
         binaryExpr.right.accept(this);
+        if (binaryExpr.left.returnType.isConst == true) {
+            binaryExpr.left = new IntConst((Integer) binaryExpr.left.returnType.value);
+            binaryExpr.left.accept(this);
+        }
+        if (binaryExpr.right.returnType.isConst == true) {
+            binaryExpr.right = new IntConst((Integer) binaryExpr.right.returnType.value);
+            binaryExpr.right.accept(this);
+        }
         Type t1 = binaryExpr.left.returnType;
         Type t2 = binaryExpr.right.returnType;
         BinaryOp op = binaryExpr.op;
@@ -791,6 +818,10 @@ public class SemanticCheck implements Visitor {
 
     public void visit(UnaryExpr unaryExpr) {
         unaryExpr.expr.accept(this);
+        if (unaryExpr.expr.returnType.isConst == true) {
+            unaryExpr.expr = new IntConst((Integer)unaryExpr.expr.returnType.value);
+            unaryExpr.expr.accept(this);
+        }
         unaryExpr.returnType = checkUnExpr(unaryExpr.op, unaryExpr.expr.returnType);
     }
 
@@ -959,7 +990,7 @@ public class SemanticCheck implements Visitor {
     public void visit(StringConst stringConst) {
         stringConst.returnType = new PointerType(new CharType());
         stringConst.returnType.value = stringConst.value;
-        stringConst.returnType.isConst = true;
+        stringConst.returnType.isConst = false;
         stringConst.returnType.isLeft = false;
         stringConst.returnType.size = 4;
     }

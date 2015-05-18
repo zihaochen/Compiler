@@ -1,0 +1,97 @@
+sum = 0
+i = 0
+Temp1 = i
+Label :2	Temp2 = i LT 100
+If Not Equal to Zero Temp2 Goto Label :3	
+Goto label:1
+Label :3	j = 0
+Temp3 = j
+Label :5	Temp4 = j LT 100
+If Not Equal to Zero Temp4 Goto Label :6	
+Goto label:4
+Label :6	Temp6 = 0
+Temp7 = j MUL 4
+Temp6 = Temp6 ADD Temp7
+Temp8 = i MUL 400
+Temp6 = Temp6 ADD Temp8
+Temp9 = a ADD Temp6
+*Temp9 = 0 , 4
+Temp11 = j
+j = j ADD 1
+Goto label:5
+Label :4	Temp12 = i
+i = i ADD 1
+Goto label:2
+Label :1	i = 0
+Temp13 = i
+Label :8	Temp14 = i LT 100
+If Not Equal to Zero Temp14 Goto Label :9	
+Goto label:7
+Label :9	Temp15 = i GT 20
+If Not Equal to Zero Temp15 Goto Label :11	
+Goto label:12
+Label :13	Temp16 = i LT 80
+If Not Equal to Zero Temp16 Goto Label :11	
+Goto label:12
+Label :11	Temp17 = 0
+Temp18 = i MUL 4
+Temp17 = Temp17 ADD Temp18
+Temp19 = a ADD Temp17
+Temp20 = Temp19
+b = Temp20
+j = 0
+Temp21 = j
+Label :15	Temp22 = j LT 100
+If Not Equal to Zero Temp22 Goto Label :16	
+Goto label:14
+Label :16	Temp23 = j GT 5
+If Not Equal to Zero Temp23 Goto Label :18	
+Goto label:19
+Label :20	Temp24 = i LT 90
+If Not Equal to Zero Temp24 Goto Label :18	
+Goto label:19
+Label :18	Temp26 = j ADD 50
+Temp27 = j MUL 4
+Temp29 = Temp27 MUL 4
+Temp28 = b ADD Temp29
+Temp30 = *Temp28, 4
+*Temp28 = Temp26 , 4
+Goto label:17
+Label :19	Label :17	Temp31 = j
+j = j ADD 1
+Goto label:15
+Label :14	Goto label:10
+Label :12	Label :10	Temp32 = i
+i = i ADD 1
+Goto label:8
+Label :7	i = 0
+Temp33 = i
+Label :22	Temp34 = i LT 100
+If Not Equal to Zero Temp34 Goto Label :23	
+Goto label:21
+Label :23	j = 0
+Temp35 = j
+Label :25	Temp36 = j LT 100
+If Not Equal to Zero Temp36 Goto Label :26	
+Goto label:24
+Label :26	Temp38 = 0
+Temp39 = j MUL 4
+Temp38 = Temp38 ADD Temp39
+Temp40 = i MUL 400
+Temp38 = Temp38 ADD Temp40
+Temp41 = a ADD Temp38
+Temp42 = *Temp41, 4
+Temp43 = sum ADD Temp42
+sum = Temp43
+Temp37 = sum
+Temp44 = j
+j = j ADD 1
+Goto label:25
+Label :24	Temp45 = i
+i = i ADD 1
+Goto label:22
+Label :21	Temp46 = &"%d
+"
+BasicParam Temp46
+BasicParam sum
+call printf , 2

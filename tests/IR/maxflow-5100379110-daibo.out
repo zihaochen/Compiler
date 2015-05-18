@@ -1,0 +1,225 @@
+i = 1
+Temp1555 = i
+Label :223	Temp1556 = i LE 49
+If Not Equal to Zero Temp1556 Goto Label :224	
+Goto label:222
+Label :224	j = 50
+Temp1557 = j
+Label :226	Temp1558 = 98 SUB i
+Temp1559 = Temp1558 ADD 1
+Temp1560 = j LE Temp1559
+If Not Equal to Zero Temp1560 Goto Label :227	
+Goto label:225
+Label :227	Temp1562 = 0
+Temp1563 = j MUL 4
+Temp1562 = Temp1562 ADD Temp1563
+Temp1564 = i MUL 440
+Temp1562 = Temp1562 ADD Temp1564
+Temp1565 = c ADD Temp1562
+*Temp1565 = 1 , 4
+Temp1567 = j
+j = j ADD 1
+Goto label:226
+Label :225	Temp1568 = i
+i = i ADD 1
+Goto label:223
+Label :222	i = 1
+Temp1569 = i
+Label :229	Temp1570 = i LE 49
+If Not Equal to Zero Temp1570 Goto Label :230	
+Goto label:228
+Label :230	Temp1572 = 0
+Temp1573 = i MUL 4
+Temp1572 = Temp1572 ADD Temp1573
+Temp1574 = start MUL 440
+Temp1572 = Temp1572 ADD Temp1574
+Temp1575 = c ADD Temp1572
+*Temp1575 = 1 , 4
+Temp1577 = i
+i = i ADD 1
+Goto label:229
+Label :228	i = 50
+Temp1578 = i
+Label :232	Temp1579 = i LE 98
+If Not Equal to Zero Temp1579 Goto Label :233	
+Goto label:231
+Label :233	Temp1581 = 0
+Temp1582 = ending MUL 4
+Temp1581 = Temp1581 ADD Temp1582
+Temp1583 = i MUL 440
+Temp1581 = Temp1581 ADD Temp1583
+Temp1584 = c ADD Temp1581
+*Temp1584 = 1 , 4
+Temp1586 = i
+i = i ADD 1
+Goto label:232
+Label :231	Return BasicParam 0
+
+open = 0
+Temp1587 = open
+closed = 1
+Temp1588 = closed
+i = 1
+Temp1589 = i
+Label :235	Temp1590 = i LE ending
+If Not Equal to Zero Temp1590 Goto Label :236	
+Goto label:234
+Label :236	Temp1592 = 0
+Temp1593 = i MUL 4
+Temp1592 = Temp1592 ADD Temp1593
+Temp1594 = visit ADD Temp1592
+*Temp1594 = 0 , 4
+Temp1596 = i
+i = i ADD 1
+Goto label:235
+Label :234	f[4] = start , 4
+Temp1600 = 0
+Temp1601 = start MUL 4
+Temp1600 = Temp1600 ADD Temp1601
+Temp1602 = visit ADD Temp1600
+*Temp1602 = 1 , 4
+Temp1605 = 0
+Temp1606 = start MUL 4
+Temp1605 = Temp1605 ADD Temp1606
+Temp1607 = pre ADD Temp1605
+*Temp1607 = 0 , 4
+flag = 0
+Temp1609 = flag
+Label :238	Temp1610 = open LT closed
+If Not Equal to Zero Temp1610 Goto Label :239	
+Goto label:237
+Label :240	Temp1611 = flag EQ 0
+If Not Equal to Zero Temp1611 Goto Label :239	
+Goto label:237
+Label :239	Temp1612 = open
+open = open ADD 1
+Temp1614 = 0
+Temp1615 = open MUL 4
+Temp1614 = Temp1614 ADD Temp1615
+Temp1616 = f ADD Temp1614
+Temp1617 = *Temp1616, 4
+i = Temp1617
+Temp1613 = i
+j = 1
+Temp1618 = j
+Label :242	Temp1619 = j LE ending
+If Not Equal to Zero Temp1619 Goto Label :243	
+Goto label:241
+Label :243	Temp1620 = 0
+Temp1621 = j MUL 4
+Temp1620 = Temp1620 ADD Temp1621
+Temp1622 = i MUL 440
+Temp1620 = Temp1620 ADD Temp1622
+Temp1623 = c ADD Temp1620
+Temp1624 = *Temp1623, 4
+Temp1625 = Temp1624 GT 0
+If Not Equal to Zero Temp1625 Goto Label :245	
+Goto label:246
+Label :247	Temp1626 = 0
+Temp1627 = j MUL 4
+Temp1626 = Temp1626 ADD Temp1627
+Temp1628 = visit ADD Temp1626
+Temp1629 = *Temp1628, 4
+Temp1630 = Temp1629 EQ 0
+If Not Equal to Zero Temp1630 Goto Label :245	
+Goto label:246
+Label :245	Temp1632 = 0
+Temp1633 = j MUL 4
+Temp1632 = Temp1632 ADD Temp1633
+Temp1634 = visit ADD Temp1632
+*Temp1634 = 1 , 4
+Temp1636 = closed
+closed = closed ADD 1
+Temp1638 = 0
+Temp1639 = closed MUL 4
+Temp1638 = Temp1638 ADD Temp1639
+Temp1640 = f ADD Temp1638
+*Temp1640 = j , 4
+Temp1643 = 0
+Temp1644 = j MUL 4
+Temp1643 = Temp1643 ADD Temp1644
+Temp1645 = pre ADD Temp1643
+*Temp1645 = i , 4
+Temp1647 = closed EQ ending
+If Not Equal to Zero Temp1647 Goto Label :249	
+Goto label:250
+Label :249	flag = 1
+Temp1648 = flag
+Goto label:248
+Label :250	Label :248	Goto label:244
+Label :246	Label :244	Temp1649 = j
+j = j ADD 1
+Goto label:242
+Label :241	Goto label:238
+Label :237	Return BasicParam flag
+
+i = ending
+Temp1650 = i
+Temp1651 = ans
+ans = ans ADD 1
+Label :252	Temp1652 = 0
+Temp1653 = i MUL 4
+Temp1652 = Temp1652 ADD Temp1653
+Temp1654 = pre ADD Temp1652
+Temp1655 = *Temp1654, 4
+Temp1656 = Temp1655 GT 0
+If Not Equal to Zero Temp1656 Goto Label :253	
+Goto label:251
+Label :253	Temp1658 = 0
+Temp1659 = i MUL 4
+Temp1658 = Temp1658 ADD Temp1659
+Temp1660 = pre ADD Temp1658
+Temp1661 = *Temp1660, 4
+j = Temp1661
+Temp1657 = j
+Temp1662 = 0
+Temp1663 = i MUL 4
+Temp1662 = Temp1662 ADD Temp1663
+Temp1664 = j MUL 440
+Temp1662 = Temp1662 ADD Temp1664
+Temp1665 = c ADD Temp1662
+Temp1666 = *Temp1665, 4
+Temp1667 = Temp1666
+Temp1666 = Temp1666 SUB 1
+Temp1668 = 0
+Temp1669 = j MUL 4
+Temp1668 = Temp1668 ADD Temp1669
+Temp1670 = i MUL 440
+Temp1668 = Temp1668 ADD Temp1670
+Temp1671 = c ADD Temp1668
+Temp1672 = *Temp1671, 4
+Temp1673 = Temp1672
+Temp1672 = Temp1672 ADD 1
+i = j
+Temp1674 = i
+Goto label:252
+Label :251	Return BasicParam 0
+
+k = 0
+Temp1675 = k
+start = 99
+Temp1676 = start
+ending = 100
+Temp1677 = ending
+flag = 0
+Temp1678 = flag
+BasicParam start
+BasicParam ending
+call build , 2
+Label :255	BasicParam ending
+BasicParam start
+BasicParam flag
+call find , 3
+Temp1681 = Temp1680 GT 0
+If Not Equal to Zero Temp1681 Goto Label :256	
+Goto label:254
+Label :256	BasicParam ending
+call improve , 1
+Goto label:255
+Label :254	Temp1683 = &"%d 
+"
+BasicParam Temp1683
+BasicParam ans
+call printf , 2
+Return BasicParam 0
+

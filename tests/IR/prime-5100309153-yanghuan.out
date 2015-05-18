@@ -1,0 +1,354 @@
+count = 2
+Temp2076 = count
+i = 2
+Temp2077 = i
+Label :366	Temp2078 = i LE N
+If Not Equal to Zero Temp2078 Goto Label :367	
+Goto label:365
+Label :367	Temp2079 = 0
+Temp2080 = i MUL 4
+Temp2079 = Temp2079 ADD Temp2080
+Temp2081 = bool ADD Temp2079
+Temp2082 = *Temp2081, 4
+Temp2083 = Temp2082 EQ 1
+If Not Equal to Zero Temp2083 Goto Label :369	
+Goto label:370
+Label :369	Temp2085 = *primeCount, 4
+Temp2086 = Temp2085 ADD 1
+*primeCount = Temp2086 , 4
+Temp2089 = *primeCount, 4
+Temp2090 = 0
+Temp2091 = Temp2089 MUL 4
+Temp2090 = Temp2090 ADD Temp2091
+Temp2092 = prime ADD Temp2090
+*Temp2092 = i , 4
+Temp2095 = *primeCount, 4
+Temp2096 = 0
+Temp2097 = i MUL 4
+Temp2096 = Temp2096 ADD Temp2097
+Temp2098 = gps ADD Temp2096
+*Temp2098 = Temp2095 , 4
+Goto label:368
+Label :370	Label :368	Label :372	Temp2100 = i MUL count
+Temp2101 = Temp2100 LE N
+If Not Equal to Zero Temp2101 Goto Label :373	
+Goto label:371
+Label :373	Temp2103 = i MUL count
+Temp2104 = 0
+Temp2105 = Temp2103 MUL 4
+Temp2104 = Temp2104 ADD Temp2105
+Temp2106 = bool ADD Temp2104
+*Temp2106 = 0 , 4
+Temp2109 = count ADD 1
+count = Temp2109
+Temp2108 = count
+Goto label:372
+Label :371	count = 2
+Temp2110 = count
+Temp2112 = i ADD 1
+i = Temp2112
+Temp2111 = i
+Goto label:366
+Label :365	Temp2113 = 0
+Temp2114 = k2 MUL 4
+Temp2113 = Temp2113 ADD Temp2114
+Temp2115 = k1 MUL 680
+Temp2113 = Temp2113 ADD Temp2115
+Temp2116 = result ADD Temp2113
+Temp2117 = *Temp2116, 4
+Temp2118 = Temp2117 EQ -1
+If Not Equal to Zero Temp2118 Goto Label :375	
+Goto label:376
+Label :375	Temp2119 = 0
+Temp2120 = k2 MUL 4
+Temp2119 = Temp2119 ADD Temp2120
+Temp2121 = prime ADD Temp2119
+Temp2122 = *Temp2121, 4
+Temp2123 = Temp2122 MUL 2
+Temp2124 = 0
+Temp2125 = k1 MUL 4
+Temp2124 = Temp2124 ADD Temp2125
+Temp2126 = prime ADD Temp2124
+Temp2127 = *Temp2126, 4
+Temp2128 = Temp2123 SUB Temp2127
+Temp2129 = Temp2128 LE N
+If Not Equal to Zero Temp2129 Goto Label :378	
+Goto label:379
+Label :378	Temp2130 = 0
+Temp2131 = k2 MUL 4
+Temp2130 = Temp2130 ADD Temp2131
+Temp2132 = prime ADD Temp2130
+Temp2133 = *Temp2132, 4
+Temp2134 = Temp2133 MUL 2
+Temp2135 = 0
+Temp2136 = k1 MUL 4
+Temp2135 = Temp2135 ADD Temp2136
+Temp2137 = prime ADD Temp2135
+Temp2138 = *Temp2137, 4
+Temp2139 = Temp2134 SUB Temp2138
+Temp2140 = 0
+Temp2141 = Temp2139 MUL 4
+Temp2140 = Temp2140 ADD Temp2141
+Temp2142 = bool ADD Temp2140
+Temp2143 = *Temp2142, 4
+If Not Equal to Zero Temp2143 Goto Label :381	
+Goto label:382
+Label :381	Temp2145 = 0
+Temp2146 = k2 MUL 4
+Temp2145 = Temp2145 ADD Temp2146
+Temp2147 = prime ADD Temp2145
+Temp2148 = *Temp2147, 4
+Temp2149 = Temp2148 MUL 2
+Temp2150 = 0
+Temp2151 = k1 MUL 4
+Temp2150 = Temp2150 ADD Temp2151
+Temp2152 = prime ADD Temp2150
+Temp2153 = *Temp2152, 4
+Temp2154 = Temp2149 SUB Temp2153
+Temp2155 = 0
+Temp2156 = Temp2154 MUL 4
+Temp2155 = Temp2155 ADD Temp2156
+Temp2157 = gps ADD Temp2155
+Temp2158 = *Temp2157, 4
+BasicParam N
+BasicParam k2
+BasicParam Temp2158
+BasicParam bool
+BasicParam gps
+BasicParam prime
+BasicParam result
+call getResult , 7
+Temp2160 = Temp2159 ADD 1
+Temp2161 = 0
+Temp2162 = k2 MUL 4
+Temp2161 = Temp2161 ADD Temp2162
+Temp2163 = k1 MUL 680
+Temp2161 = Temp2161 ADD Temp2163
+Temp2164 = result ADD Temp2161
+*Temp2164 = Temp2160 , 4
+Goto label:380
+Label :382	Label :380	Goto label:377
+Label :379	Label :377	Goto label:374
+Label :376	Label :374	Temp2166 = 0
+Temp2167 = k2 MUL 4
+Temp2166 = Temp2166 ADD Temp2167
+Temp2168 = k1 MUL 680
+Temp2166 = Temp2166 ADD Temp2168
+Temp2169 = result ADD Temp2166
+Temp2170 = *Temp2169, 4
+Temp2171 = Temp2170 EQ -1
+If Not Equal to Zero Temp2171 Goto Label :384	
+Goto label:385
+Label :384	Temp2173 = 0
+Temp2174 = k2 MUL 4
+Temp2173 = Temp2173 ADD Temp2174
+Temp2175 = k1 MUL 680
+Temp2173 = Temp2173 ADD Temp2175
+Temp2176 = result ADD Temp2173
+*Temp2176 = 1 , 4
+Goto label:383
+Label :385	Label :383	Temp2178 = 0
+Temp2179 = k2 MUL 4
+Temp2178 = Temp2178 ADD Temp2179
+Temp2180 = k1 MUL 680
+Temp2178 = Temp2178 ADD Temp2180
+Temp2181 = result ADD Temp2178
+Temp2182 = *Temp2181, 4
+Return BasicParam Temp2182
+
+Temp2183 = &"%d"
+BasicParam Temp2183
+BasicParam k1
+call printf , 2
+Label :387	Temp2185 = k3 GT 0
+If Not Equal to Zero Temp2185 Goto Label :388	
+Goto label:386
+Label :388	Temp2186 = &"%c"
+BasicParam Temp2186
+BasicParam 32
+call printf , 2
+Temp2188 = &"%d"
+BasicParam Temp2188
+BasicParam k2
+call printf , 2
+Temp2191 = k2 MUL 2
+Temp2192 = Temp2191 SUB k1
+k2 = Temp2192
+Temp2190 = k2
+Temp2194 = k1 ADD k2
+Temp2195 = Temp2194 DIV 2
+k1 = Temp2195
+Temp2193 = k1
+Temp2197 = k3 SUB 1
+k3 = Temp2197
+Temp2196 = k3
+Goto label:387
+Label :386	Temp2198 = &"%c"
+BasicParam Temp2198
+BasicParam 10
+call printf , 2
+N = 1000
+Temp2200 = N
+M = 168
+Temp2201 = M
+primeCount = 0
+Temp2202 = primeCount
+resultCount = 0
+Temp2203 = resultCount
+*tmp = 0 , 4
+i = 0
+Temp2206 = i
+Label :390	Temp2207 = N ADD 1
+Temp2208 = i LT Temp2207
+If Not Equal to Zero Temp2208 Goto Label :391	
+Goto label:389
+Label :391	Temp2210 = 0
+Temp2211 = i MUL 4
+Temp2210 = Temp2210 ADD Temp2211
+Temp2212 = bool ADD Temp2210
+*Temp2212 = 1 , 4
+Temp2215 = 0
+Temp2216 = i MUL 4
+Temp2215 = Temp2215 ADD Temp2216
+Temp2217 = gps ADD Temp2215
+*Temp2217 = 0 , 4
+Temp2220 = i ADD 1
+i = Temp2220
+Temp2219 = i
+Goto label:390
+Label :389	i = 0
+Temp2221 = i
+Label :393	Temp2222 = M ADD 1
+Temp2223 = i LT Temp2222
+If Not Equal to Zero Temp2223 Goto Label :394	
+Goto label:392
+Label :394	Temp2225 = 0
+Temp2226 = i MUL 4
+Temp2225 = Temp2225 ADD Temp2226
+Temp2227 = prime ADD Temp2225
+*Temp2227 = 0 , 4
+Temp2230 = i ADD 1
+i = Temp2230
+Temp2229 = i
+Goto label:393
+Label :392	i = 0
+Temp2231 = i
+Label :396	Temp2232 = i LE M
+If Not Equal to Zero Temp2232 Goto Label :397	
+Goto label:395
+Label :397	j = 0
+Temp2233 = j
+Label :399	Temp2234 = j LE M
+If Not Equal to Zero Temp2234 Goto Label :400	
+Goto label:398
+Label :400	Temp2236 = 0
+Temp2237 = j MUL 4
+Temp2236 = Temp2236 ADD Temp2237
+Temp2238 = i MUL 680
+Temp2236 = Temp2236 ADD Temp2238
+Temp2239 = result ADD Temp2236
+*Temp2239 = -1 , 4
+Temp2242 = j ADD 1
+j = Temp2242
+Temp2241 = j
+Goto label:399
+Label :398	Temp2244 = i ADD 1
+i = Temp2244
+Temp2243 = i
+Goto label:396
+Label :395	BasicParam N
+BasicParam tmp
+BasicParam bool
+BasicParam gps
+BasicParam prime
+call getPrime , 5
+Temp2247 = *tmp, 4
+primeCount = Temp2247
+Temp2246 = primeCount
+i = 1
+Temp2248 = i
+Label :402	Temp2249 = i LT primeCount
+If Not Equal to Zero Temp2249 Goto Label :403	
+Goto label:401
+Label :403	Temp2251 = i ADD 1
+j = Temp2251
+Temp2250 = j
+Label :405	Temp2252 = j LE primeCount
+If Not Equal to Zero Temp2252 Goto Label :406	
+Goto label:404
+Label :406	Temp2253 = 0
+Temp2254 = j MUL 4
+Temp2253 = Temp2253 ADD Temp2254
+Temp2255 = i MUL 680
+Temp2253 = Temp2253 ADD Temp2255
+Temp2256 = result ADD Temp2253
+Temp2257 = *Temp2256, 4
+Temp2258 = Temp2257 EQ -1
+If Not Equal to Zero Temp2258 Goto Label :408	
+Goto label:409
+Label :408	BasicParam N
+BasicParam i
+BasicParam j
+BasicParam bool
+BasicParam gps
+BasicParam prime
+BasicParam result
+call getResult , 7
+Temp2261 = 0
+Temp2262 = j MUL 4
+Temp2261 = Temp2261 ADD Temp2262
+Temp2263 = i MUL 680
+Temp2261 = Temp2261 ADD Temp2263
+Temp2264 = result ADD Temp2261
+*Temp2264 = Temp2260 , 4
+Temp2266 = 0
+Temp2267 = j MUL 4
+Temp2266 = Temp2266 ADD Temp2267
+Temp2268 = i MUL 680
+Temp2266 = Temp2266 ADD Temp2268
+Temp2269 = result ADD Temp2266
+Temp2270 = *Temp2269, 4
+Temp2271 = Temp2270 GT 1
+If Not Equal to Zero Temp2271 Goto Label :411	
+Goto label:412
+Label :411	Temp2272 = 0
+Temp2273 = i MUL 4
+Temp2272 = Temp2272 ADD Temp2273
+Temp2274 = prime ADD Temp2272
+Temp2275 = *Temp2274, 4
+Temp2276 = 0
+Temp2277 = j MUL 4
+Temp2276 = Temp2276 ADD Temp2277
+Temp2278 = prime ADD Temp2276
+Temp2279 = *Temp2278, 4
+Temp2280 = 0
+Temp2281 = j MUL 4
+Temp2280 = Temp2280 ADD Temp2281
+Temp2282 = i MUL 680
+Temp2280 = Temp2280 ADD Temp2282
+Temp2283 = result ADD Temp2280
+Temp2284 = *Temp2283, 4
+BasicParam Temp2275
+BasicParam Temp2279
+BasicParam Temp2284
+call printF , 3
+Temp2287 = resultCount ADD 1
+resultCount = Temp2287
+Temp2286 = resultCount
+Goto label:410
+Label :412	Label :410	Goto label:407
+Label :409	Label :407	Temp2289 = j ADD 1
+j = Temp2289
+Temp2288 = j
+Goto label:405
+Label :404	Temp2291 = i ADD 1
+i = Temp2291
+Temp2290 = i
+Goto label:402
+Label :401	Temp2292 = &"Total: %d
+"
+BasicParam Temp2292
+BasicParam resultCount
+call printf , 2
+Return BasicParam 0
+

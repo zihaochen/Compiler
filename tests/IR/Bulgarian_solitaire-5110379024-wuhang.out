@@ -1,0 +1,350 @@
+n = 210
+A = 48271
+M = 2147483647
+seed = 1
+Temp48 = seed MOD Q
+Temp49 = A MUL Temp48
+Temp50 = seed DIV Q
+Temp51 = R MUL Temp50
+Temp52 = Temp49 SUB Temp51
+tempseed = Temp52
+Temp53 = tempseed GE 0
+If Not Equal to Zero Temp53 Goto Label :29	
+Goto label:28
+Label :29	seed = tempseed
+Temp54 = seed
+Label :28	Return BasicParam seed
+
+seed = val
+Temp55 = seed
+Temp56 = 0
+Temp57 = x MUL 4
+Temp56 = Temp56 ADD Temp57
+Temp58 = a ADD Temp56
+Temp59 = *Temp58, 4
+temp = Temp59
+Temp61 = 0
+Temp62 = y MUL 4
+Temp61 = Temp61 ADD Temp62
+Temp63 = a ADD Temp61
+Temp64 = *Temp63, 4
+Temp65 = 0
+Temp66 = x MUL 4
+Temp65 = Temp65 ADD Temp66
+Temp67 = a ADD Temp65
+*Temp67 = Temp64 , 4
+Temp70 = 0
+Temp71 = y MUL 4
+Temp70 = Temp70 ADD Temp71
+Temp72 = a ADD Temp70
+*Temp72 = temp , 4
+Label :31	Temp74 = h LE x
+If Not Equal to Zero Temp74 Goto Label :32	
+Goto label:30
+Label :32	Temp75 = h ADD 1
+Temp76 = h MUL Temp75
+Temp77 = Temp76 DIV 2
+Temp78 = x EQ Temp77
+If Not Equal to Zero Temp78 Goto Label :34	
+Goto label:35
+Label :34	Return BasicParam 1
+
+Goto label:33
+Label :35	Label :33	h = h ADD 1
+Goto label:31
+Label :30	Return BasicParam 0
+
+i = 0
+Temp79 = i
+Label :37	Temp80 = i LT now
+If Not Equal to Zero Temp80 Goto Label :38	
+Goto label:36
+Label :38	Temp81 = &"%d "
+Temp82 = 0
+Temp83 = i MUL 4
+Temp82 = Temp82 ADD Temp83
+Temp84 = a ADD Temp82
+Temp85 = *Temp84, 4
+BasicParam Temp81
+BasicParam Temp85
+call printf , 2
+i = i ADD 1
+Goto label:37
+Label :36	Temp87 = &"%c"
+BasicParam Temp87
+BasicParam 10
+call printf , 2
+j = 0
+Temp89 = now NE h
+If Not Equal to Zero Temp89 Goto Label :40	
+Goto label:41
+Label :40	Return BasicParam 0
+
+Goto label:39
+Label :41	Label :39	Label :43	Temp90 = j LT now
+If Not Equal to Zero Temp90 Goto Label :44	
+Goto label:42
+Label :44	Temp92 = 0
+Temp93 = j MUL 4
+Temp92 = Temp92 ADD Temp93
+Temp94 = a ADD Temp92
+Temp95 = *Temp94, 4
+Temp96 = 0
+Temp97 = j MUL 4
+Temp96 = Temp96 ADD Temp97
+Temp98 = b ADD Temp96
+*Temp98 = Temp95 , 4
+j = j ADD 1
+Goto label:43
+Label :42	i = 0
+Temp100 = i
+Label :46	Temp101 = now SUB 1
+Temp102 = i LT Temp101
+If Not Equal to Zero Temp102 Goto Label :47	
+Goto label:45
+Label :47	Temp104 = i ADD 1
+j = Temp104
+Temp103 = j
+Label :49	Temp105 = j LT now
+If Not Equal to Zero Temp105 Goto Label :50	
+Goto label:48
+Label :50	Temp106 = 0
+Temp107 = i MUL 4
+Temp106 = Temp106 ADD Temp107
+Temp108 = b ADD Temp106
+Temp109 = *Temp108, 4
+Temp110 = 0
+Temp111 = j MUL 4
+Temp110 = Temp110 ADD Temp111
+Temp112 = b ADD Temp110
+Temp113 = *Temp112, 4
+Temp114 = Temp109 GT Temp113
+If Not Equal to Zero Temp114 Goto Label :52	
+Goto label:53
+Label :52	Temp116 = 0
+Temp117 = i MUL 4
+Temp116 = Temp116 ADD Temp117
+Temp118 = b ADD Temp116
+Temp119 = *Temp118, 4
+temp = Temp119
+Temp115 = temp
+Temp121 = 0
+Temp122 = j MUL 4
+Temp121 = Temp121 ADD Temp122
+Temp123 = b ADD Temp121
+Temp124 = *Temp123, 4
+Temp125 = 0
+Temp126 = i MUL 4
+Temp125 = Temp125 ADD Temp126
+Temp127 = b ADD Temp125
+*Temp127 = Temp124 , 4
+Temp130 = 0
+Temp131 = j MUL 4
+Temp130 = Temp130 ADD Temp131
+Temp132 = b ADD Temp130
+*Temp132 = temp , 4
+Goto label:51
+Label :53	Label :51	j = j ADD 1
+Goto label:49
+Label :48	i = i ADD 1
+Goto label:46
+Label :45	i = 0
+Temp134 = i
+Label :55	Temp135 = i LT now
+If Not Equal to Zero Temp135 Goto Label :56	
+Goto label:54
+Label :56	Temp136 = 0
+Temp137 = i MUL 4
+Temp136 = Temp136 ADD Temp137
+Temp138 = b ADD Temp136
+Temp139 = *Temp138, 4
+Temp140 = i ADD 1
+Temp141 = Temp139 NE Temp140
+If Not Equal to Zero Temp141 Goto Label :58	
+Goto label:59
+Label :58	Return BasicParam 0
+
+Goto label:57
+Label :59	Label :57	i = i ADD 1
+Goto label:55
+Label :54	Return BasicParam 1
+
+i = 0
+Label :61	Temp142 = i LT now
+If Not Equal to Zero Temp142 Goto Label :62	
+Goto label:60
+Label :62	Temp143 = 0
+Temp144 = i MUL 4
+Temp143 = Temp143 ADD Temp144
+Temp145 = a ADD Temp143
+Temp146 = *Temp145, 4
+If Not Equal to Zero Temp146 Goto Label :64	
+Goto label:65
+Label :64	Temp148 = i ADD 1
+j = Temp148
+Temp147 = j
+Label :67	Temp149 = j LT now
+If Not Equal to Zero Temp149 Goto Label :68	
+Goto label:66
+Label :68	Temp150 = 0
+Temp151 = j MUL 4
+Temp150 = Temp150 ADD Temp151
+Temp152 = a ADD Temp150
+Temp153 = *Temp152, 4
+Temp154 = Temp153 NE 0
+If Not Equal to Zero Temp154 Goto Label :70	
+Goto label:71
+Label :70	BasicParam i
+BasicParam j
+call swap , 2
+Goto label:66
+Goto label:69
+Label :71	Label :69	j = j ADD 1
+Goto label:67
+Label :66	Goto label:63
+Label :65	Label :63	i = i ADD 1
+Goto label:61
+Label :60	i = 0
+Temp156 = i
+Label :73	Temp157 = i LT now
+If Not Equal to Zero Temp157 Goto Label :74	
+Goto label:72
+Label :74	Temp158 = 0
+Temp159 = i MUL 4
+Temp158 = Temp158 ADD Temp159
+Temp160 = a ADD Temp158
+Temp161 = *Temp160, 4
+If Not Equal to Zero Temp161 Goto Label :76	
+Goto label:77
+Label :76	now = i
+Temp162 = now
+Goto label:72
+Goto label:75
+Label :77	Label :75	i = i ADD 1
+Goto label:73
+Label :72	i = 0
+Label :79	Temp163 = i LT now
+If Not Equal to Zero Temp163 Goto Label :80	
+Goto label:78
+Label :80	Temp164 = 0
+Temp165 = i MUL 4
+Temp164 = Temp164 ADD Temp165
+Temp166 = a ADD Temp164
+Temp167 = *Temp166, 4
+Temp167 = Temp167 SUB 1
+Temp169 = i ADD 1
+i = Temp169
+Temp168 = i
+Goto label:79
+Label :78	Temp171 = 0
+Temp172 = now MUL 4
+Temp171 = Temp171 ADD Temp172
+Temp173 = a ADD Temp171
+*Temp173 = now , 4
+Temp175 = now
+now = now ADD 1
+i = 0
+temp = 0
+count = 0
+Temp177 = M DIV A
+Q = Temp177
+Temp176 = Q
+Temp179 = M MOD A
+R = Temp179
+Temp178 = R
+BasicParam n
+call pd , 1
+If Not Equal to Zero Temp180 Goto Label :82	
+Goto label:83
+Label :82	Temp181 = &"Sorry, the number n must be a number s.t. there exists i satisfying n=1+2+...+i
+"
+BasicParam Temp181
+call printf , 1
+Return BasicParam 1
+
+Goto label:81
+Label :83	Label :81	Temp183 = &"Let's start!
+"
+BasicParam Temp183
+call printf , 1
+BasicParam 3654898
+call initialize , 1
+call random , 0
+Temp188 = Temp187 MOD 10
+Temp189 = Temp188 ADD 1
+now = Temp189
+Temp186 = now
+Temp190 = &"%d
+"
+BasicParam Temp190
+BasicParam now
+call printf , 2
+Label :85	Temp192 = now SUB 1
+Temp193 = i LT Temp192
+If Not Equal to Zero Temp193 Goto Label :86	
+Goto label:84
+Label :86	call random , 0
+Temp196 = Temp195 MOD 10
+Temp197 = Temp196 ADD 1
+Temp198 = 0
+Temp199 = i MUL 4
+Temp198 = Temp198 ADD Temp199
+Temp200 = a ADD Temp198
+*Temp200 = Temp197 , 4
+Label :88	Temp202 = 0
+Temp203 = i MUL 4
+Temp202 = Temp202 ADD Temp203
+Temp204 = a ADD Temp202
+Temp205 = *Temp204, 4
+Temp206 = Temp205 ADD temp
+Temp207 = Temp206 GT n
+If Not Equal to Zero Temp207 Goto Label :89	
+Goto label:87
+Label :89	call random , 0
+Temp210 = Temp209 MOD 10
+Temp211 = Temp210 ADD 1
+Temp212 = 0
+Temp213 = i MUL 4
+Temp212 = Temp212 ADD Temp213
+Temp214 = a ADD Temp212
+*Temp214 = Temp211 , 4
+Goto label:88
+Label :87	Temp217 = 0
+Temp218 = i MUL 4
+Temp217 = Temp217 ADD Temp218
+Temp219 = a ADD Temp217
+Temp220 = *Temp219, 4
+Temp221 = temp ADD Temp220
+temp = Temp221
+Temp216 = temp
+i = i ADD 1
+Goto label:85
+Label :84	Temp223 = n SUB temp
+Temp224 = now SUB 1
+Temp225 = 0
+Temp226 = Temp224 MUL 4
+Temp225 = Temp225 ADD Temp226
+Temp227 = a ADD Temp225
+*Temp227 = Temp223 , 4
+call show , 0
+call merge , 0
+Label :91	call win , 0
+If Not Equal to Zero Temp231 Goto Label :92	
+Goto label:90
+Label :92	Temp232 = &"step %d:
+"
+count = count ADD 1
+BasicParam Temp232
+BasicParam count
+call printf , 2
+call move , 0
+call merge , 0
+call show , 0
+Goto label:91
+Label :90	Temp237 = &"Total: %d step(s)
+"
+BasicParam Temp237
+BasicParam count
+call printf , 2
+Return BasicParam 0
+

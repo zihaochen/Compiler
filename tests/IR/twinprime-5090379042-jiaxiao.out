@@ -1,0 +1,73 @@
+N = 15000
+resultCount = 0
+i = 1
+Temp4943 = i
+Label :618	Temp4944 = i LE N
+If Not Equal to Zero Temp4944 Goto Label :619	
+Goto label:617
+Label :619	Temp4946 = 0
+Temp4947 = i MUL 1
+Temp4946 = Temp4946 ADD Temp4947
+Temp4948 = b ADD Temp4946
+*Temp4948 = 1 , 1
+Temp4950 = i
+i = i ADD 1
+Goto label:618
+Label :617	i = 2
+Temp4951 = i
+Label :621	Temp4952 = i LE N
+If Not Equal to Zero Temp4952 Goto Label :622	
+Goto label:620
+Label :622	Temp4953 = 0
+Temp4954 = i MUL 1
+Temp4953 = Temp4953 ADD Temp4954
+Temp4955 = b ADD Temp4953
+Temp4956 = *Temp4955, 1
+If Not Equal to Zero Temp4956 Goto Label :624	
+Goto label:625
+Label :624	count = 2
+Temp4957 = i GT 3
+If Not Equal to Zero Temp4957 Goto Label :627	
+Goto label:628
+Label :629	Temp4958 = i SUB 2
+Temp4959 = 0
+Temp4960 = Temp4958 MUL 1
+Temp4959 = Temp4959 ADD Temp4960
+Temp4961 = b ADD Temp4959
+Temp4962 = *Temp4961, 1
+If Not Equal to Zero Temp4962 Goto Label :627	
+Goto label:628
+Label :627	Temp4963 = resultCount
+resultCount = resultCount ADD 1
+Temp4964 = &"%d %d
+"
+Temp4965 = i SUB 2
+BasicParam Temp4964
+BasicParam Temp4965
+BasicParam i
+call printf , 3
+Goto label:626
+Label :628	Label :626	Label :631	Temp4967 = i MUL count
+Temp4968 = Temp4967 LE N
+If Not Equal to Zero Temp4968 Goto Label :632	
+Goto label:630
+Label :632	Temp4970 = i MUL count
+Temp4971 = 0
+Temp4972 = Temp4970 MUL 1
+Temp4971 = Temp4971 ADD Temp4972
+Temp4973 = b ADD Temp4971
+*Temp4973 = 0 , 1
+Temp4975 = count
+count = count ADD 1
+Goto label:631
+Label :630	Goto label:623
+Label :625	Label :623	Temp4976 = i
+i = i ADD 1
+Goto label:621
+Label :620	Temp4977 = &"Total: %d
+"
+BasicParam Temp4977
+BasicParam resultCount
+call printf , 2
+Return BasicParam 0
+
