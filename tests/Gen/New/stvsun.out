@@ -1,0 +1,87 @@
+_start: 
+_printf_cnt = 0
+
+_malloc: 
+
+_getchar: 
+
+_printf: 
+
+_is_digit: 
+Temp1 = c GE 48
+If Not Equal to Zero Temp1 Goto Label :3	
+Goto label:2
+Label :3	Temp2 = c LE 57
+If Not Equal to Zero Temp2 Goto Label :1	
+Goto label:2
+Label :1	Return BasicParam 1
+Label :2	Return BasicParam 0
+
+_get_d: 
+Temp3 = call _getchar , 0
+_c = Temp3
+_t = 0
+Label :5	BasicParam _c
+Temp4 = call _is_digit , 1
+If Not Equal to Zero Temp4 Goto Label :4	
+Goto label:6
+Label :6	Temp6 = call _getchar , 0
+_c = Temp6
+Temp5 = _c
+Goto label:5
+Label :4	Label :8	BasicParam _c
+Temp7 = call _is_digit , 1
+If Not Equal to Zero Temp7 Goto Label :9	
+Goto label:7
+Label :9	Temp9 = _t MUL 10
+Temp10 = Temp9 ADD _c
+Temp11 = Temp10 SUB 48
+_t = Temp11
+Temp8 = _t
+Temp13 = call _getchar , 0
+_c = Temp13
+Temp12 = _c
+Goto label:8
+Label :7	Return BasicParam _t
+
+_main: 
+Temp14 = call _getchar , 0
+_c = Temp14
+Temp15 = call _get_d , 0
+_x = Temp15
+_a[0] = _c , 4
+Temp18 = _a[0] , 4
+Temp19 = _a[0] , 4
+BasicParam Temp17
+BasicParam Temp18
+BasicParam Temp19
+_printf_cnt = 3
+Temp20 = call _printf , 3
+Temp22 = _a[0] , 4
+_b[0] = Temp22 , 4
+Temp24 = _b[0] , 4
+Temp25 = _b[4] , 4
+BasicParam Temp23
+BasicParam Temp24
+BasicParam Temp25
+_printf_cnt = 3
+Temp26 = call _printf , 3
+_a[0] = _x , 4
+Temp29 = _a[0] , 4
+Temp30 = _a[0] , 4
+BasicParam Temp28
+BasicParam Temp29
+BasicParam Temp30
+_printf_cnt = 3
+Temp31 = call _printf , 3
+Temp33 = _a[0] , 4
+_b[4] = Temp33 , 4
+Temp35 = _b[0] , 4
+Temp36 = _b[4] , 4
+BasicParam Temp34
+BasicParam Temp35
+BasicParam Temp36
+_printf_cnt = 3
+Temp37 = call _printf , 3
+Return BasicParam 0
+

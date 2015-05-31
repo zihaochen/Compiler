@@ -105,178 +105,182 @@ Temp44 = call _getchar , 0
 _c = Temp44
 Temp43 = _c
 Goto label:12
-Label :11	Return BasicParam _res
+Label :11	BasicParam Temp45
+BasicParam _res
+_printf_cnt = 2
+Temp46 = call _printf , 2
+Return BasicParam _res
 
 _main: 
-Temp46 = call _getInt , 0
-_n = Temp46
-Temp45 = _n
+Temp48 = call _getInt , 0
+_n = Temp48
+Temp47 = _n
 _i = 0
-Temp47 = _i
-Label :16	Temp48 = _i LT _n
-If Not Equal to Zero Temp48 Goto Label :17	
+Temp49 = _i
+Label :16	Temp50 = _i LT _n
+If Not Equal to Zero Temp50 Goto Label :17	
 Goto label:15
 Label :17	_j = 0
-Temp49 = _j
-Label :19	Temp50 = _j LT 6
-If Not Equal to Zero Temp50 Goto Label :20	
+Temp51 = _j
+Label :19	Temp52 = _j LT 6
+If Not Equal to Zero Temp52 Goto Label :20	
 Goto label:18
-Label :20	Temp52 = call _getInt , 0
-Temp53 = 0
-Temp54 = _i MUL 24
-Temp53 = Temp53 ADD Temp54
-Temp55 = _j MUL 4
-Temp53 = Temp53 ADD Temp55
-Temp56 = _a ADD Temp53
-*Temp56 = Temp52 , 4
-Temp51 = *Temp56, 4
-Temp51 = *Temp56, 4
-Temp59 = _j ADD 1
-_j = Temp59
-Temp58 = _j
+Label :20	Temp54 = call _getInt , 0
+Temp55 = 0
+Temp56 = _i MUL 24
+Temp55 = Temp55 ADD Temp56
+Temp57 = _j MUL 4
+Temp55 = Temp55 ADD Temp57
+Temp58 = _a ADD Temp55
+*Temp58 = Temp54 , 4
+Temp53 = *Temp58, 4
+Temp53 = *Temp58, 4
+Temp61 = _j ADD 1
+_j = Temp61
+Temp60 = _j
 Goto label:19
-Label :18	Temp61 = _i ADD 1
-_i = Temp61
-Temp60 = _i
+Label :18	Temp63 = _i ADD 1
+_i = Temp63
+Temp62 = _i
 Goto label:16
 Label :15	_ret = 0
-Temp62 = _ret
+Temp64 = _ret
 _i = 1
-Temp63 = _i
-Label :22	Temp64 = _i LT _n
-If Not Equal to Zero Temp64 Goto Label :23	
+Temp65 = _i
+Label :22	Temp66 = _i LT _n
+If Not Equal to Zero Temp66 Goto Label :23	
 Goto label:21
 Label :23	_ok = 0
-Temp65 = _ok
+Temp67 = _ok
 _t0 = 0
-Temp66 = _t0
-Label :25	Temp67 = _t0 LT 4
-If Not Equal to Zero Temp67 Goto Label :26	
+Temp68 = _t0
+Label :25	Temp69 = _t0 LT 4
+If Not Equal to Zero Temp69 Goto Label :26	
 Goto label:24
 Label :26	_t1 = 0
-Temp68 = _t1
-Label :28	Temp69 = _t1 LT 4
-If Not Equal to Zero Temp69 Goto Label :29	
+Temp70 = _t1
+Label :28	Temp71 = _t1 LT 4
+If Not Equal to Zero Temp71 Goto Label :29	
 Goto label:27
 Label :29	_t2 = 0
-Temp70 = _t2
-Label :31	Temp71 = _t2 LT 4
-If Not Equal to Zero Temp71 Goto Label :32	
+Temp72 = _t2
+Label :31	Temp73 = _t2 LT 4
+If Not Equal to Zero Temp73 Goto Label :32	
 Goto label:30
 Label :32	_j = 0
-Temp72 = _j
-Label :34	Temp73 = _j LT 6
-If Not Equal to Zero Temp73 Goto Label :35	
+Temp74 = _j
+Label :34	Temp75 = _j LT 6
+If Not Equal to Zero Temp75 Goto Label :35	
 Goto label:33
-Label :35	Temp75 = 0
-Temp76 = _i MUL 24
-Temp75 = Temp75 ADD Temp76
-Temp77 = _j MUL 4
-Temp75 = Temp75 ADD Temp77
-Temp78 = _a ADD Temp75
-Temp79 = *Temp78, 4
-Temp80 = 0
-Temp81 = _j MUL 4
-Temp80 = Temp80 ADD Temp81
-Temp82 = _b ADD Temp80
-*Temp82 = Temp79 , 4
-Temp74 = *Temp82, 4
-Temp74 = *Temp82, 4
-Temp85 = _j ADD 1
-_j = Temp85
-Temp84 = _j
+Label :35	Temp77 = 0
+Temp78 = _i MUL 24
+Temp77 = Temp77 ADD Temp78
+Temp79 = _j MUL 4
+Temp77 = Temp77 ADD Temp79
+Temp80 = _a ADD Temp77
+Temp81 = *Temp80, 4
+Temp82 = 0
+Temp83 = _j MUL 4
+Temp82 = Temp82 ADD Temp83
+Temp84 = _b ADD Temp82
+*Temp84 = Temp81 , 4
+Temp76 = *Temp84, 4
+Temp76 = *Temp84, 4
+Temp87 = _j ADD 1
+_j = Temp87
+Temp86 = _j
 Goto label:34
 Label :33	_j = 0
-Temp86 = _j
-Label :37	Temp87 = _j LT _t0
-If Not Equal to Zero Temp87 Goto Label :38	
+Temp88 = _j
+Label :37	Temp89 = _j LT _t0
+If Not Equal to Zero Temp89 Goto Label :38	
 Goto label:36
 Label :38	BasicParam _b
 BasicParam 0
-Temp88 = call _transform , 2
-Temp90 = _j ADD 1
-_j = Temp90
-Temp89 = _j
+Temp90 = call _transform , 2
+Temp92 = _j ADD 1
+_j = Temp92
+Temp91 = _j
 Goto label:37
 Label :36	_j = 0
-Temp91 = _j
-Label :40	Temp92 = _j LT _t1
-If Not Equal to Zero Temp92 Goto Label :41	
+Temp93 = _j
+Label :40	Temp94 = _j LT _t1
+If Not Equal to Zero Temp94 Goto Label :41	
 Goto label:39
 Label :41	BasicParam _b
 BasicParam 1
-Temp93 = call _transform , 2
-Temp95 = _j ADD 1
-_j = Temp95
-Temp94 = _j
+Temp95 = call _transform , 2
+Temp97 = _j ADD 1
+_j = Temp97
+Temp96 = _j
 Goto label:40
 Label :39	_j = 0
-Temp96 = _j
-Label :43	Temp97 = _j LT _t2
-If Not Equal to Zero Temp97 Goto Label :44	
+Temp98 = _j
+Label :43	Temp99 = _j LT _t2
+If Not Equal to Zero Temp99 Goto Label :44	
 Goto label:42
 Label :44	BasicParam _b
 BasicParam 2
-Temp98 = call _transform , 2
-Temp100 = _j ADD 1
-_j = Temp100
-Temp99 = _j
+Temp100 = call _transform , 2
+Temp102 = _j ADD 1
+_j = Temp102
+Temp101 = _j
 Goto label:43
 Label :42	_same = 1
-Temp101 = _same
+Temp103 = _same
 _j = 0
-Temp102 = _j
-Label :46	Temp103 = _j LT 6
-If Not Equal to Zero Temp103 Goto Label :47	
+Temp104 = _j
+Label :46	Temp105 = _j LT 6
+If Not Equal to Zero Temp105 Goto Label :47	
 Goto label:45
-Label :47	Temp104 = 0
-Temp105 = _j MUL 4
-Temp104 = Temp104 ADD Temp105
-Temp106 = _b ADD Temp104
-Temp107 = *Temp106, 4
-Temp108 = 0
-Temp109 = 0 MUL 24
-Temp108 = Temp108 ADD Temp109
-Temp110 = _j MUL 4
-Temp108 = Temp108 ADD Temp110
-Temp111 = _a ADD Temp108
-Temp112 = *Temp111, 4
-Temp113 = Temp107 NE Temp112
-If Not Equal to Zero Temp113 Goto Label :49	
+Label :47	Temp106 = 0
+Temp107 = _j MUL 4
+Temp106 = Temp106 ADD Temp107
+Temp108 = _b ADD Temp106
+Temp109 = *Temp108, 4
+Temp110 = 0
+Temp111 = 0 MUL 24
+Temp110 = Temp110 ADD Temp111
+Temp112 = _j MUL 4
+Temp110 = Temp110 ADD Temp112
+Temp113 = _a ADD Temp110
+Temp114 = *Temp113, 4
+Temp115 = Temp109 NE Temp114
+If Not Equal to Zero Temp115 Goto Label :49	
 Goto label:48
 Label :49	_same = 0
-Temp114 = _same
+Temp116 = _same
 Goto label:45
-Label :48	Temp116 = _j ADD 1
-_j = Temp116
-Temp115 = _j
+Label :48	Temp118 = _j ADD 1
+_j = Temp118
+Temp117 = _j
 Goto label:46
 Label :45	If Not Equal to Zero _same Goto Label :51	
 Goto label:50
 Label :51	_ok = 1
-Temp117 = _ok
-Label :50	Temp119 = _t2 ADD 1
-_t2 = Temp119
-Temp118 = _t2
+Temp119 = _ok
+Label :50	Temp121 = _t2 ADD 1
+_t2 = Temp121
+Temp120 = _t2
 Goto label:31
-Label :30	Temp121 = _t1 ADD 1
-_t1 = Temp121
-Temp120 = _t1
+Label :30	Temp123 = _t1 ADD 1
+_t1 = Temp123
+Temp122 = _t1
 Goto label:28
-Label :27	Temp123 = _t0 ADD 1
-_t0 = Temp123
-Temp122 = _t0
+Label :27	Temp125 = _t0 ADD 1
+_t0 = Temp125
+Temp124 = _t0
 Goto label:25
-Label :24	Temp125 = _ret ADD _ok
-_ret = Temp125
-Temp124 = _ret
-Temp127 = _i ADD 1
-_i = Temp127
-Temp126 = _i
+Label :24	Temp127 = _ret ADD _ok
+_ret = Temp127
+Temp126 = _ret
+Temp129 = _i ADD 1
+_i = Temp129
+Temp128 = _i
 Goto label:22
-Label :21	BasicParam Temp128
+Label :21	BasicParam Temp130
 BasicParam _ret
 _printf_cnt = 2
-Temp129 = call _printf , 2
+Temp131 = call _printf , 2
 Return BasicParam 0
 

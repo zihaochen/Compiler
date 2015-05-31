@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-int n = 1000;
+int n;
 int a[10000];
 
 void exchange(int x,int y)
@@ -69,6 +69,12 @@ int heapSort() {
 
 int main() {
     int i;
+    n=getchar()-'0';
+    n=10*n+getchar()-'0';
+    n=10*n+getchar()-'0';
+    n=10*n+getchar()-'0';
+    if (n != 1234) 
+        printf("hhhhhhhhhhhhhhhhhhhhhh\n");
     for (i = 0; i < n; i = i + 1) a[i] = i;
     makeHeap();
     heapSort();

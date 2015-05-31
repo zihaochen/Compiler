@@ -8,6 +8,7 @@
 	ASU_3: .space 28
 	ASU_4: .space 28
 	str_1: .space 16
+	str_2: .space 16
 .text
 main:
 	move $fp, $sp     # start using memory here
@@ -84,6 +85,18 @@ main:
 	sw $t0, 8($t1)
 	li $t0, 0
 	la $t1, str_1
+	sw $t0, 12($t1)
+	li $t0, 37
+	la $t1, str_2
+	sw $t0, 0($t1)
+	li $t0, 100
+	la $t1, str_2
+	sw $t0, 4($t1)
+	li $t0, 10
+	la $t1, str_2
+	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_2
 	sw $t0, 12($t1)
 	j _main
 _transform:
@@ -244,9 +257,11 @@ L4:
 	jr $ra
 _getInt:
 	sw $ra, ($sp)
-	subu $sp, $sp, 4
+	la $t0, str_1
+	sw $t0, -64($sp)
+	subu $sp, $sp, 72
 	jal _getchar
-	addi $sp, $sp, 4
+	addi $sp, $sp, 72
 	sw $v0, -8($sp)
 	lw $ra, ($sp)
 	lw $t0, -8($sp)
@@ -270,9 +285,9 @@ L10:
 	bne $t0, $0, L9
 	b L7
 L9:
-	subu $sp, $sp, 4
+	subu $sp, $sp, 72
 	jal _getchar
-	addi $sp, $sp, 4
+	addi $sp, $sp, 72
 	sw $v0, -28($sp)
 	lw $ra, ($sp)
 	lw $t0, -28($sp)
@@ -314,9 +329,9 @@ L13:
 	sw $t0, -12($sp)
 	lw $t0, -12($sp)
 	sw $t0, -40($sp)
-	subu $sp, $sp, 4
+	subu $sp, $sp, 72
 	jal _getchar
-	addi $sp, $sp, 4
+	addi $sp, $sp, 72
 	sw $v0, -60($sp)
 	lw $ra, ($sp)
 	lw $t0, -60($sp)
@@ -325,6 +340,17 @@ L13:
 	sw $t0, -56($sp)
 	b L12
 L11:
+	lw $t0, -64($sp)
+	sw $t0, -72($sp)
+	lw $t0, -12($sp)
+	sw $t0, -76($sp)
+	li $t0, 2
+	sw $t0, _printf_cnt
+	subu $sp, $sp, 80
+	jal _printf
+	addi $sp, $sp, 80
+	sw $v0, -68($sp)
+	lw $ra, ($sp)
 	lw $v0, -12($sp)
 	sw $v0, -12($sp)
 	jr $ra
@@ -333,11 +359,11 @@ _main:
 	sw $ra, ($sp)
 	la $t0, ASU_4
 	sw $t0, -28($sp)
-	la $t0, str_1
+	la $t0, str_2
 	sw $t0, -372($sp)
-	subu $sp, $sp, 4
+	subu $sp, $sp, 80
 	jal _getInt
-	addi $sp, $sp, 4
+	addi $sp, $sp, 80
 	sw $v0, -44($sp)
 	lw $ra, ($sp)
 	lw $t0, -44($sp)
@@ -370,9 +396,9 @@ L19:
 	bne $t0, $0, L20
 	b L18
 L20:
-	subu $sp, $sp, 4
+	subu $sp, $sp, 80
 	jal _getInt
-	addi $sp, $sp, 4
+	addi $sp, $sp, 80
 	sw $v0, -68($sp)
 	lw $ra, ($sp)
 	li $t0, 0
@@ -815,7 +841,7 @@ _printf:
 	add $t0, $t0, $sp
 	lw $a1, ($t0)
 	move $a2, $t0
-		
+	
 _printf_loop:
 	lb $a0, 0($a1)
 	beq $a0, 0, _printf_end
@@ -843,10 +869,16 @@ _printf_int:
 
 _printf_str:
 	subu $a2, $a2, 4
-	lw $a0, 0($a2)
-	li $v0, 4
+	lw $a3, 0($a2)
+	b _printf_str_loop
+
+_printf_str_loop:
+	addu $a3, $a3, 4
+	lw $a0, ($a3)
+	beq $a0, 0, _printf_loop
+	li $v0, 11
 	syscall
-	b _printf_loop
+	b _printf_str_loop
 
 _printf_char:
 	subu $a2, $a2, 4
@@ -917,4 +949,3 @@ _malloc:
 	li $v0, 9
 	syscall
 	jr $ra
-

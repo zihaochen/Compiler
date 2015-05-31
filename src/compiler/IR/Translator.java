@@ -355,10 +355,15 @@ public class Translator implements Visitor {
          if (varDecl.init != null) {
             if (varDecl.type instanceof PointerType)
                if (((PointerType) varDecl.type).baseType instanceof StructType)
-                  if (varDecl.init instanceof InitValue)
-                     if (((InitValue) varDecl.init).expr instanceof FunctionCall && ((Identifier)((FunctionCall) ((InitValue) varDecl.init).expr).expr).symbol.toString().equals("malloc")) {
+                  if (varDecl.init instanceof InitValue) {
+                     if (((InitValue) varDecl.init).expr instanceof CastExpr)
+                        if (((CastExpr) ((InitValue) varDecl.init).expr).expr instanceof FunctionCall)
+                           if (((Identifier)((FunctionCall) ((CastExpr) ((InitValue) varDecl.init).expr).expr).expr).symbol.toString().equals("malloc"))
+                              structMallocSwitcher = true;
+                     if (((InitValue) varDecl.init).expr instanceof FunctionCall && ((Identifier) ((FunctionCall) ((InitValue) varDecl.init).expr).expr).symbol.toString().equals("malloc")) {
                         structMallocSwitcher = true;
                      }
+                  }
             varDecl.init.accept(this);
             initAssign(varDecl);
             varTable.define(varDecl.name.num, varDecl.type);

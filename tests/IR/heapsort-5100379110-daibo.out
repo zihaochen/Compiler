@@ -1,6 +1,5 @@
 _start: 
 _printf_cnt = 0
-_n = 1000
 
 _malloc: 
 
@@ -243,44 +242,72 @@ Goto label:19
 Label :18	Return BasicParam 0
 
 _main: 
-_i = 0
-Temp155 = _i
-Label :22	Temp156 = _i LT _n
-If Not Equal to Zero Temp156 Goto Label :23	
+Temp156 = call _getchar , 0
+Temp157 = Temp156 SUB 48
+_n = Temp157
+Temp155 = _n
+Temp159 = 10 MUL _n
+Temp160 = call _getchar , 0
+Temp161 = Temp159 ADD Temp160
+Temp162 = Temp161 SUB 48
+_n = Temp162
+Temp158 = _n
+Temp164 = 10 MUL _n
+Temp165 = call _getchar , 0
+Temp166 = Temp164 ADD Temp165
+Temp167 = Temp166 SUB 48
+_n = Temp167
+Temp163 = _n
+Temp169 = 10 MUL _n
+Temp170 = call _getchar , 0
+Temp171 = Temp169 ADD Temp170
+Temp172 = Temp171 SUB 48
+_n = Temp172
+Temp168 = _n
+Temp173 = _n NE 1234
+If Not Equal to Zero Temp173 Goto Label :22	
 Goto label:21
-Label :23	Temp158 = 0
-Temp159 = _i MUL 4
-Temp158 = Temp158 ADD Temp159
-Temp160 = _a ADD Temp158
-*Temp160 = _i , 4
-Temp157 = *Temp160, 4
-Temp157 = *Temp160, 4
-Temp163 = _i ADD 1
-_i = Temp163
-Temp162 = _i
-Goto label:22
-Label :21	Temp164 = call _makeHeap , 0
-Temp165 = call _heapSort , 0
-_i = 0
-Temp166 = _i
-Label :25	Temp167 = _i LT _n
-If Not Equal to Zero Temp167 Goto Label :26	
-Goto label:24
-Label :26	Temp169 = 0
-Temp170 = _i MUL 4
-Temp169 = Temp169 ADD Temp170
-Temp171 = _a ADD Temp169
-Temp172 = *Temp171, 4
-BasicParam Temp168
-BasicParam Temp172
-_printf_cnt = 2
-Temp173 = call _printf , 2
-Temp175 = _i ADD 1
-_i = Temp175
-Temp174 = _i
-Goto label:25
-Label :24	BasicParam Temp176
+Label :22	BasicParam Temp174
 _printf_cnt = 1
-Temp177 = call _printf , 1
+Temp175 = call _printf , 1
+Label :21	_i = 0
+Temp176 = _i
+Label :24	Temp177 = _i LT _n
+If Not Equal to Zero Temp177 Goto Label :25	
+Goto label:23
+Label :25	Temp179 = 0
+Temp180 = _i MUL 4
+Temp179 = Temp179 ADD Temp180
+Temp181 = _a ADD Temp179
+*Temp181 = _i , 4
+Temp178 = *Temp181, 4
+Temp178 = *Temp181, 4
+Temp184 = _i ADD 1
+_i = Temp184
+Temp183 = _i
+Goto label:24
+Label :23	Temp185 = call _makeHeap , 0
+Temp186 = call _heapSort , 0
+_i = 0
+Temp187 = _i
+Label :27	Temp188 = _i LT _n
+If Not Equal to Zero Temp188 Goto Label :28	
+Goto label:26
+Label :28	Temp190 = 0
+Temp191 = _i MUL 4
+Temp190 = Temp190 ADD Temp191
+Temp192 = _a ADD Temp190
+Temp193 = *Temp192, 4
+BasicParam Temp189
+BasicParam Temp193
+_printf_cnt = 2
+Temp194 = call _printf , 2
+Temp196 = _i ADD 1
+_i = Temp196
+Temp195 = _i
+Goto label:27
+Label :26	BasicParam Temp197
+_printf_cnt = 1
+Temp198 = call _printf , 1
 Return BasicParam 0
 

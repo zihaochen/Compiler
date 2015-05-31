@@ -10,6 +10,7 @@ int read() {
 		ch = getchar();
 	for (x = 0; '0' <= ch && ch <= '9'; ch = getchar())
 		x = 10 * x + ch - '0';
+	printf("%d\n", x);
 	return x;
 }
 
@@ -20,6 +21,9 @@ int main() {
 	//scanf("%d%d", &N, &M);
 	N = read();
 	M = read();
+	//N = 11;
+//	M = 7;
+	printf("N = %d, M = %d\n", N ,M);
 	for (i = 0; i < N; i ++) {
 		a[i] = i + 1;
 	}

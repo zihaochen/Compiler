@@ -263,8 +263,7 @@ _printf:
 	add $t0, $t0, $sp
 	lw $a1, ($t0)
 	move $a2, $t0
-		
-_printf_loop:
+	_printf_loop:
 	lb $a0, 0($a1)
 	beq $a0, 0, _printf_end
 	addu $a1, $a1, 4
@@ -291,10 +290,16 @@ _printf_int:
 
 _printf_str:
 	subu $a2, $a2, 4
-	lw $a0, 0($a2)
-	li $v0, 4
+	lw $a3, 0($a2)
+	b _printf_str_loop
+
+_printf_str_loop:
+	addu $a3, $a3, 4
+	lw $a0, ($a3)
+	beq $a0, 0, _printf_loop
+	li $v0, 11
 	syscall
-	b _printf_loop
+	b _printf_str_loop
 
 _printf_char:
 	subu $a2, $a2, 4
@@ -365,4 +370,3 @@ _malloc:
 	li $v0, 9
 	syscall
 	jr $ra
-

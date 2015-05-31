@@ -1,7 +1,6 @@
 _start: 
 _printf_cnt = 0
 _N = 2000
-_A = 13579
 _B = 12345
 _C = 32768
 _X = 86421
@@ -209,41 +208,61 @@ Temp107 = Temp109[0] , 4
 Return BasicParam _node
 
 _main: 
-Temp111 = call _alloc_node , 0
-_root = Temp111
-Temp110 = _root
+Temp111 = call _getchar , 0
+Temp112 = Temp111 SUB 48
+Temp113 = 10000 MUL Temp112
+Temp114 = call _getchar , 0
+Temp115 = Temp114 SUB 48
+Temp116 = 1000 MUL Temp115
+Temp117 = Temp113 ADD Temp116
+Temp118 = call _getchar , 0
+Temp119 = Temp118 SUB 48
+Temp120 = 100 MUL Temp119
+Temp121 = Temp117 ADD Temp120
+Temp122 = call _getchar , 0
+Temp123 = Temp122 SUB 48
+Temp124 = 10 MUL Temp123
+Temp125 = Temp121 ADD Temp124
+Temp126 = call _getchar , 0
+Temp127 = Temp125 ADD Temp126
+Temp128 = Temp127 SUB 48
+_A = Temp128
+Temp110 = _A
+Temp130 = call _alloc_node , 0
+_root = Temp130
+Temp129 = _root
 _i = 0
-Temp112 = _i
-Label :21	Temp113 = _i LT _N
-If Not Equal to Zero Temp113 Goto Label :22	
+Temp131 = _i
+Label :21	Temp132 = _i LT _N
+If Not Equal to Zero Temp132 Goto Label :22	
 Goto label:20
-Label :22	Temp115 = call _alloc_node , 0
+Label :22	Temp134 = call _alloc_node , 0
 BasicParam _root
-BasicParam Temp115
-Temp116 = call _insert_node , 2
-_root = Temp116
-Temp114 = _root
-Temp119 = _i ADD 1
-_i = Temp119
-Temp118 = _i
-Temp117 = Temp118 SUB 1
+BasicParam Temp134
+Temp135 = call _insert_node , 2
+_root = Temp135
+Temp133 = _root
+Temp138 = _i ADD 1
+_i = Temp138
+Temp137 = _i
+Temp136 = Temp137 SUB 1
 Goto label:21
 Label :20	_i = 0
-Temp120 = _i
-Label :24	Temp121 = _i LE _N
-If Not Equal to Zero Temp121 Goto Label :25	
+Temp139 = _i
+Label :24	Temp140 = _i LE _N
+If Not Equal to Zero Temp140 Goto Label :25	
 Goto label:23
 Label :25	BasicParam _root
 BasicParam _i
-Temp123 = call _get_kth_element , 2
-BasicParam Temp122
-BasicParam Temp123
+Temp142 = call _get_kth_element , 2
+BasicParam Temp141
+BasicParam Temp142
 _printf_cnt = 2
-Temp124 = call _printf , 2
-Temp127 = _i ADD 1
-_i = Temp127
-Temp126 = _i
-Temp125 = Temp126 SUB 1
+Temp143 = call _printf , 2
+Temp146 = _i ADD 1
+_i = Temp146
+Temp145 = _i
+Temp144 = Temp145 SUB 1
 Goto label:24
 Label :23	Return BasicParam 0
 

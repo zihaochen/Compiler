@@ -29,12 +29,14 @@ int getInt() {
 		res = res * 10 + c - '0';
 		c = getchar();
 	}
+	printf("%d\n", res);
 	return res;
 }
 
 int main() {
 	int i, j, ret, t0, t1, t2, b[6], same, ok;
 	n = getInt();
+	//printf("%d\n", n);
 	for(i = 0; i < n; ++i) {
 		for(j = 0; j < 6; ++j) {
 			a[i][j] = getInt();	

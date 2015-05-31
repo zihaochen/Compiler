@@ -4,7 +4,7 @@
  */
 
 #include <stdio.h>
-int N = 2000, A = 13579, B = 12345, C = 32768, X = 86421;
+int N = 2000, A , B = 12345, C = 32768, X = 86421;
 int i;
 struct Node {
 	int value, priority, sum;
@@ -78,6 +78,7 @@ struct Node * alloc_node(){
 }
 
 int main(){
+	A=10000*(getchar()-'0')+1000*(getchar()-'0')+100*(getchar()-'0')+10*(getchar()-'0')+getchar()-'0';
 	root = alloc_node();
 	for (i = 0; i < N; i++)
 		root = insert_node(root, alloc_node());

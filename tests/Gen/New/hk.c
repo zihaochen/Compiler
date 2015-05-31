@@ -6,6 +6,7 @@ int read(){
 	for(; c < '0' || '9' < c; c = getchar());
 	for(;'0' <= c && c <= '9'; c = getchar())
 		x = 10 * x + c - '0';
+	printf("debug\n");
 	return x;
 }
 
@@ -37,6 +38,7 @@ int search() {
 	for(; head <= tail; ++head) {
 		u = queue[head];
 		for (k = first[u]; k; k = next[k]){
+		printf("k = %d, next[k] = %d\n", k, next[k]);
 			v = edge[k];
 			if (dy[v])
 				continue;
@@ -68,10 +70,12 @@ int Extend_Path(int u) {
 
 void Hopcroft_Karp() {
 	int i;
-	while (search())
+	while (search()) {
+		printf("debug\n");
 		for (i = 1; i <= n; ++i)
 			if (!opt[i] && Extend_Path(i))
 				++ans;
+		}
 }
 
 int main() {
@@ -86,6 +90,7 @@ int main() {
 		edge_add(a[i].u, a[i].v);
 	}
 
+	printf("debug\n");
 	Hopcroft_Karp();
 
 	printf("%d\n", ans);

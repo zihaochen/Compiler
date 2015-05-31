@@ -494,6 +494,7 @@ public class BrutalGen implements Gen{
     @Override
     public void emitCall(Quadruple quadruple) {
         Call call = (Call) quadruple;
+        if (paramOffset == 0) paramOffset = curFunction.localSize;
         emit("subu $sp, $sp, %d", paramOffset + 4);
         emit("jal " + call.name);
         emit("addi $sp, $sp, %d", paramOffset + 4);

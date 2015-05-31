@@ -1,6 +1,5 @@
 _start: 
 _printf_cnt = 0
-_n = 10
 
 _malloc: 
 
@@ -8,49 +7,32 @@ _getchar:
 
 _printf: 
 
-_main: 
-_i = 0
-Temp1 = _i
-Label :2	Temp2 = _i LT _n
+_read: 
+Temp1 = call _getchar , 0
+_ch = Temp1
+Label :2	Temp2 = _ch LT 48
 If Not Equal to Zero Temp2 Goto Label :3	
-Goto label:1
-Label :3	Temp4 = 0
-Temp5 = _i MUL 4
-Temp4 = Temp4 ADD Temp5
-Temp6 = _a ADD Temp4
-*Temp6 = _i , 4
-Temp3 = *Temp6, 4
-Temp3 = *Temp6, 4
-Temp10 = _i ADD 1
-_i = Temp10
-Temp9 = _i
-Temp8 = Temp9 SUB 1
-Goto label:2
-Label :1	_i = 0
-Temp11 = _i
-Label :5	Temp12 = _i LT _n
-If Not Equal to Zero Temp12 Goto Label :6	
 Goto label:4
-Label :6	Temp14 = 0
-Temp15 = _i MUL 4
-Temp14 = Temp14 ADD Temp15
-Temp16 = _a ADD Temp14
-Temp17 = *Temp16, 4
-Temp18 = _n SUB _i
-Temp19 = Temp18 SUB 1
-Temp20 = 0
-Temp21 = Temp19 MUL 4
-Temp20 = Temp20 ADD Temp21
-Temp22 = _a ADD Temp20
-Temp23 = *Temp22, 4
-BasicParam Temp13
-BasicParam Temp17
-BasicParam Temp23
+Label :4	Temp3 = _ch GT 57
+If Not Equal to Zero Temp3 Goto Label :3	
+Goto label:1
+Label :3	Temp5 = call _getchar , 0
+_ch = Temp5
+Temp4 = _ch
+Goto label:2
+Label :1	Temp7 = _ch SUB 48
+_x = Temp7
+Temp6 = _x
+Return BasicParam _x
+
+_main: 
+Temp8 = call _read , 0
+_a = Temp8
+Temp9 = call _read , 0
+_b = Temp9
+BasicParam Temp10
+BasicParam _a
+BasicParam _b
 _printf_cnt = 3
-Temp24 = call _printf , 3
-Temp27 = _i ADD 1
-_i = Temp27
-Temp26 = _i
-Temp25 = Temp26 SUB 1
-Goto label:5
-Label :4	
+Temp11 = call _printf , 3
+

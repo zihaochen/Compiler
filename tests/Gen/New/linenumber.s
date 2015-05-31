@@ -41,9 +41,9 @@ main:
 	j _main
 _getline1:
 	sw $ra, ($sp)
-	subu $sp, $sp, 4
+	subu $sp, $sp, 80
 	jal _getchar
-	addi $sp, $sp, 4
+	addi $sp, $sp, 80
 	sw $v0, -12($sp)
 	lw $ra, ($sp)
 	lw $t0, -12($sp)
@@ -80,9 +80,9 @@ L3:
 	sw $t0, 4($sp)
 	lw $t0, 4($sp)
 	sw $t0, -28($sp)
-	subu $sp, $sp, 4
+	subu $sp, $sp, 80
 	jal _getchar
-	addi $sp, $sp, 4
+	addi $sp, $sp, 80
 	sw $v0, -44($sp)
 	lw $ra, ($sp)
 	lw $t0, -44($sp)
@@ -160,9 +160,9 @@ L7:
 _getint:
 	sw $ra, ($sp)
 L10:
-	subu $sp, $sp, 4
+	subu $sp, $sp, 80
 	jal _getchar
-	addi $sp, $sp, 4
+	addi $sp, $sp, 80
 	sw $v0, -16($sp)
 	lw $ra, ($sp)
 	lw $t0, -16($sp)
@@ -312,7 +312,7 @@ _printf:
 	add $t0, $t0, $sp
 	lw $a1, ($t0)
 	move $a2, $t0
-		
+	
 _printf_loop:
 	lb $a0, 0($a1)
 	beq $a0, 0, _printf_end
@@ -340,10 +340,16 @@ _printf_int:
 
 _printf_str:
 	subu $a2, $a2, 4
-	lw $a0, 0($a2)
-	li $v0, 4
+	lw $a3, 0($a2)
+	b _printf_str_loop
+
+_printf_str_loop:
+	addu $a3, $a3, 4
+	lw $a0, ($a3)
+	beq $a0, 0, _printf_loop
+	li $v0, 11
 	syscall
-	b _printf_loop
+	b _printf_str_loop
 
 _printf_char:
 	subu $a2, $a2, 4
@@ -414,4 +420,3 @@ _malloc:
 	li $v0, 9
 	syscall
 	jr $ra
-

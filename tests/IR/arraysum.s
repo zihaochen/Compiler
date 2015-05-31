@@ -1,178 +1,142 @@
 .data
 	_printf_cnt: .space 4
-	_a: .space 4
-	_n: .space 4
-	ASU_1: .space 44
-	str_1: .space 28
+	str_1: .space 64
 .text
 main:
 	move $fp, $sp     # start using memory here
 	move $gp, $sp     # set global pointer (unused)
 	subu $sp, $sp, 4
-	la $t0, ASU_1
-	sw $t0, _a
 	li $t0, 0
 	sw $t0, _printf_cnt
-	li $t0, 10
-	sw $t0, _n
-	li $t0, 37
+	li $t0, 97
 	la $t1, str_1
 	sw $t0, 0($t1)
-	li $t0, 100
+	li $t0, 32
 	la $t1, str_1
 	sw $t0, 4($t1)
-	li $t0, 44
+	li $t0, 61
 	la $t1, str_1
 	sw $t0, 8($t1)
-	li $t0, 37
+	li $t0, 32
 	la $t1, str_1
 	sw $t0, 12($t1)
-	li $t0, 100
+	li $t0, 37
 	la $t1, str_1
 	sw $t0, 16($t1)
-	li $t0, 10
+	li $t0, 100
 	la $t1, str_1
 	sw $t0, 20($t1)
-	li $t0, 0
+	li $t0, 44
 	la $t1, str_1
 	sw $t0, 24($t1)
-	j _main
-_main:
-	sw $ra, ($sp)
-	la $t0, str_1
-	sw $t0, -56($sp)
+	li $t0, 32
+	la $t1, str_1
+	sw $t0, 28($t1)
+	li $t0, 98
+	la $t1, str_1
+	sw $t0, 32($t1)
+	li $t0, 32
+	la $t1, str_1
+	sw $t0, 36($t1)
+	li $t0, 61
+	la $t1, str_1
+	sw $t0, 40($t1)
+	li $t0, 32
+	la $t1, str_1
+	sw $t0, 44($t1)
+	li $t0, 37
+	la $t1, str_1
+	sw $t0, 48($t1)
+	li $t0, 100
+	la $t1, str_1
+	sw $t0, 52($t1)
+	li $t0, 10
+	la $t1, str_1
+	sw $t0, 56($t1)
 	li $t0, 0
+	la $t1, str_1
+	sw $t0, 60($t1)
+	j _main
+_read:
+	sw $ra, ($sp)
+	subu $sp, $sp, 40
+	jal _getchar
+	addi $sp, $sp, 40
+	sw $v0, -8($sp)
+	lw $ra, ($sp)
+	lw $t0, -8($sp)
 	sw $t0, -4($sp)
-	lw $t0, -4($sp)
-	sw $t0, -8($sp)
 L2:
-	lw $t2, _n
+	li $t2, 48
 	lw $t1, -4($sp)
 	slt $t0, $t1, $t2
-	sw $t0, -12($sp)
-	lw $t0, -12($sp)
+	sw $t0, -16($sp)
+	lw $t0, -16($sp)
+	bne $t0, $0, L3
+	b L4
+L4:
+	li $t2, 57
+	lw $t1, -4($sp)
+	sgt $t0, $t1, $t2
+	sw $t0, -20($sp)
+	lw $t0, -20($sp)
 	bne $t0, $0, L3
 	b L1
 L3:
-	li $t0, 0
-	sw $t0, -20($sp)
-	li $t2, 4
-	lw $t1, -4($sp)
-	mul $t0, $t1, $t2
-	sw $t0, -24($sp)
-	lw $t2, -24($sp)
-	lw $t1, -20($sp)
-	add $t0, $t1, $t2
-	sw $t0, -20($sp)
-	lw $t2, -20($sp)
-	lw $t1, _a
-	add $t0, $t1, $t2
-	sw $t0, -28($sp)
+	subu $sp, $sp, 40
+	jal _getchar
+	addi $sp, $sp, 40
+	sw $v0, -28($sp)
+	lw $ra, ($sp)
 	lw $t0, -28($sp)
-	lw $t1, -4($sp)
-	sw $t1, ($t0)
-	lw $t0, -28($sp)
-	lw $t1, ($t0)
-	sw $t1, -16($sp)
-	lw $t0, -28($sp)
-	lw $t1, ($t0)
-	sw $t1, -16($sp)
-	li $t2, 1
-	lw $t1, -4($sp)
-	add $t0, $t1, $t2
-	sw $t0, -44($sp)
-	lw $t0, -44($sp)
 	sw $t0, -4($sp)
 	lw $t0, -4($sp)
-	sw $t0, -40($sp)
-	li $t2, 1
-	lw $t1, -40($sp)
-	sub $t0, $t1, $t2
-	sw $t0, -36($sp)
+	sw $t0, -24($sp)
 	b L2
 L1:
-	li $t0, 0
+	li $t2, 48
+	lw $t1, -4($sp)
+	sub $t0, $t1, $t2
+	sw $t0, -36($sp)
+	lw $t0, -36($sp)
+	sw $t0, -12($sp)
+	lw $t0, -12($sp)
+	sw $t0, -32($sp)
+	lw $v0, -12($sp)
+	sw $v0, -12($sp)
+	jr $ra
+	jr $ra
+_main:
+	sw $ra, ($sp)
+	la $t0, str_1
+	sw $t0, -20($sp)
+	subu $sp, $sp, 40
+	jal _read
+	addi $sp, $sp, 40
+	sw $v0, -8($sp)
+	lw $ra, ($sp)
+	lw $t0, -8($sp)
 	sw $t0, -4($sp)
+	subu $sp, $sp, 40
+	jal _read
+	addi $sp, $sp, 40
+	sw $v0, -16($sp)
+	lw $ra, ($sp)
+	lw $t0, -16($sp)
+	sw $t0, -12($sp)
+	lw $t0, -20($sp)
+	sw $t0, -28($sp)
 	lw $t0, -4($sp)
-	sw $t0, -48($sp)
-L5:
-	lw $t2, _n
-	lw $t1, -4($sp)
-	slt $t0, $t1, $t2
-	sw $t0, -52($sp)
-	lw $t0, -52($sp)
-	bne $t0, $0, L6
-	b L4
-L6:
-	li $t0, 0
-	sw $t0, -60($sp)
-	li $t2, 4
-	lw $t1, -4($sp)
-	mul $t0, $t1, $t2
-	sw $t0, -64($sp)
-	lw $t2, -64($sp)
-	lw $t1, -60($sp)
-	add $t0, $t1, $t2
-	sw $t0, -60($sp)
-	lw $t2, -60($sp)
-	lw $t1, _a
-	add $t0, $t1, $t2
-	sw $t0, -68($sp)
-	lw $t0, -68($sp)
-	lw $t1, ($t0)
-	sw $t1, -72($sp)
-	lw $t2, -4($sp)
-	lw $t1, _n
-	sub $t0, $t1, $t2
-	sw $t0, -76($sp)
-	li $t2, 1
-	lw $t1, -76($sp)
-	sub $t0, $t1, $t2
-	sw $t0, -80($sp)
-	li $t0, 0
-	sw $t0, -84($sp)
-	li $t2, 4
-	lw $t1, -80($sp)
-	mul $t0, $t1, $t2
-	sw $t0, -88($sp)
-	lw $t2, -88($sp)
-	lw $t1, -84($sp)
-	add $t0, $t1, $t2
-	sw $t0, -84($sp)
-	lw $t2, -84($sp)
-	lw $t1, _a
-	add $t0, $t1, $t2
-	sw $t0, -92($sp)
-	lw $t0, -92($sp)
-	lw $t1, ($t0)
-	sw $t1, -96($sp)
-	lw $t0, -56($sp)
-	sw $t0, -116($sp)
-	lw $t0, -72($sp)
-	sw $t0, -120($sp)
-	lw $t0, -96($sp)
-	sw $t0, -124($sp)
+	sw $t0, -32($sp)
+	lw $t0, -12($sp)
+	sw $t0, -36($sp)
 	li $t0, 3
 	sw $t0, _printf_cnt
-	subu $sp, $sp, 128
+	subu $sp, $sp, 40
 	jal _printf
-	addi $sp, $sp, 128
-	sw $v0, -100($sp)
+	addi $sp, $sp, 40
+	sw $v0, -24($sp)
 	lw $ra, ($sp)
-	li $t2, 1
-	lw $t1, -4($sp)
-	add $t0, $t1, $t2
-	sw $t0, -112($sp)
-	lw $t0, -112($sp)
-	sw $t0, -4($sp)
-	lw $t0, -4($sp)
-	sw $t0, -108($sp)
-	li $t2, 1
-	lw $t1, -108($sp)
-	sub $t0, $t1, $t2
-	sw $t0, -104($sp)
-	b L5
-L4:
 	jr $ra
 
 _printf:
@@ -181,7 +145,7 @@ _printf:
 	add $t0, $t0, $sp
 	lw $a1, ($t0)
 	move $a2, $t0
-		
+	
 _printf_loop:
 	lb $a0, 0($a1)
 	beq $a0, 0, _printf_end
@@ -209,10 +173,16 @@ _printf_int:
 
 _printf_str:
 	subu $a2, $a2, 4
-	lw $a0, 0($a2)
-	li $v0, 4
+	lw $a3, 0($a2)
+	b _printf_str_loop
+
+_printf_str_loop:
+	addu $a3, $a3, 4
+	lw $a0, ($a3)
+	beq $a0, 0, _printf_loop
+	li $v0, 11
 	syscall
-	b _printf_loop
+	b _printf_str_loop
 
 _printf_char:
 	subu $a2, $a2, 4
@@ -283,4 +253,3 @@ _malloc:
 	li $v0, 9
 	syscall
 	jr $ra
-

@@ -15,7 +15,7 @@ _iter = Temp1
 Label :2	If Not Equal to Zero _iter Goto Label :3	
 Goto label:1
 Label :3	BasicParam 12
-Temp4 = call _malloc , 1
+Temp4 = call _malloc_struct , 1
 _tmp = Temp4
 Temp5 = *_iter, 12
 Temp6 = Temp5[0] , 4
@@ -215,7 +215,7 @@ _u = Temp121
 Temp122 = call _get_int , 0
 _v = Temp122
 BasicParam 12
-Temp123 = call _malloc , 1
+Temp123 = call _malloc_struct , 1
 _tmp = Temp123
 Temp125 = *_tmp, 12
 Temp125[0] = _v , 4

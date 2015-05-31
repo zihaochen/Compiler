@@ -1,13 +1,17 @@
 #include<stdio.h>
 #include <stdlib.h>
 
-int a[10];
-int n = 10;
+int read() {
+	char ch = getchar();
+	int x;
+	while (ch < '0' || ch > '9')
+		ch = getchar();
+	x = ch - '0';
+	return x;
+}
 
 int main() {
-	int i;
-	for (i = 0; i < n; i++)
-		a[i] = i;
-	for (i = 0; i < n; i++) 
-		printf("%d,%d\n", a[i], a[n - i - 1]);
+	int a = read();
+	int b = read();
+	printf("a = %d, b = %d\n", a, b);
 }
