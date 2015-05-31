@@ -229,8 +229,8 @@
       <file leaf-file-name="PeepHole.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/compiler/Optimize/PeepHole.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36661467">
-              <caret line="97" column="23" selection-start-line="97" selection-start-column="23" selection-end-line="97" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.56318253">
+              <caret line="107" column="17" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -989,7 +989,7 @@
       <workItem from="1433085984220" duration="15414000" />
       <workItem from="1433103917571" duration="3396000" />
       <workItem from="1433108030026" duration="2284000" />
-      <workItem from="1433110835231" duration="1211000" />
+      <workItem from="1433110835231" duration="1633000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, most files finished, but not compiled yet.">
       <created>1429098593928</created>
@@ -1129,11 +1129,17 @@
       <option name="project" value="LOCAL" />
       <updated>1433111945938</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="fix a bug, add peephole optimization">
+      <created>1433112057149</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1433112057149</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="674483000" />
+    <option name="totallyTimeSpent" value="674905000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1805,8 +1811,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/Optimize/PeepHole.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36661467">
-          <caret line="97" column="23" selection-start-line="97" selection-start-column="23" selection-end-line="97" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.56318253">
+          <caret line="107" column="17" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

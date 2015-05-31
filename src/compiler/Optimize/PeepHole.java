@@ -98,11 +98,12 @@ public class PeepHole {
                 if (i < function.body.size() - 1)
                     next = function.body.get(i + 1);
                 else next = null;
-                if (quadruple instanceof Assign &&
+                if (quadruple instanceof Call &&
                         next instanceof Assign &&
-                        ((Assign) quadruple).dest.equals(((Assign) next).src) &&
-                        hashMap.get(((Assign) quadruple).dest) == 2) {
-                    tmpList.add(new Assign(((Assign) next).dest, ((Assign) quadruple).src));
+                        ((Call) quadruple).dest.equals(((Assign) next).src) &&
+                        hashMap.get(((Assign) next).src) == 2) {
+                    ((Call) quadruple).dest = ((Assign) next).dest;
+                    tmpList.add(quadruple);
                     i += 1;
                 }
                 else
