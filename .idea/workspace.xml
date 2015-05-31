@@ -5,61 +5,303 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef921a38-bb99-415c-8ed8-767f2b738347" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/Bulgarian_solitaire-5110379024-wuhang.out" afterPath="$PROJECT_DIR$/tests/IR/Bulgarian_solitaire-5110379024-wuhang.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler/compiler/main/Main.class" afterPath="$PROJECT_DIR$/out/production/Compiler/compiler/main/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/basicopt1-hetianxing.out" afterPath="$PROJECT_DIR$/tests/IR/basicopt1-hetianxing.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/hpplus-5100309153-yanghuan.out" afterPath="$PROJECT_DIR$/tests/IR/hpplus-5100309153-yanghuan.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/magic-5100309153-yanghuan.out" afterPath="$PROJECT_DIR$/tests/IR/magic-5100309153-yanghuan.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/pi-5090379042-jiaxiao.out" afterPath="$PROJECT_DIR$/tests/IR/pi-5090379042-jiaxiao.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/qsort-5100379110-daibo.out" afterPath="$PROJECT_DIR$/tests/IR/qsort-5100379110-daibo.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/queens-5100379110-daibo.out" afterPath="$PROJECT_DIR$/tests/IR/queens-5100379110-daibo.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/struct5-5110379024-wuhang.exe" afterPath="$PROJECT_DIR$/tests/IR/struct5-5110379024-wuhang.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/struct5-5110379024-wuhang.out" afterPath="$PROJECT_DIR$/tests/IR/struct5-5110379024-wuhang.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/superloop-5090379042-jiaxiao.out" afterPath="$PROJECT_DIR$/tests/IR/superloop-5090379042-jiaxiao.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/varptr-5100309127-hetianxing.out" afterPath="$PROJECT_DIR$/tests/IR/varptr-5100309127-hetianxing.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/Bulgarian_solitaire-5110379024-wuhang.s" afterPath="$PROJECT_DIR$/tests/IR/Bulgarian_solitaire-5110379024-wuhang.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/IR/Translator.java" afterPath="$PROJECT_DIR$/src/compiler/IR/Translator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/basicopt1-hetianxing.c" afterPath="$PROJECT_DIR$/tests/IR/basicopt1-hetianxing.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/basicopt1-hetianxing.s" afterPath="$PROJECT_DIR$/tests/IR/basicopt1-hetianxing.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/board-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/board-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/expr-5110309085-jintianxing.out" afterPath="$PROJECT_DIR$/tests/IR/expr-5110309085-jintianxing.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/expr-5110309085-jintianxing.s" afterPath="$PROJECT_DIR$/tests/IR/expr-5110309085-jintianxing.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/factor-5090379042-jiaxiao.out" afterPath="$PROJECT_DIR$/tests/IR/factor-5090379042-jiaxiao.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/factor-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/tests/IR/factor-5090379042-jiaxiao.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/gcd-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/tests/IR/gcd-5090379042-jiaxiao.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/CodeGen/genTester.java" afterPath="$PROJECT_DIR$/src/compiler/CodeGen/genTester.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/hanoi-5100379110-daibo.out" afterPath="$PROJECT_DIR$/tests/IR/hanoi-5100379110-daibo.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/hanoi-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/hanoi-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/hanoi2-5100309153-yanghuan.out" afterPath="$PROJECT_DIR$/tests/IR/hanoi2-5100309153-yanghuan.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/hanoi2-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/hanoi2-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/heapsort-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/heapsort-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/horse-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/horse-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/horse2-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/horse2-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/horse3-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/horse3-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/hpplus-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/hpplus-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/inlinecheck-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/inlinecheck-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/magic-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/magic-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/manyarguments-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/manyarguments-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/manymanyarguments-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/manymanyarguments-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/num1-5110379024-wuhang.out" afterPath="$PROJECT_DIR$/tests/IR/num1-5110379024-wuhang.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/num1-5110379024-wuhang.s" afterPath="$PROJECT_DIR$/tests/IR/num1-5110379024-wuhang.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/pi-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/tests/IR/pi-5090379042-jiaxiao.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/plus-5100309153-yanghuan.out" afterPath="$PROJECT_DIR$/tests/IR/plus-5100309153-yanghuan.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/plus-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/plus-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/prime-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/prime-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/prime2-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/prime2-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/qsort-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/qsort-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/queens-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/queens-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/self-5090379042-jiaxiao.out" afterPath="$PROJECT_DIR$/tests/IR/self-5090379042-jiaxiao.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/self-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/tests/IR/self-5090379042-jiaxiao.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/selfref-5090379042-jiaxiao.out" afterPath="$PROJECT_DIR$/tests/IR/selfref-5090379042-jiaxiao.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/selfref-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/tests/IR/selfref-5090379042-jiaxiao.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/spill-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/spill-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/spill2-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/spill2-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/struct5-5110379024-wuhang.s" afterPath="$PROJECT_DIR$/tests/IR/struct5-5110379024-wuhang.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/superloop-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/tests/IR/superloop-5090379042-jiaxiao.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/tak-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/tests/IR/tak-5090379042-jiaxiao.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/varptr-5100309127-hetianxing.s" afterPath="$PROJECT_DIR$/tests/IR/varptr-5100309127-hetianxing.s" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/AST.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/ASTTester.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/visitor/ASTprinter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Address/Address.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Expression/AddressOf.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/tables/AddressTable.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Expression/ArithmeticExpr.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Expression/ArithmeticOp.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Expression/ArithmeticOpToString.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/ArrayAccess.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Expression/ArrayRead.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/ArrayType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Expression/ArrayWrite.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Expression/Assign.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Function/BasicParam.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/BinaryExpr.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/BinaryOp.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/BinaryOpToString.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/BreakStmt.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/CodeGen/BrutalGen/BrutalGen$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/CodeGen/BrutalGen/BrutalGen.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/syntactic/CUP$parser$actions.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Function/Call.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/CastExpr.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/CharConst.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/CharType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/CompoundStmt.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Address/Const.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/ContinueStmt.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/Decl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/DeclList.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/EmptyExpr.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/Expr.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/ExprList.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/ForLoop.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Function/Function.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/FunctionCall.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/FunctionDecl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/FunctionDef.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/FunctionType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/FunctionTypeDig.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/CodeGen/Gen.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/STL/Getchar.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Control/Goto.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/House.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Root/IR.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/IRTester.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/Identifier.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Control/IfEZGoto.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Control/IfFalseGoto.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Control/IfNEZGoto.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/IfStmt.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Control/IfTrueGoto.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/InitList.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/InitValue.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/Initializer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/IntConst.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/IntType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Address/IntegerConst.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/ItrStmt.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/PrettyPrinter/JFlex.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/syntactic/JFlex.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Expression/Label.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/main/Main.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/STL/Malloc.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/MarkerType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/tables/MemberTable.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Function/MemoryParam.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Expression/MemoryRead.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Expression/MemoryWrite.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/main/Midterm.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Address/Name.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Function/Param.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/syntactic/ParserTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/PointerAccess.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/PointerType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/STL/Printf.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Expression/Quadruple.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/RecordAccess.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/RecordType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Expression/RelationalOp.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Expression/RelationalOpToString.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Function/Return.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/ReturnStmt.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/CodeGen/STL.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/tables/SUTable.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/SelfDecrement.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/SelfIncrement.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/semantic/SemanticCheck$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/semantic/SemanticCheck.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/SizeofExpr.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/Stmt.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/StmtList.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Address/StringAddressConst.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Expression/StringAssign.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/StringConst.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/StructType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/PrettyPrinter/Symbol.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/Symbol.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Address/Temp.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Translator$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Translator$Pair.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Translator$StringPair.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Translator.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/Type.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/TypeDecl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/TypeDig.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/UnaryExpr.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/UnaryOp.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/UnaryOpToString.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/UnionType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/VarDecl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/tables/VarTable.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/IR/Nodes/Function/Variable.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/visitor/Visitor.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/VoidType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/ast/nodes/WhileLoop.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/syntactic/Yylex.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/assem.s" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/basicopt1-5100309127-hetianxing.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/CodeGen/genTester.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/syntactic/java-cup-11a-runtime.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/syntactic/java-cup-11a.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/PrettyPrinter/jflex-1.6.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/syntactic/jflex-1.6.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/syntactic/parser.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/PrettyPrinter/prettyLexer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/PrettyPrinter/prettyPrinter$pair.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/PrettyPrinter/prettyPrinter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/PrettyPrinter/prettySym.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/semantic/semanticTester.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/syntactic/sym.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/Bulgarian_solitaire-5110379024-wuhang.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Bulgarian_solitaire-5110379024-wuhang.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/syntactic/Parser.cup" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/basicopt1-5100309127-hetianxing.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/basicopt1-5100309127-hetianxing.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/board-5100379110-daibo.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/board-5100379110-daibo.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-InputSet/board-5100379110-daibo.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-AnswerSet/bubble.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/bubble.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/build.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/build.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-AnswerSet/cmpstr.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/cmpstr.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-AnswerSet/cube.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/cube.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-InputSet/cube.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-AnswerSet/dc3.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/dc3.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-InputSet/dc3.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-AnswerSet/dedup.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/dedup.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-AnswerSet/euler.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/euler.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-InputSet/euler.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/expr-5110309085-jintianxing.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/expr-5110309085-jintianxing.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-AnswerSet/extkmp.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/extkmp.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-InputSet/extkmp.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/factor-5090379042-jiaxiao.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/factor-5090379042-jiaxiao.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-InputSet/factor-5090379042-jiaxiao.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/finaltest_offline_kai.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/finaltest_offline_kai.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-AnswerSet/fishtank.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/fishtank.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-InputSet/fishtank.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/gcd-5090379042-jiaxiao.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/gcd-5090379042-jiaxiao.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-InputSet/gcd-5090379042-jiaxiao.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/hanoi-5100379110-daibo.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/hanoi-5100379110-daibo.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-InputSet/hanoi-5100379110-daibo.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/hanoi2-5100309153-yanghuan.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/hanoi2-5100309153-yanghuan.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-InputSet/hanoi2-5100309153-yanghuan.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/hashmap-5100309127-hetianxing.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/hashmap-5100309127-hetianxing.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/heapsort-5100379110-daibo.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/heapsort-5100379110-daibo.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-InputSet/heapsort-5100379110-daibo.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/hello-5090379042-jiaxiao.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/hello-5090379042-jiaxiao.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-AnswerSet/hk.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/hk.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-InputSet/hk.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/horse-5100309153-yanghuan.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/horse-5100309153-yanghuan.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-InputSet/horse-5100309153-yanghuan.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/horse2-5100309153-yanghuan.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/horse2-5100309153-yanghuan.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-InputSet/horse2-5100309153-yanghuan.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/horse3-5100309153-yanghuan.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/horse3-5100309153-yanghuan.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-InputSet/horse3-5100309153-yanghuan.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/hpplus-5100309153-yanghuan.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/hpplus-5100309153-yanghuan.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-AnswerSet/hungary.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/hungary.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-InputSet/hungary.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/inlinecheck-5100309153-yanghuan.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/inlinecheck-5100309153-yanghuan.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-AnswerSet/iterative.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/iterative.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-InputSet/iterative.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-AnswerSet/joseph.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/joseph.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-InputSet/joseph.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-AnswerSet/kmp.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/kmp.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-AnswerSet/lct.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/lct.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-AnswerSet/linenumber.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/linenumber.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-InputSet/linenumber.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/magic-5100309153-yanghuan.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/magic-5100309153-yanghuan.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/production/Compiler/compiler/syntactic/makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-AnswerSet/manacher.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/manacher.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-InputSet/manacher.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/manyarguments-5100379110-daibo.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/manyarguments-5100379110-daibo.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/manymanyarguments-5100379110-daibo.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/manymanyarguments-5100379110-daibo.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/maxflow-5100379110-daibo.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/maxflow-5100379110-daibo.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-AnswerSet/minrep.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/minrep.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-InputSet/minrep.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/multiarray-5100309153-yanghuan.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/multiarray-5100309153-yanghuan.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/nqueencon-5100379110-daibo.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/nqueencon-5100379110-daibo.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-InputSet/nqueencon-5100379110-daibo.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-AnswerSet/palautm.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/palautm.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-InputSet/palautm.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/pi-5090379042-jiaxiao.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/pi-5090379042-jiaxiao.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/plus-5100309153-yanghuan.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/plus-5100309153-yanghuan.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-InputSet/plus-5100309153-yanghuan.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/prime-5100309153-yanghuan.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/prime-5100309153-yanghuan.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-InputSet/prime-5100309153-yanghuan.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/prime2-5100309153-yanghuan.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/prime2-5100309153-yanghuan.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-InputSet/prime2-5100309153-yanghuan.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/qsort-5100379110-daibo.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/qsort-5100379110-daibo.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/queenbitwise-5110379024-wuhang.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/queenbitwise-5110379024-wuhang.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-InputSet/queenbitwise-5110379024-wuhang.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/queens-5100379110-daibo.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/queens-5100379110-daibo.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/self-5090379042-jiaxiao.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/self-5090379042-jiaxiao.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/selfref-5090379042-jiaxiao.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/selfref-5090379042-jiaxiao.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-AnswerSet/shortcircuit.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/shortcircuit.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-InputSet/shortcircuit.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/spill-5100379110-daibo.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/spill-5100379110-daibo.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/spill2-5100379110-daibo.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/spill2-5100379110-daibo.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-AnswerSet/splittree.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/splittree.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-InputSet/splittree.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/struct5-5110379024-wuhang.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/struct5-5110379024-wuhang.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/struct6-5100309127-hetianxing.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/struct6-5100309127-hetianxing.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-InputSet/struct6-5100309127-hetianxing.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-AnswerSet/stvsun.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/stvsun.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-InputSet/stvsun.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/superloop-5090379042-jiaxiao.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/superloop-5090379042-jiaxiao.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-InputSet/superloop-5090379042-jiaxiao.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/tak-5090379042-jiaxiao.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/tak-5090379042-jiaxiao.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-InputSet/tak-5090379042-jiaxiao.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/treap-5110309085-jintianxing.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/treap-5110309085-jintianxing.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-InputSet/treap-5110309085-jintianxing.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/twinprime-5090379042-jiaxiao.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/twinprime-5090379042-jiaxiao.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-AnswerSet/varptr-5100309127-hetianxing.ans" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/varptr-5100309127-hetianxing.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/Inherited/Inherited-InputSet/varptr-5100309127-hetianxing.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/zihaochen_report.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.properties" afterPath="$PROJECT_DIR$/build.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Compiler.iws" />
@@ -219,17 +461,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Translator.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Translator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/compiler/IR/Translator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.70183486">
+            <state vertical-scroll-proportion="0.0">
               <caret line="933" column="0" selection-start-line="933" selection-start-column="0" selection-end-line="933" selection-end-column="0" />
               <folding>
                 <element signature="docComment;class#Translator#0" expanded="false" />
@@ -285,6 +525,18 @@
                 <element signature="method#newStruct#0;class#Translator#0" expanded="false" />
                 <element signature="method#print#0;class#Translator#0" expanded="false" />
                 <element signature="method#merger#0;class#Translator#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/compiler/main/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2698908">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -394,10 +646,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="784" />
+    <option name="x" value="65" />
+    <option name="y" value="24" />
+    <option name="width" value="1301" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -422,9 +674,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -507,6 +758,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -958,6 +1210,7 @@
       <workItem from="1432683707947" duration="31880000" />
       <workItem from="1432779116963" duration="21047000" />
       <workItem from="1432854358619" duration="101872000" />
+      <workItem from="1433065915301" duration="1354000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, most files finished, but not compiled yet.">
       <created>1429098593928</created>
@@ -1071,7 +1324,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="642566000" />
+    <option name="totallyTimeSpent" value="643920000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1083,7 +1336,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1094,10 +1347,10 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32771823" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.287902" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2876304" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32618684" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2344932" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23443505" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1145,6 +1398,14 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/compiler/ast/nodes/InitValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Address/StringAddressConst.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1118421">
@@ -1156,9 +1417,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1216,13 +1474,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_40/src.zip!/java/util/Formatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33174226">
-          <caret line="2518" column="0" selection-start-line="2518" selection-start-column="0" selection-end-line="2518" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Function/Variable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1259,7 +1510,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1320,14 +1570,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/syntactic/Parser.cup">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5151515">
           <caret line="219" column="56" selection-start-line="219" selection-start-column="56" selection-end-line="219" selection-end-column="56" />
-          <folding />
         </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/tables/VarTable.java">
@@ -1390,7 +1639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15454546">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1406,9 +1654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1416,7 +1661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1424,7 +1668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1432,7 +1675,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19070514">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1440,7 +1682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21794872">
           <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1448,9 +1689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38141027">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#346#347#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1482,7 +1720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.64908254">
           <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1498,7 +1735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.100961536">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1566,17 +1802,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3469388">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29166666">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1584,7 +1809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.4791667">
           <caret line="91" column="26" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1592,9 +1816,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1661,7 +1883,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/IR/Translator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70183486">
+        <state vertical-scroll-proportion="0.0">
           <caret line="933" column="0" selection-start-line="933" selection-start-column="0" selection-end-line="933" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#Translator#0" expanded="false" />
@@ -1717,6 +1939,16 @@
             <element signature="method#newStruct#0;class#Translator#0" expanded="false" />
             <element signature="method#print#0;class#Translator#0" expanded="false" />
             <element signature="method#merger#0;class#Translator#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2698908">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
