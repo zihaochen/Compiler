@@ -20,6 +20,5 @@ public class Return extends Quadruple {
     public void print(OutputStream out) throws IOException {
         out.write("Return ".getBytes());
         if (value != null) value.print(out);
-        out.write("\n".getBytes());
     }
 }

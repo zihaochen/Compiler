@@ -1,39 +1,50 @@
-Temp1401 = &"%d"
-BasicParam Temp1401
+_start: 
+_printf_cnt = 0
+
+_malloc: 
+
+_getchar: 
+
+_printf: 
+
+_inline1: 
+BasicParam Temp1
 BasicParam A
-call printf , 2
+_printf_cnt = 2
+Temp2 = call _printf , 2
 Return BasicParam 1
 
+_inline2: 
 BasicParam A
-call inline1 , 1
+Temp3 = call _inline1 , 1
 a = 1
-Temp1404 = a
+Temp4 = a
 Return BasicParam 1
 
-a = 0
-Temp1405 = a
-Temp1406 = &"%d"
-BasicParam Temp1406
-BasicParam a
-call printf , 2
+_main: 
+_a = 0
+Temp5 = _a
+BasicParam Temp6
+BasicParam _a
+_printf_cnt = 2
+Temp7 = call _printf , 2
 BasicParam 9
-BasicParam a
-call inline2 , 2
-Temp1409 = &"%d"
-BasicParam Temp1409
-BasicParam a
-call printf , 2
-a = 2
-Temp1411 = a
-BasicParam a
-call inline1 , 1
-Temp1413 = &"%d"
-BasicParam Temp1413
-BasicParam a
-call printf , 2
-Temp1415 = &"
-"
-BasicParam Temp1415
-call printf , 1
+BasicParam _a
+Temp8 = call _inline2 , 2
+BasicParam Temp9
+BasicParam _a
+_printf_cnt = 2
+Temp10 = call _printf , 2
+_a = 2
+Temp11 = _a
+BasicParam _a
+Temp12 = call _inline1 , 1
+BasicParam Temp13
+BasicParam _a
+_printf_cnt = 2
+Temp14 = call _printf , 2
+BasicParam Temp15
+_printf_cnt = 1
+Temp16 = call _printf , 1
 Return BasicParam 0
 

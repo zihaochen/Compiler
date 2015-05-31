@@ -1,0 +1,121 @@
+<AST> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: a> 
+				<VarDecl> 
+					<IntType> 
+					<Id: a1> 
+				<VarDecl> 
+					<IntType> 
+					<Id: a2> 
+				<VarDecl> 
+					<IntType> 
+					<Id: a3> 
+				<VarDecl> 
+					<IntType> 
+					<Id: a4> 
+				<VarDecl> 
+					<IntType> 
+					<Id: a5> 
+				<VarDecl> 
+					<IntType> 
+					<Id: a6> 
+				<VarDecl> 
+					<IntType> 
+					<Id: a7> 
+				<VarDecl> 
+					<IntType> 
+					<Id: a8> 
+				<VarDecl> 
+					<IntType> 
+					<Id: a9> 
+				<VarDecl> 
+					<IntType> 
+					<Id: a10> 
+				<VarDecl> 
+					<IntType> 
+					<Id: a11> 
+				<VarDecl> 
+					<IntType> 
+					<Id: a12> 
+				<VarDecl> 
+					<IntType> 
+					<Id: a13> 
+				<VarDecl> 
+					<IntType> 
+					<Id: a14> 
+				<VarDecl> 
+					<IntType> 
+					<Id: a15> 
+					<ReturnStmt> 
+						<BinaryExpr> 
+							<ADD> 
+							<BinaryExpr> 
+								<ADD> 
+								<BinaryExpr> 
+									<ADD> 
+									<BinaryExpr> 
+										<ADD> 
+										<BinaryExpr> 
+											<ADD> 
+											<BinaryExpr> 
+												<ADD> 
+												<BinaryExpr> 
+													<ADD> 
+													<BinaryExpr> 
+														<ADD> 
+														<BinaryExpr> 
+															<ADD> 
+															<BinaryExpr> 
+																<ADD> 
+																<BinaryExpr> 
+																	<ADD> 
+																	<BinaryExpr> 
+																		<ADD> 
+																		<BinaryExpr> 
+																			<ADD> 
+																			<BinaryExpr> 
+																				<ADD> 
+																				<Id: a1> 
+																				<Id: a2> 
+																			<Id: a3> 
+																		<Id: a4> 
+																	<Id: a5> 
+																<Id: a6> 
+															<Id: a7> 
+														<Id: a8> 
+													<Id: a9> 
+												<Id: a10> 
+											<Id: a11> 
+										<Id: a12> 
+									<Id: a13> 
+								<Id: a14> 
+							<Id: a15> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: main> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: %d
+> 
+							<FunctionCall> 
+								<Id: a> 
+								<ExprList> 
+									<IntConst: 1> 
+									<IntConst: 2> 
+									<IntConst: 3> 
+									<IntConst: 4> 
+									<IntConst: 5> 
+									<IntConst: 6> 
+									<IntConst: 7> 
+									<IntConst: 8> 
+									<IntConst: 9> 
+									<IntConst: 10> 
+									<IntConst: 11> 
+									<IntConst: 12> 
+									<IntConst: 13> 
+									<IntConst: 14> 
+									<IntConst: 15> 
+					<ReturnStmt> 
+						<IntConst: 0> 

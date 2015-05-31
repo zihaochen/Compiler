@@ -8,14 +8,14 @@ import java.io.OutputStream;
 
 public class AddressOf extends Quadruple {
     public Address dest;
-    public Address src;
+    public Name src;
 
     public AddressOf() {
         dest = null;
         src = null;
     }
 
-    public AddressOf(Address dest, Address src) {
+    public AddressOf(Address dest, Name src) {
         this.dest = dest;
         this.src = src;
     }

@@ -1,28 +1,130 @@
-d = 3
-Temp4732 = &d
-a[0] = Temp4732 , 4
-Temp4734 = a[4] , 80
-*Temp4734 = 2 , 4
-b = a
-Temp4737 = b
-c = Temp4737
-Temp4736 = c
-Temp4739 = c[4] , 80
-*Temp4739 = 3 , 4
-Temp4741 = &"%d %d
-"
-Temp4742 = c[4] , 80
-Temp4743 = *Temp4742, 4
-Temp4744 = c[0] , 4
-Temp4745 = *Temp4744, 4
-BasicParam Temp4741
-BasicParam Temp4743
-BasicParam Temp4745
-call printf , 3
-Temp4747 = &"%d
-"
-Temp4748 = a[4] , 80
-Temp4749 = *Temp4748, 4
-BasicParam Temp4747
-BasicParam Temp4749
-call printf , 2
+_start: 
+_printf_cnt = 0
+
+_malloc: 
+
+_getchar: 
+
+_printf: 
+
+_main: 
+_d = 3
+_a[4] = _struct_member_1 , 4
+_b[4] = _struct_member_2 , 4
+_c[4] = _struct_member_3 , 4
+Temp2 = &_d
+_a[0] = Temp2 , 4
+Temp4 = _a[4] , 80
+*Temp4 = 2 , 4
+Temp3 = *Temp4, 4
+Temp3 = *Temp4, 4
+Temp8 = _a[4] , 4
+Temp9 = _b[4] , 4
+Temp10 = Temp8[0] , 4
+Temp9[0] = Temp10 , 4
+Temp11 = Temp8[4] , 4
+Temp9[4] = Temp11 , 4
+Temp12 = Temp8[8] , 4
+Temp9[8] = Temp12 , 4
+Temp13 = Temp8[12] , 4
+Temp9[12] = Temp13 , 4
+Temp14 = Temp8[16] , 4
+Temp9[16] = Temp14 , 4
+Temp15 = Temp8[20] , 4
+Temp9[20] = Temp15 , 4
+Temp16 = Temp8[24] , 4
+Temp9[24] = Temp16 , 4
+Temp17 = Temp8[28] , 4
+Temp9[28] = Temp17 , 4
+Temp18 = Temp8[32] , 4
+Temp9[32] = Temp18 , 4
+Temp19 = Temp8[36] , 4
+Temp9[36] = Temp19 , 4
+Temp20 = Temp8[40] , 4
+Temp9[40] = Temp20 , 4
+Temp21 = Temp8[44] , 4
+Temp9[44] = Temp21 , 4
+Temp22 = Temp8[48] , 4
+Temp9[48] = Temp22 , 4
+Temp23 = Temp8[52] , 4
+Temp9[52] = Temp23 , 4
+Temp24 = Temp8[56] , 4
+Temp9[56] = Temp24 , 4
+Temp25 = Temp8[60] , 4
+Temp9[60] = Temp25 , 4
+Temp26 = Temp8[64] , 4
+Temp9[64] = Temp26 , 4
+Temp27 = Temp8[68] , 4
+Temp9[68] = Temp27 , 4
+Temp28 = Temp8[72] , 4
+Temp9[72] = Temp28 , 4
+Temp29 = Temp8[76] , 4
+Temp9[76] = Temp29 , 4
+Temp30 = _a[0] , 4
+_b[0] = Temp30 , 4
+Temp7 = _b
+Temp31 = Temp7[4] , 4
+Temp32 = _c[4] , 4
+Temp33 = Temp31[0] , 4
+Temp32[0] = Temp33 , 4
+Temp34 = Temp31[4] , 4
+Temp32[4] = Temp34 , 4
+Temp35 = Temp31[8] , 4
+Temp32[8] = Temp35 , 4
+Temp36 = Temp31[12] , 4
+Temp32[12] = Temp36 , 4
+Temp37 = Temp31[16] , 4
+Temp32[16] = Temp37 , 4
+Temp38 = Temp31[20] , 4
+Temp32[20] = Temp38 , 4
+Temp39 = Temp31[24] , 4
+Temp32[24] = Temp39 , 4
+Temp40 = Temp31[28] , 4
+Temp32[28] = Temp40 , 4
+Temp41 = Temp31[32] , 4
+Temp32[32] = Temp41 , 4
+Temp42 = Temp31[36] , 4
+Temp32[36] = Temp42 , 4
+Temp43 = Temp31[40] , 4
+Temp32[40] = Temp43 , 4
+Temp44 = Temp31[44] , 4
+Temp32[44] = Temp44 , 4
+Temp45 = Temp31[48] , 4
+Temp32[48] = Temp45 , 4
+Temp46 = Temp31[52] , 4
+Temp32[52] = Temp46 , 4
+Temp47 = Temp31[56] , 4
+Temp32[56] = Temp47 , 4
+Temp48 = Temp31[60] , 4
+Temp32[60] = Temp48 , 4
+Temp49 = Temp31[64] , 4
+Temp32[64] = Temp49 , 4
+Temp50 = Temp31[68] , 4
+Temp32[68] = Temp50 , 4
+Temp51 = Temp31[72] , 4
+Temp32[72] = Temp51 , 4
+Temp52 = Temp31[76] , 4
+Temp32[76] = Temp52 , 4
+Temp53 = Temp7[0] , 4
+_c[0] = Temp53 , 4
+Temp6 = _c
+Temp55 = _c[4] , 80
+*Temp55 = 3 , 4
+Temp54 = *Temp55, 4
+Temp54 = *Temp55, 4
+Temp58 = _c[4] , 80
+Temp59 = *Temp58, 4
+Temp60 = _c[0] , 4
+Temp61 = *Temp60, 4
+BasicParam Temp57
+BasicParam Temp59
+BasicParam Temp61
+_printf_cnt = 3
+Temp62 = call _printf , 3
+Temp64 = _a[4] , 80
+Temp65 = *Temp64, 4
+BasicParam Temp63
+BasicParam Temp65
+_printf_cnt = 2
+Temp66 = call _printf , 2
+

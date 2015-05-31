@@ -1,73 +1,91 @@
-N = 15000
-resultCount = 0
-i = 1
-Temp4943 = i
-Label :618	Temp4944 = i LE N
-If Not Equal to Zero Temp4944 Goto Label :619	
-Goto label:617
-Label :619	Temp4946 = 0
-Temp4947 = i MUL 1
-Temp4946 = Temp4946 ADD Temp4947
-Temp4948 = b ADD Temp4946
-*Temp4948 = 1 , 1
-Temp4950 = i
-i = i ADD 1
-Goto label:618
-Label :617	i = 2
-Temp4951 = i
-Label :621	Temp4952 = i LE N
-If Not Equal to Zero Temp4952 Goto Label :622	
-Goto label:620
-Label :622	Temp4953 = 0
-Temp4954 = i MUL 1
-Temp4953 = Temp4953 ADD Temp4954
-Temp4955 = b ADD Temp4953
-Temp4956 = *Temp4955, 1
-If Not Equal to Zero Temp4956 Goto Label :624	
-Goto label:625
-Label :624	count = 2
-Temp4957 = i GT 3
-If Not Equal to Zero Temp4957 Goto Label :627	
-Goto label:628
-Label :629	Temp4958 = i SUB 2
-Temp4959 = 0
-Temp4960 = Temp4958 MUL 1
-Temp4959 = Temp4959 ADD Temp4960
-Temp4961 = b ADD Temp4959
-Temp4962 = *Temp4961, 1
-If Not Equal to Zero Temp4962 Goto Label :627	
-Goto label:628
-Label :627	Temp4963 = resultCount
-resultCount = resultCount ADD 1
-Temp4964 = &"%d %d
-"
-Temp4965 = i SUB 2
-BasicParam Temp4964
-BasicParam Temp4965
-BasicParam i
-call printf , 3
-Goto label:626
-Label :628	Label :626	Label :631	Temp4967 = i MUL count
-Temp4968 = Temp4967 LE N
-If Not Equal to Zero Temp4968 Goto Label :632	
-Goto label:630
-Label :632	Temp4970 = i MUL count
-Temp4971 = 0
-Temp4972 = Temp4970 MUL 1
-Temp4971 = Temp4971 ADD Temp4972
-Temp4973 = b ADD Temp4971
-*Temp4973 = 0 , 1
-Temp4975 = count
-count = count ADD 1
-Goto label:631
-Label :630	Goto label:623
-Label :625	Label :623	Temp4976 = i
-i = i ADD 1
-Goto label:621
-Label :620	Temp4977 = &"Total: %d
-"
-BasicParam Temp4977
-BasicParam resultCount
-call printf , 2
+_start: 
+_printf_cnt = 0
+_N = 15000
+_resultCount = 0
+
+_malloc: 
+
+_getchar: 
+
+_printf: 
+
+_main: 
+_i = 1
+Temp1 = _i
+Label :2	Temp2 = _i LE _N
+If Not Equal to Zero Temp2 Goto Label :3	
+Goto label:1
+Label :3	Temp4 = 0
+Temp5 = _i MUL 4
+Temp4 = Temp4 ADD Temp5
+Temp6 = _b ADD Temp4
+*Temp6 = 1 , 4
+Temp3 = *Temp6, 4
+Temp3 = *Temp6, 4
+Temp10 = _i ADD 1
+_i = Temp10
+Temp9 = _i
+Temp8 = Temp9 SUB 1
+Goto label:2
+Label :1	_i = 2
+Temp11 = _i
+Label :5	Temp12 = _i LE _N
+If Not Equal to Zero Temp12 Goto Label :6	
+Goto label:4
+Label :6	Temp13 = 0
+Temp14 = _i MUL 4
+Temp13 = Temp13 ADD Temp14
+Temp15 = _b ADD Temp13
+Temp16 = *Temp15, 4
+If Not Equal to Zero Temp16 Goto Label :8	
+Goto label:7
+Label :8	_count = 2
+Temp17 = _i GT 3
+If Not Equal to Zero Temp17 Goto Label :11	
+Goto label:9
+Label :11	Temp18 = _i SUB 2
+Temp19 = 0
+Temp20 = Temp18 MUL 4
+Temp19 = Temp19 ADD Temp20
+Temp21 = _b ADD Temp19
+Temp22 = *Temp21, 4
+If Not Equal to Zero Temp22 Goto Label :10	
+Goto label:9
+Label :10	Temp25 = _resultCount ADD 1
+_resultCount = Temp25
+Temp24 = _resultCount
+Temp23 = Temp24 SUB 1
+Temp27 = _i SUB 2
+BasicParam Temp26
+BasicParam Temp27
+BasicParam _i
+_printf_cnt = 3
+Temp28 = call _printf , 3
+Label :9	Label :13	Temp29 = _i MUL _count
+Temp30 = Temp29 LE _N
+If Not Equal to Zero Temp30 Goto Label :14	
+Goto label:12
+Label :14	Temp32 = _i MUL _count
+Temp33 = 0
+Temp34 = Temp32 MUL 4
+Temp33 = Temp33 ADD Temp34
+Temp35 = _b ADD Temp33
+*Temp35 = 0 , 4
+Temp31 = *Temp35, 4
+Temp31 = *Temp35, 4
+Temp39 = _count ADD 1
+_count = Temp39
+Temp38 = _count
+Temp37 = Temp38 SUB 1
+Goto label:13
+Label :12	Label :7	Temp42 = _i ADD 1
+_i = Temp42
+Temp41 = _i
+Temp40 = Temp41 SUB 1
+Goto label:5
+Label :4	BasicParam Temp43
+BasicParam _resultCount
+_printf_cnt = 2
+Temp44 = call _printf , 2
 Return BasicParam 0
 

@@ -1,49 +1,64 @@
-n = 8
-sum = 0
-upperlim = 1
-Temp2360 = row NE upperlim
-If Not Equal to Zero Temp2360 Goto Label :440	
-Goto label:439
-Label :440	Temp2361 = row LOGICAL_OR ld
-Temp2362 = Temp2361 LOGICAL_OR rd
-Temp2363 =  TILDE Temp2362
-Temp2364 = upperlim LOGICAL_AND Temp2363
-pos = Temp2364
-Label :442	If Not Equal to Zero pos Goto Label :443	
-Goto label:441
-Label :443	Temp2365 =  MINUS pos
-Temp2366 = pos LOGICAL_AND Temp2365
-p = Temp2366
-Temp2368 = pos SUB p
-pos = Temp2368
-Temp2367 = pos
-Temp2369 = row ADD p
-Temp2370 = ld ADD p
-Temp2371 = Temp2370 SHL 1
-Temp2372 = rd ADD p
-Temp2373 = Temp2372 SHR 1
-BasicParam Temp2369
-BasicParam Temp2371
-BasicParam Temp2373
-call test , 3
-Goto label:442
-Label :441	Label :439	Temp2375 = &"%d queens:
-"
-BasicParam Temp2375
-BasicParam n
-call printf , 2
-Temp2378 = upperlim SHL n
-Temp2379 = Temp2378 SUB 1
-upperlim = Temp2379
-Temp2377 = upperlim
+_start: 
+_printf_cnt = 0
+_n = 8
+_sum = 0
+_upperlim = 1
+
+_malloc: 
+
+_getchar: 
+
+_printf: 
+
+_test: 
+Temp1 = row NE _upperlim
+If Not Equal to Zero Temp1 Goto Label :2	
+Goto label:3
+Label :2	Temp2 = row LOGICAL_OR ld
+Temp3 = Temp2 LOGICAL_OR rd
+Temp4 =  TILDE Temp3
+Temp5 = _upperlim LOGICAL_AND Temp4
+_pos = Temp5
+Label :5	If Not Equal to Zero _pos Goto Label :6	
+Goto label:4
+Label :6	Temp6 =  MINUS _pos
+Temp7 = _pos LOGICAL_AND Temp6
+_p = Temp7
+Temp9 = _pos SUB _p
+_pos = Temp9
+Temp8 = _pos
+Temp10 = row ADD _p
+Temp11 = ld ADD _p
+Temp12 = Temp11 SHL 1
+Temp13 = rd ADD _p
+Temp14 = Temp13 SHR 1
+BasicParam Temp10
+BasicParam Temp12
+BasicParam Temp14
+Temp15 = call _test , 3
+Goto label:5
+Label :4	Goto label:1
+Label :3	Temp18 = _sum ADD 1
+_sum = Temp18
+Temp17 = _sum
+Temp16 = Temp17 SUB 1
+Label :1	
+_main: 
+BasicParam Temp19
+BasicParam _n
+_printf_cnt = 2
+Temp20 = call _printf , 2
+Temp22 = _upperlim SHL _n
+Temp23 = Temp22 SUB 1
+_upperlim = Temp23
+Temp21 = _upperlim
 BasicParam 0
 BasicParam 0
 BasicParam 0
-call test , 3
-Temp2381 = &"%d
-"
-BasicParam Temp2381
-BasicParam sum
-call printf , 2
+Temp24 = call _test , 3
+BasicParam Temp25
+BasicParam _sum
+_printf_cnt = 2
+Temp26 = call _printf , 2
 Return BasicParam 0
 

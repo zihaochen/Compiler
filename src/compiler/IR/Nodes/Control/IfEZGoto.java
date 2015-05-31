@@ -12,7 +12,7 @@ import java.io.OutputStream;
  */
 public class IfEZGoto extends Quadruple{
     public Address src;
-    Label label;
+    public Label label;
 
     public IfEZGoto() {
         src = null;

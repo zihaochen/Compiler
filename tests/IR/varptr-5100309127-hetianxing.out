@@ -1,52 +1,68 @@
-sumBig = 0
-Temp4980 = *ptr, 4
-Temp4981 = Temp4980 ADD 1
-Temp4982 = *ptr, 4
-*ptr = Temp4981 , 4
-sumSmall = 0
-i = 1
-Temp4983 = i
-Label :635	Temp4984 = i LE 10
-If Not Equal to Zero Temp4984 Goto Label :636	
-Goto label:634
-Label :636	Temp4985 = &sumSmall
-BasicParam Temp4985
-call addSmall , 1
-Temp4988 = sumSmall ADD 1
-sumSmall = Temp4988
-Temp4987 = sumSmall
-Temp4989 = i
-i = i ADD 1
-Goto label:635
-Label :634	Temp4991 = *ptr, 4
-Temp4992 = Temp4991 ADD sumSmall
-Temp4993 = *ptr, 4
-*ptr = Temp4992 , 4
-Temp4994 = &sumBig
-ptr = Temp4994
-i = 1
-Temp4995 = i
-Label :638	Temp4996 = i LE 10
-If Not Equal to Zero Temp4996 Goto Label :639	
-Goto label:637
-Label :639	sumMiddle = 0
-Temp4997 = &sumMiddle
-BasicParam Temp4997
-call addMiddle , 1
-Temp5000 = *ptr, 4
-Temp5001 = Temp5000 ADD sumMiddle
-Temp5002 = *ptr, 4
-*ptr = Temp5001 , 4
-Temp5004 = sumBig ADD 1
-sumBig = Temp5004
-Temp5003 = sumBig
-Temp5005 = &"%d %d
-"
-BasicParam Temp5005
-BasicParam i
-BasicParam sumBig
-call printf , 3
-Temp5007 = i
-i = i ADD 1
-Goto label:638
-Label :637	
+_start: 
+_printf_cnt = 0
+_sumBig = 0
+
+_malloc: 
+
+_getchar: 
+
+_printf: 
+
+_addSmall: 
+Temp2 = *ptr, 4
+Temp3 = Temp2 ADD 1
+Temp4 = *ptr, 4
+*ptr = Temp3 , 4
+Temp1 = *ptr, 4
+
+_addMiddle: 
+_sumSmall = 0
+_i = 1
+Temp5 = _i
+Label :2	Temp6 = _i LE 10
+If Not Equal to Zero Temp6 Goto Label :3	
+Goto label:1
+Label :3	Temp7 = &_sumSmall
+BasicParam Temp7
+Temp8 = call _addSmall , 1
+Temp10 = _sumSmall ADD 1
+_sumSmall = Temp10
+Temp9 = _sumSmall
+Temp11 = _i
+_i = _i ADD 1
+Goto label:2
+Label :1	Temp13 = *ptr, 4
+Temp14 = Temp13 ADD _sumSmall
+Temp15 = *ptr, 4
+*ptr = Temp14 , 4
+Temp12 = *ptr, 4
+
+_main: 
+Temp16 = &_sumBig
+_ptr = Temp16
+_i = 1
+Temp17 = _i
+Label :5	Temp18 = _i LE 10
+If Not Equal to Zero Temp18 Goto Label :6	
+Goto label:4
+Label :6	_sumMiddle = 0
+Temp19 = &_sumMiddle
+BasicParam Temp19
+Temp20 = call _addMiddle , 1
+Temp22 = *_ptr, 4
+Temp23 = Temp22 ADD _sumMiddle
+Temp24 = *_ptr, 4
+*_ptr = Temp23 , 4
+Temp21 = *_ptr, 4
+Temp26 = _sumBig ADD 1
+_sumBig = Temp26
+Temp25 = _sumBig
+BasicParam Temp27
+BasicParam _i
+BasicParam _sumBig
+_printf_cnt = 3
+Temp28 = call _printf , 3
+Temp29 = _i
+_i = _i ADD 1
+Goto label:5
+Label :4	

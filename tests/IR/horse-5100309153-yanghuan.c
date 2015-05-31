@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int N = 100;
+int N = 20;
 int head, startx, starty;
 int targetx, targety;
 int x, y;

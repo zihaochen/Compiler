@@ -28,6 +28,7 @@ public class Call extends Quadruple {
 
     @Override
     public void print(OutputStream out) throws IOException{
-        out.write(("call " + name + " , " + numOfParams + "\n").getBytes());
+        dest.printAddress(out);
+        out.write((" = call " + name + " , " + numOfParams + "\n").getBytes());
     }
 }

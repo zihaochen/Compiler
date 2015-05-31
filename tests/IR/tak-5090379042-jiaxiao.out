@@ -1,36 +1,48 @@
-Temp4813 = y LT x
-If Not Equal to Zero Temp4813 Goto Label :583	
-Goto label:582
-Label :583	Temp4814 = x SUB 1
-BasicParam Temp4814
-BasicParam y
-BasicParam z
-call tak , 3
-Temp4816 = y SUB 1
-BasicParam Temp4816
-BasicParam z
-BasicParam x
-call tak , 3
-Temp4818 = z SUB 1
-BasicParam Temp4818
-BasicParam x
-BasicParam y
-call tak , 3
-BasicParam Temp4815
-BasicParam Temp4817
-BasicParam Temp4819
-call tak , 3
-Temp4821 = 1 ADD Temp4820
-Return BasicParam Temp4821
+_start: 
+_printf_cnt = 0
 
-Label :582	Temp4822 = &"%d
-"
+_malloc: 
+
+_getchar: 
+
+_printf: 
+
+_tak: 
+Temp1 = y LT x
+If Not Equal to Zero Temp1 Goto Label :2	
+Goto label:3
+Label :2	Temp2 = x SUB 1
+BasicParam Temp2
+BasicParam y
+BasicParam z
+Temp3 = call _tak , 3
+Temp4 = y SUB 1
+BasicParam Temp4
+BasicParam z
+BasicParam x
+Temp5 = call _tak , 3
+Temp6 = z SUB 1
+BasicParam Temp6
+BasicParam x
+BasicParam y
+Temp7 = call _tak , 3
+BasicParam Temp3
+BasicParam Temp5
+BasicParam Temp7
+Temp8 = call _tak , 3
+Temp9 = 1 ADD Temp8
+Return BasicParam Temp9
+Goto label:1
+Label :3	Return BasicParam z
+Label :1	
+_main: 
 BasicParam 18
 BasicParam 12
 BasicParam 6
-call tak , 3
-BasicParam Temp4822
-BasicParam Temp4823
-call printf , 2
+Temp11 = call _tak , 3
+BasicParam Temp10
+BasicParam Temp11
+_printf_cnt = 2
+Temp12 = call _printf , 2
 Return BasicParam 0
 

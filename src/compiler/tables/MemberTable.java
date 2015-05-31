@@ -8,8 +8,8 @@ import java.util.HashMap;
  * Created by Chen on 2015/4/27.
  */
 public class MemberTable {
-    HashMap<Integer, Type> list;
-    HashMap<Integer, Integer> offsetList;
+    public HashMap<Integer, Type> list;
+    public HashMap<Integer, Integer> offsetList;
 
     public MemberTable() {
         this.list = new HashMap<>();

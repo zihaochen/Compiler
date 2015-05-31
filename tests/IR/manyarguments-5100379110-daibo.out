@@ -1,44 +1,55 @@
-Temp1521 = &"%d "
-BasicParam Temp1521
+_start: 
+_printf_cnt = 0
+
+_malloc: 
+
+_getchar: 
+
+_printf: 
+
+_manyArguments: 
+BasicParam Temp1
 BasicParam a
-call printf , 2
-Temp1523 = &"%d "
-BasicParam Temp1523
+_printf_cnt = 2
+Temp2 = call _printf , 2
+BasicParam Temp3
 BasicParam b
-call printf , 2
-Temp1525 = &"%d "
-BasicParam Temp1525
+_printf_cnt = 2
+Temp4 = call _printf , 2
+BasicParam Temp5
 BasicParam c
-call printf , 2
-Temp1527 = &"%d "
-BasicParam Temp1527
+_printf_cnt = 2
+Temp6 = call _printf , 2
+BasicParam Temp7
 BasicParam d
-call printf , 2
-Temp1529 = &"%d "
-BasicParam Temp1529
+_printf_cnt = 2
+Temp8 = call _printf , 2
+BasicParam Temp9
 BasicParam e
-call printf , 2
-Temp1531 = &"%d
-"
-BasicParam Temp1531
+_printf_cnt = 2
+Temp10 = call _printf , 2
+BasicParam Temp11
 BasicParam f
-call printf , 2
-Temp1533 = 5 ADD 6
+_printf_cnt = 2
+Temp12 = call _printf , 2
+
+_main: 
+Temp13 = 5 ADD 6
 BasicParam 0
 BasicParam 1
 BasicParam 2
 BasicParam 3
 BasicParam 4
-BasicParam Temp1533
-call manyArguments , 6
-Temp1535 = 7 ADD 5
-Temp1536 = 5 SUB 6
+BasicParam Temp13
+Temp14 = call _manyArguments , 6
+Temp15 = 7 ADD 5
+Temp16 = 5 SUB 6
 BasicParam 0
 BasicParam 1
 BasicParam 2
-BasicParam Temp1535
+BasicParam Temp15
 BasicParam 4
-BasicParam Temp1536
-call manyArguments , 6
+BasicParam Temp16
+Temp17 = call _manyArguments , 6
 Return BasicParam 0
 

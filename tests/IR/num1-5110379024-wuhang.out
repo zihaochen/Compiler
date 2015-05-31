@@ -1,27 +1,35 @@
+_start: 
+printf_cnt = 0
+
+malloc: 
+
+getchar: 
+
+printf: 
+
+main: 
 a = 51
 b = 17658
 d = 11
 e = 8
 f = 10
 g = 40
-Temp1794 = g ADD f
-g = Temp1794
-Temp1793 = g
-Temp1795 = &"%d %d %d %d
-"
-BasicParam Temp1795
+Temp2 = g ADD f
+g = Temp2
+Temp1 = g
+BasicParam Temp3
 BasicParam a
 BasicParam b
 BasicParam d
 BasicParam e
-call printf , 5
-Temp1797 = &"%c %d %d %c
-"
-BasicParam Temp1797
+printf_cnt = 5
+Temp4 = call printf , 5
+BasicParam Temp5
 BasicParam a
 BasicParam e
 BasicParam 4
 BasicParam g
-call printf , 5
+printf_cnt = 5
+Temp6 = call printf , 5
 Return BasicParam 0
 

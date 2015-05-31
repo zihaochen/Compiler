@@ -6,9 +6,6 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 public class MemoryParam extends Param {
-    public Address src;
-    public int size;
-
     public MemoryParam() {
         src = null;
         size = 0;

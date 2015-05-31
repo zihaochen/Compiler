@@ -1,0 +1,130 @@
+<AST> 
+		<VarDecl> 
+			<IntType> 
+			<Id: n> 
+			<InitValue> 
+				<IntConst: 8> 
+		<VarDecl> 
+			<IntType> 
+			<Id: sum> 
+			<InitValue> 
+				<IntConst: 0> 
+		<VarDecl> 
+			<IntType> 
+			<Id: upperlim> 
+			<InitValue> 
+				<IntConst: 1> 
+		<FunctionDef> 
+			<VoidType> 
+			<Id: test> 
+				<VarDecl> 
+					<IntType> 
+					<Id: row> 
+				<VarDecl> 
+					<IntType> 
+					<Id: ld> 
+				<VarDecl> 
+					<IntType> 
+					<Id: rd> 
+					<If> 
+						<BinaryExpr> 
+							<NE> 
+							<Id: row> 
+							<Id: upperlim> 
+								<VarDecl> 
+									<IntType> 
+									<Id: pos> 
+									<InitValue> 
+										<BinaryExpr> 
+											<LOGICAL_AND> 
+											<Id: upperlim> 
+											<UnaryExpr> 
+												<TILDE> 
+												<BinaryExpr> 
+													<LOGICAL_OR> 
+													<BinaryExpr> 
+														<LOGICAL_OR> 
+														<Id: row> 
+														<Id: ld> 
+													<Id: rd> 
+								<WhileLoop> 
+									<Id: pos> 
+											<VarDecl> 
+												<IntType> 
+												<Id: p> 
+												<InitValue> 
+													<BinaryExpr> 
+														<LOGICAL_AND> 
+														<Id: pos> 
+														<UnaryExpr> 
+															<MINUS> 
+															<Id: pos> 
+											<BinaryExpr> 
+												<ASSIGN_SUB> 
+												<Id: pos> 
+												<Id: p> 
+											<FunctionCall> 
+												<Id: test> 
+												<ExprList> 
+													<BinaryExpr> 
+														<ADD> 
+														<Id: row> 
+														<Id: p> 
+													<BinaryExpr> 
+														<SHL> 
+														<BinaryExpr> 
+															<ADD> 
+															<Id: ld> 
+															<Id: p> 
+														<IntConst: 1> 
+													<BinaryExpr> 
+														<SHR> 
+														<BinaryExpr> 
+															<ADD> 
+															<Id: rd> 
+															<Id: p> 
+														<IntConst: 1> 
+						<SelfIncrement> 
+							<Id: sum> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: main> 
+				<VarDecl> 
+					<IntType> 
+					<Id: argc> 
+				<VarDecl> 
+					<ArrayType> 
+						<PointerType> 
+							<CharType> 
+						<IntConst: 1> 
+					<Id: argv> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: %d queens:
+> 
+							<Id: n> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<Id: upperlim> 
+						<BinaryExpr> 
+							<SUB> 
+							<BinaryExpr> 
+								<SHL> 
+								<Id: upperlim> 
+								<Id: n> 
+							<IntConst: 1> 
+					<FunctionCall> 
+						<Id: test> 
+						<ExprList> 
+							<IntConst: 0> 
+							<IntConst: 0> 
+							<IntConst: 0> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: %d
+> 
+							<Id: sum> 
+					<ReturnStmt> 
+						<IntConst: 0> 

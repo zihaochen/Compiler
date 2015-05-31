@@ -1,6 +1,15 @@
-Temp1300 = &"Hello, world!
-"
-BasicParam Temp1300
-call printf , 1
+_start: 
+_printf_cnt = 0
+
+_malloc: 
+
+_getchar: 
+
+_printf: 
+
+_main: 
+BasicParam Temp1
+_printf_cnt = 1
+Temp2 = call _printf , 1
 Return BasicParam 0
 

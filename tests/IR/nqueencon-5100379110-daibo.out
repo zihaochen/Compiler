@@ -1,86 +1,157 @@
-i = 1
-Temp1757 = i
-Label :281	Temp1758 = pos SUB 1
-Temp1759 = i LE Temp1758
-If Not Equal to Zero Temp1759 Goto Label :282	
-Goto label:280
-Label :282	Temp1760 = &" ."
-BasicParam Temp1760
-call printf , 1
-i = i ADD 1
-Goto label:281
-Label :280	Temp1762 = &" O"
-BasicParam Temp1762
-call printf , 1
-Temp1765 = pos ADD 1
-i = Temp1765
-Temp1764 = i
-Label :284	Temp1766 = i LE c
-If Not Equal to Zero Temp1766 Goto Label :285	
-Goto label:283
-Label :285	Temp1767 = &" ."
-BasicParam Temp1767
-call printf , 1
-Temp1769 = i
-i = i ADD 1
-Goto label:284
-Label :283	Temp1770 = &"
-"
-BasicParam Temp1770
-call printf , 1
+_start: 
+_printf_cnt = 0
+
+_malloc: 
+
+_getchar: 
+
+_printf: 
+
+_printrow: 
+_i = 1
+Temp1 = _i
+Label :2	Temp2 = pos SUB 1
+Temp3 = _i LE Temp2
+If Not Equal to Zero Temp3 Goto Label :3	
+Goto label:1
+Label :3	BasicParam Temp4
+_printf_cnt = 1
+Temp5 = call _printf , 1
+Temp7 = _i ADD 1
+_i = Temp7
+Temp6 = _i
+Goto label:2
+Label :1	BasicParam Temp8
+_printf_cnt = 1
+Temp9 = call _printf , 1
+Temp11 = pos ADD 1
+_i = Temp11
+Temp10 = _i
+Label :5	Temp12 = _i LE c
+If Not Equal to Zero Temp12 Goto Label :6	
+Goto label:4
+Label :6	BasicParam Temp13
+_printf_cnt = 1
+Temp14 = call _printf , 1
+Temp17 = _i ADD 1
+_i = Temp17
+Temp16 = _i
+Temp15 = Temp16 SUB 1
+Goto label:5
+Label :4	BasicParam Temp18
+_printf_cnt = 1
+Temp19 = call _printf , 1
 Return BasicParam 0
 
-i = 0
-c = n
-Temp1772 = n MOD 2
-odd = Temp1772
-Temp1773 = n DIV 2
-Temp1774 = Temp1773 MOD 3
-Temp1775 = Temp1774 NE 1
-If Not Equal to Zero Temp1775 Goto Label :287	
-Goto label:286
-Label :287	BasicParam 2
-BasicParam c
-call printrow , 2
-i = 4
-Temp1777 = i
-Label :289	Temp1778 = i LE n
-If Not Equal to Zero Temp1778 Goto Label :290	
-Goto label:288
-Label :290	BasicParam i
-BasicParam c
-call printrow , 2
-Temp1781 = i ADD 2
-i = Temp1781
-Temp1780 = i
-Goto label:289
-Label :288	i = 1
-Temp1782 = i
-Label :292	Temp1783 = i LE n
-If Not Equal to Zero Temp1783 Goto Label :293	
-Goto label:291
-Label :293	BasicParam i
-BasicParam c
-call printrow , 2
-Temp1786 = i ADD 2
-i = Temp1786
-Temp1785 = i
-Goto label:292
-Label :291	Label :286	Temp1787 = &"
-"
-BasicParam Temp1787
-call printf , 1
+_nqueen: 
+_i = 0
+_c = n
+Temp20 = n MOD 2
+_odd = Temp20
+Temp21 = n DIV 2
+Temp22 = Temp21 MOD 3
+Temp23 = Temp22 NE 1
+If Not Equal to Zero Temp23 Goto Label :8	
+Goto label:9
+Label :8	BasicParam 2
+BasicParam _c
+Temp24 = call _printrow , 2
+_i = 4
+Temp25 = _i
+Label :11	Temp26 = _i LE n
+If Not Equal to Zero Temp26 Goto Label :12	
+Goto label:10
+Label :12	BasicParam _i
+BasicParam _c
+Temp27 = call _printrow , 2
+Temp29 = _i ADD 2
+_i = Temp29
+Temp28 = _i
+Goto label:11
+Label :10	_i = 1
+Temp30 = _i
+Label :14	Temp31 = _i LE n
+If Not Equal to Zero Temp31 Goto Label :15	
+Goto label:13
+Label :15	BasicParam _i
+BasicParam _c
+Temp32 = call _printrow , 2
+Temp34 = _i ADD 2
+_i = Temp34
+Temp33 = _i
+Goto label:14
+Label :13	Goto label:7
+Label :9	Temp36 = n SUB _odd
+n = Temp36
+Temp35 = n
+Temp37 = n DIV 2
+BasicParam Temp37
+BasicParam _c
+Temp38 = call _printrow , 2
+Temp40 = n DIV 2
+Temp41 = Temp40 ADD 1
+_i = Temp41
+Temp39 = _i
+Label :17	Temp42 = n DIV 2
+Temp43 = Temp42 SUB 1
+Temp44 = _i NE Temp43
+If Not Equal to Zero Temp44 Goto Label :18	
+Goto label:16
+Label :18	Temp45 = _i ADD 1
+BasicParam Temp45
+BasicParam _c
+Temp46 = call _printrow , 2
+Temp48 = _i ADD 2
+Temp49 = Temp48 MOD n
+_i = Temp49
+Temp47 = _i
+Goto label:17
+Label :16	Temp51 = _i SUB 2
+Temp52 = Temp51 MOD n
+_i = Temp52
+Temp50 = _i
+Label :20	Temp53 = n DIV 2
+Temp54 = Temp53 SUB 1
+Temp55 = _i NE Temp54
+If Not Equal to Zero Temp55 Goto Label :21	
+Goto label:19
+Label :21	Temp56 = n SUB _i
+BasicParam Temp56
+BasicParam _c
+Temp57 = call _printrow , 2
+Temp59 = _i SUB 2
+Temp60 = Temp59 ADD n
+Temp61 = Temp60 MOD n
+_i = Temp61
+Temp58 = _i
+Goto label:20
+Label :19	Temp62 = n SUB _i
+BasicParam Temp62
+BasicParam _c
+Temp63 = call _printrow , 2
+If Not Equal to Zero _odd Goto Label :23	
+Goto label:22
+Label :23	Temp64 = n ADD 1
+BasicParam Temp64
+BasicParam _c
+Temp65 = call _printrow , 2
+Label :22	Label :7	BasicParam Temp66
+_printf_cnt = 1
+Temp67 = call _printf , 1
 Return BasicParam 0
 
-n = 6
-Temp1789 = n
-Label :295	Temp1790 = n LE 11
-If Not Equal to Zero Temp1790 Goto Label :296	
-Goto label:294
-Label :296	BasicParam n
-call nqueen , 1
-Temp1792 = n
-n = n ADD 1
-Goto label:295
-Label :294	Return BasicParam 0
+_main: 
+_n = 6
+Temp68 = _n
+Label :25	Temp69 = _n LE 11
+If Not Equal to Zero Temp69 Goto Label :26	
+Goto label:24
+Label :26	BasicParam _n
+Temp70 = call _nqueen , 1
+Temp73 = _n ADD 1
+_n = Temp73
+Temp72 = _n
+Temp71 = Temp72 SUB 1
+Goto label:25
+Label :24	Return BasicParam 0
 

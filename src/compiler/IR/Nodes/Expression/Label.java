@@ -5,12 +5,16 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 public class Label extends Quadruple {
-    private static int labelCount = 0;
+    public static int labelCount = 0;
 
     public int num;
 
     public Label() {
         num = labelCount++;
+    }
+
+    public void setZero() {
+        labelCount = 0;
     }
 
     @Override

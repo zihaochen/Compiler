@@ -15,8 +15,7 @@ import java.io.OutputStream;
 import java.util.LinkedList;
 import java.util.List;
 
-import static java.lang.Integer.max;
-import static java.lang.Integer.min;
+import static java.lang.Integer.*;
 
 /**
  * Created by Chen on 2015/4/27.
@@ -272,6 +271,7 @@ public class SemanticCheck implements Visitor {
         }
         if (varDecl.type instanceof VoidType)
             throw new RuntimeException("Variable " + varDecl.name.toString() + "is delcared as void type");
+        //System.out.println(varDecl.name.toString() + " size: " + varDecl.type.size);
     }
 
     public void visit(FunctionDecl functionDecl) {
@@ -360,18 +360,19 @@ public class SemanticCheck implements Visitor {
                     throw new RuntimeException("The size of an array must be positive");
                 }
                 else {
-                    arrayType.size = arrayType.baseType.size * ((Integer) arrayType.arraySize.returnType.value);
+                    arrayType.size = max(4, arrayType.baseType.size) * ((Integer) arrayType.arraySize.returnType.value);
                 }
             }
         }
     }
 
     public void visit(CharType charType) {
-        charType.size = 1;
+        charType.size = 4;
+        charType.realSize = 1;
     }
 
     public void visit(IntType intType) {
-        intType.size = 4;
+        intType.size = intType.realSize = 4;
     }
 
     public void visit(VoidType voidType) {
@@ -382,23 +383,26 @@ public class SemanticCheck implements Visitor {
         pointerType.baseType.accept(this);
         pointerType.baseType.isLeft = true;
         pointerType.isLeft = true;
-        pointerType.size = 4;
+        pointerType.size = pointerType.realSize = 4;
         pointerType.isConst = false;
     }
 
     public void visit(StructType structType) throws RuntimeException{
-        structType.size = 0;
+       // structType.size = 0;
+       // structType.realSize = 0;
         if (suTable.containsInAllScope(structType.name.num)) {
             if (structType.declrs == null) {
                 if (suTable.getType(structType.name.num) instanceof UnionType)
                     throw new RuntimeException("union " + structType.name.toString() + "has been declared as a struct");
                 else {
+                    structType.declrs = ((StructType) suTable.getType(structType.name.num)).declrs;
                     structType.members = ((StructType) suTable.getType(structType.name.num)).members;
                     structType.size = ((StructType) suTable.getType(structType.name.num)).size;
+                    structType.realSize = ((StructType) suTable.getType(structType.name.num)).realSize;
                 }
             }
-            else
-                throw new RuntimeException("union" + structType.name.toString() + "redeclared");
+           // else
+           //     throw new RuntimeException("union" + structType.name.toString() + "redeclared");
         }
         else {
             if (structType.declrs == null)
@@ -419,11 +423,14 @@ public class SemanticCheck implements Visitor {
                         offset = offset + min(decl.type.size, 4) - offset % min(decl.type.size, 4);
                  */
                     int offset = structType.size;
+                    if (decl.type.realSize >= 4 && structType.realSize % 4 != 0) {
+                        structType.realSize += 4 - structType.realSize % 4;
+                    }
+                    structType.realSize += decl.type.realSize;
                     structType.members.add(decl.name.num, decl.type, offset);
-                    structType.size = decl.type.size + offset;
+                    structType.size += 4;
                 }
-                if (structType.size % 4 != 0)
-                    structType.size += 4 - (structType.size % 4);
+                structType.size += 4;
             }
         }
     }
@@ -695,7 +702,10 @@ public class SemanticCheck implements Visitor {
     public void visit(SizeofExpr sizeofExpr) {
         sizeofExpr.type.accept(this);
         sizeofExpr.returnType = new IntType();
-        sizeofExpr.returnType.value = sizeofExpr.type.size;
+        if (sizeofExpr.type instanceof StructType)
+            sizeofExpr.returnType.value = ((StructType) sizeofExpr.type).size;
+        else
+            sizeofExpr.returnType.value = sizeofExpr.type.size;
         sizeofExpr.returnType.size = 4;
         sizeofExpr.returnType.isLeft = false;
         sizeofExpr.returnType.isConst = true;
@@ -982,7 +992,8 @@ public class SemanticCheck implements Visitor {
 
     public void visit(CharConst charConst) {
         charConst.returnType = new CharType();
-        charConst.returnType.size = 1;
+        charConst.returnType.size = 4;
+        charConst.returnType.realSize = 1;
         charConst.returnType.value = (Integer)charConst.value;
         charConst.returnType.isConst = true;
     }

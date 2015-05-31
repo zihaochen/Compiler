@@ -59,8 +59,8 @@ int printF(int k1, int k2, int k3) {
 }
 
 int main() {
-    N = 1000;
-    M = 168;
+    N = 20;
+    M = 78;
     primeCount = 0;
     resultCount = 0;
     tmp[0] = 0;

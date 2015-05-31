@@ -1,31 +1,44 @@
-Temp1006 = x MOD y
-Temp1007 = Temp1006 EQ 0
-If Not Equal to Zero Temp1007 Goto Label :103	
-Goto label:102
-Label :103	Return BasicParam y
+_start: 
+_printf_cnt = 0
 
-Label :102	Temp1008 = &"%d
-%d
-%d
-%d
-"
+_malloc: 
+
+_getchar: 
+
+_printf: 
+
+_gcd: 
+Temp1 = x MOD y
+Temp2 = Temp1 EQ 0
+If Not Equal to Zero Temp2 Goto Label :2	
+Goto label:3
+Label :2	Return BasicParam y
+Goto label:1
+Label :3	Temp3 = x MOD y
+BasicParam y
+BasicParam Temp3
+Temp4 = call _gcd , 2
+Return BasicParam Temp4
+Label :1	
+_main: 
 BasicParam 10
 BasicParam 1
-call gcd , 2
+Temp6 = call _gcd , 2
 BasicParam 50
 BasicParam 35
-call gcd , 2
+Temp7 = call _gcd , 2
 BasicParam 34986
 BasicParam 3087
-call gcd , 2
+Temp8 = call _gcd , 2
 BasicParam 2907
 BasicParam 1539
-call gcd , 2
-BasicParam Temp1008
-BasicParam Temp1009
-BasicParam Temp1010
-BasicParam Temp1011
-BasicParam Temp1012
-call printf , 5
+Temp9 = call _gcd , 2
+BasicParam Temp5
+BasicParam Temp6
+BasicParam Temp7
+BasicParam Temp8
+BasicParam Temp9
+_printf_cnt = 5
+Temp10 = call _printf , 5
 Return BasicParam 0
 

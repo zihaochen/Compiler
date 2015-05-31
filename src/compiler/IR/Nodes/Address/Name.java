@@ -17,6 +17,12 @@ public class Name extends Address {
         this.name = name;
     }
 
+    public Name(String name, boolean bool) {
+        num = ++addressCnt;
+        this.name = name;
+        this.isGlobal = bool;
+    }
+
     @Override
     public void printAddress(OutputStream out) throws IOException{
         out.write(name.getBytes());

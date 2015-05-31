@@ -6,13 +6,14 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 public class BasicParam extends Param {
-    public Address src;
 
     public BasicParam() {
+        size = 4;
         src = null;
     }
 
     public BasicParam(Address src) {
+        size = 4;
         this.src = src;
     }
 

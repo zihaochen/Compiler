@@ -1,0 +1,53 @@
+<AST> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: main> 
+					<VarDecl> 
+						<IntType> 
+						<Id: i> 
+						<InitValue> 
+							<IntConst: 10283> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: %d> 
+							<BinaryExpr> 
+								<ADD> 
+								<BinaryExpr> 
+									<ADD> 
+									<IntConst: 1> 
+									<IntConst: 2> 
+								<Id: i> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: 
+> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: %d> 
+							<BinaryExpr> 
+								<MUL> 
+								<IntConst: 3> 
+								<IntConst: 5> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: 
+> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: %d> 
+							<BinaryExpr> 
+								<DIV> 
+								<IntConst: 6> 
+								<IntConst: 2> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: 
+> 
+					<ReturnStmt> 
+						<IntConst: 0> 

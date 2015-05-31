@@ -11,12 +11,16 @@ import compiler.STL.Printf;
 import compiler.ast.nodes.*;
 import compiler.ast.visitor.Visitor;
 import compiler.tables.AddressTable;
+import compiler.tables.MemberTable;
 import compiler.tables.SUTable;
 import compiler.tables.VarTable;
 
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Chen on 2015/5/9.
@@ -38,7 +42,13 @@ public class Translator implements Visitor {
    public Function curFunction;
    private Label fall;
    private OutputStream out;
+   private int stringCnt;
+   private int offset;
    public Translator() {
+      Label tmp = new Label();
+      tmp.setZero();
+      Temp temp = new Temp();
+      temp.setZero();
       ir = new IR();
       suTable = new SUTable();
       varTable = new VarTable();
@@ -46,12 +56,17 @@ public class Translator implements Visitor {
       stl = new LinkedList<>();
       functionsStack = new LinkedList<>();
       Function start = new Function();
-      start.name = new Symbol("_start").num;
+      start.name = new Symbol("_start").toString();
 
       pushFunction(start);
+      Name printf_cnt = new Name("printf_cnt");
+      curFunction.vars.add(new Variable(printf_cnt, 4));
+      curFunction.body.add(new Assign(printf_cnt, new IntegerConst(0)));
       ir.fragments.add(start);
       loadSTL();
       inPrmtr = 0;
+      stringCnt = 0;
+      offset = 0;
       fall = new Label();
       loopBreak = new LinkedList<>();
       loopContinue = new LinkedList<>();
@@ -72,6 +87,16 @@ public class Translator implements Visitor {
          this.arrayAddress = arrayAddress;
          this.offset = offset;
          this.baseSize = baseSize;
+      }
+   }
+
+   public class StringPair {
+      public Address address;
+      public String string;
+
+      public StringPair(Address address, String string) {
+         this.address = address;
+         this.string = string;
       }
    }
 
@@ -116,19 +141,23 @@ public class Translator implements Visitor {
    public void defineFunction(FunctionDef functionDef){
       varTable.add(functionDef.name.num, functionDef.type);
       Function function = new Function();
-      function.name = functionDef.name.num;
+      function.name = "_" + functionDef.name.toString();
       function.size = ((FunctionType) functionDef.type).returnType.size;
       ir.fragments.add(function);
       pushFunction(function);
+      offset = 0;
 
       varTable.beginScope();
       suTable.beginScope();
+      addressTable.beginScope();
       inPrmtr++;
       functionDef.prmrts.accept(this);
       inPrmtr--;
       functionDef.body.accept(this);
       varTable.endScope();
       suTable.endScope();
+      addressTable.endScope();
+
 
       popFunction();
    }
@@ -157,6 +186,31 @@ public class Translator implements Visitor {
    /*-------------------DECLARATION----------------------------*/
    public void visit(AST ast) {
       ast.decls.accept(this);
+
+      for (Function function : ir.fragments) {
+         for (Variable variable : function.vars) {
+            if (variable.address instanceof Name)
+               ((Name) variable.address).name = "_" + ((Name) variable.address).name;
+            if (variable.size > 4) {
+               ir.ASUList.add(variable);
+               function.ASUList.add(variable);
+            }
+         }
+
+      }
+
+      for (Function function : ir.fragments) {
+         offset = 0;
+         if (function.name.equals("_start")) continue;
+         for (Variable variable : function.vars) {
+            //offset += variable.size;
+            offset += 4;
+            variable.address.loc = -offset;
+         }
+         function.localSize = offset;
+      }
+
+      //merger();
    }
 
    public void visit(DeclList declList) {
@@ -190,21 +244,27 @@ public class Translator implements Visitor {
          }
       }
       else {
-         if (type instanceof PointerType){
-            curFunction.body.add(new Assign(address, ((InitValue) init).expr.address));
+         if (type instanceof StructType && init instanceof InitValue) {
+            SUAssign(address, ((InitValue) init).expr.address, (StructType)type);
          }
          else {
-            if (init instanceof InitList) {
-               while (init instanceof InitList)
-                  init = ((InitList) init).inits.get(0);
+            if (type instanceof PointerType) {
                curFunction.body.add(new Assign(address, ((InitValue) init).expr.address));
-            }
-            else {
-               curFunction.body.add(new Assign(address, ((InitValue) init).expr.address));
+            } else {
+               if (init instanceof InitList) {
+                  while (init instanceof InitList)
+                     init = ((InitList) init).inits.get(0);
+                  curFunction.body.add(new Assign(address, ((InitValue) init).expr.address));
+               } else {
+                  curFunction.body.add(new Assign(address, ((InitValue) init).expr.address));
+               }
             }
          }
       }
    }
+
+   int forStructArray = 0;
+   int count = 0;
 
    public void visit(VarDecl varDecl) {
       varDecl.name.accept(this);
@@ -217,28 +277,102 @@ public class Translator implements Visitor {
        }
       else {
          varTable.add(varDecl.name.num, varDecl.type);
+         if (addressTable.containsInThisScope(varDecl.name.num))
+            throw new RuntimeException("something wrong in varDecl");
          addressTable.add(varDecl.name.num, new Name(varDecl.name.toString()));
          Variable tmp;
-         tmp = new Variable(varDecl.name.toString(), varDecl.type.size);
-         if (inPrmtr > 0) curFunction.args.add(tmp);
-            else curFunction.vars.add(tmp);
+         int size = varDecl.type.size;
+         if (varDecl.type instanceof ArrayType) size += 4;
+         //if (varDecl.type instanceof ArrayType || varDecl.type instanceof RecordType) size += 4;
+         tmp = new Variable(addressTable.getAddress(varDecl.name.num), size);
 
+         if (inPrmtr == 0) {
+            curFunction.vars.add(tmp);
+         }
+         else {
+            curFunction.args.add(tmp);
+            return;
+         }
+
+
+
+         if (varDecl.type instanceof StructType) {
+            for (Decl decl : ((StructType) varDecl.type).declrs.decls) {
+               if (decl.type instanceof ArrayType) {
+                  count++;
+                  Name name = new Name("struct_member_" + count);
+                  curFunction.vars.add(new Variable(name, decl.type.size + 4));
+                  curFunction.body.add(new ArrayWrite(tmp.address, ((StructType) varDecl.type).members.getOffset(decl.name.num), name, 4));
+               }
+               else {
+                  if (decl.type instanceof StructType) {
+                     count++;
+                     Name name = new Name("struct_member_" + count);
+                     curFunction.vars.add(new Variable(name, decl.type.size));
+                     //curFunction.vars.add(new Variable(name, decl.type.size + 4));
+                     curFunction.body.add(new ArrayWrite(tmp.address, ((StructType) varDecl.type).members.getOffset(decl.name.num), name, 4));
+                  }
+                  else {
+                     /*pointer, int, char
+                     * do nothing*/
+                  }
+               }
+            }
+         }
+
+         if (varDecl.type instanceof ArrayType && ((ArrayType)varDecl.type).baseType instanceof StructType) {
+            for (int i = 0; i < (Integer)((ArrayType) varDecl.type).arraySize.returnType.value; i++) {
+               ++forStructArray;
+               Name name = new Name("forStructArray_" + forStructArray);
+               curFunction.vars.add(new Variable(name, ((ArrayType) varDecl.type).baseType.size));
+               StructType structType = (StructType)((ArrayType) varDecl.type).baseType;
+               for (Decl decl : structType.declrs.decls) {
+                  if (decl.type instanceof ArrayType) {
+                     count++;
+                     Name tmpName = new Name("struct_member_" + count);
+                     curFunction.vars.add(new Variable(tmpName, decl.type.size + 4));
+                     curFunction.body.add(new ArrayWrite(name, structType.members.getOffset(decl.name.num), tmpName, 4));
+                  }
+                  else {
+                     if (decl.type instanceof StructType) {
+                        count++;
+                        Name tmpName = new Name("struct_member_" + count);
+                        curFunction.vars.add(new Variable(tmpName, decl.type.size));
+                        //curFunction.vars.add(new Variable(tmpName, decl.type.size + 4));
+                        curFunction.body.add(new ArrayWrite(name, structType.members.getOffset(decl.name.num), tmpName, 4));
+                     }
+                     else {
+                        /*pointer, int, char
+                        * do nothing*/
+                     }
+                  }
+               }
+
+               curFunction.body.add(new ArrayWrite(tmp.address, i * ((ArrayType) varDecl.type).baseType.size, name, 4));
+            }
+         }
          if (varDecl.init != null) {
+            if (varDecl.type instanceof PointerType)
+               if (((PointerType) varDecl.type).baseType instanceof StructType)
+                  if (varDecl.init instanceof InitValue)
+                     if (((InitValue) varDecl.init).expr instanceof FunctionCall && ((Identifier)((FunctionCall) ((InitValue) varDecl.init).expr).expr).symbol.toString().equals("malloc")) {
+                        structMallocSwitcher = true;
+                     }
             varDecl.init.accept(this);
             initAssign(varDecl);
             varTable.define(varDecl.name.num, varDecl.type);
          }
+
       }
    }
+
    public void visit(FunctionDecl functionDecl) {}
 
    public void visit(FunctionDef functionDef) {
       defineFunction(functionDef);
    }
 
-   public void visit(TypeDecl typeDecl) {
-      typeDecl.type.accept(this);
-   }
+   public void visit(TypeDecl typeDecl) {}
 
    public void visit(InitValue initValue) {
       initValue.expr.accept(this);
@@ -257,7 +391,9 @@ public class Translator implements Visitor {
    public void visit(IntType intType) {}
    public void visit(VoidType voidType) {}
    public void visit(PointerType pointerType) {}
-   public void visit(StructType structType) {}
+   public void visit(StructType structType) {
+
+   }
    public void visit(UnionType unionType) {}
 
 
@@ -337,12 +473,12 @@ public class Translator implements Visitor {
          binaryExpr.left.accept(this);
          if (!isBoolExpr(B1)) {
             curFunction.body.add(new IfNEZGoto(B1.address, B.True));
-            curFunction.body.add(new Goto(B.False));
+            curFunction.body.add(new Goto(B1.False));
          }
          curFunction.body.add(B1.False);
          binaryExpr.right.accept(this);
          if (!isBoolExpr(B2)) {
-            curFunction.body.add(new IfNEZGoto(B2.address, B.True));
+            curFunction.body.add(new IfNEZGoto(B2.address, B2.True));
             curFunction.body.add(new Goto(B.False));
          }
       }
@@ -354,13 +490,13 @@ public class Translator implements Visitor {
          B2.False = B.False;
          binaryExpr.left.accept(this);
          if (!isBoolExpr(B1)) {
-            curFunction.body.add(new IfNEZGoto(B1.address, B.True));
+            curFunction.body.add(new IfNEZGoto(B1.address, B1.True));
             curFunction.body.add(new Goto(B.False));
          }
          curFunction.body.add(B1.True);
          binaryExpr.right.accept(this);
          if (!isBoolExpr(B2)) {
-            curFunction.body.add(new IfNEZGoto(B2.address, B.True));
+            curFunction.body.add(new IfNEZGoto(B2.address, B2.True));
             curFunction.body.add(new Goto(B.False));
          }
       }
@@ -411,6 +547,7 @@ public class Translator implements Visitor {
       binaryExpr.left.accept(this);
       binaryExpr.right.accept(this);
       binaryExpr.address = new Temp();
+      curFunction.vars.add(new Variable(binaryExpr.address, 4));
 
       if (!((op == ArithmeticOp.ADD || op == ArithmeticOp.SUB) && binaryExpr.left.returnType instanceof PointerType)) {
          curFunction.body.add(new ArithmeticExpr(binaryExpr.address, binaryExpr.left.address, op, binaryExpr.right.address));
@@ -420,19 +557,33 @@ public class Translator implements Visitor {
          baseSize = ((PointerType)(binaryExpr.left.returnType)).baseType.size;
          if (op == ArithmeticOp.ADD || (op == ArithmeticOp.SUB && binaryExpr.right instanceof IntConst)) {
             Temp temp = new Temp();
+            curFunction.vars.add(new Variable(temp, 4));
             curFunction.body.add(new ArithmeticExpr(temp, binaryExpr.right.address, ArithmeticOp.MUL, new IntegerConst(baseSize)));
             curFunction.body.add(new ArithmeticExpr(binaryExpr.address, binaryExpr.left.address, op, temp));
          }
          if (op == ArithmeticOp.SUB) {
             Temp tmp = new Temp();
+            curFunction.vars.add(new Variable(tmp, 4));
             curFunction.body.add(new ArithmeticExpr(tmp, binaryExpr.left.address, op, binaryExpr.right.address));
-            curFunction.body.add(new ArithmeticExpr(binaryExpr.address, tmp, ArithmeticOp.DIV, new IntegerConst(baseSize)));
+            IntegerConst integerConst = new IntegerConst(baseSize);
+            curFunction.vars.add(new Variable(integerConst, 4));
+            curFunction.body.add(new ArithmeticExpr(binaryExpr.address, tmp, ArithmeticOp.DIV, integerConst));
          }
       }
    }
 
+   boolean structMallocSwitcher = false;
    public void assignExpr(BinaryExpr binaryExpr) {
+      if (binaryExpr.right instanceof CastExpr && ((CastExpr) binaryExpr.right).expr instanceof FunctionCall && ((((Identifier)((FunctionCall) ((CastExpr) binaryExpr.right).expr).expr).symbol.toString().equals("malloc")))) {
+         if (binaryExpr.left.returnType instanceof PointerType && ((PointerType)binaryExpr.left.returnType).baseType instanceof StructType)
+            structMallocSwitcher = true;
+      }
+      if (binaryExpr.right instanceof FunctionCall && ((Identifier)((FunctionCall) binaryExpr.right).expr).symbol.toString().equals("malloc")) {
+         if (binaryExpr.left.returnType instanceof PointerType && ((PointerType)binaryExpr.left.returnType).baseType instanceof StructType)
+            structMallocSwitcher = true;
+      }
       binaryExpr.address = new Temp();
+      curFunction.vars.add(new Variable(binaryExpr.address, 4));
       Expr source = null;
       switch (binaryExpr.op) {
          case ASSIGN:
@@ -480,7 +631,12 @@ public class Translator implements Visitor {
             arithmeticExpr((BinaryExpr)source);
             break;
       }
-
+      if (binaryExpr.left.returnType instanceof RecordType){
+         binaryExpr.left.accept(this);
+         SUAssign(binaryExpr.left.address, source.address, (RecordType)binaryExpr.left.returnType);
+         curFunction.body.add(new Assign(binaryExpr.address, binaryExpr.left.address));
+         return;
+      }
       if (!(
               binaryExpr.left instanceof UnaryExpr && ((UnaryExpr) binaryExpr.left).op == UnaryOp.ASTERISK
               || binaryExpr.left instanceof PointerAccess
@@ -495,17 +651,20 @@ public class Translator implements Visitor {
          /*TODO: check that the address of expression is a reference*/
          if (binaryExpr.left instanceof UnaryExpr) {
             binaryExpr.left.accept(this);
-            curFunction.body.add(new MemoryWrite(((UnaryExpr) binaryExpr.left).expr.address, source.address, ((PointerType)((UnaryExpr) binaryExpr.left).expr.returnType).baseType.size));
+            curFunction.body.add(new MemoryWrite(((UnaryExpr) binaryExpr.left).expr.address, source.address, ((PointerType) ((UnaryExpr) binaryExpr.left).expr.returnType).baseType.size));
+            curFunction.body.add(new MemoryRead(binaryExpr.address, ((UnaryExpr) binaryExpr.left).expr.address, 4));
          }
          if (binaryExpr.left instanceof PointerAccess) {
             PointerAccess pointerAccess = (PointerAccess) binaryExpr.left;
             pointerAccess.body.accept(this);
             Temp temp = new Temp();
+            curFunction.vars.add(new Variable(temp, 4));
             curFunction.body.add(new MemoryRead(temp, pointerAccess.body.address, ((PointerType) pointerAccess.body.returnType).baseType.size));
             RecordType type = (RecordType)((PointerType) pointerAccess.body.returnType).baseType;
             int offset = type.members.getOffset(pointerAccess.attribute.num);
             int size = type.members.getType(pointerAccess.attribute.num).size;
             curFunction.body.add(new ArrayWrite(temp, offset, source.address, size));
+            curFunction.body.add(new ArrayRead(binaryExpr.address, temp, offset, size));
          }
          if (binaryExpr.left instanceof RecordAccess) {
             RecordAccess recordAccess = (RecordAccess)binaryExpr.left;
@@ -516,16 +675,45 @@ public class Translator implements Visitor {
          }
          if (binaryExpr.left instanceof ArrayAccess) {
             ArrayAccess arrayAccess = (ArrayAccess) binaryExpr.left;
-            Pair pair = calArrayAccess(arrayAccess);
-            Address arrayAddress = pair.arrayAddress;
-            int offset = pair.offset;
-            int baseSize = pair.baseSize;
-            if (offset > 0)
-               curFunction.body.add(new ArrayWrite(arrayAddress, offset, source.address, baseSize));
-            if (offset == 0)
-               curFunction.body.add(new MemoryWrite(arrayAddress, source.address, baseSize));
-            if (offset < 0)
-               curFunction.body.add(new Assign(arrayAddress, source.address));
+            if (digArrayAccessBaseReturnType(arrayAccess) instanceof ArrayType) {
+               Pair pair = calArrayAccess(arrayAccess);
+               Address arrayAddress = pair.arrayAddress;
+               int offset = pair.offset;
+               int baseSize = pair.baseSize;
+               if (offset > 0) {
+                  curFunction.body.add(new ArrayWrite(arrayAddress, offset, source.address, baseSize));
+                  curFunction.body.add(new ArrayRead(binaryExpr.address, arrayAddress, offset, 4));
+               }
+               if (offset == 0) {
+                  curFunction.body.add(new MemoryWrite(arrayAddress, source.address, baseSize));
+                  curFunction.body.add(new MemoryRead(binaryExpr.address, arrayAddress, baseSize));
+               }
+               if (offset < 0)
+                  curFunction.body.add(new MemoryWrite(arrayAddress, source.address, baseSize));
+                  curFunction.body.add(new MemoryRead(binaryExpr.address, arrayAddress, baseSize));
+            }
+            else {
+               Expr expr = arrayAccess;
+               LinkedList<Address> offsets = new LinkedList<>();
+               while (expr instanceof ArrayAccess) {
+                  ((ArrayAccess) expr).subscript.accept(this);
+                  offsets.push(((ArrayAccess) expr).subscript.address);
+                  expr = ((ArrayAccess) expr).body;
+               }
+               expr.accept(this);
+               Address temp = expr.address;
+               while (offsets.size() > 1) {
+                  temp = pointerArrayAccess(temp, offsets.pop());
+               }
+               Temp tmp = new Temp();
+               curFunction.vars.add(new Variable(tmp, 4));
+               Temp offset = new Temp();
+               curFunction.vars.add(new Variable(offset, 4));
+               curFunction.body.add(new ArithmeticExpr(offset, new IntegerConst(4), ArithmeticOp.MUL, offsets.pop()));
+               curFunction.body.add(new ArithmeticExpr(tmp, temp, ArithmeticOp.ADD, offset));
+               curFunction.body.add(new MemoryWrite(tmp, source.address, 4));
+               curFunction.body.add(new MemoryRead(binaryExpr.address, tmp, 4));
+            }
          }
       }
    }
@@ -540,6 +728,7 @@ public class Translator implements Visitor {
    public void visit(EmptyExpr  emptyExpr) {/* nothing */}
    public void visit(SizeofExpr sizeofExpr) {
       sizeofExpr.address = new IntegerConst((int)sizeofExpr.returnType.value);
+      curFunction.vars.add(new Variable(sizeofExpr.address, 4));
    }
    public void visit(CastExpr castExpr) {
       castExpr.expr.accept(this);
@@ -557,40 +746,73 @@ public class Translator implements Visitor {
          B1.False = B.True;
          B1.accept(this);
          if (!isBoolExpr(B1)) {
-            curFunction.body.add(new IfNEZGoto(B1.address, B.True));
-            curFunction.body.add(new Goto(B.False));
+            curFunction.body.add(new IfNEZGoto(B1.address, B1.True));
+            curFunction.body.add(new Goto(B1.False));
          }
          return;
       }
-      unaryExpr.expr.accept(this);
       switch (unaryExpr.op) {
          case INC:
-            curFunction.body.add(new ArithmeticExpr(unaryExpr.expr.address, unaryExpr.expr.address, ArithmeticOp.ADD, new IntegerConst(1)));
-            unaryExpr.address = unaryExpr.expr.address;
+           // if (unaryExpr.expr.returnType instanceof PointerType)
+           {
+               BinaryExpr binaryExpr = new BinaryExpr(unaryExpr.expr, BinaryOp.ASSIGN_ADD, new IntConst(1));
+               assignExpr(binaryExpr);
+               unaryExpr.address = binaryExpr.address;
+            }
+         /*
+            else
+            {
+               unaryExpr.expr.accept(this);
+               curFunction.body.add(new ArithmeticExpr(unaryExpr.expr.address, unaryExpr.expr.address, ArithmeticOp.ADD, new IntegerConst(1)));
+               unaryExpr.address = unaryExpr.expr.address;
+            }
+           */
             break;
          case DEC:
-            curFunction.body.add(new ArithmeticExpr(unaryExpr.expr.address, unaryExpr.expr.address, ArithmeticOp.SUB, new IntegerConst(1)));
-            unaryExpr.address = unaryExpr.expr.address;
+           // if (unaryExpr.expr.returnType instanceof PointerType)
+            {
+               BinaryExpr binaryExpr = new BinaryExpr(unaryExpr.expr, BinaryOp.ASSIGN_SUB, new IntConst(1));
+               assignExpr(binaryExpr);
+               unaryExpr.address = binaryExpr.address;
+            }
+         /*
+            else {
+               unaryExpr.expr.accept(this);
+               curFunction.body.add(new ArithmeticExpr(unaryExpr.expr.address, unaryExpr.expr.address, ArithmeticOp.ADD, new IntegerConst(1)));
+               unaryExpr.address = unaryExpr.expr.address;
+            }
+           */
+
             break;
          case SIZEOF:
+            unaryExpr.expr.accept(this);
             unaryExpr.address = new IntegerConst((int) unaryExpr.returnType.value);
             break;
          case AMPERSAND:
+            unaryExpr.expr.accept(this);
             unaryExpr.address = new Temp();
+            curFunction.vars.add(new Variable(unaryExpr.address, 4));
             curFunction.body.add(new AddressOf(unaryExpr.address, (Name)unaryExpr.expr.address));
             break;
          case ASTERISK:
+            unaryExpr.expr.accept(this);
             unaryExpr.address = new Temp();
+            curFunction.vars.add(new Variable(unaryExpr.address, 4));
             curFunction.body.add(new MemoryRead(unaryExpr.address, unaryExpr.expr.address, ((PointerType) unaryExpr.expr.returnType).baseType.size));
             break;
          case PLUS:
+            unaryExpr.expr.accept(this);
             break;
          case MINUS:
+            unaryExpr.expr.accept(this);
             unaryExpr.address = new Temp();
+            curFunction.vars.add(new Variable(unaryExpr.address, 4));
             curFunction.body.add(new ArithmeticExpr(unaryExpr.address, ArithmeticOp.MINUS, unaryExpr.expr.address));
             break;
          case TILDE:
+            unaryExpr.expr.accept(this);
             unaryExpr.address = new Temp();
+            curFunction.vars.add(new Variable(unaryExpr.address, 4));
             curFunction.body.add(new ArithmeticExpr(unaryExpr.address, ArithmeticOp.TILDE, unaryExpr.expr.address));
             break;
       }
@@ -599,11 +821,13 @@ public class Translator implements Visitor {
    public void visit(PointerAccess pointerAccess) {
       pointerAccess.body.accept(this);
       Temp temp = new Temp();
+      curFunction.vars.add(new Variable(temp, 4));
       curFunction.body.add(new MemoryRead(temp, pointerAccess.body.address, ((PointerType) pointerAccess.body.returnType).baseType.size));
       RecordType type = (RecordType)((PointerType) pointerAccess.body.returnType).baseType;
       int offset = type.members.getOffset(pointerAccess.attribute.num);
       int size = type.members.getType(pointerAccess.attribute.num).size;
       pointerAccess.address = new Temp();
+      curFunction.vars.add(new Variable(pointerAccess.address, 4));
       curFunction.body.add(new ArrayRead(pointerAccess.address, temp, offset, size));
    }
 
@@ -612,21 +836,37 @@ public class Translator implements Visitor {
       int offset = ((RecordType)recordAccess.body.returnType).members.getOffset(recordAccess.attribute.num);
       int size = ((RecordType) recordAccess.body.returnType).members.getType(recordAccess.attribute.num).size;
       recordAccess.address = new Temp();
+      curFunction.vars.add(new Variable(recordAccess.address, 4));
       curFunction.body.add(new ArrayRead(recordAccess.address, recordAccess.body.address, offset, size));
    }
 
    public void visit(SelfDecrement selfDecrement) {
-      selfDecrement.body.accept(this);
+     // selfDecrement.body.accept(this);
+      BinaryExpr binaryExpr = new BinaryExpr(selfDecrement.body, BinaryOp.ASSIGN_SUB, new IntConst(1));
       selfDecrement.address = new Temp();
-      curFunction.body.add(new Assign(selfDecrement.address, selfDecrement.body.address));
-      curFunction.body.add(new ArithmeticExpr(selfDecrement.body.address, selfDecrement.body.address, ArithmeticOp.SUB, new IntegerConst(1)));
+      curFunction.vars.add(new Variable(selfDecrement.address, 4));
+      assignExpr(binaryExpr);
+      curFunction.body.add(new ArithmeticExpr(selfDecrement.address, binaryExpr.address, ArithmeticOp.ADD, new IntegerConst(1)));
+      //curFunction.body.add(new Assign(selfDecrement.address, selfDecrement.body.address));
+      //curFunction.body.add(new ArithmeticExpr(selfDecrement.body.address, selfDecrement.body.address, ArithmeticOp.SUB, new IntegerConst(1)));
    }
 
    public void visit(SelfIncrement selfIncrement) {
-      selfIncrement.body.accept(this);
+      //selfIncrement.body.accept(this);
+      BinaryExpr binaryExpr = new BinaryExpr(selfIncrement.body, BinaryOp.ASSIGN_ADD, new IntConst(1));
       selfIncrement.address = new Temp();
-      curFunction.body.add(new Assign(selfIncrement.address, selfIncrement.body.address));
-      curFunction.body.add(new ArithmeticExpr(selfIncrement.body.address, selfIncrement.body.address, ArithmeticOp.ADD, new IntegerConst(1)));
+      curFunction.vars.add(new Variable(selfIncrement.address, 4));
+      assignExpr(binaryExpr);
+      curFunction.body.add(new ArithmeticExpr(selfIncrement.address, binaryExpr.address, ArithmeticOp.SUB, new IntegerConst(1)));
+      //curFunction.body.add(new Assign(selfIncrement.address, selfIncrement.body.address));
+      //curFunction.body.add(new ArithmeticExpr(selfIncrement.body.address, selfIncrement.body.address, ArithmeticOp.ADD, new IntegerConst(1)));
+   }
+
+   public Type digArrayAccessBaseReturnType(ArrayAccess arrayAccess) {
+      Expr tmp = arrayAccess;
+      while (tmp instanceof ArrayAccess)
+         tmp = ((ArrayAccess) tmp).body;
+      return tmp.returnType;
    }
 
    public Pair calArrayAccess(ArrayAccess arrayAccess) {
@@ -662,7 +902,7 @@ public class Translator implements Visitor {
       LinkedList<Integer> arraySizeList = new LinkedList<>(); /*the top is the lestmost*/
       //Type type = varTable.getType(((Identifier) tmp).symbol.num);
       Type type = tmp.returnType;
-      while (type instanceof PointerType) {
+      while (type instanceof ArrayType) {
          arraySizeList.push(((PointerType) type).baseType.size);
          type = ((PointerType) type).baseType;
       }
@@ -675,12 +915,13 @@ public class Translator implements Visitor {
          boolean partial =  false;
          if (subscriptList.size() != arraySizeList.size()) {
             partial = true;
-            System.out.println("The size of subscriptList and the size of arraySizeList is not equal");
+            System.out.println("1.The size of subscriptList and the size of arraySizeList is not equal");
          }
          for (int i = 0; i < subscriptList.size(); i++){
-            offset += subscriptList.get(i) * arraySizeList.get(i);
+            offset += subscriptList.get(subscriptList.size() - 1 - i) * arraySizeList.get(arraySizeList.size() - 1 - i);
          }
          arrayAccess.address = new Temp();
+         curFunction.vars.add(new Variable(arrayAccess.address, 4));
          if (partial) {
             curFunction.body.add(new ArithmeticExpr(arrayAccess.address, arrayAddress, ArithmeticOp.ADD, new IntegerConst(offset)));
             offset = -1;
@@ -690,20 +931,25 @@ public class Translator implements Visitor {
       else {
          boolean partial = false;
          if (subscriptAddressList.size() != arraySizeList.size()) {
-            System.out.println("The size of subscriptAddressList and the size of arraySizeList is not equal");
+            System.out.println("2.The size of subscriptAddressList and the size of arraySizeList is not equal");
+            System.out.println("size are " + subscriptAddressList.size() + "  " + arraySizeList.size());
             partial = true;
          }
          Address sum = new Temp();
          curFunction.body.add(new Assign(sum, new IntegerConst(0)));
+         curFunction.vars.add(new Variable(sum, 4));
          for (int i = 0; i < subscriptAddressList.size(); i++) {
             Temp temp = new Temp();
+            curFunction.vars.add(new Variable(temp, 4));
             if (subscriptAddressList.get(i) == null) System.out.println("index "+ i + " is null");
-            curFunction.body.add(new ArithmeticExpr(temp, subscriptAddressList.get(i), ArithmeticOp.MUL, new IntegerConst(arraySizeList.get(i))));
+            curFunction.body.add(new ArithmeticExpr(temp, subscriptAddressList.get(subscriptAddressList.size() - 1 - i), ArithmeticOp.MUL, new IntegerConst(arraySizeList.get(arraySizeList.size() - 1 - i))));
             curFunction.body.add(new ArithmeticExpr(sum, sum, ArithmeticOp.ADD, temp));
          }
          Temp temp = new Temp();
+         curFunction.vars.add(new Variable(temp, 4));
          curFunction.body.add(new ArithmeticExpr(temp, arrayAddress, ArithmeticOp.ADD, sum));
          arrayAccess.address = new Temp();
+         curFunction.vars.add(new Variable(arrayAccess.address, 4));
          if (!partial) return new Pair(temp, baseSize);
          else {
             curFunction.body.add(new Assign(arrayAccess.address, temp));
@@ -711,50 +957,125 @@ public class Translator implements Visitor {
          }
       }
    }
+
    public void visit(ArrayAccess arrayAccess) {
-      Pair pair = calArrayAccess(arrayAccess);
-      Address arrayAddress = pair.arrayAddress;
-      int offset = pair.offset;
-      int baseSize = pair.baseSize;
-      if (offset > 0)
-         curFunction.body.add(new ArrayRead(arrayAccess.address, arrayAddress, offset, baseSize));
-      if (offset == 0)
-         curFunction.body.add(new MemoryRead(arrayAccess.address, arrayAddress, baseSize));
+      Type type = digArrayAccessBaseReturnType(arrayAccess);
+      if (type instanceof ArrayType) {
+         Pair pair = calArrayAccess(arrayAccess);
+         Address arrayAddress = pair.arrayAddress;
+         int offset = pair.offset;
+         int baseSize = pair.baseSize;
+         if (offset > 0)
+            curFunction.body.add(new ArrayRead(arrayAccess.address, arrayAddress, offset, baseSize));
+         if (offset == 0)
+            curFunction.body.add(new MemoryRead(arrayAccess.address, arrayAddress, baseSize));
+      }
+      else {
+         if (!(type instanceof PointerType))
+            throw new RuntimeException("ArrayAccess error");
+         Expr expr = arrayAccess;
+         LinkedList<Address> offsets = new LinkedList<>();
+         while (expr instanceof ArrayAccess) {
+            ((ArrayAccess) expr).subscript.accept(this);
+            offsets.push(((ArrayAccess) expr).subscript.address);
+            expr = ((ArrayAccess) expr).body;
+         }
+         expr.accept(this);
+         Address temp = expr.address;
+         while (!offsets.isEmpty()) {
+            temp = pointerArrayAccess(temp, offsets.pop());
+         }
+         arrayAccess.address = temp;
+      }
+   }
+
+   public Address pointerArrayAccess(Address address, Address offset) {
+      if (offset == null)
+         System.out.println("pointerArrayAccess error");
+      Temp temp = new Temp();
+      curFunction.vars.add(new Variable(temp, 4));
+      Temp read = new Temp();
+      curFunction.vars.add(new Variable(read, 4));
+      Temp tempOffset = new Temp();
+      curFunction.vars.add(new Variable(tempOffset, 4));
+      curFunction.body.add(new ArithmeticExpr(tempOffset, offset, ArithmeticOp.MUL, new IntegerConst(4)));
+      curFunction.body.add(new ArithmeticExpr(read, address, ArithmeticOp.ADD, tempOffset));
+      curFunction.body.add(new MemoryRead(temp, read, 4));
+      return temp;
+   }
+
+   /*there are new struct and array here*/
+
+   public void SUAssign(Address dest, Address src, RecordType recordType) {
+      Iterator<Map.Entry<Integer, Type>> it = recordType.members.list.entrySet().iterator();
+      while (it.hasNext()) {
+         Map.Entry<Integer, Type> entry = it.next();
+         if (entry.getKey() == null || entry.getKey() == 0)
+            it.remove();
+         Temp temp = new Temp();
+         curFunction.vars.add(new Variable(temp, 4));
+         int offset = recordType.members.getOffset(entry.getKey());
+         curFunction.body.add(new ArrayRead(temp, src, offset, 4));
+         if (recordType.members.getType(entry.getKey()) instanceof ArrayType){
+            ArrayType arrayType = (ArrayType)recordType.members.getType(entry.getKey());
+            Temp destArray = new Temp();
+            curFunction.vars.add(new Variable(destArray, 4));
+            curFunction.body.add(new ArrayRead(destArray, dest, offset, 4));
+            for (int i = 0; i < arrayType.size; i += 4) {
+               Temp tmp = new Temp();
+               curFunction.vars.add(new Variable(tmp, 4));
+               curFunction.body.add(new ArrayRead(tmp, temp, i, 4));
+               curFunction.body.add(new ArrayWrite(destArray, i, tmp, 4));
+            }
+         }
+         else {
+            curFunction.body.add(new ArrayWrite(dest, offset, temp, 4));
+         }
+      }
    }
 
    public void visit(FunctionCall functionCall) {
       functionCall.args.accept(this);
-      System.out.println(functionCall.args.exprs.size());
+      LinkedList<Param> tmpList = new LinkedList<>();
       for (Expr expr : functionCall.args.exprs) {
          if (expr.address == null)
             System.out.println("find null here");
-         if (expr.returnType instanceof RecordType)
-            curFunction.body.add(new MemoryParam(expr.address, expr.returnType.size));
+         if (expr.returnType instanceof StructType) {
+            /*new record here*/
+            Temp temp = new Temp();
+            //curFunction.vars.add(new Variable(temp, expr.returnType.size + 4));
+            curFunction.vars.add(new Variable(temp, expr.returnType.size));
+            newStruct(temp, (StructType) expr.returnType);
+            SUAssign(temp, expr.address, (StructType)expr.returnType);
+            tmpList.add(new MemoryParam(temp, expr.returnType.size));
+         }
          else
-            curFunction.body.add(new BasicParam(expr.address));
+            tmpList.add(new BasicParam(expr.address));
       }
-/*
-      Param returnValue = null;
-      Type type = ((FunctionType)varTable.getType(((Identifier) functionCall.expr).symbol.num)).returnType;
-      if (type instanceof RecordType) {
-         returnValue = new MemoryParam(curReturn.expr.address, type.size);
+
+      for (int i = 0; i < tmpList.size(); i++) {
+         curFunction.body.add(tmpList.get(i));
       }
-      else {
-         if (!(type instanceof VoidType))
-            returnValue = new BasicParam(curReturn.expr.address);
-      }
-*/
+
       Integer functionName;
       functionName = ((Identifier) functionCall.expr).symbol.num;
-      String name = ((Identifier) functionCall.expr).symbol.toString();
+      String name = "_" + ((Identifier) functionCall.expr).symbol.toString();
 
       functionCall.address = new Temp();
+      curFunction.vars.add(new Variable(functionCall.address, 4));
+      if (name.equals("_printf"))
+         curFunction.body.add(new Assign(new Name("_printf_cnt", true), new IntegerConst(functionCall.args.exprs.size())));
+      if (name.equals("_malloc") && structMallocSwitcher == true) {
+         curFunction.body.add(new Call(functionCall.address, functionName, name + "_struct", functionCall.args.exprs.size()));
+         structMallocSwitcher = false;
+         return;
+      }
       curFunction.body.add(new Call(functionCall.address, functionName, name, functionCall.args.exprs.size()));
    }
 
    public void visit(Identifier identifier) {
       identifier.address = addressTable.getAddress(identifier.symbol.num);
-      if (identifier.address == null) System.out.println(identifier.symbol.toString());
+      if (identifier.address == null) throw new RuntimeException("Identifier error!");
    }
 
    public void visit(IntConst intConst) {
@@ -764,10 +1085,20 @@ public class Translator implements Visitor {
       charConst.address = new IntegerConst((int) charConst.value);
    }
    public void visit(StringConst stringConst) {
-      Address tmp = new StringAddressConst(stringConst.value);
-      stringConst.address = new Temp();
-      curFunction.body.add(new AddressOf(stringConst.address, tmp));
+      stringCnt++;
+      Address tmp;
+      if (curFunction.name.equals("_start")) {
+         tmp = new Name("str_ptr_" + stringCnt, true);
+      }
+      else {
+         tmp = new Temp();
+      }
+      curFunction.vars.add(new Variable(tmp, 4));
+      curFunction.StringAddressList.add(new StringPair(tmp, stringConst.value));
+      ir.stringAddressConstList.add(new StringPair(tmp, stringConst.value));
+      stringConst.address = tmp;
    }
+
    public void visit(Symbol symbol) {/*nothing*/}
 
    /*------------------STATEMENTS----------------------------*/
@@ -792,7 +1123,7 @@ public class Translator implements Visitor {
    public void visit(IfStmt ifStmt) {
       Expr B = ifStmt.condition;
       Label next = new Label();
-      if (!(ifStmt.alternative instanceof EmptyExpr)) {
+      if ((ifStmt.alternative instanceof EmptyExpr)) {
          B.True = new Label();
          B.False = next;
 
@@ -866,21 +1197,85 @@ public class Translator implements Visitor {
          curFunction.body.add(new Return());
          return;
       }
+      if (isBoolExpr(returnStmt.expr) && returnStmt.expr instanceof BinaryExpr) {
+         returnStmt.expr.True = new Label();
+         returnStmt.expr.False = new Label();
+         andOrExpr((BinaryExpr) returnStmt.expr);
+         curFunction.body.add(returnStmt.expr.True);
+         curFunction.body.add(new Return(new BasicParam(new IntegerConst(1))));
+         curFunction.body.add(returnStmt.expr.False);
+         curFunction.body.add(new Return(new BasicParam(new IntegerConst(0))));
+         return;
+      }
+
       returnStmt.expr.accept(this);
       curReturn = returnStmt;
-      if (returnStmt.expr.returnType instanceof RecordType) {
-         curFunction.body.add(new Return(new MemoryParam(returnStmt.expr.address, returnStmt.expr.returnType.size)));
+   /*
+      if (returnStmt.expr.returnType instanceof StructType) {
+         Expr expr = returnStmt.expr;
+         Temp temp = new Temp();
+         curFunction.vars.add(new Variable(temp, expr.returnType.size));
+         newStruct(temp, (StructType) expr.returnType);
+         SUAssign(temp, expr.address, (RecordType)expr.returnType);
+         curFunction.body.add(new Return(new MemoryParam(temp, returnStmt.expr.returnType.size)));
       }
-      else {
+      else */
+      {
          curFunction.body.add(new Return(new BasicParam(returnStmt.expr.address)));
       }
    }
 
+   void newStruct(Address address, StructType structType) {
+      for (Decl decl : structType.declrs.decls) {
+         if (decl.type instanceof ArrayType) {
+            count++;
+            Name name = new Name("struct_member_" + count);
+            curFunction.vars.add(new Variable(name, decl.type.size + 4));
+            curFunction.body.add(new ArrayWrite(address, structType.members.getOffset(decl.name.num), name, 4));
+         }
+         else {
+            if (decl.type instanceof StructType) {
+               count++;
+               Name name = new Name("struct_member_" + count);
+               curFunction.vars.add(new Variable(name, decl.type.size));
+               //curFunction.vars.add(new Variable(name, decl.type.size + 4));
+               curFunction.body.add(new ArrayWrite(address, structType.members.getOffset(decl.name.num), name, 4));
+            }
+         }
+      }
+   }
    /*------------------------Print-----------------------*/
    public void print() throws IOException {
       for (Function function : ir.fragments) {
+         out.write((function.name + ": \n").getBytes());
+         /*
+         for (Variable variable : function.vars) {
+            variable.address.printAddress(out);
+            out.write((" " + variable.size + "\n").getBytes());
+         }
+         */
          for (Quadruple quadruple : function.body)
             quadruple.print(out);
+         out.write("\n".getBytes());
       }
    }
+
+   /*-----------------------Merge Labels----------------*/
+   public void merger() {
+      Quadruple last = null;
+      for (Function function : ir.fragments) {
+         List<Quadruple> removeList = new LinkedList();
+         for (Quadruple quadruple : function.body) {
+            if (last instanceof Label && quadruple instanceof Label) {
+               ((Label) quadruple).num = ((Label) last).num;
+               removeList.add(quadruple);
+            }
+            else last = quadruple;
+         }
+         for (Quadruple quadruple : removeList)
+            function.body.remove(quadruple);
+      }
+   }
+
 }
+

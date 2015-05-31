@@ -6,7 +6,7 @@
 
 #include "stdio.h"
 
-int n=210,h,now;
+int n=210,h,now,tmp;
 int a[1000];
 int A=48271,M=2147483647,Q,R;
 int seed=1;
@@ -29,16 +29,18 @@ void swap(int x,int y)
 }
 int pd(int x)
 {
-    for (;h<=x;++h)
+    for (;h<=x;++h) {
+    //	printf("h*(h+1)/2 = %d, x = %d\n", h*(h+1)/2, x);
         if (x==h*(h+1)/2) return 1;
-    return 0;
+	}
+	return 0;
 }
 void show()
 {
     int i;
-    for (i=0;i<now;++i)
-        printf("%d ",a[i]);
-    printf("%c",'\n');
+    for (i=0;i<now;++i);
+  //      printf("%d ",a[i]);
+  //  printf("%c",'\n');
 }
 int win()
 {
@@ -56,6 +58,7 @@ int win()
             }
     for (i=0;i<now;++i)
         if (b[i]!=i+1) return 0;
+    printf("hhhhhhhhhh\n");
     return 1;
 }
 void merge()
@@ -92,13 +95,13 @@ int main()
     Q=M/A,R=M%A;
     if (!pd(n))
     {
-        printf("Sorry, the number n must be a number s.t. there exists i satisfying n=1+2+...+i\n");
+        //printf("Sorry, the number n must be a number s.t. there exists i satisfying n=1+2+...+i\n");
         return 1;
     }
     printf("Let's start!\n");
     initialize(3654898);
     now=random()%10+1;
-    printf("%d\n",now);
+    //printf("%d\n",now);
     for (;i<now-1;++i)
     {
         a[i]=random()%10+1;
@@ -109,13 +112,16 @@ int main()
     a[now-1]=n-temp;
     show();
     merge();
-    while (!win())
+    tmp = win();
+    while (tmp == 0)
     {
+   // printf("win value of step %d is %d\n", count, tmp);
         printf("step %d:\n",++count);
         move();
         merge();
         show();
+        tmp = win();
     }
-    printf("Total: %d step(s)\n",count);
+   // printf("Total: %d step(s)\n",count);
     return 0;
 }

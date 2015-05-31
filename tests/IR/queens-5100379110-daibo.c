@@ -33,9 +33,16 @@ void search(int c) {
         for (r = 0; r < N; r++) {
             if (row[r] == 0 && d[0][r+c] == 0 && d[1][r+N-1-c] == 0) {
                 row[r] = d[0][r+c] = d[1][r+N-1-c] = 1;
-                col[c] = r;
+//                row[r] = 1;
+//				d[0][r+c] = 1;
+//				d[1][r+N-1-c] = 1;
+            
+			    col[c] = r;
                 search(c+1);
                 row[r] = d[0][r+c] = d[1][r+N-1-c] = 0;
+//				row[r] = 0;
+//				d[0][r+c] = 0;
+//				d[1][r+N-1-c] = 0;
             }
         }
     }

@@ -1,0 +1,590 @@
+<AST> 
+		<VarDecl> 
+			<IntType> 
+			<Id: n> 
+			<InitValue> 
+				<IntConst: 210> 
+		<VarDecl> 
+			<IntType> 
+			<Id: h> 
+		<VarDecl> 
+			<IntType> 
+			<Id: now> 
+		<VarDecl> 
+			<IntType> 
+			<Id: tmp> 
+		<VarDecl> 
+			<ArrayType> 
+				<IntType> 
+				<IntConst: 1000> 
+			<Id: a> 
+		<VarDecl> 
+			<IntType> 
+			<Id: A> 
+			<InitValue> 
+				<IntConst: 48271> 
+		<VarDecl> 
+			<IntType> 
+			<Id: M> 
+			<InitValue> 
+				<IntConst: 2147483647> 
+		<VarDecl> 
+			<IntType> 
+			<Id: Q> 
+		<VarDecl> 
+			<IntType> 
+			<Id: R> 
+		<VarDecl> 
+			<IntType> 
+			<Id: seed> 
+			<InitValue> 
+				<IntConst: 1> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: random> 
+					<VarDecl> 
+						<IntType> 
+						<Id: tempseed> 
+						<InitValue> 
+							<BinaryExpr> 
+								<SUB> 
+								<BinaryExpr> 
+									<MUL> 
+									<Id: A> 
+									<BinaryExpr> 
+										<MOD> 
+										<Id: seed> 
+										<Id: Q> 
+								<BinaryExpr> 
+									<MUL> 
+									<Id: R> 
+									<BinaryExpr> 
+										<DIV> 
+										<Id: seed> 
+										<Id: Q> 
+					<If> 
+						<BinaryExpr> 
+							<GE> 
+							<Id: tempseed> 
+							<IntConst: 0> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: seed> 
+							<Id: tempseed> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: seed> 
+							<BinaryExpr> 
+								<ADD> 
+								<Id: tempseed> 
+								<Id: M> 
+					<ReturnStmt> 
+						<Id: seed> 
+		<FunctionDef> 
+			<VoidType> 
+			<Id: initialize> 
+				<VarDecl> 
+					<IntType> 
+					<Id: val> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<Id: seed> 
+						<Id: val> 
+		<FunctionDef> 
+			<VoidType> 
+			<Id: swap> 
+				<VarDecl> 
+					<IntType> 
+					<Id: x> 
+				<VarDecl> 
+					<IntType> 
+					<Id: y> 
+					<VarDecl> 
+						<IntType> 
+						<Id: temp> 
+						<InitValue> 
+							<ArrayAccess> 
+								<Id: a> 
+								<Id: x> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<ArrayAccess> 
+							<Id: a> 
+							<Id: x> 
+						<ArrayAccess> 
+							<Id: a> 
+							<Id: y> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<ArrayAccess> 
+							<Id: a> 
+							<Id: y> 
+						<Id: temp> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: pd> 
+				<VarDecl> 
+					<IntType> 
+					<Id: x> 
+					<ForLoop> 
+						<BinaryExpr> 
+							<LE> 
+							<Id: h> 
+							<Id: x> 
+						<UnaryExpr> 
+							<INC> 
+							<Id: h> 
+								<If> 
+									<BinaryExpr> 
+										<EQ> 
+										<Id: x> 
+										<BinaryExpr> 
+											<DIV> 
+											<BinaryExpr> 
+												<MUL> 
+												<Id: h> 
+												<BinaryExpr> 
+													<ADD> 
+													<Id: h> 
+													<IntConst: 1> 
+											<IntConst: 2> 
+									<ReturnStmt> 
+										<IntConst: 1> 
+					<ReturnStmt> 
+						<IntConst: 0> 
+		<FunctionDef> 
+			<VoidType> 
+			<Id: show> 
+					<VarDecl> 
+						<IntType> 
+						<Id: i> 
+					<ForLoop> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: i> 
+							<IntConst: 0> 
+						<BinaryExpr> 
+							<LT> 
+							<Id: i> 
+							<Id: now> 
+						<UnaryExpr> 
+							<INC> 
+							<Id: i> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: win> 
+					<VarDecl> 
+						<IntType> 
+						<Id: i> 
+					<VarDecl> 
+						<IntType> 
+						<Id: j> 
+						<InitValue> 
+							<IntConst: 0> 
+					<VarDecl> 
+						<ArrayType> 
+							<IntType> 
+							<IntConst: 1000> 
+						<Id: b> 
+					<VarDecl> 
+						<IntType> 
+						<Id: temp> 
+					<If> 
+						<BinaryExpr> 
+							<NE> 
+							<Id: now> 
+							<Id: h> 
+						<ReturnStmt> 
+							<IntConst: 0> 
+					<ForLoop> 
+						<Id: j> 
+						<BinaryExpr> 
+							<LT> 
+							<Id: j> 
+							<Id: now> 
+						<UnaryExpr> 
+							<INC> 
+							<Id: j> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<ArrayAccess> 
+								<Id: b> 
+								<Id: j> 
+							<ArrayAccess> 
+								<Id: a> 
+								<Id: j> 
+					<ForLoop> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: i> 
+							<IntConst: 0> 
+						<BinaryExpr> 
+							<LT> 
+							<Id: i> 
+							<BinaryExpr> 
+								<SUB> 
+								<Id: now> 
+								<IntConst: 1> 
+						<UnaryExpr> 
+							<INC> 
+							<Id: i> 
+						<ForLoop> 
+							<BinaryExpr> 
+								<ASSIGN> 
+								<Id: j> 
+								<BinaryExpr> 
+									<ADD> 
+									<Id: i> 
+									<IntConst: 1> 
+							<BinaryExpr> 
+								<LT> 
+								<Id: j> 
+								<Id: now> 
+							<UnaryExpr> 
+								<INC> 
+								<Id: j> 
+							<If> 
+								<BinaryExpr> 
+									<GT> 
+									<ArrayAccess> 
+										<Id: b> 
+										<Id: i> 
+									<ArrayAccess> 
+										<Id: b> 
+										<Id: j> 
+										<BinaryExpr> 
+											<ASSIGN> 
+											<Id: temp> 
+											<ArrayAccess> 
+												<Id: b> 
+												<Id: i> 
+										<BinaryExpr> 
+											<ASSIGN> 
+											<ArrayAccess> 
+												<Id: b> 
+												<Id: i> 
+											<ArrayAccess> 
+												<Id: b> 
+												<Id: j> 
+										<BinaryExpr> 
+											<ASSIGN> 
+											<ArrayAccess> 
+												<Id: b> 
+												<Id: j> 
+											<Id: temp> 
+					<ForLoop> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: i> 
+							<IntConst: 0> 
+						<BinaryExpr> 
+							<LT> 
+							<Id: i> 
+							<Id: now> 
+						<UnaryExpr> 
+							<INC> 
+							<Id: i> 
+						<If> 
+							<BinaryExpr> 
+								<NE> 
+								<ArrayAccess> 
+									<Id: b> 
+									<Id: i> 
+								<BinaryExpr> 
+									<ADD> 
+									<Id: i> 
+									<IntConst: 1> 
+							<ReturnStmt> 
+								<IntConst: 0> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: hhhhhhhhhh
+> 
+					<ReturnStmt> 
+						<IntConst: 1> 
+		<FunctionDef> 
+			<VoidType> 
+			<Id: merge> 
+					<VarDecl> 
+						<IntType> 
+						<Id: i> 
+						<InitValue> 
+							<IntConst: 0> 
+					<ForLoop> 
+						<Id: i> 
+						<BinaryExpr> 
+							<LT> 
+							<Id: i> 
+							<Id: now> 
+						<UnaryExpr> 
+							<INC> 
+							<Id: i> 
+						<If> 
+							<UnaryExpr> 
+								<NOT> 
+								<ArrayAccess> 
+									<Id: a> 
+									<Id: i> 
+									<VarDecl> 
+										<IntType> 
+										<Id: j> 
+									<ForLoop> 
+										<BinaryExpr> 
+											<ASSIGN> 
+											<Id: j> 
+											<BinaryExpr> 
+												<ADD> 
+												<Id: i> 
+												<IntConst: 1> 
+										<BinaryExpr> 
+											<LT> 
+											<Id: j> 
+											<Id: now> 
+										<UnaryExpr> 
+											<INC> 
+											<Id: j> 
+										<If> 
+											<BinaryExpr> 
+												<NE> 
+												<ArrayAccess> 
+													<Id: a> 
+													<Id: j> 
+												<IntConst: 0> 
+													<FunctionCall> 
+														<Id: swap> 
+														<ExprList> 
+															<Id: i> 
+															<Id: j> 
+													<BreakStmt> 
+					<ForLoop> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: i> 
+							<IntConst: 0> 
+						<BinaryExpr> 
+							<LT> 
+							<Id: i> 
+							<Id: now> 
+						<UnaryExpr> 
+							<INC> 
+							<Id: i> 
+						<If> 
+							<UnaryExpr> 
+								<NOT> 
+								<ArrayAccess> 
+									<Id: a> 
+									<Id: i> 
+									<BinaryExpr> 
+										<ASSIGN> 
+										<Id: now> 
+										<Id: i> 
+									<BreakStmt> 
+		<FunctionDef> 
+			<VoidType> 
+			<Id: move> 
+					<VarDecl> 
+						<IntType> 
+						<Id: i> 
+						<InitValue> 
+							<IntConst: 0> 
+					<ForLoop> 
+						<BinaryExpr> 
+							<LT> 
+							<Id: i> 
+							<Id: now> 
+						<BinaryExpr> 
+							<COMMA> 
+							<UnaryExpr> 
+								<DEC> 
+								<ArrayAccess> 
+									<Id: a> 
+									<Id: i> 
+							<BinaryExpr> 
+								<ASSIGN> 
+								<Id: i> 
+								<BinaryExpr> 
+									<ADD> 
+									<Id: i> 
+									<IntConst: 1> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<ArrayAccess> 
+							<Id: a> 
+							<Id: now> 
+						<Id: now> 
+					<SelfIncrement> 
+						<Id: now> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: main> 
+					<VarDecl> 
+						<IntType> 
+						<Id: i> 
+						<InitValue> 
+							<IntConst: 0> 
+					<VarDecl> 
+						<IntType> 
+						<Id: temp> 
+						<InitValue> 
+							<IntConst: 0> 
+					<VarDecl> 
+						<IntType> 
+						<Id: count> 
+						<InitValue> 
+							<IntConst: 0> 
+					<BinaryExpr> 
+						<COMMA> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: Q> 
+							<BinaryExpr> 
+								<DIV> 
+								<Id: M> 
+								<Id: A> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: R> 
+							<BinaryExpr> 
+								<MOD> 
+								<Id: M> 
+								<Id: A> 
+					<If> 
+						<UnaryExpr> 
+							<NOT> 
+							<FunctionCall> 
+								<Id: pd> 
+								<ExprList> 
+									<Id: n> 
+								<ReturnStmt> 
+									<IntConst: 1> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: Let's start!
+> 
+					<FunctionCall> 
+						<Id: initialize> 
+						<ExprList> 
+							<IntConst: 3654898> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<Id: now> 
+						<BinaryExpr> 
+							<ADD> 
+							<BinaryExpr> 
+								<MOD> 
+								<FunctionCall> 
+									<Id: random> 
+									<ExprList> 
+								<IntConst: 10> 
+							<IntConst: 1> 
+					<ForLoop> 
+						<BinaryExpr> 
+							<LT> 
+							<Id: i> 
+							<BinaryExpr> 
+								<SUB> 
+								<Id: now> 
+								<IntConst: 1> 
+						<UnaryExpr> 
+							<INC> 
+							<Id: i> 
+								<BinaryExpr> 
+									<ASSIGN> 
+									<ArrayAccess> 
+										<Id: a> 
+										<Id: i> 
+									<BinaryExpr> 
+										<ADD> 
+										<BinaryExpr> 
+											<MOD> 
+											<FunctionCall> 
+												<Id: random> 
+												<ExprList> 
+											<IntConst: 10> 
+										<IntConst: 1> 
+								<WhileLoop> 
+									<BinaryExpr> 
+										<GT> 
+										<BinaryExpr> 
+											<ADD> 
+											<ArrayAccess> 
+												<Id: a> 
+												<Id: i> 
+											<Id: temp> 
+										<Id: n> 
+									<BinaryExpr> 
+										<ASSIGN> 
+										<ArrayAccess> 
+											<Id: a> 
+											<Id: i> 
+										<BinaryExpr> 
+											<ADD> 
+											<BinaryExpr> 
+												<MOD> 
+												<FunctionCall> 
+													<Id: random> 
+													<ExprList> 
+												<IntConst: 10> 
+											<IntConst: 1> 
+								<BinaryExpr> 
+									<ASSIGN_ADD> 
+									<Id: temp> 
+									<ArrayAccess> 
+										<Id: a> 
+										<Id: i> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<ArrayAccess> 
+							<Id: a> 
+							<BinaryExpr> 
+								<SUB> 
+								<Id: now> 
+								<IntConst: 1> 
+						<BinaryExpr> 
+							<SUB> 
+							<Id: n> 
+							<Id: temp> 
+					<FunctionCall> 
+						<Id: show> 
+						<ExprList> 
+					<FunctionCall> 
+						<Id: merge> 
+						<ExprList> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<Id: tmp> 
+						<FunctionCall> 
+							<Id: win> 
+							<ExprList> 
+					<WhileLoop> 
+						<BinaryExpr> 
+							<EQ> 
+							<Id: tmp> 
+							<IntConst: 0> 
+								<FunctionCall> 
+									<Id: printf> 
+									<ExprList> 
+										<StringConst: step %d:
+> 
+										<UnaryExpr> 
+											<INC> 
+											<Id: count> 
+								<FunctionCall> 
+									<Id: move> 
+									<ExprList> 
+								<FunctionCall> 
+									<Id: merge> 
+									<ExprList> 
+								<FunctionCall> 
+									<Id: show> 
+									<ExprList> 
+								<BinaryExpr> 
+									<ASSIGN> 
+									<Id: tmp> 
+									<FunctionCall> 
+										<Id: win> 
+										<ExprList> 
+					<ReturnStmt> 
+						<IntConst: 0> 

@@ -1,0 +1,135 @@
+<AST> 
+		<VarDecl> 
+			<IntType> 
+			<Id: sumBig> 
+			<InitValue> 
+				<IntConst: 0> 
+		<FunctionDef> 
+			<VoidType> 
+			<Id: addSmall> 
+				<VarDecl> 
+					<PointerType> 
+						<IntType> 
+					<Id: ptr> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<UnaryExpr> 
+							<ASTERISK> 
+							<Id: ptr> 
+						<BinaryExpr> 
+							<ADD> 
+							<UnaryExpr> 
+								<ASTERISK> 
+								<Id: ptr> 
+							<IntConst: 1> 
+		<FunctionDef> 
+			<VoidType> 
+			<Id: addMiddle> 
+				<VarDecl> 
+					<PointerType> 
+						<IntType> 
+					<Id: ptr> 
+					<VarDecl> 
+						<IntType> 
+						<Id: sumSmall> 
+						<InitValue> 
+							<IntConst: 0> 
+					<VarDecl> 
+						<IntType> 
+						<Id: i> 
+					<ForLoop> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: i> 
+							<IntConst: 1> 
+						<BinaryExpr> 
+							<LE> 
+							<Id: i> 
+							<IntConst: 10> 
+						<SelfIncrement> 
+							<Id: i> 
+								<FunctionCall> 
+									<Id: addSmall> 
+									<ExprList> 
+										<UnaryExpr> 
+											<AMPERSAND> 
+											<Id: sumSmall> 
+								<BinaryExpr> 
+									<ASSIGN> 
+									<Id: sumSmall> 
+									<BinaryExpr> 
+										<ADD> 
+										<Id: sumSmall> 
+										<IntConst: 1> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<UnaryExpr> 
+							<ASTERISK> 
+							<Id: ptr> 
+						<BinaryExpr> 
+							<ADD> 
+							<UnaryExpr> 
+								<ASTERISK> 
+								<Id: ptr> 
+							<Id: sumSmall> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: main> 
+					<VarDecl> 
+						<IntType> 
+						<Id: i> 
+					<VarDecl> 
+						<PointerType> 
+							<IntType> 
+						<Id: ptr> 
+						<InitValue> 
+							<UnaryExpr> 
+								<AMPERSAND> 
+								<Id: sumBig> 
+					<ForLoop> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: i> 
+							<IntConst: 1> 
+						<BinaryExpr> 
+							<LE> 
+							<Id: i> 
+							<IntConst: 10> 
+						<SelfIncrement> 
+							<Id: i> 
+								<VarDecl> 
+									<IntType> 
+									<Id: sumMiddle> 
+									<InitValue> 
+										<IntConst: 0> 
+								<FunctionCall> 
+									<Id: addMiddle> 
+									<ExprList> 
+										<UnaryExpr> 
+											<AMPERSAND> 
+											<Id: sumMiddle> 
+								<BinaryExpr> 
+									<ASSIGN> 
+									<UnaryExpr> 
+										<ASTERISK> 
+										<Id: ptr> 
+									<BinaryExpr> 
+										<ADD> 
+										<UnaryExpr> 
+											<ASTERISK> 
+											<Id: ptr> 
+										<Id: sumMiddle> 
+								<BinaryExpr> 
+									<ASSIGN> 
+									<Id: sumBig> 
+									<BinaryExpr> 
+										<ADD> 
+										<Id: sumBig> 
+										<IntConst: 1> 
+								<FunctionCall> 
+									<Id: printf> 
+									<ExprList> 
+										<StringConst: %d %d
+> 
+										<Id: i> 
+										<Id: sumBig> 

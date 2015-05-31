@@ -7,6 +7,24 @@ public class Symbol implements House{
     static int cnt = 0; //indicate how many ids so far
     public int num;
 
+    public Symbol(String s, boolean switcher) {
+        if (switcher == false) {
+            this.name = s;
+            if (s.length() == 0) {
+                cnt++;
+                num = cnt;
+                dict.put(s.intern(), num);
+            }
+            else num = getNum(s);
+        }
+        else {
+            this.name = s;
+            cnt++;
+            num = cnt;
+            dict.put(s.intern(), num);
+        }
+    }
+
     public Symbol(String s) {
         this.name = s;
         if (s.length() == 0) {

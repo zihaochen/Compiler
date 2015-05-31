@@ -8,6 +8,7 @@ public class StructType extends RecordType implements House{
     public StructType(Symbol name, DeclList declrs) {
         this.name = name;
         this.declrs = declrs;
+        realSize = 0;
     }
 
     @Override
@@ -18,6 +19,7 @@ public class StructType extends RecordType implements House{
         ret.value = this.value;
         ret.isConst = this.isConst;
         ret.isLeft = this.isLeft;
+        ((StructType)ret).realSize = this.realSize;
         ((RecordType) ret).members = this.members;
         return ret;
     }

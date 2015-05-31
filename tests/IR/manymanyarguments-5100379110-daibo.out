@@ -1,21 +1,30 @@
-Temp1538 = a1 ADD a2
-Temp1539 = Temp1538 ADD a3
-Temp1540 = Temp1539 ADD a4
-Temp1541 = Temp1540 ADD a5
-Temp1542 = Temp1541 ADD a6
-Temp1543 = Temp1542 ADD a7
-Temp1544 = Temp1543 ADD a8
-Temp1545 = Temp1544 ADD a9
-Temp1546 = Temp1545 ADD a10
-Temp1547 = Temp1546 ADD a11
-Temp1548 = Temp1547 ADD a12
-Temp1549 = Temp1548 ADD a13
-Temp1550 = Temp1549 ADD a14
-Temp1551 = Temp1550 ADD a15
-Return BasicParam Temp1551
+_start: 
+_printf_cnt = 0
 
-Temp1552 = &"%d
-"
+_malloc: 
+
+_getchar: 
+
+_printf: 
+
+_a: 
+Temp1 = a1 ADD a2
+Temp2 = Temp1 ADD a3
+Temp3 = Temp2 ADD a4
+Temp4 = Temp3 ADD a5
+Temp5 = Temp4 ADD a6
+Temp6 = Temp5 ADD a7
+Temp7 = Temp6 ADD a8
+Temp8 = Temp7 ADD a9
+Temp9 = Temp8 ADD a10
+Temp10 = Temp9 ADD a11
+Temp11 = Temp10 ADD a12
+Temp12 = Temp11 ADD a13
+Temp13 = Temp12 ADD a14
+Temp14 = Temp13 ADD a15
+Return BasicParam Temp14
+
+_main: 
 BasicParam 1
 BasicParam 2
 BasicParam 3
@@ -31,9 +40,10 @@ BasicParam 12
 BasicParam 13
 BasicParam 14
 BasicParam 15
-call a , 15
-BasicParam Temp1552
-BasicParam Temp1553
-call printf , 2
+Temp16 = call _a , 15
+BasicParam Temp15
+BasicParam Temp16
+_printf_cnt = 2
+Temp17 = call _printf , 2
 Return BasicParam 0
 

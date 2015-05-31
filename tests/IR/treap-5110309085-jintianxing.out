@@ -1,220 +1,249 @@
-N = 2000
-A = 13579
-B = 12345
-C = 32768
-X = 86421
-Temp4825 = A MUL X
-Temp4826 = Temp4825 ADD B
-ret = Temp4826
-Temp4828 = ret MOD C
-X = Temp4828
-Temp4827 = X
-Return BasicParam ret
+_start: 
+_printf_cnt = 0
+_N = 2000
+_A = 13579
+_B = 12345
+_C = 32768
+_X = 86421
 
-Temp4829 = node EQ 0
-If Not Equal to Zero Temp4829 Goto Label :586	
-Goto label:587
-Label :586	Return BasicParam 0
+_malloc: 
 
-Goto label:585
-Label :587	Label :585	Temp4830 = *node, 20
-Temp4831 = Temp4830[8] , 4
-Return BasicParam Temp4831
+_getchar: 
 
-Temp4833 = *node, 20
-Temp4834 = Temp4833[12] , 4
-BasicParam Temp4834
-call sum_of , 1
-Temp4836 = *node, 20
-Temp4837 = Temp4836[16] , 4
-BasicParam Temp4837
-call sum_of , 1
-Temp4839 = Temp4835 ADD Temp4838
-Temp4840 = Temp4839 ADD 1
-Temp4841 = *node, 20
-Temp4841[8] = Temp4840 , 4
-Temp4842 = *node, 20
-Temp4843 = Temp4842[16] , 4
-rson = Temp4843
-Temp4845 = *rson, 20
-Temp4846 = Temp4845[12] , 4
-Temp4847 = *node, 20
-Temp4847[16] = Temp4846 , 4
-Temp4849 = *rson, 20
-Temp4849[12] = node , 4
+_printf: 
+
+_get_random: 
+Temp1 = _A MUL _X
+Temp2 = Temp1 ADD _B
+_ret = Temp2
+Temp4 = _ret MOD _C
+_X = Temp4
+Temp3 = _X
+Return BasicParam _ret
+
+_sum_of: 
+Temp5 = node EQ 0
+If Not Equal to Zero Temp5 Goto Label :2	
+Goto label:1
+Label :2	Return BasicParam 0
+Label :1	Temp6 = *node, 24
+Temp7 = Temp6[8] , 4
+Return BasicParam Temp7
+
+_update: 
+Temp9 = *node, 24
+Temp10 = Temp9[12] , 4
+BasicParam Temp10
+Temp11 = call _sum_of , 1
+Temp12 = *node, 24
+Temp13 = Temp12[16] , 4
+BasicParam Temp13
+Temp14 = call _sum_of , 1
+Temp15 = Temp11 ADD Temp14
+Temp16 = Temp15 ADD 1
+Temp17 = *node, 24
+Temp17[8] = Temp16 , 4
+Temp8 = Temp17[8] , 4
+
+_rotate_left: 
+Temp18 = *node, 24
+Temp19 = Temp18[16] , 4
+_rson = Temp19
+Temp21 = *_rson, 24
+Temp22 = Temp21[12] , 4
+Temp23 = *node, 24
+Temp23[16] = Temp22 , 4
+Temp20 = Temp23[16] , 4
+Temp25 = *_rson, 24
+Temp25[12] = node , 4
+Temp24 = Temp25[12] , 4
 BasicParam node
-call update , 1
-BasicParam rson
-call update , 1
-Return BasicParam rson
+Temp26 = call _update , 1
+BasicParam _rson
+Temp27 = call _update , 1
+Return BasicParam _rson
 
-Temp4852 = *node, 20
-Temp4853 = Temp4852[12] , 4
-lson = Temp4853
-Temp4855 = *lson, 20
-Temp4856 = Temp4855[16] , 4
-Temp4857 = *node, 20
-Temp4857[12] = Temp4856 , 4
-Temp4859 = *lson, 20
-Temp4859[16] = node , 4
+_rotate_right: 
+Temp28 = *node, 24
+Temp29 = Temp28[12] , 4
+_lson = Temp29
+Temp31 = *_lson, 24
+Temp32 = Temp31[16] , 4
+Temp33 = *node, 24
+Temp33[12] = Temp32 , 4
+Temp30 = Temp33[12] , 4
+Temp35 = *_lson, 24
+Temp35[16] = node , 4
+Temp34 = Temp35[16] , 4
 BasicParam node
-call update , 1
-BasicParam lson
-call update , 1
-Return BasicParam lson
+Temp36 = call _update , 1
+BasicParam _lson
+Temp37 = call _update , 1
+Return BasicParam _lson
 
-Temp4862 = now EQ 0
-If Not Equal to Zero Temp4862 Goto Label :589	
-Goto label:590
-Label :589	Return BasicParam node
-
-Goto label:588
-Label :590	Label :588	Temp4863 = *now, 20
-Temp4864 = Temp4863[0] , 4
-Temp4865 = *node, 20
-Temp4866 = Temp4865[0] , 4
-Temp4867 = Temp4864 GT Temp4866
-If Not Equal to Zero Temp4867 Goto Label :592	
-Goto label:591
-Label :592	Temp4869 = *now, 20
-Temp4870 = Temp4869[12] , 4
-BasicParam Temp4870
+_insert_node: 
+Temp38 = now EQ 0
+If Not Equal to Zero Temp38 Goto Label :4	
+Goto label:3
+Label :4	Return BasicParam node
+Label :3	Temp39 = *now, 24
+Temp40 = Temp39[0] , 4
+Temp41 = *node, 24
+Temp42 = Temp41[0] , 4
+Temp43 = Temp40 GT Temp42
+If Not Equal to Zero Temp43 Goto Label :6	
+Goto label:7
+Label :6	Temp45 = *now, 24
+Temp46 = Temp45[12] , 4
+BasicParam Temp46
 BasicParam node
-call insert_node , 2
-Temp4872 = *now, 20
-Temp4872[12] = Temp4871 , 4
-Label :591	BasicParam now
-call update , 1
-Temp4874 = *now, 20
-Temp4875 = Temp4874[12] , 4
-Temp4876 = Temp4875 NE 0
-If Not Equal to Zero Temp4876 Goto Label :594	
-Goto label:595
-Label :596	Temp4877 = *now, 20
-Temp4878 = Temp4877[12] , 4
-Temp4879 = *Temp4878, 16
-Temp4880 = Temp4879[4] , 4
-Temp4881 = *now, 20
-Temp4882 = Temp4881[4] , 4
-Temp4883 = Temp4880 GT Temp4882
-If Not Equal to Zero Temp4883 Goto Label :594	
-Goto label:595
-Label :594	BasicParam now
-call rotate_right , 1
-Return BasicParam Temp4884
+Temp47 = call _insert_node , 2
+Temp48 = *now, 24
+Temp48[12] = Temp47 , 4
+Temp44 = Temp48[12] , 4
+Goto label:5
+Label :7	Temp50 = *now, 24
+Temp51 = Temp50[16] , 4
+BasicParam Temp51
+BasicParam node
+Temp52 = call _insert_node , 2
+Temp53 = *now, 24
+Temp53[16] = Temp52 , 4
+Temp49 = Temp53[16] , 4
+Label :5	BasicParam now
+Temp54 = call _update , 1
+Temp55 = *now, 24
+Temp56 = Temp55[12] , 4
+Temp57 = Temp56 NE 0
+If Not Equal to Zero Temp57 Goto Label :10	
+Goto label:8
+Label :10	Temp58 = *now, 24
+Temp59 = Temp58[12] , 4
+Temp60 = *Temp59, 12
+Temp61 = Temp60[4] , 4
+Temp62 = *now, 24
+Temp63 = Temp62[4] , 4
+Temp64 = Temp61 GT Temp63
+If Not Equal to Zero Temp64 Goto Label :9	
+Goto label:8
+Label :9	BasicParam now
+Temp65 = call _rotate_right , 1
+Return BasicParam Temp65
+Label :8	Temp66 = *now, 24
+Temp67 = Temp66[16] , 4
+Temp68 = Temp67 NE 0
+If Not Equal to Zero Temp68 Goto Label :13	
+Goto label:11
+Label :13	Temp69 = *now, 24
+Temp70 = Temp69[16] , 4
+Temp71 = *Temp70, 12
+Temp72 = Temp71[4] , 4
+Temp73 = *now, 24
+Temp74 = Temp73[4] , 4
+Temp75 = Temp72 GT Temp74
+If Not Equal to Zero Temp75 Goto Label :12	
+Goto label:11
+Label :12	BasicParam now
+Temp76 = call _rotate_left , 1
+Return BasicParam Temp76
+Label :11	Return BasicParam now
 
-Goto label:593
-Label :595	Label :593	Temp4885 = *now, 20
-Temp4886 = Temp4885[16] , 4
-Temp4887 = Temp4886 NE 0
-If Not Equal to Zero Temp4887 Goto Label :598	
-Goto label:599
-Label :600	Temp4888 = *now, 20
-Temp4889 = Temp4888[16] , 4
-Temp4890 = *Temp4889, 16
-Temp4891 = Temp4890[4] , 4
-Temp4892 = *now, 20
-Temp4893 = Temp4892[4] , 4
-Temp4894 = Temp4891 GT Temp4893
-If Not Equal to Zero Temp4894 Goto Label :598	
-Goto label:599
-Label :598	BasicParam now
-call rotate_left , 1
-Return BasicParam Temp4895
-
-Goto label:597
-Label :599	Label :597	Return BasicParam now
-
-lsum = 0
-Temp4896 = *now, 20
-Temp4897 = Temp4896[12] , 4
-Temp4898 = Temp4897 NE 0
-If Not Equal to Zero Temp4898 Goto Label :602	
-Goto label:603
-Label :602	Temp4900 = *now, 20
-Temp4901 = Temp4900[12] , 4
-Temp4902 = *Temp4901, 16
-Temp4903 = Temp4902[8] , 4
-lsum = Temp4903
-Temp4899 = lsum
-Goto label:601
-Label :603	Label :601	Temp4904 = lsum GT k
-If Not Equal to Zero Temp4904 Goto Label :605	
-Goto label:606
-Label :605	Temp4905 = *now, 20
-Temp4906 = Temp4905[12] , 4
-BasicParam Temp4906
+_get_kth_element: 
+_lsum = 0
+Temp77 = *now, 24
+Temp78 = Temp77[12] , 4
+Temp79 = Temp78 NE 0
+If Not Equal to Zero Temp79 Goto Label :15	
+Goto label:14
+Label :15	Temp81 = *now, 24
+Temp82 = Temp81[12] , 4
+Temp83 = *Temp82, 12
+Temp84 = Temp83[8] , 4
+_lsum = Temp84
+Temp80 = _lsum
+Label :14	Temp85 = _lsum GT k
+If Not Equal to Zero Temp85 Goto Label :17	
+Goto label:16
+Label :17	Temp86 = *now, 24
+Temp87 = Temp86[12] , 4
+BasicParam Temp87
 BasicParam k
-call get_kth_element , 2
-Return BasicParam Temp4907
+Temp88 = call _get_kth_element , 2
+Return BasicParam Temp88
+Label :16	Temp89 = _lsum LT k
+If Not Equal to Zero Temp89 Goto Label :19	
+Goto label:18
+Label :19	Temp90 = *now, 24
+Temp91 = Temp90[16] , 4
+Temp92 = k SUB _lsum
+Temp93 = Temp92 SUB 1
+BasicParam Temp91
+BasicParam Temp93
+Temp94 = call _get_kth_element , 2
+Return BasicParam Temp94
+Label :18	Temp95 = *now, 24
+Temp96 = Temp95[0] , 4
+Return BasicParam Temp96
 
-Goto label:604
-Label :606	Label :604	Temp4908 = lsum LT k
-If Not Equal to Zero Temp4908 Goto Label :608	
-Goto label:609
-Label :608	Temp4909 = *now, 20
-Temp4910 = Temp4909[16] , 4
-Temp4911 = k SUB lsum
-Temp4912 = Temp4911 SUB 1
-BasicParam Temp4910
-BasicParam Temp4912
-call get_kth_element , 2
-Return BasicParam Temp4913
+_alloc_node: 
+BasicParam 24
+Temp97 = call _malloc_struct , 1
+_node = Temp97
+Temp100 = *_node, 24
+Temp100[16] = 0 , 4
+Temp99 = Temp100[16] , 4
+Temp101 = *_node, 24
+Temp101[12] = Temp99 , 4
+Temp98 = Temp101[12] , 4
+Temp103 = *_node, 24
+Temp103[8] = 1 , 4
+Temp102 = Temp103[8] , 4
+Temp105 = call _get_random , 0
+Temp106 = *_node, 24
+Temp106[4] = Temp105 , 4
+Temp104 = Temp106[4] , 4
+Temp108 = call _get_random , 0
+Temp109 = *_node, 24
+Temp109[0] = Temp108 , 4
+Temp107 = Temp109[0] , 4
+Return BasicParam _node
 
-Goto label:607
-Label :609	Label :607	Temp4914 = *now, 20
-Temp4915 = Temp4914[0] , 4
-Return BasicParam Temp4915
-
-BasicParam 20
-call malloc , 1
-node = Temp4916
-Temp4919 = *node, 20
-Temp4919[16] = 0 , 4
-Temp4920 = *node, 20
-Temp4920[12] = Temp4918 , 4
-Temp4922 = *node, 20
-Temp4922[8] = 1 , 4
-call get_random , 0
-Temp4925 = *node, 20
-Temp4925[4] = Temp4924 , 4
-call get_random , 0
-Temp4928 = *node, 20
-Temp4928[0] = Temp4927 , 4
-Return BasicParam node
-
-call alloc_node , 0
-root = Temp4930
-Temp4929 = root
-i = 0
-Temp4931 = i
-Label :611	Temp4932 = i LT N
-If Not Equal to Zero Temp4932 Goto Label :612	
-Goto label:610
-Label :612	call alloc_node , 0
-BasicParam root
-BasicParam Temp4934
-call insert_node , 2
-root = Temp4935
-Temp4933 = root
-Temp4936 = i
-i = i ADD 1
-Goto label:611
-Label :610	i = 0
-Temp4937 = i
-Label :614	Temp4938 = i LE N
-If Not Equal to Zero Temp4938 Goto Label :615	
-Goto label:613
-Label :615	Temp4939 = &"%d
-"
-BasicParam root
-BasicParam i
-call get_kth_element , 2
-BasicParam Temp4939
-BasicParam Temp4940
-call printf , 2
-Temp4942 = i
-i = i ADD 1
-Goto label:614
-Label :613	Return BasicParam 0
+_main: 
+Temp111 = call _alloc_node , 0
+_root = Temp111
+Temp110 = _root
+_i = 0
+Temp112 = _i
+Label :21	Temp113 = _i LT _N
+If Not Equal to Zero Temp113 Goto Label :22	
+Goto label:20
+Label :22	Temp115 = call _alloc_node , 0
+BasicParam _root
+BasicParam Temp115
+Temp116 = call _insert_node , 2
+_root = Temp116
+Temp114 = _root
+Temp119 = _i ADD 1
+_i = Temp119
+Temp118 = _i
+Temp117 = Temp118 SUB 1
+Goto label:21
+Label :20	_i = 0
+Temp120 = _i
+Label :24	Temp121 = _i LE _N
+If Not Equal to Zero Temp121 Goto Label :25	
+Goto label:23
+Label :25	BasicParam _root
+BasicParam _i
+Temp123 = call _get_kth_element , 2
+BasicParam Temp122
+BasicParam Temp123
+_printf_cnt = 2
+Temp124 = call _printf , 2
+Temp127 = _i ADD 1
+_i = Temp127
+Temp126 = _i
+Temp125 = Temp126 SUB 1
+Goto label:24
+Label :23	Return BasicParam 0
 

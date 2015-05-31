@@ -7,6 +7,7 @@ struct dd {
     int *c;
     int a[20];
 };
+
 int main()
 {
     int d = 3;

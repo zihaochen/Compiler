@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-int n = 10000;
+int n = 1000;
 int a[10000];
 
 void exchange(int x,int y)
@@ -63,6 +63,7 @@ int heapSort() {
         a[0] = a[n-k-1];
         a[n-k-1] = t;
         adjustHeap(n-k-1);
+        printf("int heapSort: %d\n", k);
     }
     return 0;
 }
@@ -71,7 +72,9 @@ int main() {
     int i;
     for (i = 0; i < n; i = i + 1) a[i] = i;
     makeHeap();
+    printf("debug1\n");
     heapSort();
+    printf("debug2\n");
     for (i = 0; i < n; i = i + 1)
         printf("%d ", a[i]);
     printf("\n");

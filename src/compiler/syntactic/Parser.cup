@@ -207,9 +207,12 @@ declr ::= tmpDeclr:d
 		  {: RESULT = d; :}
 		| MULTI declr:d
 		  {:
+		  /*
 		  	if (d.type instanceof FunctionType)
 		  		dealWithType(d, new PointerType());
 		  	else d.type = new PointerType(d.type);
+		  */
+		  	dealWithType(d, new PointerType());
 		  	RESULT = d;
 		  	:}
 		;

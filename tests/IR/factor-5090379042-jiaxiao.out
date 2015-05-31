@@ -1,15 +1,31 @@
-Temp1002 = n EQ 0
-If Not Equal to Zero Temp1002 Goto Label :100	
-Goto label:99
-Label :100	Return BasicParam 1
+_start: 
+printf_cnt = 0
 
-Label :99	BasicParam 6
-call nfactor , 1
-a = Temp1003
-Temp1004 = &"%d
-"
-BasicParam Temp1004
+malloc: 
+
+getchar: 
+
+printf: 
+
+nfactor: 
+Temp1 = n EQ 0
+If Not Equal to Zero Temp1 Goto Label :2	
+Goto label:3
+Label :2	Return BasicParam 1
+Goto label:1
+Label :3	Temp2 = n SUB 1
+BasicParam Temp2
+Temp3 = call nfactor , 1
+Temp4 = n MUL Temp3
+Return BasicParam Temp4
+Label :1	
+main: 
+BasicParam 6
+Temp5 = call nfactor , 1
+a = Temp5
+BasicParam Temp6
 BasicParam a
-call printf , 2
+printf_cnt = 2
+Temp7 = call printf , 2
 Return BasicParam a
 

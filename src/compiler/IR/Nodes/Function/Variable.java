@@ -1,16 +1,18 @@
 package compiler.IR.Nodes.Function;
 
+import compiler.IR.Nodes.Address.Address;
+
 public class Variable  {
-    String name;
-    int size;
+    public Address address;
+    public int size;
 
     public Variable() {
-        name = null;
+        address = null;
         size = 0;
     }
 
-    public Variable(String  name, int size) {
-        this.name = name;
+    public Variable(Address address, int size) {
+        this.address = address;
         this.size = size;
     }
 }

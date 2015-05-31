@@ -1,12 +1,22 @@
+_start: 
+printf_cnt = 0
+
+malloc: 
+
+getchar: 
+
+printf: 
+
+f: 
 Return BasicParam 0
 
+main: 
 BasicParam x
-call f , 1
-x = Temp2405
-Temp2406 = &"%d
-"
-BasicParam Temp2406
+Temp1 = call f , 1
+x = Temp1
+BasicParam Temp2
 BasicParam x
-call printf , 2
+printf_cnt = 2
+Temp3 = call printf , 2
 Return BasicParam x
 

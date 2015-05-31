@@ -13,7 +13,7 @@ int main() {
     int **step;
     int i, j;
 
-    N = 100;
+    N = 20;
     head = tail = startx = starty = 0;
     targetx = targety  = N - 1;
     x = y = 0;

@@ -1,0 +1,106 @@
+_start: 
+_printf_cnt = 0
+_a[0] = _struct_member_1 , 4
+_b[0] = _struct_member_2 , 4
+
+_malloc: 
+
+_getchar: 
+
+_printf: 
+
+_print: 
+Temp2 = node1[0] , 16
+Temp3 = *Temp2, 4
+Temp4 = node1[0] , 16
+Temp5 = Temp4[8] , 4
+BasicParam Temp1
+BasicParam Temp3
+BasicParam Temp5
+_printf_cnt = 3
+Temp6 = call _printf , 3
+Temp8 = node2[0] , 16
+Temp9 = *Temp8, 4
+Temp10 = node2[0] , 16
+Temp11 = Temp10[8] , 4
+BasicParam Temp7
+BasicParam Temp9
+BasicParam Temp11
+_printf_cnt = 3
+Temp12 = call _printf , 3
+
+_f: 
+Temp14 = node[0] , 16
+Temp14[8] = 123 , 4
+Temp13 = Temp14[8] , 4
+Temp13 = *Temp14, 4
+Return BasicParam node
+
+_g: 
+Temp17 = node[0] , 16
+*Temp17 = 123 , 4
+Temp16 = *Temp17, 4
+Temp16 = *Temp17, 4
+Return BasicParam node
+
+_main: 
+Temp20 = _a[0] , 16
+*Temp20 = 1 , 4
+Temp19 = *Temp20, 4
+Temp19 = *Temp20, 4
+Temp23 = _a[0] , 16
+Temp23[8] = 2 , 4
+Temp22 = Temp23[8] , 4
+Temp22 = *Temp23, 4
+Temp25[0] = _struct_member_3 , 4
+Temp26 = _a[0] , 4
+Temp27 = Temp25[0] , 4
+Temp28 = Temp26[0] , 4
+Temp27[0] = Temp28 , 4
+Temp29 = Temp26[4] , 4
+Temp27[4] = Temp29 , 4
+Temp30 = Temp26[8] , 4
+Temp27[8] = Temp30 , 4
+Temp31 = Temp26[12] , 4
+Temp27[12] = Temp31 , 4
+MemoryParam Temp25 ,8
+Temp32 = call _g , 1
+Temp33[0] = _struct_member_4 , 4
+Temp34 = _a[0] , 4
+Temp35 = Temp33[0] , 4
+Temp36 = Temp34[0] , 4
+Temp35[0] = Temp36 , 4
+Temp37 = Temp34[4] , 4
+Temp35[4] = Temp37 , 4
+Temp38 = Temp34[8] , 4
+Temp35[8] = Temp38 , 4
+Temp39 = Temp34[12] , 4
+Temp35[12] = Temp39 , 4
+MemoryParam Temp33 ,8
+Temp40 = call _f , 1
+Temp41[0] = _struct_member_5 , 4
+Temp42 = Temp32[0] , 4
+Temp43 = Temp41[0] , 4
+Temp44 = Temp42[0] , 4
+Temp43[0] = Temp44 , 4
+Temp45 = Temp42[4] , 4
+Temp43[4] = Temp45 , 4
+Temp46 = Temp42[8] , 4
+Temp43[8] = Temp46 , 4
+Temp47 = Temp42[12] , 4
+Temp43[12] = Temp47 , 4
+Temp48[0] = _struct_member_6 , 4
+Temp49 = Temp40[0] , 4
+Temp50 = Temp48[0] , 4
+Temp51 = Temp49[0] , 4
+Temp50[0] = Temp51 , 4
+Temp52 = Temp49[4] , 4
+Temp50[4] = Temp52 , 4
+Temp53 = Temp49[8] , 4
+Temp50[8] = Temp53 , 4
+Temp54 = Temp49[12] , 4
+Temp50[12] = Temp54 , 4
+MemoryParam Temp41 ,8
+MemoryParam Temp48 ,8
+Temp55 = call _print , 2
+

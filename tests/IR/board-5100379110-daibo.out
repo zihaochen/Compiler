@@ -1,33 +1,261 @@
-N = 3
-i = 0
-Label :29	Temp37 = i LT sz
-If Not Equal to Zero Temp37 Goto Label :30	
+_start: 
+_printf_cnt = 0
+_N = 3
+
+_malloc: 
+
+_getchar: 
+
+_printf: 
+
+_printBoard: 
+_i = 0
+Temp1 = _i
+Label :2	Temp2 = _i LT sz
+If Not Equal to Zero Temp2 Goto Label :3	
+Goto label:1
+Label :3	_j = 0
+Temp3 = _j
+Label :5	Temp4 = _j LT sz
+If Not Equal to Zero Temp4 Goto Label :6	
+Goto label:4
+Label :6	Temp8 = _i MUL 4
+Temp7 = board ADD Temp8
+Temp6 = *Temp7, 4
+Temp11 = _j MUL 4
+Temp10 = Temp6 ADD Temp11
+Temp9 = *Temp10, 4
+BasicParam Temp5
+BasicParam Temp9
+_printf_cnt = 2
+Temp12 = call _printf , 2
+Temp15 = _j ADD 1
+_j = Temp15
+Temp14 = _j
+Temp13 = Temp14 SUB 1
+Goto label:5
+Label :4	BasicParam Temp16
+_printf_cnt = 1
+Temp17 = call _printf , 1
+Temp20 = _i ADD 1
+_i = Temp20
+Temp19 = _i
+Temp18 = Temp19 SUB 1
+Goto label:2
+Label :1	Return BasicParam 0
+
+_inRect: 
+Temp21 = x GE x1
+If Not Equal to Zero Temp21 Goto Label :11	
+Goto label:8
+Label :11	Temp22 = x LT x2
+If Not Equal to Zero Temp22 Goto Label :10	
+Goto label:8
+Label :10	Temp23 = y GE y1
+If Not Equal to Zero Temp23 Goto Label :9	
+Goto label:8
+Label :9	Temp24 = y LT y2
+If Not Equal to Zero Temp24 Goto Label :7	
+Goto label:8
+Label :7	Return BasicParam 1
+Label :8	Return BasicParam 0
+
+_fill: 
+Temp25 = n EQ 0
+If Not Equal to Zero Temp25 Goto Label :13	
+Goto label:14
+Label :13	Temp29 = sx MUL 4
+Temp28 = bd ADD Temp29
+Temp27 = *Temp28, 4
+Temp31 = 4 MUL sy
+Temp30 = Temp27 ADD Temp31
+*Temp30 = scolor , 4
+Temp26 = *Temp30, 4
+Goto label:12
+Label :14	Temp33 = n SUB 1
+Temp36 = Temp33 MUL 4
+Temp35 = p2 ADD Temp36
+Temp34 = *Temp35, 4
+_subsz = Temp34
+Temp32 = _subsz
+_curcolor = color
+Temp37 = _curcolor
+_ry = 0
+Temp41 = _ry
+_rx = Temp41
+Temp40 = _rx
+_ly = Temp40
+Temp39 = _ly
+_lx = Temp39
+Temp38 = _lx
+Temp44 = color ADD 1
+color = Temp44
+Temp43 = color
+Temp42 = Temp43 SUB 1
+_i = 0
+Temp45 = _i
+Label :16	Temp46 = _i LE 1
+If Not Equal to Zero Temp46 Goto Label :17	
+Goto label:15
+Label :17	_j = 0
+Temp47 = _j
+Label :19	Temp48 = _j LE 1
+If Not Equal to Zero Temp48 Goto Label :20	
+Goto label:18
+Label :20	Temp50 = _i MUL _subsz
+Temp51 = x0 ADD Temp50
+_lx = Temp51
+Temp49 = _lx
+Temp53 = _j MUL _subsz
+Temp54 = y0 ADD Temp53
+_ly = Temp54
+Temp52 = _ly
+Temp56 = _i ADD 1
+Temp57 = Temp56 MUL _subsz
+Temp58 = x0 ADD Temp57
+_rx = Temp58
+Temp55 = _rx
+Temp60 = _j ADD 1
+Temp61 = Temp60 MUL _subsz
+Temp62 = y0 ADD Temp61
+_ry = Temp62
+Temp59 = _ry
+BasicParam sx
+BasicParam sy
+BasicParam _lx
+BasicParam _ly
+BasicParam _rx
+BasicParam _ry
+Temp63 = call _inRect , 6
+If Not Equal to Zero Temp63 Goto Label :22	
+Goto label:23
+Label :22	Temp65 = n SUB 1
+BasicParam bd
+BasicParam Temp65
+BasicParam _lx
+BasicParam _ly
+BasicParam sx
+BasicParam sy
+BasicParam scolor
+BasicParam p2
+BasicParam color
+Temp66 = call _fill , 9
+color = Temp66
+Temp64 = color
+Goto label:21
+Label :23	Temp68 = n SUB 1
+Temp69 = x0 ADD _subsz
+Temp70 = Temp69 SUB 1
+Temp71 = Temp70 ADD _i
+Temp72 = y0 ADD _subsz
+Temp73 = Temp72 SUB 1
+Temp74 = Temp73 ADD _j
+BasicParam bd
+BasicParam Temp68
+BasicParam _lx
+BasicParam _ly
+BasicParam Temp71
+BasicParam Temp74
+BasicParam _curcolor
+BasicParam p2
+BasicParam color
+Temp75 = call _fill , 9
+color = Temp75
+Temp67 = color
+Label :21	Temp78 = _j ADD 1
+_j = Temp78
+Temp77 = _j
+Temp76 = Temp77 SUB 1
+Goto label:19
+Label :18	Temp80 = _i ADD 1
+_i = Temp80
+Temp79 = _i
+Goto label:16
+Label :15	Label :12	Return BasicParam color
+
+_main: 
+Temp81 = _N ADD 1
+Temp82 = Temp81 MUL 4
+BasicParam Temp82
+Temp83 = call _malloc , 1
+_p2 = Temp83
+Temp86 = 4 MUL 0
+Temp85 = _p2 ADD Temp86
+*Temp85 = 1 , 4
+Temp84 = *Temp85, 4
+_i = 1
+Temp87 = _i
+Label :25	Temp88 = _i LE _N
+If Not Equal to Zero Temp88 Goto Label :26	
+Goto label:24
+Label :26	Temp90 = _i SUB 1
+Temp93 = Temp90 MUL 4
+Temp92 = _p2 ADD Temp93
+Temp91 = *Temp92, 4
+Temp94 = Temp91 MUL 2
+Temp96 = 4 MUL _i
+Temp95 = _p2 ADD Temp96
+*Temp95 = Temp94 , 4
+Temp89 = *Temp95, 4
+Temp99 = _i ADD 1
+_i = Temp99
+Temp98 = _i
+Temp97 = Temp98 SUB 1
+Goto label:25
+Label :24	Temp103 = _N MUL 4
+Temp102 = _p2 ADD Temp103
+Temp101 = *Temp102, 4
+Temp104 = Temp101 MUL 4
+BasicParam Temp104
+Temp105 = call _malloc , 1
+_board = Temp105
+Temp100 = _board
+_i = 0
+Temp106 = _i
+Label :28	Temp109 = _N MUL 4
+Temp108 = _p2 ADD Temp109
+Temp107 = *Temp108, 4
+Temp110 = _i LT Temp107
+If Not Equal to Zero Temp110 Goto Label :29	
+Goto label:27
+Label :29	Temp114 = _N MUL 4
+Temp113 = _p2 ADD Temp114
+Temp112 = *Temp113, 4
+Temp115 = Temp112 MUL 4
+BasicParam Temp115
+Temp116 = call _malloc , 1
+Temp118 = 4 MUL _i
+Temp117 = _board ADD Temp118
+*Temp117 = Temp116 , 4
+Temp111 = *Temp117, 4
+Temp121 = _i ADD 1
+_i = Temp121
+Temp120 = _i
+Temp119 = Temp120 SUB 1
 Goto label:28
-Label :30	j = 0
-Label :32	Temp38 = j LT sz
-If Not Equal to Zero Temp38 Goto Label :33	
-Goto label:31
-Label :33	Temp39 = &"%d "
-Temp40 = 0
-Temp41 = i MUL 4
-Temp40 = Temp40 ADD Temp41
-Temp42 = j MUL 4
-Temp40 = Temp40 ADD Temp42
-Temp43 = board ADD Temp40
-Temp44 = *Temp43, 4
-BasicParam Temp39
-BasicParam Temp44
-call 7 , 2
-Temp45 = j
-j = j ADD 1
-Goto label:32
-Label :31	Temp46 = &"
-"
-BasicParam Temp46
-call 7 , 1
-Temp47 = i
-i = i ADD 1
-Goto label:29
-Label :28	Return BasicParam 0
-Temp48 = x GE x1
-If Not Equal to Zero Temp48 Goto Label :35	
+Label :27	Temp124 = _N MUL 4
+Temp123 = _p2 ADD Temp124
+Temp122 = *Temp123, 4
+Temp125 = Temp122 SUB 1
+Temp128 = _N MUL 4
+Temp127 = _p2 ADD Temp128
+Temp126 = *Temp127, 4
+Temp129 = Temp126 SUB 1
+BasicParam _board
+BasicParam _N
+BasicParam 0
+BasicParam 0
+BasicParam Temp125
+BasicParam Temp129
+BasicParam 0
+BasicParam _p2
+BasicParam 1
+Temp130 = call _fill , 9
+Temp133 = _N MUL 4
+Temp132 = _p2 ADD Temp133
+Temp131 = *Temp132, 4
+BasicParam Temp131
+BasicParam _board
+Temp134 = call _printBoard , 2
+Return BasicParam 0
+

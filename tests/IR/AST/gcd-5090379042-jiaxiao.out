@@ -1,0 +1,62 @@
+<AST> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: gcd> 
+				<VarDecl> 
+					<IntType> 
+					<Id: x> 
+				<VarDecl> 
+					<IntType> 
+					<Id: y> 
+					<If> 
+						<BinaryExpr> 
+							<EQ> 
+							<BinaryExpr> 
+								<MOD> 
+								<Id: x> 
+								<Id: y> 
+							<IntConst: 0> 
+						<ReturnStmt> 
+							<Id: y> 
+						<ReturnStmt> 
+							<FunctionCall> 
+								<Id: gcd> 
+								<ExprList> 
+									<Id: y> 
+									<BinaryExpr> 
+										<MOD> 
+										<Id: x> 
+										<Id: y> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: main> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: %d
+%d
+%d
+%d
+> 
+							<FunctionCall> 
+								<Id: gcd> 
+								<ExprList> 
+									<IntConst: 10> 
+									<IntConst: 1> 
+							<FunctionCall> 
+								<Id: gcd> 
+								<ExprList> 
+									<IntConst: 50> 
+									<IntConst: 35> 
+							<FunctionCall> 
+								<Id: gcd> 
+								<ExprList> 
+									<IntConst: 34986> 
+									<IntConst: 3087> 
+							<FunctionCall> 
+								<Id: gcd> 
+								<ExprList> 
+									<IntConst: 2907> 
+									<IntConst: 1539> 
+					<ReturnStmt> 
+						<IntConst: 0> 

@@ -1,0 +1,134 @@
+<AST> 
+		<TypeDecl> 
+			<StructType> 
+				<Id: a> 
+					<VarDecl> 
+						<IntType> 
+						<Id: a> 
+					<VarDecl> 
+						<CharType> 
+						<Id: b> 
+					<VarDecl> 
+						<IntType> 
+						<Id: c> 
+		<VarDecl> 
+			<UnionType> 
+				<Id: b> 
+					<VarDecl> 
+						<IntType> 
+						<Id: z> 
+					<VarDecl> 
+						<CharType> 
+						<Id: x> 
+					<VarDecl> 
+						<CharType> 
+						<Id: y> 
+			<Id: bb> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: main> 
+					<VarDecl> 
+						<StructType> 
+							<Id: a> 
+						<Id: a> 
+					<BinaryExpr> 
+						<COMMA> 
+						<BinaryExpr> 
+							<COMMA> 
+							<BinaryExpr> 
+								<ASSIGN> 
+								<RecordAccess> 
+									<Id: a> 
+									<Id: a> 
+								<IntConst: 1> 
+							<BinaryExpr> 
+								<ASSIGN> 
+								<RecordAccess> 
+									<Id: a> 
+									<Id: b> 
+								<CharConst: 69> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<RecordAccess> 
+								<Id: a> 
+								<Id: c> 
+							<CharConst: 10> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: %c%c	> 
+							<RecordAccess> 
+								<Id: a> 
+								<Id: b> 
+							<RecordAccess> 
+								<Id: a> 
+								<Id: c> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: %d %d %d %d
+> 
+							<SizeofExpr> 
+								<StructType> 
+									<Id: a> 
+							<UnaryExpr> 
+								<SIZEOF> 
+								<Id: a> 
+							<UnaryExpr> 
+								<SIZEOF> 
+								<RecordAccess> 
+									<Id: a> 
+									<Id: a> 
+							<UnaryExpr> 
+								<SIZEOF> 
+								<RecordAccess> 
+									<Id: a> 
+									<Id: c> 
+					<BinaryExpr> 
+						<COMMA> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<RecordAccess> 
+								<Id: bb> 
+								<Id: x> 
+							<RecordAccess> 
+								<Id: a> 
+								<Id: b> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<RecordAccess> 
+								<Id: bb> 
+								<Id: y> 
+							<RecordAccess> 
+								<Id: a> 
+								<Id: c> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: %c %c
+> 
+							<RecordAccess> 
+								<Id: bb> 
+								<Id: x> 
+							<RecordAccess> 
+								<Id: bb> 
+								<Id: y> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<RecordAccess> 
+							<Id: bb> 
+							<Id: z> 
+						<IntConst: 2> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: %d
+> 
+							<BinaryExpr> 
+								<EQ> 
+								<RecordAccess> 
+									<Id: bb> 
+									<Id: y> 
+								<CharConst: 2> 
+					<ReturnStmt> 
+						<IntConst: 0> 

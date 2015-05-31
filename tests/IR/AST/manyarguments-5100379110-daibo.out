@@ -1,0 +1,88 @@
+<AST> 
+		<FunctionDef> 
+			<VoidType> 
+			<Id: manyArguments> 
+				<VarDecl> 
+					<IntType> 
+					<Id: a> 
+				<VarDecl> 
+					<IntType> 
+					<Id: b> 
+				<VarDecl> 
+					<IntType> 
+					<Id: c> 
+				<VarDecl> 
+					<IntType> 
+					<Id: d> 
+				<VarDecl> 
+					<IntType> 
+					<Id: e> 
+				<VarDecl> 
+					<IntType> 
+					<Id: f> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: %d > 
+							<Id: a> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: %d > 
+							<Id: b> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: %d > 
+							<Id: c> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: %d > 
+							<Id: d> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: %d > 
+							<Id: e> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: %d
+> 
+							<Id: f> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: main> 
+					<FunctionCall> 
+						<Id: manyArguments> 
+						<ExprList> 
+							<IntConst: 0> 
+							<IntConst: 1> 
+							<IntConst: 2> 
+							<IntConst: 3> 
+							<IntConst: 4> 
+							<BinaryExpr> 
+								<ADD> 
+								<IntConst: 5> 
+								<IntConst: 6> 
+					<FunctionCall> 
+						<Id: manyArguments> 
+						<ExprList> 
+							<IntConst: 0> 
+							<IntConst: 1> 
+							<IntConst: 2> 
+							<BinaryExpr> 
+								<ADD> 
+								<BinaryExpr> 
+									<ADD> 
+									<IntConst: 3> 
+									<IntConst: 4> 
+								<IntConst: 5> 
+							<IntConst: 4> 
+							<BinaryExpr> 
+								<SUB> 
+								<IntConst: 5> 
+								<IntConst: 6> 
+					<ReturnStmt> 
+						<IntConst: 0> 

@@ -13,6 +13,10 @@ public class Temp extends Address {
         tempNum = ++tempCount;
     }
 
+    public void setZero() {
+        tempCount = 0;
+    }
+
     @Override
     public void printAddress(OutputStream out) throws IOException{
         out.write(("Temp" + tempNum).getBytes());

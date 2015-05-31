@@ -1,9 +1,20 @@
-Temp2403 = &"#include <stdio.h>%cchar*f=%c%s%c;int main(){printf(f,10,34,f,34,10);}%c"
-f = Temp2403
+_start: 
+printf_cnt = 0
+f = str_ptr_1
+
+malloc: 
+
+getchar: 
+
+printf: 
+
+main: 
 BasicParam f
 BasicParam 10
 BasicParam 34
 BasicParam f
 BasicParam 34
 BasicParam 10
-call printf , 6
+printf_cnt = 6
+Temp1 = call printf , 6
+
