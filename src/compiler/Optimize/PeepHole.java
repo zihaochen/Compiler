@@ -92,7 +92,22 @@ public class PeepHole {
 
         for (Function function : ir.fragments) {
             tmpList = new LinkedList<>();
-            for (Quadruple quadruple : function.body) {
+            for (int i = 0; i < function.body.size(); i++) {
+                Quadruple quadruple = function.body.get(i);
+                Quadruple next;
+                if (i == function.body.size() - 1)
+                    next = function.body.get(i + 1);
+                else next = null;
+                if (quadruple instanceof Assign &&
+                        next instanceof Assign &&
+                        ((Assign) quadruple).dest.equals(((Assign) next).src) &&
+                        hashMap.get(((Assign) quadruple).dest) == 2) {
+                    tmpList.add(new Assign(((Assign) next).dest, ((Assign) quadruple).src));
+                    i += 1;
+                }
+                else
+                    tmpList.add(quadruple);
+/*
                 if (quadruple instanceof Assign && hashMap.get(((Assign) quadruple).dest) > 1) {
                     continue;
                 }
@@ -109,6 +124,7 @@ public class PeepHole {
                     continue;
                 }
                 tmpList.add(quadruple);
+                */
             }
             function.body = tmpList;
         }
