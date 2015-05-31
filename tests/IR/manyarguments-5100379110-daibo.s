@@ -1,11 +1,11 @@
 .data
 	_printf_cnt: .space 4
-	str_1: .asciiz "%d "
-	str_2: .asciiz "%d "
-	str_3: .asciiz "%d "
-	str_4: .asciiz "%d "
-	str_5: .asciiz "%d "
-	str_6: .asciiz "%d\n"
+	str_1: .space 16
+	str_2: .space 16
+	str_3: .space 16
+	str_4: .space 16
+	str_5: .space 16
+	str_6: .space 16
 .text
 main:
 	move $fp, $sp     # start using memory here
@@ -13,6 +13,60 @@ main:
 	subu $sp, $sp, 4
 	li $t0, 0
 	sw $t0, _printf_cnt
+	li $t0, 37
+	la $t1, str_1
+	sw $t0, 0($t1)
+	li $t0, 100
+	la $t1, str_1
+	sw $t0, 4($t1)
+	li $t0, 32
+	la $t1, str_1
+	sw $t0, 8($t1)
+	li $t0, 37
+	la $t1, str_2
+	sw $t0, 0($t1)
+	li $t0, 100
+	la $t1, str_2
+	sw $t0, 4($t1)
+	li $t0, 32
+	la $t1, str_2
+	sw $t0, 8($t1)
+	li $t0, 37
+	la $t1, str_3
+	sw $t0, 0($t1)
+	li $t0, 100
+	la $t1, str_3
+	sw $t0, 4($t1)
+	li $t0, 32
+	la $t1, str_3
+	sw $t0, 8($t1)
+	li $t0, 37
+	la $t1, str_4
+	sw $t0, 0($t1)
+	li $t0, 100
+	la $t1, str_4
+	sw $t0, 4($t1)
+	li $t0, 32
+	la $t1, str_4
+	sw $t0, 8($t1)
+	li $t0, 37
+	la $t1, str_5
+	sw $t0, 0($t1)
+	li $t0, 100
+	la $t1, str_5
+	sw $t0, 4($t1)
+	li $t0, 32
+	la $t1, str_5
+	sw $t0, 8($t1)
+	li $t0, 37
+	la $t1, str_6
+	sw $t0, 0($t1)
+	li $t0, 100
+	la $t1, str_6
+	sw $t0, 4($t1)
+	li $t0, 10
+	la $t1, str_6
+	sw $t0, 8($t1)
 	j _main
 _manyArguments:
 	sw $ra, ($sp)
@@ -158,7 +212,7 @@ _printf:
 _printf_loop:
 	lb $a0, 0($a1)
 	beq $a0, 0, _printf_end
-	addu $a1, $a1, 1
+	addu $a1, $a1, 4
 	beq $a0, '%', _printf_fmt
 	li $v0, 11
 	syscall
@@ -166,7 +220,7 @@ _printf_loop:
 
 _printf_fmt:
 	lb $a0, 0($a1)
-	addu $a1, $a1, 1
+	addu $a1, $a1, 4
 	beq $a0, 'd', _printf_int
 	beq $a0, 's', _printf_str
 	beq $a0, 'c', _printf_char
@@ -196,9 +250,9 @@ _printf_char:
 
 _printf_width:
 	lb $t1, 0($a1)
-	addu $a1, $a1, 1
+	addu $a1, $a1, 4
 	sub $t1, $t1, '1'
-	addu $a1, $a1, 1
+	addu $a1, $a1, 4
 	subu $a2, $a2, 4
 	lw $t0, 0($a2)
 	blt $t0, 10, _printf_width_tmp
@@ -221,7 +275,7 @@ _printf_width:
 _printf_width_tmp:
 	li $a0, '0'
 	beq $t1, 0, _printf_width_tmp2
-	subu $a2 $a2 1
+	subu $t1, $t1, 1
 	li $v0, 11
 	syscall
 	b _printf_width_tmp
@@ -238,6 +292,17 @@ _printf_end:
 _getchar:
 	li $v0, 12
 	syscall
+	jr $ra
+
+_malloc_struct:
+	lw $a0, 4($sp)
+	li $v0, 9
+	syscall
+	move $t0, $v0
+	li $v0, 9
+	li $a0, 4
+	syscall
+	sw $t0, ($v0)
 	jr $ra
 
 _malloc:

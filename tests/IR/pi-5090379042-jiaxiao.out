@@ -18,66 +18,78 @@ Label :2	Temp1 = _b SUB _c
 If Not Equal to Zero Temp1 Goto Label :3	
 Goto label:1
 Label :3	Temp3 = _a DIV 5
-Temp4 = _b
-_b = _b ADD 1
-Temp5 = 0
-Temp6 = Temp4 MUL 4
-Temp5 = Temp5 ADD Temp6
-Temp7 = _f ADD Temp5
-*Temp7 = Temp3 , 4
+Temp6 = _b ADD 1
+_b = Temp6
+Temp5 = _b
+Temp4 = Temp5 SUB 1
+Temp7 = 0
+Temp8 = Temp4 MUL 4
+Temp7 = Temp7 ADD Temp8
+Temp9 = _f ADD Temp7
+*Temp9 = Temp3 , 4
+Temp2 = *Temp9, 4
+Temp2 = *Temp9, 4
 Goto label:2
 Label :1	Label :5	_d = 0
-Temp9 = _d
-Temp11 = _c MUL 2
-_g = Temp11
-Temp10 = _g
-If Not Equal to Zero Temp10 Goto Label :6	
+Temp11 = _d
+Temp13 = _c MUL 2
+_g = Temp13
+Temp12 = _g
+If Not Equal to Zero Temp12 Goto Label :6	
 Goto label:4
 Label :6	_b = _c
-Temp12 = _b
-Label :8	Temp14 = 0
-Temp15 = _b MUL 4
-Temp14 = Temp14 ADD Temp15
-Temp16 = _f ADD Temp14
-Temp17 = *Temp16, 4
-Temp18 = Temp17 MUL _a
-Temp19 = _d ADD Temp18
-_d = Temp19
-Temp13 = _d
-_g = _g SUB 1
-Temp21 = _d MOD _g
-Temp22 = 0
-Temp23 = _b MUL 4
-Temp22 = Temp22 ADD Temp23
-Temp24 = _f ADD Temp22
-*Temp24 = Temp21 , 4
-Temp27 = _g
-_g = _g SUB 1
-Temp28 = _d DIV Temp27
-_d = Temp28
-Temp26 = _d
-_b = _b SUB 1
-If Not Equal to Zero _b Goto Label :9	
+Temp14 = _b
+Label :8	Temp16 = 0
+Temp17 = _b MUL 4
+Temp16 = Temp16 ADD Temp17
+Temp18 = _f ADD Temp16
+Temp19 = *Temp18, 4
+Temp20 = Temp19 MUL _a
+Temp21 = _d ADD Temp20
+_d = Temp21
+Temp15 = _d
+Temp24 = _g SUB 1
+_g = Temp24
+Temp23 = _g
+Temp25 = _d MOD Temp23
+Temp26 = 0
+Temp27 = _b MUL 4
+Temp26 = Temp26 ADD Temp27
+Temp28 = _f ADD Temp26
+*Temp28 = Temp25 , 4
+Temp22 = *Temp28, 4
+Temp22 = *Temp28, 4
+Temp33 = _g SUB 1
+_g = Temp33
+Temp32 = _g
+Temp31 = Temp32 ADD 1
+Temp34 = _d DIV Temp31
+_d = Temp34
+Temp30 = _d
+Temp36 = _b SUB 1
+_b = Temp36
+Temp35 = _b
+If Not Equal to Zero Temp35 Goto Label :9	
 Goto label:7
-Label :9	Temp30 = _d MUL _b
-_d = Temp30
-Temp29 = _d
+Label :9	Temp38 = _d MUL _b
+_d = Temp38
+Temp37 = _d
 Goto label:8
-Label :7	Temp32 = _c SUB 14
-_c = Temp32
-Temp31 = _c
-Temp34 = _d DIV _a
-Temp35 = _e ADD Temp34
-BasicParam Temp33
-BasicParam Temp35
+Label :7	Temp40 = _c SUB 14
+_c = Temp40
+Temp39 = _c
+Temp42 = _d DIV _a
+Temp43 = _e ADD Temp42
+BasicParam Temp41
+BasicParam Temp43
 _printf_cnt = 2
-Temp36 = call _printf , 2
-Temp38 = _d MOD _a
-_e = Temp38
-Temp37 = _e
+Temp44 = call _printf , 2
+Temp46 = _d MOD _a
+_e = Temp46
+Temp45 = _e
 Goto label:5
-Label :4	BasicParam Temp39
+Label :4	BasicParam Temp47
 _printf_cnt = 1
-Temp40 = call _printf , 1
+Temp48 = call _printf , 1
 Return BasicParam 0
 

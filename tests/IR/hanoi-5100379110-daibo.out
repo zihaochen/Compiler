@@ -1,66 +1,70 @@
 _start: 
-printf_cnt = 0
+_printf_cnt = 0
 
-malloc: 
+_malloc: 
 
-getchar: 
+_getchar: 
 
-printf: 
+_printf: 
 
-cd: 
+_cd: 
 Temp1 = d EQ 1
 If Not Equal to Zero Temp1 Goto Label :2	
 Goto label:3
 Label :2	BasicParam Temp2
 BasicParam a
 BasicParam c
-printf_cnt = 3
-Temp3 = call printf , 3
-Temp4 = sum
-sum = sum ADD 1
-Goto label:1
-Label :3	Temp6 = d SUB 1
-BasicParam Temp6
-BasicParam a
-BasicParam c
-BasicParam b
-BasicParam sum
-Temp7 = call cd , 5
-sum = Temp7
+_printf_cnt = 3
+Temp3 = call _printf , 3
+Temp6 = sum ADD 1
+sum = Temp6
 Temp5 = sum
+Temp4 = Temp5 SUB 1
+Goto label:1
+Label :3	Temp8 = d SUB 1
 BasicParam Temp8
 BasicParam a
 BasicParam c
-printf_cnt = 3
-Temp9 = call printf , 3
-Temp11 = d SUB 1
-BasicParam Temp11
+BasicParam b
+BasicParam sum
+Temp9 = call _cd , 5
+sum = Temp9
+Temp7 = sum
+BasicParam Temp10
+BasicParam a
+BasicParam c
+_printf_cnt = 3
+Temp11 = call _printf , 3
+Temp13 = d SUB 1
+BasicParam Temp13
 BasicParam b
 BasicParam a
 BasicParam c
 BasicParam sum
-Temp12 = call cd , 5
-sum = Temp12
-Temp10 = sum
-Temp13 = sum
-sum = sum ADD 1
+Temp14 = call _cd , 5
+sum = Temp14
+Temp12 = sum
+Temp17 = sum ADD 1
+sum = Temp17
+Temp16 = sum
+Temp15 = Temp16 SUB 1
 Label :1	Return BasicParam sum
 
-main: 
-a = 65
-b = 66
-c = 67
-d = 10
-BasicParam d
-BasicParam a
-BasicParam b
-BasicParam c
+_main: 
+_a = 65
+_b = 66
+_c = 67
+_d = 10
+BasicParam _d
+BasicParam _a
+BasicParam _b
+BasicParam _c
 BasicParam 0
-Temp14 = call cd , 5
-sum = Temp14
-BasicParam Temp15
-BasicParam sum
-printf_cnt = 2
-Temp16 = call printf , 2
+Temp18 = call _cd , 5
+_sum = Temp18
+BasicParam Temp19
+BasicParam _sum
+_printf_cnt = 2
+Temp20 = call _printf , 2
 Return BasicParam 0
 

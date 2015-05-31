@@ -7,10 +7,10 @@
 	ASU_1: .space 36
 	ASU_2: .space 36
 	ASU_3: .space 124
-	str_1: .asciiz " O"
-	str_2: .asciiz " ."
-	str_3: .asciiz "\n"
-	str_4: .asciiz "\n"
+	str_1: .space 12
+	str_2: .space 12
+	str_3: .space 8
+	str_4: .space 8
 .text
 main:
 	move $fp, $sp     # start using memory here
@@ -26,6 +26,24 @@ main:
 	sw $t0, _printf_cnt
 	li $t0, 8
 	sw $t0, _N
+	li $t0, 32
+	la $t1, str_1
+	sw $t0, 0($t1)
+	li $t0, 79
+	la $t1, str_1
+	sw $t0, 4($t1)
+	li $t0, 32
+	la $t1, str_2
+	sw $t0, 0($t1)
+	li $t0, 46
+	la $t1, str_2
+	sw $t0, 4($t1)
+	li $t0, 10
+	la $t1, str_3
+	sw $t0, 0($t1)
+	li $t0, 10
+	la $t1, str_4
+	sw $t0, 0($t1)
 	j _main
 _printBoard:
 	sw $ra, ($sp)
@@ -34,9 +52,9 @@ _printBoard:
 	la $t0, str_2
 	sw $t0, -56($sp)
 	la $t0, str_3
-	sw $t0, -68($sp)
+	sw $t0, -76($sp)
 	la $t0, str_4
-	sw $t0, -80($sp)
+	sw $t0, -96($sp)
 	li $t0, 0
 	sw $t0, -4($sp)
 	lw $t0, -4($sp)
@@ -89,59 +107,71 @@ L6:
 	b L9
 L8:
 	lw $t0, -48($sp)
-	sw $t0, -88($sp)
+	sw $t0, -104($sp)
 	li $t0, 1
 	sw $t0, _printf_cnt
-	subu $sp, $sp, 92
+	subu $sp, $sp, 108
 	jal _printf
-	addi $sp, $sp, 92
+	addi $sp, $sp, 108
 	sw $v0, -52($sp)
 	lw $ra, ($sp)
 	b L7
 L9:
 	lw $t0, -56($sp)
-	sw $t0, -88($sp)
+	sw $t0, -104($sp)
 	li $t0, 1
 	sw $t0, _printf_cnt
-	subu $sp, $sp, 92
+	subu $sp, $sp, 108
 	jal _printf
-	addi $sp, $sp, 92
+	addi $sp, $sp, 108
 	sw $v0, -60($sp)
 	lw $ra, ($sp)
 L7:
-	lw $t0, -8($sp)
-	sw $t0, -64($sp)
 	li $t2, 1
 	lw $t1, -8($sp)
 	add $t0, $t1, $t2
+	sw $t0, -72($sp)
+	lw $t0, -72($sp)
 	sw $t0, -8($sp)
+	lw $t0, -8($sp)
+	sw $t0, -68($sp)
+	li $t2, 1
+	lw $t1, -68($sp)
+	sub $t0, $t1, $t2
+	sw $t0, -64($sp)
 	b L5
 L4:
-	lw $t0, -68($sp)
-	sw $t0, -88($sp)
+	lw $t0, -76($sp)
+	sw $t0, -104($sp)
 	li $t0, 1
 	sw $t0, _printf_cnt
-	subu $sp, $sp, 92
+	subu $sp, $sp, 108
 	jal _printf
-	addi $sp, $sp, 92
-	sw $v0, -72($sp)
+	addi $sp, $sp, 108
+	sw $v0, -80($sp)
 	lw $ra, ($sp)
-	lw $t0, -4($sp)
-	sw $t0, -76($sp)
 	li $t2, 1
 	lw $t1, -4($sp)
 	add $t0, $t1, $t2
+	sw $t0, -92($sp)
+	lw $t0, -92($sp)
 	sw $t0, -4($sp)
+	lw $t0, -4($sp)
+	sw $t0, -88($sp)
+	li $t2, 1
+	lw $t1, -88($sp)
+	sub $t0, $t1, $t2
+	sw $t0, -84($sp)
 	b L2
 L1:
-	lw $t0, -80($sp)
-	sw $t0, -88($sp)
+	lw $t0, -96($sp)
+	sw $t0, -104($sp)
 	li $t0, 1
 	sw $t0, _printf_cnt
-	subu $sp, $sp, 92
+	subu $sp, $sp, 108
 	jal _printf
-	addi $sp, $sp, 92
-	sw $v0, -84($sp)
+	addi $sp, $sp, 108
+	sw $v0, -100($sp)
 	lw $ra, ($sp)
 	jr $ra
 _search:
@@ -154,9 +184,9 @@ _search:
 	bne $t0, $0, L11
 	b L12
 L11:
-	subu $sp, $sp, 92
+	subu $sp, $sp, 108
 	jal _printBoard
-	addi $sp, $sp, 92
+	addi $sp, $sp, 108
 	sw $v0, -8($sp)
 	lw $ra, ($sp)
 	b L10
@@ -410,10 +440,10 @@ L17:
 	add $t0, $t1, $t2
 	sw $t0, -212($sp)
 	lw $t0, -212($sp)
-	sw $t0, -308($sp)
-	subu $sp, $sp, 312
+	sw $t0, -316($sp)
+	subu $sp, $sp, 320
 	jal _search
-	addi $sp, $sp, 312
+	addi $sp, $sp, 320
 	sw $v0, -216($sp)
 	lw $ra, ($sp)
 	lw $t2, _N
@@ -518,12 +548,18 @@ L17:
 	lw $t1, ($t0)
 	sw $t1, -220($sp)
 L16:
-	lw $t0, -12($sp)
-	sw $t0, -304($sp)
 	li $t2, 1
 	lw $t1, -12($sp)
 	add $t0, $t1, $t2
+	sw $t0, -312($sp)
+	lw $t0, -312($sp)
 	sw $t0, -12($sp)
+	lw $t0, -12($sp)
+	sw $t0, -308($sp)
+	li $t2, 1
+	lw $t1, -308($sp)
+	sub $t0, $t1, $t2
+	sw $t0, -304($sp)
 	b L14
 L13:
 L10:
@@ -552,7 +588,7 @@ _printf:
 _printf_loop:
 	lb $a0, 0($a1)
 	beq $a0, 0, _printf_end
-	addu $a1, $a1, 1
+	addu $a1, $a1, 4
 	beq $a0, '%', _printf_fmt
 	li $v0, 11
 	syscall
@@ -560,7 +596,7 @@ _printf_loop:
 
 _printf_fmt:
 	lb $a0, 0($a1)
-	addu $a1, $a1, 1
+	addu $a1, $a1, 4
 	beq $a0, 'd', _printf_int
 	beq $a0, 's', _printf_str
 	beq $a0, 'c', _printf_char
@@ -590,9 +626,9 @@ _printf_char:
 
 _printf_width:
 	lb $t1, 0($a1)
-	addu $a1, $a1, 1
+	addu $a1, $a1, 4
 	sub $t1, $t1, '1'
-	addu $a1, $a1, 1
+	addu $a1, $a1, 4
 	subu $a2, $a2, 4
 	lw $t0, 0($a2)
 	blt $t0, 10, _printf_width_tmp
@@ -634,7 +670,7 @@ _getchar:
 	syscall
 	jr $ra
 
-_malloc:
+_malloc_struct:
 	lw $a0, 4($sp)
 	li $v0, 9
 	syscall
@@ -643,5 +679,11 @@ _malloc:
 	li $a0, 4
 	syscall
 	sw $t0, ($v0)
+	jr $ra
+
+_malloc:
+	lw $a0, 4($sp)
+	li $v0, 9
+	syscall
 	jr $ra
 

@@ -12,9 +12,9 @@
 	_seed: .space 4
 	ASU_1: .space 4004
 	ASU_2: .space 4004
-	str_1: .asciiz "hhhhhhhhhh\n"
-	str_2: .asciiz "Let's start!\n"
-	str_3: .asciiz "step %d:\n"
+	str_1: .space 48
+	str_2: .space 56
+	str_3: .space 40
 .text
 main:
 	move $fp, $sp     # start using memory here
@@ -32,6 +32,105 @@ main:
 	sw $t0, _M
 	li $t0, 1
 	sw $t0, _seed
+	li $t0, 104
+	la $t1, str_1
+	sw $t0, 0($t1)
+	li $t0, 104
+	la $t1, str_1
+	sw $t0, 4($t1)
+	li $t0, 104
+	la $t1, str_1
+	sw $t0, 8($t1)
+	li $t0, 104
+	la $t1, str_1
+	sw $t0, 12($t1)
+	li $t0, 104
+	la $t1, str_1
+	sw $t0, 16($t1)
+	li $t0, 104
+	la $t1, str_1
+	sw $t0, 20($t1)
+	li $t0, 104
+	la $t1, str_1
+	sw $t0, 24($t1)
+	li $t0, 104
+	la $t1, str_1
+	sw $t0, 28($t1)
+	li $t0, 104
+	la $t1, str_1
+	sw $t0, 32($t1)
+	li $t0, 104
+	la $t1, str_1
+	sw $t0, 36($t1)
+	li $t0, 10
+	la $t1, str_1
+	sw $t0, 40($t1)
+	li $t0, 76
+	la $t1, str_2
+	sw $t0, 0($t1)
+	li $t0, 101
+	la $t1, str_2
+	sw $t0, 4($t1)
+	li $t0, 116
+	la $t1, str_2
+	sw $t0, 8($t1)
+	li $t0, 39
+	la $t1, str_2
+	sw $t0, 12($t1)
+	li $t0, 115
+	la $t1, str_2
+	sw $t0, 16($t1)
+	li $t0, 32
+	la $t1, str_2
+	sw $t0, 20($t1)
+	li $t0, 115
+	la $t1, str_2
+	sw $t0, 24($t1)
+	li $t0, 116
+	la $t1, str_2
+	sw $t0, 28($t1)
+	li $t0, 97
+	la $t1, str_2
+	sw $t0, 32($t1)
+	li $t0, 114
+	la $t1, str_2
+	sw $t0, 36($t1)
+	li $t0, 116
+	la $t1, str_2
+	sw $t0, 40($t1)
+	li $t0, 33
+	la $t1, str_2
+	sw $t0, 44($t1)
+	li $t0, 10
+	la $t1, str_2
+	sw $t0, 48($t1)
+	li $t0, 115
+	la $t1, str_3
+	sw $t0, 0($t1)
+	li $t0, 116
+	la $t1, str_3
+	sw $t0, 4($t1)
+	li $t0, 101
+	la $t1, str_3
+	sw $t0, 8($t1)
+	li $t0, 112
+	la $t1, str_3
+	sw $t0, 12($t1)
+	li $t0, 32
+	la $t1, str_3
+	sw $t0, 16($t1)
+	li $t0, 37
+	la $t1, str_3
+	sw $t0, 20($t1)
+	li $t0, 100
+	la $t1, str_3
+	sw $t0, 24($t1)
+	li $t0, 58
+	la $t1, str_3
+	sw $t0, 28($t1)
+	li $t0, 10
+	la $t1, str_3
+	sw $t0, 32($t1)
 	j _main
 _random:
 	sw $ra, ($sp)
@@ -829,12 +928,18 @@ L45:
 	lw $t0, -72($sp)
 	lw $t1, ($t0)
 	sw $t1, -60($sp)
-	lw $t0, _now
-	sw $t0, -80($sp)
 	li $t2, 1
 	lw $t1, _now
 	add $t0, $t1, $t2
+	sw $t0, -88($sp)
+	lw $t0, -88($sp)
 	sw $t0, _now
+	lw $t0, _now
+	sw $t0, -84($sp)
+	li $t2, 1
+	lw $t1, -84($sp)
+	sub $t0, $t1, $t2
+	sw $t0, -80($sp)
 	jr $ra
 _main:
 	sw $ra, ($sp)
@@ -1183,7 +1288,7 @@ _printf:
 _printf_loop:
 	lb $a0, 0($a1)
 	beq $a0, 0, _printf_end
-	addu $a1, $a1, 1
+	addu $a1, $a1, 4
 	beq $a0, '%', _printf_fmt
 	li $v0, 11
 	syscall
@@ -1191,7 +1296,7 @@ _printf_loop:
 
 _printf_fmt:
 	lb $a0, 0($a1)
-	addu $a1, $a1, 1
+	addu $a1, $a1, 4
 	beq $a0, 'd', _printf_int
 	beq $a0, 's', _printf_str
 	beq $a0, 'c', _printf_char
@@ -1221,9 +1326,9 @@ _printf_char:
 
 _printf_width:
 	lb $t1, 0($a1)
-	addu $a1, $a1, 1
+	addu $a1, $a1, 4
 	sub $t1, $t1, '1'
-	addu $a1, $a1, 1
+	addu $a1, $a1, 4
 	subu $a2, $a2, 4
 	lw $t0, 0($a2)
 	blt $t0, 10, _printf_width_tmp
@@ -1265,7 +1370,7 @@ _getchar:
 	syscall
 	jr $ra
 
-_malloc:
+_malloc_struct:
 	lw $a0, 4($sp)
 	li $v0, 9
 	syscall
@@ -1274,5 +1379,11 @@ _malloc:
 	li $a0, 4
 	syscall
 	sw $t0, ($v0)
+	jr $ra
+
+_malloc:
+	lw $a0, 4($sp)
+	li $v0, 9
+	syscall
 	jr $ra
 

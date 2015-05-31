@@ -33,6 +33,8 @@ Temp16 = _j MUL 4
 Temp15 = Temp15 ADD Temp16
 Temp17 = _c ADD Temp15
 *Temp17 = Temp14 , 4
+Temp4 = *Temp17, 4
+Temp4 = *Temp17, 4
 _add = 0
 Temp19 = _add
 Temp20 = 0
@@ -54,143 +56,167 @@ Temp32 = _j MUL 4
 Temp31 = Temp31 ADD Temp32
 Temp33 = _c ADD Temp31
 *Temp33 = Temp30 , 4
+Temp25 = *Temp33, 4
+Temp25 = *Temp33, 4
 _add = 1
 Temp35 = _add
-Label :4	Temp36 = _j
-_j = _j ADD 1
+Label :4	Temp38 = _j ADD 1
+_j = Temp38
+Temp37 = _j
+Temp36 = Temp37 SUB 1
 Goto label:2
-Label :1	Temp37 = _add GT 0
-If Not Equal to Zero Temp37 Goto Label :7	
+Label :1	Temp39 = _add GT 0
+If Not Equal to Zero Temp39 Goto Label :7	
 Goto label:8
-Label :7	Temp39 = 0
-Temp40 = _j MUL 4
-Temp39 = Temp39 ADD Temp40
-Temp41 = _c ADD Temp39
-*Temp41 = 1 , 4
+Label :7	Temp41 = 0
+Temp42 = _j MUL 4
+Temp41 = Temp41 ADD Temp42
+Temp43 = _c ADD Temp41
+*Temp43 = 1 , 4
+Temp40 = *Temp43, 4
+Temp40 = *Temp43, 4
 Return BasicParam _j
 Goto label:6
-Label :8	Temp43 = _j SUB 1
-Return BasicParam Temp43
+Label :8	Temp45 = _j SUB 1
+Return BasicParam Temp45
 Label :6	
 _printIntB: 
-Label :10	Temp44 = L GE 0
-If Not Equal to Zero Temp44 Goto Label :11	
+Label :10	Temp46 = L GE 0
+If Not Equal to Zero Temp46 Goto Label :11	
 Goto label:9
-Label :11	Temp46 = 0
-Temp47 = L MUL 4
-Temp46 = Temp46 ADD Temp47
-Temp48 = _b ADD Temp46
-Temp49 = *Temp48, 4
-BasicParam Temp45
-BasicParam Temp49
+Label :11	Temp48 = 0
+Temp49 = L MUL 4
+Temp48 = Temp48 ADD Temp49
+Temp50 = _b ADD Temp48
+Temp51 = *Temp50, 4
+BasicParam Temp47
+BasicParam Temp51
 _printf_cnt = 2
-Temp50 = call _printf , 2
-Temp51 = L
-L = L SUB 1
+Temp52 = call _printf , 2
+Temp55 = L SUB 1
+L = Temp55
+Temp54 = L
+Temp53 = Temp54 ADD 1
 Goto label:10
-Label :9	BasicParam Temp52
+Label :9	BasicParam Temp56
 _printf_cnt = 1
-Temp53 = call _printf , 1
+Temp57 = call _printf , 1
 
 _printIntA: 
-Label :13	Temp54 = L GE 0
-If Not Equal to Zero Temp54 Goto Label :14	
+Label :13	Temp58 = L GE 0
+If Not Equal to Zero Temp58 Goto Label :14	
 Goto label:12
-Label :14	Temp56 = 0
-Temp57 = L MUL 4
-Temp56 = Temp56 ADD Temp57
-Temp58 = _a ADD Temp56
-Temp59 = *Temp58, 4
-BasicParam Temp55
+Label :14	Temp60 = 0
+Temp61 = L MUL 4
+Temp60 = Temp60 ADD Temp61
+Temp62 = _a ADD Temp60
+Temp63 = *Temp62, 4
 BasicParam Temp59
+BasicParam Temp63
 _printf_cnt = 2
-Temp60 = call _printf , 2
-Temp61 = L
-L = L SUB 1
+Temp64 = call _printf , 2
+Temp67 = L SUB 1
+L = Temp67
+Temp66 = L
+Temp65 = Temp66 ADD 1
 Goto label:13
-Label :12	BasicParam Temp62
+Label :12	BasicParam Temp68
 _printf_cnt = 1
-Temp63 = call _printf , 1
+Temp69 = call _printf , 1
 
 _printBigInt: 
-Label :16	Temp64 = L GE 0
-If Not Equal to Zero Temp64 Goto Label :17	
+Label :16	Temp70 = L GE 0
+If Not Equal to Zero Temp70 Goto Label :17	
 Goto label:15
-Label :17	Temp66 = 0
-Temp67 = L MUL 4
-Temp66 = Temp66 ADD Temp67
-Temp68 = _c ADD Temp66
-Temp69 = *Temp68, 4
-BasicParam Temp65
-BasicParam Temp69
+Label :17	Temp72 = 0
+Temp73 = L MUL 4
+Temp72 = Temp72 ADD Temp73
+Temp74 = _c ADD Temp72
+Temp75 = *Temp74, 4
+BasicParam Temp71
+BasicParam Temp75
 _printf_cnt = 2
-Temp70 = call _printf , 2
-Temp71 = L
-L = L SUB 1
+Temp76 = call _printf , 2
+Temp79 = L SUB 1
+L = Temp79
+Temp78 = L
+Temp77 = Temp78 ADD 1
 Goto label:16
-Label :15	BasicParam Temp72
+Label :15	BasicParam Temp80
 _printf_cnt = 1
-Temp73 = call _printf , 1
+Temp81 = call _printf , 1
 
 _main: 
 _i = 0
-Temp74 = _i
-Label :19	Temp75 = _i LT _SIZE
-If Not Equal to Zero Temp75 Goto Label :20	
+Temp82 = _i
+Label :19	Temp83 = _i LT _SIZE
+If Not Equal to Zero Temp83 Goto Label :20	
 Goto label:18
-Label :20	Temp76 = _i LT 9
-If Not Equal to Zero Temp76 Goto Label :22	
+Label :20	Temp84 = _i LT 9
+If Not Equal to Zero Temp84 Goto Label :22	
 Goto label:23
-Label :22	Temp78 = _i ADD 1
-Temp79 = 0
-Temp80 = _i MUL 4
-Temp79 = Temp79 ADD Temp80
-Temp81 = _a ADD Temp79
-*Temp81 = Temp78 , 4
+Label :22	Temp86 = _i ADD 1
+Temp87 = 0
+Temp88 = _i MUL 4
+Temp87 = Temp87 ADD Temp88
+Temp89 = _a ADD Temp87
+*Temp89 = Temp86 , 4
+Temp85 = *Temp89, 4
+Temp85 = *Temp89, 4
 Goto label:21
-Label :23	Temp84 = _i SUB 9
-Temp85 = 0
-Temp86 = _i MUL 4
-Temp85 = Temp85 ADD Temp86
-Temp87 = _a ADD Temp85
-*Temp87 = Temp84 , 4
-Label :21	Temp89 = _i
-_i = _i ADD 1
+Label :23	Temp92 = _i SUB 9
+Temp93 = 0
+Temp94 = _i MUL 4
+Temp93 = Temp93 ADD Temp94
+Temp95 = _a ADD Temp93
+*Temp95 = Temp92 , 4
+Temp91 = *Temp95, 4
+Temp91 = *Temp95, 4
+Label :21	Temp99 = _i ADD 1
+_i = Temp99
+Temp98 = _i
+Temp97 = Temp98 SUB 1
 Goto label:19
 Label :18	_i = 0
-Temp90 = _i
-Label :25	Temp91 = _i LT _SIZE
-If Not Equal to Zero Temp91 Goto Label :26	
+Temp100 = _i
+Label :25	Temp101 = _i LT _SIZE
+If Not Equal to Zero Temp101 Goto Label :26	
 Goto label:24
-Label :26	Temp92 = _SIZE DIV 2
-Temp93 = _i LT Temp92
-If Not Equal to Zero Temp93 Goto Label :28	
+Label :26	Temp102 = _SIZE DIV 2
+Temp103 = _i LT Temp102
+If Not Equal to Zero Temp103 Goto Label :28	
 Goto label:29
-Label :28	Temp95 = 0
-Temp96 = _i MUL 4
-Temp95 = Temp95 ADD Temp96
-Temp97 = _b ADD Temp95
-*Temp97 = 7 , 4
+Label :28	Temp105 = 0
+Temp106 = _i MUL 4
+Temp105 = Temp105 ADD Temp106
+Temp107 = _b ADD Temp105
+*Temp107 = 7 , 4
+Temp104 = *Temp107, 4
+Temp104 = *Temp107, 4
 Goto label:27
-Label :29	Temp100 = 0
-Temp101 = _i MUL 4
-Temp100 = Temp100 ADD Temp101
-Temp102 = _b ADD Temp100
-*Temp102 = 3 , 4
-Label :27	Temp104 = _i
-_i = _i ADD 1
+Label :29	Temp110 = 0
+Temp111 = _i MUL 4
+Temp110 = Temp110 ADD Temp111
+Temp112 = _b ADD Temp110
+*Temp112 = 3 , 4
+Temp109 = *Temp112, 4
+Temp109 = *Temp112, 4
+Label :27	Temp116 = _i ADD 1
+_i = Temp116
+Temp115 = _i
+Temp114 = Temp115 SUB 1
 Goto label:25
-Label :24	Temp105 = _SIZE SUB 1
-BasicParam Temp105
-Temp106 = call _printIntA , 1
-Temp107 = _SIZE SUB 1
-BasicParam Temp107
-Temp108 = call _printIntB , 1
+Label :24	Temp117 = _SIZE SUB 1
+BasicParam Temp117
+Temp118 = call _printIntA , 1
+Temp119 = _SIZE SUB 1
+BasicParam Temp119
+Temp120 = call _printIntB , 1
 BasicParam _SIZE
-Temp110 = call _plus , 1
-_L = Temp110
-Temp109 = _L
+Temp122 = call _plus , 1
+_L = Temp122
+Temp121 = _L
 BasicParam _L
-Temp111 = call _printBigInt , 1
+Temp123 = call _printBigInt , 1
 Return BasicParam 0
 

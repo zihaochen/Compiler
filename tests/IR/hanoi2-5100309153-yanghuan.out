@@ -1,13 +1,13 @@
 _start: 
-printf_cnt = 0
+_printf_cnt = 0
 
-malloc: 
+_malloc: 
 
-getchar: 
+_getchar: 
 
-printf: 
+_printf: 
 
-hanoi: 
+_hanoi: 
 Temp1 = n GT 1
 If Not Equal to Zero Temp1 Goto Label :2	
 Goto label:3
@@ -16,35 +16,35 @@ BasicParam a
 BasicParam c
 BasicParam b
 BasicParam Temp2
-Temp3 = call hanoi , 4
+Temp3 = call _hanoi , 4
 BasicParam Temp4
 BasicParam a
 BasicParam c
-printf_cnt = 3
-Temp5 = call printf , 3
+_printf_cnt = 3
+Temp5 = call _printf , 3
 Temp6 = n SUB 1
 BasicParam b
 BasicParam a
 BasicParam c
 BasicParam Temp6
-Temp7 = call hanoi , 4
+Temp7 = call _hanoi , 4
 Goto label:1
 Label :3	BasicParam Temp8
 BasicParam a
 BasicParam c
-printf_cnt = 3
-Temp9 = call printf , 3
+_printf_cnt = 3
+Temp9 = call _printf , 3
 Label :1	
-main: 
-N = 12
-Temp10 = N
-Temp11 = N GT 0
+_main: 
+_N = 12
+Temp10 = _N
+Temp11 = _N GT 0
 If Not Equal to Zero Temp11 Goto Label :5	
 Goto label:4
 Label :5	BasicParam 97
 BasicParam 98
 BasicParam 99
-BasicParam N
-Temp12 = call hanoi , 4
+BasicParam _N
+Temp12 = call _hanoi , 4
 Label :4	Return BasicParam 0
 

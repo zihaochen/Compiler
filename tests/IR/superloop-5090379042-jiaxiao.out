@@ -167,29 +167,43 @@ Goto label:19
 Label :21	Temp53 = _h NE _k
 If Not Equal to Zero Temp53 Goto Label :20	
 Goto label:19
-Label :20	Temp54 = _total
-_total = _total ADD 1
-Label :19	Temp55 = _f
-_f = _f ADD 1
+Label :20	Temp56 = _total ADD 1
+_total = Temp56
+Temp55 = _total
+Temp54 = Temp55 SUB 1
+Label :19	Temp59 = _f ADD 1
+_f = Temp59
+Temp58 = _f
+Temp57 = Temp58 SUB 1
 Goto label:17
-Label :16	Temp56 = _e
-_e = _e ADD 1
+Label :16	Temp62 = _e ADD 1
+_e = Temp62
+Temp61 = _e
+Temp60 = Temp61 SUB 1
 Goto label:14
-Label :13	Temp57 = _d
-_d = _d ADD 1
+Label :13	Temp65 = _d ADD 1
+_d = Temp65
+Temp64 = _d
+Temp63 = Temp64 SUB 1
 Goto label:11
-Label :10	Temp58 = _c
-_c = _c ADD 1
+Label :10	Temp68 = _c ADD 1
+_c = Temp68
+Temp67 = _c
+Temp66 = Temp67 SUB 1
 Goto label:8
-Label :7	Temp59 = _b
-_b = _b ADD 1
+Label :7	Temp71 = _b ADD 1
+_b = Temp71
+Temp70 = _b
+Temp69 = Temp70 SUB 1
 Goto label:5
-Label :4	Temp60 = _a
-_a = _a ADD 1
+Label :4	Temp74 = _a ADD 1
+_a = Temp74
+Temp73 = _a
+Temp72 = Temp73 SUB 1
 Goto label:2
-Label :1	BasicParam Temp61
+Label :1	BasicParam Temp75
 BasicParam _total
 _printf_cnt = 2
-Temp62 = call _printf , 2
+Temp76 = call _printf , 2
 Return BasicParam 0
 

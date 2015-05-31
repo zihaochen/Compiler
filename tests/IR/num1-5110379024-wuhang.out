@@ -1,35 +1,35 @@
 _start: 
-printf_cnt = 0
+_printf_cnt = 0
 
-malloc: 
+_malloc: 
 
-getchar: 
+_getchar: 
 
-printf: 
+_printf: 
 
-main: 
-a = 51
-b = 17658
-d = 11
-e = 8
-f = 10
-g = 40
-Temp2 = g ADD f
-g = Temp2
-Temp1 = g
+_main: 
+_a = 51
+_b = 17658
+_d = 11
+_e = 8
+_f = 10
+_g = 40
+Temp2 = _g ADD _f
+_g = Temp2
+Temp1 = _g
 BasicParam Temp3
-BasicParam a
-BasicParam b
-BasicParam d
-BasicParam e
-printf_cnt = 5
-Temp4 = call printf , 5
+BasicParam _a
+BasicParam _b
+BasicParam _d
+BasicParam _e
+_printf_cnt = 5
+Temp4 = call _printf , 5
 BasicParam Temp5
-BasicParam a
-BasicParam e
+BasicParam _a
+BasicParam _e
 BasicParam 4
-BasicParam g
-printf_cnt = 5
-Temp6 = call printf , 5
+BasicParam _g
+_printf_cnt = 5
+Temp6 = call _printf , 5
 Return BasicParam 0
 

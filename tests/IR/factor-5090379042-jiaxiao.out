@@ -1,13 +1,13 @@
 _start: 
-printf_cnt = 0
+_printf_cnt = 0
 
-malloc: 
+_malloc: 
 
-getchar: 
+_getchar: 
 
-printf: 
+_printf: 
 
-nfactor: 
+_nfactor: 
 Temp1 = n EQ 0
 If Not Equal to Zero Temp1 Goto Label :2	
 Goto label:3
@@ -15,17 +15,17 @@ Label :2	Return BasicParam 1
 Goto label:1
 Label :3	Temp2 = n SUB 1
 BasicParam Temp2
-Temp3 = call nfactor , 1
+Temp3 = call _nfactor , 1
 Temp4 = n MUL Temp3
 Return BasicParam Temp4
 Label :1	
-main: 
+_main: 
 BasicParam 6
-Temp5 = call nfactor , 1
-a = Temp5
+Temp5 = call _nfactor , 1
+_a = Temp5
 BasicParam Temp6
-BasicParam a
-printf_cnt = 2
-Temp7 = call printf , 2
-Return BasicParam a
+BasicParam _a
+_printf_cnt = 2
+Temp7 = call _printf , 2
+Return BasicParam _a
 

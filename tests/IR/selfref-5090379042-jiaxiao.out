@@ -1,22 +1,22 @@
 _start: 
-printf_cnt = 0
+_printf_cnt = 0
 
-malloc: 
+_malloc: 
 
-getchar: 
+_getchar: 
 
-printf: 
+_printf: 
 
-f: 
+_f: 
 Return BasicParam 0
 
-main: 
-BasicParam x
-Temp1 = call f , 1
-x = Temp1
+_main: 
+BasicParam _x
+Temp1 = call _f , 1
+_x = Temp1
 BasicParam Temp2
-BasicParam x
-printf_cnt = 2
-Temp3 = call printf , 2
-Return BasicParam x
+BasicParam _x
+_printf_cnt = 2
+Temp3 = call _printf , 2
+Return BasicParam _x
 

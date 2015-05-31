@@ -16,14 +16,14 @@
 	ASU_3: .space 4008
 	ASU_4: .space 8
 	ASU_5: .space 115604
-	str_1: .asciiz "%d\n"
-	str_2: .asciiz "%d"
-	str_3: .asciiz "%c"
-	str_4: .asciiz "%d"
-	str_5: .asciiz "%c"
-	str_6: .asciiz "%d\n"
-	str_7: .asciiz "hhahahahahah\n"
-	str_8: .asciiz "Total: %d\n"
+	str_1: .space 16
+	str_2: .space 12
+	str_3: .space 12
+	str_4: .space 12
+	str_5: .space 12
+	str_6: .space 16
+	str_7: .space 56
+	str_8: .space 44
 .text
 main:
 	move $fp, $sp     # start using memory here
@@ -41,6 +41,117 @@ main:
 	sw $t0, _result
 	li $t0, 0
 	sw $t0, _printf_cnt
+	li $t0, 37
+	la $t1, str_1
+	sw $t0, 0($t1)
+	li $t0, 100
+	la $t1, str_1
+	sw $t0, 4($t1)
+	li $t0, 10
+	la $t1, str_1
+	sw $t0, 8($t1)
+	li $t0, 37
+	la $t1, str_2
+	sw $t0, 0($t1)
+	li $t0, 100
+	la $t1, str_2
+	sw $t0, 4($t1)
+	li $t0, 37
+	la $t1, str_3
+	sw $t0, 0($t1)
+	li $t0, 99
+	la $t1, str_3
+	sw $t0, 4($t1)
+	li $t0, 37
+	la $t1, str_4
+	sw $t0, 0($t1)
+	li $t0, 100
+	la $t1, str_4
+	sw $t0, 4($t1)
+	li $t0, 37
+	la $t1, str_5
+	sw $t0, 0($t1)
+	li $t0, 99
+	la $t1, str_5
+	sw $t0, 4($t1)
+	li $t0, 37
+	la $t1, str_6
+	sw $t0, 0($t1)
+	li $t0, 100
+	la $t1, str_6
+	sw $t0, 4($t1)
+	li $t0, 10
+	la $t1, str_6
+	sw $t0, 8($t1)
+	li $t0, 104
+	la $t1, str_7
+	sw $t0, 0($t1)
+	li $t0, 104
+	la $t1, str_7
+	sw $t0, 4($t1)
+	li $t0, 97
+	la $t1, str_7
+	sw $t0, 8($t1)
+	li $t0, 104
+	la $t1, str_7
+	sw $t0, 12($t1)
+	li $t0, 97
+	la $t1, str_7
+	sw $t0, 16($t1)
+	li $t0, 104
+	la $t1, str_7
+	sw $t0, 20($t1)
+	li $t0, 97
+	la $t1, str_7
+	sw $t0, 24($t1)
+	li $t0, 104
+	la $t1, str_7
+	sw $t0, 28($t1)
+	li $t0, 97
+	la $t1, str_7
+	sw $t0, 32($t1)
+	li $t0, 104
+	la $t1, str_7
+	sw $t0, 36($t1)
+	li $t0, 97
+	la $t1, str_7
+	sw $t0, 40($t1)
+	li $t0, 104
+	la $t1, str_7
+	sw $t0, 44($t1)
+	li $t0, 10
+	la $t1, str_7
+	sw $t0, 48($t1)
+	li $t0, 84
+	la $t1, str_8
+	sw $t0, 0($t1)
+	li $t0, 111
+	la $t1, str_8
+	sw $t0, 4($t1)
+	li $t0, 116
+	la $t1, str_8
+	sw $t0, 8($t1)
+	li $t0, 97
+	la $t1, str_8
+	sw $t0, 12($t1)
+	li $t0, 108
+	la $t1, str_8
+	sw $t0, 16($t1)
+	li $t0, 58
+	la $t1, str_8
+	sw $t0, 20($t1)
+	li $t0, 32
+	la $t1, str_8
+	sw $t0, 24($t1)
+	li $t0, 37
+	la $t1, str_8
+	sw $t0, 28($t1)
+	li $t0, 100
+	la $t1, str_8
+	sw $t0, 32($t1)
+	li $t0, 10
+	la $t1, str_8
+	sw $t0, 36($t1)
 	j _main
 _getPrime:
 	sw $ra, ($sp)
@@ -1212,7 +1323,7 @@ _printf:
 _printf_loop:
 	lb $a0, 0($a1)
 	beq $a0, 0, _printf_end
-	addu $a1, $a1, 1
+	addu $a1, $a1, 4
 	beq $a0, '%', _printf_fmt
 	li $v0, 11
 	syscall
@@ -1220,7 +1331,7 @@ _printf_loop:
 
 _printf_fmt:
 	lb $a0, 0($a1)
-	addu $a1, $a1, 1
+	addu $a1, $a1, 4
 	beq $a0, 'd', _printf_int
 	beq $a0, 's', _printf_str
 	beq $a0, 'c', _printf_char
@@ -1250,9 +1361,9 @@ _printf_char:
 
 _printf_width:
 	lb $t1, 0($a1)
-	addu $a1, $a1, 1
+	addu $a1, $a1, 4
 	sub $t1, $t1, '1'
-	addu $a1, $a1, 1
+	addu $a1, $a1, 4
 	subu $a2, $a2, 4
 	lw $t0, 0($a2)
 	blt $t0, 10, _printf_width_tmp
@@ -1294,7 +1405,7 @@ _getchar:
 	syscall
 	jr $ra
 
-_malloc:
+_malloc_struct:
 	lw $a0, 4($sp)
 	li $v0, 9
 	syscall
@@ -1303,5 +1414,11 @@ _malloc:
 	li $a0, 4
 	syscall
 	sw $t0, ($v0)
+	jr $ra
+
+_malloc:
+	lw $a0, 4($sp)
+	li $v0, 9
+	syscall
 	jr $ra
 

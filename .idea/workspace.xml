@@ -5,217 +5,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef921a38-bb99-415c-8ed8-767f2b738347" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Bulgarian_solitaire-5110379024-wuhang.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/arraysum.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/basicopt1-hetianxing.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/board-5100379110-daibo.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/gcd-5090379042-jiaxiao.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/hashmap-5100309127-hetianxing.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/heapsort-5100379110-daibo.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/horse-5100309153-yanghuan.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/horse3-5100309153-yanghuan.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/hpplus-5100309153-yanghuan.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/magic-5100309153-yanghuan.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/maxflow-5100379110-daibo.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/multiarray-5100309153-yanghuan.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/nqueencon-5100379110-daibo.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/pi-5090379042-jiaxiao.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/prime-5100309153-yanghuan.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/prime2-5100309153-yanghuan.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/queenbitwise-5110379024-wuhang.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/queens-5100379110-daibo.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/spill2-5100379110-daibo.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/struct5-5110379024-wuhang.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/struct6-5100309127-hetianxing.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/treap-5110309085-jintianxing.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/twinprime-5090379042-jiaxiao.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/varptr-5100309127-hetianxing.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/compiler/CodeGen/BrutalGen/BrutalGen.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/Bulgarian_solitaire-5110379024-wuhang.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Bulgarian_solitaire-5110379024-wuhang.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/compiler/CodeGen/Gen.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/compiler/CodeGen/STL.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/compiler/IR/Nodes/Expression/StringAssign.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/arraysum.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/arraysum.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/arraysum.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/arraysum.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/basicopt1-hetianxing.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/basicopt1-hetianxing.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/board-5100379110-daibo.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/expr-5110309085-jintianxing.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/expr-5110309085-jintianxing.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/factor-5090379042-jiaxiao.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/factor-5090379042-jiaxiao.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/finaltermvars.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/finalvars.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/gcd-5090379042-jiaxiao.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/gcd-5090379042-jiaxiao.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/compiler/CodeGen/genTester.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/hanoi-5100379110-daibo.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/hanoi-5100379110-daibo.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/hanoi2-5100309153-yanghuan.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/hanoi2-5100309153-yanghuan.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/hashmap-5100309127-hetianxing.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/hashmap-5100309127-hetianxing.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/heapsort-5100379110-daibo.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/heapsort-5100379110-daibo.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/hello-5090379042-jiaxiao.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/hello-5090379042-jiaxiao.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/horse-5100309153-yanghuan.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/horse2-5100309153-yanghuan.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/horse3-5100309153-yanghuan.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/hpplus-5100309153-yanghuan.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/hpplus-5100309153-yanghuan.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/inlinecheck-5100309153-yanghuan.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/inlinecheck-5100309153-yanghuan.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/magic-5100309153-yanghuan.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/magic-5100309153-yanghuan.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/manyarguments-5100379110-daibo.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/manyarguments-5100379110-daibo.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/manymanyarguments-5100379110-daibo.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/manymanyarguments-5100379110-daibo.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/maxflow-5100379110-daibo.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/maxflow-5100379110-daibo.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/multiarray-5100309153-yanghuan.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/multiarray-5100309153-yanghuan.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/nqueencon-5100379110-daibo.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/nqueencon-5100379110-daibo.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/num1-5110379024-wuhang.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/num1-5110379024-wuhang.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/pi-5090379042-jiaxiao.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/pi-5090379042-jiaxiao.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/plus-5100309153-yanghuan.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/plus-5100309153-yanghuan.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/prime-5100309153-yanghuan.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/prime-5100309153-yanghuan.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/prime2-5100309153-yanghuan.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/prime2-5100309153-yanghuan.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/qsort-5100379110-daibo.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/qsort-5100379110-daibo.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/queenbitwise-5110379024-wuhang.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/queenbitwise-5110379024-wuhang.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/queens-5100379110-daibo.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/queens-5100379110-daibo.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/self-5090379042-jiaxiao.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/self-5090379042-jiaxiao.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/selfref-5090379042-jiaxiao.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/selfref-5090379042-jiaxiao.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/spill-5100379110-daibo.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/spill-5100379110-daibo.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/spill2-5100379110-daibo.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/spill2-5100379110-daibo.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/struct4-5110379024-wuhang.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/struct5-5110379024-wuhang.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/struct5-5110379024-wuhang.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/struct6-5100309127-hetianxing.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/struct6-5100309127-hetianxing.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/superloop-5090379042-jiaxiao.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/superloop-5090379042-jiaxiao.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/tak-5090379042-jiaxiao.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/tak-5090379042-jiaxiao.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/treap-5110309085-jintianxing.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/treap-5110309085-jintianxing.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/twinprime-5090379042-jiaxiao.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/twinprime-5090379042-jiaxiao.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/AST/varptr-5100309127-hetianxing.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/varptr-5100309127-hetianxing.s" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\struct4-5110379024-wuhang.c" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\struct4-5110379024-wuhang.out" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler/compiler/ast/ASTTester.class" afterPath="$PROJECT_DIR$/out/production/Compiler/compiler/ast/ASTTester.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/Bulgarian_solitaire-5110379024-wuhang.out" afterPath="$PROJECT_DIR$/tests/IR/Bulgarian_solitaire-5110379024-wuhang.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler/compiler/syntactic/CUP$parser$actions.class" afterPath="$PROJECT_DIR$/out/production/Compiler/compiler/syntactic/CUP$parser$actions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler/compiler/semantic/SemanticCheck$1.class" afterPath="$PROJECT_DIR$/out/production/Compiler/compiler/semantic/SemanticCheck$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler/compiler/semantic/SemanticCheck.class" afterPath="$PROJECT_DIR$/out/production/Compiler/compiler/semantic/SemanticCheck.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler/compiler/ast/nodes/StructType.class" afterPath="$PROJECT_DIR$/out/production/Compiler/compiler/ast/nodes/StructType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler/compiler/ast/nodes/Symbol.class" afterPath="$PROJECT_DIR$/out/production/Compiler/compiler/ast/nodes/Symbol.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler/compiler/ast/nodes/Type.class" afterPath="$PROJECT_DIR$/out/production/Compiler/compiler/ast/nodes/Type.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler/compiler/main/Main.class" afterPath="$PROJECT_DIR$/out/production/Compiler/compiler/main/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/basicopt1-hetianxing.out" afterPath="$PROJECT_DIR$/tests/IR/basicopt1-hetianxing.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/gcd-5090379042-jiaxiao.out" afterPath="$PROJECT_DIR$/tests/IR/gcd-5090379042-jiaxiao.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/hashmap-5100309127-hetianxing.out" afterPath="$PROJECT_DIR$/tests/IR/hashmap-5100309127-hetianxing.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/heapsort-5100379110-daibo.out" afterPath="$PROJECT_DIR$/tests/IR/heapsort-5100379110-daibo.out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/hpplus-5100309153-yanghuan.out" afterPath="$PROJECT_DIR$/tests/IR/hpplus-5100309153-yanghuan.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/inlinecheck-5100309153-yanghuan.out" afterPath="$PROJECT_DIR$/tests/IR/inlinecheck-5100309153-yanghuan.out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/magic-5100309153-yanghuan.out" afterPath="$PROJECT_DIR$/tests/IR/magic-5100309153-yanghuan.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/manyarguments-5100379110-daibo.out" afterPath="$PROJECT_DIR$/tests/IR/manyarguments-5100379110-daibo.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/manymanyarguments-5100379110-daibo.out" afterPath="$PROJECT_DIR$/tests/IR/manymanyarguments-5100379110-daibo.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/maxflow-5100379110-daibo.out" afterPath="$PROJECT_DIR$/tests/IR/maxflow-5100379110-daibo.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/multiarray-5100309153-yanghuan.out" afterPath="$PROJECT_DIR$/tests/IR/multiarray-5100309153-yanghuan.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/nqueencon-5100379110-daibo.out" afterPath="$PROJECT_DIR$/tests/IR/nqueencon-5100379110-daibo.out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/pi-5090379042-jiaxiao.out" afterPath="$PROJECT_DIR$/tests/IR/pi-5090379042-jiaxiao.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/prime-5100309153-yanghuan.out" afterPath="$PROJECT_DIR$/tests/IR/prime-5100309153-yanghuan.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/prime2-5100309153-yanghuan.out" afterPath="$PROJECT_DIR$/tests/IR/prime2-5100309153-yanghuan.out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/qsort-5100379110-daibo.out" afterPath="$PROJECT_DIR$/tests/IR/qsort-5100379110-daibo.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/queenbitwise-5110379024-wuhang.out" afterPath="$PROJECT_DIR$/tests/IR/queenbitwise-5110379024-wuhang.out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/queens-5100379110-daibo.out" afterPath="$PROJECT_DIR$/tests/IR/queens-5100379110-daibo.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/spill-5100379110-daibo.out" afterPath="$PROJECT_DIR$/tests/IR/spill-5100379110-daibo.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/spill2-5100379110-daibo.out" afterPath="$PROJECT_DIR$/tests/IR/spill2-5100379110-daibo.out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/struct5-5110379024-wuhang.exe" afterPath="$PROJECT_DIR$/tests/IR/struct5-5110379024-wuhang.exe" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/struct5-5110379024-wuhang.out" afterPath="$PROJECT_DIR$/tests/IR/struct5-5110379024-wuhang.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/struct6-5100309127-hetianxing.out" afterPath="$PROJECT_DIR$/tests/IR/struct6-5100309127-hetianxing.out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/superloop-5090379042-jiaxiao.out" afterPath="$PROJECT_DIR$/tests/IR/superloop-5090379042-jiaxiao.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/tak-5090379042-jiaxiao.out" afterPath="$PROJECT_DIR$/tests/IR/tak-5090379042-jiaxiao.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/treap-5110309085-jintianxing.out" afterPath="$PROJECT_DIR$/tests/IR/treap-5110309085-jintianxing.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/twinprime-5090379042-jiaxiao.out" afterPath="$PROJECT_DIR$/tests/IR/twinprime-5090379042-jiaxiao.out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/varptr-5100309127-hetianxing.out" afterPath="$PROJECT_DIR$/tests/IR/varptr-5100309127-hetianxing.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/ast/ASTTester.java" afterPath="$PROJECT_DIR$/src/compiler/ast/ASTTester.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/IR/Nodes/Address/Address.java" afterPath="$PROJECT_DIR$/src/compiler/IR/Nodes/Address/Address.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/IR/Nodes/Expression/AddressOf.java" afterPath="$PROJECT_DIR$/src/compiler/IR/Nodes/Expression/AddressOf.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/tables/AddressTable.java" afterPath="$PROJECT_DIR$/src/compiler/tables/AddressTable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/IR/Nodes/Function/BasicParam.java" afterPath="$PROJECT_DIR$/src/compiler/IR/Nodes/Function/BasicParam.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/Bulgarian_solitaire-5110379024-wuhang.c" afterPath="$PROJECT_DIR$/tests/IR/Bulgarian_solitaire-5110379024-wuhang.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/IR/Nodes/Function/Call.java" afterPath="$PROJECT_DIR$/src/compiler/IR/Nodes/Function/Call.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/IR/Nodes/Function/Function.java" afterPath="$PROJECT_DIR$/src/compiler/IR/Nodes/Function/Function.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/IR/Nodes/Root/IR.java" afterPath="$PROJECT_DIR$/src/compiler/IR/Nodes/Root/IR.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/IR/Nodes/Control/IfEZGoto.java" afterPath="$PROJECT_DIR$/src/compiler/IR/Nodes/Control/IfEZGoto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/IR/Nodes/Control/IfNEZGoto.java" afterPath="$PROJECT_DIR$/src/compiler/IR/Nodes/Control/IfNEZGoto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/IR/Nodes/Expression/Label.java" afterPath="$PROJECT_DIR$/src/compiler/IR/Nodes/Expression/Label.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/main/Main.java" afterPath="$PROJECT_DIR$/src/compiler/main/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/STL/Malloc.java" afterPath="$PROJECT_DIR$/src/compiler/STL/Malloc.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/tables/MemberTable.java" afterPath="$PROJECT_DIR$/src/compiler/tables/MemberTable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/IR/Nodes/Function/MemoryParam.java" afterPath="$PROJECT_DIR$/src/compiler/IR/Nodes/Function/MemoryParam.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/IR/Nodes/Address/Name.java" afterPath="$PROJECT_DIR$/src/compiler/IR/Nodes/Address/Name.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/IR/Nodes/Function/Param.java" afterPath="$PROJECT_DIR$/src/compiler/IR/Nodes/Function/Param.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler/compiler/syntactic/Parser.cup" afterPath="$PROJECT_DIR$/out/production/Compiler/compiler/syntactic/Parser.cup" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/syntactic/Parser.cup" afterPath="$PROJECT_DIR$/src/compiler/syntactic/Parser.cup" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/IR/Nodes/Function/Return.java" afterPath="$PROJECT_DIR$/src/compiler/IR/Nodes/Function/Return.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/semantic/SemanticCheck.java" afterPath="$PROJECT_DIR$/src/compiler/semantic/SemanticCheck.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/ast/nodes/StructType.java" afterPath="$PROJECT_DIR$/src/compiler/ast/nodes/StructType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/ast/nodes/Symbol.java" afterPath="$PROJECT_DIR$/src/compiler/ast/nodes/Symbol.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/IR/Nodes/Address/Temp.java" afterPath="$PROJECT_DIR$/src/compiler/IR/Nodes/Address/Temp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/Bulgarian_solitaire-5110379024-wuhang.s" afterPath="$PROJECT_DIR$/tests/IR/Bulgarian_solitaire-5110379024-wuhang.s" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/IR/Translator.java" afterPath="$PROJECT_DIR$/src/compiler/IR/Translator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/ast/nodes/Type.java" afterPath="$PROJECT_DIR$/src/compiler/ast/nodes/Type.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/IR/Nodes/Function/Variable.java" afterPath="$PROJECT_DIR$/src/compiler/IR/Nodes/Function/Variable.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/basicopt1-hetianxing.c" afterPath="$PROJECT_DIR$/tests/IR/basicopt1-hetianxing.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/board-5100379110-daibo.out" afterPath="$PROJECT_DIR$/tests/IR/board-5100379110-daibo.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.properties" afterPath="$PROJECT_DIR$/build.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/expr-5110309085-jintianxing.c" afterPath="$PROJECT_DIR$/tests/IR/expr-5110309085-jintianxing.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/basicopt1-hetianxing.s" afterPath="$PROJECT_DIR$/tests/IR/basicopt1-hetianxing.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/board-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/board-5100379110-daibo.s" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/expr-5110309085-jintianxing.out" afterPath="$PROJECT_DIR$/tests/IR/expr-5110309085-jintianxing.out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/expr-5110309085-jintianxing.s" afterPath="$PROJECT_DIR$/tests/IR/expr-5110309085-jintianxing.s" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/factor-5090379042-jiaxiao.out" afterPath="$PROJECT_DIR$/tests/IR/factor-5090379042-jiaxiao.out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/factor-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/tests/IR/factor-5090379042-jiaxiao.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/gcd-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/tests/IR/gcd-5090379042-jiaxiao.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/CodeGen/genTester.java" afterPath="$PROJECT_DIR$/src/compiler/CodeGen/genTester.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/hanoi-5100379110-daibo.out" afterPath="$PROJECT_DIR$/tests/IR/hanoi-5100379110-daibo.out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/hanoi-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/hanoi-5100379110-daibo.s" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/hanoi2-5100309153-yanghuan.out" afterPath="$PROJECT_DIR$/tests/IR/hanoi2-5100309153-yanghuan.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/heapsort-5100379110-daibo.c" afterPath="$PROJECT_DIR$/tests/IR/heapsort-5100379110-daibo.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/hello-5090379042-jiaxiao.out" afterPath="$PROJECT_DIR$/tests/IR/hello-5090379042-jiaxiao.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/horse-5100309153-yanghuan.c" afterPath="$PROJECT_DIR$/tests/IR/horse-5100309153-yanghuan.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/horse-5100309153-yanghuan.out" afterPath="$PROJECT_DIR$/tests/IR/horse-5100309153-yanghuan.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/horse2-5100309153-yanghuan.c" afterPath="$PROJECT_DIR$/tests/IR/horse2-5100309153-yanghuan.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/horse2-5100309153-yanghuan.out" afterPath="$PROJECT_DIR$/tests/IR/horse2-5100309153-yanghuan.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/horse3-5100309153-yanghuan.c" afterPath="$PROJECT_DIR$/tests/IR/horse3-5100309153-yanghuan.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/horse3-5100309153-yanghuan.out" afterPath="$PROJECT_DIR$/tests/IR/horse3-5100309153-yanghuan.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/hpplus-5100309153-yanghuan.c" afterPath="$PROJECT_DIR$/tests/IR/hpplus-5100309153-yanghuan.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/maxflow-5100379110-daibo.c" afterPath="$PROJECT_DIR$/tests/IR/maxflow-5100379110-daibo.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/hanoi2-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/hanoi2-5100309153-yanghuan.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/heapsort-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/heapsort-5100379110-daibo.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/horse-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/horse-5100309153-yanghuan.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/horse2-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/horse2-5100309153-yanghuan.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/horse3-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/horse3-5100309153-yanghuan.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/hpplus-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/hpplus-5100309153-yanghuan.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/inlinecheck-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/inlinecheck-5100309153-yanghuan.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/magic-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/magic-5100309153-yanghuan.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/manyarguments-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/manyarguments-5100379110-daibo.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/manymanyarguments-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/manymanyarguments-5100379110-daibo.s" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/num1-5110379024-wuhang.out" afterPath="$PROJECT_DIR$/tests/IR/num1-5110379024-wuhang.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/syntactic/parser.java" afterPath="$PROJECT_DIR$/src/compiler/syntactic/parser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/num1-5110379024-wuhang.s" afterPath="$PROJECT_DIR$/tests/IR/num1-5110379024-wuhang.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/pi-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/tests/IR/pi-5090379042-jiaxiao.s" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/plus-5100309153-yanghuan.out" afterPath="$PROJECT_DIR$/tests/IR/plus-5100309153-yanghuan.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/prime-5100309153-yanghuan.c" afterPath="$PROJECT_DIR$/tests/IR/prime-5100309153-yanghuan.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/prime2-5100309153-yanghuan.c" afterPath="$PROJECT_DIR$/tests/IR/prime2-5100309153-yanghuan.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/qsort-5100379110-daibo.c" afterPath="$PROJECT_DIR$/tests/IR/qsort-5100379110-daibo.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/queens-5100379110-daibo.c" afterPath="$PROJECT_DIR$/tests/IR/queens-5100379110-daibo.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/plus-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/plus-5100309153-yanghuan.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/prime-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/prime-5100309153-yanghuan.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/prime2-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/prime2-5100309153-yanghuan.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/qsort-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/qsort-5100379110-daibo.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/queens-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/queens-5100379110-daibo.s" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/self-5090379042-jiaxiao.out" afterPath="$PROJECT_DIR$/tests/IR/self-5090379042-jiaxiao.out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/self-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/tests/IR/self-5090379042-jiaxiao.s" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/selfref-5090379042-jiaxiao.out" afterPath="$PROJECT_DIR$/tests/IR/selfref-5090379042-jiaxiao.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/struct5-5110379024-wuhang.c" afterPath="$PROJECT_DIR$/tests/IR/struct5-5110379024-wuhang.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/struct6-5100309127-hetianxing.c" afterPath="$PROJECT_DIR$/tests/IR/struct6-5100309127-hetianxing.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/syntactic/sym.java" afterPath="$PROJECT_DIR$/src/compiler/syntactic/sym.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/selfref-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/tests/IR/selfref-5090379042-jiaxiao.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/spill-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/spill-5100379110-daibo.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/spill2-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/spill2-5100379110-daibo.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/struct5-5110379024-wuhang.s" afterPath="$PROJECT_DIR$/tests/IR/struct5-5110379024-wuhang.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/superloop-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/tests/IR/superloop-5090379042-jiaxiao.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/tak-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/tests/IR/tak-5090379042-jiaxiao.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/varptr-5100309127-hetianxing.s" afterPath="$PROJECT_DIR$/tests/IR/varptr-5100309127-hetianxing.s" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Compiler.iws" />
@@ -311,7 +155,7 @@
         <entry file="file://$PROJECT_DIR$/src/compiler/semantic/SemanticCheck.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="362" column="33" selection-start-line="362" selection-start-column="33" selection-end-line="362" selection-end-column="33" />
+              <caret line="355" column="44" selection-start-line="355" selection-start-column="44" selection-end-line="355" selection-end-column="44" />
               <folding>
                 <element signature="docComment;class#SemanticCheck#0" expanded="false" />
                 <element signature="method#SemanticCheck#0;class#SemanticCheck#0" expanded="false" />
@@ -336,7 +180,6 @@
                 <element signature="e#15039#15046#0" expanded="false" />
                 <element signature="method#visit#16;class#SemanticCheck#0" expanded="false" />
                 <element signature="method#visit#17;class#SemanticCheck#0" expanded="false" />
-                <element signature="method#checkBinExpr#0;class#SemanticCheck#0" expanded="false" />
                 <element signature="method#visit#18;class#SemanticCheck#0" expanded="false" />
                 <element signature="method#visit#19;class#SemanticCheck#0" expanded="false" />
                 <element signature="method#visit#20;class#SemanticCheck#0" expanded="false" />
@@ -371,21 +214,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="STL.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/compiler/CodeGen/STL.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="genTester.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="genTester.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/compiler/CodeGen/genTester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.20032051">
-              <caret line="23" column="68" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -393,11 +226,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Translator.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Translator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/compiler/IR/Translator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1222" column="6" selection-start-line="1222" selection-start-column="6" selection-end-line="1222" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.70183486">
+              <caret line="933" column="0" selection-start-line="933" selection-start-column="0" selection-end-line="933" selection-end-column="0" />
               <folding>
                 <element signature="docComment;class#Translator#0" expanded="false" />
                 <element signature="method#Translator#0;class#Translator#0" expanded="false" />
@@ -440,7 +273,6 @@
                 <element signature="method#visit#26;class#Translator#0" expanded="false" />
                 <element signature="e#34756#34842#0" expanded="false" />
                 <element signature="method#digArrayAccessBaseReturnType#0;class#Translator#0" expanded="false" />
-                <element signature="method#calArrayAccess#0;class#Translator#0" expanded="false" />
                 <element signature="method#visit#27;class#Translator#0" expanded="false" />
                 <element signature="method#pointerArrayAccess#0;class#Translator#0" expanded="false" />
                 <element signature="method#visit#32;class#Translator#0" expanded="false" />
@@ -541,9 +373,9 @@
         <option value="$PROJECT_DIR$/src/compiler/ast/ASTTester.java" />
         <option value="$PROJECT_DIR$/src/compiler/CodeGen/BrutalGen/BrutalGen.java" />
         <option value="$PROJECT_DIR$/src/compiler/semantic/SemanticCheck.java" />
-        <option value="$PROJECT_DIR$/src/compiler/IR/Translator.java" />
-        <option value="$PROJECT_DIR$/src/compiler/CodeGen/genTester.java" />
         <option value="$PROJECT_DIR$/src/compiler/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/compiler/CodeGen/genTester.java" />
+        <option value="$PROJECT_DIR$/src/compiler/IR/Translator.java" />
       </list>
     </option>
   </component>
@@ -1125,7 +957,7 @@
       <workItem from="1432614578289" duration="16395000" />
       <workItem from="1432683707947" duration="31880000" />
       <workItem from="1432779116963" duration="21047000" />
-      <workItem from="1432854358619" duration="100088000" />
+      <workItem from="1432854358619" duration="101872000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, most files finished, but not compiled yet.">
       <created>1429098593928</created>
@@ -1229,11 +1061,17 @@
       <option name="project" value="LOCAL" />
       <updated>1431940447637</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="PHASE 4 almost done, passed all last year's tests.">
+      <created>1433062721783</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1433062721783</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="640782000" />
+    <option name="totallyTimeSpent" value="642566000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1256,7 +1094,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32771823" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.287902" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.287902" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32618684" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2344932" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1293,7 +1131,8 @@
     <MESSAGE value="PrettyPrinter DONE!" />
     <MESSAGE value="PHASE2 DONE!" />
     <MESSAGE value="PHASE3 DONE, but there is still a known bug. I plan to fix it after the release of final test data." />
-    <option name="LAST_COMMIT_MESSAGE" value="PHASE3 DONE, but there is still a known bug. I plan to fix it after the release of final test data." />
+    <MESSAGE value="PHASE 4 almost done, passed all last year's tests." />
+    <option name="LAST_COMMIT_MESSAGE" value="PHASE 4 almost done, passed all last year's tests." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1631,14 +1470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/CodeGen/STL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/ast/nodes/InitValue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1660,68 +1491,6 @@
         <state vertical-scroll-proportion="0.2451923">
           <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/semantic/SemanticCheck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="362" column="33" selection-start-line="362" selection-start-column="33" selection-end-line="362" selection-end-column="33" />
-          <folding>
-            <element signature="docComment;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#SemanticCheck#0;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#loadSTL#0;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#setOutputStream#0;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#checkICP#0;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#typeEqual#0;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#isVoidPointter#0;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#initCheck#0;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#1;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#2;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#3;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#4;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#6;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#7;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#8;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#9;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#11;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#14;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#15;class#SemanticCheck#0" expanded="false" />
-            <element signature="e#14204#14227#0" expanded="false" />
-            <element signature="e#15039#15046#0" expanded="false" />
-            <element signature="method#visit#16;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#17;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#checkBinExpr#0;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#18;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#19;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#20;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#castValue#0;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#21;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#checkUnExpr#0;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#22;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#23;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#24;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#25;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#26;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#27;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#matchParam#0;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#28;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#29;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#30;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#31;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#32;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#33;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#34;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#35;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#36;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#37;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#38;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#39;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#40;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#41;class#SemanticCheck#0" expanded="false" />
-            <element signature="e#44385#44415#0" expanded="false" />
-            <element signature="e#44533#44560#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1793,10 +1562,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/IR/Translator.java">
+    <entry file="file://$PROJECT_DIR$/src/compiler/main/Midterm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3469388">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29166666">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/CodeGen/STL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.4791667">
+          <caret line="91" column="26" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/CodeGen/genTester.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="1222" column="6" selection-start-line="1222" selection-start-column="6" selection-end-line="1222" selection-end-column="6" />
+          <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/semantic/SemanticCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="355" column="44" selection-start-line="355" selection-start-column="44" selection-end-line="355" selection-end-column="44" />
+          <folding>
+            <element signature="docComment;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#SemanticCheck#0;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#loadSTL#0;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#setOutputStream#0;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#checkICP#0;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#typeEqual#0;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#isVoidPointter#0;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#initCheck#0;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#1;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#2;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#3;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#4;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#6;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#7;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#8;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#9;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#11;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#14;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#15;class#SemanticCheck#0" expanded="false" />
+            <element signature="e#14204#14227#0" expanded="false" />
+            <element signature="e#15039#15046#0" expanded="false" />
+            <element signature="method#visit#16;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#17;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#18;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#19;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#20;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#castValue#0;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#21;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#checkUnExpr#0;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#22;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#23;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#24;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#25;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#26;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#27;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#matchParam#0;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#28;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#29;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#30;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#31;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#32;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#33;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#34;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#35;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#36;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#37;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#38;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#39;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#40;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#41;class#SemanticCheck#0" expanded="false" />
+            <element signature="e#44385#44415#0" expanded="false" />
+            <element signature="e#44533#44560#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/IR/Translator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.70183486">
+          <caret line="933" column="0" selection-start-line="933" selection-start-column="0" selection-end-line="933" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#Translator#0" expanded="false" />
             <element signature="method#Translator#0;class#Translator#0" expanded="false" />
@@ -1839,7 +1705,6 @@
             <element signature="method#visit#26;class#Translator#0" expanded="false" />
             <element signature="e#34756#34842#0" expanded="false" />
             <element signature="method#digArrayAccessBaseReturnType#0;class#Translator#0" expanded="false" />
-            <element signature="method#calArrayAccess#0;class#Translator#0" expanded="false" />
             <element signature="method#visit#27;class#Translator#0" expanded="false" />
             <element signature="method#pointerArrayAccess#0;class#Translator#0" expanded="false" />
             <element signature="method#visit#32;class#Translator#0" expanded="false" />
@@ -1852,34 +1717,6 @@
             <element signature="method#newStruct#0;class#Translator#0" expanded="false" />
             <element signature="method#print#0;class#Translator#0" expanded="false" />
             <element signature="method#merger#0;class#Translator#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/main/Midterm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3469388">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29166666">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/CodeGen/genTester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.20032051">
-          <caret line="23" column="68" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

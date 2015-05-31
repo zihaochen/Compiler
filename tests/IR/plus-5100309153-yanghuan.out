@@ -1,37 +1,37 @@
 _start: 
-printf_cnt = 0
+_printf_cnt = 0
 
-malloc: 
+_malloc: 
 
-getchar: 
+_getchar: 
 
-printf: 
+_printf: 
 
-main: 
-i = 10283
-Temp2 = 3 ADD i
+_main: 
+_i = 10283
+Temp2 = 3 ADD _i
 BasicParam Temp1
 BasicParam Temp2
-printf_cnt = 2
-Temp3 = call printf , 2
+_printf_cnt = 2
+Temp3 = call _printf , 2
 BasicParam Temp4
-printf_cnt = 1
-Temp5 = call printf , 1
+_printf_cnt = 1
+Temp5 = call _printf , 1
 Temp7 = 3 MUL 5
 BasicParam Temp6
 BasicParam Temp7
-printf_cnt = 2
-Temp8 = call printf , 2
+_printf_cnt = 2
+Temp8 = call _printf , 2
 BasicParam Temp9
-printf_cnt = 1
-Temp10 = call printf , 1
+_printf_cnt = 1
+Temp10 = call _printf , 1
 Temp12 = 6 DIV 2
 BasicParam Temp11
 BasicParam Temp12
-printf_cnt = 2
-Temp13 = call printf , 2
+_printf_cnt = 2
+Temp13 = call _printf , 2
 BasicParam Temp14
-printf_cnt = 1
-Temp15 = call printf , 1
+_printf_cnt = 1
+Temp15 = call _printf , 1
 Return BasicParam 0
 

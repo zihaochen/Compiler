@@ -54,6 +54,8 @@ If Not Equal to Zero Temp26 Goto Label :7
 Goto label:8
 Label :7	Temp28 = 45 SUB z
 _make[32] = Temp28 , 4
+Temp27 = _make[32] , 4
+Temp27 = *_make, 4
 Temp31 = *_make, 4
 Temp32 = _make[4] , 4
 Temp33 = Temp31 ADD Temp32
@@ -120,6 +122,8 @@ Goto label:10
 Label :11	Temp79 = *_count, 4
 Temp80 = Temp79 ADD 1
 *_count = Temp80 , 4
+Temp78 = *_count, 4
+Temp78 = *_count, 4
 _i = 0
 Temp82 = _i
 Label :19	Temp83 = _i LE 2
@@ -145,203 +149,223 @@ BasicParam Temp93
 BasicParam 32
 _printf_cnt = 2
 Temp94 = call _printf , 2
-Temp95 = _j
-_j = _j ADD 1
+Temp97 = _j ADD 1
+_j = Temp97
+Temp96 = _j
+Temp95 = Temp96 SUB 1
 Goto label:22
-Label :21	BasicParam Temp96
+Label :21	BasicParam Temp98
 BasicParam 10
 _printf_cnt = 2
-Temp97 = call _printf , 2
-Temp98 = _i
-_i = _i ADD 1
+Temp99 = call _printf , 2
+Temp102 = _i ADD 1
+_i = Temp102
+Temp101 = _i
+Temp100 = Temp101 SUB 1
 Goto label:19
-Label :18	BasicParam Temp99
+Label :18	BasicParam Temp103
 BasicParam 10
 _printf_cnt = 2
-Temp100 = call _printf , 2
+Temp104 = call _printf , 2
 Label :10	Goto label:6
-Label :8	Temp101 = y EQ 2
-If Not Equal to Zero Temp101 Goto Label :25	
+Label :8	Temp105 = y EQ 2
+If Not Equal to Zero Temp105 Goto Label :25	
 Goto label:26
-Label :25	Temp103 = 0
-Temp104 = x MUL 12
-Temp103 = Temp103 ADD Temp104
-Temp105 = 0 MUL 4
-Temp103 = Temp103 ADD Temp105
-Temp106 = _make ADD Temp103
-Temp107 = *Temp106, 4
-Temp108 = 15 SUB Temp107
-Temp109 = 0
-Temp110 = x MUL 12
-Temp109 = Temp109 ADD Temp110
-Temp111 = 1 MUL 4
-Temp109 = Temp109 ADD Temp111
-Temp112 = _make ADD Temp109
-Temp113 = *Temp112, 4
-Temp114 = Temp108 SUB Temp113
-Temp115 = 0
-Temp116 = x MUL 12
-Temp115 = Temp115 ADD Temp116
-Temp117 = y MUL 4
-Temp115 = Temp115 ADD Temp117
-Temp118 = _make ADD Temp115
-*Temp118 = Temp114 , 4
-Temp120 = 0
-Temp121 = x MUL 12
-Temp120 = Temp120 ADD Temp121
-Temp122 = y MUL 4
-Temp120 = Temp120 ADD Temp122
-Temp123 = _make ADD Temp120
-Temp124 = *Temp123, 4
-Temp125 = Temp124 GT 0
-If Not Equal to Zero Temp125 Goto Label :30	
+Label :25	Temp107 = 0
+Temp108 = x MUL 12
+Temp107 = Temp107 ADD Temp108
+Temp109 = 0 MUL 4
+Temp107 = Temp107 ADD Temp109
+Temp110 = _make ADD Temp107
+Temp111 = *Temp110, 4
+Temp112 = 15 SUB Temp111
+Temp113 = 0
+Temp114 = x MUL 12
+Temp113 = Temp113 ADD Temp114
+Temp115 = 1 MUL 4
+Temp113 = Temp113 ADD Temp115
+Temp116 = _make ADD Temp113
+Temp117 = *Temp116, 4
+Temp118 = Temp112 SUB Temp117
+Temp119 = 0
+Temp120 = x MUL 12
+Temp119 = Temp119 ADD Temp120
+Temp121 = y MUL 4
+Temp119 = Temp119 ADD Temp121
+Temp122 = _make ADD Temp119
+*Temp122 = Temp118 , 4
+Temp106 = *Temp122, 4
+Temp106 = *Temp122, 4
+Temp124 = 0
+Temp125 = x MUL 12
+Temp124 = Temp124 ADD Temp125
+Temp126 = y MUL 4
+Temp124 = Temp124 ADD Temp126
+Temp127 = _make ADD Temp124
+Temp128 = *Temp127, 4
+Temp129 = Temp128 GT 0
+If Not Equal to Zero Temp129 Goto Label :30	
 Goto label:27
-Label :30	Temp126 = 0
-Temp127 = x MUL 12
-Temp126 = Temp126 ADD Temp127
-Temp128 = y MUL 4
-Temp126 = Temp126 ADD Temp128
-Temp129 = _make ADD Temp126
-Temp130 = *Temp129, 4
-Temp131 = Temp130 LT 10
-If Not Equal to Zero Temp131 Goto Label :29	
+Label :30	Temp130 = 0
+Temp131 = x MUL 12
+Temp130 = Temp130 ADD Temp131
+Temp132 = y MUL 4
+Temp130 = Temp130 ADD Temp132
+Temp133 = _make ADD Temp130
+Temp134 = *Temp133, 4
+Temp135 = Temp134 LT 10
+If Not Equal to Zero Temp135 Goto Label :29	
 Goto label:27
-Label :29	Temp132 = 0
-Temp133 = x MUL 12
-Temp132 = Temp132 ADD Temp133
-Temp134 = y MUL 4
-Temp132 = Temp132 ADD Temp134
-Temp135 = _make ADD Temp132
-Temp136 = *Temp135, 4
-Temp137 = 0
-Temp138 = Temp136 MUL 4
-Temp137 = Temp137 ADD Temp138
-Temp139 = _color ADD Temp137
+Label :29	Temp136 = 0
+Temp137 = x MUL 12
+Temp136 = Temp136 ADD Temp137
+Temp138 = y MUL 4
+Temp136 = Temp136 ADD Temp138
+Temp139 = _make ADD Temp136
 Temp140 = *Temp139, 4
-Temp141 = Temp140 EQ 0
-If Not Equal to Zero Temp141 Goto Label :28	
+Temp141 = 0
+Temp142 = Temp140 MUL 4
+Temp141 = Temp141 ADD Temp142
+Temp143 = _color ADD Temp141
+Temp144 = *Temp143, 4
+Temp145 = Temp144 EQ 0
+If Not Equal to Zero Temp145 Goto Label :28	
 Goto label:27
-Label :28	Temp143 = 0
-Temp144 = x MUL 12
-Temp143 = Temp143 ADD Temp144
-Temp145 = y MUL 4
-Temp143 = Temp143 ADD Temp145
-Temp146 = _make ADD Temp143
-Temp147 = *Temp146, 4
-Temp148 = 0
-Temp149 = Temp147 MUL 4
-Temp148 = Temp148 ADD Temp149
-Temp150 = _color ADD Temp148
-*Temp150 = 1 , 4
-Temp152 = y EQ 2
-If Not Equal to Zero Temp152 Goto Label :32	
+Label :28	Temp147 = 0
+Temp148 = x MUL 12
+Temp147 = Temp147 ADD Temp148
+Temp149 = y MUL 4
+Temp147 = Temp147 ADD Temp149
+Temp150 = _make ADD Temp147
+Temp151 = *Temp150, 4
+Temp152 = 0
+Temp153 = Temp151 MUL 4
+Temp152 = Temp152 ADD Temp153
+Temp154 = _color ADD Temp152
+*Temp154 = 1 , 4
+Temp146 = *Temp154, 4
+Temp146 = *Temp154, 4
+Temp156 = y EQ 2
+If Not Equal to Zero Temp156 Goto Label :32	
 Goto label:33
-Label :32	Temp153 = x ADD 1
-Temp154 = 0
-Temp155 = x MUL 12
-Temp154 = Temp154 ADD Temp155
-Temp156 = y MUL 4
-Temp154 = Temp154 ADD Temp156
-Temp157 = _make ADD Temp154
-Temp158 = *Temp157, 4
-Temp159 = z ADD Temp158
-BasicParam Temp153
+Label :32	Temp157 = x ADD 1
+Temp158 = 0
+Temp159 = x MUL 12
+Temp158 = Temp158 ADD Temp159
+Temp160 = y MUL 4
+Temp158 = Temp158 ADD Temp160
+Temp161 = _make ADD Temp158
+Temp162 = *Temp161, 4
+Temp163 = z ADD Temp162
+BasicParam Temp157
 BasicParam 0
-BasicParam Temp159
-Temp160 = call _search , 3
+BasicParam Temp163
+Temp164 = call _search , 3
 Goto label:31
-Label :33	Temp161 = y ADD 1
-Temp162 = 0
-Temp163 = x MUL 12
-Temp162 = Temp162 ADD Temp163
-Temp164 = y MUL 4
-Temp162 = Temp162 ADD Temp164
-Temp165 = _make ADD Temp162
-Temp166 = *Temp165, 4
-Temp167 = z ADD Temp166
+Label :33	Temp165 = y ADD 1
+Temp166 = 0
+Temp167 = x MUL 12
+Temp166 = Temp166 ADD Temp167
+Temp168 = y MUL 4
+Temp166 = Temp166 ADD Temp168
+Temp169 = _make ADD Temp166
+Temp170 = *Temp169, 4
+Temp171 = z ADD Temp170
 BasicParam x
-BasicParam Temp161
-BasicParam Temp167
-Temp168 = call _search , 3
-Label :31	Temp170 = 0
-Temp171 = x MUL 12
-Temp170 = Temp170 ADD Temp171
-Temp172 = y MUL 4
-Temp170 = Temp170 ADD Temp172
-Temp173 = _make ADD Temp170
-Temp174 = *Temp173, 4
-Temp175 = 0
-Temp176 = Temp174 MUL 4
-Temp175 = Temp175 ADD Temp176
-Temp177 = _color ADD Temp175
-*Temp177 = 0 , 4
+BasicParam Temp165
+BasicParam Temp171
+Temp172 = call _search , 3
+Label :31	Temp174 = 0
+Temp175 = x MUL 12
+Temp174 = Temp174 ADD Temp175
+Temp176 = y MUL 4
+Temp174 = Temp174 ADD Temp176
+Temp177 = _make ADD Temp174
+Temp178 = *Temp177, 4
+Temp179 = 0
+Temp180 = Temp178 MUL 4
+Temp179 = Temp179 ADD Temp180
+Temp181 = _color ADD Temp179
+*Temp181 = 0 , 4
+Temp173 = *Temp181, 4
+Temp173 = *Temp181, 4
 Label :27	Goto label:24
 Label :26	_i = 1
-Temp179 = _i
-Label :35	Temp180 = _i LE 9
-If Not Equal to Zero Temp180 Goto Label :36	
+Temp183 = _i
+Label :35	Temp184 = _i LE 9
+If Not Equal to Zero Temp184 Goto Label :36	
 Goto label:34
-Label :36	Temp181 = 0
-Temp182 = _i MUL 4
-Temp181 = Temp181 ADD Temp182
-Temp183 = _color ADD Temp181
-Temp184 = *Temp183, 4
-Temp185 = Temp184 EQ 0
-If Not Equal to Zero Temp185 Goto Label :38	
+Label :36	Temp185 = 0
+Temp186 = _i MUL 4
+Temp185 = Temp185 ADD Temp186
+Temp187 = _color ADD Temp185
+Temp188 = *Temp187, 4
+Temp189 = Temp188 EQ 0
+If Not Equal to Zero Temp189 Goto Label :38	
 Goto label:37
-Label :38	Temp187 = 0
-Temp188 = _i MUL 4
-Temp187 = Temp187 ADD Temp188
-Temp189 = _color ADD Temp187
-*Temp189 = 1 , 4
-Temp192 = 0
-Temp193 = x MUL 12
-Temp192 = Temp192 ADD Temp193
-Temp194 = y MUL 4
-Temp192 = Temp192 ADD Temp194
-Temp195 = _make ADD Temp192
-*Temp195 = _i , 4
-Temp197 = y EQ 2
-If Not Equal to Zero Temp197 Goto Label :40	
+Label :38	Temp191 = 0
+Temp192 = _i MUL 4
+Temp191 = Temp191 ADD Temp192
+Temp193 = _color ADD Temp191
+*Temp193 = 1 , 4
+Temp190 = *Temp193, 4
+Temp190 = *Temp193, 4
+Temp196 = 0
+Temp197 = x MUL 12
+Temp196 = Temp196 ADD Temp197
+Temp198 = y MUL 4
+Temp196 = Temp196 ADD Temp198
+Temp199 = _make ADD Temp196
+*Temp199 = _i , 4
+Temp195 = *Temp199, 4
+Temp195 = *Temp199, 4
+Temp201 = y EQ 2
+If Not Equal to Zero Temp201 Goto Label :40	
 Goto label:41
-Label :40	Temp198 = x ADD 1
-Temp199 = z ADD _i
-BasicParam Temp198
-BasicParam 0
-BasicParam Temp199
-Temp200 = call _search , 3
-Goto label:39
-Label :41	Temp201 = y ADD 1
-Temp202 = z ADD _i
-BasicParam x
-BasicParam Temp201
+Label :40	Temp202 = x ADD 1
+Temp203 = z ADD _i
 BasicParam Temp202
-Temp203 = call _search , 3
-Label :39	Temp205 = 0
-Temp206 = x MUL 12
-Temp205 = Temp205 ADD Temp206
-Temp207 = y MUL 4
-Temp205 = Temp205 ADD Temp207
-Temp208 = _make ADD Temp205
-*Temp208 = 0 , 4
-Temp211 = 0
-Temp212 = _i MUL 4
-Temp211 = Temp211 ADD Temp212
-Temp213 = _color ADD Temp211
-*Temp213 = 0 , 4
-Label :37	Temp215 = _i
-_i = _i ADD 1
+BasicParam 0
+BasicParam Temp203
+Temp204 = call _search , 3
+Goto label:39
+Label :41	Temp205 = y ADD 1
+Temp206 = z ADD _i
+BasicParam x
+BasicParam Temp205
+BasicParam Temp206
+Temp207 = call _search , 3
+Label :39	Temp209 = 0
+Temp210 = x MUL 12
+Temp209 = Temp209 ADD Temp210
+Temp211 = y MUL 4
+Temp209 = Temp209 ADD Temp211
+Temp212 = _make ADD Temp209
+*Temp212 = 0 , 4
+Temp208 = *Temp212, 4
+Temp208 = *Temp212, 4
+Temp215 = 0
+Temp216 = _i MUL 4
+Temp215 = Temp215 ADD Temp216
+Temp217 = _color ADD Temp215
+*Temp217 = 0 , 4
+Temp214 = *Temp217, 4
+Temp214 = *Temp217, 4
+Label :37	Temp221 = _i ADD 1
+_i = Temp221
+Temp220 = _i
+Temp219 = Temp220 SUB 1
 Goto label:35
 Label :34	Label :24	Label :6	Label :1	
 _main: 
 BasicParam 0
 BasicParam 0
 BasicParam 0
-Temp216 = call _search , 3
-Temp218 = *_count, 4
-BasicParam Temp217
-BasicParam Temp218
+Temp222 = call _search , 3
+Temp224 = *_count, 4
+BasicParam Temp223
+BasicParam Temp224
 _printf_cnt = 2
-Temp219 = call _printf , 2
+Temp225 = call _printf , 2
 Return BasicParam 0
 

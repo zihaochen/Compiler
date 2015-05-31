@@ -931,8 +931,6 @@ public class Translator implements Visitor {
       else {
          boolean partial = false;
          if (subscriptAddressList.size() != arraySizeList.size()) {
-            System.out.println("2.The size of subscriptAddressList and the size of arraySizeList is not equal");
-            System.out.println("size are " + subscriptAddressList.size() + "  " + arraySizeList.size());
             partial = true;
          }
          Address sum = new Temp();

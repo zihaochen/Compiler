@@ -1,20 +1,20 @@
 _start: 
-printf_cnt = 0
-f = str_ptr_1
+_printf_cnt = 0
+_f = _str_ptr_1
 
-malloc: 
+_malloc: 
 
-getchar: 
+_getchar: 
 
-printf: 
+_printf: 
 
-main: 
-BasicParam f
+_main: 
+BasicParam _f
 BasicParam 10
 BasicParam 34
-BasicParam f
+BasicParam _f
 BasicParam 34
 BasicParam 10
-printf_cnt = 6
-Temp1 = call printf , 6
+_printf_cnt = 6
+Temp1 = call _printf , 6
 
