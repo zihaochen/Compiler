@@ -108,24 +108,6 @@ public class PeepHole {
                 }
                 else
                     tmpList.add(quadruple);
-/*
-                if (quadruple instanceof Assign && hashMap.get(((Assign) quadruple).dest) > 1) {
-                    continue;
-                }
-                if (quadruple instanceof ArrayWrite && hashMap.get(((ArrayWrite) quadruple).dest) > 1) {
-                    continue;
-                }
-                if (quadruple instanceof MemoryWrite && hashMap.get(((MemoryWrite) quadruple).dest) > 1) {
-                    continue;
-                }
-                if (quadruple instanceof ArrayWrite && hashMap.get(((ArrayWrite) quadruple).dest) > 1) {
-                    continue;
-                }
-                if (quadruple instanceof ArithmeticExpr && hashMap.get(((ArithmeticExpr) quadruple).dest) > 1) {
-                    continue;
-                }
-                tmpList.add(quadruple);
-                */
             }
             function.body = tmpList;
         }
