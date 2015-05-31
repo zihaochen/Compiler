@@ -2,6 +2,7 @@ package compiler.main;
 
 import compiler.CodeGen.BrutalGen.BrutalGen;
 import compiler.IR.Translator;
+import compiler.Optimize.PeepHole;
 import compiler.ast.nodes.AST;
 import compiler.semantic.SemanticCheck;
 import compiler.syntactic.parser;
@@ -23,6 +24,7 @@ public class Main
             System.exit(1);
         }
         Translator translator = new Translator();
+        new PeepHole(translator.ir);
         translator.setOutputStream(System.out);
         ast.accept(new SemanticCheck());
         ast.accept(translator);

@@ -4,14 +4,13 @@
     <bookmark url="file://$PROJECT_DIR$/src/compiler/ast/nodes/BinaryOpToString.java" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef921a38-bb99-415c-8ed8-767f2b738347" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/CodeGen/BrutalGen/BrutalGen.java" afterPath="$PROJECT_DIR$/src/compiler/CodeGen/BrutalGen/BrutalGen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/arraysum.c" afterPath="$PROJECT_DIR$/tests/IR/arraysum.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/arraysum.out" afterPath="$PROJECT_DIR$/tests/IR/arraysum.out" />
+    <list default="true" id="ef921a38-bb99-415c-8ed8-767f2b738347" name="Default" comment="fix a bug, add peephole optimization">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/compiler/Optimize/PeepHole.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/main/Main.java" afterPath="$PROJECT_DIR$/src/compiler/main/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/CodeGen/STL.java" afterPath="$PROJECT_DIR$/src/compiler/CodeGen/STL.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/arraysum.s" afterPath="$PROJECT_DIR$/tests/IR/arraysum.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/bubble.c" afterPath="$PROJECT_DIR$/tests/Gen/New/bubble.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/bubble.out" afterPath="$PROJECT_DIR$/tests/Gen/New/bubble.out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/bubble.s" afterPath="$PROJECT_DIR$/tests/Gen/New/bubble.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/gcd-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/tests/IR/gcd-5090379042-jiaxiao.s" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/CodeGen/genTester.java" afterPath="$PROJECT_DIR$/src/compiler/CodeGen/genTester.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/heapsort-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/heapsort-5100379110-daibo.s" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/hk.s" afterPath="$PROJECT_DIR$/tests/Gen/New/hk.s" />
@@ -21,11 +20,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/linenumber.s" afterPath="$PROJECT_DIR$/tests/Gen/New/linenumber.s" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/self-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/tests/IR/self-5090379042-jiaxiao.s" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/shortcircuit.s" afterPath="$PROJECT_DIR$/tests/Gen/New/shortcircuit.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/spill2-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/spill2-5100379110-daibo.s" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/splittree.out" afterPath="$PROJECT_DIR$/tests/Gen/New/splittree.out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/splittree.s" afterPath="$PROJECT_DIR$/tests/Gen/New/splittree.s" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/stvsun.s" afterPath="$PROJECT_DIR$/tests/Gen/New/stvsun.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/treap-5110309085-jintianxing.c" afterPath="$PROJECT_DIR$/tests/IR/treap-5110309085-jintianxing.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/treap-5110309085-jintianxing.out" afterPath="$PROJECT_DIR$/tests/IR/treap-5110309085-jintianxing.out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/treap-5110309085-jintianxing.s" afterPath="$PROJECT_DIR$/tests/IR/treap-5110309085-jintianxing.s" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -49,6 +47,26 @@
     <option name="GROUP_BY_TYPE" value="true" />
     <option name="SORT_CHILDREN" value="false" />
     <option name="SHOW_TABLE_CONSTRAINTS" value="true" />
+  </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="Gen.java" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/compiler/CodeGen/Gen.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.02607362">
+                    <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -190,7 +208,7 @@
         <entry file="file://$PROJECT_DIR$/src/compiler/CodeGen/genTester.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="98" column="28" selection-start-line="98" selection-start-column="28" selection-end-line="98" selection-end-column="28" />
+              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -198,11 +216,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Translator.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/compiler/main/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.65384614">
+              <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Translator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/compiler/IR/Translator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.5817308">
-              <caret line="269" column="38" selection-start-line="269" selection-start-column="38" selection-end-line="269" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="294" column="18" selection-start-line="294" selection-start-column="18" selection-end-line="294" selection-end-column="18" />
               <folding>
                 <element signature="docComment;class#Translator#0" expanded="false" />
                 <element signature="method#Translator#0;class#Translator#0" expanded="false" />
@@ -266,6 +294,38 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="STL.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/compiler/CodeGen/STL.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="42" column="12" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PeepHole.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/compiler/Optimize/PeepHole.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IR.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Root/IR.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="54" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -291,7 +351,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/compiler/ast/nodes/UnaryExpr.java" />
         <option value="$PROJECT_DIR$/src/compiler/IR/Nodes/Expression/RelationalOpToString.java" />
         <option value="$PROJECT_DIR$/src/compiler/IR/Nodes/Expression/Quadruple.java" />
         <option value="$PROJECT_DIR$/src/compiler/IR/Nodes/Address/IntegerConst.java" />
@@ -336,12 +395,13 @@
         <option value="$PROJECT_DIR$/src/compiler/IR/Nodes/Expression/StringAssign.java" />
         <option value="$PROJECT_DIR$/src/compiler/CodeGen/Gen.java" />
         <option value="$PROJECT_DIR$/src/compiler/ast/ASTTester.java" />
-        <option value="$PROJECT_DIR$/src/compiler/main/Main.java" />
         <option value="$PROJECT_DIR$/src/compiler/semantic/SemanticCheck.java" />
-        <option value="$PROJECT_DIR$/src/compiler/CodeGen/STL.java" />
         <option value="$PROJECT_DIR$/src/compiler/IR/Translator.java" />
-        <option value="$PROJECT_DIR$/src/compiler/CodeGen/genTester.java" />
         <option value="$PROJECT_DIR$/src/compiler/CodeGen/BrutalGen/BrutalGen.java" />
+        <option value="$PROJECT_DIR$/src/compiler/CodeGen/STL.java" />
+        <option value="$PROJECT_DIR$/src/compiler/Optimize/PeepHole.java" />
+        <option value="$PROJECT_DIR$/src/compiler/CodeGen/genTester.java" />
+        <option value="$PROJECT_DIR$/src/compiler/main/Main.java" />
       </list>
     </option>
   </component>
@@ -389,6 +449,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -425,10 +486,6 @@
               <option name="myItemId" value="compiler" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tables" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -445,6 +502,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Optimize" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -488,13 +549,68 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CodeGen" />
+              <option name="myItemId" value="IR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Root" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nodes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -949,7 +1065,8 @@
       <workItem from="1433070408165" duration="9423000" />
       <workItem from="1433084043309" duration="189000" />
       <workItem from="1433085984220" duration="15414000" />
-      <workItem from="1433103917571" duration="3347000" />
+      <workItem from="1433103917571" duration="3396000" />
+      <workItem from="1433108030026" duration="2284000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, most files finished, but not compiled yet.">
       <created>1429098593928</created>
@@ -1077,11 +1194,17 @@
       <option name="project" value="LOCAL" />
       <updated>1433103353003</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="fix a few bugs">
+      <created>1433107305489</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1433107305489</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="670939000" />
+    <option name="totallyTimeSpent" value="673272000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1104,10 +1227,10 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32771823" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27871364" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27871364" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32618684" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1354009" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4440242" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1170,7 +1293,8 @@
     <MESSAGE value="PHASE3 DONE, but there is still a known bug. I plan to fix it after the release of final test data." />
     <MESSAGE value="PHASE 4 almost done, passed all last year's tests." />
     <MESSAGE value="fix a few bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix a few bugs" />
+    <MESSAGE value="fix a bug, add peephole optimization" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix a bug, add peephole optimization" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1183,13 +1307,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Function/Param.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Function/BasicParam.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1347,13 +1464,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/syntactic/Parser.cup">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5151515">
           <caret line="219" column="56" selection-start-line="219" selection-start-column="56" selection-end-line="219" selection-end-column="56" />
         </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/tables/VarTable.java">
@@ -1418,26 +1535,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Root/IR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="54" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Expression/StringAssign.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/CodeGen/Gen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1498,13 +1599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29166666">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Control/IfNEZGoto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1529,18 +1623,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/CodeGen/STL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Function/Function.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/IR/Translator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="294" column="18" selection-start-line="294" selection-start-column="18" selection-end-line="294" selection-end-column="18" />
+          <folding>
+            <element signature="docComment;class#Translator#0" expanded="false" />
+            <element signature="method#Translator#0;class#Translator#0" expanded="false" />
+            <element signature="class#Pair#0;class#Translator#0" expanded="false" />
+            <element signature="method#Pair#0;class#Pair#0;class#Translator#0" expanded="false" />
+            <element signature="method#Pair#1;class#Pair#0;class#Translator#0" expanded="false" />
+            <element signature="class#StringPair#0;class#Translator#0" expanded="false" />
+            <element signature="method#StringPair#0;class#StringPair#0;class#Translator#0" expanded="false" />
+            <element signature="method#loadSTL#0;class#Translator#0" expanded="false" />
+            <element signature="method#pushFunction#0;class#Translator#0" expanded="false" />
+            <element signature="method#popFunction#0;class#Translator#0" expanded="false" />
+            <element signature="method#defineFunction#0;class#Translator#0" expanded="false" />
+            <element signature="method#checkASU#0;class#Translator#0" expanded="false" />
+            <element signature="method#dealWithCondition#0;class#Translator#0" expanded="false" />
+            <element signature="method#visit#1;class#Translator#0" expanded="false" />
+            <element signature="method#arrayInitAssign#0;class#Translator#0" expanded="false" />
+            <element signature="method#initAssign#0;class#Translator#0" expanded="false" />
+            <element signature="method#visit#7;class#Translator#0" expanded="false" />
+            <element signature="method#visit#15;class#Translator#0" expanded="false" />
+            <element signature="docComment;method#visit#17;class#Translator#0" expanded="false" />
+            <element signature="method#visit#17;class#Translator#0" expanded="false" />
+            <element signature="method#isRelationOp#0;class#Translator#0" expanded="false" />
+            <element signature="method#isAssignOp#0;class#Translator#0" expanded="false" />
+            <element signature="method#isArithOp#0;class#Translator#0" expanded="false" />
+            <element signature="method#visit#18;class#Translator#0" expanded="false" />
+            <element signature="method#isBoolExpr#0;class#Translator#0" expanded="false" />
+            <element signature="method#andOrExpr#0;class#Translator#0" expanded="false" />
+            <element signature="method#relationExpr#0;class#Translator#0" expanded="false" />
+            <element signature="method#arithmeticExpr#0;class#Translator#0" expanded="false" />
+            <element signature="method#assignExpr#0;class#Translator#0" expanded="false" />
+            <element signature="method#commaExpr#0;class#Translator#0" expanded="false" />
+            <element signature="method#visit#19;class#Translator#0" expanded="false" />
+            <element signature="method#visit#20;class#Translator#0" expanded="false" />
+            <element signature="method#visit#21;class#Translator#0" expanded="false" />
+            <element signature="method#visit#22;class#Translator#0" expanded="false" />
+            <element signature="method#visit#23;class#Translator#0" expanded="false" />
+            <element signature="method#visit#24;class#Translator#0" expanded="false" />
+            <element signature="method#visit#25;class#Translator#0" expanded="false" />
+            <element signature="e#34509#34595#0" expanded="false" />
+            <element signature="method#visit#26;class#Translator#0" expanded="false" />
+            <element signature="e#35220#35306#0" expanded="false" />
+            <element signature="method#digArrayAccessBaseReturnType#0;class#Translator#0" expanded="false" />
+            <element signature="method#calArrayAccess#0;class#Translator#0" expanded="false" />
+            <element signature="method#visit#27;class#Translator#0" expanded="false" />
+            <element signature="method#pointerArrayAccess#0;class#Translator#0" expanded="false" />
+            <element signature="method#SUAssign#0;class#Translator#0" expanded="false" />
+            <element signature="method#visit#29;class#Translator#0" expanded="false" />
+            <element signature="method#visit#32;class#Translator#0" expanded="false" />
+            <element signature="method#visit#33;class#Translator#0" expanded="false" />
+            <element signature="method#visit#34;class#Translator#0" expanded="false" />
+            <element signature="method#visit#35;class#Translator#0" expanded="false" />
+            <element signature="method#visit#38;class#Translator#0" expanded="false" />
+            <element signature="method#visit#39;class#Translator#0" expanded="false" />
+            <element signature="method#visit#40;class#Translator#0" expanded="false" />
+            <element signature="method#visit#41;class#Translator#0" expanded="false" />
+            <element signature="method#newStruct#0;class#Translator#0" expanded="false" />
+            <element signature="method#print#0;class#Translator#0" expanded="false" />
+            <element signature="method#merger#0;class#Translator#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/CodeGen/STL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="12" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Root/IR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="54" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
           <folding />
         </state>
       </provider>
@@ -1607,13 +1775,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/CodeGen/genTester.java">
+    <entry file="file://$PROJECT_DIR$/src/compiler/CodeGen/Gen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="98" column="28" selection-start-line="98" selection-start-column="28" selection-end-line="98" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.02607362">
+          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1671,69 +1837,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/IR/Translator.java">
+    <entry file="file://$PROJECT_DIR$/src/compiler/Optimize/PeepHole.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5817308">
-          <caret line="269" column="38" selection-start-line="269" selection-start-column="38" selection-end-line="269" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
           <folding>
-            <element signature="docComment;class#Translator#0" expanded="false" />
-            <element signature="method#Translator#0;class#Translator#0" expanded="false" />
-            <element signature="class#Pair#0;class#Translator#0" expanded="false" />
-            <element signature="method#Pair#0;class#Pair#0;class#Translator#0" expanded="false" />
-            <element signature="method#Pair#1;class#Pair#0;class#Translator#0" expanded="false" />
-            <element signature="class#StringPair#0;class#Translator#0" expanded="false" />
-            <element signature="method#StringPair#0;class#StringPair#0;class#Translator#0" expanded="false" />
-            <element signature="method#loadSTL#0;class#Translator#0" expanded="false" />
-            <element signature="method#pushFunction#0;class#Translator#0" expanded="false" />
-            <element signature="method#popFunction#0;class#Translator#0" expanded="false" />
-            <element signature="method#defineFunction#0;class#Translator#0" expanded="false" />
-            <element signature="method#checkASU#0;class#Translator#0" expanded="false" />
-            <element signature="method#dealWithCondition#0;class#Translator#0" expanded="false" />
-            <element signature="method#visit#1;class#Translator#0" expanded="false" />
-            <element signature="method#arrayInitAssign#0;class#Translator#0" expanded="false" />
-            <element signature="method#initAssign#0;class#Translator#0" expanded="false" />
-            <element signature="method#visit#7;class#Translator#0" expanded="false" />
-            <element signature="method#visit#15;class#Translator#0" expanded="false" />
-            <element signature="docComment;method#visit#17;class#Translator#0" expanded="false" />
-            <element signature="method#visit#17;class#Translator#0" expanded="false" />
-            <element signature="method#isRelationOp#0;class#Translator#0" expanded="false" />
-            <element signature="method#isAssignOp#0;class#Translator#0" expanded="false" />
-            <element signature="method#isArithOp#0;class#Translator#0" expanded="false" />
-            <element signature="method#visit#18;class#Translator#0" expanded="false" />
-            <element signature="method#isBoolExpr#0;class#Translator#0" expanded="false" />
-            <element signature="method#andOrExpr#0;class#Translator#0" expanded="false" />
-            <element signature="method#relationExpr#0;class#Translator#0" expanded="false" />
-            <element signature="method#arithmeticExpr#0;class#Translator#0" expanded="false" />
-            <element signature="method#assignExpr#0;class#Translator#0" expanded="false" />
-            <element signature="method#commaExpr#0;class#Translator#0" expanded="false" />
-            <element signature="method#visit#19;class#Translator#0" expanded="false" />
-            <element signature="method#visit#20;class#Translator#0" expanded="false" />
-            <element signature="method#visit#21;class#Translator#0" expanded="false" />
-            <element signature="method#visit#22;class#Translator#0" expanded="false" />
-            <element signature="method#visit#23;class#Translator#0" expanded="false" />
-            <element signature="method#visit#24;class#Translator#0" expanded="false" />
-            <element signature="method#visit#25;class#Translator#0" expanded="false" />
-            <element signature="e#34509#34595#0" expanded="false" />
-            <element signature="method#visit#26;class#Translator#0" expanded="false" />
-            <element signature="e#35220#35306#0" expanded="false" />
-            <element signature="method#digArrayAccessBaseReturnType#0;class#Translator#0" expanded="false" />
-            <element signature="method#calArrayAccess#0;class#Translator#0" expanded="false" />
-            <element signature="method#visit#27;class#Translator#0" expanded="false" />
-            <element signature="method#pointerArrayAccess#0;class#Translator#0" expanded="false" />
-            <element signature="method#SUAssign#0;class#Translator#0" expanded="false" />
-            <element signature="method#visit#29;class#Translator#0" expanded="false" />
-            <element signature="method#visit#32;class#Translator#0" expanded="false" />
-            <element signature="method#visit#33;class#Translator#0" expanded="false" />
-            <element signature="method#visit#34;class#Translator#0" expanded="false" />
-            <element signature="method#visit#35;class#Translator#0" expanded="false" />
-            <element signature="method#visit#38;class#Translator#0" expanded="false" />
-            <element signature="method#visit#39;class#Translator#0" expanded="false" />
-            <element signature="method#visit#40;class#Translator#0" expanded="false" />
-            <element signature="method#visit#41;class#Translator#0" expanded="false" />
-            <element signature="method#newStruct#0;class#Translator#0" expanded="false" />
-            <element signature="method#print#0;class#Translator#0" expanded="false" />
-            <element signature="method#merger#0;class#Translator#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/CodeGen/genTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65384614">
+          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>

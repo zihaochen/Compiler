@@ -36,11 +36,11 @@ public class STL {
             "\tb _printf_str_loop\n" +
             "\n" +
             "_printf_str_loop:\n" +
-            "\taddu $a3, $a3, 4\n" +
             "\tlw $a0, ($a3)\n" +
             "\tbeq $a0, 0, _printf_loop\n" +
             "\tli $v0, 11\n" +
             "\tsyscall\n" +
+            "\taddu $a3, $a3, 4\n" +
             "\tb _printf_str_loop\n" +
             "\n" +
             "_printf_char:\n" +

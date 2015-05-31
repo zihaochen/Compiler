@@ -2,6 +2,7 @@ package compiler.CodeGen;
 
 import compiler.CodeGen.BrutalGen.BrutalGen;
 import compiler.IR.Translator;
+import compiler.Optimize.PeepHole;
 import compiler.ast.nodes.AST;
 import compiler.semantic.SemanticCheck;
 import compiler.syntactic.parser;
@@ -35,6 +36,7 @@ public class genTester {
         OutputStream IRoutput = new FileOutputStream(irOutputFile);
         OutputStream genOutput = new FileOutputStream(genOutputfile);
         Translator translator = new Translator();
+        new PeepHole(translator.ir);
         translator.setOutputStream(IRoutput);
         ast.accept(new SemanticCheck());
         ast.accept(translator);
@@ -58,7 +60,7 @@ public class genTester {
 //        oldnames.add("Bulgarian_solitaire-5110379024-wuhang");
 //        oldnames.add("expr-5110309085-jintianxing");
 //        oldnames.add("factor-5090379042-jiaxiao");
-//        oldnames.add("gcd-5090379042-jiaxiao");
+        oldnames.add("gcd-5090379042-jiaxiao");
 //        oldnames.add("hanoi2-5100309153-yanghuan");
 //        oldnames.add("hanoi-5100379110-daibo");
 //        oldnames.add("hashmap-5100309127  -hetianxing");

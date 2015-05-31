@@ -89,9 +89,9 @@ _main:
 	sw $ra, ($sp)
 	la $t0, str_1
 	sw $t0, -76($sp)
-	subu $sp, $sp, 28
+	subu $sp, $sp, 100
 	jal _getchar
-	addi $sp, $sp, 28
+	addi $sp, $sp, 100
 	sw $v0, -16($sp)
 	lw $ra, ($sp)
 	li $t2, 48
@@ -102,9 +102,9 @@ _main:
 	li $t1, 10
 	mul $t0, $t1, $t2
 	sw $t0, -24($sp)
-	subu $sp, $sp, 28
+	subu $sp, $sp, 100
 	jal _getchar
-	addi $sp, $sp, 28
+	addi $sp, $sp, 100
 	sw $v0, -28($sp)
 	lw $ra, ($sp)
 	lw $t2, -28($sp)
@@ -119,14 +119,14 @@ _main:
 	sw $t0, -4($sp)
 	lw $t0, -4($sp)
 	sw $t0, -12($sp)
-	subu $sp, $sp, 28
+	subu $sp, $sp, 100
 	jal _getchar
-	addi $sp, $sp, 28
+	addi $sp, $sp, 100
 	sw $v0, -40($sp)
 	lw $ra, ($sp)
-	subu $sp, $sp, 28
+	subu $sp, $sp, 100
 	jal _getchar
-	addi $sp, $sp, 28
+	addi $sp, $sp, 100
 	sw $v0, -48($sp)
 	lw $ra, ($sp)
 	li $t2, 48
@@ -137,9 +137,9 @@ _main:
 	li $t1, 10
 	mul $t0, $t1, $t2
 	sw $t0, -56($sp)
-	subu $sp, $sp, 28
+	subu $sp, $sp, 100
 	jal _getchar
-	addi $sp, $sp, 28
+	addi $sp, $sp, 100
 	sw $v0, -60($sp)
 	lw $ra, ($sp)
 	lw $t2, -60($sp)
@@ -154,9 +154,9 @@ _main:
 	sw $t0, -8($sp)
 	lw $t0, -8($sp)
 	sw $t0, -44($sp)
-	subu $sp, $sp, 28
+	subu $sp, $sp, 100
 	jal _getchar
-	addi $sp, $sp, 28
+	addi $sp, $sp, 100
 	sw $v0, -72($sp)
 	lw $ra, ($sp)
 	li $t0, 10
@@ -223,7 +223,7 @@ _printf:
 	add $t0, $t0, $sp
 	lw $a1, ($t0)
 	move $a2, $t0
-		
+	
 _printf_loop:
 	lb $a0, 0($a1)
 	beq $a0, 0, _printf_end
@@ -251,10 +251,16 @@ _printf_int:
 
 _printf_str:
 	subu $a2, $a2, 4
-	lw $a0, 0($a2)
-	li $v0, 4
+	lw $a3, 0($a2)
+	b _printf_str_loop
+
+_printf_str_loop:
+	lw $a0, ($a3)
+	beq $a0, 0, _printf_loop
+	li $v0, 11
 	syscall
-	b _printf_loop
+	addu $a3, $a3, 4
+	b _printf_str_loop
 
 _printf_char:
 	subu $a2, $a2, 4
@@ -325,4 +331,3 @@ _malloc:
 	li $v0, 9
 	syscall
 	jr $ra
-

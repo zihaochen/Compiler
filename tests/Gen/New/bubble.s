@@ -1420,11 +1420,11 @@ _printf_str:
 	b _printf_str_loop
 
 _printf_str_loop:
-	addu $a3, $a3, 4
 	lw $a0, ($a3)
 	beq $a0, 0, _printf_loop
 	li $v0, 11
 	syscall
+	addu $a3, $a3, 4
 	b _printf_str_loop
 
 _printf_char:
