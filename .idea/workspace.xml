@@ -4,7 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/compiler/ast/nodes/BinaryOpToString.java" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef921a38-bb99-415c-8ed8-767f2b738347" name="Default" comment="fix a bug, add peephole optimization">
+    <list default="true" id="ef921a38-bb99-415c-8ed8-767f2b738347" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/Optimize/PeepHole.java" afterPath="$PROJECT_DIR$/src/compiler/Optimize/PeepHole.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -35,10 +35,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BrutalGen.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BrutalGen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/compiler/CodeGen/BrutalGen/BrutalGen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24180967">
+            <state vertical-scroll-proportion="0.0">
               <caret line="492" column="0" selection-start-line="492" selection-start-column="0" selection-end-line="492" selection-end-column="0" />
               <folding>
                 <element signature="docComment;class#BrutalGen#0" expanded="false" />
@@ -216,74 +216,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Translator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/compiler/IR/Translator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="294" column="18" selection-start-line="294" selection-start-column="18" selection-end-line="294" selection-end-column="18" />
-              <folding>
-                <element signature="docComment;class#Translator#0" expanded="false" />
-                <element signature="method#Translator#0;class#Translator#0" expanded="false" />
-                <element signature="class#Pair#0;class#Translator#0" expanded="false" />
-                <element signature="method#Pair#0;class#Pair#0;class#Translator#0" expanded="false" />
-                <element signature="method#Pair#1;class#Pair#0;class#Translator#0" expanded="false" />
-                <element signature="class#StringPair#0;class#Translator#0" expanded="false" />
-                <element signature="method#StringPair#0;class#StringPair#0;class#Translator#0" expanded="false" />
-                <element signature="method#loadSTL#0;class#Translator#0" expanded="false" />
-                <element signature="method#pushFunction#0;class#Translator#0" expanded="false" />
-                <element signature="method#popFunction#0;class#Translator#0" expanded="false" />
-                <element signature="method#defineFunction#0;class#Translator#0" expanded="false" />
-                <element signature="method#checkASU#0;class#Translator#0" expanded="false" />
-                <element signature="method#dealWithCondition#0;class#Translator#0" expanded="false" />
-                <element signature="method#visit#1;class#Translator#0" expanded="false" />
-                <element signature="method#arrayInitAssign#0;class#Translator#0" expanded="false" />
-                <element signature="method#initAssign#0;class#Translator#0" expanded="false" />
-                <element signature="method#visit#7;class#Translator#0" expanded="false" />
-                <element signature="method#visit#15;class#Translator#0" expanded="false" />
-                <element signature="docComment;method#visit#17;class#Translator#0" expanded="false" />
-                <element signature="method#visit#17;class#Translator#0" expanded="false" />
-                <element signature="method#isRelationOp#0;class#Translator#0" expanded="false" />
-                <element signature="method#isAssignOp#0;class#Translator#0" expanded="false" />
-                <element signature="method#isArithOp#0;class#Translator#0" expanded="false" />
-                <element signature="method#visit#18;class#Translator#0" expanded="false" />
-                <element signature="method#isBoolExpr#0;class#Translator#0" expanded="false" />
-                <element signature="method#andOrExpr#0;class#Translator#0" expanded="false" />
-                <element signature="method#relationExpr#0;class#Translator#0" expanded="false" />
-                <element signature="method#arithmeticExpr#0;class#Translator#0" expanded="false" />
-                <element signature="method#assignExpr#0;class#Translator#0" expanded="false" />
-                <element signature="method#commaExpr#0;class#Translator#0" expanded="false" />
-                <element signature="method#visit#19;class#Translator#0" expanded="false" />
-                <element signature="method#visit#20;class#Translator#0" expanded="false" />
-                <element signature="method#visit#21;class#Translator#0" expanded="false" />
-                <element signature="method#visit#22;class#Translator#0" expanded="false" />
-                <element signature="method#visit#23;class#Translator#0" expanded="false" />
-                <element signature="method#visit#24;class#Translator#0" expanded="false" />
-                <element signature="method#visit#25;class#Translator#0" expanded="false" />
-                <element signature="e#34509#34595#0" expanded="false" />
-                <element signature="method#visit#26;class#Translator#0" expanded="false" />
-                <element signature="e#35220#35306#0" expanded="false" />
-                <element signature="method#digArrayAccessBaseReturnType#0;class#Translator#0" expanded="false" />
-                <element signature="method#calArrayAccess#0;class#Translator#0" expanded="false" />
-                <element signature="method#visit#27;class#Translator#0" expanded="false" />
-                <element signature="method#pointerArrayAccess#0;class#Translator#0" expanded="false" />
-                <element signature="method#SUAssign#0;class#Translator#0" expanded="false" />
-                <element signature="method#visit#29;class#Translator#0" expanded="false" />
-                <element signature="method#visit#32;class#Translator#0" expanded="false" />
-                <element signature="method#visit#33;class#Translator#0" expanded="false" />
-                <element signature="method#visit#34;class#Translator#0" expanded="false" />
-                <element signature="method#visit#35;class#Translator#0" expanded="false" />
-                <element signature="method#visit#38;class#Translator#0" expanded="false" />
-                <element signature="method#visit#39;class#Translator#0" expanded="false" />
-                <element signature="method#visit#40;class#Translator#0" expanded="false" />
-                <element signature="method#visit#41;class#Translator#0" expanded="false" />
-                <element signature="method#newStruct#0;class#Translator#0" expanded="false" />
-                <element signature="method#print#0;class#Translator#0" expanded="false" />
-                <element signature="method#merger#0;class#Translator#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="STL.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/compiler/CodeGen/STL.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -294,11 +226,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PeepHole.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PeepHole.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/compiler/Optimize/PeepHole.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.36661467">
+              <caret line="97" column="23" selection-start-line="97" selection-start-column="23" selection-end-line="97" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1057,7 +989,7 @@
       <workItem from="1433085984220" duration="15414000" />
       <workItem from="1433103917571" duration="3396000" />
       <workItem from="1433108030026" duration="2284000" />
-      <workItem from="1433110835231" duration="1092000" />
+      <workItem from="1433110835231" duration="1211000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, most files finished, but not compiled yet.">
       <created>1429098593928</created>
@@ -1191,11 +1123,17 @@
       <option name="project" value="LOCAL" />
       <updated>1433107305489</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="fix a bug, add peephole optimization">
+      <created>1433111945938</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1433111945938</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="674364000" />
+    <option name="totallyTimeSpent" value="674483000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1212,6 +1150,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32618684" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2863706" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1231,7 +1170,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39969373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32618684" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39969373" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27871364" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32496077" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1811,19 +1749,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/Optimize/PeepHole.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/CodeGen/BrutalGen/BrutalGen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24180967">
+        <state vertical-scroll-proportion="0.0">
           <caret line="492" column="0" selection-start-line="492" selection-start-column="0" selection-end-line="492" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#BrutalGen#0" expanded="false" />
@@ -1871,6 +1799,16 @@
             <element signature="e#18258#18299#0" expanded="false" />
             <element signature="method#emitReturn#0;class#BrutalGen#0" expanded="false" />
             <element signature="method#emitStringAssign#0;class#BrutalGen#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/Optimize/PeepHole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36661467">
+          <caret line="97" column="23" selection-start-line="97" selection-start-column="23" selection-end-line="97" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -95,7 +95,7 @@ public class PeepHole {
             for (int i = 0; i < function.body.size(); i++) {
                 Quadruple quadruple = function.body.get(i);
                 Quadruple next;
-                if (i == function.body.size() - 1)
+                if (i < function.body.size() - 1)
                     next = function.body.get(i + 1);
                 else next = null;
                 if (quadruple instanceof Assign &&
