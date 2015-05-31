@@ -12,8 +12,6 @@ main:
 	subu $sp, $sp, 4
 	li $t0, 0
 	sw $t0, _printf_cnt
-	li $t0, 3
-	sw $t0, _N
 	li $t0, 37
 	la $t1, str_1
 	sw $t0, 0($t1)
@@ -23,9 +21,15 @@ main:
 	li $t0, 32
 	la $t1, str_1
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_1
+	sw $t0, 12($t1)
 	li $t0, 10
 	la $t1, str_2
 	sw $t0, 0($t1)
+	li $t0, 0
+	la $t1, str_2
+	sw $t0, 4($t1)
 	j _main
 _printBoard:
 	sw $ra, ($sp)
@@ -486,212 +490,212 @@ L12:
 	jr $ra
 _main:
 	sw $ra, ($sp)
+	subu $sp, $sp, 296
+	jal _getchar
+	addi $sp, $sp, 296
+	sw $v0, -12($sp)
+	lw $ra, ($sp)
+	li $t2, 48
+	lw $t1, -12($sp)
+	sub $t0, $t1, $t2
+	sw $t0, -16($sp)
+	lw $t0, -16($sp)
+	sw $t0, _N
+	lw $t0, _N
+	sw $t0, -8($sp)
 	li $t2, 1
 	lw $t1, _N
 	add $t0, $t1, $t2
-	sw $t0, -8($sp)
+	sw $t0, -24($sp)
 	li $t2, 4
-	lw $t1, -8($sp)
+	lw $t1, -24($sp)
 	mul $t0, $t1, $t2
-	sw $t0, -12($sp)
-	lw $t0, -12($sp)
-	sw $t0, -224($sp)
-	subu $sp, $sp, 228
+	sw $t0, -28($sp)
+	lw $t0, -28($sp)
+	sw $t0, -240($sp)
+	subu $sp, $sp, 244
 	jal _malloc
-	addi $sp, $sp, 228
-	sw $v0, -16($sp)
+	addi $sp, $sp, 244
+	sw $v0, -32($sp)
 	lw $ra, ($sp)
-	lw $t0, -16($sp)
+	lw $t0, -32($sp)
 	sw $t0, -4($sp)
+	lw $t0, -4($sp)
+	sw $t0, -20($sp)
 	li $t2, 0
 	li $t1, 4
 	mul $t0, $t1, $t2
-	sw $t0, -28($sp)
-	lw $t2, -28($sp)
+	sw $t0, -44($sp)
+	lw $t2, -44($sp)
 	lw $t1, -4($sp)
 	add $t0, $t1, $t2
-	sw $t0, -24($sp)
-	lw $t0, -24($sp)
+	sw $t0, -40($sp)
+	lw $t0, -40($sp)
 	li $t1, 1
 	sw $t1, ($t0)
-	lw $t0, -24($sp)
+	lw $t0, -40($sp)
 	lw $t1, ($t0)
-	sw $t1, -20($sp)
+	sw $t1, -36($sp)
 	li $t0, 1
 	sw $t0, _i
 	lw $t0, _i
-	sw $t0, -32($sp)
+	sw $t0, -48($sp)
 L25:
 	lw $t2, _N
 	lw $t1, _i
 	sle $t0, $t1, $t2
-	sw $t0, -36($sp)
-	lw $t0, -36($sp)
+	sw $t0, -52($sp)
+	lw $t0, -52($sp)
 	bne $t0, $0, L26
 	b L24
 L26:
 	li $t2, 1
 	lw $t1, _i
 	sub $t0, $t1, $t2
-	sw $t0, -44($sp)
+	sw $t0, -60($sp)
 	li $t2, 4
-	lw $t1, -44($sp)
+	lw $t1, -60($sp)
 	mul $t0, $t1, $t2
-	sw $t0, -56($sp)
-	lw $t2, -56($sp)
+	sw $t0, -72($sp)
+	lw $t2, -72($sp)
 	lw $t1, -4($sp)
 	add $t0, $t1, $t2
-	sw $t0, -52($sp)
-	lw $t0, -52($sp)
+	sw $t0, -68($sp)
+	lw $t0, -68($sp)
 	lw $t1, ($t0)
-	sw $t1, -48($sp)
+	sw $t1, -64($sp)
 	li $t2, 2
-	lw $t1, -48($sp)
+	lw $t1, -64($sp)
 	mul $t0, $t1, $t2
-	sw $t0, -60($sp)
+	sw $t0, -76($sp)
 	lw $t2, _i
 	li $t1, 4
 	mul $t0, $t1, $t2
-	sw $t0, -68($sp)
-	lw $t2, -68($sp)
+	sw $t0, -84($sp)
+	lw $t2, -84($sp)
 	lw $t1, -4($sp)
-	add $t0, $t1, $t2
-	sw $t0, -64($sp)
-	lw $t0, -64($sp)
-	lw $t1, -60($sp)
-	sw $t1, ($t0)
-	lw $t0, -64($sp)
-	lw $t1, ($t0)
-	sw $t1, -40($sp)
-	li $t2, 1
-	lw $t1, _i
 	add $t0, $t1, $t2
 	sw $t0, -80($sp)
 	lw $t0, -80($sp)
+	lw $t1, -76($sp)
+	sw $t1, ($t0)
+	lw $t0, -80($sp)
+	lw $t1, ($t0)
+	sw $t1, -56($sp)
+	li $t2, 1
+	lw $t1, _i
+	add $t0, $t1, $t2
+	sw $t0, -96($sp)
+	lw $t0, -96($sp)
 	sw $t0, _i
 	lw $t0, _i
-	sw $t0, -76($sp)
+	sw $t0, -92($sp)
 	li $t2, 1
-	lw $t1, -76($sp)
+	lw $t1, -92($sp)
 	sub $t0, $t1, $t2
-	sw $t0, -72($sp)
+	sw $t0, -88($sp)
 	b L25
 L24:
 	li $t2, 4
 	lw $t1, _N
 	mul $t0, $t1, $t2
-	sw $t0, -96($sp)
-	lw $t2, -96($sp)
+	sw $t0, -112($sp)
+	lw $t2, -112($sp)
 	lw $t1, -4($sp)
 	add $t0, $t1, $t2
-	sw $t0, -92($sp)
-	lw $t0, -92($sp)
+	sw $t0, -108($sp)
+	lw $t0, -108($sp)
 	lw $t1, ($t0)
-	sw $t1, -88($sp)
+	sw $t1, -104($sp)
 	li $t2, 4
-	lw $t1, -88($sp)
+	lw $t1, -104($sp)
 	mul $t0, $t1, $t2
-	sw $t0, -100($sp)
-	lw $t0, -100($sp)
-	sw $t0, -224($sp)
-	subu $sp, $sp, 228
+	sw $t0, -116($sp)
+	lw $t0, -116($sp)
+	sw $t0, -240($sp)
+	subu $sp, $sp, 244
 	jal _malloc
-	addi $sp, $sp, 228
-	sw $v0, -104($sp)
+	addi $sp, $sp, 244
+	sw $v0, -120($sp)
 	lw $ra, ($sp)
-	lw $t0, -104($sp)
+	lw $t0, -120($sp)
 	sw $t0, _board
 	lw $t0, _board
-	sw $t0, -84($sp)
+	sw $t0, -100($sp)
 	li $t0, 0
 	sw $t0, _i
 	lw $t0, _i
-	sw $t0, -108($sp)
+	sw $t0, -124($sp)
 L28:
 	li $t2, 4
 	lw $t1, _N
 	mul $t0, $t1, $t2
-	sw $t0, -120($sp)
-	lw $t2, -120($sp)
+	sw $t0, -136($sp)
+	lw $t2, -136($sp)
 	lw $t1, -4($sp)
 	add $t0, $t1, $t2
-	sw $t0, -116($sp)
-	lw $t0, -116($sp)
+	sw $t0, -132($sp)
+	lw $t0, -132($sp)
 	lw $t1, ($t0)
-	sw $t1, -112($sp)
-	lw $t2, -112($sp)
+	sw $t1, -128($sp)
+	lw $t2, -128($sp)
 	lw $t1, _i
 	slt $t0, $t1, $t2
-	sw $t0, -124($sp)
-	lw $t0, -124($sp)
+	sw $t0, -140($sp)
+	lw $t0, -140($sp)
 	bne $t0, $0, L29
 	b L27
 L29:
 	li $t2, 4
 	lw $t1, _N
 	mul $t0, $t1, $t2
-	sw $t0, -140($sp)
-	lw $t2, -140($sp)
+	sw $t0, -156($sp)
+	lw $t2, -156($sp)
 	lw $t1, -4($sp)
 	add $t0, $t1, $t2
-	sw $t0, -136($sp)
-	lw $t0, -136($sp)
+	sw $t0, -152($sp)
+	lw $t0, -152($sp)
 	lw $t1, ($t0)
-	sw $t1, -132($sp)
+	sw $t1, -148($sp)
 	li $t2, 4
-	lw $t1, -132($sp)
+	lw $t1, -148($sp)
 	mul $t0, $t1, $t2
-	sw $t0, -144($sp)
-	lw $t0, -144($sp)
-	sw $t0, -224($sp)
-	subu $sp, $sp, 228
+	sw $t0, -160($sp)
+	lw $t0, -160($sp)
+	sw $t0, -240($sp)
+	subu $sp, $sp, 244
 	jal _malloc
-	addi $sp, $sp, 228
-	sw $v0, -148($sp)
+	addi $sp, $sp, 244
+	sw $v0, -164($sp)
 	lw $ra, ($sp)
 	lw $t2, _i
 	li $t1, 4
 	mul $t0, $t1, $t2
-	sw $t0, -156($sp)
-	lw $t2, -156($sp)
+	sw $t0, -172($sp)
+	lw $t2, -172($sp)
 	lw $t1, _board
-	add $t0, $t1, $t2
-	sw $t0, -152($sp)
-	lw $t0, -152($sp)
-	lw $t1, -148($sp)
-	sw $t1, ($t0)
-	lw $t0, -152($sp)
-	lw $t1, ($t0)
-	sw $t1, -128($sp)
-	li $t2, 1
-	lw $t1, _i
 	add $t0, $t1, $t2
 	sw $t0, -168($sp)
 	lw $t0, -168($sp)
+	lw $t1, -164($sp)
+	sw $t1, ($t0)
+	lw $t0, -168($sp)
+	lw $t1, ($t0)
+	sw $t1, -144($sp)
+	li $t2, 1
+	lw $t1, _i
+	add $t0, $t1, $t2
+	sw $t0, -184($sp)
+	lw $t0, -184($sp)
 	sw $t0, _i
 	lw $t0, _i
-	sw $t0, -164($sp)
+	sw $t0, -180($sp)
 	li $t2, 1
-	lw $t1, -164($sp)
+	lw $t1, -180($sp)
 	sub $t0, $t1, $t2
-	sw $t0, -160($sp)
+	sw $t0, -176($sp)
 	b L28
 L27:
-	li $t2, 4
-	lw $t1, _N
-	mul $t0, $t1, $t2
-	sw $t0, -180($sp)
-	lw $t2, -180($sp)
-	lw $t1, -4($sp)
-	add $t0, $t1, $t2
-	sw $t0, -176($sp)
-	lw $t0, -176($sp)
-	lw $t1, ($t0)
-	sw $t1, -172($sp)
-	li $t2, 1
-	lw $t1, -172($sp)
-	sub $t0, $t1, $t2
-	sw $t0, -184($sp)
 	li $t2, 4
 	lw $t1, _N
 	mul $t0, $t1, $t2
@@ -707,48 +711,63 @@ L27:
 	lw $t1, -188($sp)
 	sub $t0, $t1, $t2
 	sw $t0, -200($sp)
+	li $t2, 4
+	lw $t1, _N
+	mul $t0, $t1, $t2
+	sw $t0, -212($sp)
+	lw $t2, -212($sp)
+	lw $t1, -4($sp)
+	add $t0, $t1, $t2
+	sw $t0, -208($sp)
+	lw $t0, -208($sp)
+	lw $t1, ($t0)
+	sw $t1, -204($sp)
+	li $t2, 1
+	lw $t1, -204($sp)
+	sub $t0, $t1, $t2
+	sw $t0, -216($sp)
 	lw $t0, _board
-	sw $t0, -224($sp)
-	lw $t0, _N
-	sw $t0, -228($sp)
-	li $t0, 0
-	sw $t0, -232($sp)
-	li $t0, 0
-	sw $t0, -236($sp)
-	lw $t0, -184($sp)
 	sw $t0, -240($sp)
-	lw $t0, -200($sp)
+	lw $t0, _N
 	sw $t0, -244($sp)
 	li $t0, 0
 	sw $t0, -248($sp)
-	lw $t0, -4($sp)
+	li $t0, 0
 	sw $t0, -252($sp)
-	li $t0, 1
+	lw $t0, -200($sp)
 	sw $t0, -256($sp)
-	subu $sp, $sp, 260
+	lw $t0, -216($sp)
+	sw $t0, -260($sp)
+	li $t0, 0
+	sw $t0, -264($sp)
+	lw $t0, -4($sp)
+	sw $t0, -268($sp)
+	li $t0, 1
+	sw $t0, -272($sp)
+	subu $sp, $sp, 276
 	jal _fill
-	addi $sp, $sp, 260
-	sw $v0, -204($sp)
+	addi $sp, $sp, 276
+	sw $v0, -220($sp)
 	lw $ra, ($sp)
 	li $t2, 4
 	lw $t1, _N
 	mul $t0, $t1, $t2
-	sw $t0, -216($sp)
-	lw $t2, -216($sp)
+	sw $t0, -232($sp)
+	lw $t2, -232($sp)
 	lw $t1, -4($sp)
 	add $t0, $t1, $t2
-	sw $t0, -212($sp)
-	lw $t0, -212($sp)
-	lw $t1, ($t0)
-	sw $t1, -208($sp)
-	lw $t0, -208($sp)
-	sw $t0, -224($sp)
-	lw $t0, _board
 	sw $t0, -228($sp)
-	subu $sp, $sp, 232
+	lw $t0, -228($sp)
+	lw $t1, ($t0)
+	sw $t1, -224($sp)
+	lw $t0, -224($sp)
+	sw $t0, -240($sp)
+	lw $t0, _board
+	sw $t0, -244($sp)
+	subu $sp, $sp, 248
 	jal _printBoard
-	addi $sp, $sp, 232
-	sw $v0, -220($sp)
+	addi $sp, $sp, 248
+	sw $v0, -236($sp)
 	lw $ra, ($sp)
 	li $v0, 0
 	sw $v0, 0($sp)

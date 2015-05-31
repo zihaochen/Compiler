@@ -7,14 +7,12 @@ int getPrime(int N, int* primeCount, int* bool, int* gps, int* prime) {
     count = 2;
     for (i = 2; i <= N; i = i + 1) {
         if (bool[i] == 1) {
-            int tmtp = gps[i];
             primeCount[0] = primeCount[0] + 1;
             prime[primeCount[0]] = i;
             gps[i] = primeCount[0];
         }
         while (i * count <= N) {
             bool[i * count] = 0;
-            printf("%d\n", bool[i * count]);
             count = count + 1;
         }
         count = 2;
@@ -50,8 +48,8 @@ int printF(int k1, int k2, int k3) {
 }
 
 int main() {
-    N = 40;
-    M = 88;
+    N = 1000;
+    M = 100*(getchar()-'0')+10*(getchar()-'0')+getchar()-'0';
     primeCount = 0;
     resultCount = 0;
     tmp[0] = 0;
@@ -66,17 +64,14 @@ int main() {
     }
     for (i = 0; i <= M; i = i + 1)
     {
-        for (j = 0; j <= M; j = j + 1){
+        for (j = 0; j <= M; j = j + 1)
             result[i][j] = -1;
-        }
     }
     getPrime(N, tmp, bool, gps, prime);
     primeCount = tmp[0];
-    printf("%d\n", primeCount);
     for (i = 1; i < primeCount; i = i + 1)
         for (j = i + 1; j <= primeCount; j = j + 1)
             if (result[i][j] == -1) {
-                printf("hhahahahahah\n");
                 result[i][j] = getResult(N, i, j, bool, gps, prime, result);
                 if (result[i][j] > 1) {
                     printF(prime[i], prime[j], result[i][j]);

@@ -1,6 +1,6 @@
 _start: 
 _printf_cnt = 0
-_n = 1000
+_n = 10000
 
 _malloc: 
 

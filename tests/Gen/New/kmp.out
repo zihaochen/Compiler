@@ -1,0 +1,159 @@
+_start: 
+_printf_cnt = 0
+
+_malloc: 
+
+_getchar: 
+
+_printf: 
+
+_main: 
+_s2 = Temp1
+_s1 = Temp2
+_ans = 0
+Temp3 = _ans
+*_pre = -1 , 4
+Temp4 = *_pre, 4
+Temp4 = *_pre, 4
+_j = -1
+Temp6 = _j
+_len1 = 2
+Temp7 = _len1
+_len2 = 11
+Temp8 = _len2
+_i = 1
+Temp9 = _i
+Label :2	Temp10 = _i LT _len1
+If Not Equal to Zero Temp10 Goto Label :3	
+Goto label:1
+Label :3	Label :5	Temp11 = _j NE -1
+If Not Equal to Zero Temp11 Goto Label :7	
+Goto label:4
+Label :7	Temp12 = _j ADD 1
+Temp13 = 0
+Temp14 = Temp12 MUL 4
+Temp13 = Temp13 ADD Temp14
+Temp15 = _s1 ADD Temp13
+Temp16 = *Temp15, 4
+Temp17 = 0
+Temp18 = _i MUL 4
+Temp17 = Temp17 ADD Temp18
+Temp19 = _s1 ADD Temp17
+Temp20 = *Temp19, 4
+Temp21 = Temp16 NE Temp20
+If Not Equal to Zero Temp21 Goto Label :6	
+Goto label:4
+Label :6	Temp23 = 0
+Temp24 = _j MUL 4
+Temp23 = Temp23 ADD Temp24
+Temp25 = _pre ADD Temp23
+Temp26 = *Temp25, 4
+_j = Temp26
+Temp22 = _j
+Goto label:5
+Label :4	Temp27 = _j ADD 1
+Temp28 = 0
+Temp29 = Temp27 MUL 4
+Temp28 = Temp28 ADD Temp29
+Temp30 = _s1 ADD Temp28
+Temp31 = *Temp30, 4
+Temp32 = 0
+Temp33 = _i MUL 4
+Temp32 = Temp32 ADD Temp33
+Temp34 = _s1 ADD Temp32
+Temp35 = *Temp34, 4
+Temp36 = Temp31 EQ Temp35
+If Not Equal to Zero Temp36 Goto Label :9	
+Goto label:8
+Label :9	Temp39 = _j ADD 1
+_j = Temp39
+Temp38 = _j
+Temp37 = Temp38 SUB 1
+Label :8	Temp41 = 0
+Temp42 = _i MUL 4
+Temp41 = Temp41 ADD Temp42
+Temp43 = _pre ADD Temp41
+*Temp43 = _j , 4
+Temp40 = *Temp43, 4
+Temp40 = *Temp43, 4
+Temp47 = _i ADD 1
+_i = Temp47
+Temp46 = _i
+Temp45 = Temp46 SUB 1
+Goto label:2
+Label :1	_j = -1
+Temp48 = _j
+_i = 0
+Temp49 = _i
+Label :11	Temp50 = _i LT _len2
+If Not Equal to Zero Temp50 Goto Label :12	
+Goto label:10
+Label :12	Label :14	Temp51 = _j NE -1
+If Not Equal to Zero Temp51 Goto Label :16	
+Goto label:13
+Label :16	Temp52 = _j ADD 1
+Temp53 = 0
+Temp54 = Temp52 MUL 4
+Temp53 = Temp53 ADD Temp54
+Temp55 = _s1 ADD Temp53
+Temp56 = *Temp55, 4
+Temp57 = 0
+Temp58 = _i MUL 4
+Temp57 = Temp57 ADD Temp58
+Temp59 = _s2 ADD Temp57
+Temp60 = *Temp59, 4
+Temp61 = Temp56 NE Temp60
+If Not Equal to Zero Temp61 Goto Label :15	
+Goto label:13
+Label :15	Temp63 = 0
+Temp64 = _j MUL 4
+Temp63 = Temp63 ADD Temp64
+Temp65 = _pre ADD Temp63
+Temp66 = *Temp65, 4
+_j = Temp66
+Temp62 = _j
+Goto label:14
+Label :13	Temp67 = _j ADD 1
+Temp68 = 0
+Temp69 = Temp67 MUL 4
+Temp68 = Temp68 ADD Temp69
+Temp70 = _s1 ADD Temp68
+Temp71 = *Temp70, 4
+Temp72 = 0
+Temp73 = _i MUL 4
+Temp72 = Temp72 ADD Temp73
+Temp74 = _s2 ADD Temp72
+Temp75 = *Temp74, 4
+Temp76 = Temp71 EQ Temp75
+If Not Equal to Zero Temp76 Goto Label :18	
+Goto label:17
+Label :18	Temp79 = _j ADD 1
+_j = Temp79
+Temp78 = _j
+Temp77 = Temp78 SUB 1
+Label :17	Temp80 = _len1 SUB 1
+Temp81 = _j EQ Temp80
+If Not Equal to Zero Temp81 Goto Label :20	
+Goto label:19
+Label :20	Temp84 = _ans ADD 1
+_ans = Temp84
+Temp83 = _ans
+Temp82 = Temp83 SUB 1
+Temp86 = 0
+Temp87 = _j MUL 4
+Temp86 = Temp86 ADD Temp87
+Temp88 = _pre ADD Temp86
+Temp89 = *Temp88, 4
+_j = Temp89
+Temp85 = _j
+Label :19	Temp92 = _i ADD 1
+_i = Temp92
+Temp91 = _i
+Temp90 = Temp91 SUB 1
+Goto label:11
+Label :10	BasicParam Temp93
+BasicParam _ans
+_printf_cnt = 2
+Temp94 = call _printf , 2
+Return BasicParam 0
+

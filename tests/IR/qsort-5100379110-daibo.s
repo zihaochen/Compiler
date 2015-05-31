@@ -14,7 +14,7 @@ main:
 	sw $t0, _a
 	li $t0, 0
 	sw $t0, _printf_cnt
-	li $t0, 1000
+	li $t0, 10000
 	sw $t0, _n
 	li $t0, 37
 	la $t1, str_1
@@ -25,9 +25,15 @@ main:
 	li $t0, 32
 	la $t1, str_1
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_1
+	sw $t0, 12($t1)
 	li $t0, 10
 	la $t1, str_2
 	sw $t0, 0($t1)
+	li $t0, 0
+	la $t1, str_2
+	sw $t0, 4($t1)
 	j _main
 _qsrt:
 	sw $ra, ($sp)

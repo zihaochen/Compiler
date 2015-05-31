@@ -1,0 +1,104 @@
+_start: 
+_printf_cnt = 0
+
+_malloc: 
+
+_getchar: 
+
+_printf: 
+
+_getline1: 
+Temp2 = call _getchar , 0
+_tmp = Temp2
+Temp1 = _tmp
+Label :2	Temp3 = _tmp NE 10
+If Not Equal to Zero Temp3 Goto Label :3	
+Goto label:1
+Label :3	Temp5 = *s, 4
+*s = _tmp , 4
+Temp4 = *s, 4
+Temp8 = 1 MUL 4
+Temp7 = s ADD Temp8
+s = Temp7
+Temp6 = s
+Temp10 = call _getchar , 0
+_tmp = Temp10
+Temp9 = _tmp
+Goto label:2
+Label :1	Temp11 = _tmp EQ 10
+If Not Equal to Zero Temp11 Goto Label :5	
+Goto label:4
+Label :5	Temp13 = *s, 4
+*s = 10 , 4
+Temp12 = *s, 4
+Temp16 = 1 MUL 4
+Temp15 = s ADD Temp16
+s = Temp15
+Temp14 = s
+Label :4	Temp18 = *s, 4
+*s = 0 , 4
+Temp17 = *s, 4
+
+_isdecdigit: 
+Temp19 = ch GE 48
+If Not Equal to Zero Temp19 Goto Label :8	
+Goto label:7
+Label :8	Temp20 = ch LE 57
+If Not Equal to Zero Temp20 Goto Label :6	
+Goto label:7
+Label :6	Return BasicParam 1
+Label :7	Return BasicParam 0
+
+_getint: 
+Label :10	Temp22 = call _getchar , 0
+_ch = Temp22
+Temp21 = _ch
+BasicParam Temp21
+Temp23 = call _isdecdigit , 1
+If Not Equal to Zero Temp23 Goto Label :9	
+Goto label:11
+Label :11	Goto label:10
+Goto label:10
+Label :9	Temp25 = _ch SUB 48
+_tmp = Temp25
+Temp24 = _tmp
+Label :13	Temp27 = call _getchar , 0
+_ch = Temp27
+Temp26 = _ch
+BasicParam Temp26
+Temp28 = call _isdecdigit , 1
+If Not Equal to Zero Temp28 Goto Label :14	
+Goto label:12
+Label :14	Temp30 = _tmp MUL 10
+Temp31 = Temp30 ADD _ch
+Temp32 = Temp31 SUB 48
+_tmp = Temp32
+Temp29 = _tmp
+Goto label:13
+Label :12	Return BasicParam _tmp
+
+_main: 
+_line = 0
+Temp34 = call _getint , 0
+_n = Temp34
+Temp33 = _n
+Label :16	Temp35 = _line LT _n
+If Not Equal to Zero Temp35 Goto Label :17	
+Goto label:15
+Label :17	Temp36 = 4 MUL 505
+BasicParam Temp36
+Temp37 = call _malloc , 1
+_buf = Temp37
+BasicParam _buf
+Temp38 = call _getline1 , 1
+Temp41 = _line ADD 1
+_line = Temp41
+Temp40 = _line
+BasicParam Temp39
+BasicParam Temp40
+BasicParam _buf
+_printf_cnt = 3
+Temp42 = call _printf , 3
+Goto label:16
+Label :15	Return BasicParam 0
+

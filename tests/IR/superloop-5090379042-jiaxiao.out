@@ -1,6 +1,5 @@
 _start: 
 _printf_cnt = 0
-_N = 6
 _h = 99
 _i = 100
 _j = 101
@@ -14,196 +13,200 @@ _getchar:
 _printf: 
 
 _main: 
+Temp2 = call _getchar , 0
+Temp3 = Temp2 SUB 48
+_N = Temp3
+Temp1 = _N
 _a = 1
-Temp1 = _a
-Label :2	Temp2 = _a LE _N
-If Not Equal to Zero Temp2 Goto Label :3	
+Temp4 = _a
+Label :2	Temp5 = _a LE _N
+If Not Equal to Zero Temp5 Goto Label :3	
 Goto label:1
 Label :3	_b = 1
-Temp3 = _b
-Label :5	Temp4 = _b LE _N
-If Not Equal to Zero Temp4 Goto Label :6	
+Temp6 = _b
+Label :5	Temp7 = _b LE _N
+If Not Equal to Zero Temp7 Goto Label :6	
 Goto label:4
 Label :6	_c = 1
-Temp5 = _c
-Label :8	Temp6 = _c LE _N
-If Not Equal to Zero Temp6 Goto Label :9	
+Temp8 = _c
+Label :8	Temp9 = _c LE _N
+If Not Equal to Zero Temp9 Goto Label :9	
 Goto label:7
 Label :9	_d = 1
-Temp7 = _d
-Label :11	Temp8 = _d LE _N
-If Not Equal to Zero Temp8 Goto Label :12	
+Temp10 = _d
+Label :11	Temp11 = _d LE _N
+If Not Equal to Zero Temp11 Goto Label :12	
 Goto label:10
 Label :12	_e = 1
-Temp9 = _e
-Label :14	Temp10 = _e LE _N
-If Not Equal to Zero Temp10 Goto Label :15	
+Temp12 = _e
+Label :14	Temp13 = _e LE _N
+If Not Equal to Zero Temp13 Goto Label :15	
 Goto label:13
 Label :15	_f = 1
-Temp11 = _f
-Label :17	Temp12 = _f LE _N
-If Not Equal to Zero Temp12 Goto Label :18	
+Temp14 = _f
+Label :17	Temp15 = _f LE _N
+If Not Equal to Zero Temp15 Goto Label :18	
 Goto label:16
-Label :18	Temp13 = _a NE _b
-If Not Equal to Zero Temp13 Goto Label :60	
+Label :18	Temp16 = _a NE _b
+If Not Equal to Zero Temp16 Goto Label :60	
 Goto label:19
-Label :60	Temp14 = _a NE _c
-If Not Equal to Zero Temp14 Goto Label :59	
+Label :60	Temp17 = _a NE _c
+If Not Equal to Zero Temp17 Goto Label :59	
 Goto label:19
-Label :59	Temp15 = _a NE _d
-If Not Equal to Zero Temp15 Goto Label :58	
+Label :59	Temp18 = _a NE _d
+If Not Equal to Zero Temp18 Goto Label :58	
 Goto label:19
-Label :58	Temp16 = _a NE _e
-If Not Equal to Zero Temp16 Goto Label :57	
+Label :58	Temp19 = _a NE _e
+If Not Equal to Zero Temp19 Goto Label :57	
 Goto label:19
-Label :57	Temp17 = _a NE _f
-If Not Equal to Zero Temp17 Goto Label :56	
+Label :57	Temp20 = _a NE _f
+If Not Equal to Zero Temp20 Goto Label :56	
 Goto label:19
-Label :56	Temp18 = _a NE _h
-If Not Equal to Zero Temp18 Goto Label :55	
+Label :56	Temp21 = _a NE _h
+If Not Equal to Zero Temp21 Goto Label :55	
 Goto label:19
-Label :55	Temp19 = _a NE _i
-If Not Equal to Zero Temp19 Goto Label :54	
+Label :55	Temp22 = _a NE _i
+If Not Equal to Zero Temp22 Goto Label :54	
 Goto label:19
-Label :54	Temp20 = _a NE _j
-If Not Equal to Zero Temp20 Goto Label :53	
+Label :54	Temp23 = _a NE _j
+If Not Equal to Zero Temp23 Goto Label :53	
 Goto label:19
-Label :53	Temp21 = _a NE _k
-If Not Equal to Zero Temp21 Goto Label :52	
+Label :53	Temp24 = _a NE _k
+If Not Equal to Zero Temp24 Goto Label :52	
 Goto label:19
-Label :52	Temp22 = _b NE _c
-If Not Equal to Zero Temp22 Goto Label :51	
+Label :52	Temp25 = _b NE _c
+If Not Equal to Zero Temp25 Goto Label :51	
 Goto label:19
-Label :51	Temp23 = _b NE _d
-If Not Equal to Zero Temp23 Goto Label :50	
+Label :51	Temp26 = _b NE _d
+If Not Equal to Zero Temp26 Goto Label :50	
 Goto label:19
-Label :50	Temp24 = _b NE _e
-If Not Equal to Zero Temp24 Goto Label :49	
+Label :50	Temp27 = _b NE _e
+If Not Equal to Zero Temp27 Goto Label :49	
 Goto label:19
-Label :49	Temp25 = _b NE _f
-If Not Equal to Zero Temp25 Goto Label :48	
+Label :49	Temp28 = _b NE _f
+If Not Equal to Zero Temp28 Goto Label :48	
 Goto label:19
-Label :48	Temp26 = _b NE _h
-If Not Equal to Zero Temp26 Goto Label :47	
+Label :48	Temp29 = _b NE _h
+If Not Equal to Zero Temp29 Goto Label :47	
 Goto label:19
-Label :47	Temp27 = _b NE _i
-If Not Equal to Zero Temp27 Goto Label :46	
+Label :47	Temp30 = _b NE _i
+If Not Equal to Zero Temp30 Goto Label :46	
 Goto label:19
-Label :46	Temp28 = _b NE _j
-If Not Equal to Zero Temp28 Goto Label :45	
+Label :46	Temp31 = _b NE _j
+If Not Equal to Zero Temp31 Goto Label :45	
 Goto label:19
-Label :45	Temp29 = _b NE _k
-If Not Equal to Zero Temp29 Goto Label :44	
+Label :45	Temp32 = _b NE _k
+If Not Equal to Zero Temp32 Goto Label :44	
 Goto label:19
-Label :44	Temp30 = _c NE _d
-If Not Equal to Zero Temp30 Goto Label :43	
+Label :44	Temp33 = _c NE _d
+If Not Equal to Zero Temp33 Goto Label :43	
 Goto label:19
-Label :43	Temp31 = _c NE _e
-If Not Equal to Zero Temp31 Goto Label :42	
+Label :43	Temp34 = _c NE _e
+If Not Equal to Zero Temp34 Goto Label :42	
 Goto label:19
-Label :42	Temp32 = _c NE _f
-If Not Equal to Zero Temp32 Goto Label :41	
+Label :42	Temp35 = _c NE _f
+If Not Equal to Zero Temp35 Goto Label :41	
 Goto label:19
-Label :41	Temp33 = _c NE _h
-If Not Equal to Zero Temp33 Goto Label :40	
+Label :41	Temp36 = _c NE _h
+If Not Equal to Zero Temp36 Goto Label :40	
 Goto label:19
-Label :40	Temp34 = _c NE _i
-If Not Equal to Zero Temp34 Goto Label :39	
+Label :40	Temp37 = _c NE _i
+If Not Equal to Zero Temp37 Goto Label :39	
 Goto label:19
-Label :39	Temp35 = _c NE _j
-If Not Equal to Zero Temp35 Goto Label :38	
+Label :39	Temp38 = _c NE _j
+If Not Equal to Zero Temp38 Goto Label :38	
 Goto label:19
-Label :38	Temp36 = _c NE _k
-If Not Equal to Zero Temp36 Goto Label :37	
+Label :38	Temp39 = _c NE _k
+If Not Equal to Zero Temp39 Goto Label :37	
 Goto label:19
-Label :37	Temp37 = _d NE _e
-If Not Equal to Zero Temp37 Goto Label :36	
+Label :37	Temp40 = _d NE _e
+If Not Equal to Zero Temp40 Goto Label :36	
 Goto label:19
-Label :36	Temp38 = _d NE _f
-If Not Equal to Zero Temp38 Goto Label :35	
+Label :36	Temp41 = _d NE _f
+If Not Equal to Zero Temp41 Goto Label :35	
 Goto label:19
-Label :35	Temp39 = _d NE _h
-If Not Equal to Zero Temp39 Goto Label :34	
+Label :35	Temp42 = _d NE _h
+If Not Equal to Zero Temp42 Goto Label :34	
 Goto label:19
-Label :34	Temp40 = _d NE _i
-If Not Equal to Zero Temp40 Goto Label :33	
+Label :34	Temp43 = _d NE _i
+If Not Equal to Zero Temp43 Goto Label :33	
 Goto label:19
-Label :33	Temp41 = _d NE _j
-If Not Equal to Zero Temp41 Goto Label :32	
+Label :33	Temp44 = _d NE _j
+If Not Equal to Zero Temp44 Goto Label :32	
 Goto label:19
-Label :32	Temp42 = _d NE _k
-If Not Equal to Zero Temp42 Goto Label :31	
+Label :32	Temp45 = _d NE _k
+If Not Equal to Zero Temp45 Goto Label :31	
 Goto label:19
-Label :31	Temp43 = _e NE _f
-If Not Equal to Zero Temp43 Goto Label :30	
+Label :31	Temp46 = _e NE _f
+If Not Equal to Zero Temp46 Goto Label :30	
 Goto label:19
-Label :30	Temp44 = _e NE _h
-If Not Equal to Zero Temp44 Goto Label :29	
+Label :30	Temp47 = _e NE _h
+If Not Equal to Zero Temp47 Goto Label :29	
 Goto label:19
-Label :29	Temp45 = _e NE _i
-If Not Equal to Zero Temp45 Goto Label :28	
+Label :29	Temp48 = _e NE _i
+If Not Equal to Zero Temp48 Goto Label :28	
 Goto label:19
-Label :28	Temp46 = _e NE _j
-If Not Equal to Zero Temp46 Goto Label :27	
+Label :28	Temp49 = _e NE _j
+If Not Equal to Zero Temp49 Goto Label :27	
 Goto label:19
-Label :27	Temp47 = _e NE _k
-If Not Equal to Zero Temp47 Goto Label :26	
+Label :27	Temp50 = _e NE _k
+If Not Equal to Zero Temp50 Goto Label :26	
 Goto label:19
-Label :26	Temp48 = _f NE _h
-If Not Equal to Zero Temp48 Goto Label :25	
+Label :26	Temp51 = _f NE _h
+If Not Equal to Zero Temp51 Goto Label :25	
 Goto label:19
-Label :25	Temp49 = _f NE _i
-If Not Equal to Zero Temp49 Goto Label :24	
+Label :25	Temp52 = _f NE _i
+If Not Equal to Zero Temp52 Goto Label :24	
 Goto label:19
-Label :24	Temp50 = _f NE _j
-If Not Equal to Zero Temp50 Goto Label :23	
+Label :24	Temp53 = _f NE _j
+If Not Equal to Zero Temp53 Goto Label :23	
 Goto label:19
-Label :23	Temp51 = _f NE _k
-If Not Equal to Zero Temp51 Goto Label :22	
+Label :23	Temp54 = _f NE _k
+If Not Equal to Zero Temp54 Goto Label :22	
 Goto label:19
-Label :22	Temp52 = _i NE _j
-If Not Equal to Zero Temp52 Goto Label :21	
+Label :22	Temp55 = _i NE _j
+If Not Equal to Zero Temp55 Goto Label :21	
 Goto label:19
-Label :21	Temp53 = _h NE _k
-If Not Equal to Zero Temp53 Goto Label :20	
+Label :21	Temp56 = _h NE _k
+If Not Equal to Zero Temp56 Goto Label :20	
 Goto label:19
-Label :20	Temp56 = _total ADD 1
-_total = Temp56
-Temp55 = _total
-Temp54 = Temp55 SUB 1
-Label :19	Temp59 = _f ADD 1
-_f = Temp59
-Temp58 = _f
+Label :20	Temp59 = _total ADD 1
+_total = Temp59
+Temp58 = _total
 Temp57 = Temp58 SUB 1
-Goto label:17
-Label :16	Temp62 = _e ADD 1
-_e = Temp62
-Temp61 = _e
+Label :19	Temp62 = _f ADD 1
+_f = Temp62
+Temp61 = _f
 Temp60 = Temp61 SUB 1
-Goto label:14
-Label :13	Temp65 = _d ADD 1
-_d = Temp65
-Temp64 = _d
+Goto label:17
+Label :16	Temp65 = _e ADD 1
+_e = Temp65
+Temp64 = _e
 Temp63 = Temp64 SUB 1
-Goto label:11
-Label :10	Temp68 = _c ADD 1
-_c = Temp68
-Temp67 = _c
+Goto label:14
+Label :13	Temp68 = _d ADD 1
+_d = Temp68
+Temp67 = _d
 Temp66 = Temp67 SUB 1
-Goto label:8
-Label :7	Temp71 = _b ADD 1
-_b = Temp71
-Temp70 = _b
+Goto label:11
+Label :10	Temp71 = _c ADD 1
+_c = Temp71
+Temp70 = _c
 Temp69 = Temp70 SUB 1
-Goto label:5
-Label :4	Temp74 = _a ADD 1
-_a = Temp74
-Temp73 = _a
+Goto label:8
+Label :7	Temp74 = _b ADD 1
+_b = Temp74
+Temp73 = _b
 Temp72 = Temp73 SUB 1
+Goto label:5
+Label :4	Temp77 = _a ADD 1
+_a = Temp77
+Temp76 = _a
+Temp75 = Temp76 SUB 1
 Goto label:2
-Label :1	BasicParam Temp75
+Label :1	BasicParam Temp78
 BasicParam _total
 _printf_cnt = 2
-Temp76 = call _printf , 2
+Temp79 = call _printf , 2
 Return BasicParam 0
 

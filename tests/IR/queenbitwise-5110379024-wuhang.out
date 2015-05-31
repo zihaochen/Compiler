@@ -1,6 +1,5 @@
 _start: 
 _printf_cnt = 0
-_n = 8
 _sum = 0
 _upperlim = 1
 
@@ -44,21 +43,25 @@ Temp17 = _sum
 Temp16 = Temp17 SUB 1
 Label :1	
 _main: 
-BasicParam Temp19
+Temp20 = call _getchar , 0
+Temp21 = Temp20 SUB 48
+_n = Temp21
+Temp19 = _n
+BasicParam Temp22
 BasicParam _n
 _printf_cnt = 2
-Temp20 = call _printf , 2
-Temp22 = _upperlim SHL _n
-Temp23 = Temp22 SUB 1
-_upperlim = Temp23
-Temp21 = _upperlim
+Temp23 = call _printf , 2
+Temp25 = _upperlim SHL _n
+Temp26 = Temp25 SUB 1
+_upperlim = Temp26
+Temp24 = _upperlim
 BasicParam 0
 BasicParam 0
 BasicParam 0
-Temp24 = call _test , 3
-BasicParam Temp25
+Temp27 = call _test , 3
+BasicParam Temp28
 BasicParam _sum
 _printf_cnt = 2
-Temp26 = call _printf , 2
+Temp29 = call _printf , 2
 Return BasicParam 0
 

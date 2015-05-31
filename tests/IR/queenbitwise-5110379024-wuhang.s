@@ -12,8 +12,6 @@ main:
 	subu $sp, $sp, 4
 	li $t0, 0
 	sw $t0, _printf_cnt
-	li $t0, 8
-	sw $t0, _n
 	li $t0, 0
 	sw $t0, _sum
 	li $t0, 1
@@ -51,6 +49,9 @@ main:
 	li $t0, 10
 	la $t1, str_1
 	sw $t0, 40($t1)
+	li $t0, 0
+	la $t1, str_1
+	sw $t0, 44($t1)
 	li $t0, 37
 	la $t1, str_2
 	sw $t0, 0($t1)
@@ -60,6 +61,9 @@ main:
 	li $t0, 10
 	la $t1, str_2
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_2
+	sw $t0, 12($t1)
 	j _main
 _test:
 	sw $ra, ($sp)
@@ -162,53 +166,66 @@ L1:
 _main:
 	sw $ra, ($sp)
 	la $t0, str_1
-	sw $t0, -4($sp)
+	sw $t0, -16($sp)
 	la $t0, str_2
-	sw $t0, -28($sp)
-	lw $t0, -4($sp)
-	sw $t0, -36($sp)
-	lw $t0, _n
 	sw $t0, -40($sp)
+	subu $sp, $sp, 96
+	jal _getchar
+	addi $sp, $sp, 96
+	sw $v0, -8($sp)
+	lw $ra, ($sp)
+	li $t2, 48
+	lw $t1, -8($sp)
+	sub $t0, $t1, $t2
+	sw $t0, -12($sp)
+	lw $t0, -12($sp)
+	sw $t0, _n
+	lw $t0, _n
+	sw $t0, -4($sp)
+	lw $t0, -16($sp)
+	sw $t0, -48($sp)
+	lw $t0, _n
+	sw $t0, -52($sp)
 	li $t0, 2
 	sw $t0, _printf_cnt
-	subu $sp, $sp, 44
+	subu $sp, $sp, 56
 	jal _printf
-	addi $sp, $sp, 44
-	sw $v0, -8($sp)
+	addi $sp, $sp, 56
+	sw $v0, -20($sp)
 	lw $ra, ($sp)
 	lw $t2, _n
 	lw $t1, _upperlim
 	sll $t0, $t1, $t2
-	sw $t0, -16($sp)
+	sw $t0, -28($sp)
 	li $t2, 1
-	lw $t1, -16($sp)
+	lw $t1, -28($sp)
 	sub $t0, $t1, $t2
-	sw $t0, -20($sp)
-	lw $t0, -20($sp)
+	sw $t0, -32($sp)
+	lw $t0, -32($sp)
 	sw $t0, _upperlim
 	lw $t0, _upperlim
-	sw $t0, -12($sp)
+	sw $t0, -24($sp)
 	li $t0, 0
-	sw $t0, -36($sp)
+	sw $t0, -48($sp)
 	li $t0, 0
-	sw $t0, -40($sp)
+	sw $t0, -52($sp)
 	li $t0, 0
-	sw $t0, -44($sp)
-	subu $sp, $sp, 48
+	sw $t0, -56($sp)
+	subu $sp, $sp, 60
 	jal _test
-	addi $sp, $sp, 48
-	sw $v0, -24($sp)
+	addi $sp, $sp, 60
+	sw $v0, -36($sp)
 	lw $ra, ($sp)
-	lw $t0, -28($sp)
-	sw $t0, -36($sp)
+	lw $t0, -40($sp)
+	sw $t0, -48($sp)
 	lw $t0, _sum
-	sw $t0, -40($sp)
+	sw $t0, -52($sp)
 	li $t0, 2
 	sw $t0, _printf_cnt
-	subu $sp, $sp, 44
+	subu $sp, $sp, 56
 	jal _printf
-	addi $sp, $sp, 44
-	sw $v0, -32($sp)
+	addi $sp, $sp, 56
+	sw $v0, -44($sp)
 	lw $ra, ($sp)
 	li $v0, 0
 	sw $v0, 0($sp)

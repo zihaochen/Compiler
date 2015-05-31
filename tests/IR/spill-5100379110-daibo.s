@@ -23,6 +23,9 @@ main:
 	li $t0, 10
 	la $t1, str_1
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_1
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_2
 	sw $t0, 0($t1)
@@ -32,6 +35,9 @@ main:
 	li $t0, 10
 	la $t1, str_2
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_2
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_3
 	sw $t0, 0($t1)
@@ -41,6 +47,9 @@ main:
 	li $t0, 10
 	la $t1, str_3
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_3
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_4
 	sw $t0, 0($t1)
@@ -50,6 +59,9 @@ main:
 	li $t0, 10
 	la $t1, str_4
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_4
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_5
 	sw $t0, 0($t1)
@@ -59,6 +71,9 @@ main:
 	li $t0, 10
 	la $t1, str_5
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_5
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_6
 	sw $t0, 0($t1)
@@ -68,6 +83,9 @@ main:
 	li $t0, 10
 	la $t1, str_6
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_6
+	sw $t0, 12($t1)
 	li $t0, 101
 	la $t1, str_7
 	sw $t0, 0($t1)
@@ -80,6 +98,9 @@ main:
 	li $t0, 10
 	la $t1, str_7
 	sw $t0, 12($t1)
+	li $t0, 0
+	la $t1, str_7
+	sw $t0, 16($t1)
 	j _main
 _main:
 	sw $ra, ($sp)

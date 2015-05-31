@@ -98,6 +98,7 @@ public class BrutalGen implements Gen{
             lines.add(name + ": .space " + (4 * tmp2.length() + 4));
             for (int i = 0; i < tmp2.length(); i++)
                 ir.fragments.get(0).body.add(new StringAssign(tmp2.charAt(i), name, i * 4));
+            ir.fragments.get(0).body.add(new StringAssign('\0', name, 4 * tmp2.length()));
             stringPair.address.isGlobal = true;
             stringAddressMap.put(stringPair.address, name);
         }
@@ -191,39 +192,6 @@ public class BrutalGen implements Gen{
             }
         }
 
-        /*
-        for (Function function : ir.fragments) {
-            if (function.name.equals("_start")) {
-                emitGlobal(function.vars);
-                emitString(ir.stringPairList);
-                emitStart(function.body);
-            } else {
-                curFunction = function;
-                if (function.name.equals("main")) {
-                    emitMain(function.body);
-                }
-                else {
-                    emit("sw $ra, $sp");
-                    if (function.args.size() != 0) {
-                        int totalParamSize = 0;
-                        for (Variable variable : function.args) {
-                            totalParamSize += variable.size;
-                        }
-                        for (Variable variable : function.args) {
-                            totalParamSize -= variable.size;
-                            variable.address.loc = -(totalParamSize + 4);
-                        }
-                    }
-                    for (Quadruple quadruple : function.body) {
-                        emitQuadruple(quadruple);
-                        lastQuadruple = quadruple;
-                        emit("jr $ra");
-                    }
-                }
-            }
-        }
-        */
-
     }
 
     public String getAddress(Address address) {
@@ -277,39 +245,6 @@ public class BrutalGen implements Gen{
 
     }
 
-    /*
-    @Override
-    public void emitString(List<StringAddressConst> list) {
-        for (Translator.StringPair stringPair : stringPairs) {
-            emit(stringPair.name + ": " + ".asciiz \"" + stringPair.string + "\"");
-        }
-    }
-
-    @Override
-    public void emitASU(List<Variable> list) {
-        for (Variable variable : list)
-            emit(((Name)variable.address).name + ": " + ".space " + variable.size) ;
-    }
-
-    @Override
-    public void emitStart(List<Quadruple> list) {
-        emit(".global _start");
-        emitPrologue();
-        for (Quadruple quadruple : list)
-            emitQuadruple(quadruple);
-        for (ASUaddressPair asUaddressPair : ASUaddressPairList) {
-            emit("la $t0 " + asUaddressPair.name);
-            emit("sw $t0 %d($sp)", asUaddressPair.address.loc);
-        }
-        emit("j main");
-    }
-
-    @Override
-    public void emitMain(List<Quadruple> list) {
-
-    }
-    */
-
     @Override
     public void emitQuadruple(Quadruple quadruple) {
         if (quadruple instanceof AddressOf)      emitAddressOf(quadruple);
@@ -321,7 +256,7 @@ public class BrutalGen implements Gen{
         if (quadruple instanceof MemoryRead)     emitMemoryRead(quadruple);
         if (quadruple instanceof MemoryWrite)    emitMemoryWrite(quadruple);
         if (quadruple instanceof Goto)           emitGoto(quadruple);
-        if (quadruple instanceof IfNEZGoto) emitIfNEZGoto(quadruple);
+        if (quadruple instanceof IfNEZGoto)      emitIfNEZGoto(quadruple);
         if (quadruple instanceof IfEZGoto)       emitIfEZGoto(quadruple);
         if (quadruple instanceof Param)          emitParam(quadruple);
         if (quadruple instanceof Call)           emitCall(quadruple);

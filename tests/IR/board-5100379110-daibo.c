@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-int N=3, i;         // initial value, can be changed.
+int N, i;         // initial value, can be changed.
 int** board;
 
 int printBoard(int sz, int** board) {
@@ -50,7 +50,9 @@ int fill(int** bd, int n, int x0, int y0, int sx, int sy, int scolor, int* p2, i
 }
 
 int main() {
-    int* p2=malloc((N+1) * sizeof(int));
+	int *p2;
+    N=getchar()-'0';
+    p2=malloc((N+1) * sizeof(int));
     p2[0] = 1;
     for (i = 1; i <= N; i++) p2[i] = p2[i - 1] * 2;
     board = malloc(p2[N] * sizeof(int*));

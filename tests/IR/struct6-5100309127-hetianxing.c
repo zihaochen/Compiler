@@ -7,10 +7,9 @@ struct dd {
     int *c;
     int a[20];
 };
-
 int main()
 {
-    int d = 3;
+    int d = getchar()-'0';
     struct dd a;
     struct dd b,c;
 

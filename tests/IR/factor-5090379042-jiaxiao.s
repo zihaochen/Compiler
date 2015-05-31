@@ -17,6 +17,9 @@ main:
 	li $t0, 10
 	la $t1, str_1
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_1
+	sw $t0, 12($t1)
 	j _main
 _nfactor:
 	sw $ra, ($sp)
@@ -56,29 +59,40 @@ L1:
 _main:
 	sw $ra, ($sp)
 	la $t0, str_1
-	sw $t0, -12($sp)
-	li $t0, 6
-	sw $t0, -20($sp)
+	sw $t0, -24($sp)
 	subu $sp, $sp, 24
-	jal _nfactor
+	jal _getchar
 	addi $sp, $sp, 24
 	sw $v0, -8($sp)
 	lw $ra, ($sp)
-	lw $t0, -8($sp)
-	sw $t0, -4($sp)
+	li $t2, 48
+	lw $t1, -8($sp)
+	sub $t0, $t1, $t2
+	sw $t0, -12($sp)
 	lw $t0, -12($sp)
-	sw $t0, -20($sp)
+	sw $t0, -4($sp)
 	lw $t0, -4($sp)
-	sw $t0, -24($sp)
+	sw $t0, -32($sp)
+	subu $sp, $sp, 36
+	jal _nfactor
+	addi $sp, $sp, 36
+	sw $v0, -20($sp)
+	lw $ra, ($sp)
+	lw $t0, -20($sp)
+	sw $t0, -16($sp)
+	lw $t0, -24($sp)
+	sw $t0, -32($sp)
+	lw $t0, -16($sp)
+	sw $t0, -36($sp)
 	li $t0, 2
 	sw $t0, _printf_cnt
-	subu $sp, $sp, 28
+	subu $sp, $sp, 40
 	jal _printf
-	addi $sp, $sp, 28
-	sw $v0, -16($sp)
+	addi $sp, $sp, 40
+	sw $v0, -28($sp)
 	lw $ra, ($sp)
-	lw $v0, -4($sp)
-	sw $v0, -4($sp)
+	lw $v0, -16($sp)
+	sw $v0, -16($sp)
 	jr $ra
 	jr $ra
 

@@ -1,0 +1,148 @@
+_start: 
+_printf_cnt = 0
+
+_malloc: 
+
+_getchar: 
+
+_printf: 
+
+_isdecdigit: 
+Temp1 = ch GE 48
+If Not Equal to Zero Temp1 Goto Label :3	
+Goto label:2
+Label :3	Temp2 = ch LE 57
+If Not Equal to Zero Temp2 Goto Label :1	
+Goto label:2
+Label :1	Return BasicParam 1
+Label :2	Return BasicParam 0
+
+_getint: 
+Label :5	Temp4 = call _getchar , 0
+_ch = Temp4
+Temp3 = _ch
+BasicParam Temp3
+Temp5 = call _isdecdigit , 1
+If Not Equal to Zero Temp5 Goto Label :4	
+Goto label:6
+Label :6	Goto label:5
+Goto label:5
+Label :4	Temp7 = _ch SUB 48
+_tmp = Temp7
+Temp6 = _tmp
+Label :8	Temp9 = call _getchar , 0
+_ch = Temp9
+Temp8 = _ch
+BasicParam Temp8
+Temp10 = call _isdecdigit , 1
+If Not Equal to Zero Temp10 Goto Label :9	
+Goto label:7
+Label :9	Temp12 = _tmp MUL 10
+Temp13 = Temp12 ADD _ch
+Temp14 = Temp13 SUB 48
+_tmp = Temp14
+Temp11 = _tmp
+Goto label:8
+Label :7	Return BasicParam _tmp
+
+_explode: 
+If Not Equal to Zero flag Goto Label :11	
+Goto label:10
+Label :11	_i = 0
+Temp15 = _i
+Label :13	Temp16 = _i LT 1000
+If Not Equal to Zero Temp16 Goto Label :14	
+Goto label:12
+Label :14	BasicParam Temp17
+BasicParam _i
+_printf_cnt = 2
+Temp18 = call _printf , 2
+Temp20 = _i ADD 1
+_i = Temp20
+Temp19 = _i
+Goto label:13
+Label :12	Label :10	Return BasicParam 1
+
+_main: 
+Temp21 = call _getint , 0
+Temp22 = Temp21 ADD 1
+_t1 = Temp22
+Temp23 = call _getint , 0
+Temp24 = Temp23 ADD 2
+_t2 = Temp24
+Temp25 = call _getint , 0
+Temp26 = Temp25 ADD 3
+_t3 = Temp26
+_i = 100
+Label :16	Temp27 = _i GT 0
+If Not Equal to Zero Temp27 Goto Label :17	
+Goto label:15
+Label :17	Temp28 = _t1 GT 0
+If Not Equal to Zero Temp28 Goto Label :19	
+Goto label:21
+Label :21	BasicParam _t1
+Temp29 = call _explode , 1
+If Not Equal to Zero Temp29 Goto Label :19	
+Goto label:20
+Label :19	Temp30 = _t2 GT 1
+If Not Equal to Zero Temp30 Goto Label :26	
+Goto label:25
+Label :26	Temp31 = _t3 GT 2
+If Not Equal to Zero Temp31 Goto Label :23	
+Goto label:25
+Label :25	BasicParam _t2
+Temp32 = call _explode , 1
+If Not Equal to Zero Temp32 Goto Label :23	
+Goto label:24
+Label :23	Temp33 = _t2 LE 0
+If Not Equal to Zero Temp33 Goto Label :30	
+Goto label:29
+Label :30	BasicParam _t3
+Temp34 = call _explode , 1
+If Not Equal to Zero Temp34 Goto Label :28	
+Goto label:29
+Label :28	BasicParam _t3
+Temp35 = call _explode , 1
+Goto label:27
+Label :29	If Not Equal to Zero _t2 Goto Label :38	
+Goto label:37
+Label :38	If Not Equal to Zero _t3 Goto Label :35	
+Goto label:37
+Label :37	BasicParam 1000
+Temp36 = call _explode , 1
+If Not Equal to Zero Temp36 Goto Label :35	
+Goto label:36
+Label :36	If Not Equal to Zero _t1 Goto Label :35	
+Goto label:33
+Label :35	If Not Equal to Zero 0 Goto Label :34	
+Goto label:33
+Label :34	BasicParam 1000
+Temp37 = call _explode , 1
+If Not Equal to Zero Temp37 Goto Label :32	
+Goto label:33
+Label :32	BasicParam 1000
+Temp38 = call _explode , 1
+Goto label:31
+Label :33	BasicParam 0
+Temp39 = call _explode , 1
+If Not Equal to Zero Temp39 Goto Label :41	
+Goto label:39
+Label :41	Temp40 = _i EQ 1
+If Not Equal to Zero Temp40 Goto Label :40	
+Goto label:39
+Label :40	BasicParam Temp41
+BasicParam _t1
+_printf_cnt = 2
+Temp42 = call _printf , 2
+Label :39	Label :31	Label :27	Goto label:22
+Label :24	BasicParam _t2
+Temp43 = call _explode , 1
+Label :22	Goto label:18
+Label :20	BasicParam _t1
+Temp44 = call _explode , 1
+Label :18	Temp46 = _i SUB 1
+_i = Temp46
+Temp45 = _i
+Goto label:16
+Label :15	Return BasicParam 0
+

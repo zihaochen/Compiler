@@ -1,0 +1,101 @@
+_start: 
+_printf_cnt = 0
+
+_malloc: 
+
+_getchar: 
+
+_printf: 
+
+_main: 
+_i = 0
+Temp1 = _i
+Label :2	Temp2 = _i LT 10
+If Not Equal to Zero Temp2 Goto Label :3	
+Goto label:1
+Label :3	Temp4 = 0
+Temp5 = _i MUL 4000
+Temp4 = Temp4 ADD Temp5
+Temp6 = _a ADD Temp4
+Temp7 = Temp6
+_t1 = Temp7
+Temp3 = _t1
+_j = 0
+Temp8 = _j
+Label :5	Temp9 = _j LT 10
+If Not Equal to Zero Temp9 Goto Label :6	
+Goto label:4
+Label :6	Temp11 = 0
+Temp12 = _i MUL 4000
+Temp11 = Temp11 ADD Temp12
+Temp13 = _j MUL 400
+Temp11 = Temp11 ADD Temp13
+Temp14 = _a ADD Temp11
+Temp15 = Temp14
+_t2 = Temp15
+Temp10 = _t2
+_k = 0
+Temp16 = _k
+Label :8	Temp17 = _k LT 10
+If Not Equal to Zero Temp17 Goto Label :9	
+Goto label:7
+Label :9	Temp19 = 0
+Temp20 = _i MUL 4000
+Temp19 = Temp19 ADD Temp20
+Temp21 = _j MUL 400
+Temp19 = Temp19 ADD Temp21
+Temp22 = _k MUL 40
+Temp19 = Temp19 ADD Temp22
+Temp23 = _a ADD Temp19
+Temp24 = Temp23
+_t3 = Temp24
+Temp18 = _t3
+_l = 0
+Temp25 = _l
+Label :11	Temp26 = _l LT 10
+If Not Equal to Zero Temp26 Goto Label :12	
+Goto label:10
+Label :12	Temp28 = _i ADD _j
+Temp29 = Temp28 ADD _k
+Temp30 = Temp29 ADD _l
+Temp31 = 0
+Temp32 = _i MUL 4000
+Temp31 = Temp31 ADD Temp32
+Temp33 = _j MUL 400
+Temp31 = Temp31 ADD Temp33
+Temp34 = _k MUL 40
+Temp31 = Temp31 ADD Temp34
+Temp35 = _l MUL 4
+Temp31 = Temp31 ADD Temp35
+Temp36 = _a ADD Temp31
+*Temp36 = Temp30 , 4
+Temp27 = *Temp36, 4
+Temp27 = *Temp36, 4
+Temp40 = _l ADD 1
+_l = Temp40
+Temp39 = _l
+Temp38 = Temp39 SUB 1
+Goto label:11
+Label :10	Temp43 = _k ADD 1
+_k = Temp43
+Temp42 = _k
+Temp41 = Temp42 SUB 1
+Goto label:8
+Label :7	Temp46 = _j ADD 1
+_j = Temp46
+Temp45 = _j
+Temp44 = Temp45 SUB 1
+Goto label:5
+Label :4	Temp49 = _i ADD 1
+_i = Temp49
+Temp48 = _i
+Temp47 = Temp48 SUB 1
+Goto label:2
+Label :1	Temp51 = _a[22220] , 4
+BasicParam Temp50
+BasicParam Temp51
+_printf_cnt = 2
+Temp52 = call _printf , 2
+Return BasicParam 0
+Return BasicParam 0
+

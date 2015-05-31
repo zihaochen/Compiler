@@ -5,7 +5,6 @@
 	_C: .space 4
 	_i: .space 4
 	str_1: .space 40
-	str_2: .space 40
 .text
 main:
 	move $fp, $sp     # start using memory here
@@ -46,40 +45,14 @@ main:
 	li $t0, 10
 	la $t1, str_1
 	sw $t0, 32($t1)
-	li $t0, 37
-	la $t1, str_2
-	sw $t0, 0($t1)
-	li $t0, 100
-	la $t1, str_2
-	sw $t0, 4($t1)
-	li $t0, 32
-	la $t1, str_2
-	sw $t0, 8($t1)
-	li $t0, 37
-	la $t1, str_2
-	sw $t0, 12($t1)
-	li $t0, 100
-	la $t1, str_2
-	sw $t0, 16($t1)
-	li $t0, 32
-	la $t1, str_2
-	sw $t0, 20($t1)
-	li $t0, 37
-	la $t1, str_2
-	sw $t0, 24($t1)
-	li $t0, 100
-	la $t1, str_2
-	sw $t0, 28($t1)
-	li $t0, 10
-	la $t1, str_2
-	sw $t0, 32($t1)
+	li $t0, 0
+	la $t1, str_1
+	sw $t0, 36($t1)
 	j _main
 _main:
 	sw $ra, ($sp)
 	la $t0, str_1
 	sw $t0, -3048($sp)
-	la $t0, str_2
-	sw $t0, -3056($sp)
 L2:
 	li $t2, 536870912
 	lw $t1, _C
@@ -3133,37 +3106,22 @@ L3:
 	sw $t0, _C
 	lw $t0, _C
 	sw $t0, -2036($sp)
-	lw $t0, -3048($sp)
-	sw $t0, -3064($sp)
-	lw $t0, _A
-	sw $t0, -3068($sp)
-	lw $t0, _B
-	sw $t0, -3072($sp)
-	lw $t0, _C
-	sw $t0, -3076($sp)
-	li $t0, 4
-	sw $t0, _printf_cnt
-	subu $sp, $sp, 3080
-	jal _printf
-	addi $sp, $sp, 3080
-	sw $v0, -3052($sp)
-	lw $ra, ($sp)
 	b L2
 L1:
-	lw $t0, -3056($sp)
-	sw $t0, -3064($sp)
+	lw $t0, -3048($sp)
+	sw $t0, -3056($sp)
 	lw $t0, _A
-	sw $t0, -3068($sp)
+	sw $t0, -3060($sp)
 	lw $t0, _B
-	sw $t0, -3072($sp)
+	sw $t0, -3064($sp)
 	lw $t0, _C
-	sw $t0, -3076($sp)
+	sw $t0, -3068($sp)
 	li $t0, 4
 	sw $t0, _printf_cnt
-	subu $sp, $sp, 3080
+	subu $sp, $sp, 3072
 	jal _printf
-	addi $sp, $sp, 3080
-	sw $v0, -3060($sp)
+	addi $sp, $sp, 3072
+	sw $v0, -3052($sp)
 	lw $ra, ($sp)
 	li $v0, 0
 	sw $v0, 0($sp)

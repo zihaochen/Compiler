@@ -47,22 +47,26 @@ public class genTester {
 
     public static void main(String argv[]) throws IOException {
         String path = "D:\\Codes\\Compiler\\tests\\IR\\";
+        String newpath = "D:\\Codes\\Compiler\\tests\\Gen\\New\\" ;
+
+
         ArrayList<String> oldnames = new ArrayList<>();
+        ArrayList<String> names = new ArrayList<>();
         oldnames.add("arraysum");
-        oldnames.add("basicopt1-hetianxing");
+        oldnames.add("basicopt1-5100309127-hetianxing");
         oldnames.add("board-5100379110-daibo");
         oldnames.add("Bulgarian_solitaire-5110379024-wuhang");
         oldnames.add("expr-5110309085-jintianxing");
         oldnames.add("factor-5090379042-jiaxiao");
-          oldnames.add("gcd-5090379042-jiaxiao");
+        oldnames.add("gcd-5090379042-jiaxiao");
         oldnames.add("hanoi2-5100309153-yanghuan");
         oldnames.add("hanoi-5100379110-daibo");
-       oldnames.add("hashmap-5100309127-hetianxing");
+        oldnames.add("hashmap-5100309127-hetianxing");
         oldnames.add("heapsort-5100379110-daibo");
         oldnames.add("hello-5090379042-jiaxiao");
-          oldnames.add("horse2-5100309153-yanghuan");
-           oldnames.add("horse3-5100309153-yanghuan");
-           oldnames.add("horse-5100309153-yanghuan");
+        oldnames.add("horse2-5100309153-yanghuan");
+        oldnames.add("horse3-5100309153-yanghuan");
+        oldnames.add("horse-5100309153-yanghuan");
         oldnames.add("hpplus-5100309153-yanghuan");
         oldnames.add("inlinecheck-5100309153-yanghuan");
         oldnames.add("magic-5100309153-yanghuan");
@@ -71,7 +75,6 @@ public class genTester {
         oldnames.add("maxflow-5100379110-daibo");
         oldnames.add("multiarray-5100309153-yanghuan");
         oldnames.add("nqueencon-5100379110-daibo");
-        oldnames.add("num1-5110379024-wuhang");
         oldnames.add("pi-5090379042-jiaxiao");
         oldnames.add("plus-5100309153-yanghuan");
         oldnames.add("prime2-5100309153-yanghuan");
@@ -90,8 +93,38 @@ public class genTester {
         oldnames.add("treap-5110309085-jintianxing");
         oldnames.add("twinprime-5090379042-jiaxiao");
         oldnames.add("varptr-5100309127-hetianxing");
+
+
+
+        names.add("bubble");
+        names.add("cmpstr");
+        names.add("cube");
+        names.add("dc3");
+        names.add("dedup");
+        names.add("euler");
+        names.add("extkmp");
+        names.add("fishtank");
+        names.add("hk");
+        names.add("hungary");
+        names.add("iterative");
+        names.add("joseph");
+        names.add("kmp");
+        names.add("lct");
+        names.add("linenumber");
+        names.add("manacher");
+        names.add("minrep");
+        names.add("palautm");
+        names.add("shortcircuit");
+        /*
+        names.add("splittree");
+        names.add("stvsun");
+*/
         for (String file : oldnames) {
             test(path + file + ".c", path + file + ".out", path + file + ".s");
         }
+        for (String file : names) {
+            test(newpath + file + ".c", newpath + file + ".out", newpath + file + ".s");
+        }
     }
+
 }

@@ -41,6 +41,9 @@ main:
 	li $t0, 10
 	la $t1, str_1
 	sw $t0, 12($t1)
+	li $t0, 0
+	la $t1, str_1
+	sw $t0, 16($t1)
 	j _main
 _build:
 	sw $ra, ($sp)
@@ -823,11 +826,11 @@ _main:
 	sw $t0, -4($sp)
 	lw $t0, -4($sp)
 	sw $t0, -24($sp)
-	li $t0, 19
+	li $t0, 99
 	sw $t0, -8($sp)
 	lw $t0, -8($sp)
 	sw $t0, -28($sp)
-	li $t0, 20
+	li $t0, 100
 	sw $t0, -12($sp)
 	lw $t0, -12($sp)
 	sw $t0, -32($sp)

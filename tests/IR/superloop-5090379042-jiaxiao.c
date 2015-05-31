@@ -4,7 +4,7 @@
 */
 #include <stdio.h>
 
-int N = 6;
+int N;
 int h = 99;
 int i = 100;
 int j = 101;
@@ -13,6 +13,7 @@ int total = 0;
 
 int main() {
   	int a, b, c, d, e, f;
+	N=getchar()-'0';
 	for ( a=1; a<=N; a++ )
 	for ( b=1; b<=N; b++ )
 	for ( c=1; c<=N; c++ )	

@@ -236,61 +236,51 @@ Temp150 = _n SUB _k
 Temp151 = Temp150 SUB 1
 BasicParam Temp151
 Temp152 = call _adjustHeap , 1
-BasicParam Temp153
-BasicParam _k
-_printf_cnt = 2
-Temp154 = call _printf , 2
-Temp156 = _k ADD 1
-_k = Temp156
-Temp155 = _k
+Temp154 = _k ADD 1
+_k = Temp154
+Temp153 = _k
 Goto label:19
 Label :18	Return BasicParam 0
 
 _main: 
 _i = 0
-Temp157 = _i
-Label :22	Temp158 = _i LT _n
-If Not Equal to Zero Temp158 Goto Label :23	
+Temp155 = _i
+Label :22	Temp156 = _i LT _n
+If Not Equal to Zero Temp156 Goto Label :23	
 Goto label:21
-Label :23	Temp160 = 0
-Temp161 = _i MUL 4
-Temp160 = Temp160 ADD Temp161
-Temp162 = _a ADD Temp160
-*Temp162 = _i , 4
-Temp159 = *Temp162, 4
-Temp159 = *Temp162, 4
-Temp165 = _i ADD 1
-_i = Temp165
-Temp164 = _i
+Label :23	Temp158 = 0
+Temp159 = _i MUL 4
+Temp158 = Temp158 ADD Temp159
+Temp160 = _a ADD Temp158
+*Temp160 = _i , 4
+Temp157 = *Temp160, 4
+Temp157 = *Temp160, 4
+Temp163 = _i ADD 1
+_i = Temp163
+Temp162 = _i
 Goto label:22
-Label :21	Temp166 = call _makeHeap , 0
-BasicParam Temp167
-_printf_cnt = 1
-Temp168 = call _printf , 1
-Temp169 = call _heapSort , 0
-BasicParam Temp170
-_printf_cnt = 1
-Temp171 = call _printf , 1
+Label :21	Temp164 = call _makeHeap , 0
+Temp165 = call _heapSort , 0
 _i = 0
-Temp172 = _i
-Label :25	Temp173 = _i LT _n
-If Not Equal to Zero Temp173 Goto Label :26	
+Temp166 = _i
+Label :25	Temp167 = _i LT _n
+If Not Equal to Zero Temp167 Goto Label :26	
 Goto label:24
-Label :26	Temp175 = 0
-Temp176 = _i MUL 4
-Temp175 = Temp175 ADD Temp176
-Temp177 = _a ADD Temp175
-Temp178 = *Temp177, 4
-BasicParam Temp174
-BasicParam Temp178
+Label :26	Temp169 = 0
+Temp170 = _i MUL 4
+Temp169 = Temp169 ADD Temp170
+Temp171 = _a ADD Temp169
+Temp172 = *Temp171, 4
+BasicParam Temp168
+BasicParam Temp172
 _printf_cnt = 2
-Temp179 = call _printf , 2
-Temp181 = _i ADD 1
-_i = Temp181
-Temp180 = _i
+Temp173 = call _printf , 2
+Temp175 = _i ADD 1
+_i = Temp175
+Temp174 = _i
 Goto label:25
-Label :24	BasicParam Temp182
+Label :24	BasicParam Temp176
 _printf_cnt = 1
-Temp183 = call _printf , 1
+Temp177 = call _printf , 1
 Return BasicParam 0
 

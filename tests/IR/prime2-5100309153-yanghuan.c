@@ -59,8 +59,8 @@ int printF(int k1, int k2, int k3) {
 }
 
 int main() {
-    N = 20;
-    M = 78;
+    N = 1000;
+    M = 100*(getchar()-'0')+10*(getchar()-'0')+getchar()-'0';
     primeCount = 0;
     resultCount = 0;
     tmp[0] = 0;

@@ -19,27 +19,45 @@ main:
 	li $t0, 100
 	la $t1, str_1
 	sw $t0, 4($t1)
+	li $t0, 0
+	la $t1, str_1
+	sw $t0, 8($t1)
 	li $t0, 10
 	la $t1, str_2
 	sw $t0, 0($t1)
+	li $t0, 0
+	la $t1, str_2
+	sw $t0, 4($t1)
 	li $t0, 37
 	la $t1, str_3
 	sw $t0, 0($t1)
 	li $t0, 100
 	la $t1, str_3
 	sw $t0, 4($t1)
+	li $t0, 0
+	la $t1, str_3
+	sw $t0, 8($t1)
 	li $t0, 10
 	la $t1, str_4
 	sw $t0, 0($t1)
+	li $t0, 0
+	la $t1, str_4
+	sw $t0, 4($t1)
 	li $t0, 37
 	la $t1, str_5
 	sw $t0, 0($t1)
 	li $t0, 100
 	la $t1, str_5
 	sw $t0, 4($t1)
+	li $t0, 0
+	la $t1, str_5
+	sw $t0, 8($t1)
 	li $t0, 10
 	la $t1, str_6
 	sw $t0, 0($t1)
+	li $t0, 0
+	la $t1, str_6
+	sw $t0, 4($t1)
 	j _main
 _main:
 	sw $ra, ($sp)
@@ -50,11 +68,11 @@ _main:
 	la $t0, str_3
 	sw $t0, -28($sp)
 	la $t0, str_4
-	sw $t0, -40($sp)
-	la $t0, str_5
 	sw $t0, -48($sp)
+	la $t0, str_5
+	sw $t0, -56($sp)
 	la $t0, str_6
-	sw $t0, -60($sp)
+	sw $t0, -68($sp)
 	li $t0, 10283
 	sw $t0, -4($sp)
 	lw $t2, -4($sp)
@@ -62,72 +80,81 @@ _main:
 	add $t0, $t1, $t2
 	sw $t0, -12($sp)
 	lw $t0, -8($sp)
-	sw $t0, -68($sp)
+	sw $t0, -76($sp)
 	lw $t0, -12($sp)
-	sw $t0, -72($sp)
+	sw $t0, -80($sp)
 	li $t0, 2
 	sw $t0, _printf_cnt
-	subu $sp, $sp, 76
+	subu $sp, $sp, 84
 	jal _printf
-	addi $sp, $sp, 76
+	addi $sp, $sp, 84
 	sw $v0, -16($sp)
 	lw $ra, ($sp)
 	lw $t0, -20($sp)
-	sw $t0, -68($sp)
+	sw $t0, -76($sp)
 	li $t0, 1
 	sw $t0, _printf_cnt
-	subu $sp, $sp, 72
+	subu $sp, $sp, 80
 	jal _printf
-	addi $sp, $sp, 72
+	addi $sp, $sp, 80
 	sw $v0, -24($sp)
 	lw $ra, ($sp)
-	li $t2, 5
+	subu $sp, $sp, 80
+	jal _getchar
+	addi $sp, $sp, 80
+	sw $v0, -32($sp)
+	lw $ra, ($sp)
+	li $t2, 48
+	lw $t1, -32($sp)
+	sub $t0, $t1, $t2
+	sw $t0, -36($sp)
+	lw $t2, -36($sp)
 	li $t1, 3
 	mul $t0, $t1, $t2
-	sw $t0, -32($sp)
+	sw $t0, -40($sp)
 	lw $t0, -28($sp)
-	sw $t0, -68($sp)
-	lw $t0, -32($sp)
-	sw $t0, -72($sp)
+	sw $t0, -76($sp)
+	lw $t0, -40($sp)
+	sw $t0, -80($sp)
 	li $t0, 2
 	sw $t0, _printf_cnt
-	subu $sp, $sp, 76
+	subu $sp, $sp, 84
 	jal _printf
-	addi $sp, $sp, 76
-	sw $v0, -36($sp)
+	addi $sp, $sp, 84
+	sw $v0, -44($sp)
 	lw $ra, ($sp)
-	lw $t0, -40($sp)
-	sw $t0, -68($sp)
+	lw $t0, -48($sp)
+	sw $t0, -76($sp)
 	li $t0, 1
 	sw $t0, _printf_cnt
-	subu $sp, $sp, 72
+	subu $sp, $sp, 80
 	jal _printf
-	addi $sp, $sp, 72
-	sw $v0, -44($sp)
+	addi $sp, $sp, 80
+	sw $v0, -52($sp)
 	lw $ra, ($sp)
 	li $t2, 2
 	li $t1, 6
 	div $t0, $t1, $t2
-	sw $t0, -52($sp)
-	lw $t0, -48($sp)
-	sw $t0, -68($sp)
-	lw $t0, -52($sp)
-	sw $t0, -72($sp)
+	sw $t0, -60($sp)
+	lw $t0, -56($sp)
+	sw $t0, -76($sp)
+	lw $t0, -60($sp)
+	sw $t0, -80($sp)
 	li $t0, 2
 	sw $t0, _printf_cnt
-	subu $sp, $sp, 76
+	subu $sp, $sp, 84
 	jal _printf
-	addi $sp, $sp, 76
-	sw $v0, -56($sp)
+	addi $sp, $sp, 84
+	sw $v0, -64($sp)
 	lw $ra, ($sp)
-	lw $t0, -60($sp)
-	sw $t0, -68($sp)
+	lw $t0, -68($sp)
+	sw $t0, -76($sp)
 	li $t0, 1
 	sw $t0, _printf_cnt
-	subu $sp, $sp, 72
+	subu $sp, $sp, 80
 	jal _printf
-	addi $sp, $sp, 72
-	sw $v0, -64($sp)
+	addi $sp, $sp, 80
+	sw $v0, -72($sp)
 	lw $ra, ($sp)
 	li $v0, 0
 	sw $v0, 0($sp)

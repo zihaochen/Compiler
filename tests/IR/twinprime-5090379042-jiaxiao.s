@@ -37,6 +37,9 @@ main:
 	li $t0, 10
 	la $t1, str_1
 	sw $t0, 20($t1)
+	li $t0, 0
+	la $t1, str_1
+	sw $t0, 24($t1)
 	li $t0, 84
 	la $t1, str_2
 	sw $t0, 0($t1)
@@ -67,6 +70,9 @@ main:
 	li $t0, 10
 	la $t1, str_2
 	sw $t0, 36($t1)
+	li $t0, 0
+	la $t1, str_2
+	sw $t0, 40($t1)
 	j _main
 _main:
 	sw $ra, ($sp)

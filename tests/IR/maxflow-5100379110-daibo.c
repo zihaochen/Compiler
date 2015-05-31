@@ -67,8 +67,8 @@ int main() {
     int i1;
 
     k = 0;
-    start = 19;
-    ending = 20;
+    start = 99;
+    ending = 100;
     flag = 0;
 
     build(start, ending);

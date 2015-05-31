@@ -50,6 +50,9 @@ main:
 	li $t0, 10
 	la $t1, str_1
 	sw $t0, 52($t1)
+	li $t0, 0
+	la $t1, str_1
+	sw $t0, 56($t1)
 	j _main
 _main:
 	sw $ra, ($sp)

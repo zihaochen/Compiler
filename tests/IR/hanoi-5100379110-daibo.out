@@ -54,17 +54,23 @@ _main:
 _a = 65
 _b = 66
 _c = 67
-_d = 10
+Temp18 = call _getchar , 0
+Temp19 = Temp18 SUB 48
+Temp20 = 10 MUL Temp19
+Temp21 = call _getchar , 0
+Temp22 = Temp20 ADD Temp21
+Temp23 = Temp22 SUB 48
+_d = Temp23
 BasicParam _d
 BasicParam _a
 BasicParam _b
 BasicParam _c
 BasicParam 0
-Temp18 = call _cd , 5
-_sum = Temp18
-BasicParam Temp19
+Temp24 = call _cd , 5
+_sum = Temp24
+BasicParam Temp25
 BasicParam _sum
 _printf_cnt = 2
-Temp20 = call _printf , 2
+Temp26 = call _printf , 2
 Return BasicParam 0
 

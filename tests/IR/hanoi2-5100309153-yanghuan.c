@@ -12,8 +12,8 @@ int hanoi(char a, char b, char c, int n) {
 }
 
 int main() {
-  int N;
-  N = 12;
+  int N=10*(getchar()-'0')+getchar()-'0';
+  //int N=12;
   if (N > 0) hanoi('a', 'b', 'c', N);
   return 0;
 }

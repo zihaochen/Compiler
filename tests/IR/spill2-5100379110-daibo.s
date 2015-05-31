@@ -530,6 +530,9 @@ main:
 	li $t0, 32
 	la $t1, str_1
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_1
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_2
 	sw $t0, 0($t1)
@@ -539,6 +542,9 @@ main:
 	li $t0, 32
 	la $t1, str_2
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_2
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_3
 	sw $t0, 0($t1)
@@ -548,6 +554,9 @@ main:
 	li $t0, 32
 	la $t1, str_3
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_3
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_4
 	sw $t0, 0($t1)
@@ -557,6 +566,9 @@ main:
 	li $t0, 32
 	la $t1, str_4
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_4
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_5
 	sw $t0, 0($t1)
@@ -566,6 +578,9 @@ main:
 	li $t0, 32
 	la $t1, str_5
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_5
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_6
 	sw $t0, 0($t1)
@@ -575,6 +590,9 @@ main:
 	li $t0, 32
 	la $t1, str_6
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_6
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_7
 	sw $t0, 0($t1)
@@ -584,6 +602,9 @@ main:
 	li $t0, 32
 	la $t1, str_7
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_7
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_8
 	sw $t0, 0($t1)
@@ -593,6 +614,9 @@ main:
 	li $t0, 32
 	la $t1, str_8
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_8
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_9
 	sw $t0, 0($t1)
@@ -602,6 +626,9 @@ main:
 	li $t0, 32
 	la $t1, str_9
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_9
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_10
 	sw $t0, 0($t1)
@@ -611,6 +638,9 @@ main:
 	li $t0, 32
 	la $t1, str_10
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_10
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_11
 	sw $t0, 0($t1)
@@ -620,6 +650,9 @@ main:
 	li $t0, 32
 	la $t1, str_11
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_11
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_12
 	sw $t0, 0($t1)
@@ -629,6 +662,9 @@ main:
 	li $t0, 32
 	la $t1, str_12
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_12
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_13
 	sw $t0, 0($t1)
@@ -638,6 +674,9 @@ main:
 	li $t0, 32
 	la $t1, str_13
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_13
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_14
 	sw $t0, 0($t1)
@@ -647,6 +686,9 @@ main:
 	li $t0, 32
 	la $t1, str_14
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_14
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_15
 	sw $t0, 0($t1)
@@ -656,6 +698,9 @@ main:
 	li $t0, 32
 	la $t1, str_15
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_15
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_16
 	sw $t0, 0($t1)
@@ -665,6 +710,9 @@ main:
 	li $t0, 32
 	la $t1, str_16
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_16
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_17
 	sw $t0, 0($t1)
@@ -674,6 +722,9 @@ main:
 	li $t0, 32
 	la $t1, str_17
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_17
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_18
 	sw $t0, 0($t1)
@@ -683,6 +734,9 @@ main:
 	li $t0, 32
 	la $t1, str_18
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_18
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_19
 	sw $t0, 0($t1)
@@ -692,6 +746,9 @@ main:
 	li $t0, 32
 	la $t1, str_19
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_19
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_20
 	sw $t0, 0($t1)
@@ -701,6 +758,9 @@ main:
 	li $t0, 32
 	la $t1, str_20
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_20
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_21
 	sw $t0, 0($t1)
@@ -710,6 +770,9 @@ main:
 	li $t0, 32
 	la $t1, str_21
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_21
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_22
 	sw $t0, 0($t1)
@@ -719,6 +782,9 @@ main:
 	li $t0, 32
 	la $t1, str_22
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_22
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_23
 	sw $t0, 0($t1)
@@ -728,6 +794,9 @@ main:
 	li $t0, 32
 	la $t1, str_23
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_23
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_24
 	sw $t0, 0($t1)
@@ -737,6 +806,9 @@ main:
 	li $t0, 32
 	la $t1, str_24
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_24
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_25
 	sw $t0, 0($t1)
@@ -746,6 +818,9 @@ main:
 	li $t0, 32
 	la $t1, str_25
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_25
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_26
 	sw $t0, 0($t1)
@@ -755,6 +830,9 @@ main:
 	li $t0, 32
 	la $t1, str_26
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_26
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_27
 	sw $t0, 0($t1)
@@ -764,6 +842,9 @@ main:
 	li $t0, 32
 	la $t1, str_27
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_27
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_28
 	sw $t0, 0($t1)
@@ -773,6 +854,9 @@ main:
 	li $t0, 32
 	la $t1, str_28
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_28
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_29
 	sw $t0, 0($t1)
@@ -782,6 +866,9 @@ main:
 	li $t0, 32
 	la $t1, str_29
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_29
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_30
 	sw $t0, 0($t1)
@@ -791,6 +878,9 @@ main:
 	li $t0, 32
 	la $t1, str_30
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_30
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_31
 	sw $t0, 0($t1)
@@ -800,6 +890,9 @@ main:
 	li $t0, 32
 	la $t1, str_31
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_31
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_32
 	sw $t0, 0($t1)
@@ -809,6 +902,9 @@ main:
 	li $t0, 32
 	la $t1, str_32
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_32
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_33
 	sw $t0, 0($t1)
@@ -818,6 +914,9 @@ main:
 	li $t0, 32
 	la $t1, str_33
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_33
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_34
 	sw $t0, 0($t1)
@@ -827,6 +926,9 @@ main:
 	li $t0, 32
 	la $t1, str_34
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_34
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_35
 	sw $t0, 0($t1)
@@ -836,6 +938,9 @@ main:
 	li $t0, 32
 	la $t1, str_35
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_35
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_36
 	sw $t0, 0($t1)
@@ -845,6 +950,9 @@ main:
 	li $t0, 32
 	la $t1, str_36
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_36
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_37
 	sw $t0, 0($t1)
@@ -854,6 +962,9 @@ main:
 	li $t0, 32
 	la $t1, str_37
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_37
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_38
 	sw $t0, 0($t1)
@@ -863,6 +974,9 @@ main:
 	li $t0, 32
 	la $t1, str_38
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_38
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_39
 	sw $t0, 0($t1)
@@ -872,6 +986,9 @@ main:
 	li $t0, 32
 	la $t1, str_39
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_39
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_40
 	sw $t0, 0($t1)
@@ -881,6 +998,9 @@ main:
 	li $t0, 32
 	la $t1, str_40
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_40
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_41
 	sw $t0, 0($t1)
@@ -890,6 +1010,9 @@ main:
 	li $t0, 32
 	la $t1, str_41
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_41
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_42
 	sw $t0, 0($t1)
@@ -899,6 +1022,9 @@ main:
 	li $t0, 32
 	la $t1, str_42
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_42
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_43
 	sw $t0, 0($t1)
@@ -908,6 +1034,9 @@ main:
 	li $t0, 32
 	la $t1, str_43
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_43
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_44
 	sw $t0, 0($t1)
@@ -917,6 +1046,9 @@ main:
 	li $t0, 32
 	la $t1, str_44
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_44
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_45
 	sw $t0, 0($t1)
@@ -926,6 +1058,9 @@ main:
 	li $t0, 32
 	la $t1, str_45
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_45
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_46
 	sw $t0, 0($t1)
@@ -935,6 +1070,9 @@ main:
 	li $t0, 32
 	la $t1, str_46
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_46
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_47
 	sw $t0, 0($t1)
@@ -944,6 +1082,9 @@ main:
 	li $t0, 32
 	la $t1, str_47
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_47
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_48
 	sw $t0, 0($t1)
@@ -953,6 +1094,9 @@ main:
 	li $t0, 32
 	la $t1, str_48
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_48
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_49
 	sw $t0, 0($t1)
@@ -962,6 +1106,9 @@ main:
 	li $t0, 32
 	la $t1, str_49
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_49
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_50
 	sw $t0, 0($t1)
@@ -971,6 +1118,9 @@ main:
 	li $t0, 32
 	la $t1, str_50
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_50
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_51
 	sw $t0, 0($t1)
@@ -980,6 +1130,9 @@ main:
 	li $t0, 32
 	la $t1, str_51
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_51
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_52
 	sw $t0, 0($t1)
@@ -989,6 +1142,9 @@ main:
 	li $t0, 32
 	la $t1, str_52
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_52
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_53
 	sw $t0, 0($t1)
@@ -998,6 +1154,9 @@ main:
 	li $t0, 32
 	la $t1, str_53
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_53
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_54
 	sw $t0, 0($t1)
@@ -1007,6 +1166,9 @@ main:
 	li $t0, 32
 	la $t1, str_54
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_54
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_55
 	sw $t0, 0($t1)
@@ -1016,6 +1178,9 @@ main:
 	li $t0, 32
 	la $t1, str_55
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_55
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_56
 	sw $t0, 0($t1)
@@ -1025,6 +1190,9 @@ main:
 	li $t0, 32
 	la $t1, str_56
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_56
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_57
 	sw $t0, 0($t1)
@@ -1034,6 +1202,9 @@ main:
 	li $t0, 32
 	la $t1, str_57
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_57
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_58
 	sw $t0, 0($t1)
@@ -1043,6 +1214,9 @@ main:
 	li $t0, 32
 	la $t1, str_58
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_58
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_59
 	sw $t0, 0($t1)
@@ -1052,6 +1226,9 @@ main:
 	li $t0, 32
 	la $t1, str_59
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_59
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_60
 	sw $t0, 0($t1)
@@ -1061,6 +1238,9 @@ main:
 	li $t0, 32
 	la $t1, str_60
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_60
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_61
 	sw $t0, 0($t1)
@@ -1070,6 +1250,9 @@ main:
 	li $t0, 32
 	la $t1, str_61
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_61
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_62
 	sw $t0, 0($t1)
@@ -1079,6 +1262,9 @@ main:
 	li $t0, 32
 	la $t1, str_62
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_62
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_63
 	sw $t0, 0($t1)
@@ -1088,6 +1274,9 @@ main:
 	li $t0, 32
 	la $t1, str_63
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_63
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_64
 	sw $t0, 0($t1)
@@ -1097,6 +1286,9 @@ main:
 	li $t0, 32
 	la $t1, str_64
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_64
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_65
 	sw $t0, 0($t1)
@@ -1106,6 +1298,9 @@ main:
 	li $t0, 32
 	la $t1, str_65
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_65
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_66
 	sw $t0, 0($t1)
@@ -1115,6 +1310,9 @@ main:
 	li $t0, 32
 	la $t1, str_66
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_66
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_67
 	sw $t0, 0($t1)
@@ -1124,6 +1322,9 @@ main:
 	li $t0, 32
 	la $t1, str_67
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_67
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_68
 	sw $t0, 0($t1)
@@ -1133,6 +1334,9 @@ main:
 	li $t0, 32
 	la $t1, str_68
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_68
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_69
 	sw $t0, 0($t1)
@@ -1142,6 +1346,9 @@ main:
 	li $t0, 32
 	la $t1, str_69
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_69
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_70
 	sw $t0, 0($t1)
@@ -1151,6 +1358,9 @@ main:
 	li $t0, 32
 	la $t1, str_70
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_70
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_71
 	sw $t0, 0($t1)
@@ -1160,6 +1370,9 @@ main:
 	li $t0, 32
 	la $t1, str_71
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_71
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_72
 	sw $t0, 0($t1)
@@ -1169,6 +1382,9 @@ main:
 	li $t0, 32
 	la $t1, str_72
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_72
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_73
 	sw $t0, 0($t1)
@@ -1178,6 +1394,9 @@ main:
 	li $t0, 32
 	la $t1, str_73
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_73
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_74
 	sw $t0, 0($t1)
@@ -1187,6 +1406,9 @@ main:
 	li $t0, 32
 	la $t1, str_74
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_74
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_75
 	sw $t0, 0($t1)
@@ -1196,6 +1418,9 @@ main:
 	li $t0, 32
 	la $t1, str_75
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_75
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_76
 	sw $t0, 0($t1)
@@ -1205,6 +1430,9 @@ main:
 	li $t0, 32
 	la $t1, str_76
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_76
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_77
 	sw $t0, 0($t1)
@@ -1214,6 +1442,9 @@ main:
 	li $t0, 32
 	la $t1, str_77
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_77
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_78
 	sw $t0, 0($t1)
@@ -1223,6 +1454,9 @@ main:
 	li $t0, 32
 	la $t1, str_78
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_78
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_79
 	sw $t0, 0($t1)
@@ -1232,6 +1466,9 @@ main:
 	li $t0, 32
 	la $t1, str_79
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_79
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_80
 	sw $t0, 0($t1)
@@ -1241,6 +1478,9 @@ main:
 	li $t0, 32
 	la $t1, str_80
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_80
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_81
 	sw $t0, 0($t1)
@@ -1250,6 +1490,9 @@ main:
 	li $t0, 32
 	la $t1, str_81
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_81
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_82
 	sw $t0, 0($t1)
@@ -1259,6 +1502,9 @@ main:
 	li $t0, 32
 	la $t1, str_82
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_82
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_83
 	sw $t0, 0($t1)
@@ -1268,6 +1514,9 @@ main:
 	li $t0, 32
 	la $t1, str_83
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_83
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_84
 	sw $t0, 0($t1)
@@ -1277,6 +1526,9 @@ main:
 	li $t0, 32
 	la $t1, str_84
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_84
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_85
 	sw $t0, 0($t1)
@@ -1286,6 +1538,9 @@ main:
 	li $t0, 32
 	la $t1, str_85
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_85
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_86
 	sw $t0, 0($t1)
@@ -1295,6 +1550,9 @@ main:
 	li $t0, 32
 	la $t1, str_86
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_86
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_87
 	sw $t0, 0($t1)
@@ -1304,6 +1562,9 @@ main:
 	li $t0, 32
 	la $t1, str_87
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_87
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_88
 	sw $t0, 0($t1)
@@ -1313,6 +1574,9 @@ main:
 	li $t0, 32
 	la $t1, str_88
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_88
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_89
 	sw $t0, 0($t1)
@@ -1322,6 +1586,9 @@ main:
 	li $t0, 32
 	la $t1, str_89
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_89
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_90
 	sw $t0, 0($t1)
@@ -1331,6 +1598,9 @@ main:
 	li $t0, 32
 	la $t1, str_90
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_90
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_91
 	sw $t0, 0($t1)
@@ -1340,6 +1610,9 @@ main:
 	li $t0, 32
 	la $t1, str_91
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_91
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_92
 	sw $t0, 0($t1)
@@ -1349,6 +1622,9 @@ main:
 	li $t0, 32
 	la $t1, str_92
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_92
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_93
 	sw $t0, 0($t1)
@@ -1358,6 +1634,9 @@ main:
 	li $t0, 32
 	la $t1, str_93
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_93
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_94
 	sw $t0, 0($t1)
@@ -1367,6 +1646,9 @@ main:
 	li $t0, 32
 	la $t1, str_94
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_94
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_95
 	sw $t0, 0($t1)
@@ -1376,6 +1658,9 @@ main:
 	li $t0, 32
 	la $t1, str_95
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_95
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_96
 	sw $t0, 0($t1)
@@ -1385,6 +1670,9 @@ main:
 	li $t0, 32
 	la $t1, str_96
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_96
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_97
 	sw $t0, 0($t1)
@@ -1394,6 +1682,9 @@ main:
 	li $t0, 32
 	la $t1, str_97
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_97
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_98
 	sw $t0, 0($t1)
@@ -1403,6 +1694,9 @@ main:
 	li $t0, 32
 	la $t1, str_98
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_98
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_99
 	sw $t0, 0($t1)
@@ -1412,6 +1706,9 @@ main:
 	li $t0, 32
 	la $t1, str_99
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_99
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_100
 	sw $t0, 0($t1)
@@ -1421,6 +1718,9 @@ main:
 	li $t0, 32
 	la $t1, str_100
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_100
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_101
 	sw $t0, 0($t1)
@@ -1430,6 +1730,9 @@ main:
 	li $t0, 32
 	la $t1, str_101
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_101
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_102
 	sw $t0, 0($t1)
@@ -1439,6 +1742,9 @@ main:
 	li $t0, 32
 	la $t1, str_102
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_102
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_103
 	sw $t0, 0($t1)
@@ -1448,6 +1754,9 @@ main:
 	li $t0, 32
 	la $t1, str_103
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_103
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_104
 	sw $t0, 0($t1)
@@ -1457,6 +1766,9 @@ main:
 	li $t0, 32
 	la $t1, str_104
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_104
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_105
 	sw $t0, 0($t1)
@@ -1466,6 +1778,9 @@ main:
 	li $t0, 32
 	la $t1, str_105
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_105
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_106
 	sw $t0, 0($t1)
@@ -1475,6 +1790,9 @@ main:
 	li $t0, 32
 	la $t1, str_106
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_106
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_107
 	sw $t0, 0($t1)
@@ -1484,6 +1802,9 @@ main:
 	li $t0, 32
 	la $t1, str_107
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_107
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_108
 	sw $t0, 0($t1)
@@ -1493,6 +1814,9 @@ main:
 	li $t0, 32
 	la $t1, str_108
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_108
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_109
 	sw $t0, 0($t1)
@@ -1502,6 +1826,9 @@ main:
 	li $t0, 32
 	la $t1, str_109
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_109
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_110
 	sw $t0, 0($t1)
@@ -1511,6 +1838,9 @@ main:
 	li $t0, 32
 	la $t1, str_110
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_110
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_111
 	sw $t0, 0($t1)
@@ -1520,6 +1850,9 @@ main:
 	li $t0, 32
 	la $t1, str_111
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_111
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_112
 	sw $t0, 0($t1)
@@ -1529,6 +1862,9 @@ main:
 	li $t0, 32
 	la $t1, str_112
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_112
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_113
 	sw $t0, 0($t1)
@@ -1538,6 +1874,9 @@ main:
 	li $t0, 32
 	la $t1, str_113
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_113
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_114
 	sw $t0, 0($t1)
@@ -1547,6 +1886,9 @@ main:
 	li $t0, 32
 	la $t1, str_114
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_114
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_115
 	sw $t0, 0($t1)
@@ -1556,6 +1898,9 @@ main:
 	li $t0, 32
 	la $t1, str_115
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_115
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_116
 	sw $t0, 0($t1)
@@ -1565,6 +1910,9 @@ main:
 	li $t0, 32
 	la $t1, str_116
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_116
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_117
 	sw $t0, 0($t1)
@@ -1574,6 +1922,9 @@ main:
 	li $t0, 32
 	la $t1, str_117
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_117
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_118
 	sw $t0, 0($t1)
@@ -1583,6 +1934,9 @@ main:
 	li $t0, 32
 	la $t1, str_118
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_118
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_119
 	sw $t0, 0($t1)
@@ -1592,6 +1946,9 @@ main:
 	li $t0, 32
 	la $t1, str_119
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_119
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_120
 	sw $t0, 0($t1)
@@ -1601,6 +1958,9 @@ main:
 	li $t0, 32
 	la $t1, str_120
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_120
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_121
 	sw $t0, 0($t1)
@@ -1610,6 +1970,9 @@ main:
 	li $t0, 32
 	la $t1, str_121
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_121
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_122
 	sw $t0, 0($t1)
@@ -1619,6 +1982,9 @@ main:
 	li $t0, 32
 	la $t1, str_122
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_122
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_123
 	sw $t0, 0($t1)
@@ -1628,6 +1994,9 @@ main:
 	li $t0, 32
 	la $t1, str_123
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_123
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_124
 	sw $t0, 0($t1)
@@ -1637,6 +2006,9 @@ main:
 	li $t0, 32
 	la $t1, str_124
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_124
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_125
 	sw $t0, 0($t1)
@@ -1646,6 +2018,9 @@ main:
 	li $t0, 32
 	la $t1, str_125
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_125
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_126
 	sw $t0, 0($t1)
@@ -1655,6 +2030,9 @@ main:
 	li $t0, 32
 	la $t1, str_126
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_126
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_127
 	sw $t0, 0($t1)
@@ -1664,6 +2042,9 @@ main:
 	li $t0, 32
 	la $t1, str_127
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_127
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_128
 	sw $t0, 0($t1)
@@ -1673,6 +2054,9 @@ main:
 	li $t0, 32
 	la $t1, str_128
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_128
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_129
 	sw $t0, 0($t1)
@@ -1682,6 +2066,9 @@ main:
 	li $t0, 32
 	la $t1, str_129
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_129
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_130
 	sw $t0, 0($t1)
@@ -1691,6 +2078,9 @@ main:
 	li $t0, 32
 	la $t1, str_130
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_130
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_131
 	sw $t0, 0($t1)
@@ -1700,6 +2090,9 @@ main:
 	li $t0, 32
 	la $t1, str_131
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_131
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_132
 	sw $t0, 0($t1)
@@ -1709,6 +2102,9 @@ main:
 	li $t0, 32
 	la $t1, str_132
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_132
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_133
 	sw $t0, 0($t1)
@@ -1718,6 +2114,9 @@ main:
 	li $t0, 32
 	la $t1, str_133
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_133
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_134
 	sw $t0, 0($t1)
@@ -1727,6 +2126,9 @@ main:
 	li $t0, 32
 	la $t1, str_134
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_134
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_135
 	sw $t0, 0($t1)
@@ -1736,6 +2138,9 @@ main:
 	li $t0, 32
 	la $t1, str_135
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_135
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_136
 	sw $t0, 0($t1)
@@ -1745,6 +2150,9 @@ main:
 	li $t0, 32
 	la $t1, str_136
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_136
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_137
 	sw $t0, 0($t1)
@@ -1754,6 +2162,9 @@ main:
 	li $t0, 32
 	la $t1, str_137
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_137
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_138
 	sw $t0, 0($t1)
@@ -1763,6 +2174,9 @@ main:
 	li $t0, 32
 	la $t1, str_138
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_138
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_139
 	sw $t0, 0($t1)
@@ -1772,6 +2186,9 @@ main:
 	li $t0, 32
 	la $t1, str_139
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_139
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_140
 	sw $t0, 0($t1)
@@ -1781,6 +2198,9 @@ main:
 	li $t0, 32
 	la $t1, str_140
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_140
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_141
 	sw $t0, 0($t1)
@@ -1790,6 +2210,9 @@ main:
 	li $t0, 32
 	la $t1, str_141
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_141
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_142
 	sw $t0, 0($t1)
@@ -1799,6 +2222,9 @@ main:
 	li $t0, 32
 	la $t1, str_142
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_142
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_143
 	sw $t0, 0($t1)
@@ -1808,6 +2234,9 @@ main:
 	li $t0, 32
 	la $t1, str_143
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_143
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_144
 	sw $t0, 0($t1)
@@ -1817,6 +2246,9 @@ main:
 	li $t0, 32
 	la $t1, str_144
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_144
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_145
 	sw $t0, 0($t1)
@@ -1826,6 +2258,9 @@ main:
 	li $t0, 32
 	la $t1, str_145
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_145
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_146
 	sw $t0, 0($t1)
@@ -1835,6 +2270,9 @@ main:
 	li $t0, 32
 	la $t1, str_146
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_146
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_147
 	sw $t0, 0($t1)
@@ -1844,6 +2282,9 @@ main:
 	li $t0, 32
 	la $t1, str_147
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_147
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_148
 	sw $t0, 0($t1)
@@ -1853,6 +2294,9 @@ main:
 	li $t0, 32
 	la $t1, str_148
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_148
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_149
 	sw $t0, 0($t1)
@@ -1862,6 +2306,9 @@ main:
 	li $t0, 32
 	la $t1, str_149
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_149
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_150
 	sw $t0, 0($t1)
@@ -1871,6 +2318,9 @@ main:
 	li $t0, 32
 	la $t1, str_150
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_150
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_151
 	sw $t0, 0($t1)
@@ -1880,6 +2330,9 @@ main:
 	li $t0, 32
 	la $t1, str_151
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_151
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_152
 	sw $t0, 0($t1)
@@ -1889,6 +2342,9 @@ main:
 	li $t0, 32
 	la $t1, str_152
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_152
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_153
 	sw $t0, 0($t1)
@@ -1898,6 +2354,9 @@ main:
 	li $t0, 32
 	la $t1, str_153
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_153
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_154
 	sw $t0, 0($t1)
@@ -1907,6 +2366,9 @@ main:
 	li $t0, 32
 	la $t1, str_154
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_154
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_155
 	sw $t0, 0($t1)
@@ -1916,6 +2378,9 @@ main:
 	li $t0, 32
 	la $t1, str_155
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_155
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_156
 	sw $t0, 0($t1)
@@ -1925,6 +2390,9 @@ main:
 	li $t0, 32
 	la $t1, str_156
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_156
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_157
 	sw $t0, 0($t1)
@@ -1934,6 +2402,9 @@ main:
 	li $t0, 32
 	la $t1, str_157
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_157
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_158
 	sw $t0, 0($t1)
@@ -1943,6 +2414,9 @@ main:
 	li $t0, 32
 	la $t1, str_158
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_158
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_159
 	sw $t0, 0($t1)
@@ -1952,6 +2426,9 @@ main:
 	li $t0, 32
 	la $t1, str_159
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_159
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_160
 	sw $t0, 0($t1)
@@ -1961,6 +2438,9 @@ main:
 	li $t0, 32
 	la $t1, str_160
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_160
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_161
 	sw $t0, 0($t1)
@@ -1970,6 +2450,9 @@ main:
 	li $t0, 32
 	la $t1, str_161
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_161
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_162
 	sw $t0, 0($t1)
@@ -1979,6 +2462,9 @@ main:
 	li $t0, 32
 	la $t1, str_162
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_162
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_163
 	sw $t0, 0($t1)
@@ -1988,6 +2474,9 @@ main:
 	li $t0, 32
 	la $t1, str_163
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_163
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_164
 	sw $t0, 0($t1)
@@ -1997,6 +2486,9 @@ main:
 	li $t0, 32
 	la $t1, str_164
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_164
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_165
 	sw $t0, 0($t1)
@@ -2006,6 +2498,9 @@ main:
 	li $t0, 32
 	la $t1, str_165
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_165
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_166
 	sw $t0, 0($t1)
@@ -2015,6 +2510,9 @@ main:
 	li $t0, 32
 	la $t1, str_166
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_166
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_167
 	sw $t0, 0($t1)
@@ -2024,6 +2522,9 @@ main:
 	li $t0, 32
 	la $t1, str_167
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_167
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_168
 	sw $t0, 0($t1)
@@ -2033,6 +2534,9 @@ main:
 	li $t0, 32
 	la $t1, str_168
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_168
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_169
 	sw $t0, 0($t1)
@@ -2042,6 +2546,9 @@ main:
 	li $t0, 32
 	la $t1, str_169
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_169
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_170
 	sw $t0, 0($t1)
@@ -2051,6 +2558,9 @@ main:
 	li $t0, 32
 	la $t1, str_170
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_170
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_171
 	sw $t0, 0($t1)
@@ -2060,6 +2570,9 @@ main:
 	li $t0, 32
 	la $t1, str_171
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_171
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_172
 	sw $t0, 0($t1)
@@ -2069,6 +2582,9 @@ main:
 	li $t0, 32
 	la $t1, str_172
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_172
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_173
 	sw $t0, 0($t1)
@@ -2078,6 +2594,9 @@ main:
 	li $t0, 32
 	la $t1, str_173
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_173
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_174
 	sw $t0, 0($t1)
@@ -2087,6 +2606,9 @@ main:
 	li $t0, 32
 	la $t1, str_174
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_174
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_175
 	sw $t0, 0($t1)
@@ -2096,6 +2618,9 @@ main:
 	li $t0, 32
 	la $t1, str_175
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_175
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_176
 	sw $t0, 0($t1)
@@ -2105,6 +2630,9 @@ main:
 	li $t0, 32
 	la $t1, str_176
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_176
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_177
 	sw $t0, 0($t1)
@@ -2114,6 +2642,9 @@ main:
 	li $t0, 32
 	la $t1, str_177
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_177
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_178
 	sw $t0, 0($t1)
@@ -2123,6 +2654,9 @@ main:
 	li $t0, 32
 	la $t1, str_178
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_178
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_179
 	sw $t0, 0($t1)
@@ -2132,6 +2666,9 @@ main:
 	li $t0, 32
 	la $t1, str_179
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_179
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_180
 	sw $t0, 0($t1)
@@ -2141,6 +2678,9 @@ main:
 	li $t0, 32
 	la $t1, str_180
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_180
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_181
 	sw $t0, 0($t1)
@@ -2150,6 +2690,9 @@ main:
 	li $t0, 32
 	la $t1, str_181
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_181
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_182
 	sw $t0, 0($t1)
@@ -2159,6 +2702,9 @@ main:
 	li $t0, 32
 	la $t1, str_182
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_182
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_183
 	sw $t0, 0($t1)
@@ -2168,6 +2714,9 @@ main:
 	li $t0, 32
 	la $t1, str_183
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_183
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_184
 	sw $t0, 0($t1)
@@ -2177,6 +2726,9 @@ main:
 	li $t0, 32
 	la $t1, str_184
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_184
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_185
 	sw $t0, 0($t1)
@@ -2186,6 +2738,9 @@ main:
 	li $t0, 32
 	la $t1, str_185
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_185
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_186
 	sw $t0, 0($t1)
@@ -2195,6 +2750,9 @@ main:
 	li $t0, 32
 	la $t1, str_186
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_186
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_187
 	sw $t0, 0($t1)
@@ -2204,6 +2762,9 @@ main:
 	li $t0, 32
 	la $t1, str_187
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_187
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_188
 	sw $t0, 0($t1)
@@ -2213,6 +2774,9 @@ main:
 	li $t0, 32
 	la $t1, str_188
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_188
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_189
 	sw $t0, 0($t1)
@@ -2222,6 +2786,9 @@ main:
 	li $t0, 32
 	la $t1, str_189
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_189
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_190
 	sw $t0, 0($t1)
@@ -2231,6 +2798,9 @@ main:
 	li $t0, 32
 	la $t1, str_190
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_190
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_191
 	sw $t0, 0($t1)
@@ -2240,6 +2810,9 @@ main:
 	li $t0, 32
 	la $t1, str_191
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_191
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_192
 	sw $t0, 0($t1)
@@ -2249,6 +2822,9 @@ main:
 	li $t0, 32
 	la $t1, str_192
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_192
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_193
 	sw $t0, 0($t1)
@@ -2258,6 +2834,9 @@ main:
 	li $t0, 32
 	la $t1, str_193
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_193
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_194
 	sw $t0, 0($t1)
@@ -2267,6 +2846,9 @@ main:
 	li $t0, 32
 	la $t1, str_194
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_194
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_195
 	sw $t0, 0($t1)
@@ -2276,6 +2858,9 @@ main:
 	li $t0, 32
 	la $t1, str_195
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_195
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_196
 	sw $t0, 0($t1)
@@ -2285,6 +2870,9 @@ main:
 	li $t0, 32
 	la $t1, str_196
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_196
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_197
 	sw $t0, 0($t1)
@@ -2294,6 +2882,9 @@ main:
 	li $t0, 32
 	la $t1, str_197
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_197
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_198
 	sw $t0, 0($t1)
@@ -2303,6 +2894,9 @@ main:
 	li $t0, 32
 	la $t1, str_198
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_198
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_199
 	sw $t0, 0($t1)
@@ -2312,6 +2906,9 @@ main:
 	li $t0, 32
 	la $t1, str_199
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_199
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_200
 	sw $t0, 0($t1)
@@ -2321,6 +2918,9 @@ main:
 	li $t0, 32
 	la $t1, str_200
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_200
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_201
 	sw $t0, 0($t1)
@@ -2330,6 +2930,9 @@ main:
 	li $t0, 32
 	la $t1, str_201
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_201
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_202
 	sw $t0, 0($t1)
@@ -2339,6 +2942,9 @@ main:
 	li $t0, 32
 	la $t1, str_202
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_202
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_203
 	sw $t0, 0($t1)
@@ -2348,6 +2954,9 @@ main:
 	li $t0, 32
 	la $t1, str_203
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_203
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_204
 	sw $t0, 0($t1)
@@ -2357,6 +2966,9 @@ main:
 	li $t0, 32
 	la $t1, str_204
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_204
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_205
 	sw $t0, 0($t1)
@@ -2366,6 +2978,9 @@ main:
 	li $t0, 32
 	la $t1, str_205
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_205
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_206
 	sw $t0, 0($t1)
@@ -2375,6 +2990,9 @@ main:
 	li $t0, 32
 	la $t1, str_206
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_206
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_207
 	sw $t0, 0($t1)
@@ -2384,6 +3002,9 @@ main:
 	li $t0, 32
 	la $t1, str_207
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_207
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_208
 	sw $t0, 0($t1)
@@ -2393,6 +3014,9 @@ main:
 	li $t0, 32
 	la $t1, str_208
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_208
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_209
 	sw $t0, 0($t1)
@@ -2402,6 +3026,9 @@ main:
 	li $t0, 32
 	la $t1, str_209
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_209
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_210
 	sw $t0, 0($t1)
@@ -2411,6 +3038,9 @@ main:
 	li $t0, 32
 	la $t1, str_210
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_210
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_211
 	sw $t0, 0($t1)
@@ -2420,6 +3050,9 @@ main:
 	li $t0, 32
 	la $t1, str_211
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_211
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_212
 	sw $t0, 0($t1)
@@ -2429,6 +3062,9 @@ main:
 	li $t0, 32
 	la $t1, str_212
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_212
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_213
 	sw $t0, 0($t1)
@@ -2438,6 +3074,9 @@ main:
 	li $t0, 32
 	la $t1, str_213
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_213
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_214
 	sw $t0, 0($t1)
@@ -2447,6 +3086,9 @@ main:
 	li $t0, 32
 	la $t1, str_214
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_214
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_215
 	sw $t0, 0($t1)
@@ -2456,6 +3098,9 @@ main:
 	li $t0, 32
 	la $t1, str_215
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_215
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_216
 	sw $t0, 0($t1)
@@ -2465,6 +3110,9 @@ main:
 	li $t0, 32
 	la $t1, str_216
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_216
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_217
 	sw $t0, 0($t1)
@@ -2474,6 +3122,9 @@ main:
 	li $t0, 32
 	la $t1, str_217
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_217
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_218
 	sw $t0, 0($t1)
@@ -2483,6 +3134,9 @@ main:
 	li $t0, 32
 	la $t1, str_218
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_218
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_219
 	sw $t0, 0($t1)
@@ -2492,6 +3146,9 @@ main:
 	li $t0, 32
 	la $t1, str_219
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_219
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_220
 	sw $t0, 0($t1)
@@ -2501,6 +3158,9 @@ main:
 	li $t0, 32
 	la $t1, str_220
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_220
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_221
 	sw $t0, 0($t1)
@@ -2510,6 +3170,9 @@ main:
 	li $t0, 32
 	la $t1, str_221
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_221
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_222
 	sw $t0, 0($t1)
@@ -2519,6 +3182,9 @@ main:
 	li $t0, 32
 	la $t1, str_222
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_222
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_223
 	sw $t0, 0($t1)
@@ -2528,6 +3194,9 @@ main:
 	li $t0, 32
 	la $t1, str_223
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_223
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_224
 	sw $t0, 0($t1)
@@ -2537,6 +3206,9 @@ main:
 	li $t0, 32
 	la $t1, str_224
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_224
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_225
 	sw $t0, 0($t1)
@@ -2546,6 +3218,9 @@ main:
 	li $t0, 32
 	la $t1, str_225
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_225
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_226
 	sw $t0, 0($t1)
@@ -2555,6 +3230,9 @@ main:
 	li $t0, 32
 	la $t1, str_226
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_226
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_227
 	sw $t0, 0($t1)
@@ -2564,6 +3242,9 @@ main:
 	li $t0, 32
 	la $t1, str_227
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_227
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_228
 	sw $t0, 0($t1)
@@ -2573,6 +3254,9 @@ main:
 	li $t0, 32
 	la $t1, str_228
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_228
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_229
 	sw $t0, 0($t1)
@@ -2582,6 +3266,9 @@ main:
 	li $t0, 32
 	la $t1, str_229
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_229
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_230
 	sw $t0, 0($t1)
@@ -2591,6 +3278,9 @@ main:
 	li $t0, 32
 	la $t1, str_230
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_230
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_231
 	sw $t0, 0($t1)
@@ -2600,6 +3290,9 @@ main:
 	li $t0, 32
 	la $t1, str_231
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_231
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_232
 	sw $t0, 0($t1)
@@ -2609,6 +3302,9 @@ main:
 	li $t0, 32
 	la $t1, str_232
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_232
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_233
 	sw $t0, 0($t1)
@@ -2618,6 +3314,9 @@ main:
 	li $t0, 32
 	la $t1, str_233
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_233
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_234
 	sw $t0, 0($t1)
@@ -2627,6 +3326,9 @@ main:
 	li $t0, 32
 	la $t1, str_234
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_234
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_235
 	sw $t0, 0($t1)
@@ -2636,6 +3338,9 @@ main:
 	li $t0, 32
 	la $t1, str_235
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_235
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_236
 	sw $t0, 0($t1)
@@ -2645,6 +3350,9 @@ main:
 	li $t0, 32
 	la $t1, str_236
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_236
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_237
 	sw $t0, 0($t1)
@@ -2654,6 +3362,9 @@ main:
 	li $t0, 32
 	la $t1, str_237
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_237
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_238
 	sw $t0, 0($t1)
@@ -2663,6 +3374,9 @@ main:
 	li $t0, 32
 	la $t1, str_238
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_238
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_239
 	sw $t0, 0($t1)
@@ -2672,6 +3386,9 @@ main:
 	li $t0, 32
 	la $t1, str_239
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_239
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_240
 	sw $t0, 0($t1)
@@ -2681,6 +3398,9 @@ main:
 	li $t0, 32
 	la $t1, str_240
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_240
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_241
 	sw $t0, 0($t1)
@@ -2690,6 +3410,9 @@ main:
 	li $t0, 32
 	la $t1, str_241
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_241
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_242
 	sw $t0, 0($t1)
@@ -2699,6 +3422,9 @@ main:
 	li $t0, 32
 	la $t1, str_242
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_242
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_243
 	sw $t0, 0($t1)
@@ -2708,6 +3434,9 @@ main:
 	li $t0, 32
 	la $t1, str_243
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_243
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_244
 	sw $t0, 0($t1)
@@ -2717,6 +3446,9 @@ main:
 	li $t0, 32
 	la $t1, str_244
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_244
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_245
 	sw $t0, 0($t1)
@@ -2726,6 +3458,9 @@ main:
 	li $t0, 32
 	la $t1, str_245
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_245
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_246
 	sw $t0, 0($t1)
@@ -2735,6 +3470,9 @@ main:
 	li $t0, 32
 	la $t1, str_246
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_246
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_247
 	sw $t0, 0($t1)
@@ -2744,6 +3482,9 @@ main:
 	li $t0, 32
 	la $t1, str_247
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_247
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_248
 	sw $t0, 0($t1)
@@ -2753,6 +3494,9 @@ main:
 	li $t0, 32
 	la $t1, str_248
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_248
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_249
 	sw $t0, 0($t1)
@@ -2762,6 +3506,9 @@ main:
 	li $t0, 32
 	la $t1, str_249
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_249
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_250
 	sw $t0, 0($t1)
@@ -2771,6 +3518,9 @@ main:
 	li $t0, 32
 	la $t1, str_250
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_250
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_251
 	sw $t0, 0($t1)
@@ -2780,6 +3530,9 @@ main:
 	li $t0, 32
 	la $t1, str_251
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_251
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_252
 	sw $t0, 0($t1)
@@ -2789,6 +3542,9 @@ main:
 	li $t0, 32
 	la $t1, str_252
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_252
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_253
 	sw $t0, 0($t1)
@@ -2798,6 +3554,9 @@ main:
 	li $t0, 32
 	la $t1, str_253
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_253
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_254
 	sw $t0, 0($t1)
@@ -2807,6 +3566,9 @@ main:
 	li $t0, 32
 	la $t1, str_254
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_254
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_255
 	sw $t0, 0($t1)
@@ -2816,6 +3578,9 @@ main:
 	li $t0, 32
 	la $t1, str_255
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_255
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_256
 	sw $t0, 0($t1)
@@ -2825,9 +3590,15 @@ main:
 	li $t0, 32
 	la $t1, str_256
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_256
+	sw $t0, 12($t1)
 	li $t0, 10
 	la $t1, str_257
 	sw $t0, 0($t1)
+	li $t0, 0
+	la $t1, str_257
+	sw $t0, 4($t1)
 	li $t0, 37
 	la $t1, str_258
 	sw $t0, 0($t1)
@@ -2837,6 +3608,9 @@ main:
 	li $t0, 32
 	la $t1, str_258
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_258
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_259
 	sw $t0, 0($t1)
@@ -2846,6 +3620,9 @@ main:
 	li $t0, 32
 	la $t1, str_259
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_259
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_260
 	sw $t0, 0($t1)
@@ -2855,6 +3632,9 @@ main:
 	li $t0, 32
 	la $t1, str_260
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_260
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_261
 	sw $t0, 0($t1)
@@ -2864,6 +3644,9 @@ main:
 	li $t0, 32
 	la $t1, str_261
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_261
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_262
 	sw $t0, 0($t1)
@@ -2873,6 +3656,9 @@ main:
 	li $t0, 32
 	la $t1, str_262
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_262
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_263
 	sw $t0, 0($t1)
@@ -2882,6 +3668,9 @@ main:
 	li $t0, 32
 	la $t1, str_263
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_263
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_264
 	sw $t0, 0($t1)
@@ -2891,6 +3680,9 @@ main:
 	li $t0, 32
 	la $t1, str_264
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_264
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_265
 	sw $t0, 0($t1)
@@ -2900,6 +3692,9 @@ main:
 	li $t0, 32
 	la $t1, str_265
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_265
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_266
 	sw $t0, 0($t1)
@@ -2909,6 +3704,9 @@ main:
 	li $t0, 32
 	la $t1, str_266
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_266
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_267
 	sw $t0, 0($t1)
@@ -2918,6 +3716,9 @@ main:
 	li $t0, 32
 	la $t1, str_267
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_267
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_268
 	sw $t0, 0($t1)
@@ -2927,6 +3728,9 @@ main:
 	li $t0, 32
 	la $t1, str_268
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_268
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_269
 	sw $t0, 0($t1)
@@ -2936,6 +3740,9 @@ main:
 	li $t0, 32
 	la $t1, str_269
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_269
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_270
 	sw $t0, 0($t1)
@@ -2945,6 +3752,9 @@ main:
 	li $t0, 32
 	la $t1, str_270
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_270
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_271
 	sw $t0, 0($t1)
@@ -2954,6 +3764,9 @@ main:
 	li $t0, 32
 	la $t1, str_271
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_271
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_272
 	sw $t0, 0($t1)
@@ -2963,6 +3776,9 @@ main:
 	li $t0, 32
 	la $t1, str_272
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_272
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_273
 	sw $t0, 0($t1)
@@ -2972,6 +3788,9 @@ main:
 	li $t0, 32
 	la $t1, str_273
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_273
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_274
 	sw $t0, 0($t1)
@@ -2981,6 +3800,9 @@ main:
 	li $t0, 32
 	la $t1, str_274
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_274
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_275
 	sw $t0, 0($t1)
@@ -2990,6 +3812,9 @@ main:
 	li $t0, 32
 	la $t1, str_275
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_275
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_276
 	sw $t0, 0($t1)
@@ -2999,6 +3824,9 @@ main:
 	li $t0, 32
 	la $t1, str_276
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_276
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_277
 	sw $t0, 0($t1)
@@ -3008,6 +3836,9 @@ main:
 	li $t0, 32
 	la $t1, str_277
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_277
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_278
 	sw $t0, 0($t1)
@@ -3017,6 +3848,9 @@ main:
 	li $t0, 32
 	la $t1, str_278
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_278
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_279
 	sw $t0, 0($t1)
@@ -3026,6 +3860,9 @@ main:
 	li $t0, 32
 	la $t1, str_279
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_279
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_280
 	sw $t0, 0($t1)
@@ -3035,6 +3872,9 @@ main:
 	li $t0, 32
 	la $t1, str_280
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_280
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_281
 	sw $t0, 0($t1)
@@ -3044,6 +3884,9 @@ main:
 	li $t0, 32
 	la $t1, str_281
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_281
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_282
 	sw $t0, 0($t1)
@@ -3053,6 +3896,9 @@ main:
 	li $t0, 32
 	la $t1, str_282
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_282
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_283
 	sw $t0, 0($t1)
@@ -3062,6 +3908,9 @@ main:
 	li $t0, 32
 	la $t1, str_283
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_283
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_284
 	sw $t0, 0($t1)
@@ -3071,6 +3920,9 @@ main:
 	li $t0, 32
 	la $t1, str_284
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_284
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_285
 	sw $t0, 0($t1)
@@ -3080,6 +3932,9 @@ main:
 	li $t0, 32
 	la $t1, str_285
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_285
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_286
 	sw $t0, 0($t1)
@@ -3089,6 +3944,9 @@ main:
 	li $t0, 32
 	la $t1, str_286
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_286
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_287
 	sw $t0, 0($t1)
@@ -3098,6 +3956,9 @@ main:
 	li $t0, 32
 	la $t1, str_287
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_287
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_288
 	sw $t0, 0($t1)
@@ -3107,6 +3968,9 @@ main:
 	li $t0, 32
 	la $t1, str_288
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_288
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_289
 	sw $t0, 0($t1)
@@ -3116,6 +3980,9 @@ main:
 	li $t0, 32
 	la $t1, str_289
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_289
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_290
 	sw $t0, 0($t1)
@@ -3125,6 +3992,9 @@ main:
 	li $t0, 32
 	la $t1, str_290
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_290
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_291
 	sw $t0, 0($t1)
@@ -3134,6 +4004,9 @@ main:
 	li $t0, 32
 	la $t1, str_291
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_291
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_292
 	sw $t0, 0($t1)
@@ -3143,6 +4016,9 @@ main:
 	li $t0, 32
 	la $t1, str_292
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_292
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_293
 	sw $t0, 0($t1)
@@ -3152,6 +4028,9 @@ main:
 	li $t0, 32
 	la $t1, str_293
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_293
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_294
 	sw $t0, 0($t1)
@@ -3161,6 +4040,9 @@ main:
 	li $t0, 32
 	la $t1, str_294
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_294
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_295
 	sw $t0, 0($t1)
@@ -3170,6 +4052,9 @@ main:
 	li $t0, 32
 	la $t1, str_295
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_295
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_296
 	sw $t0, 0($t1)
@@ -3179,6 +4064,9 @@ main:
 	li $t0, 32
 	la $t1, str_296
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_296
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_297
 	sw $t0, 0($t1)
@@ -3188,6 +4076,9 @@ main:
 	li $t0, 32
 	la $t1, str_297
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_297
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_298
 	sw $t0, 0($t1)
@@ -3197,6 +4088,9 @@ main:
 	li $t0, 32
 	la $t1, str_298
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_298
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_299
 	sw $t0, 0($t1)
@@ -3206,6 +4100,9 @@ main:
 	li $t0, 32
 	la $t1, str_299
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_299
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_300
 	sw $t0, 0($t1)
@@ -3215,6 +4112,9 @@ main:
 	li $t0, 32
 	la $t1, str_300
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_300
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_301
 	sw $t0, 0($t1)
@@ -3224,6 +4124,9 @@ main:
 	li $t0, 32
 	la $t1, str_301
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_301
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_302
 	sw $t0, 0($t1)
@@ -3233,6 +4136,9 @@ main:
 	li $t0, 32
 	la $t1, str_302
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_302
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_303
 	sw $t0, 0($t1)
@@ -3242,6 +4148,9 @@ main:
 	li $t0, 32
 	la $t1, str_303
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_303
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_304
 	sw $t0, 0($t1)
@@ -3251,6 +4160,9 @@ main:
 	li $t0, 32
 	la $t1, str_304
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_304
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_305
 	sw $t0, 0($t1)
@@ -3260,6 +4172,9 @@ main:
 	li $t0, 32
 	la $t1, str_305
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_305
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_306
 	sw $t0, 0($t1)
@@ -3269,6 +4184,9 @@ main:
 	li $t0, 32
 	la $t1, str_306
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_306
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_307
 	sw $t0, 0($t1)
@@ -3278,6 +4196,9 @@ main:
 	li $t0, 32
 	la $t1, str_307
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_307
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_308
 	sw $t0, 0($t1)
@@ -3287,6 +4208,9 @@ main:
 	li $t0, 32
 	la $t1, str_308
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_308
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_309
 	sw $t0, 0($t1)
@@ -3296,6 +4220,9 @@ main:
 	li $t0, 32
 	la $t1, str_309
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_309
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_310
 	sw $t0, 0($t1)
@@ -3305,6 +4232,9 @@ main:
 	li $t0, 32
 	la $t1, str_310
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_310
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_311
 	sw $t0, 0($t1)
@@ -3314,6 +4244,9 @@ main:
 	li $t0, 32
 	la $t1, str_311
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_311
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_312
 	sw $t0, 0($t1)
@@ -3323,6 +4256,9 @@ main:
 	li $t0, 32
 	la $t1, str_312
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_312
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_313
 	sw $t0, 0($t1)
@@ -3332,6 +4268,9 @@ main:
 	li $t0, 32
 	la $t1, str_313
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_313
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_314
 	sw $t0, 0($t1)
@@ -3341,6 +4280,9 @@ main:
 	li $t0, 32
 	la $t1, str_314
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_314
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_315
 	sw $t0, 0($t1)
@@ -3350,6 +4292,9 @@ main:
 	li $t0, 32
 	la $t1, str_315
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_315
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_316
 	sw $t0, 0($t1)
@@ -3359,6 +4304,9 @@ main:
 	li $t0, 32
 	la $t1, str_316
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_316
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_317
 	sw $t0, 0($t1)
@@ -3368,6 +4316,9 @@ main:
 	li $t0, 32
 	la $t1, str_317
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_317
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_318
 	sw $t0, 0($t1)
@@ -3377,6 +4328,9 @@ main:
 	li $t0, 32
 	la $t1, str_318
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_318
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_319
 	sw $t0, 0($t1)
@@ -3386,6 +4340,9 @@ main:
 	li $t0, 32
 	la $t1, str_319
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_319
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_320
 	sw $t0, 0($t1)
@@ -3395,6 +4352,9 @@ main:
 	li $t0, 32
 	la $t1, str_320
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_320
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_321
 	sw $t0, 0($t1)
@@ -3404,6 +4364,9 @@ main:
 	li $t0, 32
 	la $t1, str_321
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_321
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_322
 	sw $t0, 0($t1)
@@ -3413,6 +4376,9 @@ main:
 	li $t0, 32
 	la $t1, str_322
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_322
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_323
 	sw $t0, 0($t1)
@@ -3422,6 +4388,9 @@ main:
 	li $t0, 32
 	la $t1, str_323
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_323
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_324
 	sw $t0, 0($t1)
@@ -3431,6 +4400,9 @@ main:
 	li $t0, 32
 	la $t1, str_324
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_324
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_325
 	sw $t0, 0($t1)
@@ -3440,6 +4412,9 @@ main:
 	li $t0, 32
 	la $t1, str_325
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_325
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_326
 	sw $t0, 0($t1)
@@ -3449,6 +4424,9 @@ main:
 	li $t0, 32
 	la $t1, str_326
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_326
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_327
 	sw $t0, 0($t1)
@@ -3458,6 +4436,9 @@ main:
 	li $t0, 32
 	la $t1, str_327
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_327
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_328
 	sw $t0, 0($t1)
@@ -3467,6 +4448,9 @@ main:
 	li $t0, 32
 	la $t1, str_328
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_328
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_329
 	sw $t0, 0($t1)
@@ -3476,6 +4460,9 @@ main:
 	li $t0, 32
 	la $t1, str_329
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_329
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_330
 	sw $t0, 0($t1)
@@ -3485,6 +4472,9 @@ main:
 	li $t0, 32
 	la $t1, str_330
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_330
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_331
 	sw $t0, 0($t1)
@@ -3494,6 +4484,9 @@ main:
 	li $t0, 32
 	la $t1, str_331
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_331
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_332
 	sw $t0, 0($t1)
@@ -3503,6 +4496,9 @@ main:
 	li $t0, 32
 	la $t1, str_332
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_332
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_333
 	sw $t0, 0($t1)
@@ -3512,6 +4508,9 @@ main:
 	li $t0, 32
 	la $t1, str_333
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_333
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_334
 	sw $t0, 0($t1)
@@ -3521,6 +4520,9 @@ main:
 	li $t0, 32
 	la $t1, str_334
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_334
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_335
 	sw $t0, 0($t1)
@@ -3530,6 +4532,9 @@ main:
 	li $t0, 32
 	la $t1, str_335
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_335
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_336
 	sw $t0, 0($t1)
@@ -3539,6 +4544,9 @@ main:
 	li $t0, 32
 	la $t1, str_336
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_336
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_337
 	sw $t0, 0($t1)
@@ -3548,6 +4556,9 @@ main:
 	li $t0, 32
 	la $t1, str_337
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_337
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_338
 	sw $t0, 0($t1)
@@ -3557,6 +4568,9 @@ main:
 	li $t0, 32
 	la $t1, str_338
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_338
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_339
 	sw $t0, 0($t1)
@@ -3566,6 +4580,9 @@ main:
 	li $t0, 32
 	la $t1, str_339
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_339
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_340
 	sw $t0, 0($t1)
@@ -3575,6 +4592,9 @@ main:
 	li $t0, 32
 	la $t1, str_340
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_340
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_341
 	sw $t0, 0($t1)
@@ -3584,6 +4604,9 @@ main:
 	li $t0, 32
 	la $t1, str_341
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_341
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_342
 	sw $t0, 0($t1)
@@ -3593,6 +4616,9 @@ main:
 	li $t0, 32
 	la $t1, str_342
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_342
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_343
 	sw $t0, 0($t1)
@@ -3602,6 +4628,9 @@ main:
 	li $t0, 32
 	la $t1, str_343
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_343
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_344
 	sw $t0, 0($t1)
@@ -3611,6 +4640,9 @@ main:
 	li $t0, 32
 	la $t1, str_344
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_344
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_345
 	sw $t0, 0($t1)
@@ -3620,6 +4652,9 @@ main:
 	li $t0, 32
 	la $t1, str_345
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_345
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_346
 	sw $t0, 0($t1)
@@ -3629,6 +4664,9 @@ main:
 	li $t0, 32
 	la $t1, str_346
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_346
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_347
 	sw $t0, 0($t1)
@@ -3638,6 +4676,9 @@ main:
 	li $t0, 32
 	la $t1, str_347
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_347
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_348
 	sw $t0, 0($t1)
@@ -3647,6 +4688,9 @@ main:
 	li $t0, 32
 	la $t1, str_348
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_348
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_349
 	sw $t0, 0($t1)
@@ -3656,6 +4700,9 @@ main:
 	li $t0, 32
 	la $t1, str_349
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_349
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_350
 	sw $t0, 0($t1)
@@ -3665,6 +4712,9 @@ main:
 	li $t0, 32
 	la $t1, str_350
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_350
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_351
 	sw $t0, 0($t1)
@@ -3674,6 +4724,9 @@ main:
 	li $t0, 32
 	la $t1, str_351
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_351
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_352
 	sw $t0, 0($t1)
@@ -3683,6 +4736,9 @@ main:
 	li $t0, 32
 	la $t1, str_352
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_352
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_353
 	sw $t0, 0($t1)
@@ -3692,6 +4748,9 @@ main:
 	li $t0, 32
 	la $t1, str_353
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_353
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_354
 	sw $t0, 0($t1)
@@ -3701,6 +4760,9 @@ main:
 	li $t0, 32
 	la $t1, str_354
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_354
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_355
 	sw $t0, 0($t1)
@@ -3710,6 +4772,9 @@ main:
 	li $t0, 32
 	la $t1, str_355
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_355
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_356
 	sw $t0, 0($t1)
@@ -3719,6 +4784,9 @@ main:
 	li $t0, 32
 	la $t1, str_356
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_356
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_357
 	sw $t0, 0($t1)
@@ -3728,6 +4796,9 @@ main:
 	li $t0, 32
 	la $t1, str_357
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_357
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_358
 	sw $t0, 0($t1)
@@ -3737,6 +4808,9 @@ main:
 	li $t0, 32
 	la $t1, str_358
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_358
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_359
 	sw $t0, 0($t1)
@@ -3746,6 +4820,9 @@ main:
 	li $t0, 32
 	la $t1, str_359
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_359
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_360
 	sw $t0, 0($t1)
@@ -3755,6 +4832,9 @@ main:
 	li $t0, 32
 	la $t1, str_360
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_360
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_361
 	sw $t0, 0($t1)
@@ -3764,6 +4844,9 @@ main:
 	li $t0, 32
 	la $t1, str_361
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_361
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_362
 	sw $t0, 0($t1)
@@ -3773,6 +4856,9 @@ main:
 	li $t0, 32
 	la $t1, str_362
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_362
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_363
 	sw $t0, 0($t1)
@@ -3782,6 +4868,9 @@ main:
 	li $t0, 32
 	la $t1, str_363
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_363
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_364
 	sw $t0, 0($t1)
@@ -3791,6 +4880,9 @@ main:
 	li $t0, 32
 	la $t1, str_364
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_364
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_365
 	sw $t0, 0($t1)
@@ -3800,6 +4892,9 @@ main:
 	li $t0, 32
 	la $t1, str_365
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_365
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_366
 	sw $t0, 0($t1)
@@ -3809,6 +4904,9 @@ main:
 	li $t0, 32
 	la $t1, str_366
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_366
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_367
 	sw $t0, 0($t1)
@@ -3818,6 +4916,9 @@ main:
 	li $t0, 32
 	la $t1, str_367
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_367
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_368
 	sw $t0, 0($t1)
@@ -3827,6 +4928,9 @@ main:
 	li $t0, 32
 	la $t1, str_368
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_368
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_369
 	sw $t0, 0($t1)
@@ -3836,6 +4940,9 @@ main:
 	li $t0, 32
 	la $t1, str_369
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_369
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_370
 	sw $t0, 0($t1)
@@ -3845,6 +4952,9 @@ main:
 	li $t0, 32
 	la $t1, str_370
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_370
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_371
 	sw $t0, 0($t1)
@@ -3854,6 +4964,9 @@ main:
 	li $t0, 32
 	la $t1, str_371
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_371
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_372
 	sw $t0, 0($t1)
@@ -3863,6 +4976,9 @@ main:
 	li $t0, 32
 	la $t1, str_372
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_372
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_373
 	sw $t0, 0($t1)
@@ -3872,6 +4988,9 @@ main:
 	li $t0, 32
 	la $t1, str_373
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_373
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_374
 	sw $t0, 0($t1)
@@ -3881,6 +5000,9 @@ main:
 	li $t0, 32
 	la $t1, str_374
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_374
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_375
 	sw $t0, 0($t1)
@@ -3890,6 +5012,9 @@ main:
 	li $t0, 32
 	la $t1, str_375
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_375
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_376
 	sw $t0, 0($t1)
@@ -3899,6 +5024,9 @@ main:
 	li $t0, 32
 	la $t1, str_376
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_376
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_377
 	sw $t0, 0($t1)
@@ -3908,6 +5036,9 @@ main:
 	li $t0, 32
 	la $t1, str_377
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_377
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_378
 	sw $t0, 0($t1)
@@ -3917,6 +5048,9 @@ main:
 	li $t0, 32
 	la $t1, str_378
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_378
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_379
 	sw $t0, 0($t1)
@@ -3926,6 +5060,9 @@ main:
 	li $t0, 32
 	la $t1, str_379
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_379
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_380
 	sw $t0, 0($t1)
@@ -3935,6 +5072,9 @@ main:
 	li $t0, 32
 	la $t1, str_380
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_380
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_381
 	sw $t0, 0($t1)
@@ -3944,6 +5084,9 @@ main:
 	li $t0, 32
 	la $t1, str_381
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_381
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_382
 	sw $t0, 0($t1)
@@ -3953,6 +5096,9 @@ main:
 	li $t0, 32
 	la $t1, str_382
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_382
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_383
 	sw $t0, 0($t1)
@@ -3962,6 +5108,9 @@ main:
 	li $t0, 32
 	la $t1, str_383
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_383
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_384
 	sw $t0, 0($t1)
@@ -3971,6 +5120,9 @@ main:
 	li $t0, 32
 	la $t1, str_384
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_384
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_385
 	sw $t0, 0($t1)
@@ -3980,6 +5132,9 @@ main:
 	li $t0, 32
 	la $t1, str_385
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_385
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_386
 	sw $t0, 0($t1)
@@ -3989,6 +5144,9 @@ main:
 	li $t0, 32
 	la $t1, str_386
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_386
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_387
 	sw $t0, 0($t1)
@@ -3998,6 +5156,9 @@ main:
 	li $t0, 32
 	la $t1, str_387
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_387
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_388
 	sw $t0, 0($t1)
@@ -4007,6 +5168,9 @@ main:
 	li $t0, 32
 	la $t1, str_388
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_388
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_389
 	sw $t0, 0($t1)
@@ -4016,6 +5180,9 @@ main:
 	li $t0, 32
 	la $t1, str_389
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_389
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_390
 	sw $t0, 0($t1)
@@ -4025,6 +5192,9 @@ main:
 	li $t0, 32
 	la $t1, str_390
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_390
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_391
 	sw $t0, 0($t1)
@@ -4034,6 +5204,9 @@ main:
 	li $t0, 32
 	la $t1, str_391
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_391
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_392
 	sw $t0, 0($t1)
@@ -4043,6 +5216,9 @@ main:
 	li $t0, 32
 	la $t1, str_392
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_392
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_393
 	sw $t0, 0($t1)
@@ -4052,6 +5228,9 @@ main:
 	li $t0, 32
 	la $t1, str_393
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_393
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_394
 	sw $t0, 0($t1)
@@ -4061,6 +5240,9 @@ main:
 	li $t0, 32
 	la $t1, str_394
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_394
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_395
 	sw $t0, 0($t1)
@@ -4070,6 +5252,9 @@ main:
 	li $t0, 32
 	la $t1, str_395
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_395
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_396
 	sw $t0, 0($t1)
@@ -4079,6 +5264,9 @@ main:
 	li $t0, 32
 	la $t1, str_396
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_396
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_397
 	sw $t0, 0($t1)
@@ -4088,6 +5276,9 @@ main:
 	li $t0, 32
 	la $t1, str_397
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_397
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_398
 	sw $t0, 0($t1)
@@ -4097,6 +5288,9 @@ main:
 	li $t0, 32
 	la $t1, str_398
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_398
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_399
 	sw $t0, 0($t1)
@@ -4106,6 +5300,9 @@ main:
 	li $t0, 32
 	la $t1, str_399
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_399
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_400
 	sw $t0, 0($t1)
@@ -4115,6 +5312,9 @@ main:
 	li $t0, 32
 	la $t1, str_400
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_400
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_401
 	sw $t0, 0($t1)
@@ -4124,6 +5324,9 @@ main:
 	li $t0, 32
 	la $t1, str_401
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_401
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_402
 	sw $t0, 0($t1)
@@ -4133,6 +5336,9 @@ main:
 	li $t0, 32
 	la $t1, str_402
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_402
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_403
 	sw $t0, 0($t1)
@@ -4142,6 +5348,9 @@ main:
 	li $t0, 32
 	la $t1, str_403
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_403
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_404
 	sw $t0, 0($t1)
@@ -4151,6 +5360,9 @@ main:
 	li $t0, 32
 	la $t1, str_404
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_404
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_405
 	sw $t0, 0($t1)
@@ -4160,6 +5372,9 @@ main:
 	li $t0, 32
 	la $t1, str_405
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_405
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_406
 	sw $t0, 0($t1)
@@ -4169,6 +5384,9 @@ main:
 	li $t0, 32
 	la $t1, str_406
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_406
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_407
 	sw $t0, 0($t1)
@@ -4178,6 +5396,9 @@ main:
 	li $t0, 32
 	la $t1, str_407
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_407
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_408
 	sw $t0, 0($t1)
@@ -4187,6 +5408,9 @@ main:
 	li $t0, 32
 	la $t1, str_408
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_408
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_409
 	sw $t0, 0($t1)
@@ -4196,6 +5420,9 @@ main:
 	li $t0, 32
 	la $t1, str_409
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_409
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_410
 	sw $t0, 0($t1)
@@ -4205,6 +5432,9 @@ main:
 	li $t0, 32
 	la $t1, str_410
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_410
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_411
 	sw $t0, 0($t1)
@@ -4214,6 +5444,9 @@ main:
 	li $t0, 32
 	la $t1, str_411
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_411
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_412
 	sw $t0, 0($t1)
@@ -4223,6 +5456,9 @@ main:
 	li $t0, 32
 	la $t1, str_412
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_412
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_413
 	sw $t0, 0($t1)
@@ -4232,6 +5468,9 @@ main:
 	li $t0, 32
 	la $t1, str_413
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_413
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_414
 	sw $t0, 0($t1)
@@ -4241,6 +5480,9 @@ main:
 	li $t0, 32
 	la $t1, str_414
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_414
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_415
 	sw $t0, 0($t1)
@@ -4250,6 +5492,9 @@ main:
 	li $t0, 32
 	la $t1, str_415
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_415
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_416
 	sw $t0, 0($t1)
@@ -4259,6 +5504,9 @@ main:
 	li $t0, 32
 	la $t1, str_416
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_416
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_417
 	sw $t0, 0($t1)
@@ -4268,6 +5516,9 @@ main:
 	li $t0, 32
 	la $t1, str_417
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_417
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_418
 	sw $t0, 0($t1)
@@ -4277,6 +5528,9 @@ main:
 	li $t0, 32
 	la $t1, str_418
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_418
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_419
 	sw $t0, 0($t1)
@@ -4286,6 +5540,9 @@ main:
 	li $t0, 32
 	la $t1, str_419
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_419
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_420
 	sw $t0, 0($t1)
@@ -4295,6 +5552,9 @@ main:
 	li $t0, 32
 	la $t1, str_420
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_420
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_421
 	sw $t0, 0($t1)
@@ -4304,6 +5564,9 @@ main:
 	li $t0, 32
 	la $t1, str_421
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_421
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_422
 	sw $t0, 0($t1)
@@ -4313,6 +5576,9 @@ main:
 	li $t0, 32
 	la $t1, str_422
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_422
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_423
 	sw $t0, 0($t1)
@@ -4322,6 +5588,9 @@ main:
 	li $t0, 32
 	la $t1, str_423
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_423
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_424
 	sw $t0, 0($t1)
@@ -4331,6 +5600,9 @@ main:
 	li $t0, 32
 	la $t1, str_424
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_424
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_425
 	sw $t0, 0($t1)
@@ -4340,6 +5612,9 @@ main:
 	li $t0, 32
 	la $t1, str_425
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_425
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_426
 	sw $t0, 0($t1)
@@ -4349,6 +5624,9 @@ main:
 	li $t0, 32
 	la $t1, str_426
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_426
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_427
 	sw $t0, 0($t1)
@@ -4358,6 +5636,9 @@ main:
 	li $t0, 32
 	la $t1, str_427
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_427
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_428
 	sw $t0, 0($t1)
@@ -4367,6 +5648,9 @@ main:
 	li $t0, 32
 	la $t1, str_428
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_428
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_429
 	sw $t0, 0($t1)
@@ -4376,6 +5660,9 @@ main:
 	li $t0, 32
 	la $t1, str_429
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_429
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_430
 	sw $t0, 0($t1)
@@ -4385,6 +5672,9 @@ main:
 	li $t0, 32
 	la $t1, str_430
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_430
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_431
 	sw $t0, 0($t1)
@@ -4394,6 +5684,9 @@ main:
 	li $t0, 32
 	la $t1, str_431
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_431
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_432
 	sw $t0, 0($t1)
@@ -4403,6 +5696,9 @@ main:
 	li $t0, 32
 	la $t1, str_432
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_432
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_433
 	sw $t0, 0($t1)
@@ -4412,6 +5708,9 @@ main:
 	li $t0, 32
 	la $t1, str_433
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_433
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_434
 	sw $t0, 0($t1)
@@ -4421,6 +5720,9 @@ main:
 	li $t0, 32
 	la $t1, str_434
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_434
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_435
 	sw $t0, 0($t1)
@@ -4430,6 +5732,9 @@ main:
 	li $t0, 32
 	la $t1, str_435
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_435
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_436
 	sw $t0, 0($t1)
@@ -4439,6 +5744,9 @@ main:
 	li $t0, 32
 	la $t1, str_436
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_436
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_437
 	sw $t0, 0($t1)
@@ -4448,6 +5756,9 @@ main:
 	li $t0, 32
 	la $t1, str_437
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_437
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_438
 	sw $t0, 0($t1)
@@ -4457,6 +5768,9 @@ main:
 	li $t0, 32
 	la $t1, str_438
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_438
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_439
 	sw $t0, 0($t1)
@@ -4466,6 +5780,9 @@ main:
 	li $t0, 32
 	la $t1, str_439
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_439
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_440
 	sw $t0, 0($t1)
@@ -4475,6 +5792,9 @@ main:
 	li $t0, 32
 	la $t1, str_440
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_440
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_441
 	sw $t0, 0($t1)
@@ -4484,6 +5804,9 @@ main:
 	li $t0, 32
 	la $t1, str_441
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_441
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_442
 	sw $t0, 0($t1)
@@ -4493,6 +5816,9 @@ main:
 	li $t0, 32
 	la $t1, str_442
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_442
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_443
 	sw $t0, 0($t1)
@@ -4502,6 +5828,9 @@ main:
 	li $t0, 32
 	la $t1, str_443
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_443
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_444
 	sw $t0, 0($t1)
@@ -4511,6 +5840,9 @@ main:
 	li $t0, 32
 	la $t1, str_444
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_444
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_445
 	sw $t0, 0($t1)
@@ -4520,6 +5852,9 @@ main:
 	li $t0, 32
 	la $t1, str_445
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_445
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_446
 	sw $t0, 0($t1)
@@ -4529,6 +5864,9 @@ main:
 	li $t0, 32
 	la $t1, str_446
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_446
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_447
 	sw $t0, 0($t1)
@@ -4538,6 +5876,9 @@ main:
 	li $t0, 32
 	la $t1, str_447
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_447
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_448
 	sw $t0, 0($t1)
@@ -4547,6 +5888,9 @@ main:
 	li $t0, 32
 	la $t1, str_448
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_448
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_449
 	sw $t0, 0($t1)
@@ -4556,6 +5900,9 @@ main:
 	li $t0, 32
 	la $t1, str_449
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_449
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_450
 	sw $t0, 0($t1)
@@ -4565,6 +5912,9 @@ main:
 	li $t0, 32
 	la $t1, str_450
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_450
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_451
 	sw $t0, 0($t1)
@@ -4574,6 +5924,9 @@ main:
 	li $t0, 32
 	la $t1, str_451
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_451
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_452
 	sw $t0, 0($t1)
@@ -4583,6 +5936,9 @@ main:
 	li $t0, 32
 	la $t1, str_452
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_452
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_453
 	sw $t0, 0($t1)
@@ -4592,6 +5948,9 @@ main:
 	li $t0, 32
 	la $t1, str_453
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_453
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_454
 	sw $t0, 0($t1)
@@ -4601,6 +5960,9 @@ main:
 	li $t0, 32
 	la $t1, str_454
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_454
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_455
 	sw $t0, 0($t1)
@@ -4610,6 +5972,9 @@ main:
 	li $t0, 32
 	la $t1, str_455
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_455
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_456
 	sw $t0, 0($t1)
@@ -4619,6 +5984,9 @@ main:
 	li $t0, 32
 	la $t1, str_456
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_456
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_457
 	sw $t0, 0($t1)
@@ -4628,6 +5996,9 @@ main:
 	li $t0, 32
 	la $t1, str_457
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_457
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_458
 	sw $t0, 0($t1)
@@ -4637,6 +6008,9 @@ main:
 	li $t0, 32
 	la $t1, str_458
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_458
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_459
 	sw $t0, 0($t1)
@@ -4646,6 +6020,9 @@ main:
 	li $t0, 32
 	la $t1, str_459
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_459
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_460
 	sw $t0, 0($t1)
@@ -4655,6 +6032,9 @@ main:
 	li $t0, 32
 	la $t1, str_460
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_460
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_461
 	sw $t0, 0($t1)
@@ -4664,6 +6044,9 @@ main:
 	li $t0, 32
 	la $t1, str_461
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_461
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_462
 	sw $t0, 0($t1)
@@ -4673,6 +6056,9 @@ main:
 	li $t0, 32
 	la $t1, str_462
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_462
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_463
 	sw $t0, 0($t1)
@@ -4682,6 +6068,9 @@ main:
 	li $t0, 32
 	la $t1, str_463
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_463
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_464
 	sw $t0, 0($t1)
@@ -4691,6 +6080,9 @@ main:
 	li $t0, 32
 	la $t1, str_464
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_464
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_465
 	sw $t0, 0($t1)
@@ -4700,6 +6092,9 @@ main:
 	li $t0, 32
 	la $t1, str_465
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_465
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_466
 	sw $t0, 0($t1)
@@ -4709,6 +6104,9 @@ main:
 	li $t0, 32
 	la $t1, str_466
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_466
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_467
 	sw $t0, 0($t1)
@@ -4718,6 +6116,9 @@ main:
 	li $t0, 32
 	la $t1, str_467
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_467
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_468
 	sw $t0, 0($t1)
@@ -4727,6 +6128,9 @@ main:
 	li $t0, 32
 	la $t1, str_468
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_468
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_469
 	sw $t0, 0($t1)
@@ -4736,6 +6140,9 @@ main:
 	li $t0, 32
 	la $t1, str_469
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_469
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_470
 	sw $t0, 0($t1)
@@ -4745,6 +6152,9 @@ main:
 	li $t0, 32
 	la $t1, str_470
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_470
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_471
 	sw $t0, 0($t1)
@@ -4754,6 +6164,9 @@ main:
 	li $t0, 32
 	la $t1, str_471
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_471
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_472
 	sw $t0, 0($t1)
@@ -4763,6 +6176,9 @@ main:
 	li $t0, 32
 	la $t1, str_472
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_472
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_473
 	sw $t0, 0($t1)
@@ -4772,6 +6188,9 @@ main:
 	li $t0, 32
 	la $t1, str_473
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_473
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_474
 	sw $t0, 0($t1)
@@ -4781,6 +6200,9 @@ main:
 	li $t0, 32
 	la $t1, str_474
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_474
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_475
 	sw $t0, 0($t1)
@@ -4790,6 +6212,9 @@ main:
 	li $t0, 32
 	la $t1, str_475
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_475
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_476
 	sw $t0, 0($t1)
@@ -4799,6 +6224,9 @@ main:
 	li $t0, 32
 	la $t1, str_476
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_476
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_477
 	sw $t0, 0($t1)
@@ -4808,6 +6236,9 @@ main:
 	li $t0, 32
 	la $t1, str_477
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_477
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_478
 	sw $t0, 0($t1)
@@ -4817,6 +6248,9 @@ main:
 	li $t0, 32
 	la $t1, str_478
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_478
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_479
 	sw $t0, 0($t1)
@@ -4826,6 +6260,9 @@ main:
 	li $t0, 32
 	la $t1, str_479
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_479
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_480
 	sw $t0, 0($t1)
@@ -4835,6 +6272,9 @@ main:
 	li $t0, 32
 	la $t1, str_480
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_480
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_481
 	sw $t0, 0($t1)
@@ -4844,6 +6284,9 @@ main:
 	li $t0, 32
 	la $t1, str_481
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_481
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_482
 	sw $t0, 0($t1)
@@ -4853,6 +6296,9 @@ main:
 	li $t0, 32
 	la $t1, str_482
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_482
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_483
 	sw $t0, 0($t1)
@@ -4862,6 +6308,9 @@ main:
 	li $t0, 32
 	la $t1, str_483
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_483
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_484
 	sw $t0, 0($t1)
@@ -4871,6 +6320,9 @@ main:
 	li $t0, 32
 	la $t1, str_484
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_484
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_485
 	sw $t0, 0($t1)
@@ -4880,6 +6332,9 @@ main:
 	li $t0, 32
 	la $t1, str_485
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_485
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_486
 	sw $t0, 0($t1)
@@ -4889,6 +6344,9 @@ main:
 	li $t0, 32
 	la $t1, str_486
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_486
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_487
 	sw $t0, 0($t1)
@@ -4898,6 +6356,9 @@ main:
 	li $t0, 32
 	la $t1, str_487
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_487
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_488
 	sw $t0, 0($t1)
@@ -4907,6 +6368,9 @@ main:
 	li $t0, 32
 	la $t1, str_488
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_488
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_489
 	sw $t0, 0($t1)
@@ -4916,6 +6380,9 @@ main:
 	li $t0, 32
 	la $t1, str_489
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_489
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_490
 	sw $t0, 0($t1)
@@ -4925,6 +6392,9 @@ main:
 	li $t0, 32
 	la $t1, str_490
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_490
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_491
 	sw $t0, 0($t1)
@@ -4934,6 +6404,9 @@ main:
 	li $t0, 32
 	la $t1, str_491
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_491
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_492
 	sw $t0, 0($t1)
@@ -4943,6 +6416,9 @@ main:
 	li $t0, 32
 	la $t1, str_492
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_492
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_493
 	sw $t0, 0($t1)
@@ -4952,6 +6428,9 @@ main:
 	li $t0, 32
 	la $t1, str_493
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_493
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_494
 	sw $t0, 0($t1)
@@ -4961,6 +6440,9 @@ main:
 	li $t0, 32
 	la $t1, str_494
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_494
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_495
 	sw $t0, 0($t1)
@@ -4970,6 +6452,9 @@ main:
 	li $t0, 32
 	la $t1, str_495
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_495
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_496
 	sw $t0, 0($t1)
@@ -4979,6 +6464,9 @@ main:
 	li $t0, 32
 	la $t1, str_496
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_496
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_497
 	sw $t0, 0($t1)
@@ -4988,6 +6476,9 @@ main:
 	li $t0, 32
 	la $t1, str_497
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_497
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_498
 	sw $t0, 0($t1)
@@ -4997,6 +6488,9 @@ main:
 	li $t0, 32
 	la $t1, str_498
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_498
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_499
 	sw $t0, 0($t1)
@@ -5006,6 +6500,9 @@ main:
 	li $t0, 32
 	la $t1, str_499
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_499
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_500
 	sw $t0, 0($t1)
@@ -5015,6 +6512,9 @@ main:
 	li $t0, 32
 	la $t1, str_500
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_500
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_501
 	sw $t0, 0($t1)
@@ -5024,6 +6524,9 @@ main:
 	li $t0, 32
 	la $t1, str_501
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_501
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_502
 	sw $t0, 0($t1)
@@ -5033,6 +6536,9 @@ main:
 	li $t0, 32
 	la $t1, str_502
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_502
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_503
 	sw $t0, 0($t1)
@@ -5042,6 +6548,9 @@ main:
 	li $t0, 32
 	la $t1, str_503
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_503
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_504
 	sw $t0, 0($t1)
@@ -5051,6 +6560,9 @@ main:
 	li $t0, 32
 	la $t1, str_504
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_504
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_505
 	sw $t0, 0($t1)
@@ -5060,6 +6572,9 @@ main:
 	li $t0, 32
 	la $t1, str_505
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_505
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_506
 	sw $t0, 0($t1)
@@ -5069,6 +6584,9 @@ main:
 	li $t0, 32
 	la $t1, str_506
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_506
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_507
 	sw $t0, 0($t1)
@@ -5078,6 +6596,9 @@ main:
 	li $t0, 32
 	la $t1, str_507
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_507
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_508
 	sw $t0, 0($t1)
@@ -5087,6 +6608,9 @@ main:
 	li $t0, 32
 	la $t1, str_508
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_508
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_509
 	sw $t0, 0($t1)
@@ -5096,6 +6620,9 @@ main:
 	li $t0, 32
 	la $t1, str_509
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_509
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_510
 	sw $t0, 0($t1)
@@ -5105,6 +6632,9 @@ main:
 	li $t0, 32
 	la $t1, str_510
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_510
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_511
 	sw $t0, 0($t1)
@@ -5114,6 +6644,9 @@ main:
 	li $t0, 32
 	la $t1, str_511
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_511
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_512
 	sw $t0, 0($t1)
@@ -5123,6 +6656,9 @@ main:
 	li $t0, 32
 	la $t1, str_512
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_512
+	sw $t0, 12($t1)
 	li $t0, 37
 	la $t1, str_513
 	sw $t0, 0($t1)
@@ -5132,9 +6668,15 @@ main:
 	li $t0, 32
 	la $t1, str_513
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_513
+	sw $t0, 12($t1)
 	li $t0, 10
 	la $t1, str_514
 	sw $t0, 0($t1)
+	li $t0, 0
+	la $t1, str_514
+	sw $t0, 4($t1)
 	j _main
 _getcount:
 	sw $ra, ($sp)

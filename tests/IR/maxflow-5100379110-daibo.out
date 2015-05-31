@@ -264,9 +264,9 @@ Label :28	Return BasicParam 0
 _main: 
 _k = 0
 Temp153 = _k
-_start = 19
+_start = 99
 Temp154 = _start
-_ending = 20
+_ending = 100
 Temp155 = _ending
 _flag = 0
 Temp156 = _flag

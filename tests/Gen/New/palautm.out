@@ -1,0 +1,352 @@
+_start: 
+_printf_cnt = 0
+
+_malloc: 
+
+_getchar: 
+
+_printf: 
+
+_origin: 
+_i = 0
+Temp1 = _i
+Label :2	Temp2 = _i LE _ss
+If Not Equal to Zero Temp2 Goto Label :3	
+Goto label:1
+Label :3	_j = 0
+Temp3 = _j
+Label :5	Temp4 = _j LE 1
+If Not Equal to Zero Temp4 Goto Label :6	
+Goto label:4
+Label :6	Temp6 = 0
+Temp7 = _i MUL 8
+Temp6 = Temp6 ADD Temp7
+Temp8 = _j MUL 4
+Temp6 = Temp6 ADD Temp8
+Temp9 = _next ADD Temp6
+*Temp9 = 0 , 4
+Temp5 = *Temp9, 4
+Temp5 = *Temp9, 4
+Temp13 = _j ADD 1
+_j = Temp13
+Temp12 = _j
+Temp11 = Temp12 SUB 1
+Goto label:5
+Label :4	Temp15 = 0
+Temp16 = _ss MUL 4
+Temp15 = Temp15 ADD Temp16
+Temp17 = _l ADD Temp15
+*Temp17 = -2 , 4
+Temp14 = *Temp17, 4
+Temp14 = *Temp17, 4
+Temp20 = 0
+Temp21 = _ss MUL 4
+Temp20 = Temp20 ADD Temp21
+Temp22 = _rt ADD Temp20
+*Temp22 = 0 , 4
+Temp19 = *Temp22, 4
+Temp19 = *Temp22, 4
+Temp26 = _i ADD 1
+_i = Temp26
+Temp25 = _i
+Temp24 = Temp25 SUB 1
+Goto label:2
+Label :1	_ss = 0
+Temp27 = _ss
+Temp30 = _ss ADD 1
+_ss = Temp30
+Temp29 = _ss
+_rood = Temp29
+Temp28 = _rood
+Temp32 = 0
+Temp33 = _rood MUL 4
+Temp32 = Temp32 ADD Temp33
+Temp34 = _l ADD Temp32
+*Temp34 = -1 , 4
+Temp31 = *Temp34, 4
+Temp31 = *Temp34, 4
+Temp37 = 0
+Temp38 = _rood MUL 4
+Temp37 = Temp37 ADD Temp38
+Temp39 = _rt ADD Temp37
+*Temp39 = _rood , 4
+Temp36 = *Temp39, 4
+Temp36 = *Temp39, 4
+Temp43 = _ss ADD 1
+_ss = Temp43
+Temp42 = _ss
+_reven = Temp42
+Temp41 = _reven
+Temp45 = 0
+Temp46 = _reven MUL 4
+Temp45 = Temp45 ADD Temp46
+Temp47 = _l ADD Temp45
+*Temp47 = 0 , 4
+Temp44 = *Temp47, 4
+Temp44 = *Temp47, 4
+Temp50 = 0
+Temp51 = _reven MUL 4
+Temp50 = Temp50 ADD Temp51
+Temp52 = _rt ADD Temp50
+*Temp52 = _rood , 4
+Temp49 = *Temp52, 4
+Temp49 = *Temp52, 4
+_last = _rood
+Temp54 = _last
+
+_palin: 
+Temp55 = id SUB 1
+Temp56 = 0
+Temp57 = x MUL 4
+Temp56 = Temp56 ADD Temp57
+Temp58 = _l ADD Temp56
+Temp59 = *Temp58, 4
+Temp60 = Temp55 SUB Temp59
+Temp61 = 0
+Temp62 = Temp60 MUL 4
+Temp61 = Temp61 ADD Temp62
+Temp63 = _ch ADD Temp61
+Temp64 = *Temp63, 4
+Temp65 = Temp64 SUB 97
+Temp66 = Temp65 EQ chr
+Return BasicParam Temp66
+
+_add: 
+Label :8	BasicParam _last
+BasicParam id
+BasicParam chr
+Temp67 = call _palin , 3
+If Not Equal to Zero Temp67 Goto Label :7	
+Goto label:9
+Label :9	Temp69 = 0
+Temp70 = _last MUL 4
+Temp69 = Temp69 ADD Temp70
+Temp71 = _rt ADD Temp69
+Temp72 = *Temp71, 4
+_last = Temp72
+Temp68 = _last
+Goto label:8
+Label :7	Temp73 = 0
+Temp74 = _last MUL 8
+Temp73 = Temp73 ADD Temp74
+Temp75 = chr MUL 4
+Temp73 = Temp73 ADD Temp75
+Temp76 = _next ADD Temp73
+Temp77 = *Temp76, 4
+If Not Equal to Zero Temp77 Goto Label :11	
+Goto label:12
+Label :11	Temp79 = 0
+Temp80 = _last MUL 8
+Temp79 = Temp79 ADD Temp80
+Temp81 = chr MUL 4
+Temp79 = Temp79 ADD Temp81
+Temp82 = _next ADD Temp79
+Temp83 = *Temp82, 4
+_last = Temp83
+Temp78 = _last
+Goto label:10
+Label :12	_x = _last
+Temp85 = _ss ADD 1
+_ss = Temp85
+Temp84 = _ss
+Temp87 = 0
+Temp88 = _x MUL 8
+Temp87 = Temp87 ADD Temp88
+Temp89 = chr MUL 4
+Temp87 = Temp87 ADD Temp89
+Temp90 = _next ADD Temp87
+*Temp90 = _ss , 4
+Temp86 = *Temp90, 4
+Temp86 = *Temp90, 4
+Temp93 = 0
+Temp94 = _x MUL 4
+Temp93 = Temp93 ADD Temp94
+Temp95 = _l ADD Temp93
+Temp96 = *Temp95, 4
+Temp97 = Temp96 ADD 2
+Temp98 = 0
+Temp99 = _ss MUL 4
+Temp98 = Temp98 ADD Temp99
+Temp100 = _l ADD Temp98
+*Temp100 = Temp97 , 4
+Temp92 = *Temp100, 4
+Temp92 = *Temp100, 4
+Temp102 = _x EQ _rood
+If Not Equal to Zero Temp102 Goto Label :14	
+Goto label:15
+Label :14	Temp104 = 0
+Temp105 = _ss MUL 4
+Temp104 = Temp104 ADD Temp105
+Temp106 = _rt ADD Temp104
+*Temp106 = _reven , 4
+Temp103 = *Temp106, 4
+Temp103 = *Temp106, 4
+Goto label:13
+Label :15	Temp109 = 0
+Temp110 = _x MUL 4
+Temp109 = Temp109 ADD Temp110
+Temp111 = _rt ADD Temp109
+Temp112 = *Temp111, 4
+_x = Temp112
+Temp108 = _x
+Label :17	Temp113 = _x NE _rood
+If Not Equal to Zero Temp113 Goto Label :19	
+Goto label:16
+Label :19	Temp114 = 0
+Temp115 = _x MUL 8
+Temp114 = Temp114 ADD Temp115
+Temp116 = chr MUL 4
+Temp114 = Temp114 ADD Temp116
+Temp117 = _next ADD Temp114
+Temp118 = *Temp117, 4
+If Not Equal to Zero Temp118 Goto Label :20	
+Goto label:18
+Label :20	BasicParam _x
+BasicParam id
+BasicParam chr
+Temp119 = call _palin , 3
+If Not Equal to Zero Temp119 Goto Label :16	
+Goto label:18
+Label :18	Temp121 = 0
+Temp122 = _x MUL 4
+Temp121 = Temp121 ADD Temp122
+Temp123 = _rt ADD Temp121
+Temp124 = *Temp123, 4
+_x = Temp124
+Temp120 = _x
+Goto label:17
+Label :16	Temp125 = 0
+Temp126 = _x MUL 8
+Temp125 = Temp125 ADD Temp126
+Temp127 = chr MUL 4
+Temp125 = Temp125 ADD Temp127
+Temp128 = _next ADD Temp125
+Temp129 = *Temp128, 4
+If Not Equal to Zero Temp129 Goto Label :24	
+Goto label:23
+Label :24	BasicParam _x
+BasicParam id
+BasicParam chr
+Temp130 = call _palin , 3
+If Not Equal to Zero Temp130 Goto Label :22	
+Goto label:23
+Label :22	Temp132 = 0
+Temp133 = _x MUL 8
+Temp132 = Temp132 ADD Temp133
+Temp134 = chr MUL 4
+Temp132 = Temp132 ADD Temp134
+Temp135 = _next ADD Temp132
+Temp136 = *Temp135, 4
+Temp137 = 0
+Temp138 = _ss MUL 4
+Temp137 = Temp137 ADD Temp138
+Temp139 = _rt ADD Temp137
+*Temp139 = Temp136 , 4
+Temp131 = *Temp139, 4
+Temp131 = *Temp139, 4
+Goto label:21
+Label :23	Temp142 = 0
+Temp143 = _ss MUL 4
+Temp142 = Temp142 ADD Temp143
+Temp144 = _rt ADD Temp142
+*Temp144 = _rood , 4
+Temp141 = *Temp144, 4
+Temp141 = *Temp144, 4
+Label :21	Label :13	_last = _ss
+Temp146 = _last
+Label :10	
+_main: 
+_len = 1
+Temp148 = call _getchar , 0
+Temp149 = 0
+Temp150 = _len MUL 4
+Temp149 = Temp149 ADD Temp150
+Temp151 = _ch ADD Temp149
+*Temp151 = Temp148 , 4
+Temp147 = *Temp151, 4
+Temp147 = *Temp151, 4
+Label :26	Temp153 = 0
+Temp154 = _len MUL 4
+Temp153 = Temp153 ADD Temp154
+Temp155 = _ch ADD Temp153
+Temp156 = *Temp155, 4
+Temp157 = Temp156 EQ 97
+If Not Equal to Zero Temp157 Goto Label :27	
+Goto label:28
+Label :28	Temp158 = 0
+Temp159 = _len MUL 4
+Temp158 = Temp158 ADD Temp159
+Temp160 = _ch ADD Temp158
+Temp161 = *Temp160, 4
+Temp162 = Temp161 EQ 98
+If Not Equal to Zero Temp162 Goto Label :27	
+Goto label:25
+Label :27	Temp164 = _len ADD 1
+_len = Temp164
+Temp163 = _len
+Temp166 = call _getchar , 0
+Temp167 = 0
+Temp168 = _len MUL 4
+Temp167 = Temp167 ADD Temp168
+Temp169 = _ch ADD Temp167
+*Temp169 = Temp166 , 4
+Temp165 = *Temp169, 4
+Temp165 = *Temp169, 4
+Goto label:26
+Label :25	Temp172 = 0
+Temp173 = _len MUL 4
+Temp172 = Temp172 ADD Temp173
+Temp174 = _ch ADD Temp172
+*Temp174 = 0 , 4
+Temp171 = *Temp174, 4
+Temp171 = *Temp174, 4
+Temp176 = call _origin , 0
+Temp179 = _len SUB 1
+_len = Temp179
+Temp178 = _len
+Temp177 = Temp178 ADD 1
+_i = 1
+Temp180 = _i
+Label :30	Temp181 = _i LE _len
+If Not Equal to Zero Temp181 Goto Label :31	
+Goto label:29
+Label :31	_tmp = _ss
+Temp182 = 0
+Temp183 = _i MUL 4
+Temp182 = Temp182 ADD Temp183
+Temp184 = _ch ADD Temp182
+Temp185 = *Temp184, 4
+Temp186 = Temp185 SUB 97
+BasicParam Temp186
+BasicParam _i
+Temp187 = call _add , 2
+Temp188 = _tmp NE _ss
+If Not Equal to Zero Temp188 Goto Label :33	
+Goto label:34
+Label :33	BasicParam Temp189
+BasicParam 49
+_printf_cnt = 2
+Temp190 = call _printf , 2
+Goto label:32
+Label :34	BasicParam Temp191
+BasicParam 48
+_printf_cnt = 2
+Temp192 = call _printf , 2
+Label :32	Temp195 = _i ADD 1
+_i = Temp195
+Temp194 = _i
+Temp193 = Temp194 SUB 1
+Goto label:30
+Label :29	Temp197 = _len ADD 1
+Temp198 = 0
+Temp199 = Temp197 MUL 4
+Temp198 = Temp198 ADD Temp199
+Temp200 = _ans ADD Temp198
+*Temp200 = 0 , 4
+Temp196 = *Temp200, 4
+Temp196 = *Temp200, 4
+BasicParam Temp202
+_printf_cnt = 1
+Temp203 = call _printf , 1
+Return BasicParam 0
+

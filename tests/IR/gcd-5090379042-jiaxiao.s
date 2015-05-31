@@ -44,6 +44,9 @@ main:
 	li $t0, 10
 	la $t1, str_1
 	sw $t0, 44($t1)
+	li $t0, 0
+	la $t1, str_1
+	sw $t0, 48($t1)
 	j _main
 _gcd:
 	sw $ra, ($sp)
@@ -85,59 +88,129 @@ L1:
 _main:
 	sw $ra, ($sp)
 	la $t0, str_1
-	sw $t0, -4($sp)
-	li $t0, 10
-	sw $t0, -28($sp)
-	li $t0, 1
-	sw $t0, -32($sp)
-	subu $sp, $sp, 36
-	jal _gcd
-	addi $sp, $sp, 36
-	sw $v0, -8($sp)
-	lw $ra, ($sp)
-	li $t0, 50
-	sw $t0, -28($sp)
-	li $t0, 35
-	sw $t0, -32($sp)
-	subu $sp, $sp, 36
-	jal _gcd
-	addi $sp, $sp, 36
-	sw $v0, -12($sp)
-	lw $ra, ($sp)
-	li $t0, 34986
-	sw $t0, -28($sp)
-	li $t0, 3087
-	sw $t0, -32($sp)
-	subu $sp, $sp, 36
-	jal _gcd
-	addi $sp, $sp, 36
+	sw $t0, -76($sp)
+	subu $sp, $sp, 28
+	jal _getchar
+	addi $sp, $sp, 28
 	sw $v0, -16($sp)
 	lw $ra, ($sp)
-	li $t0, 2907
-	sw $t0, -28($sp)
-	li $t0, 1539
+	li $t2, 48
+	lw $t1, -16($sp)
+	sub $t0, $t1, $t2
+	sw $t0, -20($sp)
+	lw $t2, -20($sp)
+	li $t1, 10
+	mul $t0, $t1, $t2
+	sw $t0, -24($sp)
+	subu $sp, $sp, 28
+	jal _getchar
+	addi $sp, $sp, 28
+	sw $v0, -28($sp)
+	lw $ra, ($sp)
+	lw $t2, -28($sp)
+	lw $t1, -24($sp)
+	add $t0, $t1, $t2
 	sw $t0, -32($sp)
-	subu $sp, $sp, 36
+	li $t2, 48
+	lw $t1, -32($sp)
+	sub $t0, $t1, $t2
+	sw $t0, -36($sp)
+	lw $t0, -36($sp)
+	sw $t0, -4($sp)
+	lw $t0, -4($sp)
+	sw $t0, -12($sp)
+	subu $sp, $sp, 28
+	jal _getchar
+	addi $sp, $sp, 28
+	sw $v0, -40($sp)
+	lw $ra, ($sp)
+	subu $sp, $sp, 28
+	jal _getchar
+	addi $sp, $sp, 28
+	sw $v0, -48($sp)
+	lw $ra, ($sp)
+	li $t2, 48
+	lw $t1, -48($sp)
+	sub $t0, $t1, $t2
+	sw $t0, -52($sp)
+	lw $t2, -52($sp)
+	li $t1, 10
+	mul $t0, $t1, $t2
+	sw $t0, -56($sp)
+	subu $sp, $sp, 28
+	jal _getchar
+	addi $sp, $sp, 28
+	sw $v0, -60($sp)
+	lw $ra, ($sp)
+	lw $t2, -60($sp)
+	lw $t1, -56($sp)
+	add $t0, $t1, $t2
+	sw $t0, -64($sp)
+	li $t2, 48
+	lw $t1, -64($sp)
+	sub $t0, $t1, $t2
+	sw $t0, -68($sp)
+	lw $t0, -68($sp)
+	sw $t0, -8($sp)
+	lw $t0, -8($sp)
+	sw $t0, -44($sp)
+	subu $sp, $sp, 28
+	jal _getchar
+	addi $sp, $sp, 28
+	sw $v0, -72($sp)
+	lw $ra, ($sp)
+	li $t0, 10
+	sw $t0, -100($sp)
+	li $t0, 1
+	sw $t0, -104($sp)
+	subu $sp, $sp, 108
 	jal _gcd
-	addi $sp, $sp, 36
-	sw $v0, -20($sp)
+	addi $sp, $sp, 108
+	sw $v0, -80($sp)
 	lw $ra, ($sp)
 	lw $t0, -4($sp)
-	sw $t0, -28($sp)
+	sw $t0, -100($sp)
 	lw $t0, -8($sp)
-	sw $t0, -32($sp)
-	lw $t0, -12($sp)
-	sw $t0, -36($sp)
-	lw $t0, -16($sp)
-	sw $t0, -40($sp)
-	lw $t0, -20($sp)
-	sw $t0, -44($sp)
+	sw $t0, -104($sp)
+	subu $sp, $sp, 108
+	jal _gcd
+	addi $sp, $sp, 108
+	sw $v0, -84($sp)
+	lw $ra, ($sp)
+	li $t0, 34986
+	sw $t0, -100($sp)
+	li $t0, 3087
+	sw $t0, -104($sp)
+	subu $sp, $sp, 108
+	jal _gcd
+	addi $sp, $sp, 108
+	sw $v0, -88($sp)
+	lw $ra, ($sp)
+	li $t0, 2907
+	sw $t0, -100($sp)
+	li $t0, 1539
+	sw $t0, -104($sp)
+	subu $sp, $sp, 108
+	jal _gcd
+	addi $sp, $sp, 108
+	sw $v0, -92($sp)
+	lw $ra, ($sp)
+	lw $t0, -76($sp)
+	sw $t0, -100($sp)
+	lw $t0, -80($sp)
+	sw $t0, -104($sp)
+	lw $t0, -84($sp)
+	sw $t0, -108($sp)
+	lw $t0, -88($sp)
+	sw $t0, -112($sp)
+	lw $t0, -92($sp)
+	sw $t0, -116($sp)
 	li $t0, 5
 	sw $t0, _printf_cnt
-	subu $sp, $sp, 48
+	subu $sp, $sp, 120
 	jal _printf
-	addi $sp, $sp, 48
-	sw $v0, -24($sp)
+	addi $sp, $sp, 120
+	sw $v0, -96($sp)
 	lw $ra, ($sp)
 	li $v0, 0
 	sw $v0, 0($sp)

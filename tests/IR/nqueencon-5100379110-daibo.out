@@ -141,17 +141,19 @@ Temp67 = call _printf , 1
 Return BasicParam 0
 
 _main: 
-_n = 6
+Temp69 = call _getchar , 0
+Temp70 = Temp69 SUB 48
+_n = Temp70
 Temp68 = _n
-Label :25	Temp69 = _n LE 11
-If Not Equal to Zero Temp69 Goto Label :26	
+Label :25	Temp71 = _n LE 11
+If Not Equal to Zero Temp71 Goto Label :26	
 Goto label:24
 Label :26	BasicParam _n
-Temp70 = call _nqueen , 1
-Temp73 = _n ADD 1
-_n = Temp73
-Temp72 = _n
-Temp71 = Temp72 SUB 1
+Temp72 = call _nqueen , 1
+Temp75 = _n ADD 1
+_n = Temp75
+Temp74 = _n
+Temp73 = Temp74 SUB 1
 Goto label:25
 Label :24	Return BasicParam 0
 

@@ -1,0 +1,44 @@
+_start: 
+_printf_cnt = 0
+_str1 = _str_ptr_1
+_str2 = _str_ptr_2
+
+_malloc: 
+
+_getchar: 
+
+_printf: 
+
+_main: 
+_i = 0
+Label :2	Temp1 = _i LT 6
+If Not Equal to Zero Temp1 Goto Label :3	
+Goto label:1
+Label :3	Temp4 = _i MUL 4
+Temp3 = _str1 ADD Temp4
+Temp2 = *Temp3, 4
+Temp7 = _i MUL 4
+Temp6 = _str2 ADD Temp7
+Temp5 = *Temp6, 4
+Temp8 = Temp2 NE Temp5
+If Not Equal to Zero Temp8 Goto Label :5	
+Goto label:4
+Label :5	Temp12 = _i MUL 4
+Temp11 = _str1 ADD Temp12
+Temp10 = *Temp11, 4
+Temp15 = _i MUL 4
+Temp14 = _str2 ADD Temp15
+Temp13 = *Temp14, 4
+BasicParam Temp9
+BasicParam _i
+BasicParam Temp10
+BasicParam Temp13
+_printf_cnt = 4
+Temp16 = call _printf , 4
+Goto label:1
+Label :4	Temp19 = _i ADD 1
+_i = Temp19
+Temp18 = _i
+Temp17 = Temp18 SUB 1
+Goto label:2
+Label :1	

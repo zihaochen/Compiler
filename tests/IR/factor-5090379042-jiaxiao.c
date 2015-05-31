@@ -10,7 +10,8 @@ int nfactor(int n) {
 }
 
 int main() {
-  int a = nfactor(6);
+  int b=getchar()-'0';
+  int a = nfactor(b);
   printf("%d\n", a);
   return a;
 }

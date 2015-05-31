@@ -9,6 +9,10 @@ int tak(int x, int y, int z) {
 }
 
 int main(){
-	printf("%d\n", tak(18, 12, 6));
+	int a,b,c;
+	a=10*(getchar()-'0')+getchar()-'0';getchar();
+	b=10*(getchar()-'0')+getchar()-'0';getchar();
+	c=getchar()-'0';
+	printf("%d\n", tak(a,b,c));
 	return 0;
 }

@@ -25,17 +25,17 @@ int plus(int SIZE){
     else return j - 1;
 }
 
-
-int printIntB(int L) {
+int printIntA(int L) {
     while (L >= 0) {
-        printf("%d", b[L]);
+        printf("%d", a[L]);
         L --;
     }
     printf("\n");
 }
-int printIntA(int L) {
+
+int printIntB(int L) {
     while (L >= 0) {
-        printf("%d", a[L]);
+        printf("%d", b[L]);
         L --;
     }
     printf("\n");
@@ -54,11 +54,11 @@ int main() {
         if (i < 9) a[i]=i+1;
         else a[i] = i-9;
     }
+    printIntA(SIZE-1);
     for (i = 0; i < SIZE; i ++) {
         if (i < SIZE / 2) b[i] = 7;
         else b[i] = 3;
     }
-    printIntA(SIZE-1);
     printIntB(SIZE-1);
     L = plus(SIZE);
     printBigInt(L);

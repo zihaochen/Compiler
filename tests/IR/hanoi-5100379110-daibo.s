@@ -55,6 +55,9 @@ main:
 	li $t0, 10
 	la $t1, str_1
 	sw $t0, 56($t1)
+	li $t0, 0
+	la $t1, str_1
+	sw $t0, 60($t1)
 	li $t0, 109
 	la $t1, str_2
 	sw $t0, 0($t1)
@@ -100,6 +103,9 @@ main:
 	li $t0, 10
 	la $t1, str_2
 	sw $t0, 56($t1)
+	li $t0, 0
+	la $t1, str_2
+	sw $t0, 60($t1)
 	li $t0, 37
 	la $t1, str_3
 	sw $t0, 0($t1)
@@ -109,6 +115,9 @@ main:
 	li $t0, 10
 	la $t1, str_3
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_3
+	sw $t0, 12($t1)
 	j _main
 _cd:
 	sw $ra, ($sp)
@@ -230,42 +239,68 @@ L1:
 _main:
 	sw $ra, ($sp)
 	la $t0, str_3
-	sw $t0, -28($sp)
+	sw $t0, -52($sp)
 	li $t0, 65
 	sw $t0, -4($sp)
 	li $t0, 66
 	sw $t0, -8($sp)
 	li $t0, 67
 	sw $t0, -12($sp)
-	li $t0, 10
+	subu $sp, $sp, 92
+	jal _getchar
+	addi $sp, $sp, 92
+	sw $v0, -20($sp)
+	lw $ra, ($sp)
+	li $t2, 48
+	lw $t1, -20($sp)
+	sub $t0, $t1, $t2
+	sw $t0, -24($sp)
+	lw $t2, -24($sp)
+	li $t1, 10
+	mul $t0, $t1, $t2
+	sw $t0, -28($sp)
+	subu $sp, $sp, 92
+	jal _getchar
+	addi $sp, $sp, 92
+	sw $v0, -32($sp)
+	lw $ra, ($sp)
+	lw $t2, -32($sp)
+	lw $t1, -28($sp)
+	add $t0, $t1, $t2
+	sw $t0, -36($sp)
+	li $t2, 48
+	lw $t1, -36($sp)
+	sub $t0, $t1, $t2
+	sw $t0, -40($sp)
+	lw $t0, -40($sp)
 	sw $t0, -16($sp)
 	lw $t0, -16($sp)
-	sw $t0, -36($sp)
+	sw $t0, -60($sp)
 	lw $t0, -4($sp)
-	sw $t0, -40($sp)
+	sw $t0, -64($sp)
 	lw $t0, -8($sp)
-	sw $t0, -44($sp)
+	sw $t0, -68($sp)
 	lw $t0, -12($sp)
-	sw $t0, -48($sp)
+	sw $t0, -72($sp)
 	li $t0, 0
-	sw $t0, -52($sp)
-	subu $sp, $sp, 56
+	sw $t0, -76($sp)
+	subu $sp, $sp, 80
 	jal _cd
-	addi $sp, $sp, 56
-	sw $v0, -24($sp)
+	addi $sp, $sp, 80
+	sw $v0, -48($sp)
 	lw $ra, ($sp)
-	lw $t0, -24($sp)
-	sw $t0, -20($sp)
-	lw $t0, -28($sp)
-	sw $t0, -36($sp)
-	lw $t0, -20($sp)
-	sw $t0, -40($sp)
+	lw $t0, -48($sp)
+	sw $t0, -44($sp)
+	lw $t0, -52($sp)
+	sw $t0, -60($sp)
+	lw $t0, -44($sp)
+	sw $t0, -64($sp)
 	li $t0, 2
 	sw $t0, _printf_cnt
-	subu $sp, $sp, 44
+	subu $sp, $sp, 68
 	jal _printf
-	addi $sp, $sp, 44
-	sw $v0, -32($sp)
+	addi $sp, $sp, 68
+	sw $v0, -56($sp)
 	lw $ra, ($sp)
 	li $v0, 0
 	sw $v0, 0($sp)

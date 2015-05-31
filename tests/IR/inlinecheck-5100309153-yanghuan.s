@@ -18,27 +18,42 @@ main:
 	li $t0, 100
 	la $t1, str_1
 	sw $t0, 4($t1)
+	li $t0, 0
+	la $t1, str_1
+	sw $t0, 8($t1)
 	li $t0, 37
 	la $t1, str_2
 	sw $t0, 0($t1)
 	li $t0, 100
 	la $t1, str_2
 	sw $t0, 4($t1)
+	li $t0, 0
+	la $t1, str_2
+	sw $t0, 8($t1)
 	li $t0, 37
 	la $t1, str_3
 	sw $t0, 0($t1)
 	li $t0, 100
 	la $t1, str_3
 	sw $t0, 4($t1)
+	li $t0, 0
+	la $t1, str_3
+	sw $t0, 8($t1)
 	li $t0, 37
 	la $t1, str_4
 	sw $t0, 0($t1)
 	li $t0, 100
 	la $t1, str_4
 	sw $t0, 4($t1)
+	li $t0, 0
+	la $t1, str_4
+	sw $t0, 8($t1)
 	li $t0, 10
 	la $t1, str_5
 	sw $t0, 0($t1)
+	li $t0, 0
+	la $t1, str_5
+	sw $t0, 4($t1)
 	j _main
 _inline1:
 	sw $ra, ($sp)

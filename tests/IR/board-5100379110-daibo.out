@@ -1,6 +1,5 @@
 _start: 
 _printf_cnt = 0
-_N = 3
 
 _malloc: 
 
@@ -174,88 +173,93 @@ Goto label:16
 Label :15	Label :12	Return BasicParam color
 
 _main: 
-Temp81 = _N ADD 1
-Temp82 = Temp81 MUL 4
-BasicParam Temp82
-Temp83 = call _malloc , 1
-_p2 = Temp83
-Temp86 = 4 MUL 0
-Temp85 = _p2 ADD Temp86
-*Temp85 = 1 , 4
-Temp84 = *Temp85, 4
+Temp82 = call _getchar , 0
+Temp83 = Temp82 SUB 48
+_N = Temp83
+Temp81 = _N
+Temp85 = _N ADD 1
+Temp86 = Temp85 MUL 4
+BasicParam Temp86
+Temp87 = call _malloc , 1
+_p2 = Temp87
+Temp84 = _p2
+Temp90 = 4 MUL 0
+Temp89 = _p2 ADD Temp90
+*Temp89 = 1 , 4
+Temp88 = *Temp89, 4
 _i = 1
-Temp87 = _i
-Label :25	Temp88 = _i LE _N
-If Not Equal to Zero Temp88 Goto Label :26	
+Temp91 = _i
+Label :25	Temp92 = _i LE _N
+If Not Equal to Zero Temp92 Goto Label :26	
 Goto label:24
-Label :26	Temp90 = _i SUB 1
-Temp93 = Temp90 MUL 4
-Temp92 = _p2 ADD Temp93
-Temp91 = *Temp92, 4
-Temp94 = Temp91 MUL 2
-Temp96 = 4 MUL _i
-Temp95 = _p2 ADD Temp96
-*Temp95 = Temp94 , 4
-Temp89 = *Temp95, 4
-Temp99 = _i ADD 1
-_i = Temp99
-Temp98 = _i
-Temp97 = Temp98 SUB 1
+Label :26	Temp94 = _i SUB 1
+Temp97 = Temp94 MUL 4
+Temp96 = _p2 ADD Temp97
+Temp95 = *Temp96, 4
+Temp98 = Temp95 MUL 2
+Temp100 = 4 MUL _i
+Temp99 = _p2 ADD Temp100
+*Temp99 = Temp98 , 4
+Temp93 = *Temp99, 4
+Temp103 = _i ADD 1
+_i = Temp103
+Temp102 = _i
+Temp101 = Temp102 SUB 1
 Goto label:25
-Label :24	Temp103 = _N MUL 4
-Temp102 = _p2 ADD Temp103
-Temp101 = *Temp102, 4
-Temp104 = Temp101 MUL 4
-BasicParam Temp104
-Temp105 = call _malloc , 1
-_board = Temp105
-Temp100 = _board
+Label :24	Temp107 = _N MUL 4
+Temp106 = _p2 ADD Temp107
+Temp105 = *Temp106, 4
+Temp108 = Temp105 MUL 4
+BasicParam Temp108
+Temp109 = call _malloc , 1
+_board = Temp109
+Temp104 = _board
 _i = 0
-Temp106 = _i
-Label :28	Temp109 = _N MUL 4
-Temp108 = _p2 ADD Temp109
-Temp107 = *Temp108, 4
-Temp110 = _i LT Temp107
-If Not Equal to Zero Temp110 Goto Label :29	
+Temp110 = _i
+Label :28	Temp113 = _N MUL 4
+Temp112 = _p2 ADD Temp113
+Temp111 = *Temp112, 4
+Temp114 = _i LT Temp111
+If Not Equal to Zero Temp114 Goto Label :29	
 Goto label:27
-Label :29	Temp114 = _N MUL 4
-Temp113 = _p2 ADD Temp114
-Temp112 = *Temp113, 4
-Temp115 = Temp112 MUL 4
-BasicParam Temp115
-Temp116 = call _malloc , 1
-Temp118 = 4 MUL _i
-Temp117 = _board ADD Temp118
-*Temp117 = Temp116 , 4
-Temp111 = *Temp117, 4
-Temp121 = _i ADD 1
-_i = Temp121
-Temp120 = _i
-Temp119 = Temp120 SUB 1
+Label :29	Temp118 = _N MUL 4
+Temp117 = _p2 ADD Temp118
+Temp116 = *Temp117, 4
+Temp119 = Temp116 MUL 4
+BasicParam Temp119
+Temp120 = call _malloc , 1
+Temp122 = 4 MUL _i
+Temp121 = _board ADD Temp122
+*Temp121 = Temp120 , 4
+Temp115 = *Temp121, 4
+Temp125 = _i ADD 1
+_i = Temp125
+Temp124 = _i
+Temp123 = Temp124 SUB 1
 Goto label:28
-Label :27	Temp124 = _N MUL 4
-Temp123 = _p2 ADD Temp124
-Temp122 = *Temp123, 4
-Temp125 = Temp122 SUB 1
-Temp128 = _N MUL 4
+Label :27	Temp128 = _N MUL 4
 Temp127 = _p2 ADD Temp128
 Temp126 = *Temp127, 4
 Temp129 = Temp126 SUB 1
+Temp132 = _N MUL 4
+Temp131 = _p2 ADD Temp132
+Temp130 = *Temp131, 4
+Temp133 = Temp130 SUB 1
 BasicParam _board
 BasicParam _N
 BasicParam 0
 BasicParam 0
-BasicParam Temp125
 BasicParam Temp129
+BasicParam Temp133
 BasicParam 0
 BasicParam _p2
 BasicParam 1
-Temp130 = call _fill , 9
-Temp133 = _N MUL 4
-Temp132 = _p2 ADD Temp133
-Temp131 = *Temp132, 4
-BasicParam Temp131
+Temp134 = call _fill , 9
+Temp137 = _N MUL 4
+Temp136 = _p2 ADD Temp137
+Temp135 = *Temp136, 4
+BasicParam Temp135
 BasicParam _board
-Temp134 = call _printBoard , 2
+Temp138 = call _printBoard , 2
 Return BasicParam 0
 

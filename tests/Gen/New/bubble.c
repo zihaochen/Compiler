@@ -1,15 +1,17 @@
 struct a{
     int x,y;
 }a[100];
-int n=100;
+int n=10;
 
 void init() {
     int i;
     for(i=0;i<n;i++) {
         a[i].x=(i*2+1)%20;
         a[i].y=(i*5-1)%40;
-        printf("(%d,%d)\n",a[i].x,a[i].y);
+        printf("%d %d\n", a[i].x, a[i].y);
+       // printf("(%d,%d)\n",a[i].x,a[i].y);
     }
+    return;
 }
 
 int main() {
@@ -26,6 +28,8 @@ int main() {
         }
     }
     for(i=0;i<n;++i){
+    	printf("debug\n");
+      //  printf("%d\n", i);
         printf("[%d,%d]\n",a[i].x,a[i].y);
     }
 }

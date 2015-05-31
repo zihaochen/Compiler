@@ -21,7 +21,7 @@ int cd(int d, char a, char b, char c, int sum) {
 
 int main() {
     char a = 'A', b = 'B', c = 'C';
-    int d = 10;
+    int d = 10*(getchar()-'0')+getchar()-'0';
     int sum = cd(d, a, b, c, 0);
     printf("%d\n", sum);
     return 0;

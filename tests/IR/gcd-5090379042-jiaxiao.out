@@ -21,24 +21,42 @@ Temp4 = call _gcd , 2
 Return BasicParam Temp4
 Label :1	
 _main: 
+Temp6 = call _getchar , 0
+Temp7 = Temp6 SUB 48
+Temp8 = 10 MUL Temp7
+Temp9 = call _getchar , 0
+Temp10 = Temp8 ADD Temp9
+Temp11 = Temp10 SUB 48
+_a = Temp11
+Temp5 = _a
+Temp12 = call _getchar , 0
+Temp14 = call _getchar , 0
+Temp15 = Temp14 SUB 48
+Temp16 = 10 MUL Temp15
+Temp17 = call _getchar , 0
+Temp18 = Temp16 ADD Temp17
+Temp19 = Temp18 SUB 48
+_b = Temp19
+Temp13 = _b
+Temp20 = call _getchar , 0
 BasicParam 10
 BasicParam 1
-Temp6 = call _gcd , 2
-BasicParam 50
-BasicParam 35
-Temp7 = call _gcd , 2
+Temp22 = call _gcd , 2
+BasicParam _a
+BasicParam _b
+Temp23 = call _gcd , 2
 BasicParam 34986
 BasicParam 3087
-Temp8 = call _gcd , 2
+Temp24 = call _gcd , 2
 BasicParam 2907
 BasicParam 1539
-Temp9 = call _gcd , 2
-BasicParam Temp5
-BasicParam Temp6
-BasicParam Temp7
-BasicParam Temp8
-BasicParam Temp9
+Temp25 = call _gcd , 2
+BasicParam Temp21
+BasicParam Temp22
+BasicParam Temp23
+BasicParam Temp24
+BasicParam Temp25
 _printf_cnt = 5
-Temp10 = call _printf , 5
+Temp26 = call _printf , 5
 Return BasicParam 0
 

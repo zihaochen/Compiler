@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-int n=8;
+int n;
 int sum = 0, upperlim = 1;
 
 void test(int row, int ld, int rd)
@@ -26,6 +26,7 @@ void test(int row, int ld, int rd)
 
 int main(int argc, char *argv[1])
 {
+    n=getchar()-'0';
     printf("%d queens:\n", n);
     upperlim = (upperlim << n) - 1;
     test(0, 0, 0);

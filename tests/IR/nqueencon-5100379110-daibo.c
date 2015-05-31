@@ -54,7 +54,7 @@ int nqueen(int n) {
 
 int main() {
     int n;
-    for (n = 6; n <= 11; n++)
+    for (n = getchar()-'0'; n <= 11; n++)
         nqueen(n);
     //system("pause");
     return 0;

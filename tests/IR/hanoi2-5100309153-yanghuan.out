@@ -36,15 +36,20 @@ _printf_cnt = 3
 Temp9 = call _printf , 3
 Label :1	
 _main: 
-_N = 12
-Temp10 = _N
-Temp11 = _N GT 0
-If Not Equal to Zero Temp11 Goto Label :5	
+Temp10 = call _getchar , 0
+Temp11 = Temp10 SUB 48
+Temp12 = 10 MUL Temp11
+Temp13 = call _getchar , 0
+Temp14 = Temp12 ADD Temp13
+Temp15 = Temp14 SUB 48
+_N = Temp15
+Temp16 = _N GT 0
+If Not Equal to Zero Temp16 Goto Label :5	
 Goto label:4
 Label :5	BasicParam 97
 BasicParam 98
 BasicParam 99
 BasicParam _N
-Temp12 = call _hanoi , 4
+Temp17 = call _hanoi , 4
 Label :4	Return BasicParam 0
 

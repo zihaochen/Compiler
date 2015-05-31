@@ -33,6 +33,9 @@ main:
 	li $t0, 10
 	la $t1, str_1
 	sw $t0, 20($t1)
+	li $t0, 0
+	la $t1, str_1
+	sw $t0, 24($t1)
 	j _main
 _getHash:
 	sw $ra, ($sp)

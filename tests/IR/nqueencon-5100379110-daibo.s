@@ -18,24 +18,39 @@ main:
 	li $t0, 46
 	la $t1, str_1
 	sw $t0, 4($t1)
+	li $t0, 0
+	la $t1, str_1
+	sw $t0, 8($t1)
 	li $t0, 32
 	la $t1, str_2
 	sw $t0, 0($t1)
 	li $t0, 79
 	la $t1, str_2
 	sw $t0, 4($t1)
+	li $t0, 0
+	la $t1, str_2
+	sw $t0, 8($t1)
 	li $t0, 32
 	la $t1, str_3
 	sw $t0, 0($t1)
 	li $t0, 46
 	la $t1, str_3
 	sw $t0, 4($t1)
+	li $t0, 0
+	la $t1, str_3
+	sw $t0, 8($t1)
 	li $t0, 10
 	la $t1, str_4
 	sw $t0, 0($t1)
+	li $t0, 0
+	la $t1, str_4
+	sw $t0, 4($t1)
 	li $t0, 10
 	la $t1, str_5
 	sw $t0, 0($t1)
+	li $t0, 0
+	la $t1, str_5
+	sw $t0, 4($t1)
 	j _main
 _printrow:
 	sw $ra, ($sp)
@@ -434,7 +449,16 @@ L7:
 	jr $ra
 _main:
 	sw $ra, ($sp)
-	li $t0, 6
+	subu $sp, $sp, 212
+	jal _getchar
+	addi $sp, $sp, 212
+	sw $v0, -12($sp)
+	lw $ra, ($sp)
+	li $t2, 48
+	lw $t1, -12($sp)
+	sub $t0, $t1, $t2
+	sw $t0, -16($sp)
+	lw $t0, -16($sp)
 	sw $t0, -4($sp)
 	lw $t0, -4($sp)
 	sw $t0, -8($sp)
@@ -442,30 +466,30 @@ L25:
 	li $t2, 11
 	lw $t1, -4($sp)
 	sle $t0, $t1, $t2
-	sw $t0, -12($sp)
-	lw $t0, -12($sp)
+	sw $t0, -20($sp)
+	lw $t0, -20($sp)
 	bne $t0, $0, L26
 	b L24
 L26:
 	lw $t0, -4($sp)
-	sw $t0, -32($sp)
-	subu $sp, $sp, 36
+	sw $t0, -40($sp)
+	subu $sp, $sp, 44
 	jal _nqueen
-	addi $sp, $sp, 36
-	sw $v0, -16($sp)
+	addi $sp, $sp, 44
+	sw $v0, -24($sp)
 	lw $ra, ($sp)
 	li $t2, 1
 	lw $t1, -4($sp)
 	add $t0, $t1, $t2
-	sw $t0, -28($sp)
-	lw $t0, -28($sp)
+	sw $t0, -36($sp)
+	lw $t0, -36($sp)
 	sw $t0, -4($sp)
 	lw $t0, -4($sp)
-	sw $t0, -24($sp)
+	sw $t0, -32($sp)
 	li $t2, 1
-	lw $t1, -24($sp)
+	lw $t1, -32($sp)
 	sub $t0, $t1, $t2
-	sw $t0, -20($sp)
+	sw $t0, -28($sp)
 	b L25
 L24:
 	li $v0, 0

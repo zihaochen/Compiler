@@ -601,8 +601,8 @@ public class SemanticCheck implements Visitor {
                     ret.isLeft = false;
                     if (checkIC(t1) && checkIC(t2) && t1.isConst && t2.isConst){
                         ret.isConst = true;
-                        if (op == BinaryOp.EQ) ret.value = (t1.value.equals(t2.value));
-                        if (op == BinaryOp.NE) ret.value = !(t1.value.equals(t2.value));
+                        if (op == BinaryOp.EQ) ret.value = (t1.value.equals(t2.value)) ? 1 : 0;
+                        if (op == BinaryOp.NE) ret.value = !(t1.value.equals(t2.value)) ? 1 : 0;
                     }
                 }
                 break;
@@ -620,7 +620,7 @@ public class SemanticCheck implements Visitor {
                             ret.value = 1;
                         }
                         if (op == BinaryOp.AND && l == 0) {
-                            ret.value = true;
+                            ret.isConst = true;
                             ret.value = 0;
                         }
                     }
@@ -682,11 +682,11 @@ public class SemanticCheck implements Visitor {
         binaryExpr.left.accept(this);
         binaryExpr.right.accept(this);
         if (binaryExpr.left.returnType.isConst == true) {
-            binaryExpr.left = new IntConst((Integer) binaryExpr.left.returnType.value);
+            binaryExpr.left = new IntConst((int) binaryExpr.left.returnType.value);
             binaryExpr.left.accept(this);
         }
         if (binaryExpr.right.returnType.isConst == true) {
-            binaryExpr.right = new IntConst((Integer) binaryExpr.right.returnType.value);
+            binaryExpr.right = new IntConst((int) binaryExpr.right.returnType.value);
             binaryExpr.right.accept(this);
         }
         Type t1 = binaryExpr.left.returnType;

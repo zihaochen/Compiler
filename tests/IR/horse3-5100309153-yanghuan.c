@@ -1,10 +1,10 @@
 #include <stdio.h>
-int N = 20;
+int N;
 int head, startx, starty;
 int targetx, targety;
 int x, y;
-int xlist[10000], ylist[10000], tail, ok, now, dx[8], dy[9];
-int step[100][100];
+int xlist[12000], ylist[12000], tail, ok, now, dx[8], dy[9];
+int step[106][106];
 int i, j;
 
 int check(int a) {
@@ -21,6 +21,7 @@ int addList(int x, int y) {
     }
 }
 int main() {
+    N = 100*(getchar()-'0')+10*(getchar()-'0')+getchar()-'0';
     targetx = targety  = N - 1;
     for (i = 0; i < N; i ++)
         for (j = 0; j < N; j ++)

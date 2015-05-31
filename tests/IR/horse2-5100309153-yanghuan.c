@@ -13,7 +13,7 @@ int main() {
     int **step;
     int i, j;
 
-    N = 20;
+    N = 100*(getchar()-'0')+10*(getchar()-'0')+getchar()-'0';
     head = tail = startx = starty = 0;
     targetx = targety  = N - 1;
     x = y = 0;

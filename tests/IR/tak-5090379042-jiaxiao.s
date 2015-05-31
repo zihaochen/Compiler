@@ -17,6 +17,9 @@ main:
 	li $t0, 10
 	la $t1, str_1
 	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_1
+	sw $t0, 12($t1)
 	j _main
 _tak:
 	sw $ra, ($sp)
@@ -101,28 +104,111 @@ L1:
 _main:
 	sw $ra, ($sp)
 	la $t0, str_1
-	sw $t0, -4($sp)
-	li $t0, 18
-	sw $t0, -16($sp)
-	li $t0, 12
-	sw $t0, -20($sp)
-	li $t0, 6
-	sw $t0, -24($sp)
-	subu $sp, $sp, 28
-	jal _tak
-	addi $sp, $sp, 28
-	sw $v0, -8($sp)
+	sw $t0, -92($sp)
+	subu $sp, $sp, 52
+	jal _getchar
+	addi $sp, $sp, 52
+	sw $v0, -20($sp)
 	lw $ra, ($sp)
+	li $t2, 48
+	lw $t1, -20($sp)
+	sub $t0, $t1, $t2
+	sw $t0, -24($sp)
+	lw $t2, -24($sp)
+	li $t1, 10
+	mul $t0, $t1, $t2
+	sw $t0, -28($sp)
+	subu $sp, $sp, 52
+	jal _getchar
+	addi $sp, $sp, 52
+	sw $v0, -32($sp)
+	lw $ra, ($sp)
+	lw $t2, -32($sp)
+	lw $t1, -28($sp)
+	add $t0, $t1, $t2
+	sw $t0, -36($sp)
+	li $t2, 48
+	lw $t1, -36($sp)
+	sub $t0, $t1, $t2
+	sw $t0, -40($sp)
+	lw $t0, -40($sp)
+	sw $t0, -4($sp)
 	lw $t0, -4($sp)
 	sw $t0, -16($sp)
+	subu $sp, $sp, 52
+	jal _getchar
+	addi $sp, $sp, 52
+	sw $v0, -44($sp)
+	lw $ra, ($sp)
+	subu $sp, $sp, 52
+	jal _getchar
+	addi $sp, $sp, 52
+	sw $v0, -52($sp)
+	lw $ra, ($sp)
+	li $t2, 48
+	lw $t1, -52($sp)
+	sub $t0, $t1, $t2
+	sw $t0, -56($sp)
+	lw $t2, -56($sp)
+	li $t1, 10
+	mul $t0, $t1, $t2
+	sw $t0, -60($sp)
+	subu $sp, $sp, 52
+	jal _getchar
+	addi $sp, $sp, 52
+	sw $v0, -64($sp)
+	lw $ra, ($sp)
+	lw $t2, -64($sp)
+	lw $t1, -60($sp)
+	add $t0, $t1, $t2
+	sw $t0, -68($sp)
+	li $t2, 48
+	lw $t1, -68($sp)
+	sub $t0, $t1, $t2
+	sw $t0, -72($sp)
+	lw $t0, -72($sp)
+	sw $t0, -8($sp)
 	lw $t0, -8($sp)
-	sw $t0, -20($sp)
+	sw $t0, -48($sp)
+	subu $sp, $sp, 52
+	jal _getchar
+	addi $sp, $sp, 52
+	sw $v0, -76($sp)
+	lw $ra, ($sp)
+	subu $sp, $sp, 52
+	jal _getchar
+	addi $sp, $sp, 52
+	sw $v0, -84($sp)
+	lw $ra, ($sp)
+	li $t2, 48
+	lw $t1, -84($sp)
+	sub $t0, $t1, $t2
+	sw $t0, -88($sp)
+	lw $t0, -88($sp)
+	sw $t0, -12($sp)
+	lw $t0, -12($sp)
+	sw $t0, -80($sp)
+	lw $t0, -4($sp)
+	sw $t0, -104($sp)
+	lw $t0, -8($sp)
+	sw $t0, -108($sp)
+	lw $t0, -12($sp)
+	sw $t0, -112($sp)
+	subu $sp, $sp, 116
+	jal _tak
+	addi $sp, $sp, 116
+	sw $v0, -96($sp)
+	lw $ra, ($sp)
+	lw $t0, -92($sp)
+	sw $t0, -104($sp)
+	lw $t0, -96($sp)
+	sw $t0, -108($sp)
 	li $t0, 2
 	sw $t0, _printf_cnt
-	subu $sp, $sp, 24
+	subu $sp, $sp, 112
 	jal _printf
-	addi $sp, $sp, 24
-	sw $v0, -12($sp)
+	addi $sp, $sp, 112
+	sw $v0, -100($sp)
 	lw $ra, ($sp)
 	li $v0, 0
 	sw $v0, 0($sp)

@@ -36,6 +36,9 @@ main:
 	li $t0, 10
 	la $t1, str_1
 	sw $t0, 32($t1)
+	li $t0, 0
+	la $t1, str_1
+	sw $t0, 36($t1)
 	li $t0, 37
 	la $t1, str_2
 	sw $t0, 0($t1)
@@ -63,6 +66,9 @@ main:
 	li $t0, 10
 	la $t1, str_2
 	sw $t0, 32($t1)
+	li $t0, 0
+	la $t1, str_2
+	sw $t0, 36($t1)
 	j _main
 _hanoi:
 	sw $ra, ($sp)
@@ -144,30 +150,54 @@ L1:
 	jr $ra
 _main:
 	sw $ra, ($sp)
-	li $t0, 12
+	subu $sp, $sp, 52
+	jal _getchar
+	addi $sp, $sp, 52
+	sw $v0, -8($sp)
+	lw $ra, ($sp)
+	li $t2, 48
+	lw $t1, -8($sp)
+	sub $t0, $t1, $t2
+	sw $t0, -12($sp)
+	lw $t2, -12($sp)
+	li $t1, 10
+	mul $t0, $t1, $t2
+	sw $t0, -16($sp)
+	subu $sp, $sp, 52
+	jal _getchar
+	addi $sp, $sp, 52
+	sw $v0, -20($sp)
+	lw $ra, ($sp)
+	lw $t2, -20($sp)
+	lw $t1, -16($sp)
+	add $t0, $t1, $t2
+	sw $t0, -24($sp)
+	li $t2, 48
+	lw $t1, -24($sp)
+	sub $t0, $t1, $t2
+	sw $t0, -28($sp)
+	lw $t0, -28($sp)
 	sw $t0, -4($sp)
-	lw $t0, -4($sp)
-	sw $t0, -8($sp)
 	li $t2, 0
 	lw $t1, -4($sp)
 	sgt $t0, $t1, $t2
-	sw $t0, -12($sp)
-	lw $t0, -12($sp)
+	sw $t0, -32($sp)
+	lw $t0, -32($sp)
 	bne $t0, $0, L5
 	b L4
 L5:
 	li $t0, 97
-	sw $t0, -20($sp)
+	sw $t0, -40($sp)
 	li $t0, 98
-	sw $t0, -24($sp)
+	sw $t0, -44($sp)
 	li $t0, 99
-	sw $t0, -28($sp)
+	sw $t0, -48($sp)
 	lw $t0, -4($sp)
-	sw $t0, -32($sp)
-	subu $sp, $sp, 36
+	sw $t0, -52($sp)
+	subu $sp, $sp, 56
 	jal _hanoi
-	addi $sp, $sp, 36
-	sw $v0, -16($sp)
+	addi $sp, $sp, 56
+	sw $v0, -36($sp)
 	lw $ra, ($sp)
 L4:
 	li $v0, 0

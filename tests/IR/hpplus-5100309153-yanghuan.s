@@ -36,27 +36,45 @@ main:
 	li $t0, 100
 	la $t1, str_1
 	sw $t0, 4($t1)
+	li $t0, 0
+	la $t1, str_1
+	sw $t0, 8($t1)
 	li $t0, 10
 	la $t1, str_2
 	sw $t0, 0($t1)
+	li $t0, 0
+	la $t1, str_2
+	sw $t0, 4($t1)
 	li $t0, 37
 	la $t1, str_3
 	sw $t0, 0($t1)
 	li $t0, 100
 	la $t1, str_3
 	sw $t0, 4($t1)
+	li $t0, 0
+	la $t1, str_3
+	sw $t0, 8($t1)
 	li $t0, 10
 	la $t1, str_4
 	sw $t0, 0($t1)
+	li $t0, 0
+	la $t1, str_4
+	sw $t0, 4($t1)
 	li $t0, 37
 	la $t1, str_5
 	sw $t0, 0($t1)
 	li $t0, 100
 	la $t1, str_5
 	sw $t0, 4($t1)
+	li $t0, 0
+	la $t1, str_5
+	sw $t0, 8($t1)
 	li $t0, 10
 	la $t1, str_6
 	sw $t0, 0($t1)
+	li $t0, 0
+	la $t1, str_6
+	sw $t0, 4($t1)
 	j _main
 _plus:
 	sw $ra, ($sp)
@@ -279,7 +297,7 @@ L8:
 	jr $ra
 L6:
 	jr $ra
-_printIntB:
+_printIntA:
 	sw $ra, ($sp)
 	la $t0, str_1
 	sw $t0, -8($sp)
@@ -305,7 +323,7 @@ L11:
 	add $t0, $t1, $t2
 	sw $t0, -12($sp)
 	lw $t2, -12($sp)
-	lw $t1, _b
+	lw $t1, _a
 	add $t0, $t1, $t2
 	sw $t0, -20($sp)
 	lw $t0, -20($sp)
@@ -346,7 +364,7 @@ L9:
 	sw $v0, -48($sp)
 	lw $ra, ($sp)
 	jr $ra
-_printIntA:
+_printIntB:
 	sw $ra, ($sp)
 	la $t0, str_3
 	sw $t0, -8($sp)
@@ -372,7 +390,7 @@ L14:
 	add $t0, $t1, $t2
 	sw $t0, -12($sp)
 	lw $t2, -12($sp)
-	lw $t1, _a
+	lw $t1, _b
 	add $t0, $t1, $t2
 	sw $t0, -20($sp)
 	lw $t0, -20($sp)
@@ -574,105 +592,105 @@ L21:
 	sw $t0, -64($sp)
 	b L19
 L18:
+	li $t2, 1
+	lw $t1, _SIZE
+	sub $t0, $t1, $t2
+	sw $t0, -76($sp)
+	lw $t0, -76($sp)
+	sw $t0, -172($sp)
+	subu $sp, $sp, 176
+	jal _printIntA
+	addi $sp, $sp, 176
+	sw $v0, -80($sp)
+	lw $ra, ($sp)
 	li $t0, 0
 	sw $t0, _i
 	lw $t0, _i
-	sw $t0, -76($sp)
+	sw $t0, -84($sp)
 L25:
 	lw $t2, _SIZE
 	lw $t1, _i
 	slt $t0, $t1, $t2
-	sw $t0, -80($sp)
-	lw $t0, -80($sp)
+	sw $t0, -88($sp)
+	lw $t0, -88($sp)
 	bne $t0, $0, L26
 	b L24
 L26:
 	li $t2, 2
 	lw $t1, _SIZE
 	div $t0, $t1, $t2
-	sw $t0, -84($sp)
-	lw $t2, -84($sp)
+	sw $t0, -92($sp)
+	lw $t2, -92($sp)
 	lw $t1, _i
 	slt $t0, $t1, $t2
-	sw $t0, -88($sp)
-	lw $t0, -88($sp)
+	sw $t0, -96($sp)
+	lw $t0, -96($sp)
 	bne $t0, $0, L28
 	b L29
 L28:
 	li $t0, 0
-	sw $t0, -96($sp)
+	sw $t0, -104($sp)
 	li $t2, 4
 	lw $t1, _i
 	mul $t0, $t1, $t2
-	sw $t0, -100($sp)
-	lw $t2, -100($sp)
-	lw $t1, -96($sp)
-	add $t0, $t1, $t2
-	sw $t0, -96($sp)
-	lw $t2, -96($sp)
-	lw $t1, _b
+	sw $t0, -108($sp)
+	lw $t2, -108($sp)
+	lw $t1, -104($sp)
 	add $t0, $t1, $t2
 	sw $t0, -104($sp)
-	lw $t0, -104($sp)
+	lw $t2, -104($sp)
+	lw $t1, _b
+	add $t0, $t1, $t2
+	sw $t0, -112($sp)
+	lw $t0, -112($sp)
 	li $t1, 7
 	sw $t1, ($t0)
-	lw $t0, -104($sp)
+	lw $t0, -112($sp)
 	lw $t1, ($t0)
-	sw $t1, -92($sp)
-	lw $t0, -104($sp)
+	sw $t1, -100($sp)
+	lw $t0, -112($sp)
 	lw $t1, ($t0)
-	sw $t1, -92($sp)
+	sw $t1, -100($sp)
 	b L27
 L29:
 	li $t0, 0
-	sw $t0, -116($sp)
+	sw $t0, -124($sp)
 	li $t2, 4
 	lw $t1, _i
 	mul $t0, $t1, $t2
-	sw $t0, -120($sp)
-	lw $t2, -120($sp)
-	lw $t1, -116($sp)
-	add $t0, $t1, $t2
-	sw $t0, -116($sp)
-	lw $t2, -116($sp)
-	lw $t1, _b
+	sw $t0, -128($sp)
+	lw $t2, -128($sp)
+	lw $t1, -124($sp)
 	add $t0, $t1, $t2
 	sw $t0, -124($sp)
-	lw $t0, -124($sp)
+	lw $t2, -124($sp)
+	lw $t1, _b
+	add $t0, $t1, $t2
+	sw $t0, -132($sp)
+	lw $t0, -132($sp)
 	li $t1, 3
 	sw $t1, ($t0)
-	lw $t0, -124($sp)
+	lw $t0, -132($sp)
 	lw $t1, ($t0)
-	sw $t1, -112($sp)
-	lw $t0, -124($sp)
+	sw $t1, -120($sp)
+	lw $t0, -132($sp)
 	lw $t1, ($t0)
-	sw $t1, -112($sp)
+	sw $t1, -120($sp)
 L27:
 	li $t2, 1
 	lw $t1, _i
 	add $t0, $t1, $t2
-	sw $t0, -140($sp)
-	lw $t0, -140($sp)
+	sw $t0, -148($sp)
+	lw $t0, -148($sp)
 	sw $t0, _i
 	lw $t0, _i
-	sw $t0, -136($sp)
+	sw $t0, -144($sp)
 	li $t2, 1
-	lw $t1, -136($sp)
+	lw $t1, -144($sp)
 	sub $t0, $t1, $t2
-	sw $t0, -132($sp)
+	sw $t0, -140($sp)
 	b L25
 L24:
-	li $t2, 1
-	lw $t1, _SIZE
-	sub $t0, $t1, $t2
-	sw $t0, -144($sp)
-	lw $t0, -144($sp)
-	sw $t0, -172($sp)
-	subu $sp, $sp, 176
-	jal _printIntA
-	addi $sp, $sp, 176
-	sw $v0, -148($sp)
-	lw $ra, ($sp)
 	li $t2, 1
 	lw $t1, _SIZE
 	sub $t0, $t1, $t2

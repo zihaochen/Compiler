@@ -230,6 +230,9 @@ main:
 	li $t0, 99
 	la $t1, str_1
 	sw $t0, 284($t1)
+	li $t0, 0
+	la $t1, str_1
+	sw $t0, 288($t1)
 	j _main
 _main:
 	sw $ra, ($sp)

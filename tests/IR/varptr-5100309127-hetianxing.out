@@ -42,31 +42,38 @@ Temp14 = *ptr, 4
 _main: 
 Temp18 = &_sumBig
 _ptr = Temp18
+Temp19 = call _getchar , 0
+Temp20 = Temp19 SUB 48
+Temp21 = 10 MUL Temp20
+Temp22 = call _getchar , 0
+Temp23 = Temp21 ADD Temp22
+Temp24 = Temp23 SUB 48
+_N = Temp24
 _i = 1
-Temp19 = _i
-Label :5	Temp20 = _i LE 10
-If Not Equal to Zero Temp20 Goto Label :6	
+Temp25 = _i
+Label :5	Temp26 = _i LE _N
+If Not Equal to Zero Temp26 Goto Label :6	
 Goto label:4
 Label :6	_sumMiddle = 0
-Temp21 = &_sumMiddle
-BasicParam Temp21
-Temp22 = call _addMiddle , 1
-Temp24 = *_ptr, 4
-Temp25 = Temp24 ADD _sumMiddle
-Temp26 = *_ptr, 4
-*_ptr = Temp25 , 4
-Temp23 = *_ptr, 4
-Temp28 = _sumBig ADD 1
-_sumBig = Temp28
-Temp27 = _sumBig
-BasicParam Temp29
+Temp27 = &_sumMiddle
+BasicParam Temp27
+Temp28 = call _addMiddle , 1
+Temp30 = *_ptr, 4
+Temp31 = Temp30 ADD _sumMiddle
+Temp32 = *_ptr, 4
+*_ptr = Temp31 , 4
+Temp29 = *_ptr, 4
+Temp34 = _sumBig ADD 1
+_sumBig = Temp34
+Temp33 = _sumBig
+BasicParam Temp35
 BasicParam _i
 BasicParam _sumBig
 _printf_cnt = 3
-Temp30 = call _printf , 3
-Temp33 = _i ADD 1
-_i = Temp33
-Temp32 = _i
-Temp31 = Temp32 SUB 1
+Temp36 = call _printf , 3
+Temp39 = _i ADD 1
+_i = Temp39
+Temp38 = _i
+Temp37 = Temp38 SUB 1
 Goto label:5
 Label :4	

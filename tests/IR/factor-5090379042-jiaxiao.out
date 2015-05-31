@@ -20,12 +20,15 @@ Temp4 = n MUL Temp3
 Return BasicParam Temp4
 Label :1	
 _main: 
-BasicParam 6
-Temp5 = call _nfactor , 1
-_a = Temp5
-BasicParam Temp6
+Temp5 = call _getchar , 0
+Temp6 = Temp5 SUB 48
+_b = Temp6
+BasicParam _b
+Temp7 = call _nfactor , 1
+_a = Temp7
+BasicParam Temp8
 BasicParam _a
 _printf_cnt = 2
-Temp7 = call _printf , 2
+Temp9 = call _printf , 2
 Return BasicParam _a
 

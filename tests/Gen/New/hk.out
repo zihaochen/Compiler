@@ -1,0 +1,622 @@
+_start: 
+_printf_cnt = 0
+_ans = 0
+_a[0] = _forStructArray_1 , 4
+_a[12] = _forStructArray_2 , 4
+_a[24] = _forStructArray_3 , 4
+_a[36] = _forStructArray_4 , 4
+_a[48] = _forStructArray_5 , 4
+_a[60] = _forStructArray_6 , 4
+_a[72] = _forStructArray_7 , 4
+_a[84] = _forStructArray_8 , 4
+_a[96] = _forStructArray_9 , 4
+_a[108] = _forStructArray_10 , 4
+_a[120] = _forStructArray_11 , 4
+_a[132] = _forStructArray_12 , 4
+_a[144] = _forStructArray_13 , 4
+_a[156] = _forStructArray_14 , 4
+_a[168] = _forStructArray_15 , 4
+_a[180] = _forStructArray_16 , 4
+_a[192] = _forStructArray_17 , 4
+_a[204] = _forStructArray_18 , 4
+_a[216] = _forStructArray_19 , 4
+_a[228] = _forStructArray_20 , 4
+_a[240] = _forStructArray_21 , 4
+_a[252] = _forStructArray_22 , 4
+_a[264] = _forStructArray_23 , 4
+_a[276] = _forStructArray_24 , 4
+_a[288] = _forStructArray_25 , 4
+_a[300] = _forStructArray_26 , 4
+_a[312] = _forStructArray_27 , 4
+_a[324] = _forStructArray_28 , 4
+_a[336] = _forStructArray_29 , 4
+_a[348] = _forStructArray_30 , 4
+_a[360] = _forStructArray_31 , 4
+_a[372] = _forStructArray_32 , 4
+_a[384] = _forStructArray_33 , 4
+_a[396] = _forStructArray_34 , 4
+_a[408] = _forStructArray_35 , 4
+_a[420] = _forStructArray_36 , 4
+_a[432] = _forStructArray_37 , 4
+_a[444] = _forStructArray_38 , 4
+_a[456] = _forStructArray_39 , 4
+_a[468] = _forStructArray_40 , 4
+_a[480] = _forStructArray_41 , 4
+_a[492] = _forStructArray_42 , 4
+_a[504] = _forStructArray_43 , 4
+_a[516] = _forStructArray_44 , 4
+_a[528] = _forStructArray_45 , 4
+_a[540] = _forStructArray_46 , 4
+_a[552] = _forStructArray_47 , 4
+_a[564] = _forStructArray_48 , 4
+_a[576] = _forStructArray_49 , 4
+_a[588] = _forStructArray_50 , 4
+_a[600] = _forStructArray_51 , 4
+_a[612] = _forStructArray_52 , 4
+_a[624] = _forStructArray_53 , 4
+_a[636] = _forStructArray_54 , 4
+_a[648] = _forStructArray_55 , 4
+_a[660] = _forStructArray_56 , 4
+_a[672] = _forStructArray_57 , 4
+_a[684] = _forStructArray_58 , 4
+_a[696] = _forStructArray_59 , 4
+_a[708] = _forStructArray_60 , 4
+_a[720] = _forStructArray_61 , 4
+_a[732] = _forStructArray_62 , 4
+_a[744] = _forStructArray_63 , 4
+_a[756] = _forStructArray_64 , 4
+_a[768] = _forStructArray_65 , 4
+_a[780] = _forStructArray_66 , 4
+_a[792] = _forStructArray_67 , 4
+_a[804] = _forStructArray_68 , 4
+_a[816] = _forStructArray_69 , 4
+_a[828] = _forStructArray_70 , 4
+_a[840] = _forStructArray_71 , 4
+_a[852] = _forStructArray_72 , 4
+_a[864] = _forStructArray_73 , 4
+_a[876] = _forStructArray_74 , 4
+_a[888] = _forStructArray_75 , 4
+_a[900] = _forStructArray_76 , 4
+_a[912] = _forStructArray_77 , 4
+_a[924] = _forStructArray_78 , 4
+_a[936] = _forStructArray_79 , 4
+_a[948] = _forStructArray_80 , 4
+_a[960] = _forStructArray_81 , 4
+_a[972] = _forStructArray_82 , 4
+_a[984] = _forStructArray_83 , 4
+_a[996] = _forStructArray_84 , 4
+_a[1008] = _forStructArray_85 , 4
+_a[1020] = _forStructArray_86 , 4
+_a[1032] = _forStructArray_87 , 4
+_a[1044] = _forStructArray_88 , 4
+_a[1056] = _forStructArray_89 , 4
+_a[1068] = _forStructArray_90 , 4
+_a[1080] = _forStructArray_91 , 4
+_a[1092] = _forStructArray_92 , 4
+_a[1104] = _forStructArray_93 , 4
+_a[1116] = _forStructArray_94 , 4
+_a[1128] = _forStructArray_95 , 4
+_a[1140] = _forStructArray_96 , 4
+_a[1152] = _forStructArray_97 , 4
+_a[1164] = _forStructArray_98 , 4
+_a[1176] = _forStructArray_99 , 4
+_a[1188] = _forStructArray_100 , 4
+_a[1200] = _forStructArray_101 , 4
+_a[1212] = _forStructArray_102 , 4
+_a[1224] = _forStructArray_103 , 4
+_a[1236] = _forStructArray_104 , 4
+_a[1248] = _forStructArray_105 , 4
+_a[1260] = _forStructArray_106 , 4
+_a[1272] = _forStructArray_107 , 4
+_a[1284] = _forStructArray_108 , 4
+_a[1296] = _forStructArray_109 , 4
+_a[1308] = _forStructArray_110 , 4
+_a[1320] = _forStructArray_111 , 4
+_a[1332] = _forStructArray_112 , 4
+_a[1344] = _forStructArray_113 , 4
+_a[1356] = _forStructArray_114 , 4
+_a[1368] = _forStructArray_115 , 4
+_a[1380] = _forStructArray_116 , 4
+_a[1392] = _forStructArray_117 , 4
+_a[1404] = _forStructArray_118 , 4
+_a[1416] = _forStructArray_119 , 4
+_a[1428] = _forStructArray_120 , 4
+_a[1440] = _forStructArray_121 , 4
+_a[1452] = _forStructArray_122 , 4
+_a[1464] = _forStructArray_123 , 4
+_a[1476] = _forStructArray_124 , 4
+_a[1488] = _forStructArray_125 , 4
+_a[1500] = _forStructArray_126 , 4
+_a[1512] = _forStructArray_127 , 4
+_a[1524] = _forStructArray_128 , 4
+_a[1536] = _forStructArray_129 , 4
+_a[1548] = _forStructArray_130 , 4
+_a[1560] = _forStructArray_131 , 4
+_a[1572] = _forStructArray_132 , 4
+_a[1584] = _forStructArray_133 , 4
+_a[1596] = _forStructArray_134 , 4
+_a[1608] = _forStructArray_135 , 4
+_a[1620] = _forStructArray_136 , 4
+_a[1632] = _forStructArray_137 , 4
+_a[1644] = _forStructArray_138 , 4
+_a[1656] = _forStructArray_139 , 4
+_a[1668] = _forStructArray_140 , 4
+_a[1680] = _forStructArray_141 , 4
+_a[1692] = _forStructArray_142 , 4
+_a[1704] = _forStructArray_143 , 4
+_a[1716] = _forStructArray_144 , 4
+_a[1728] = _forStructArray_145 , 4
+_a[1740] = _forStructArray_146 , 4
+_a[1752] = _forStructArray_147 , 4
+_a[1764] = _forStructArray_148 , 4
+_a[1776] = _forStructArray_149 , 4
+_a[1788] = _forStructArray_150 , 4
+_a[1800] = _forStructArray_151 , 4
+_a[1812] = _forStructArray_152 , 4
+_a[1824] = _forStructArray_153 , 4
+_a[1836] = _forStructArray_154 , 4
+_a[1848] = _forStructArray_155 , 4
+_a[1860] = _forStructArray_156 , 4
+_a[1872] = _forStructArray_157 , 4
+_a[1884] = _forStructArray_158 , 4
+_a[1896] = _forStructArray_159 , 4
+_a[1908] = _forStructArray_160 , 4
+_a[1920] = _forStructArray_161 , 4
+_a[1932] = _forStructArray_162 , 4
+_a[1944] = _forStructArray_163 , 4
+_a[1956] = _forStructArray_164 , 4
+_a[1968] = _forStructArray_165 , 4
+_a[1980] = _forStructArray_166 , 4
+_a[1992] = _forStructArray_167 , 4
+_a[2004] = _forStructArray_168 , 4
+_a[2016] = _forStructArray_169 , 4
+_a[2028] = _forStructArray_170 , 4
+_a[2040] = _forStructArray_171 , 4
+_a[2052] = _forStructArray_172 , 4
+_a[2064] = _forStructArray_173 , 4
+_a[2076] = _forStructArray_174 , 4
+_a[2088] = _forStructArray_175 , 4
+_a[2100] = _forStructArray_176 , 4
+_a[2112] = _forStructArray_177 , 4
+_a[2124] = _forStructArray_178 , 4
+_a[2136] = _forStructArray_179 , 4
+_a[2148] = _forStructArray_180 , 4
+_a[2160] = _forStructArray_181 , 4
+_a[2172] = _forStructArray_182 , 4
+_a[2184] = _forStructArray_183 , 4
+_a[2196] = _forStructArray_184 , 4
+_a[2208] = _forStructArray_185 , 4
+_a[2220] = _forStructArray_186 , 4
+_a[2232] = _forStructArray_187 , 4
+_a[2244] = _forStructArray_188 , 4
+_a[2256] = _forStructArray_189 , 4
+_a[2268] = _forStructArray_190 , 4
+_a[2280] = _forStructArray_191 , 4
+_a[2292] = _forStructArray_192 , 4
+_a[2304] = _forStructArray_193 , 4
+_a[2316] = _forStructArray_194 , 4
+_a[2328] = _forStructArray_195 , 4
+_a[2340] = _forStructArray_196 , 4
+_a[2352] = _forStructArray_197 , 4
+_a[2364] = _forStructArray_198 , 4
+_a[2376] = _forStructArray_199 , 4
+_a[2388] = _forStructArray_200 , 4
+_a[2400] = _forStructArray_201 , 4
+_a[2412] = _forStructArray_202 , 4
+_a[2424] = _forStructArray_203 , 4
+_a[2436] = _forStructArray_204 , 4
+_a[2448] = _forStructArray_205 , 4
+_num = 0
+
+_malloc: 
+
+_getchar: 
+
+_printf: 
+
+_read: 
+_x = 0
+Temp1 = call _getchar , 0
+_c = Temp1
+Label :2	Temp2 = _c LT 48
+If Not Equal to Zero Temp2 Goto Label :3	
+Goto label:4
+Label :4	Temp3 = 57 LT _c
+If Not Equal to Zero Temp3 Goto Label :3	
+Goto label:1
+Label :3	Temp5 = call _getchar , 0
+_c = Temp5
+Temp4 = _c
+Goto label:2
+Label :1	Label :6	Temp6 = 48 LE _c
+If Not Equal to Zero Temp6 Goto Label :8	
+Goto label:5
+Label :8	Temp7 = _c LE 57
+If Not Equal to Zero Temp7 Goto Label :7	
+Goto label:5
+Label :7	Temp9 = 10 MUL _x
+Temp10 = Temp9 ADD _c
+Temp11 = Temp10 SUB 48
+_x = Temp11
+Temp8 = _x
+Temp13 = call _getchar , 0
+_c = Temp13
+Temp12 = _c
+Goto label:6
+Label :5	Return BasicParam _x
+
+_edge_add: 
+Temp16 = _num ADD 1
+_num = Temp16
+Temp15 = _num
+Temp17 = 0
+Temp18 = Temp15 MUL 4
+Temp17 = Temp17 ADD Temp18
+Temp19 = _edge ADD Temp17
+*Temp19 = v , 4
+Temp14 = *Temp19, 4
+Temp14 = *Temp19, 4
+Temp22 = 0
+Temp23 = u MUL 4
+Temp22 = Temp22 ADD Temp23
+Temp24 = _first ADD Temp22
+Temp25 = *Temp24, 4
+Temp26 = 0
+Temp27 = _num MUL 4
+Temp26 = Temp26 ADD Temp27
+Temp28 = _next ADD Temp26
+*Temp28 = Temp25 , 4
+Temp21 = *Temp28, 4
+Temp21 = *Temp28, 4
+Temp31 = 0
+Temp32 = u MUL 4
+Temp31 = Temp31 ADD Temp32
+Temp33 = _first ADD Temp31
+*Temp33 = _num , 4
+Temp30 = *Temp33, 4
+Temp30 = *Temp33, 4
+
+_search: 
+_head = 1
+_tail = 0
+_flag = 0
+_i = 1
+Temp35 = _i
+Label :10	Temp36 = _i LE _n
+If Not Equal to Zero Temp36 Goto Label :11	
+Goto label:9
+Label :11	Temp39 = 0
+Temp40 = _i MUL 4
+Temp39 = Temp39 ADD Temp40
+Temp41 = _dy ADD Temp39
+*Temp41 = 0 , 4
+Temp38 = *Temp41, 4
+Temp38 = *Temp41, 4
+Temp43 = 0
+Temp44 = _i MUL 4
+Temp43 = Temp43 ADD Temp44
+Temp45 = _dx ADD Temp43
+*Temp45 = Temp38 , 4
+Temp37 = *Temp45, 4
+Temp37 = *Temp45, 4
+Temp48 = _i ADD 1
+_i = Temp48
+Temp47 = _i
+Goto label:10
+Label :9	_i = 1
+Temp49 = _i
+Label :13	Temp50 = _i LE _n
+If Not Equal to Zero Temp50 Goto Label :14	
+Goto label:12
+Label :14	Temp51 = 0
+Temp52 = _i MUL 4
+Temp51 = Temp51 ADD Temp52
+Temp53 = _opt ADD Temp51
+Temp54 = *Temp53, 4
+If Not Equal to Zero Temp54 Goto Label :15	
+Goto label:16
+Label :16	Temp57 = _tail ADD 1
+_tail = Temp57
+Temp56 = _tail
+Temp58 = 0
+Temp59 = Temp56 MUL 4
+Temp58 = Temp58 ADD Temp59
+Temp60 = _queue ADD Temp58
+*Temp60 = _i , 4
+Temp55 = *Temp60, 4
+Temp55 = *Temp60, 4
+Temp63 = 0
+Temp64 = _i MUL 4
+Temp63 = Temp63 ADD Temp64
+Temp65 = _dx ADD Temp63
+*Temp65 = 1 , 4
+Temp62 = *Temp65, 4
+Temp62 = *Temp65, 4
+Label :15	Temp68 = _i ADD 1
+_i = Temp68
+Temp67 = _i
+Goto label:13
+Label :12	Label :18	Temp69 = _head LE _tail
+If Not Equal to Zero Temp69 Goto Label :19	
+Goto label:17
+Label :19	Temp71 = 0
+Temp72 = _head MUL 4
+Temp71 = Temp71 ADD Temp72
+Temp73 = _queue ADD Temp71
+Temp74 = *Temp73, 4
+_u = Temp74
+Temp70 = _u
+Temp76 = 0
+Temp77 = _u MUL 4
+Temp76 = Temp76 ADD Temp77
+Temp78 = _first ADD Temp76
+Temp79 = *Temp78, 4
+_k = Temp79
+Temp75 = _k
+Label :21	If Not Equal to Zero _k Goto Label :22	
+Goto label:20
+Label :22	Temp81 = 0
+Temp82 = _k MUL 4
+Temp81 = Temp81 ADD Temp82
+Temp83 = _edge ADD Temp81
+Temp84 = *Temp83, 4
+_v = Temp84
+Temp80 = _v
+Temp85 = 0
+Temp86 = _v MUL 4
+Temp85 = Temp85 ADD Temp86
+Temp87 = _dy ADD Temp85
+Temp88 = *Temp87, 4
+If Not Equal to Zero Temp88 Goto Label :24	
+Goto label:23
+Label :24	Goto label:21
+Label :23	Temp90 = 0
+Temp91 = _u MUL 4
+Temp90 = Temp90 ADD Temp91
+Temp92 = _dx ADD Temp90
+Temp93 = *Temp92, 4
+Temp94 = Temp93 ADD 1
+Temp95 = 0
+Temp96 = _v MUL 4
+Temp95 = Temp95 ADD Temp96
+Temp97 = _dy ADD Temp95
+*Temp97 = Temp94 , 4
+Temp89 = *Temp97, 4
+Temp89 = *Temp97, 4
+Temp99 = 0
+Temp100 = _v MUL 4
+Temp99 = Temp99 ADD Temp100
+Temp101 = _match ADD Temp99
+Temp102 = *Temp101, 4
+If Not Equal to Zero Temp102 Goto Label :27	
+Goto label:26
+Label :26	_flag = 1
+Temp103 = _flag
+Goto label:25
+Label :27	Temp105 = 0
+Temp106 = _v MUL 4
+Temp105 = Temp105 ADD Temp106
+Temp107 = _dy ADD Temp105
+Temp108 = *Temp107, 4
+Temp109 = Temp108 ADD 1
+Temp111 = 0
+Temp112 = _v MUL 4
+Temp111 = Temp111 ADD Temp112
+Temp113 = _match ADD Temp111
+Temp114 = *Temp113, 4
+Temp116 = _tail ADD 1
+_tail = Temp116
+Temp115 = _tail
+Temp117 = 0
+Temp118 = Temp115 MUL 4
+Temp117 = Temp117 ADD Temp118
+Temp119 = _queue ADD Temp117
+*Temp119 = Temp114 , 4
+Temp110 = *Temp119, 4
+Temp110 = *Temp119, 4
+Temp121 = 0
+Temp122 = Temp110 MUL 4
+Temp121 = Temp121 ADD Temp122
+Temp123 = _dx ADD Temp121
+*Temp123 = Temp109 , 4
+Temp104 = *Temp123, 4
+Temp104 = *Temp123, 4
+Label :25	Temp126 = 0
+Temp127 = _k MUL 4
+Temp126 = Temp126 ADD Temp127
+Temp128 = _next ADD Temp126
+Temp129 = *Temp128, 4
+_k = Temp129
+Temp125 = _k
+Goto label:21
+Label :20	Temp131 = _head ADD 1
+_head = Temp131
+Temp130 = _head
+Goto label:18
+Label :17	Return BasicParam _flag
+
+_Extend_Path: 
+Temp133 = 0
+Temp134 = u MUL 4
+Temp133 = Temp133 ADD Temp134
+Temp135 = _first ADD Temp133
+Temp136 = *Temp135, 4
+_k = Temp136
+Temp132 = _k
+Label :29	If Not Equal to Zero _k Goto Label :30	
+Goto label:28
+Label :30	Temp138 = 0
+Temp139 = _k MUL 4
+Temp138 = Temp138 ADD Temp139
+Temp140 = _edge ADD Temp138
+Temp141 = *Temp140, 4
+_v = Temp141
+Temp137 = _v
+Temp142 = 0
+Temp143 = _v MUL 4
+Temp142 = Temp142 ADD Temp143
+Temp144 = _dy ADD Temp142
+Temp145 = *Temp144, 4
+Temp146 = 0
+Temp147 = u MUL 4
+Temp146 = Temp146 ADD Temp147
+Temp148 = _dx ADD Temp146
+Temp149 = *Temp148, 4
+Temp150 = Temp149 ADD 1
+Temp151 = Temp145 NE Temp150
+If Not Equal to Zero Temp151 Goto Label :32	
+Goto label:31
+Label :32	Goto label:29
+Label :31	Temp153 = 0
+Temp154 = _v MUL 4
+Temp153 = Temp153 ADD Temp154
+Temp155 = _dy ADD Temp153
+*Temp155 = 0 , 4
+Temp152 = *Temp155, 4
+Temp152 = *Temp155, 4
+Temp158 = 0
+Temp159 = _v MUL 4
+Temp158 = Temp158 ADD Temp159
+Temp160 = _match ADD Temp158
+Temp161 = *Temp160, 4
+_t = Temp161
+Temp157 = _t
+Temp163 = 0
+Temp164 = _v MUL 4
+Temp163 = Temp163 ADD Temp164
+Temp165 = _match ADD Temp163
+*Temp165 = u , 4
+Temp162 = *Temp165, 4
+Temp162 = *Temp165, 4
+Temp168 = 0
+Temp169 = u MUL 4
+Temp168 = Temp168 ADD Temp169
+Temp170 = _opt ADD Temp168
+*Temp170 = _v , 4
+Temp167 = *Temp170, 4
+Temp167 = *Temp170, 4
+Temp173 = 0
+Temp174 = _t MUL 4
+Temp173 = Temp173 ADD Temp174
+Temp175 = _opt ADD Temp173
+*Temp175 = 0 , 4
+Temp172 = *Temp175, 4
+Temp172 = *Temp175, 4
+If Not Equal to Zero _t Goto Label :35	
+Goto label:34
+Label :35	BasicParam _t
+Temp177 = call _Extend_Path , 1
+If Not Equal to Zero Temp177 Goto Label :34	
+Goto label:33
+Label :34	Return BasicParam 1
+Label :33	Temp179 = 0
+Temp180 = u MUL 4
+Temp179 = Temp179 ADD Temp180
+Temp181 = _opt ADD Temp179
+*Temp181 = 0 , 4
+Temp178 = *Temp181, 4
+Temp178 = *Temp181, 4
+Temp184 = 0
+Temp185 = _v MUL 4
+Temp184 = Temp184 ADD Temp185
+Temp186 = _match ADD Temp184
+*Temp186 = _t , 4
+Temp183 = *Temp186, 4
+Temp183 = *Temp186, 4
+Temp189 = 0
+Temp190 = _t MUL 4
+Temp189 = Temp189 ADD Temp190
+Temp191 = _opt ADD Temp189
+*Temp191 = _v , 4
+Temp188 = *Temp191, 4
+Temp188 = *Temp191, 4
+Temp194 = 0
+Temp195 = _k MUL 4
+Temp194 = Temp194 ADD Temp195
+Temp196 = _next ADD Temp194
+Temp197 = *Temp196, 4
+_k = Temp197
+Temp193 = _k
+Goto label:29
+Label :28	Return BasicParam 0
+
+_Hopcroft_Karp: 
+Label :37	Temp198 = call _search , 0
+If Not Equal to Zero Temp198 Goto Label :38	
+Goto label:36
+Label :38	_i = 1
+Temp199 = _i
+Label :40	Temp200 = _i LE _n
+If Not Equal to Zero Temp200 Goto Label :41	
+Goto label:39
+Label :41	Temp201 = 0
+Temp202 = _i MUL 4
+Temp201 = Temp201 ADD Temp202
+Temp203 = _opt ADD Temp201
+Temp204 = *Temp203, 4
+If Not Equal to Zero Temp204 Goto Label :42	
+Goto label:44
+Label :44	BasicParam _i
+Temp205 = call _Extend_Path , 1
+If Not Equal to Zero Temp205 Goto Label :43	
+Goto label:42
+Label :43	Temp207 = _ans ADD 1
+_ans = Temp207
+Temp206 = _ans
+Label :42	Temp209 = _i ADD 1
+_i = Temp209
+Temp208 = _i
+Goto label:40
+Label :39	Goto label:37
+Label :36	
+_main: 
+Temp211 = call _read , 0
+_n = Temp211
+Temp210 = _n
+Temp213 = call _read , 0
+_m = Temp213
+Temp212 = _m
+_i = 1
+Temp214 = _i
+Label :46	Temp215 = _i LE _m
+If Not Equal to Zero Temp215 Goto Label :47	
+Goto label:45
+Label :47	Temp217 = call _read , 0
+Temp218 = 0
+Temp219 = _i MUL 12
+Temp218 = Temp218 ADD Temp219
+Temp220 = _a ADD Temp218
+Temp221 = *Temp220, 12
+Temp221[0] = Temp217 , 4
+Temp223 = call _read , 0
+Temp224 = 0
+Temp225 = _i MUL 12
+Temp224 = Temp224 ADD Temp225
+Temp226 = _a ADD Temp224
+Temp227 = *Temp226, 12
+Temp227[4] = Temp223 , 4
+Temp228 = 0
+Temp229 = _i MUL 12
+Temp228 = Temp228 ADD Temp229
+Temp230 = _a ADD Temp228
+Temp231 = *Temp230, 12
+Temp232 = Temp231[0] , 4
+Temp233 = 0
+Temp234 = _i MUL 12
+Temp233 = Temp233 ADD Temp234
+Temp235 = _a ADD Temp233
+Temp236 = *Temp235, 12
+Temp237 = Temp236[4] , 4
+BasicParam Temp232
+BasicParam Temp237
+Temp238 = call _edge_add , 2
+Temp240 = _i ADD 1
+_i = Temp240
+Temp239 = _i
+Goto label:46
+Label :45	Temp241 = call _Hopcroft_Karp , 0
+BasicParam Temp242
+BasicParam _ans
+_printf_cnt = 2
+Temp243 = call _printf , 2
+

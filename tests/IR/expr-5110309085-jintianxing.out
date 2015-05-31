@@ -779,18 +779,12 @@ Temp760 = Temp697 ADD Temp759
 Temp761 = Temp636 SUB Temp760
 _C = Temp761
 Temp509 = _C
-BasicParam Temp762
+Goto label:2
+Label :1	BasicParam Temp762
 BasicParam _A
 BasicParam _B
 BasicParam _C
 _printf_cnt = 4
 Temp763 = call _printf , 4
-Goto label:2
-Label :1	BasicParam Temp764
-BasicParam _A
-BasicParam _B
-BasicParam _C
-_printf_cnt = 4
-Temp765 = call _printf , 4
 Return BasicParam 0
 

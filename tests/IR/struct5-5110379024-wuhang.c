@@ -13,10 +13,8 @@ struct node
     int count;
     struct inside{int p;} in;
 } a[5];
-int cnt = 0;
 int comp1(struct inside in1,struct inside in2)
 {
-	cnt++;
     if (in1.p!=in2.p) return 0;
     else return 1;
 }
@@ -24,10 +22,8 @@ int compare(struct node node1,struct node node2)
 {
     int i,j=0;
     for (i=0;i<size1;++i)
-        for (j=0;j<size1;++j) {
-        	//printf("node1.a[%d][%d] = %d,  node2.a[%d][%d] = %d\n", i, j, node1.a[i][j], i, j, node2.a[i][j]);
+        for (j=0;j<size1;++j)
             if (node1.a[i][j]!=node2.a[i][j]) return 0;
-        }
     if (node1.ch[0]!=node2.ch[0]) return 0;
     else if (node1.ch[1]!=node2.ch[1]) return 0;
     //else if (node1.count-node2.count!=0) return 0;
@@ -41,14 +37,10 @@ struct node getNode(int i)
 }
 void exchange(struct node *node1,struct node *node2)
 {
- //   struct node temp=*node1;
- //   *node1=*node2;
- //   *node2=temp;
- struct node *temp = node1;
- node1 = node2;
- node2 = temp;
+    struct node temp=*node1;
+    *node1=*node2;
+    *node2=temp;
 }
-
 int comp(int i,int j)
 {
     struct node node1=getNode(i),node2=getNode(j);
@@ -81,7 +73,7 @@ int main()
         for (i=0;i<size1;++i)
             for (j=0;j<size1;++j)
             {
-                a[k].a[i][j]=(i*5110+j)%(34-k)+1,a[k].ch[0]=k+i*i*i,a[k].ch[1]=j+i+k<<1;a[k].in.p=k+~i|j;
+                a[k].a[i][j]=(i*5110+j)%(34-k)+1,a[k].ch[0]=k+i*i*i,a[k].ch[1]=j+i+k<<1,a[k].in.p=k+~i|j;
                 a[k].ch[0]=a[k].ch[0]%('z'-'a'+1)+'a';
                 a[k].ch[1]=a[k].ch[1]%('Z'-'A'+1)+'A';
             }
@@ -93,30 +85,13 @@ int main()
     for (i=size2-1;i>-1;i--)
         if (i%3==0) a[i]=getNode((i+3)%size2);
         else a[i]=getNode(i);
-    printf("$$$$$$$$$$$$$$$$$$$\n");
-
-    for (i = 0; i < size2; i++) {
-        int r,s;
-        printf("\n %d : \n", i);
-        for (r = 0; r < size1; r++) {
-            for (s = 0; s < size1; s++)
-                printf("%d ", getNode(i).a[r][s]);
-            printf("\n");
-        }
-    }
-
+    printf("\n");
     for (i=0;i<size2;++i)
     {
-        for (j=0;j<size2;++j){
-        	struct node node1 = getNode(i);
-        	struct node node2 = getNode(j);
-        	int r,s;
-            printf("%d ", compare(getNode(i), getNode(j))); 
-        }
+        for (j=0;j<size2;++j)
+            printf("%d ",compare(getNode(i),getNode(j)));
         printf("\n");
     }
-    printf("%d\n", cnt);
     //system("pause");
     return 0;
 }
-

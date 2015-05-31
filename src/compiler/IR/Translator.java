@@ -173,6 +173,7 @@ public class Translator implements Visitor {
    public void dealWithCondition(Expr expr) {
       if (isBoolExpr(expr)) expr.accept(this);
       else {
+         if (expr instanceof EmptyExpr) return;
          expr.accept(this);
          curFunction.body.add(new IfNEZGoto(expr.address, expr.True));
          curFunction.body.add(new Goto(expr.False));

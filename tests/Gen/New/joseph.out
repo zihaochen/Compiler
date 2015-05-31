@@ -1,0 +1,125 @@
+_start: 
+_printf_cnt = 0
+
+_malloc: 
+
+_getchar: 
+
+_printf: 
+
+_read: 
+Temp1 = call _getchar , 0
+_ch = Temp1
+Label :2	Temp2 = _ch LT 48
+If Not Equal to Zero Temp2 Goto Label :3	
+Goto label:4
+Label :4	Temp3 = _ch GT 57
+If Not Equal to Zero Temp3 Goto Label :3	
+Goto label:1
+Label :3	Temp5 = call _getchar , 0
+_ch = Temp5
+Temp4 = _ch
+Goto label:2
+Label :1	_x = 0
+Temp6 = _x
+Label :6	Temp7 = 48 LE _ch
+If Not Equal to Zero Temp7 Goto Label :8	
+Goto label:5
+Label :8	Temp8 = _ch LE 57
+If Not Equal to Zero Temp8 Goto Label :7	
+Goto label:5
+Label :7	Temp10 = 10 MUL _x
+Temp11 = Temp10 ADD _ch
+Temp12 = Temp11 SUB 48
+_x = Temp12
+Temp9 = _x
+Temp14 = call _getchar , 0
+_ch = Temp14
+Temp13 = _ch
+Goto label:6
+Label :5	Return BasicParam _x
+
+_main: 
+Temp16 = call _read , 0
+_N = Temp16
+Temp15 = _N
+Temp18 = call _read , 0
+_M = Temp18
+Temp17 = _M
+_i = 0
+Temp19 = _i
+Label :10	Temp20 = _i LT _N
+If Not Equal to Zero Temp20 Goto Label :11	
+Goto label:9
+Label :11	Temp22 = _i ADD 1
+Temp23 = 0
+Temp24 = _i MUL 4
+Temp23 = Temp23 ADD Temp24
+Temp25 = _a ADD Temp23
+*Temp25 = Temp22 , 4
+Temp21 = *Temp25, 4
+Temp21 = *Temp25, 4
+Temp29 = _i ADD 1
+_i = Temp29
+Temp28 = _i
+Temp27 = Temp28 SUB 1
+Goto label:10
+Label :9	_i = -1
+Temp30 = _i
+_last = _N
+Temp31 = _last
+Label :13	Temp32 = _last GT 0
+If Not Equal to Zero Temp32 Goto Label :14	
+Goto label:12
+Label :14	_j = 0
+Label :16	Temp33 = _j LT _M
+If Not Equal to Zero Temp33 Goto Label :17	
+Goto label:15
+Label :17	Temp36 = _i ADD 1
+_i = Temp36
+Temp35 = _i
+Temp34 = Temp35 SUB 1
+Temp37 = _i EQ _N
+If Not Equal to Zero Temp37 Goto Label :19	
+Goto label:18
+Label :19	_i = 0
+Temp38 = _i
+Label :18	Temp39 = 0
+Temp40 = _i MUL 4
+Temp39 = Temp39 ADD Temp40
+Temp41 = _a ADD Temp39
+Temp42 = *Temp41, 4
+Temp43 = Temp42 GT 0
+If Not Equal to Zero Temp43 Goto Label :21	
+Goto label:20
+Label :21	Temp46 = _j ADD 1
+_j = Temp46
+Temp45 = _j
+Temp44 = Temp45 SUB 1
+Label :20	Goto label:16
+Label :15	Temp48 = 0
+Temp49 = _i MUL 4
+Temp48 = Temp48 ADD Temp49
+Temp50 = _a ADD Temp48
+Temp51 = *Temp50, 4
+BasicParam Temp47
+BasicParam Temp51
+_printf_cnt = 2
+Temp52 = call _printf , 2
+Temp54 = 0
+Temp55 = _i MUL 4
+Temp54 = Temp54 ADD Temp55
+Temp56 = _a ADD Temp54
+*Temp56 = -1 , 4
+Temp53 = *Temp56, 4
+Temp53 = *Temp56, 4
+Temp60 = _last SUB 1
+_last = Temp60
+Temp59 = _last
+Temp58 = Temp59 ADD 1
+Goto label:13
+Label :12	BasicParam Temp61
+_printf_cnt = 1
+Temp62 = call _printf , 1
+Return BasicParam 0
+

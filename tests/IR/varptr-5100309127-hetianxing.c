@@ -18,7 +18,8 @@ void addMiddle(int *ptr) {
 int main() {
 	int i;
 	int *ptr = &sumBig;
-	for (i = 1;i <= 10;i++) {
+        int N=10*(getchar()-'0')+getchar()-'0';
+	for (i = 1;i <= N;i++) {
 		int sumMiddle = 0;
 		addMiddle(&sumMiddle);
 		*ptr = *ptr + sumMiddle;

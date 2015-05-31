@@ -10,9 +10,12 @@ int gcd(int x, int y) {
 }
 
 int main() {
+  int a,b;
+  a=10*(getchar()-'0')+getchar()-'0';getchar();
+  b=10*(getchar()-'0')+getchar()-'0';getchar();
   printf("%d\n%d\n%d\n%d\n",
     gcd(10,1),
-    gcd(50,35),
+    gcd(a,b),
     gcd(34986,3087),
     gcd(2907,1539));
   return 0;

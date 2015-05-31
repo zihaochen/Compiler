@@ -36,13 +36,35 @@ Goto label:1
 Label :3	Return BasicParam z
 Label :1	
 _main: 
-BasicParam 18
-BasicParam 12
-BasicParam 6
-Temp11 = call _tak , 3
-BasicParam Temp10
-BasicParam Temp11
+Temp11 = call _getchar , 0
+Temp12 = Temp11 SUB 48
+Temp13 = 10 MUL Temp12
+Temp14 = call _getchar , 0
+Temp15 = Temp13 ADD Temp14
+Temp16 = Temp15 SUB 48
+_a = Temp16
+Temp10 = _a
+Temp17 = call _getchar , 0
+Temp19 = call _getchar , 0
+Temp20 = Temp19 SUB 48
+Temp21 = 10 MUL Temp20
+Temp22 = call _getchar , 0
+Temp23 = Temp21 ADD Temp22
+Temp24 = Temp23 SUB 48
+_b = Temp24
+Temp18 = _b
+Temp25 = call _getchar , 0
+Temp27 = call _getchar , 0
+Temp28 = Temp27 SUB 48
+_c = Temp28
+Temp26 = _c
+BasicParam _a
+BasicParam _b
+BasicParam _c
+Temp30 = call _tak , 3
+BasicParam Temp29
+BasicParam Temp30
 _printf_cnt = 2
-Temp12 = call _printf , 2
+Temp31 = call _printf , 2
 Return BasicParam 0
 
