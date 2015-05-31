@@ -352,9 +352,9 @@ L6:
 	jr $ra
 _get_int:
 	sw $ra, ($sp)
-	subu $sp, $sp, 196
+	subu $sp, $sp, 80
 	jal _getchar
-	addi $sp, $sp, 196
+	addi $sp, $sp, 80
 	sw $v0, -8($sp)
 	lw $ra, ($sp)
 	lw $t0, -8($sp)
@@ -386,9 +386,9 @@ L15:
 	bne $t0, $0, L14
 	b L12
 L14:
-	subu $sp, $sp, 196
+	subu $sp, $sp, 80
 	jal _getchar
-	addi $sp, $sp, 196
+	addi $sp, $sp, 80
 	sw $v0, -32($sp)
 	lw $ra, ($sp)
 	lw $t0, -32($sp)
@@ -405,9 +405,9 @@ L12:
 	bne $t0, $0, L18
 	b L17
 L18:
-	subu $sp, $sp, 196
+	subu $sp, $sp, 80
 	jal _get_int
-	addi $sp, $sp, 196
+	addi $sp, $sp, 80
 	sw $v0, -40($sp)
 	lw $ra, ($sp)
 	lw $t2, -40($sp)
@@ -450,9 +450,9 @@ L21:
 	sw $t0, -12($sp)
 	lw $t0, -12($sp)
 	sw $t0, -56($sp)
-	subu $sp, $sp, 196
+	subu $sp, $sp, 80
 	jal _getchar
-	addi $sp, $sp, 196
+	addi $sp, $sp, 80
 	sw $v0, -76($sp)
 	lw $ra, ($sp)
 	lw $t0, -76($sp)
@@ -477,18 +477,18 @@ _main:
 	sw $t0, -720($sp)
 	li $t0, 1
 	sw $t0, -4($sp)
-	subu $sp, $sp, 196
+	subu $sp, $sp, 736
 	jal _get_int
-	addi $sp, $sp, 196
+	addi $sp, $sp, 736
 	sw $v0, -16($sp)
 	lw $ra, ($sp)
 	lw $t0, -16($sp)
 	sw $t0, _n
 	lw $t0, _n
 	sw $t0, -12($sp)
-	subu $sp, $sp, 196
+	subu $sp, $sp, 736
 	jal _get_int
-	addi $sp, $sp, 196
+	addi $sp, $sp, 736
 	sw $v0, -24($sp)
 	lw $ra, ($sp)
 	lw $t0, -24($sp)
@@ -692,16 +692,16 @@ L27:
 	bne $t0, $0, L28
 	b L26
 L28:
-	subu $sp, $sp, 740
+	subu $sp, $sp, 736
 	jal _get_int
-	addi $sp, $sp, 740
+	addi $sp, $sp, 736
 	sw $v0, -188($sp)
 	lw $ra, ($sp)
 	lw $t0, -188($sp)
 	sw $t0, -184($sp)
-	subu $sp, $sp, 740
+	subu $sp, $sp, 736
 	jal _get_int
-	addi $sp, $sp, 740
+	addi $sp, $sp, 736
 	sw $v0, -196($sp)
 	lw $ra, ($sp)
 	lw $t0, -196($sp)
@@ -768,9 +768,9 @@ L28:
 	sw $t0, -252($sp)
 	b L27
 L26:
-	subu $sp, $sp, 740
+	subu $sp, $sp, 736
 	jal _get_int
-	addi $sp, $sp, 740
+	addi $sp, $sp, 736
 	sw $v0, -264($sp)
 	lw $ra, ($sp)
 	lw $t0, -264($sp)

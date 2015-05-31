@@ -1,6 +1,7 @@
 .data
 	_printf_cnt: .space 4
-	str_1: .space 64
+	str_1: .space 16
+	str_2: .space 64
 .text
 main:
 	move $fp, $sp     # start using memory here
@@ -8,53 +9,65 @@ main:
 	subu $sp, $sp, 4
 	li $t0, 0
 	sw $t0, _printf_cnt
-	li $t0, 97
+	li $t0, 37
 	la $t1, str_1
 	sw $t0, 0($t1)
-	li $t0, 32
+	li $t0, 100
 	la $t1, str_1
 	sw $t0, 4($t1)
-	li $t0, 61
-	la $t1, str_1
-	sw $t0, 8($t1)
-	li $t0, 32
-	la $t1, str_1
-	sw $t0, 12($t1)
-	li $t0, 37
-	la $t1, str_1
-	sw $t0, 16($t1)
-	li $t0, 100
-	la $t1, str_1
-	sw $t0, 20($t1)
-	li $t0, 44
-	la $t1, str_1
-	sw $t0, 24($t1)
-	li $t0, 32
-	la $t1, str_1
-	sw $t0, 28($t1)
-	li $t0, 98
-	la $t1, str_1
-	sw $t0, 32($t1)
-	li $t0, 32
-	la $t1, str_1
-	sw $t0, 36($t1)
-	li $t0, 61
-	la $t1, str_1
-	sw $t0, 40($t1)
-	li $t0, 32
-	la $t1, str_1
-	sw $t0, 44($t1)
-	li $t0, 37
-	la $t1, str_1
-	sw $t0, 48($t1)
-	li $t0, 100
-	la $t1, str_1
-	sw $t0, 52($t1)
 	li $t0, 10
 	la $t1, str_1
-	sw $t0, 56($t1)
+	sw $t0, 8($t1)
 	li $t0, 0
 	la $t1, str_1
+	sw $t0, 12($t1)
+	li $t0, 97
+	la $t1, str_2
+	sw $t0, 0($t1)
+	li $t0, 32
+	la $t1, str_2
+	sw $t0, 4($t1)
+	li $t0, 61
+	la $t1, str_2
+	sw $t0, 8($t1)
+	li $t0, 32
+	la $t1, str_2
+	sw $t0, 12($t1)
+	li $t0, 37
+	la $t1, str_2
+	sw $t0, 16($t1)
+	li $t0, 100
+	la $t1, str_2
+	sw $t0, 20($t1)
+	li $t0, 44
+	la $t1, str_2
+	sw $t0, 24($t1)
+	li $t0, 32
+	la $t1, str_2
+	sw $t0, 28($t1)
+	li $t0, 98
+	la $t1, str_2
+	sw $t0, 32($t1)
+	li $t0, 32
+	la $t1, str_2
+	sw $t0, 36($t1)
+	li $t0, 61
+	la $t1, str_2
+	sw $t0, 40($t1)
+	li $t0, 32
+	la $t1, str_2
+	sw $t0, 44($t1)
+	li $t0, 37
+	la $t1, str_2
+	sw $t0, 48($t1)
+	li $t0, 100
+	la $t1, str_2
+	sw $t0, 52($t1)
+	li $t0, 10
+	la $t1, str_2
+	sw $t0, 56($t1)
+	li $t0, 0
+	la $t1, str_2
 	sw $t0, 60($t1)
 	j _main
 _read:
@@ -106,36 +119,59 @@ L1:
 	sw $v0, -12($sp)
 	jr $ra
 	jr $ra
-_main:
+_print:
 	sw $ra, ($sp)
 	la $t0, str_1
+	sw $t0, -8($sp)
+	li $t0, 12345
+	sw $t0, -4($sp)
+	lw $t0, -8($sp)
+	sw $t0, -16($sp)
+	lw $t0, -4($sp)
 	sw $t0, -20($sp)
-	subu $sp, $sp, 40
+	li $t0, 2
+	sw $t0, _printf_cnt
+	subu $sp, $sp, 24
+	jal _printf
+	addi $sp, $sp, 24
+	sw $v0, -12($sp)
+	lw $ra, ($sp)
+	jr $ra
+_main:
+	sw $ra, ($sp)
+	la $t0, str_2
+	sw $t0, -24($sp)
+	subu $sp, $sp, 32
 	jal _read
-	addi $sp, $sp, 40
+	addi $sp, $sp, 32
 	sw $v0, -8($sp)
 	lw $ra, ($sp)
 	lw $t0, -8($sp)
 	sw $t0, -4($sp)
-	subu $sp, $sp, 40
+	subu $sp, $sp, 32
 	jal _read
-	addi $sp, $sp, 40
+	addi $sp, $sp, 32
 	sw $v0, -16($sp)
 	lw $ra, ($sp)
 	lw $t0, -16($sp)
 	sw $t0, -12($sp)
-	lw $t0, -20($sp)
-	sw $t0, -28($sp)
-	lw $t0, -4($sp)
+	subu $sp, $sp, 32
+	jal _print
+	addi $sp, $sp, 32
+	sw $v0, -20($sp)
+	lw $ra, ($sp)
+	lw $t0, -24($sp)
 	sw $t0, -32($sp)
-	lw $t0, -12($sp)
+	lw $t0, -4($sp)
 	sw $t0, -36($sp)
+	lw $t0, -12($sp)
+	sw $t0, -40($sp)
 	li $t0, 3
 	sw $t0, _printf_cnt
-	subu $sp, $sp, 40
+	subu $sp, $sp, 44
 	jal _printf
-	addi $sp, $sp, 40
-	sw $v0, -24($sp)
+	addi $sp, $sp, 44
+	sw $v0, -28($sp)
 	lw $ra, ($sp)
 	jr $ra
 

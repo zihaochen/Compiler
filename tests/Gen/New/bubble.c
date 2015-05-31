@@ -11,6 +11,7 @@ void init() {
         a[i].y=(i*5-1)%40;
         xx = a[i].x;
         yy = a[i].y;
+    printf("debug\n");
         printf("%d %d\n", xx, yy);
        // printf("(%d,%d)\n",a[i].x,a[i].y);
     }
@@ -20,10 +21,8 @@ void init() {
 int main() {
     int i,j;
     struct a c;
+   // printf("\n");
     init();
-    printf("debug\n");
-	printf("debug\n");
-	printf("debug\n");
 	printf("debug\n");
     for(i=0;i<n;i++){
         for(j=i+1;j<n;++j){

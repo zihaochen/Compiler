@@ -10,8 +10,14 @@ int read() {
 	return x;
 }
 
+void print() {
+	int a = 12345;
+	printf("%d\n", a);
+}
+
 int main() {
 	int a = read();
 	int b = read();
+	print();
 	printf("a = %d, b = %d\n", a, b);
 }

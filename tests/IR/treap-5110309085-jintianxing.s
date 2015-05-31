@@ -8,6 +8,7 @@
 	_i: .space 4
 	_root: .space 4
 	str_1: .space 16
+	str_2: .space 16
 .text
 main:
 	move $fp, $sp     # start using memory here
@@ -34,6 +35,18 @@ main:
 	sw $t0, 8($t1)
 	li $t0, 0
 	la $t1, str_1
+	sw $t0, 12($t1)
+	li $t0, 37
+	la $t1, str_2
+	sw $t0, 0($t1)
+	li $t0, 100
+	la $t1, str_2
+	sw $t0, 4($t1)
+	li $t0, 10
+	la $t1, str_2
+	sw $t0, 8($t1)
+	li $t0, 0
+	la $t1, str_2
 	sw $t0, 12($t1)
 	j _main
 _get_random:
@@ -577,9 +590,9 @@ _alloc_node:
 	lw $t1, -36($sp)
 	lw $t0, 8($t1)
 	sw $t0, -32($sp)
-	subu $sp, $sp, 68
+	subu $sp, $sp, 64
 	jal _get_random
-	addi $sp, $sp, 68
+	addi $sp, $sp, 64
 	sw $v0, -44($sp)
 	lw $ra, ($sp)
 	lw $t0, -4($sp)
@@ -591,9 +604,9 @@ _alloc_node:
 	lw $t1, -48($sp)
 	lw $t0, 4($t1)
 	sw $t0, -40($sp)
-	subu $sp, $sp, 68
+	subu $sp, $sp, 64
 	jal _get_random
-	addi $sp, $sp, 68
+	addi $sp, $sp, 64
 	sw $v0, -56($sp)
 	lw $ra, ($sp)
 	lw $t0, -4($sp)
@@ -612,10 +625,12 @@ _alloc_node:
 _main:
 	sw $ra, ($sp)
 	la $t0, str_1
-	sw $t0, -128($sp)
-	subu $sp, $sp, 68
+	sw $t0, -80($sp)
+	la $t0, str_2
+	sw $t0, -136($sp)
+	subu $sp, $sp, 160
 	jal _getchar
-	addi $sp, $sp, 68
+	addi $sp, $sp, 160
 	sw $v0, -8($sp)
 	lw $ra, ($sp)
 	li $t2, 48
@@ -626,9 +641,9 @@ _main:
 	li $t1, 10000
 	mul $t0, $t1, $t2
 	sw $t0, -16($sp)
-	subu $sp, $sp, 68
+	subu $sp, $sp, 160
 	jal _getchar
-	addi $sp, $sp, 68
+	addi $sp, $sp, 160
 	sw $v0, -20($sp)
 	lw $ra, ($sp)
 	li $t2, 48
@@ -643,9 +658,9 @@ _main:
 	lw $t1, -16($sp)
 	add $t0, $t1, $t2
 	sw $t0, -32($sp)
-	subu $sp, $sp, 68
+	subu $sp, $sp, 160
 	jal _getchar
-	addi $sp, $sp, 68
+	addi $sp, $sp, 160
 	sw $v0, -36($sp)
 	lw $ra, ($sp)
 	li $t2, 48
@@ -660,9 +675,9 @@ _main:
 	lw $t1, -32($sp)
 	add $t0, $t1, $t2
 	sw $t0, -48($sp)
-	subu $sp, $sp, 68
+	subu $sp, $sp, 160
 	jal _getchar
-	addi $sp, $sp, 68
+	addi $sp, $sp, 160
 	sw $v0, -52($sp)
 	lw $ra, ($sp)
 	li $t2, 48
@@ -677,9 +692,9 @@ _main:
 	lw $t1, -48($sp)
 	add $t0, $t1, $t2
 	sw $t0, -64($sp)
-	subu $sp, $sp, 68
+	subu $sp, $sp, 160
 	jal _getchar
-	addi $sp, $sp, 68
+	addi $sp, $sp, 160
 	sw $v0, -68($sp)
 	lw $ra, ($sp)
 	lw $t2, -68($sp)
@@ -694,105 +709,116 @@ _main:
 	sw $t0, _A
 	lw $t0, _A
 	sw $t0, -4($sp)
-	subu $sp, $sp, 68
-	jal _alloc_node
-	addi $sp, $sp, 68
+	lw $t0, -80($sp)
+	sw $t0, -160($sp)
+	lw $t0, _A
+	sw $t0, -164($sp)
+	li $t0, 2
+	sw $t0, _printf_cnt
+	subu $sp, $sp, 168
+	jal _printf
+	addi $sp, $sp, 168
 	sw $v0, -84($sp)
 	lw $ra, ($sp)
-	lw $t0, -84($sp)
+	subu $sp, $sp, 160
+	jal _alloc_node
+	addi $sp, $sp, 160
+	sw $v0, -92($sp)
+	lw $ra, ($sp)
+	lw $t0, -92($sp)
 	sw $t0, _root
 	lw $t0, _root
-	sw $t0, -80($sp)
+	sw $t0, -88($sp)
 	li $t0, 0
 	sw $t0, _i
 	lw $t0, _i
-	sw $t0, -88($sp)
+	sw $t0, -96($sp)
 L21:
 	lw $t2, _N
 	lw $t1, _i
 	slt $t0, $t1, $t2
-	sw $t0, -92($sp)
-	lw $t0, -92($sp)
+	sw $t0, -100($sp)
+	lw $t0, -100($sp)
 	bne $t0, $0, L22
 	b L20
 L22:
-	subu $sp, $sp, 68
+	subu $sp, $sp, 160
 	jal _alloc_node
-	addi $sp, $sp, 68
-	sw $v0, -100($sp)
+	addi $sp, $sp, 160
+	sw $v0, -108($sp)
 	lw $ra, ($sp)
 	lw $t0, _root
-	sw $t0, -152($sp)
-	lw $t0, -100($sp)
-	sw $t0, -156($sp)
-	subu $sp, $sp, 160
+	sw $t0, -160($sp)
+	lw $t0, -108($sp)
+	sw $t0, -164($sp)
+	subu $sp, $sp, 168
 	jal _insert_node
-	addi $sp, $sp, 160
-	sw $v0, -104($sp)
+	addi $sp, $sp, 168
+	sw $v0, -112($sp)
 	lw $ra, ($sp)
-	lw $t0, -104($sp)
+	lw $t0, -112($sp)
 	sw $t0, _root
 	lw $t0, _root
-	sw $t0, -96($sp)
+	sw $t0, -104($sp)
 	li $t2, 1
 	lw $t1, _i
 	add $t0, $t1, $t2
-	sw $t0, -116($sp)
-	lw $t0, -116($sp)
+	sw $t0, -124($sp)
+	lw $t0, -124($sp)
 	sw $t0, _i
 	lw $t0, _i
-	sw $t0, -112($sp)
+	sw $t0, -120($sp)
 	li $t2, 1
-	lw $t1, -112($sp)
+	lw $t1, -120($sp)
 	sub $t0, $t1, $t2
-	sw $t0, -108($sp)
+	sw $t0, -116($sp)
 	b L21
 L20:
 	li $t0, 0
 	sw $t0, _i
 	lw $t0, _i
-	sw $t0, -120($sp)
+	sw $t0, -128($sp)
 L24:
 	lw $t2, _N
 	lw $t1, _i
 	sle $t0, $t1, $t2
-	sw $t0, -124($sp)
-	lw $t0, -124($sp)
+	sw $t0, -132($sp)
+	lw $t0, -132($sp)
 	bne $t0, $0, L25
 	b L23
 L25:
 	lw $t0, _root
-	sw $t0, -152($sp)
+	sw $t0, -160($sp)
 	lw $t0, _i
-	sw $t0, -156($sp)
-	subu $sp, $sp, 160
+	sw $t0, -164($sp)
+	subu $sp, $sp, 168
 	jal _get_kth_element
-	addi $sp, $sp, 160
-	sw $v0, -132($sp)
+	addi $sp, $sp, 168
+	sw $v0, -140($sp)
 	lw $ra, ($sp)
-	lw $t0, -128($sp)
-	sw $t0, -152($sp)
-	lw $t0, -132($sp)
-	sw $t0, -156($sp)
+	lw $t0, -136($sp)
+	sw $t0, -160($sp)
+	lw $t0, -140($sp)
+	sw $t0, -164($sp)
 	li $t0, 2
 	sw $t0, _printf_cnt
-	subu $sp, $sp, 160
+	subu $sp, $sp, 168
 	jal _printf
-	addi $sp, $sp, 160
-	sw $v0, -136($sp)
+	addi $sp, $sp, 168
+	sw $v0, -144($sp)
 	lw $ra, ($sp)
 	li $t2, 1
 	lw $t1, _i
 	add $t0, $t1, $t2
-	sw $t0, -148($sp)
-	lw $t0, -148($sp)
+	sw $t0, -156($sp)
+	lw $t0, -156($sp)
 	sw $t0, _i
 	lw $t0, _i
-	sw $t0, -144($sp)
+	sw $t0, -152($sp)
 	li $t2, 1
-	lw $t1, -144($sp)
+	lw $t1, -152($sp)
 	sub $t0, $t1, $t2
-	sw $t0, -140($sp)
+	sw $t0, -148($sp)
 	b L24
 L23:
 	li $v0, 0

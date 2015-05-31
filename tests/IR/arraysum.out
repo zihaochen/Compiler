@@ -25,14 +25,22 @@ _x = Temp7
 Temp6 = _x
 Return BasicParam _x
 
+_print: 
+_a = 12345
+BasicParam Temp8
+BasicParam _a
+_printf_cnt = 2
+Temp9 = call _printf , 2
+
 _main: 
-Temp8 = call _read , 0
-_a = Temp8
-Temp9 = call _read , 0
-_b = Temp9
-BasicParam Temp10
+Temp10 = call _read , 0
+_a = Temp10
+Temp11 = call _read , 0
+_b = Temp11
+Temp12 = call _print , 0
+BasicParam Temp13
 BasicParam _a
 BasicParam _b
 _printf_cnt = 3
-Temp11 = call _printf , 3
+Temp14 = call _printf , 3
 

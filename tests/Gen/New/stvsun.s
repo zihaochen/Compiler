@@ -150,9 +150,9 @@ L5:
 	bne $t0, $0, L4
 	b L6
 L6:
-	subu $sp, $sp, 60
+	subu $sp, $sp, 56
 	jal _getchar
-	addi $sp, $sp, 60
+	addi $sp, $sp, 56
 	sw $v0, -24($sp)
 	lw $ra, ($sp)
 	lw $t0, -24($sp)
@@ -189,9 +189,9 @@ L9:
 	sw $t0, -12($sp)
 	lw $t0, -12($sp)
 	sw $t0, -32($sp)
-	subu $sp, $sp, 60
+	subu $sp, $sp, 56
 	jal _getchar
-	addi $sp, $sp, 60
+	addi $sp, $sp, 56
 	sw $v0, -52($sp)
 	lw $ra, ($sp)
 	lw $t0, -52($sp)
@@ -214,16 +214,16 @@ _main:
 	sw $t0, -68($sp)
 	la $t0, str_4
 	sw $t0, -92($sp)
-	subu $sp, $sp, 60
+	subu $sp, $sp, 108
 	jal _getchar
-	addi $sp, $sp, 60
+	addi $sp, $sp, 108
 	sw $v0, -8($sp)
 	lw $ra, ($sp)
 	lw $t0, -8($sp)
 	sw $t0, -4($sp)
-	subu $sp, $sp, 60
+	subu $sp, $sp, 108
 	jal _get_d
-	addi $sp, $sp, 60
+	addi $sp, $sp, 108
 	sw $v0, -16($sp)
 	lw $ra, ($sp)
 	lw $t0, -16($sp)

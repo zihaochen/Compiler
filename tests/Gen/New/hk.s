@@ -2671,9 +2671,9 @@ _Hopcroft_Karp:
 	la $t0, str_3
 	sw $t0, -12($sp)
 L37:
-	subu $sp, $sp, 284
+	subu $sp, $sp, 64
 	jal _search
-	addi $sp, $sp, 284
+	addi $sp, $sp, 64
 	sw $v0, -8($sp)
 	lw $ra, ($sp)
 	lw $t0, -8($sp)
@@ -2762,18 +2762,18 @@ _main:
 	sw $t0, -132($sp)
 	la $t0, str_5
 	sw $t0, -144($sp)
-	subu $sp, $sp, 68
+	subu $sp, $sp, 152
 	jal _read
-	addi $sp, $sp, 68
+	addi $sp, $sp, 152
 	sw $v0, -12($sp)
 	lw $ra, ($sp)
 	lw $t0, -12($sp)
 	sw $t0, _n
 	lw $t0, _n
 	sw $t0, -8($sp)
-	subu $sp, $sp, 68
+	subu $sp, $sp, 152
 	jal _read
-	addi $sp, $sp, 68
+	addi $sp, $sp, 152
 	sw $v0, -20($sp)
 	lw $ra, ($sp)
 	lw $t0, -20($sp)
@@ -2793,9 +2793,9 @@ L46:
 	bne $t0, $0, L47
 	b L45
 L47:
-	subu $sp, $sp, 68
+	subu $sp, $sp, 152
 	jal _read
-	addi $sp, $sp, 68
+	addi $sp, $sp, 152
 	sw $v0, -36($sp)
 	lw $ra, ($sp)
 	li $t0, 0
@@ -2818,9 +2818,9 @@ L47:
 	lw $t1, -52($sp)
 	lw $t2, -36($sp)
 	sw $t2, 0($t1)
-	subu $sp, $sp, 68
+	subu $sp, $sp, 152
 	jal _read
-	addi $sp, $sp, 68
+	addi $sp, $sp, 152
 	sw $v0, -60($sp)
 	lw $ra, ($sp)
 	li $t0, 0
@@ -2911,9 +2911,9 @@ L45:
 	addi $sp, $sp, 156
 	sw $v0, -136($sp)
 	lw $ra, ($sp)
-	subu $sp, $sp, 156
+	subu $sp, $sp, 152
 	jal _Hopcroft_Karp
-	addi $sp, $sp, 156
+	addi $sp, $sp, 152
 	sw $v0, -140($sp)
 	lw $ra, ($sp)
 	lw $t0, -144($sp)

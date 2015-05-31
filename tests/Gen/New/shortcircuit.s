@@ -200,9 +200,9 @@ L4:
 	lw $t0, -8($sp)
 	sw $t0, -24($sp)
 L8:
-	subu $sp, $sp, 64
+	subu $sp, $sp, 60
 	jal _getchar
-	addi $sp, $sp, 64
+	addi $sp, $sp, 60
 	sw $v0, -36($sp)
 	lw $ra, ($sp)
 	lw $t0, -36($sp)
@@ -293,9 +293,9 @@ _main:
 	sw $ra, ($sp)
 	la $t0, str_2
 	sw $t0, -100($sp)
-	subu $sp, $sp, 40
+	subu $sp, $sp, 124
 	jal _getint
-	addi $sp, $sp, 40
+	addi $sp, $sp, 124
 	sw $v0, -8($sp)
 	lw $ra, ($sp)
 	li $t2, 1
@@ -304,9 +304,9 @@ _main:
 	sw $t0, -12($sp)
 	lw $t0, -12($sp)
 	sw $t0, -4($sp)
-	subu $sp, $sp, 40
+	subu $sp, $sp, 124
 	jal _getint
-	addi $sp, $sp, 40
+	addi $sp, $sp, 124
 	sw $v0, -20($sp)
 	lw $ra, ($sp)
 	li $t2, 2
@@ -315,9 +315,9 @@ _main:
 	sw $t0, -24($sp)
 	lw $t0, -24($sp)
 	sw $t0, -16($sp)
-	subu $sp, $sp, 40
+	subu $sp, $sp, 124
 	jal _getint
-	addi $sp, $sp, 40
+	addi $sp, $sp, 124
 	sw $v0, -32($sp)
 	lw $ra, ($sp)
 	li $t2, 3

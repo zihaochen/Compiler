@@ -160,9 +160,9 @@ L7:
 _getint:
 	sw $ra, ($sp)
 L10:
-	subu $sp, $sp, 80
+	subu $sp, $sp, 60
 	jal _getchar
-	addi $sp, $sp, 80
+	addi $sp, $sp, 60
 	sw $v0, -16($sp)
 	lw $ra, ($sp)
 	lw $t0, -16($sp)
@@ -192,9 +192,9 @@ L9:
 	lw $t0, -8($sp)
 	sw $t0, -24($sp)
 L13:
-	subu $sp, $sp, 64
+	subu $sp, $sp, 60
 	jal _getchar
-	addi $sp, $sp, 64
+	addi $sp, $sp, 60
 	sw $v0, -36($sp)
 	lw $ra, ($sp)
 	lw $t0, -36($sp)
@@ -240,9 +240,9 @@ _main:
 	sw $t0, -40($sp)
 	li $t0, 0
 	sw $t0, -8($sp)
-	subu $sp, $sp, 64
+	subu $sp, $sp, 56
 	jal _getint
-	addi $sp, $sp, 64
+	addi $sp, $sp, 56
 	sw $v0, -16($sp)
 	lw $ra, ($sp)
 	lw $t0, -16($sp)

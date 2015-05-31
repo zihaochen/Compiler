@@ -149,154 +149,148 @@ Temp30 = Temp29[4] , 4
 _yy = Temp30
 Temp25 = _yy
 BasicParam Temp31
+_printf_cnt = 1
+Temp32 = call _printf , 1
+BasicParam Temp33
 BasicParam _xx
 BasicParam _yy
 _printf_cnt = 3
-Temp32 = call _printf , 3
-Temp35 = _i ADD 1
-_i = Temp35
-Temp34 = _i
-Temp33 = Temp34 SUB 1
+Temp34 = call _printf , 3
+Temp37 = _i ADD 1
+_i = Temp37
+Temp36 = _i
+Temp35 = Temp36 SUB 1
 Goto label:2
 Label :1	Return 
 _main: 
-Temp36 = call _init , 0
-BasicParam Temp37
-_printf_cnt = 1
-Temp38 = call _printf , 1
+Temp38 = call _init , 0
 BasicParam Temp39
 _printf_cnt = 1
 Temp40 = call _printf , 1
-BasicParam Temp41
-_printf_cnt = 1
-Temp42 = call _printf , 1
-BasicParam Temp43
-_printf_cnt = 1
-Temp44 = call _printf , 1
 _i = 0
-Temp45 = _i
-Label :5	Temp46 = _i LT _n
-If Not Equal to Zero Temp46 Goto Label :6	
+Temp41 = _i
+Label :5	Temp42 = _i LT _n
+If Not Equal to Zero Temp42 Goto Label :6	
 Goto label:4
-Label :6	Temp48 = _i ADD 1
-_j = Temp48
-Temp47 = _j
-Label :8	Temp49 = _j LT _n
-If Not Equal to Zero Temp49 Goto Label :9	
+Label :6	Temp44 = _i ADD 1
+_j = Temp44
+Temp43 = _j
+Label :8	Temp45 = _j LT _n
+If Not Equal to Zero Temp45 Goto Label :9	
 Goto label:7
-Label :9	Temp50 = 0
-Temp51 = _i MUL 12
-Temp50 = Temp50 ADD Temp51
-Temp52 = _a ADD Temp50
-Temp53 = *Temp52, 12
-Temp54 = Temp53[0] , 4
-Temp55 = 0
-Temp56 = _j MUL 12
-Temp55 = Temp55 ADD Temp56
-Temp57 = _a ADD Temp55
-Temp58 = *Temp57, 12
-Temp59 = Temp58[0] , 4
-Temp60 = Temp54 GT Temp59
-If Not Equal to Zero Temp60 Goto Label :11	
+Label :9	Temp46 = 0
+Temp47 = _i MUL 12
+Temp46 = Temp46 ADD Temp47
+Temp48 = _a ADD Temp46
+Temp49 = *Temp48, 12
+Temp50 = Temp49[0] , 4
+Temp51 = 0
+Temp52 = _j MUL 12
+Temp51 = Temp51 ADD Temp52
+Temp53 = _a ADD Temp51
+Temp54 = *Temp53, 12
+Temp55 = Temp54[0] , 4
+Temp56 = Temp50 GT Temp55
+If Not Equal to Zero Temp56 Goto Label :11	
 Goto label:12
-Label :12	Temp61 = 0
-Temp62 = _i MUL 12
-Temp61 = Temp61 ADD Temp62
-Temp63 = _a ADD Temp61
-Temp64 = *Temp63, 12
-Temp65 = Temp64[0] , 4
-Temp66 = 0
-Temp67 = _j MUL 12
-Temp66 = Temp66 ADD Temp67
-Temp68 = _a ADD Temp66
-Temp69 = *Temp68, 12
-Temp70 = Temp69[0] , 4
-Temp71 = Temp65 EQ Temp70
-If Not Equal to Zero Temp71 Goto Label :13	
+Label :12	Temp57 = 0
+Temp58 = _i MUL 12
+Temp57 = Temp57 ADD Temp58
+Temp59 = _a ADD Temp57
+Temp60 = *Temp59, 12
+Temp61 = Temp60[0] , 4
+Temp62 = 0
+Temp63 = _j MUL 12
+Temp62 = Temp62 ADD Temp63
+Temp64 = _a ADD Temp62
+Temp65 = *Temp64, 12
+Temp66 = Temp65[0] , 4
+Temp67 = Temp61 EQ Temp66
+If Not Equal to Zero Temp67 Goto Label :13	
 Goto label:10
-Label :13	Temp72 = 0
-Temp73 = _i MUL 12
-Temp72 = Temp72 ADD Temp73
-Temp74 = _a ADD Temp72
-Temp75 = *Temp74, 12
-Temp76 = Temp75[4] , 4
-Temp77 = 0
-Temp78 = _j MUL 12
-Temp77 = Temp77 ADD Temp78
-Temp79 = _a ADD Temp77
-Temp80 = *Temp79, 12
-Temp81 = Temp80[4] , 4
-Temp82 = Temp76 GT Temp81
-If Not Equal to Zero Temp82 Goto Label :11	
+Label :13	Temp68 = 0
+Temp69 = _i MUL 12
+Temp68 = Temp68 ADD Temp69
+Temp70 = _a ADD Temp68
+Temp71 = *Temp70, 12
+Temp72 = Temp71[4] , 4
+Temp73 = 0
+Temp74 = _j MUL 12
+Temp73 = Temp73 ADD Temp74
+Temp75 = _a ADD Temp73
+Temp76 = *Temp75, 12
+Temp77 = Temp76[4] , 4
+Temp78 = Temp72 GT Temp77
+If Not Equal to Zero Temp78 Goto Label :11	
 Goto label:10
-Label :11	Temp84 = 0
-Temp85 = _i MUL 12
-Temp84 = Temp84 ADD Temp85
-Temp86 = _a ADD Temp84
-Temp87 = *Temp86, 12
-Temp88 = Temp87[4] , 4
-_c[4] = Temp88 , 4
-Temp89 = Temp87[0] , 4
-_c[0] = Temp89 , 4
-Temp83 = _c
+Label :11	Temp80 = 0
+Temp81 = _i MUL 12
+Temp80 = Temp80 ADD Temp81
+Temp82 = _a ADD Temp80
+Temp83 = *Temp82, 12
+Temp84 = Temp83[4] , 4
+_c[4] = Temp84 , 4
+Temp85 = Temp83[0] , 4
+_c[0] = Temp85 , 4
+Temp79 = _c
+Temp87 = 0
+Temp88 = _j MUL 12
+Temp87 = Temp87 ADD Temp88
+Temp89 = _a ADD Temp87
+Temp90 = *Temp89, 12
 Temp91 = 0
-Temp92 = _j MUL 12
+Temp92 = _i MUL 12
 Temp91 = Temp91 ADD Temp92
 Temp93 = _a ADD Temp91
 Temp94 = *Temp93, 12
-Temp95 = 0
-Temp96 = _i MUL 12
-Temp95 = Temp95 ADD Temp96
-Temp97 = _a ADD Temp95
-Temp98 = *Temp97, 12
-Temp99 = Temp94[4] , 4
-Temp98[4] = Temp99 , 4
-Temp100 = Temp94[0] , 4
-Temp98[0] = Temp100 , 4
-Temp90 = Temp98
-Temp102 = 0
-Temp103 = _j MUL 12
-Temp102 = Temp102 ADD Temp103
-Temp104 = _a ADD Temp102
-Temp105 = *Temp104, 12
-Temp106 = _c[4] , 4
-Temp105[4] = Temp106 , 4
-Temp107 = _c[0] , 4
-Temp105[0] = Temp107 , 4
-Temp101 = Temp105
-Label :10	Temp109 = _j ADD 1
-_j = Temp109
-Temp108 = _j
+Temp95 = Temp90[4] , 4
+Temp94[4] = Temp95 , 4
+Temp96 = Temp90[0] , 4
+Temp94[0] = Temp96 , 4
+Temp86 = Temp94
+Temp98 = 0
+Temp99 = _j MUL 12
+Temp98 = Temp98 ADD Temp99
+Temp100 = _a ADD Temp98
+Temp101 = *Temp100, 12
+Temp102 = _c[4] , 4
+Temp101[4] = Temp102 , 4
+Temp103 = _c[0] , 4
+Temp101[0] = Temp103 , 4
+Temp97 = Temp101
+Label :10	Temp105 = _j ADD 1
+_j = Temp105
+Temp104 = _j
 Goto label:8
-Label :7	Temp112 = _i ADD 1
-_i = Temp112
-Temp111 = _i
-Temp110 = Temp111 SUB 1
+Label :7	Temp108 = _i ADD 1
+_i = Temp108
+Temp107 = _i
+Temp106 = Temp107 SUB 1
 Goto label:5
 Label :4	_i = 0
-Temp113 = _i
-Label :15	Temp114 = _i LT _n
-If Not Equal to Zero Temp114 Goto Label :16	
+Temp109 = _i
+Label :15	Temp110 = _i LT _n
+If Not Equal to Zero Temp110 Goto Label :16	
 Goto label:14
-Label :16	Temp116 = 0
-Temp117 = _i MUL 12
-Temp116 = Temp116 ADD Temp117
-Temp118 = _a ADD Temp116
-Temp119 = *Temp118, 12
-Temp120 = Temp119[0] , 4
-Temp121 = 0
-Temp122 = _i MUL 12
-Temp121 = Temp121 ADD Temp122
-Temp123 = _a ADD Temp121
-Temp124 = *Temp123, 12
-Temp125 = Temp124[4] , 4
-BasicParam Temp115
-BasicParam Temp120
-BasicParam Temp125
+Label :16	Temp112 = 0
+Temp113 = _i MUL 12
+Temp112 = Temp112 ADD Temp113
+Temp114 = _a ADD Temp112
+Temp115 = *Temp114, 12
+Temp116 = Temp115[0] , 4
+Temp117 = 0
+Temp118 = _i MUL 12
+Temp117 = Temp117 ADD Temp118
+Temp119 = _a ADD Temp117
+Temp120 = *Temp119, 12
+Temp121 = Temp120[4] , 4
+BasicParam Temp111
+BasicParam Temp116
+BasicParam Temp121
 _printf_cnt = 3
-Temp126 = call _printf , 3
-Temp128 = _i ADD 1
-_i = Temp128
-Temp127 = _i
+Temp122 = call _printf , 3
+Temp124 = _i ADD 1
+_i = Temp124
+Temp123 = _i
 Goto label:15
 Label :14	

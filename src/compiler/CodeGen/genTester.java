@@ -82,7 +82,7 @@ public class genTester {
 //        oldnames.add("qsort-5100379110-daibo");
 //        oldnames.add("queenbitwise-5110379024-wuhang");
 //        oldnames.add("queens-5100379110-daibo");
-//        oldnames.add("self-5090379042-jiaxiao");
+        oldnames.add("self-5090379042-jiaxiao");
 //        oldnames.add("selfref-5090379042-jiaxiao");
         oldnames.add("spill2-5100379110-daibo"); /*todo peephole*/
 //        oldnames.add("spill-5100379110-daibo");
@@ -98,7 +98,7 @@ public class genTester {
 //
         names.add("bubble");
 //        names.add("cmpstr");
-        names.add("cube");
+//        names.add("cube");
 //        names.add("dc3");
 //        names.add("dedup");
 //        names.add("euler");
@@ -107,7 +107,7 @@ public class genTester {
         names.add("hk");
         names.add("hungary");
         names.add("iterative");
-        names.add("joseph");
+//        names.add("joseph");
 //        names.add("kmp");
         names.add("lct");
         names.add("linenumber");

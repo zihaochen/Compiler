@@ -1017,9 +1017,9 @@ L35:
 	bne $t0, $0, L36
 	b L34
 L36:
-	subu $sp, $sp, 128
+	subu $sp, $sp, 676
 	jal _newNode
-	addi $sp, $sp, 128
+	addi $sp, $sp, 676
 	sw $v0, -40($sp)
 	lw $ra, ($sp)
 	li $t0, 0

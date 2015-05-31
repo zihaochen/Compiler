@@ -79,6 +79,7 @@ struct Node * alloc_node(){
 
 int main(){
 	A=10000*(getchar()-'0')+1000*(getchar()-'0')+100*(getchar()-'0')+10*(getchar()-'0')+getchar()-'0';
+	printf("%d\n", A);
 	root = alloc_node();
 	for (i = 0; i < N; i++)
 		root = insert_node(root, alloc_node());

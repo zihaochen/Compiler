@@ -263,7 +263,8 @@ _printf:
 	add $t0, $t0, $sp
 	lw $a1, ($t0)
 	move $a2, $t0
-	_printf_loop:
+	
+_printf_loop:
 	lb $a0, 0($a1)
 	beq $a0, 0, _printf_end
 	addu $a1, $a1, 4

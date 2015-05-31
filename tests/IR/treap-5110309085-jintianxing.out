@@ -228,41 +228,45 @@ Temp127 = Temp125 ADD Temp126
 Temp128 = Temp127 SUB 48
 _A = Temp128
 Temp110 = _A
-Temp130 = call _alloc_node , 0
-_root = Temp130
-Temp129 = _root
+BasicParam Temp129
+BasicParam _A
+_printf_cnt = 2
+Temp130 = call _printf , 2
+Temp132 = call _alloc_node , 0
+_root = Temp132
+Temp131 = _root
 _i = 0
-Temp131 = _i
-Label :21	Temp132 = _i LT _N
-If Not Equal to Zero Temp132 Goto Label :22	
+Temp133 = _i
+Label :21	Temp134 = _i LT _N
+If Not Equal to Zero Temp134 Goto Label :22	
 Goto label:20
-Label :22	Temp134 = call _alloc_node , 0
+Label :22	Temp136 = call _alloc_node , 0
 BasicParam _root
-BasicParam Temp134
-Temp135 = call _insert_node , 2
-_root = Temp135
-Temp133 = _root
-Temp138 = _i ADD 1
-_i = Temp138
-Temp137 = _i
-Temp136 = Temp137 SUB 1
+BasicParam Temp136
+Temp137 = call _insert_node , 2
+_root = Temp137
+Temp135 = _root
+Temp140 = _i ADD 1
+_i = Temp140
+Temp139 = _i
+Temp138 = Temp139 SUB 1
 Goto label:21
 Label :20	_i = 0
-Temp139 = _i
-Label :24	Temp140 = _i LE _N
-If Not Equal to Zero Temp140 Goto Label :25	
+Temp141 = _i
+Label :24	Temp142 = _i LE _N
+If Not Equal to Zero Temp142 Goto Label :25	
 Goto label:23
 Label :25	BasicParam _root
 BasicParam _i
-Temp142 = call _get_kth_element , 2
-BasicParam Temp141
-BasicParam Temp142
+Temp144 = call _get_kth_element , 2
+BasicParam Temp143
+BasicParam Temp144
 _printf_cnt = 2
-Temp143 = call _printf , 2
-Temp146 = _i ADD 1
-_i = Temp146
-Temp145 = _i
-Temp144 = Temp145 SUB 1
+Temp145 = call _printf , 2
+Temp148 = _i ADD 1
+_i = Temp148
+Temp147 = _i
+Temp146 = Temp147 SUB 1
 Goto label:24
 Label :23	Return BasicParam 0
 

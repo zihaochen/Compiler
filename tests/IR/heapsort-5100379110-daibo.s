@@ -840,9 +840,9 @@ _main:
 	sw $t0, -144($sp)
 	la $t0, str_3
 	sw $t0, -176($sp)
-	subu $sp, $sp, 116
+	subu $sp, $sp, 184
 	jal _getchar
-	addi $sp, $sp, 116
+	addi $sp, $sp, 184
 	sw $v0, -12($sp)
 	lw $ra, ($sp)
 	li $t2, 48
@@ -857,9 +857,9 @@ _main:
 	li $t1, 10
 	mul $t0, $t1, $t2
 	sw $t0, -24($sp)
-	subu $sp, $sp, 116
+	subu $sp, $sp, 184
 	jal _getchar
-	addi $sp, $sp, 116
+	addi $sp, $sp, 184
 	sw $v0, -28($sp)
 	lw $ra, ($sp)
 	lw $t2, -28($sp)
@@ -878,9 +878,9 @@ _main:
 	li $t1, 10
 	mul $t0, $t1, $t2
 	sw $t0, -44($sp)
-	subu $sp, $sp, 116
+	subu $sp, $sp, 184
 	jal _getchar
-	addi $sp, $sp, 116
+	addi $sp, $sp, 184
 	sw $v0, -48($sp)
 	lw $ra, ($sp)
 	lw $t2, -48($sp)
@@ -899,9 +899,9 @@ _main:
 	li $t1, 10
 	mul $t0, $t1, $t2
 	sw $t0, -64($sp)
-	subu $sp, $sp, 116
+	subu $sp, $sp, 184
 	jal _getchar
-	addi $sp, $sp, 116
+	addi $sp, $sp, 184
 	sw $v0, -68($sp)
 	lw $ra, ($sp)
 	lw $t2, -68($sp)
@@ -980,14 +980,14 @@ L25:
 	sw $t0, -120($sp)
 	b L24
 L23:
-	subu $sp, $sp, 188
+	subu $sp, $sp, 184
 	jal _makeHeap
-	addi $sp, $sp, 188
+	addi $sp, $sp, 184
 	sw $v0, -128($sp)
 	lw $ra, ($sp)
-	subu $sp, $sp, 188
+	subu $sp, $sp, 184
 	jal _heapSort
-	addi $sp, $sp, 188
+	addi $sp, $sp, 184
 	sw $v0, -132($sp)
 	lw $ra, ($sp)
 	li $t0, 0
