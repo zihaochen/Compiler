@@ -5,276 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef921a38-bb99-415c-8ed8-767f2b738347" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/basicopt1-5100309127-hetianxing.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/bubble.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/Bulgarian_solitaire-5110379024-wuhang.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/basicopt1-5100309127-hetianxing.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/basicopt1-5100309127-hetianxing.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/basicopt1-5100309127-hetianxing.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/basicopt1-5100309127-hetianxing.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/board-5100379110-daibo.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-InputSet/board-5100379110-daibo.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/bubble.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/bubble.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/cmpstr.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/cmpstr.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/cube.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/cube.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/dc3.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/dc3.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/dedup.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/dedup.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/euler.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/euler.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/expr-5110309085-jintianxing.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/extkmp.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/extkmp.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/factor-5090379042-jiaxiao.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-InputSet/factor-5090379042-jiaxiao.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/fishtank.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/fishtank.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/gcd-5090379042-jiaxiao.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-InputSet/gcd-5090379042-jiaxiao.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/hanoi-5100379110-daibo.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-InputSet/hanoi-5100379110-daibo.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/hanoi2-5100309153-yanghuan.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-InputSet/hanoi2-5100309153-yanghuan.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/hashmap-5100309127-hetianxing.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/heapsort-5100379110-daibo.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-InputSet/heapsort-5100379110-daibo.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/hello-5090379042-jiaxiao.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/hk.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/hk.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/horse-5100309153-yanghuan.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-InputSet/horse-5100309153-yanghuan.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/horse2-5100309153-yanghuan.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-InputSet/horse2-5100309153-yanghuan.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/horse3-5100309153-yanghuan.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-InputSet/horse3-5100309153-yanghuan.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/hpplus-5100309153-yanghuan.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/hungary.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/hungary.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/inlinecheck-5100309153-yanghuan.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/iterative.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/iterative.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/joseph.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/joseph.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/kmp.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/kmp.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/lct.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/lct.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/linenumber.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/linenumber.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/magic-5100309153-yanghuan.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/manacher.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/manacher.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/manyarguments-5100379110-daibo.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/manymanyarguments-5100379110-daibo.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/maxflow-5100379110-daibo.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/minrep.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/minrep.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/multiarray-5100309153-yanghuan.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/nqueencon-5100379110-daibo.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-InputSet/nqueencon-5100379110-daibo.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/palautm.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/palautm.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/pi-5090379042-jiaxiao.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/plus-5100309153-yanghuan.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-InputSet/plus-5100309153-yanghuan.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/prime-5100309153-yanghuan.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-InputSet/prime-5100309153-yanghuan.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/prime2-5100309153-yanghuan.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-InputSet/prime2-5100309153-yanghuan.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/qsort-5100379110-daibo.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/queenbitwise-5110379024-wuhang.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-InputSet/queenbitwise-5110379024-wuhang.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/queens-5100379110-daibo.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/self-5090379042-jiaxiao.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/selfref-5090379042-jiaxiao.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/shortcircuit.out" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/shortcircuit.s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/spill-5100379110-daibo.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/spill2-5100379110-daibo.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/struct5-5110379024-wuhang.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/struct6-5100309127-hetianxing.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-InputSet/struct6-5100309127-hetianxing.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/superloop-5090379042-jiaxiao.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-InputSet/superloop-5090379042-jiaxiao.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/tak-5090379042-jiaxiao.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-InputSet/tak-5090379042-jiaxiao.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/treap-5110309085-jintianxing.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-InputSet/treap-5110309085-jintianxing.in" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/twinprime-5090379042-jiaxiao.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-AnswerSet/varptr-5100309127-hetianxing.ans" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/IR/Inherited-InputSet/varptr-5100309127-hetianxing.in" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\Bulgarian_solitaire-5110379024-wuhang.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\arraysum.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\basicopt1-hetianxing.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\expr-5110309085-jintianxing.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\factor-5090379042-jiaxiao.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\gcd-5090379042-jiaxiao.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\hanoi-5100379110-daibo.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\hanoi2-5100309153-yanghuan.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\hashmap-5100309127-hetianxing.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\heapsort-5100379110-daibo.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\hello-5090379042-jiaxiao.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\hpplus-5100309153-yanghuan.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\inlinecheck-5100309153-yanghuan.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\magic-5100309153-yanghuan.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\manyarguments-5100379110-daibo.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\manymanyarguments-5100379110-daibo.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\maxflow-5100379110-daibo.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\multiarray-5100309153-yanghuan.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\nqueencon-5100379110-daibo.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\num1-5110379024-wuhang.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\pi-5090379042-jiaxiao.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\plus-5100309153-yanghuan.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\prime-5100309153-yanghuan.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\prime2-5100309153-yanghuan.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\qsort-5100379110-daibo.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\queenbitwise-5110379024-wuhang.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\queens-5100379110-daibo.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\self-5090379042-jiaxiao.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\selfref-5090379042-jiaxiao.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\spill-5100379110-daibo.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\spill2-5100379110-daibo.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\struct4-5110379024-wuhang.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\struct5-5110379024-wuhang.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\struct6-5100309127-hetianxing.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\superloop-5090379042-jiaxiao.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\tak-5090379042-jiaxiao.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\treap-5110309085-jintianxing.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\twinprime-5090379042-jiaxiao.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\AST\varptr-5100309127-hetianxing.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\Bulgarian_solitaire-5110379024-wuhang.exe" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\arraysum.exe" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\basicopt1-hetianxing.c" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\basicopt1-hetianxing.exe" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\basicopt1-hetianxing.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\basicopt1-hetianxing.s" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\board-5100379110-daibo.exe" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\gcd-5090379042-jiaxiao.exe" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\hashmap-5100309127-hetianxing.exe" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\horse-5100309153-yanghuan.exe" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\horse3-5100309153-yanghuan.exe" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\hpplus-5100309153-yanghuan.exe" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\magic-5100309153-yanghuan.exe" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\maxflow-5100379110-daibo.exe" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\multiarray-5100309153-yanghuan.exe" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\names5.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\nqueencon-5100379110-daibo.exe" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\num1-5110379024-wuhang.c" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\num1-5110379024-wuhang.out" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\num1-5110379024-wuhang.s" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\pi-5090379042-jiaxiao.exe" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\prime-5100309153-yanghuan.exe" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\prime2-5100309153-yanghuan.exe" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\queenbitwise-5110379024-wuhang.exe" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\queens-5100379110-daibo.exe" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\spill2-5100379110-daibo.exe" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\struct5-5110379024-wuhang.exe" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\struct6-5100309127-hetianxing.exe" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\treap-5110309085-jintianxing.exe" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\twinprime-5090379042-jiaxiao.exe" afterPath="" />
-      <change type="DELETED" beforePath="D:\Codes\Compiler\tests\IR\varptr-5100309127-hetianxing.exe" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler/compiler/semantic/SemanticCheck.class" afterPath="$PROJECT_DIR$/out/production/Compiler/compiler/semantic/SemanticCheck.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/heapsort-5100379110-daibo.exe" afterPath="$PROJECT_DIR$/tests/IR/heapsort-5100379110-daibo.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/CodeGen/BrutalGen/BrutalGen.java" afterPath="$PROJECT_DIR$/src/compiler/CodeGen/BrutalGen/BrutalGen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/Bulgarian_solitaire-5110379024-wuhang.c" afterPath="$PROJECT_DIR$/tests/IR/Bulgarian_solitaire-5110379024-wuhang.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/Bulgarian_solitaire-5110379024-wuhang.out" afterPath="$PROJECT_DIR$/tests/IR/Bulgarian_solitaire-5110379024-wuhang.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/Bulgarian_solitaire-5110379024-wuhang.s" afterPath="$PROJECT_DIR$/tests/IR/Bulgarian_solitaire-5110379024-wuhang.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/semantic/SemanticCheck.java" afterPath="$PROJECT_DIR$/src/compiler/semantic/SemanticCheck.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/IR/Translator.java" afterPath="$PROJECT_DIR$/src/compiler/IR/Translator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/arraysum.c" afterPath="$PROJECT_DIR$/tests/IR/arraysum.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/arraysum.out" afterPath="$PROJECT_DIR$/tests/IR/arraysum.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/arraysum.s" afterPath="$PROJECT_DIR$/tests/IR/arraysum.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/board-5100379110-daibo.c" afterPath="$PROJECT_DIR$/tests/IR/board-5100379110-daibo.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/board-5100379110-daibo.out" afterPath="$PROJECT_DIR$/tests/IR/board-5100379110-daibo.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/board-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/board-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/bubble.c" afterPath="$PROJECT_DIR$/tests/Gen/New/bubble.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/expr-5110309085-jintianxing.c" afterPath="$PROJECT_DIR$/tests/IR/expr-5110309085-jintianxing.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/expr-5110309085-jintianxing.out" afterPath="$PROJECT_DIR$/tests/IR/expr-5110309085-jintianxing.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/expr-5110309085-jintianxing.s" afterPath="$PROJECT_DIR$/tests/IR/expr-5110309085-jintianxing.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/factor-5090379042-jiaxiao.c" afterPath="$PROJECT_DIR$/tests/IR/factor-5090379042-jiaxiao.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/factor-5090379042-jiaxiao.out" afterPath="$PROJECT_DIR$/tests/IR/factor-5090379042-jiaxiao.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/factor-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/tests/IR/factor-5090379042-jiaxiao.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/gcd-5090379042-jiaxiao.c" afterPath="$PROJECT_DIR$/tests/IR/gcd-5090379042-jiaxiao.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/gcd-5090379042-jiaxiao.out" afterPath="$PROJECT_DIR$/tests/IR/gcd-5090379042-jiaxiao.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/gcd-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/tests/IR/gcd-5090379042-jiaxiao.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/CodeGen/genTester.java" afterPath="$PROJECT_DIR$/src/compiler/CodeGen/genTester.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/hanoi-5100379110-daibo.c" afterPath="$PROJECT_DIR$/tests/IR/hanoi-5100379110-daibo.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/hanoi-5100379110-daibo.out" afterPath="$PROJECT_DIR$/tests/IR/hanoi-5100379110-daibo.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/hanoi-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/hanoi-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/hanoi2-5100309153-yanghuan.c" afterPath="$PROJECT_DIR$/tests/IR/hanoi2-5100309153-yanghuan.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/hanoi2-5100309153-yanghuan.out" afterPath="$PROJECT_DIR$/tests/IR/hanoi2-5100309153-yanghuan.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/hanoi2-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/hanoi2-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/hashmap-5100309127-hetianxing.s" afterPath="$PROJECT_DIR$/tests/IR/hashmap-5100309127-hetianxing.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/heapsort-5100379110-daibo.c" afterPath="$PROJECT_DIR$/tests/IR/heapsort-5100379110-daibo.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/heapsort-5100379110-daibo.out" afterPath="$PROJECT_DIR$/tests/IR/heapsort-5100379110-daibo.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/heapsort-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/heapsort-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/hello-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/tests/IR/hello-5090379042-jiaxiao.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/horse-5100309153-yanghuan.c" afterPath="$PROJECT_DIR$/tests/IR/horse-5100309153-yanghuan.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/horse-5100309153-yanghuan.out" afterPath="$PROJECT_DIR$/tests/IR/horse-5100309153-yanghuan.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/horse-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/horse-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/horse2-5100309153-yanghuan.c" afterPath="$PROJECT_DIR$/tests/IR/horse2-5100309153-yanghuan.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/horse2-5100309153-yanghuan.out" afterPath="$PROJECT_DIR$/tests/IR/horse2-5100309153-yanghuan.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/horse2-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/horse2-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/horse3-5100309153-yanghuan.c" afterPath="$PROJECT_DIR$/tests/IR/horse3-5100309153-yanghuan.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/horse3-5100309153-yanghuan.out" afterPath="$PROJECT_DIR$/tests/IR/horse3-5100309153-yanghuan.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/horse3-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/horse3-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/hpplus-5100309153-yanghuan.c" afterPath="$PROJECT_DIR$/tests/IR/hpplus-5100309153-yanghuan.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/hpplus-5100309153-yanghuan.out" afterPath="$PROJECT_DIR$/tests/IR/hpplus-5100309153-yanghuan.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/hpplus-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/hpplus-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/inlinecheck-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/inlinecheck-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/magic-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/magic-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/manyarguments-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/manyarguments-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/manymanyarguments-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/manymanyarguments-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/maxflow-5100379110-daibo.c" afterPath="$PROJECT_DIR$/tests/IR/maxflow-5100379110-daibo.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/maxflow-5100379110-daibo.out" afterPath="$PROJECT_DIR$/tests/IR/maxflow-5100379110-daibo.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/maxflow-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/maxflow-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/multiarray-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/multiarray-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/nqueencon-5100379110-daibo.c" afterPath="$PROJECT_DIR$/tests/IR/nqueencon-5100379110-daibo.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/nqueencon-5100379110-daibo.out" afterPath="$PROJECT_DIR$/tests/IR/nqueencon-5100379110-daibo.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/nqueencon-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/nqueencon-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/pi-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/tests/IR/pi-5090379042-jiaxiao.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/plus-5100309153-yanghuan.c" afterPath="$PROJECT_DIR$/tests/IR/plus-5100309153-yanghuan.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/plus-5100309153-yanghuan.out" afterPath="$PROJECT_DIR$/tests/IR/plus-5100309153-yanghuan.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/plus-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/plus-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/prime-5100309153-yanghuan.c" afterPath="$PROJECT_DIR$/tests/IR/prime-5100309153-yanghuan.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/prime-5100309153-yanghuan.out" afterPath="$PROJECT_DIR$/tests/IR/prime-5100309153-yanghuan.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/prime-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/prime-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/prime2-5100309153-yanghuan.c" afterPath="$PROJECT_DIR$/tests/IR/prime2-5100309153-yanghuan.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/prime2-5100309153-yanghuan.out" afterPath="$PROJECT_DIR$/tests/IR/prime2-5100309153-yanghuan.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/prime2-5100309153-yanghuan.s" afterPath="$PROJECT_DIR$/tests/IR/prime2-5100309153-yanghuan.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/qsort-5100379110-daibo.c" afterPath="$PROJECT_DIR$/tests/IR/qsort-5100379110-daibo.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/qsort-5100379110-daibo.out" afterPath="$PROJECT_DIR$/tests/IR/qsort-5100379110-daibo.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/qsort-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/qsort-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/queenbitwise-5110379024-wuhang.c" afterPath="$PROJECT_DIR$/tests/IR/queenbitwise-5110379024-wuhang.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/queenbitwise-5110379024-wuhang.out" afterPath="$PROJECT_DIR$/tests/IR/queenbitwise-5110379024-wuhang.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/queenbitwise-5110379024-wuhang.s" afterPath="$PROJECT_DIR$/tests/IR/queenbitwise-5110379024-wuhang.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/queens-5100379110-daibo.c" afterPath="$PROJECT_DIR$/tests/IR/queens-5100379110-daibo.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/queens-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/queens-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/self-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/tests/IR/self-5090379042-jiaxiao.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/selfref-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/tests/IR/selfref-5090379042-jiaxiao.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/spill-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/spill-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/spill2-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/spill2-5100379110-daibo.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/struct5-5110379024-wuhang.c" afterPath="$PROJECT_DIR$/tests/IR/struct5-5110379024-wuhang.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/struct5-5110379024-wuhang.out" afterPath="$PROJECT_DIR$/tests/IR/struct5-5110379024-wuhang.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/struct5-5110379024-wuhang.s" afterPath="$PROJECT_DIR$/tests/IR/struct5-5110379024-wuhang.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/struct6-5100309127-hetianxing.c" afterPath="$PROJECT_DIR$/tests/IR/struct6-5100309127-hetianxing.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/struct6-5100309127-hetianxing.out" afterPath="$PROJECT_DIR$/tests/IR/struct6-5100309127-hetianxing.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/struct6-5100309127-hetianxing.s" afterPath="$PROJECT_DIR$/tests/IR/struct6-5100309127-hetianxing.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/superloop-5090379042-jiaxiao.c" afterPath="$PROJECT_DIR$/tests/IR/superloop-5090379042-jiaxiao.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/superloop-5090379042-jiaxiao.out" afterPath="$PROJECT_DIR$/tests/IR/superloop-5090379042-jiaxiao.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/superloop-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/tests/IR/superloop-5090379042-jiaxiao.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/tak-5090379042-jiaxiao.c" afterPath="$PROJECT_DIR$/tests/IR/tak-5090379042-jiaxiao.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/tak-5090379042-jiaxiao.out" afterPath="$PROJECT_DIR$/tests/IR/tak-5090379042-jiaxiao.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/tak-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/tests/IR/tak-5090379042-jiaxiao.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/treap-5110309085-jintianxing.s" afterPath="$PROJECT_DIR$/tests/IR/treap-5110309085-jintianxing.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/twinprime-5090379042-jiaxiao.s" afterPath="$PROJECT_DIR$/tests/IR/twinprime-5090379042-jiaxiao.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/varptr-5100309127-hetianxing.c" afterPath="$PROJECT_DIR$/tests/IR/varptr-5100309127-hetianxing.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/varptr-5100309127-hetianxing.out" afterPath="$PROJECT_DIR$/tests/IR/varptr-5100309127-hetianxing.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/varptr-5100309127-hetianxing.s" afterPath="$PROJECT_DIR$/tests/IR/varptr-5100309127-hetianxing.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.properties" afterPath="$PROJECT_DIR$/build.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Compiler.iws" />
@@ -438,7 +169,7 @@
       <file leaf-file-name="Translator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/compiler/IR/Translator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.02724359">
+            <state vertical-scroll-proportion="0.0">
               <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
               <folding>
                 <element signature="docComment;class#Translator#0" expanded="false" />
@@ -1184,7 +915,8 @@
       <workItem from="1432683707947" duration="31880000" />
       <workItem from="1432779116963" duration="21047000" />
       <workItem from="1432854358619" duration="101872000" />
-      <workItem from="1433070408165" duration="9307000" />
+      <workItem from="1433070408165" duration="9423000" />
+      <workItem from="1433084043309" duration="130000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, most files finished, but not compiled yet.">
       <created>1429098593928</created>
@@ -1294,11 +1026,17 @@
       <option name="project" value="LOCAL" />
       <updated>1433062721783</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fix a few bugs">
+      <created>1433082672441</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1433082672442</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="651873000" />
+    <option name="totallyTimeSpent" value="652119000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1315,7 +1053,6 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32618684" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2863706" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1324,9 +1061,8 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28728414" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32618684" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4969743" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25189108" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32496077" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1337,7 +1073,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32618684" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39969373" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32496077" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1359,7 +1097,8 @@
     <MESSAGE value="PHASE2 DONE!" />
     <MESSAGE value="PHASE3 DONE, but there is still a known bug. I plan to fix it after the release of final test data." />
     <MESSAGE value="PHASE 4 almost done, passed all last year's tests." />
-    <option name="LAST_COMMIT_MESSAGE" value="PHASE 4 almost done, passed all last year's tests." />
+    <MESSAGE value="fix a few bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix a few bugs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1376,9 +1115,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1479,7 +1215,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1540,13 +1275,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/syntactic/Parser.cup">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5151515">
           <caret line="219" column="56" selection-start-line="219" selection-start-column="56" selection-end-line="219" selection-end-column="56" />
         </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/tables/VarTable.java">
@@ -1569,7 +1304,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1609,7 +1343,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15454546">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1625,9 +1358,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1643,7 +1373,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1651,7 +1380,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19070514">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1659,7 +1387,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21794872">
           <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1690,7 +1417,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.64908254">
           <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1698,7 +1424,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.100961536">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1706,7 +1431,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3469388">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1714,9 +1438,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29166666">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1724,7 +1445,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1879,7 +1599,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/IR/Translator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.02724359">
+        <state vertical-scroll-proportion="0.0">
           <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#Translator#0" expanded="false" />
