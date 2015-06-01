@@ -1,6 +1,7 @@
 package compiler.Optimize;
 
 import compiler.IR.Nodes.Address.Address;
+import compiler.IR.Nodes.Address.Temp;
 import compiler.IR.Nodes.Control.Goto;
 import compiler.IR.Nodes.Control.IfEZGoto;
 import compiler.IR.Nodes.Control.IfNEZGoto;
@@ -85,7 +86,7 @@ public class PeepHole {
                     add(((Call) quadruple).dest);
                 }
                 if (quadruple instanceof Return) {
-                    add(((Return) quadruple).value.src);
+                   if (((Return) quadruple).value != null) add(((Return) quadruple).value.src);
                 }
             }
         }
@@ -98,11 +99,11 @@ public class PeepHole {
                 if (i < function.body.size() - 1)
                     next = function.body.get(i + 1);
                 else next = null;
-                if (quadruple instanceof Call &&
+                if (    quadruple instanceof Call &&
                         next instanceof Assign &&
-                        ((Call) quadruple).dest.equals(((Assign) next).src) &&
-                        hashMap.get(((Assign) next).src) == 2) {
-                    System.out.println("adfsdafasf");
+                        ((Call) quadruple).dest instanceof Temp &&
+                        ((Assign) next).src instanceof Temp
+                        && ((Temp) ((Call) quadruple).dest).tempNum == ((Temp) ((Assign) next).src).tempNum) {
                             ((Call) quadruple).dest = ((Assign) next).dest;
                     tmpList.add(quadruple);
                     i += 1;

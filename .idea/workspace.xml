@@ -4,20 +4,11 @@
     <bookmark url="file://$PROJECT_DIR$/src/compiler/ast/nodes/BinaryOpToString.java" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef921a38-bb99-415c-8ed8-767f2b738347" name="Default" comment="fix a bug, add peephole optimization">
+    <list default="true" id="ef921a38-bb99-415c-8ed8-767f2b738347" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler/compiler/main/Main.class" afterPath="$PROJECT_DIR$/out/production/Compiler/compiler/main/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler/compiler/semantic/SemanticCheck$1.class" afterPath="$PROJECT_DIR$/out/production/Compiler/compiler/semantic/SemanticCheck$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler/compiler/semantic/SemanticCheck.class" afterPath="$PROJECT_DIR$/out/production/Compiler/compiler/semantic/SemanticCheck.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Compiler/compiler/PrettyPrinter/prettyPrinter.class" afterPath="$PROJECT_DIR$/out/production/Compiler/compiler/PrettyPrinter/prettyPrinter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/main/Main.java" afterPath="$PROJECT_DIR$/src/compiler/main/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/Optimize/PeepHole.java" afterPath="$PROJECT_DIR$/src/compiler/Optimize/PeepHole.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/semantic/SemanticCheck.java" afterPath="$PROJECT_DIR$/src/compiler/semantic/SemanticCheck.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/PrettyPrinter/argly.c" afterPath="$PROJECT_DIR$/tests/PrettyPrinter/argly.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/PrettyPrinter/arglyPretty.c" afterPath="$PROJECT_DIR$/tests/PrettyPrinter/arglyPretty.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/CodeGen/genTester.java" afterPath="$PROJECT_DIR$/src/compiler/CodeGen/genTester.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/PrettyPrinter/prettyPrinter.java" afterPath="$PROJECT_DIR$/src/compiler/PrettyPrinter/prettyPrinter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/splittree.out" afterPath="$PROJECT_DIR$/tests/Gen/New/splittree.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/splittree.s" afterPath="$PROJECT_DIR$/tests/Gen/New/splittree.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/stvsun.s" afterPath="$PROJECT_DIR$/tests/Gen/New/stvsun.s" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Compiler.iws" />
@@ -53,7 +44,10 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="492" column="0" selection-start-line="492" selection-start-column="0" selection-end-line="492" selection-end-column="0" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <element signature="docComment;class#BrutalGen#0" expanded="false" />
+                <element signature="e#789#790#0" expanded="false" />
+                <element signature="e#843#844#0" expanded="false" />
                 <element signature="method#BrutalGen#0;class#BrutalGen#0" expanded="false" />
                 <element signature="e#2076#2117#0" expanded="false" />
                 <element signature="e#2674#2744#0" expanded="false" />
@@ -103,10 +97,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SemanticCheck.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SemanticCheck.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/compiler/semantic/SemanticCheck.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.186937">
+            <state vertical-scroll-proportion="0.0">
               <caret line="464" column="39" selection-start-line="464" selection-start-column="39" selection-end-line="464" selection-end-column="39" />
               <folding>
                 <element signature="docComment;class#SemanticCheck#0" expanded="false" />
@@ -165,11 +159,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="genTester.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="genTester.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/compiler/CodeGen/genTester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="118" column="2" selection-start-line="118" selection-start-column="2" selection-end-line="118" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.6022472">
+              <caret line="39" column="40" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -179,7 +173,7 @@
         <entry file="file://$PROJECT_DIR$/src/compiler/Optimize/PeepHole.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="58" column="54" selection-start-line="58" selection-start-column="54" selection-end-line="58" selection-end-column="54" />
+              <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -187,11 +181,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="prettyPrinter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/compiler/PrettyPrinter/prettyPrinter.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/compiler/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="519" column="24" selection-start-line="519" selection-start-column="24" selection-end-line="519" selection-end-column="24" />
+              <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Assign.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Expression/Assign.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -201,7 +205,7 @@
         <entry file="file://$PROJECT_DIR$/src/compiler/IR/Translator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="323" column="108" selection-start-line="323" selection-start-column="108" selection-end-line="323" selection-end-column="108" />
+              <caret line="125" column="48" selection-start-line="125" selection-start-column="48" selection-end-line="125" selection-end-column="48" />
               <folding>
                 <element signature="docComment;class#Translator#0" expanded="false" />
                 <element signature="method#Translator#0;class#Translator#0" expanded="false" />
@@ -336,13 +340,13 @@
         <option value="$PROJECT_DIR$/src/compiler/IR/Translator.java" />
         <option value="$PROJECT_DIR$/src/compiler/CodeGen/BrutalGen/BrutalGen.java" />
         <option value="$PROJECT_DIR$/src/compiler/CodeGen/STL.java" />
-        <option value="$PROJECT_DIR$/src/compiler/main/Main.java" />
-        <option value="$PROJECT_DIR$/src/compiler/Optimize/PeepHole.java" />
         <option value="$PROJECT_DIR$/tests/PrettyPrinter/arglyPretty.c" />
         <option value="$PROJECT_DIR$/tests/PrettyPrinter/argly.c" />
         <option value="$PROJECT_DIR$/src/compiler/PrettyPrinter/prettyPrinter.java" />
-        <option value="$PROJECT_DIR$/src/compiler/CodeGen/genTester.java" />
         <option value="$PROJECT_DIR$/src/compiler/semantic/SemanticCheck.java" />
+        <option value="$PROJECT_DIR$/src/compiler/Optimize/PeepHole.java" />
+        <option value="$PROJECT_DIR$/src/compiler/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/compiler/CodeGen/genTester.java" />
       </list>
     </option>
   </component>
@@ -580,6 +584,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Nodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="compiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Address" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1067,7 +1101,7 @@
       <workItem from="1433103917571" duration="3396000" />
       <workItem from="1433108030026" duration="2284000" />
       <workItem from="1433110835231" duration="1633000" />
-      <workItem from="1433113031470" duration="2667000" />
+      <workItem from="1433113031470" duration="3872000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, most files finished, but not compiled yet.">
       <created>1429098593928</created>
@@ -1225,11 +1259,17 @@
       <option name="project" value="LOCAL" />
       <updated>1433113267413</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="fix a bug">
+      <created>1433117781546</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1433117781546</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="677572000" />
+    <option name="totallyTimeSpent" value="678777000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1252,10 +1292,10 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32771823" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27565083" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27411944" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32618684" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23600605" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.50075644" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1319,7 +1359,8 @@
     <MESSAGE value="PHASE 4 almost done, passed all last year's tests." />
     <MESSAGE value="fix a few bugs" />
     <MESSAGE value="fix a bug, add peephole optimization" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix a bug, add peephole optimization" />
+    <MESSAGE value="fix a bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix a bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1332,21 +1373,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Expression/ArrayRead.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Function/Return.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Expression/AddressOf.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1375,14 +1401,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Function/Call.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -1435,14 +1453,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29816514">
           <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Address/Address.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1652,7 +1662,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="492" column="0" selection-start-line="492" selection-start-column="0" selection-end-line="492" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="docComment;class#BrutalGen#0" expanded="false" />
+            <element signature="e#789#790#0" expanded="false" />
+            <element signature="e#843#844#0" expanded="false" />
             <element signature="method#BrutalGen#0;class#BrutalGen#0" expanded="false" />
             <element signature="e#2076#2117#0" expanded="false" />
             <element signature="e#2674#2744#0" expanded="false" />
@@ -1717,10 +1730,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/PrettyPrinter/prettyPrinter.java">
+    <entry file="file://$PROJECT_DIR$/src/compiler/semantic/SemanticCheck.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="519" column="24" selection-start-line="519" selection-start-column="24" selection-end-line="519" selection-end-column="24" />
+          <caret line="464" column="39" selection-start-line="464" selection-start-column="39" selection-end-line="464" selection-end-column="39" />
+          <folding>
+            <element signature="docComment;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#SemanticCheck#0;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#loadSTL#0;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#setOutputStream#0;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#checkICP#0;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#typeEqual#0;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#isVoidPointter#0;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#initCheck#0;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#1;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#3;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#4;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#6;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#7;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#8;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#9;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#10;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#11;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#14;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#15;class#SemanticCheck#0" expanded="false" />
+            <element signature="e#14204#14227#0" expanded="false" />
+            <element signature="e#15039#15046#0" expanded="false" />
+            <element signature="method#visit#17;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#checkBinExpr#0;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#18;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#19;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#castValue#0;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#21;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#checkUnExpr#0;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#22;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#23;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#24;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#25;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#26;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#27;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#matchParam#0;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#28;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#29;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#30;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#31;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#32;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#33;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#34;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#35;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#36;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#37;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#38;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#39;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#40;class#SemanticCheck#0" expanded="false" />
+            <element signature="method#visit#41;class#SemanticCheck#0" expanded="false" />
+            <element signature="e#44436#44466#0" expanded="false" />
+            <element signature="e#44584#44611#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Function/Call.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1588785">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Address/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43691587">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Address/Temp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35747662">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -1728,7 +1817,7 @@
     <entry file="file://$PROJECT_DIR$/src/compiler/Optimize/PeepHole.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="54" selection-start-line="58" selection-start-column="54" selection-end-line="58" selection-end-column="54" />
+          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1737,16 +1826,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/compiler/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46314102">
-          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/CodeGen/genTester.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="118" column="2" selection-start-line="118" selection-start-column="2" selection-end-line="118" selection-end-column="2" />
+          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -1754,7 +1835,7 @@
     <entry file="file://$PROJECT_DIR$/src/compiler/IR/Translator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="323" column="108" selection-start-line="323" selection-start-column="108" selection-end-line="323" selection-end-column="108" />
+          <caret line="125" column="48" selection-start-line="125" selection-start-column="48" selection-end-line="125" selection-end-column="48" />
           <folding>
             <element signature="docComment;class#Translator#0" expanded="false" />
             <element signature="method#Translator#0;class#Translator#0" expanded="false" />
@@ -1819,63 +1900,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/semantic/SemanticCheck.java">
+    <entry file="file://$PROJECT_DIR$/src/compiler/PrettyPrinter/prettyPrinter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.186937">
-          <caret line="464" column="39" selection-start-line="464" selection-start-column="39" selection-end-line="464" selection-end-column="39" />
-          <folding>
-            <element signature="docComment;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#SemanticCheck#0;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#loadSTL#0;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#setOutputStream#0;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#checkICP#0;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#typeEqual#0;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#isVoidPointter#0;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#initCheck#0;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#1;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#3;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#4;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#6;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#7;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#8;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#9;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#10;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#11;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#14;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#15;class#SemanticCheck#0" expanded="false" />
-            <element signature="e#14204#14227#0" expanded="false" />
-            <element signature="e#15039#15046#0" expanded="false" />
-            <element signature="method#visit#17;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#checkBinExpr#0;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#18;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#19;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#castValue#0;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#21;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#checkUnExpr#0;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#22;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#23;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#24;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#25;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#26;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#27;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#matchParam#0;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#28;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#29;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#30;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#31;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#32;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#33;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#34;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#35;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#36;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#37;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#38;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#39;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#40;class#SemanticCheck#0" expanded="false" />
-            <element signature="method#visit#41;class#SemanticCheck#0" expanded="false" />
-            <element signature="e#44436#44466#0" expanded="false" />
-            <element signature="e#44584#44611#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.23717949">
+          <caret line="519" column="24" selection-start-line="519" selection-start-column="24" selection-end-line="519" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Expression/Assign.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/CodeGen/genTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6022472">
+          <caret line="39" column="40" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>

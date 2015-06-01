@@ -36,10 +36,10 @@ public class genTester {
         OutputStream IRoutput = new FileOutputStream(irOutputFile);
         OutputStream genOutput = new FileOutputStream(genOutputfile);
         Translator translator = new Translator();
-        new PeepHole(translator.ir);
         translator.setOutputStream(IRoutput);
         ast.accept(new SemanticCheck());
         ast.accept(translator);
+        PeepHole peepHole = new PeepHole(translator.ir);
         translator.print();
         BrutalGen brutalGen = new BrutalGen(translator.ir);
         genOutput.write(brutalGen.toString().getBytes());
@@ -118,7 +118,7 @@ public class genTester {
 //        names.add("palautm");
 //        names.add("shortcircuit");
         names.add("splittree");
-        names.add("stvsun");
+//        names.add("stvsun");
 
         for (String file : oldnames) {
             test(path + file + ".c", path + file + ".out", path + file + ".s");

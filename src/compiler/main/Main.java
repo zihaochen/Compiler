@@ -24,10 +24,10 @@ public class Main
             System.exit(1);
         }
         Translator translator = new Translator();
-        new PeepHole(translator.ir);
         translator.setOutputStream(System.out);
         ast.accept(new SemanticCheck());
         ast.accept(translator);
+        new PeepHole(translator.ir);
         BrutalGen brutalGen = new BrutalGen(translator.ir);
         System.out.println(brutalGen.toString());
         System.exit(0);
