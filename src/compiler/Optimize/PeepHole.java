@@ -102,7 +102,8 @@ public class PeepHole {
                         next instanceof Assign &&
                         ((Call) quadruple).dest.equals(((Assign) next).src) &&
                         hashMap.get(((Assign) next).src) == 2) {
-                    ((Call) quadruple).dest = ((Assign) next).dest;
+                    System.out.println("adfsdafasf");
+                            ((Call) quadruple).dest = ((Assign) next).dest;
                     tmpList.add(quadruple);
                     i += 1;
                 }

@@ -462,6 +462,7 @@ public class SemanticCheck implements Visitor {
                         throw new RuntimeException("Redefine the variable" + decl.name.toString() + "in member table of struct" + unionType.name.toString());
                     else unionType.members.add(decl.name.num, decl.type, 0);
                     unionType.size = max(decl.type.size, unionType.size);
+                    unionType.size += 4;
                 }
             }
         }

@@ -3,6 +3,7 @@
 	_a: .space 4
 	_b: .space 4
 	ASU_1: .space 12
+	ASU_2: .space 12
 	str_1: .space 28
 	str_2: .space 28
 	str_3: .space 28
@@ -13,6 +14,8 @@ main:
 	move $gp, $sp     # set global pointer (unused)
 	subu $sp, $sp, 4
 	la $t0, ASU_1
+	sw $t0, _a
+	la $t0, ASU_2
 	sw $t0, _b
 	li $t0, 0
 	sw $t0, _printf_cnt

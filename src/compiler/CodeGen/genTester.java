@@ -60,11 +60,11 @@ public class genTester {
 //        oldnames.add("Bulgarian_solitaire-5110379024-wuhang");
 //        oldnames.add("expr-5110309085-jintianxing");
 //        oldnames.add("factor-5090379042-jiaxiao");
-        oldnames.add("gcd-5090379042-jiaxiao");
+//        oldnames.add("gcd-5090379042-jiaxiao");
 //        oldnames.add("hanoi2-5100309153-yanghuan");
 //        oldnames.add("hanoi-5100379110-daibo");
 //        oldnames.add("hashmap-5100309127  -hetianxing");
-        oldnames.add("heapsort-5100379110-daibo");
+//        oldnames.add("heapsort-5100379110-daibo");
 //        oldnames.add("hello-5090379042-jiaxiao");
 //        oldnames.add("horse2-5100309153-yanghuan");
 //        oldnames.add("horse3-5100309153-yanghuan");
@@ -84,7 +84,7 @@ public class genTester {
 //        oldnames.add("qsort-5100379110-daibo");
 //        oldnames.add("queenbitwise-5110379024-wuhang");
 //        oldnames.add("queens-5100379110-daibo");
-        oldnames.add("self-5090379042-jiaxiao");
+ //       oldnames.add("self-5090379042-jiaxiao");
 //        oldnames.add("selfref-5090379042-jiaxiao");
         oldnames.add("spill2-5100379110-daibo"); /*todo peephole*/
 //        oldnames.add("spill-5100379110-daibo");
@@ -92,13 +92,13 @@ public class genTester {
 //        oldnames.add("struct6-5100309127-hetianxing");
 //        oldnames.add("superloop-5090379042-jiaxiao");
 //        oldnames.add("tak-5090379042-jiaxiao");
-        oldnames.add("treap-5110309085-jintianxing");
+ //       oldnames.add("treap-5110309085-jintianxing");
 //        oldnames.add("twinprime-5090379042-jiaxiao");
 //        oldnames.add("varptr-5100309127-hetianxing");
 //
 //
 //
-        names.add("bubble");
+//        names.add("bubble");
 //        names.add("cmpstr");
 //        names.add("cube");
 //        names.add("dc3");
@@ -116,7 +116,7 @@ public class genTester {
 //        names.add("manacher");
 //        names.add("minrep");
 //        names.add("palautm");
-        names.add("shortcircuit");
+//        names.add("shortcircuit");
         names.add("splittree");
         names.add("stvsun");
 

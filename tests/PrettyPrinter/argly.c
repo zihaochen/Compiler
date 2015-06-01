@@ -25,14 +25,6 @@ op=cin.get();
 			if(c)
 				d;
 if ((fabs(x1*y2-x2*y1)<16)&&(fabs(x2*y3-x3*y2)<16) ) { flag=1;}
-else {
-		//fasdasf;
-	}
-	if (1+1==2) q();
-										else {
-		if (2 +2==4) w();
-		else e();
-	}
 	
 	if () {
 		if (){
@@ -48,23 +40,6 @@ else {
 		for (;;)
 			for (;;)
 				;
-	
-	
-	
+		
 	return 'a';
-}
-
-/*
-	 /\
-	/  \	
-----	--------
-|			   |
-|			   |
-|______________|
-
-*/
-
-int f (int x,int y , int z)
-	   {
-		"SO ARGLY";
-	   } 
+	}

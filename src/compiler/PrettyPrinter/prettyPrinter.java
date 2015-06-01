@@ -517,6 +517,7 @@ public class prettyPrinter implements prettySym{
         String path = "D:\\Codes\\Compiler\\tests\\PrettyPrinter\\";
         ArrayList<String> names = new ArrayList<>();
         names.add("madcalc");
+        names.add("argly");
         names.add("test01");
         names.add("test02");
         names.add("test03");
