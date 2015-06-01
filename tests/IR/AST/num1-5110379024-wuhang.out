@@ -1,0 +1,81 @@
+<AST> 
+		<TypeDecl> 
+			<StructType> 
+				<Id: DDD> 
+					<VarDecl> 
+						<IntType> 
+						<Id: id> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: main> 
+					<VarDecl> 
+						<IntType> 
+						<Id: a> 
+						<InitValue> 
+							<IntConst: 51> 
+					<VarDecl> 
+						<IntType> 
+						<Id: b> 
+						<InitValue> 
+							<IntConst: 17658> 
+					<VarDecl> 
+						<IntType> 
+						<Id: d> 
+						<InitValue> 
+							<CharConst: 11> 
+					<VarDecl> 
+						<IntType> 
+						<Id: e> 
+						<InitValue> 
+							<IntConst: 8> 
+					<VarDecl> 
+						<IntType> 
+						<Id: f> 
+						<InitValue> 
+							<IntConst: 10> 
+					<VarDecl> 
+						<CharType> 
+						<Id: g> 
+						<InitValue> 
+							<IntConst: 40> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<Id: g> 
+						<BinaryExpr> 
+							<ADD> 
+							<Id: g> 
+							<CastExpr> 
+								<CharType> 
+								<Id: f> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: %d %d %d %d
+> 
+							<Id: a> 
+							<Id: b> 
+							<Id: d> 
+							<Id: e> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: %c %d %d %c
+> 
+							<CastExpr> 
+								<CharType> 
+								<Id: a> 
+							<CastExpr> 
+								<PointerType> 
+									<PointerType> 
+										<IntType> 
+								<Id: e> 
+							<UnaryExpr> 
+								<SIZEOF> 
+								<CastExpr> 
+									<PointerType> 
+										<StructType> 
+											<Id: DDD> 
+									<Id: b> 
+							<Id: g> 
+					<ReturnStmt> 
+						<IntConst: 0> 

@@ -1,0 +1,117 @@
+<AST> 
+		<VarDecl> 
+			<StructType> 
+				<Id: dd> 
+					<VarDecl> 
+						<PointerType> 
+							<IntType> 
+						<Id: c> 
+					<VarDecl> 
+						<ArrayType> 
+							<IntType> 
+							<IntConst: 20> 
+						<Id: a> 
+			<Id: a> 
+		<VarDecl> 
+			<StructType> 
+				<Id: dd> 
+					<VarDecl> 
+						<PointerType> 
+							<IntType> 
+						<Id: c> 
+					<VarDecl> 
+						<ArrayType> 
+							<IntType> 
+							<IntConst: 20> 
+						<Id: a> 
+			<Id: b> 
+		<VarDecl> 
+			<StructType> 
+				<Id: dd> 
+					<VarDecl> 
+						<PointerType> 
+							<IntType> 
+						<Id: c> 
+					<VarDecl> 
+						<ArrayType> 
+							<IntType> 
+							<IntConst: 20> 
+						<Id: a> 
+			<Id: c> 
+		<VarDecl> 
+			<StructType> 
+				<Id: dd> 
+					<VarDecl> 
+						<PointerType> 
+							<IntType> 
+						<Id: c> 
+					<VarDecl> 
+						<ArrayType> 
+							<IntType> 
+							<IntConst: 20> 
+						<Id: a> 
+			<Id: fasfas> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: main> 
+					<VarDecl> 
+						<IntType> 
+						<Id: d> 
+						<InitValue> 
+							<IntConst: 3> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<RecordAccess> 
+							<Id: a> 
+							<Id: c> 
+						<UnaryExpr> 
+							<AMPERSAND> 
+							<Id: d> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<ArrayAccess> 
+							<RecordAccess> 
+								<Id: a> 
+								<Id: a> 
+							<IntConst: 0> 
+						<IntConst: 2> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<Id: c> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: b> 
+							<Id: a> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<ArrayAccess> 
+							<RecordAccess> 
+								<Id: c> 
+								<Id: a> 
+							<IntConst: 0> 
+						<IntConst: 3> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: %d %d
+> 
+							<ArrayAccess> 
+								<RecordAccess> 
+									<Id: c> 
+									<Id: a> 
+								<IntConst: 0> 
+							<UnaryExpr> 
+								<ASTERISK> 
+								<RecordAccess> 
+									<Id: c> 
+									<Id: c> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: %d
+> 
+							<ArrayAccess> 
+								<RecordAccess> 
+									<Id: a> 
+									<Id: a> 
+								<IntConst: 0> 

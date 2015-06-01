@@ -1,0 +1,281 @@
+<AST> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: printrow> 
+				<VarDecl> 
+					<IntType> 
+					<Id: pos> 
+				<VarDecl> 
+					<IntType> 
+					<Id: c> 
+					<VarDecl> 
+						<IntType> 
+						<Id: i> 
+					<ForLoop> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: i> 
+							<IntConst: 1> 
+						<BinaryExpr> 
+							<LE> 
+							<Id: i> 
+							<BinaryExpr> 
+								<SUB> 
+								<Id: pos> 
+								<IntConst: 1> 
+						<UnaryExpr> 
+							<INC> 
+							<Id: i> 
+						<FunctionCall> 
+							<Id: printf> 
+							<ExprList> 
+								<StringConst:  .> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst:  O> 
+					<ForLoop> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: i> 
+							<BinaryExpr> 
+								<ADD> 
+								<Id: pos> 
+								<IntConst: 1> 
+						<BinaryExpr> 
+							<LE> 
+							<Id: i> 
+							<Id: c> 
+						<SelfIncrement> 
+							<Id: i> 
+						<FunctionCall> 
+							<Id: printf> 
+							<ExprList> 
+								<StringConst:  .> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: 
+> 
+					<ReturnStmt> 
+						<IntConst: 0> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: nqueen> 
+				<VarDecl> 
+					<IntType> 
+					<Id: n> 
+					<VarDecl> 
+						<IntType> 
+						<Id: i> 
+						<InitValue> 
+							<IntConst: 0> 
+					<VarDecl> 
+						<IntType> 
+						<Id: c> 
+						<InitValue> 
+							<Id: n> 
+					<VarDecl> 
+						<IntType> 
+						<Id: odd> 
+						<InitValue> 
+							<BinaryExpr> 
+								<MOD> 
+								<Id: n> 
+								<IntConst: 2> 
+					<If> 
+						<BinaryExpr> 
+							<NE> 
+							<BinaryExpr> 
+								<MOD> 
+								<BinaryExpr> 
+									<DIV> 
+									<Id: n> 
+									<IntConst: 2> 
+								<IntConst: 3> 
+							<IntConst: 1> 
+								<FunctionCall> 
+									<Id: printrow> 
+									<ExprList> 
+										<IntConst: 2> 
+										<Id: c> 
+								<BinaryExpr> 
+									<ASSIGN> 
+									<Id: i> 
+									<IntConst: 4> 
+								<WhileLoop> 
+									<BinaryExpr> 
+										<LE> 
+										<Id: i> 
+										<Id: n> 
+											<FunctionCall> 
+												<Id: printrow> 
+												<ExprList> 
+													<Id: i> 
+													<Id: c> 
+											<BinaryExpr> 
+												<ASSIGN_ADD> 
+												<Id: i> 
+												<IntConst: 2> 
+								<BinaryExpr> 
+									<ASSIGN> 
+									<Id: i> 
+									<IntConst: 1> 
+								<WhileLoop> 
+									<BinaryExpr> 
+										<LE> 
+										<Id: i> 
+										<Id: n> 
+											<FunctionCall> 
+												<Id: printrow> 
+												<ExprList> 
+													<Id: i> 
+													<Id: c> 
+											<BinaryExpr> 
+												<ASSIGN_ADD> 
+												<Id: i> 
+												<IntConst: 2> 
+								<BinaryExpr> 
+									<ASSIGN> 
+									<Id: n> 
+									<BinaryExpr> 
+										<SUB> 
+										<Id: n> 
+										<Id: odd> 
+								<FunctionCall> 
+									<Id: printrow> 
+									<ExprList> 
+										<BinaryExpr> 
+											<DIV> 
+											<Id: n> 
+											<IntConst: 2> 
+										<Id: c> 
+								<BinaryExpr> 
+									<ASSIGN> 
+									<Id: i> 
+									<BinaryExpr> 
+										<ADD> 
+										<BinaryExpr> 
+											<DIV> 
+											<Id: n> 
+											<IntConst: 2> 
+										<IntConst: 1> 
+								<WhileLoop> 
+									<BinaryExpr> 
+										<NE> 
+										<Id: i> 
+										<BinaryExpr> 
+											<SUB> 
+											<BinaryExpr> 
+												<DIV> 
+												<Id: n> 
+												<IntConst: 2> 
+											<IntConst: 1> 
+											<FunctionCall> 
+												<Id: printrow> 
+												<ExprList> 
+													<BinaryExpr> 
+														<ADD> 
+														<Id: i> 
+														<IntConst: 1> 
+													<Id: c> 
+											<BinaryExpr> 
+												<ASSIGN> 
+												<Id: i> 
+												<BinaryExpr> 
+													<MOD> 
+													<BinaryExpr> 
+														<ADD> 
+														<Id: i> 
+														<IntConst: 2> 
+													<Id: n> 
+								<BinaryExpr> 
+									<ASSIGN> 
+									<Id: i> 
+									<BinaryExpr> 
+										<MOD> 
+										<BinaryExpr> 
+											<SUB> 
+											<Id: i> 
+											<IntConst: 2> 
+										<Id: n> 
+								<WhileLoop> 
+									<BinaryExpr> 
+										<NE> 
+										<Id: i> 
+										<BinaryExpr> 
+											<SUB> 
+											<BinaryExpr> 
+												<DIV> 
+												<Id: n> 
+												<IntConst: 2> 
+											<IntConst: 1> 
+											<FunctionCall> 
+												<Id: printrow> 
+												<ExprList> 
+													<BinaryExpr> 
+														<SUB> 
+														<Id: n> 
+														<Id: i> 
+													<Id: c> 
+											<BinaryExpr> 
+												<ASSIGN> 
+												<Id: i> 
+												<BinaryExpr> 
+													<MOD> 
+													<BinaryExpr> 
+														<ADD> 
+														<BinaryExpr> 
+															<SUB> 
+															<Id: i> 
+															<IntConst: 2> 
+														<Id: n> 
+													<Id: n> 
+								<FunctionCall> 
+									<Id: printrow> 
+									<ExprList> 
+										<BinaryExpr> 
+											<SUB> 
+											<Id: n> 
+											<Id: i> 
+										<Id: c> 
+								<If> 
+									<Id: odd> 
+									<FunctionCall> 
+										<Id: printrow> 
+										<ExprList> 
+											<BinaryExpr> 
+												<ADD> 
+												<Id: n> 
+												<IntConst: 1> 
+											<Id: c> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: 
+> 
+					<ReturnStmt> 
+						<IntConst: 0> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: main> 
+					<VarDecl> 
+						<IntType> 
+						<Id: n> 
+					<ForLoop> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: n> 
+							<IntConst: 6> 
+						<BinaryExpr> 
+							<LE> 
+							<Id: n> 
+							<IntConst: 11> 
+						<SelfIncrement> 
+							<Id: n> 
+						<FunctionCall> 
+							<Id: nqueen> 
+							<ExprList> 
+								<Id: n> 
+					<ReturnStmt> 
+						<IntConst: 0> 

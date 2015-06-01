@@ -1,0 +1,28 @@
+<AST> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: f> 
+				<VarDecl> 
+					<IntType> 
+					<Id: anything> 
+					<ReturnStmt> 
+						<IntConst: 0> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: main> 
+					<VarDecl> 
+						<IntType> 
+						<Id: x> 
+						<InitValue> 
+							<FunctionCall> 
+								<Id: f> 
+								<ExprList> 
+									<Id: x> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: %d
+> 
+							<Id: x> 
+					<ReturnStmt> 
+						<Id: x> 

@@ -1,0 +1,34 @@
+<AST> 
+		<VarDecl> 
+			<StructType> 
+				<Id: dd> 
+					<VarDecl> 
+						<IntType> 
+						<Id: a> 
+					<VarDecl> 
+						<IntType> 
+						<Id: d> 
+			<Id: aa> 
+		<VarDecl> 
+			<StructType> 
+				<Id: dd> 
+					<VarDecl> 
+						<IntType> 
+						<Id: a> 
+					<VarDecl> 
+						<IntType> 
+						<Id: d> 
+			<Id: bb> 
+		<VarDecl> 
+			<StructType> 
+				<Id: dd> 
+					<VarDecl> 
+						<IntType> 
+						<Id: a> 
+					<VarDecl> 
+						<IntType> 
+						<Id: d> 
+			<Id: cc> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: main> 

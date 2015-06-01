@@ -2,9 +2,6 @@
 int a[10] = {1, 2, 3}, b[5] = {2, 3, 4};
 char c = 'c';
 char s[10] = "345asfdfa\n";
-struct {
-	int a, b;
-}xx;
 //asfsastruct yy{
 	int a, b;
 }qwe, ads;

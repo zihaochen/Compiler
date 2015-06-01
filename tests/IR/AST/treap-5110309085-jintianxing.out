@@ -1,0 +1,495 @@
+<AST> 
+		<VarDecl> 
+			<IntType> 
+			<Id: N> 
+			<InitValue> 
+				<IntConst: 2000> 
+		<VarDecl> 
+			<IntType> 
+			<Id: A> 
+			<InitValue> 
+				<IntConst: 13579> 
+		<VarDecl> 
+			<IntType> 
+			<Id: B> 
+			<InitValue> 
+				<IntConst: 12345> 
+		<VarDecl> 
+			<IntType> 
+			<Id: C> 
+			<InitValue> 
+				<IntConst: 32768> 
+		<VarDecl> 
+			<IntType> 
+			<Id: X> 
+			<InitValue> 
+				<IntConst: 86421> 
+		<VarDecl> 
+			<IntType> 
+			<Id: i> 
+		<TypeDecl> 
+			<StructType> 
+				<Id: Node> 
+					<VarDecl> 
+						<IntType> 
+						<Id: value> 
+					<VarDecl> 
+						<IntType> 
+						<Id: priority> 
+					<VarDecl> 
+						<IntType> 
+						<Id: sum> 
+					<VarDecl> 
+						<PointerType> 
+							<StructType> 
+								<Id: Node> 
+						<Id: lson> 
+					<VarDecl> 
+						<PointerType> 
+							<StructType> 
+								<Id: Node> 
+						<Id: rson> 
+		<VarDecl> 
+			<PointerType> 
+				<StructType> 
+					<Id: Node> 
+			<Id: root> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: get_random> 
+					<VarDecl> 
+						<IntType> 
+						<Id: ret> 
+						<InitValue> 
+							<BinaryExpr> 
+								<ADD> 
+								<BinaryExpr> 
+									<MUL> 
+									<Id: A> 
+									<Id: X> 
+								<Id: B> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<Id: X> 
+						<BinaryExpr> 
+							<MOD> 
+							<Id: ret> 
+							<Id: C> 
+					<ReturnStmt> 
+						<Id: ret> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: sum_of> 
+				<VarDecl> 
+					<PointerType> 
+						<StructType> 
+							<Id: Node> 
+					<Id: node> 
+					<If> 
+						<BinaryExpr> 
+							<EQ> 
+							<Id: node> 
+							<IntConst: 0> 
+						<ReturnStmt> 
+							<IntConst: 0> 
+					<ReturnStmt> 
+						<PointerAccess> 
+							<Id: node> 
+							<Id: sum> 
+		<FunctionDef> 
+			<VoidType> 
+			<Id: update> 
+				<VarDecl> 
+					<PointerType> 
+						<StructType> 
+							<Id: Node> 
+					<Id: node> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<PointerAccess> 
+							<Id: node> 
+							<Id: sum> 
+						<BinaryExpr> 
+							<ADD> 
+							<BinaryExpr> 
+								<ADD> 
+								<FunctionCall> 
+									<Id: sum_of> 
+									<ExprList> 
+										<PointerAccess> 
+											<Id: node> 
+											<Id: lson> 
+								<FunctionCall> 
+									<Id: sum_of> 
+									<ExprList> 
+										<PointerAccess> 
+											<Id: node> 
+											<Id: rson> 
+							<IntConst: 1> 
+		<FunctionDef> 
+			<PointerType> 
+				<StructType> 
+					<Id: Node> 
+			<Id: rotate_left> 
+				<VarDecl> 
+					<PointerType> 
+						<StructType> 
+							<Id: Node> 
+					<Id: node> 
+					<VarDecl> 
+						<PointerType> 
+							<StructType> 
+								<Id: Node> 
+						<Id: rson> 
+						<InitValue> 
+							<PointerAccess> 
+								<Id: node> 
+								<Id: rson> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<PointerAccess> 
+							<Id: node> 
+							<Id: rson> 
+						<PointerAccess> 
+							<Id: rson> 
+							<Id: lson> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<PointerAccess> 
+							<Id: rson> 
+							<Id: lson> 
+						<Id: node> 
+					<FunctionCall> 
+						<Id: update> 
+						<ExprList> 
+							<Id: node> 
+					<FunctionCall> 
+						<Id: update> 
+						<ExprList> 
+							<Id: rson> 
+					<ReturnStmt> 
+						<Id: rson> 
+		<FunctionDef> 
+			<PointerType> 
+				<StructType> 
+					<Id: Node> 
+			<Id: rotate_right> 
+				<VarDecl> 
+					<PointerType> 
+						<StructType> 
+							<Id: Node> 
+					<Id: node> 
+					<VarDecl> 
+						<PointerType> 
+							<StructType> 
+								<Id: Node> 
+						<Id: lson> 
+						<InitValue> 
+							<PointerAccess> 
+								<Id: node> 
+								<Id: lson> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<PointerAccess> 
+							<Id: node> 
+							<Id: lson> 
+						<PointerAccess> 
+							<Id: lson> 
+							<Id: rson> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<PointerAccess> 
+							<Id: lson> 
+							<Id: rson> 
+						<Id: node> 
+					<FunctionCall> 
+						<Id: update> 
+						<ExprList> 
+							<Id: node> 
+					<FunctionCall> 
+						<Id: update> 
+						<ExprList> 
+							<Id: lson> 
+					<ReturnStmt> 
+						<Id: lson> 
+		<FunctionDef> 
+			<PointerType> 
+				<StructType> 
+					<Id: Node> 
+			<Id: insert_node> 
+				<VarDecl> 
+					<PointerType> 
+						<StructType> 
+							<Id: Node> 
+					<Id: now> 
+				<VarDecl> 
+					<PointerType> 
+						<StructType> 
+							<Id: Node> 
+					<Id: node> 
+					<If> 
+						<BinaryExpr> 
+							<EQ> 
+							<Id: now> 
+							<IntConst: 0> 
+						<ReturnStmt> 
+							<Id: node> 
+					<If> 
+						<BinaryExpr> 
+							<GT> 
+							<PointerAccess> 
+								<Id: now> 
+								<Id: value> 
+							<PointerAccess> 
+								<Id: node> 
+								<Id: value> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<PointerAccess> 
+								<Id: now> 
+								<Id: lson> 
+							<FunctionCall> 
+								<Id: insert_node> 
+								<ExprList> 
+									<PointerAccess> 
+										<Id: now> 
+										<Id: lson> 
+									<Id: node> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<PointerAccess> 
+								<Id: now> 
+								<Id: rson> 
+							<FunctionCall> 
+								<Id: insert_node> 
+								<ExprList> 
+									<PointerAccess> 
+										<Id: now> 
+										<Id: rson> 
+									<Id: node> 
+					<FunctionCall> 
+						<Id: update> 
+						<ExprList> 
+							<Id: now> 
+					<If> 
+						<BinaryExpr> 
+							<AND> 
+							<BinaryExpr> 
+								<NE> 
+								<PointerAccess> 
+									<Id: now> 
+									<Id: lson> 
+								<IntConst: 0> 
+							<BinaryExpr> 
+								<GT> 
+								<PointerAccess> 
+									<PointerAccess> 
+										<Id: now> 
+										<Id: lson> 
+									<Id: priority> 
+								<PointerAccess> 
+									<Id: now> 
+									<Id: priority> 
+						<ReturnStmt> 
+							<FunctionCall> 
+								<Id: rotate_right> 
+								<ExprList> 
+									<Id: now> 
+					<If> 
+						<BinaryExpr> 
+							<AND> 
+							<BinaryExpr> 
+								<NE> 
+								<PointerAccess> 
+									<Id: now> 
+									<Id: rson> 
+								<IntConst: 0> 
+							<BinaryExpr> 
+								<GT> 
+								<PointerAccess> 
+									<PointerAccess> 
+										<Id: now> 
+										<Id: rson> 
+									<Id: priority> 
+								<PointerAccess> 
+									<Id: now> 
+									<Id: priority> 
+						<ReturnStmt> 
+							<FunctionCall> 
+								<Id: rotate_left> 
+								<ExprList> 
+									<Id: now> 
+					<ReturnStmt> 
+						<Id: now> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: get_kth_element> 
+				<VarDecl> 
+					<PointerType> 
+						<StructType> 
+							<Id: Node> 
+					<Id: now> 
+				<VarDecl> 
+					<IntType> 
+					<Id: k> 
+					<VarDecl> 
+						<IntType> 
+						<Id: lsum> 
+						<InitValue> 
+							<IntConst: 0> 
+					<If> 
+						<BinaryExpr> 
+							<NE> 
+							<PointerAccess> 
+								<Id: now> 
+								<Id: lson> 
+							<IntConst: 0> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: lsum> 
+							<PointerAccess> 
+								<PointerAccess> 
+									<Id: now> 
+									<Id: lson> 
+								<Id: sum> 
+					<If> 
+						<BinaryExpr> 
+							<GT> 
+							<Id: lsum> 
+							<Id: k> 
+						<ReturnStmt> 
+							<FunctionCall> 
+								<Id: get_kth_element> 
+								<ExprList> 
+									<PointerAccess> 
+										<Id: now> 
+										<Id: lson> 
+									<Id: k> 
+					<If> 
+						<BinaryExpr> 
+							<LT> 
+							<Id: lsum> 
+							<Id: k> 
+						<ReturnStmt> 
+							<FunctionCall> 
+								<Id: get_kth_element> 
+								<ExprList> 
+									<PointerAccess> 
+										<Id: now> 
+										<Id: rson> 
+									<BinaryExpr> 
+										<SUB> 
+										<BinaryExpr> 
+											<SUB> 
+											<Id: k> 
+											<Id: lsum> 
+										<IntConst: 1> 
+					<ReturnStmt> 
+						<PointerAccess> 
+							<Id: now> 
+							<Id: value> 
+		<FunctionDef> 
+			<PointerType> 
+				<StructType> 
+					<Id: Node> 
+			<Id: alloc_node> 
+					<VarDecl> 
+						<PointerType> 
+							<StructType> 
+								<Id: Node> 
+						<Id: node> 
+						<InitValue> 
+							<FunctionCall> 
+								<Id: malloc> 
+								<ExprList> 
+									<SizeofExpr> 
+										<StructType> 
+											<Id: Node> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<PointerAccess> 
+							<Id: node> 
+							<Id: lson> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<PointerAccess> 
+								<Id: node> 
+								<Id: rson> 
+							<IntConst: 0> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<PointerAccess> 
+							<Id: node> 
+							<Id: sum> 
+						<IntConst: 1> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<PointerAccess> 
+							<Id: node> 
+							<Id: priority> 
+						<FunctionCall> 
+							<Id: get_random> 
+							<ExprList> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<PointerAccess> 
+							<Id: node> 
+							<Id: value> 
+						<FunctionCall> 
+							<Id: get_random> 
+							<ExprList> 
+					<ReturnStmt> 
+						<Id: node> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: main> 
+					<BinaryExpr> 
+						<ASSIGN> 
+						<Id: root> 
+						<FunctionCall> 
+							<Id: alloc_node> 
+							<ExprList> 
+					<ForLoop> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: i> 
+							<IntConst: 0> 
+						<BinaryExpr> 
+							<LT> 
+							<Id: i> 
+							<Id: N> 
+						<SelfIncrement> 
+							<Id: i> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: root> 
+							<FunctionCall> 
+								<Id: insert_node> 
+								<ExprList> 
+									<Id: root> 
+									<FunctionCall> 
+										<Id: alloc_node> 
+										<ExprList> 
+					<ForLoop> 
+						<BinaryExpr> 
+							<ASSIGN> 
+							<Id: i> 
+							<IntConst: 0> 
+						<BinaryExpr> 
+							<LE> 
+							<Id: i> 
+							<Id: N> 
+						<SelfIncrement> 
+							<Id: i> 
+						<FunctionCall> 
+							<Id: printf> 
+							<ExprList> 
+								<StringConst: %d
+> 
+								<FunctionCall> 
+									<Id: get_kth_element> 
+									<ExprList> 
+										<Id: root> 
+										<Id: i> 
+					<ReturnStmt> 
+						<IntConst: 0> 

@@ -1,0 +1,70 @@
+<AST> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: tak> 
+				<VarDecl> 
+					<IntType> 
+					<Id: x> 
+				<VarDecl> 
+					<IntType> 
+					<Id: y> 
+				<VarDecl> 
+					<IntType> 
+					<Id: z> 
+					<If> 
+						<BinaryExpr> 
+							<LT> 
+							<Id: y> 
+							<Id: x> 
+						<ReturnStmt> 
+							<BinaryExpr> 
+								<ADD> 
+								<IntConst: 1> 
+								<FunctionCall> 
+									<Id: tak> 
+									<ExprList> 
+										<FunctionCall> 
+											<Id: tak> 
+											<ExprList> 
+												<BinaryExpr> 
+													<SUB> 
+													<Id: x> 
+													<IntConst: 1> 
+												<Id: y> 
+												<Id: z> 
+										<FunctionCall> 
+											<Id: tak> 
+											<ExprList> 
+												<BinaryExpr> 
+													<SUB> 
+													<Id: y> 
+													<IntConst: 1> 
+												<Id: z> 
+												<Id: x> 
+										<FunctionCall> 
+											<Id: tak> 
+											<ExprList> 
+												<BinaryExpr> 
+													<SUB> 
+													<Id: z> 
+													<IntConst: 1> 
+												<Id: x> 
+												<Id: y> 
+						<ReturnStmt> 
+							<Id: z> 
+		<FunctionDef> 
+			<IntType> 
+			<Id: main> 
+					<FunctionCall> 
+						<Id: printf> 
+						<ExprList> 
+							<StringConst: %d
+> 
+							<FunctionCall> 
+								<Id: tak> 
+								<ExprList> 
+									<IntConst: 18> 
+									<IntConst: 12> 
+									<IntConst: 6> 
+					<ReturnStmt> 
+						<IntConst: 0> 
