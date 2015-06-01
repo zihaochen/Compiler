@@ -7735,10 +7735,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _malloc
 	addi $sp, $sp, 7216
-	sw $v0, -1040($sp)
+	sw $v0, -4($sp)
 	lw $ra, ($sp)
-	lw $t0, -1040($sp)
-	sw $t0, -4($sp)
 	lw $t0, -4($sp)
 	sw $t0, -1032($sp)
 	lw $t0, -4($sp)
@@ -7755,10 +7753,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1056($sp)
+	sw $v0, -8($sp)
 	lw $ra, ($sp)
-	lw $t0, -1056($sp)
-	sw $t0, -8($sp)
 	lw $t0, -8($sp)
 	sw $t0, -1052($sp)
 	lw $t0, -4($sp)
@@ -7766,10 +7762,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1064($sp)
+	sw $v0, -12($sp)
 	lw $ra, ($sp)
-	lw $t0, -1064($sp)
-	sw $t0, -12($sp)
 	lw $t0, -12($sp)
 	sw $t0, -1060($sp)
 	lw $t0, -4($sp)
@@ -7777,10 +7771,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1072($sp)
+	sw $v0, -16($sp)
 	lw $ra, ($sp)
-	lw $t0, -1072($sp)
-	sw $t0, -16($sp)
 	lw $t0, -16($sp)
 	sw $t0, -1068($sp)
 	lw $t0, -4($sp)
@@ -7788,10 +7780,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1080($sp)
+	sw $v0, -20($sp)
 	lw $ra, ($sp)
-	lw $t0, -1080($sp)
-	sw $t0, -20($sp)
 	lw $t0, -20($sp)
 	sw $t0, -1076($sp)
 	lw $t0, -4($sp)
@@ -7799,10 +7789,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1088($sp)
+	sw $v0, -24($sp)
 	lw $ra, ($sp)
-	lw $t0, -1088($sp)
-	sw $t0, -24($sp)
 	lw $t0, -24($sp)
 	sw $t0, -1084($sp)
 	lw $t0, -4($sp)
@@ -7810,10 +7798,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1096($sp)
+	sw $v0, -28($sp)
 	lw $ra, ($sp)
-	lw $t0, -1096($sp)
-	sw $t0, -28($sp)
 	lw $t0, -28($sp)
 	sw $t0, -1092($sp)
 	lw $t0, -4($sp)
@@ -7821,10 +7807,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1104($sp)
+	sw $v0, -32($sp)
 	lw $ra, ($sp)
-	lw $t0, -1104($sp)
-	sw $t0, -32($sp)
 	lw $t0, -32($sp)
 	sw $t0, -1100($sp)
 	lw $t0, -4($sp)
@@ -7832,10 +7816,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1112($sp)
+	sw $v0, -36($sp)
 	lw $ra, ($sp)
-	lw $t0, -1112($sp)
-	sw $t0, -36($sp)
 	lw $t0, -36($sp)
 	sw $t0, -1108($sp)
 	lw $t0, -4($sp)
@@ -7843,10 +7825,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1120($sp)
+	sw $v0, -40($sp)
 	lw $ra, ($sp)
-	lw $t0, -1120($sp)
-	sw $t0, -40($sp)
 	lw $t0, -40($sp)
 	sw $t0, -1116($sp)
 	lw $t0, -4($sp)
@@ -7854,10 +7834,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1128($sp)
+	sw $v0, -44($sp)
 	lw $ra, ($sp)
-	lw $t0, -1128($sp)
-	sw $t0, -44($sp)
 	lw $t0, -44($sp)
 	sw $t0, -1124($sp)
 	lw $t0, -4($sp)
@@ -7865,10 +7843,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1136($sp)
+	sw $v0, -48($sp)
 	lw $ra, ($sp)
-	lw $t0, -1136($sp)
-	sw $t0, -48($sp)
 	lw $t0, -48($sp)
 	sw $t0, -1132($sp)
 	lw $t0, -4($sp)
@@ -7876,10 +7852,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1144($sp)
+	sw $v0, -52($sp)
 	lw $ra, ($sp)
-	lw $t0, -1144($sp)
-	sw $t0, -52($sp)
 	lw $t0, -52($sp)
 	sw $t0, -1140($sp)
 	lw $t0, -4($sp)
@@ -7887,10 +7861,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1152($sp)
+	sw $v0, -56($sp)
 	lw $ra, ($sp)
-	lw $t0, -1152($sp)
-	sw $t0, -56($sp)
 	lw $t0, -56($sp)
 	sw $t0, -1148($sp)
 	lw $t0, -4($sp)
@@ -7898,10 +7870,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1160($sp)
+	sw $v0, -60($sp)
 	lw $ra, ($sp)
-	lw $t0, -1160($sp)
-	sw $t0, -60($sp)
 	lw $t0, -60($sp)
 	sw $t0, -1156($sp)
 	lw $t0, -4($sp)
@@ -7909,10 +7879,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1168($sp)
+	sw $v0, -64($sp)
 	lw $ra, ($sp)
-	lw $t0, -1168($sp)
-	sw $t0, -64($sp)
 	lw $t0, -64($sp)
 	sw $t0, -1164($sp)
 	lw $t0, -4($sp)
@@ -7920,10 +7888,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1176($sp)
+	sw $v0, -68($sp)
 	lw $ra, ($sp)
-	lw $t0, -1176($sp)
-	sw $t0, -68($sp)
 	lw $t0, -68($sp)
 	sw $t0, -1172($sp)
 	lw $t0, -4($sp)
@@ -7931,10 +7897,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1184($sp)
+	sw $v0, -72($sp)
 	lw $ra, ($sp)
-	lw $t0, -1184($sp)
-	sw $t0, -72($sp)
 	lw $t0, -72($sp)
 	sw $t0, -1180($sp)
 	lw $t0, -4($sp)
@@ -7942,10 +7906,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1192($sp)
+	sw $v0, -76($sp)
 	lw $ra, ($sp)
-	lw $t0, -1192($sp)
-	sw $t0, -76($sp)
 	lw $t0, -76($sp)
 	sw $t0, -1188($sp)
 	lw $t0, -4($sp)
@@ -7953,10 +7915,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1200($sp)
+	sw $v0, -80($sp)
 	lw $ra, ($sp)
-	lw $t0, -1200($sp)
-	sw $t0, -80($sp)
 	lw $t0, -80($sp)
 	sw $t0, -1196($sp)
 	lw $t0, -4($sp)
@@ -7964,10 +7924,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1208($sp)
+	sw $v0, -84($sp)
 	lw $ra, ($sp)
-	lw $t0, -1208($sp)
-	sw $t0, -84($sp)
 	lw $t0, -84($sp)
 	sw $t0, -1204($sp)
 	lw $t0, -4($sp)
@@ -7975,10 +7933,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1216($sp)
+	sw $v0, -88($sp)
 	lw $ra, ($sp)
-	lw $t0, -1216($sp)
-	sw $t0, -88($sp)
 	lw $t0, -88($sp)
 	sw $t0, -1212($sp)
 	lw $t0, -4($sp)
@@ -7986,10 +7942,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1224($sp)
+	sw $v0, -92($sp)
 	lw $ra, ($sp)
-	lw $t0, -1224($sp)
-	sw $t0, -92($sp)
 	lw $t0, -92($sp)
 	sw $t0, -1220($sp)
 	lw $t0, -4($sp)
@@ -7997,10 +7951,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1232($sp)
+	sw $v0, -96($sp)
 	lw $ra, ($sp)
-	lw $t0, -1232($sp)
-	sw $t0, -96($sp)
 	lw $t0, -96($sp)
 	sw $t0, -1228($sp)
 	lw $t0, -4($sp)
@@ -8008,10 +7960,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1240($sp)
+	sw $v0, -100($sp)
 	lw $ra, ($sp)
-	lw $t0, -1240($sp)
-	sw $t0, -100($sp)
 	lw $t0, -100($sp)
 	sw $t0, -1236($sp)
 	lw $t0, -4($sp)
@@ -8019,10 +7969,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1248($sp)
+	sw $v0, -104($sp)
 	lw $ra, ($sp)
-	lw $t0, -1248($sp)
-	sw $t0, -104($sp)
 	lw $t0, -104($sp)
 	sw $t0, -1244($sp)
 	lw $t0, -4($sp)
@@ -8030,10 +7978,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1256($sp)
+	sw $v0, -108($sp)
 	lw $ra, ($sp)
-	lw $t0, -1256($sp)
-	sw $t0, -108($sp)
 	lw $t0, -108($sp)
 	sw $t0, -1252($sp)
 	lw $t0, -4($sp)
@@ -8041,10 +7987,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1264($sp)
+	sw $v0, -112($sp)
 	lw $ra, ($sp)
-	lw $t0, -1264($sp)
-	sw $t0, -112($sp)
 	lw $t0, -112($sp)
 	sw $t0, -1260($sp)
 	lw $t0, -4($sp)
@@ -8052,10 +7996,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1272($sp)
+	sw $v0, -116($sp)
 	lw $ra, ($sp)
-	lw $t0, -1272($sp)
-	sw $t0, -116($sp)
 	lw $t0, -116($sp)
 	sw $t0, -1268($sp)
 	lw $t0, -4($sp)
@@ -8063,10 +8005,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1280($sp)
+	sw $v0, -120($sp)
 	lw $ra, ($sp)
-	lw $t0, -1280($sp)
-	sw $t0, -120($sp)
 	lw $t0, -120($sp)
 	sw $t0, -1276($sp)
 	lw $t0, -4($sp)
@@ -8074,10 +8014,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1288($sp)
+	sw $v0, -124($sp)
 	lw $ra, ($sp)
-	lw $t0, -1288($sp)
-	sw $t0, -124($sp)
 	lw $t0, -124($sp)
 	sw $t0, -1284($sp)
 	lw $t0, -4($sp)
@@ -8085,10 +8023,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1296($sp)
+	sw $v0, -128($sp)
 	lw $ra, ($sp)
-	lw $t0, -1296($sp)
-	sw $t0, -128($sp)
 	lw $t0, -128($sp)
 	sw $t0, -1292($sp)
 	lw $t0, -4($sp)
@@ -8096,10 +8032,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1304($sp)
+	sw $v0, -132($sp)
 	lw $ra, ($sp)
-	lw $t0, -1304($sp)
-	sw $t0, -132($sp)
 	lw $t0, -132($sp)
 	sw $t0, -1300($sp)
 	lw $t0, -4($sp)
@@ -8107,10 +8041,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1312($sp)
+	sw $v0, -136($sp)
 	lw $ra, ($sp)
-	lw $t0, -1312($sp)
-	sw $t0, -136($sp)
 	lw $t0, -136($sp)
 	sw $t0, -1308($sp)
 	lw $t0, -4($sp)
@@ -8118,10 +8050,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1320($sp)
+	sw $v0, -140($sp)
 	lw $ra, ($sp)
-	lw $t0, -1320($sp)
-	sw $t0, -140($sp)
 	lw $t0, -140($sp)
 	sw $t0, -1316($sp)
 	lw $t0, -4($sp)
@@ -8129,10 +8059,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1328($sp)
+	sw $v0, -144($sp)
 	lw $ra, ($sp)
-	lw $t0, -1328($sp)
-	sw $t0, -144($sp)
 	lw $t0, -144($sp)
 	sw $t0, -1324($sp)
 	lw $t0, -4($sp)
@@ -8140,10 +8068,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1336($sp)
+	sw $v0, -148($sp)
 	lw $ra, ($sp)
-	lw $t0, -1336($sp)
-	sw $t0, -148($sp)
 	lw $t0, -148($sp)
 	sw $t0, -1332($sp)
 	lw $t0, -4($sp)
@@ -8151,10 +8077,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1344($sp)
+	sw $v0, -152($sp)
 	lw $ra, ($sp)
-	lw $t0, -1344($sp)
-	sw $t0, -152($sp)
 	lw $t0, -152($sp)
 	sw $t0, -1340($sp)
 	lw $t0, -4($sp)
@@ -8162,10 +8086,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1352($sp)
+	sw $v0, -156($sp)
 	lw $ra, ($sp)
-	lw $t0, -1352($sp)
-	sw $t0, -156($sp)
 	lw $t0, -156($sp)
 	sw $t0, -1348($sp)
 	lw $t0, -4($sp)
@@ -8173,10 +8095,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1360($sp)
+	sw $v0, -160($sp)
 	lw $ra, ($sp)
-	lw $t0, -1360($sp)
-	sw $t0, -160($sp)
 	lw $t0, -160($sp)
 	sw $t0, -1356($sp)
 	lw $t0, -4($sp)
@@ -8184,10 +8104,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1368($sp)
+	sw $v0, -164($sp)
 	lw $ra, ($sp)
-	lw $t0, -1368($sp)
-	sw $t0, -164($sp)
 	lw $t0, -164($sp)
 	sw $t0, -1364($sp)
 	lw $t0, -4($sp)
@@ -8195,10 +8113,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1376($sp)
+	sw $v0, -168($sp)
 	lw $ra, ($sp)
-	lw $t0, -1376($sp)
-	sw $t0, -168($sp)
 	lw $t0, -168($sp)
 	sw $t0, -1372($sp)
 	lw $t0, -4($sp)
@@ -8206,10 +8122,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1384($sp)
+	sw $v0, -172($sp)
 	lw $ra, ($sp)
-	lw $t0, -1384($sp)
-	sw $t0, -172($sp)
 	lw $t0, -172($sp)
 	sw $t0, -1380($sp)
 	lw $t0, -4($sp)
@@ -8217,10 +8131,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1392($sp)
+	sw $v0, -176($sp)
 	lw $ra, ($sp)
-	lw $t0, -1392($sp)
-	sw $t0, -176($sp)
 	lw $t0, -176($sp)
 	sw $t0, -1388($sp)
 	lw $t0, -4($sp)
@@ -8228,10 +8140,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1400($sp)
+	sw $v0, -180($sp)
 	lw $ra, ($sp)
-	lw $t0, -1400($sp)
-	sw $t0, -180($sp)
 	lw $t0, -180($sp)
 	sw $t0, -1396($sp)
 	lw $t0, -4($sp)
@@ -8239,10 +8149,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1408($sp)
+	sw $v0, -184($sp)
 	lw $ra, ($sp)
-	lw $t0, -1408($sp)
-	sw $t0, -184($sp)
 	lw $t0, -184($sp)
 	sw $t0, -1404($sp)
 	lw $t0, -4($sp)
@@ -8250,10 +8158,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1416($sp)
+	sw $v0, -188($sp)
 	lw $ra, ($sp)
-	lw $t0, -1416($sp)
-	sw $t0, -188($sp)
 	lw $t0, -188($sp)
 	sw $t0, -1412($sp)
 	lw $t0, -4($sp)
@@ -8261,10 +8167,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1424($sp)
+	sw $v0, -192($sp)
 	lw $ra, ($sp)
-	lw $t0, -1424($sp)
-	sw $t0, -192($sp)
 	lw $t0, -192($sp)
 	sw $t0, -1420($sp)
 	lw $t0, -4($sp)
@@ -8272,10 +8176,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1432($sp)
+	sw $v0, -196($sp)
 	lw $ra, ($sp)
-	lw $t0, -1432($sp)
-	sw $t0, -196($sp)
 	lw $t0, -196($sp)
 	sw $t0, -1428($sp)
 	lw $t0, -4($sp)
@@ -8283,10 +8185,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1440($sp)
+	sw $v0, -200($sp)
 	lw $ra, ($sp)
-	lw $t0, -1440($sp)
-	sw $t0, -200($sp)
 	lw $t0, -200($sp)
 	sw $t0, -1436($sp)
 	lw $t0, -4($sp)
@@ -8294,10 +8194,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1448($sp)
+	sw $v0, -204($sp)
 	lw $ra, ($sp)
-	lw $t0, -1448($sp)
-	sw $t0, -204($sp)
 	lw $t0, -204($sp)
 	sw $t0, -1444($sp)
 	lw $t0, -4($sp)
@@ -8305,10 +8203,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1456($sp)
+	sw $v0, -208($sp)
 	lw $ra, ($sp)
-	lw $t0, -1456($sp)
-	sw $t0, -208($sp)
 	lw $t0, -208($sp)
 	sw $t0, -1452($sp)
 	lw $t0, -4($sp)
@@ -8316,10 +8212,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1464($sp)
+	sw $v0, -212($sp)
 	lw $ra, ($sp)
-	lw $t0, -1464($sp)
-	sw $t0, -212($sp)
 	lw $t0, -212($sp)
 	sw $t0, -1460($sp)
 	lw $t0, -4($sp)
@@ -8327,10 +8221,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1472($sp)
+	sw $v0, -216($sp)
 	lw $ra, ($sp)
-	lw $t0, -1472($sp)
-	sw $t0, -216($sp)
 	lw $t0, -216($sp)
 	sw $t0, -1468($sp)
 	lw $t0, -4($sp)
@@ -8338,10 +8230,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1480($sp)
+	sw $v0, -220($sp)
 	lw $ra, ($sp)
-	lw $t0, -1480($sp)
-	sw $t0, -220($sp)
 	lw $t0, -220($sp)
 	sw $t0, -1476($sp)
 	lw $t0, -4($sp)
@@ -8349,10 +8239,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1488($sp)
+	sw $v0, -224($sp)
 	lw $ra, ($sp)
-	lw $t0, -1488($sp)
-	sw $t0, -224($sp)
 	lw $t0, -224($sp)
 	sw $t0, -1484($sp)
 	lw $t0, -4($sp)
@@ -8360,10 +8248,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1496($sp)
+	sw $v0, -228($sp)
 	lw $ra, ($sp)
-	lw $t0, -1496($sp)
-	sw $t0, -228($sp)
 	lw $t0, -228($sp)
 	sw $t0, -1492($sp)
 	lw $t0, -4($sp)
@@ -8371,10 +8257,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1504($sp)
+	sw $v0, -232($sp)
 	lw $ra, ($sp)
-	lw $t0, -1504($sp)
-	sw $t0, -232($sp)
 	lw $t0, -232($sp)
 	sw $t0, -1500($sp)
 	lw $t0, -4($sp)
@@ -8382,10 +8266,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1512($sp)
+	sw $v0, -236($sp)
 	lw $ra, ($sp)
-	lw $t0, -1512($sp)
-	sw $t0, -236($sp)
 	lw $t0, -236($sp)
 	sw $t0, -1508($sp)
 	lw $t0, -4($sp)
@@ -8393,10 +8275,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1520($sp)
+	sw $v0, -240($sp)
 	lw $ra, ($sp)
-	lw $t0, -1520($sp)
-	sw $t0, -240($sp)
 	lw $t0, -240($sp)
 	sw $t0, -1516($sp)
 	lw $t0, -4($sp)
@@ -8404,10 +8284,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1528($sp)
+	sw $v0, -244($sp)
 	lw $ra, ($sp)
-	lw $t0, -1528($sp)
-	sw $t0, -244($sp)
 	lw $t0, -244($sp)
 	sw $t0, -1524($sp)
 	lw $t0, -4($sp)
@@ -8415,10 +8293,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1536($sp)
+	sw $v0, -248($sp)
 	lw $ra, ($sp)
-	lw $t0, -1536($sp)
-	sw $t0, -248($sp)
 	lw $t0, -248($sp)
 	sw $t0, -1532($sp)
 	lw $t0, -4($sp)
@@ -8426,10 +8302,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1544($sp)
+	sw $v0, -252($sp)
 	lw $ra, ($sp)
-	lw $t0, -1544($sp)
-	sw $t0, -252($sp)
 	lw $t0, -252($sp)
 	sw $t0, -1540($sp)
 	lw $t0, -4($sp)
@@ -8437,10 +8311,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1552($sp)
+	sw $v0, -256($sp)
 	lw $ra, ($sp)
-	lw $t0, -1552($sp)
-	sw $t0, -256($sp)
 	lw $t0, -256($sp)
 	sw $t0, -1548($sp)
 	lw $t0, -4($sp)
@@ -8448,10 +8320,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1560($sp)
+	sw $v0, -260($sp)
 	lw $ra, ($sp)
-	lw $t0, -1560($sp)
-	sw $t0, -260($sp)
 	lw $t0, -260($sp)
 	sw $t0, -1556($sp)
 	lw $t0, -4($sp)
@@ -8459,10 +8329,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1568($sp)
+	sw $v0, -264($sp)
 	lw $ra, ($sp)
-	lw $t0, -1568($sp)
-	sw $t0, -264($sp)
 	lw $t0, -264($sp)
 	sw $t0, -1564($sp)
 	lw $t0, -4($sp)
@@ -8470,10 +8338,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1576($sp)
+	sw $v0, -268($sp)
 	lw $ra, ($sp)
-	lw $t0, -1576($sp)
-	sw $t0, -268($sp)
 	lw $t0, -268($sp)
 	sw $t0, -1572($sp)
 	lw $t0, -4($sp)
@@ -8481,10 +8347,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1584($sp)
+	sw $v0, -272($sp)
 	lw $ra, ($sp)
-	lw $t0, -1584($sp)
-	sw $t0, -272($sp)
 	lw $t0, -272($sp)
 	sw $t0, -1580($sp)
 	lw $t0, -4($sp)
@@ -8492,10 +8356,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1592($sp)
+	sw $v0, -276($sp)
 	lw $ra, ($sp)
-	lw $t0, -1592($sp)
-	sw $t0, -276($sp)
 	lw $t0, -276($sp)
 	sw $t0, -1588($sp)
 	lw $t0, -4($sp)
@@ -8503,10 +8365,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1600($sp)
+	sw $v0, -280($sp)
 	lw $ra, ($sp)
-	lw $t0, -1600($sp)
-	sw $t0, -280($sp)
 	lw $t0, -280($sp)
 	sw $t0, -1596($sp)
 	lw $t0, -4($sp)
@@ -8514,10 +8374,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1608($sp)
+	sw $v0, -284($sp)
 	lw $ra, ($sp)
-	lw $t0, -1608($sp)
-	sw $t0, -284($sp)
 	lw $t0, -284($sp)
 	sw $t0, -1604($sp)
 	lw $t0, -4($sp)
@@ -8525,10 +8383,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1616($sp)
+	sw $v0, -288($sp)
 	lw $ra, ($sp)
-	lw $t0, -1616($sp)
-	sw $t0, -288($sp)
 	lw $t0, -288($sp)
 	sw $t0, -1612($sp)
 	lw $t0, -4($sp)
@@ -8536,10 +8392,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1624($sp)
+	sw $v0, -292($sp)
 	lw $ra, ($sp)
-	lw $t0, -1624($sp)
-	sw $t0, -292($sp)
 	lw $t0, -292($sp)
 	sw $t0, -1620($sp)
 	lw $t0, -4($sp)
@@ -8547,10 +8401,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1632($sp)
+	sw $v0, -296($sp)
 	lw $ra, ($sp)
-	lw $t0, -1632($sp)
-	sw $t0, -296($sp)
 	lw $t0, -296($sp)
 	sw $t0, -1628($sp)
 	lw $t0, -4($sp)
@@ -8558,10 +8410,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1640($sp)
+	sw $v0, -300($sp)
 	lw $ra, ($sp)
-	lw $t0, -1640($sp)
-	sw $t0, -300($sp)
 	lw $t0, -300($sp)
 	sw $t0, -1636($sp)
 	lw $t0, -4($sp)
@@ -8569,10 +8419,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1648($sp)
+	sw $v0, -304($sp)
 	lw $ra, ($sp)
-	lw $t0, -1648($sp)
-	sw $t0, -304($sp)
 	lw $t0, -304($sp)
 	sw $t0, -1644($sp)
 	lw $t0, -4($sp)
@@ -8580,10 +8428,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1656($sp)
+	sw $v0, -308($sp)
 	lw $ra, ($sp)
-	lw $t0, -1656($sp)
-	sw $t0, -308($sp)
 	lw $t0, -308($sp)
 	sw $t0, -1652($sp)
 	lw $t0, -4($sp)
@@ -8591,10 +8437,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1664($sp)
+	sw $v0, -312($sp)
 	lw $ra, ($sp)
-	lw $t0, -1664($sp)
-	sw $t0, -312($sp)
 	lw $t0, -312($sp)
 	sw $t0, -1660($sp)
 	lw $t0, -4($sp)
@@ -8602,10 +8446,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1672($sp)
+	sw $v0, -316($sp)
 	lw $ra, ($sp)
-	lw $t0, -1672($sp)
-	sw $t0, -316($sp)
 	lw $t0, -316($sp)
 	sw $t0, -1668($sp)
 	lw $t0, -4($sp)
@@ -8613,10 +8455,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1680($sp)
+	sw $v0, -320($sp)
 	lw $ra, ($sp)
-	lw $t0, -1680($sp)
-	sw $t0, -320($sp)
 	lw $t0, -320($sp)
 	sw $t0, -1676($sp)
 	lw $t0, -4($sp)
@@ -8624,10 +8464,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1688($sp)
+	sw $v0, -324($sp)
 	lw $ra, ($sp)
-	lw $t0, -1688($sp)
-	sw $t0, -324($sp)
 	lw $t0, -324($sp)
 	sw $t0, -1684($sp)
 	lw $t0, -4($sp)
@@ -8635,10 +8473,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1696($sp)
+	sw $v0, -328($sp)
 	lw $ra, ($sp)
-	lw $t0, -1696($sp)
-	sw $t0, -328($sp)
 	lw $t0, -328($sp)
 	sw $t0, -1692($sp)
 	lw $t0, -4($sp)
@@ -8646,10 +8482,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1704($sp)
+	sw $v0, -332($sp)
 	lw $ra, ($sp)
-	lw $t0, -1704($sp)
-	sw $t0, -332($sp)
 	lw $t0, -332($sp)
 	sw $t0, -1700($sp)
 	lw $t0, -4($sp)
@@ -8657,10 +8491,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1712($sp)
+	sw $v0, -336($sp)
 	lw $ra, ($sp)
-	lw $t0, -1712($sp)
-	sw $t0, -336($sp)
 	lw $t0, -336($sp)
 	sw $t0, -1708($sp)
 	lw $t0, -4($sp)
@@ -8668,10 +8500,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1720($sp)
+	sw $v0, -340($sp)
 	lw $ra, ($sp)
-	lw $t0, -1720($sp)
-	sw $t0, -340($sp)
 	lw $t0, -340($sp)
 	sw $t0, -1716($sp)
 	lw $t0, -4($sp)
@@ -8679,10 +8509,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1728($sp)
+	sw $v0, -344($sp)
 	lw $ra, ($sp)
-	lw $t0, -1728($sp)
-	sw $t0, -344($sp)
 	lw $t0, -344($sp)
 	sw $t0, -1724($sp)
 	lw $t0, -4($sp)
@@ -8690,10 +8518,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1736($sp)
+	sw $v0, -348($sp)
 	lw $ra, ($sp)
-	lw $t0, -1736($sp)
-	sw $t0, -348($sp)
 	lw $t0, -348($sp)
 	sw $t0, -1732($sp)
 	lw $t0, -4($sp)
@@ -8701,10 +8527,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1744($sp)
+	sw $v0, -352($sp)
 	lw $ra, ($sp)
-	lw $t0, -1744($sp)
-	sw $t0, -352($sp)
 	lw $t0, -352($sp)
 	sw $t0, -1740($sp)
 	lw $t0, -4($sp)
@@ -8712,10 +8536,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1752($sp)
+	sw $v0, -356($sp)
 	lw $ra, ($sp)
-	lw $t0, -1752($sp)
-	sw $t0, -356($sp)
 	lw $t0, -356($sp)
 	sw $t0, -1748($sp)
 	lw $t0, -4($sp)
@@ -8723,10 +8545,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1760($sp)
+	sw $v0, -360($sp)
 	lw $ra, ($sp)
-	lw $t0, -1760($sp)
-	sw $t0, -360($sp)
 	lw $t0, -360($sp)
 	sw $t0, -1756($sp)
 	lw $t0, -4($sp)
@@ -8734,10 +8554,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1768($sp)
+	sw $v0, -364($sp)
 	lw $ra, ($sp)
-	lw $t0, -1768($sp)
-	sw $t0, -364($sp)
 	lw $t0, -364($sp)
 	sw $t0, -1764($sp)
 	lw $t0, -4($sp)
@@ -8745,10 +8563,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1776($sp)
+	sw $v0, -368($sp)
 	lw $ra, ($sp)
-	lw $t0, -1776($sp)
-	sw $t0, -368($sp)
 	lw $t0, -368($sp)
 	sw $t0, -1772($sp)
 	lw $t0, -4($sp)
@@ -8756,10 +8572,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1784($sp)
+	sw $v0, -372($sp)
 	lw $ra, ($sp)
-	lw $t0, -1784($sp)
-	sw $t0, -372($sp)
 	lw $t0, -372($sp)
 	sw $t0, -1780($sp)
 	lw $t0, -4($sp)
@@ -8767,10 +8581,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1792($sp)
+	sw $v0, -376($sp)
 	lw $ra, ($sp)
-	lw $t0, -1792($sp)
-	sw $t0, -376($sp)
 	lw $t0, -376($sp)
 	sw $t0, -1788($sp)
 	lw $t0, -4($sp)
@@ -8778,10 +8590,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1800($sp)
+	sw $v0, -380($sp)
 	lw $ra, ($sp)
-	lw $t0, -1800($sp)
-	sw $t0, -380($sp)
 	lw $t0, -380($sp)
 	sw $t0, -1796($sp)
 	lw $t0, -4($sp)
@@ -8789,10 +8599,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1808($sp)
+	sw $v0, -384($sp)
 	lw $ra, ($sp)
-	lw $t0, -1808($sp)
-	sw $t0, -384($sp)
 	lw $t0, -384($sp)
 	sw $t0, -1804($sp)
 	lw $t0, -4($sp)
@@ -8800,10 +8608,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1816($sp)
+	sw $v0, -388($sp)
 	lw $ra, ($sp)
-	lw $t0, -1816($sp)
-	sw $t0, -388($sp)
 	lw $t0, -388($sp)
 	sw $t0, -1812($sp)
 	lw $t0, -4($sp)
@@ -8811,10 +8617,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1824($sp)
+	sw $v0, -392($sp)
 	lw $ra, ($sp)
-	lw $t0, -1824($sp)
-	sw $t0, -392($sp)
 	lw $t0, -392($sp)
 	sw $t0, -1820($sp)
 	lw $t0, -4($sp)
@@ -8822,10 +8626,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1832($sp)
+	sw $v0, -396($sp)
 	lw $ra, ($sp)
-	lw $t0, -1832($sp)
-	sw $t0, -396($sp)
 	lw $t0, -396($sp)
 	sw $t0, -1828($sp)
 	lw $t0, -4($sp)
@@ -8833,10 +8635,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1840($sp)
+	sw $v0, -400($sp)
 	lw $ra, ($sp)
-	lw $t0, -1840($sp)
-	sw $t0, -400($sp)
 	lw $t0, -400($sp)
 	sw $t0, -1836($sp)
 	lw $t0, -4($sp)
@@ -8844,10 +8644,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1848($sp)
+	sw $v0, -404($sp)
 	lw $ra, ($sp)
-	lw $t0, -1848($sp)
-	sw $t0, -404($sp)
 	lw $t0, -404($sp)
 	sw $t0, -1844($sp)
 	lw $t0, -4($sp)
@@ -8855,10 +8653,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1856($sp)
+	sw $v0, -408($sp)
 	lw $ra, ($sp)
-	lw $t0, -1856($sp)
-	sw $t0, -408($sp)
 	lw $t0, -408($sp)
 	sw $t0, -1852($sp)
 	lw $t0, -4($sp)
@@ -8866,10 +8662,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1864($sp)
+	sw $v0, -412($sp)
 	lw $ra, ($sp)
-	lw $t0, -1864($sp)
-	sw $t0, -412($sp)
 	lw $t0, -412($sp)
 	sw $t0, -1860($sp)
 	lw $t0, -4($sp)
@@ -8877,10 +8671,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1872($sp)
+	sw $v0, -416($sp)
 	lw $ra, ($sp)
-	lw $t0, -1872($sp)
-	sw $t0, -416($sp)
 	lw $t0, -416($sp)
 	sw $t0, -1868($sp)
 	lw $t0, -4($sp)
@@ -8888,10 +8680,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1880($sp)
+	sw $v0, -420($sp)
 	lw $ra, ($sp)
-	lw $t0, -1880($sp)
-	sw $t0, -420($sp)
 	lw $t0, -420($sp)
 	sw $t0, -1876($sp)
 	lw $t0, -4($sp)
@@ -8899,10 +8689,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1888($sp)
+	sw $v0, -424($sp)
 	lw $ra, ($sp)
-	lw $t0, -1888($sp)
-	sw $t0, -424($sp)
 	lw $t0, -424($sp)
 	sw $t0, -1884($sp)
 	lw $t0, -4($sp)
@@ -8910,10 +8698,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1896($sp)
+	sw $v0, -428($sp)
 	lw $ra, ($sp)
-	lw $t0, -1896($sp)
-	sw $t0, -428($sp)
 	lw $t0, -428($sp)
 	sw $t0, -1892($sp)
 	lw $t0, -4($sp)
@@ -8921,10 +8707,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1904($sp)
+	sw $v0, -432($sp)
 	lw $ra, ($sp)
-	lw $t0, -1904($sp)
-	sw $t0, -432($sp)
 	lw $t0, -432($sp)
 	sw $t0, -1900($sp)
 	lw $t0, -4($sp)
@@ -8932,10 +8716,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1912($sp)
+	sw $v0, -436($sp)
 	lw $ra, ($sp)
-	lw $t0, -1912($sp)
-	sw $t0, -436($sp)
 	lw $t0, -436($sp)
 	sw $t0, -1908($sp)
 	lw $t0, -4($sp)
@@ -8943,10 +8725,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1920($sp)
+	sw $v0, -440($sp)
 	lw $ra, ($sp)
-	lw $t0, -1920($sp)
-	sw $t0, -440($sp)
 	lw $t0, -440($sp)
 	sw $t0, -1916($sp)
 	lw $t0, -4($sp)
@@ -8954,10 +8734,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1928($sp)
+	sw $v0, -444($sp)
 	lw $ra, ($sp)
-	lw $t0, -1928($sp)
-	sw $t0, -444($sp)
 	lw $t0, -444($sp)
 	sw $t0, -1924($sp)
 	lw $t0, -4($sp)
@@ -8965,10 +8743,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1936($sp)
+	sw $v0, -448($sp)
 	lw $ra, ($sp)
-	lw $t0, -1936($sp)
-	sw $t0, -448($sp)
 	lw $t0, -448($sp)
 	sw $t0, -1932($sp)
 	lw $t0, -4($sp)
@@ -8976,10 +8752,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1944($sp)
+	sw $v0, -452($sp)
 	lw $ra, ($sp)
-	lw $t0, -1944($sp)
-	sw $t0, -452($sp)
 	lw $t0, -452($sp)
 	sw $t0, -1940($sp)
 	lw $t0, -4($sp)
@@ -8987,10 +8761,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1952($sp)
+	sw $v0, -456($sp)
 	lw $ra, ($sp)
-	lw $t0, -1952($sp)
-	sw $t0, -456($sp)
 	lw $t0, -456($sp)
 	sw $t0, -1948($sp)
 	lw $t0, -4($sp)
@@ -8998,10 +8770,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1960($sp)
+	sw $v0, -460($sp)
 	lw $ra, ($sp)
-	lw $t0, -1960($sp)
-	sw $t0, -460($sp)
 	lw $t0, -460($sp)
 	sw $t0, -1956($sp)
 	lw $t0, -4($sp)
@@ -9009,10 +8779,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1968($sp)
+	sw $v0, -464($sp)
 	lw $ra, ($sp)
-	lw $t0, -1968($sp)
-	sw $t0, -464($sp)
 	lw $t0, -464($sp)
 	sw $t0, -1964($sp)
 	lw $t0, -4($sp)
@@ -9020,10 +8788,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1976($sp)
+	sw $v0, -468($sp)
 	lw $ra, ($sp)
-	lw $t0, -1976($sp)
-	sw $t0, -468($sp)
 	lw $t0, -468($sp)
 	sw $t0, -1972($sp)
 	lw $t0, -4($sp)
@@ -9031,10 +8797,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1984($sp)
+	sw $v0, -472($sp)
 	lw $ra, ($sp)
-	lw $t0, -1984($sp)
-	sw $t0, -472($sp)
 	lw $t0, -472($sp)
 	sw $t0, -1980($sp)
 	lw $t0, -4($sp)
@@ -9042,10 +8806,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -1992($sp)
+	sw $v0, -476($sp)
 	lw $ra, ($sp)
-	lw $t0, -1992($sp)
-	sw $t0, -476($sp)
 	lw $t0, -476($sp)
 	sw $t0, -1988($sp)
 	lw $t0, -4($sp)
@@ -9053,10 +8815,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2000($sp)
+	sw $v0, -480($sp)
 	lw $ra, ($sp)
-	lw $t0, -2000($sp)
-	sw $t0, -480($sp)
 	lw $t0, -480($sp)
 	sw $t0, -1996($sp)
 	lw $t0, -4($sp)
@@ -9064,10 +8824,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2008($sp)
+	sw $v0, -484($sp)
 	lw $ra, ($sp)
-	lw $t0, -2008($sp)
-	sw $t0, -484($sp)
 	lw $t0, -484($sp)
 	sw $t0, -2004($sp)
 	lw $t0, -4($sp)
@@ -9075,10 +8833,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2016($sp)
+	sw $v0, -488($sp)
 	lw $ra, ($sp)
-	lw $t0, -2016($sp)
-	sw $t0, -488($sp)
 	lw $t0, -488($sp)
 	sw $t0, -2012($sp)
 	lw $t0, -4($sp)
@@ -9086,10 +8842,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2024($sp)
+	sw $v0, -492($sp)
 	lw $ra, ($sp)
-	lw $t0, -2024($sp)
-	sw $t0, -492($sp)
 	lw $t0, -492($sp)
 	sw $t0, -2020($sp)
 	lw $t0, -4($sp)
@@ -9097,10 +8851,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2032($sp)
+	sw $v0, -496($sp)
 	lw $ra, ($sp)
-	lw $t0, -2032($sp)
-	sw $t0, -496($sp)
 	lw $t0, -496($sp)
 	sw $t0, -2028($sp)
 	lw $t0, -4($sp)
@@ -9108,10 +8860,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2040($sp)
+	sw $v0, -500($sp)
 	lw $ra, ($sp)
-	lw $t0, -2040($sp)
-	sw $t0, -500($sp)
 	lw $t0, -500($sp)
 	sw $t0, -2036($sp)
 	lw $t0, -4($sp)
@@ -9119,10 +8869,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2048($sp)
+	sw $v0, -504($sp)
 	lw $ra, ($sp)
-	lw $t0, -2048($sp)
-	sw $t0, -504($sp)
 	lw $t0, -504($sp)
 	sw $t0, -2044($sp)
 	lw $t0, -4($sp)
@@ -9130,10 +8878,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2056($sp)
+	sw $v0, -508($sp)
 	lw $ra, ($sp)
-	lw $t0, -2056($sp)
-	sw $t0, -508($sp)
 	lw $t0, -508($sp)
 	sw $t0, -2052($sp)
 	lw $t0, -4($sp)
@@ -9141,10 +8887,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2064($sp)
+	sw $v0, -512($sp)
 	lw $ra, ($sp)
-	lw $t0, -2064($sp)
-	sw $t0, -512($sp)
 	lw $t0, -512($sp)
 	sw $t0, -2060($sp)
 	lw $t0, -4($sp)
@@ -9152,10 +8896,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2072($sp)
+	sw $v0, -516($sp)
 	lw $ra, ($sp)
-	lw $t0, -2072($sp)
-	sw $t0, -516($sp)
 	lw $t0, -516($sp)
 	sw $t0, -2068($sp)
 	lw $t0, -4($sp)
@@ -9163,10 +8905,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2080($sp)
+	sw $v0, -520($sp)
 	lw $ra, ($sp)
-	lw $t0, -2080($sp)
-	sw $t0, -520($sp)
 	lw $t0, -520($sp)
 	sw $t0, -2076($sp)
 	lw $t0, -4($sp)
@@ -9174,10 +8914,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2088($sp)
+	sw $v0, -524($sp)
 	lw $ra, ($sp)
-	lw $t0, -2088($sp)
-	sw $t0, -524($sp)
 	lw $t0, -524($sp)
 	sw $t0, -2084($sp)
 	lw $t0, -4($sp)
@@ -9185,10 +8923,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2096($sp)
+	sw $v0, -528($sp)
 	lw $ra, ($sp)
-	lw $t0, -2096($sp)
-	sw $t0, -528($sp)
 	lw $t0, -528($sp)
 	sw $t0, -2092($sp)
 	lw $t0, -4($sp)
@@ -9196,10 +8932,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2104($sp)
+	sw $v0, -532($sp)
 	lw $ra, ($sp)
-	lw $t0, -2104($sp)
-	sw $t0, -532($sp)
 	lw $t0, -532($sp)
 	sw $t0, -2100($sp)
 	lw $t0, -4($sp)
@@ -9207,10 +8941,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2112($sp)
+	sw $v0, -536($sp)
 	lw $ra, ($sp)
-	lw $t0, -2112($sp)
-	sw $t0, -536($sp)
 	lw $t0, -536($sp)
 	sw $t0, -2108($sp)
 	lw $t0, -4($sp)
@@ -9218,10 +8950,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2120($sp)
+	sw $v0, -540($sp)
 	lw $ra, ($sp)
-	lw $t0, -2120($sp)
-	sw $t0, -540($sp)
 	lw $t0, -540($sp)
 	sw $t0, -2116($sp)
 	lw $t0, -4($sp)
@@ -9229,10 +8959,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2128($sp)
+	sw $v0, -544($sp)
 	lw $ra, ($sp)
-	lw $t0, -2128($sp)
-	sw $t0, -544($sp)
 	lw $t0, -544($sp)
 	sw $t0, -2124($sp)
 	lw $t0, -4($sp)
@@ -9240,10 +8968,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2136($sp)
+	sw $v0, -548($sp)
 	lw $ra, ($sp)
-	lw $t0, -2136($sp)
-	sw $t0, -548($sp)
 	lw $t0, -548($sp)
 	sw $t0, -2132($sp)
 	lw $t0, -4($sp)
@@ -9251,10 +8977,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2144($sp)
+	sw $v0, -552($sp)
 	lw $ra, ($sp)
-	lw $t0, -2144($sp)
-	sw $t0, -552($sp)
 	lw $t0, -552($sp)
 	sw $t0, -2140($sp)
 	lw $t0, -4($sp)
@@ -9262,10 +8986,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2152($sp)
+	sw $v0, -556($sp)
 	lw $ra, ($sp)
-	lw $t0, -2152($sp)
-	sw $t0, -556($sp)
 	lw $t0, -556($sp)
 	sw $t0, -2148($sp)
 	lw $t0, -4($sp)
@@ -9273,10 +8995,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2160($sp)
+	sw $v0, -560($sp)
 	lw $ra, ($sp)
-	lw $t0, -2160($sp)
-	sw $t0, -560($sp)
 	lw $t0, -560($sp)
 	sw $t0, -2156($sp)
 	lw $t0, -4($sp)
@@ -9284,10 +9004,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2168($sp)
+	sw $v0, -564($sp)
 	lw $ra, ($sp)
-	lw $t0, -2168($sp)
-	sw $t0, -564($sp)
 	lw $t0, -564($sp)
 	sw $t0, -2164($sp)
 	lw $t0, -4($sp)
@@ -9295,10 +9013,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2176($sp)
+	sw $v0, -568($sp)
 	lw $ra, ($sp)
-	lw $t0, -2176($sp)
-	sw $t0, -568($sp)
 	lw $t0, -568($sp)
 	sw $t0, -2172($sp)
 	lw $t0, -4($sp)
@@ -9306,10 +9022,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2184($sp)
+	sw $v0, -572($sp)
 	lw $ra, ($sp)
-	lw $t0, -2184($sp)
-	sw $t0, -572($sp)
 	lw $t0, -572($sp)
 	sw $t0, -2180($sp)
 	lw $t0, -4($sp)
@@ -9317,10 +9031,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2192($sp)
+	sw $v0, -576($sp)
 	lw $ra, ($sp)
-	lw $t0, -2192($sp)
-	sw $t0, -576($sp)
 	lw $t0, -576($sp)
 	sw $t0, -2188($sp)
 	lw $t0, -4($sp)
@@ -9328,10 +9040,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2200($sp)
+	sw $v0, -580($sp)
 	lw $ra, ($sp)
-	lw $t0, -2200($sp)
-	sw $t0, -580($sp)
 	lw $t0, -580($sp)
 	sw $t0, -2196($sp)
 	lw $t0, -4($sp)
@@ -9339,10 +9049,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2208($sp)
+	sw $v0, -584($sp)
 	lw $ra, ($sp)
-	lw $t0, -2208($sp)
-	sw $t0, -584($sp)
 	lw $t0, -584($sp)
 	sw $t0, -2204($sp)
 	lw $t0, -4($sp)
@@ -9350,10 +9058,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2216($sp)
+	sw $v0, -588($sp)
 	lw $ra, ($sp)
-	lw $t0, -2216($sp)
-	sw $t0, -588($sp)
 	lw $t0, -588($sp)
 	sw $t0, -2212($sp)
 	lw $t0, -4($sp)
@@ -9361,10 +9067,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2224($sp)
+	sw $v0, -592($sp)
 	lw $ra, ($sp)
-	lw $t0, -2224($sp)
-	sw $t0, -592($sp)
 	lw $t0, -592($sp)
 	sw $t0, -2220($sp)
 	lw $t0, -4($sp)
@@ -9372,10 +9076,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2232($sp)
+	sw $v0, -596($sp)
 	lw $ra, ($sp)
-	lw $t0, -2232($sp)
-	sw $t0, -596($sp)
 	lw $t0, -596($sp)
 	sw $t0, -2228($sp)
 	lw $t0, -4($sp)
@@ -9383,10 +9085,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2240($sp)
+	sw $v0, -600($sp)
 	lw $ra, ($sp)
-	lw $t0, -2240($sp)
-	sw $t0, -600($sp)
 	lw $t0, -600($sp)
 	sw $t0, -2236($sp)
 	lw $t0, -4($sp)
@@ -9394,10 +9094,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2248($sp)
+	sw $v0, -604($sp)
 	lw $ra, ($sp)
-	lw $t0, -2248($sp)
-	sw $t0, -604($sp)
 	lw $t0, -604($sp)
 	sw $t0, -2244($sp)
 	lw $t0, -4($sp)
@@ -9405,10 +9103,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2256($sp)
+	sw $v0, -608($sp)
 	lw $ra, ($sp)
-	lw $t0, -2256($sp)
-	sw $t0, -608($sp)
 	lw $t0, -608($sp)
 	sw $t0, -2252($sp)
 	lw $t0, -4($sp)
@@ -9416,10 +9112,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2264($sp)
+	sw $v0, -612($sp)
 	lw $ra, ($sp)
-	lw $t0, -2264($sp)
-	sw $t0, -612($sp)
 	lw $t0, -612($sp)
 	sw $t0, -2260($sp)
 	lw $t0, -4($sp)
@@ -9427,10 +9121,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2272($sp)
+	sw $v0, -616($sp)
 	lw $ra, ($sp)
-	lw $t0, -2272($sp)
-	sw $t0, -616($sp)
 	lw $t0, -616($sp)
 	sw $t0, -2268($sp)
 	lw $t0, -4($sp)
@@ -9438,10 +9130,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2280($sp)
+	sw $v0, -620($sp)
 	lw $ra, ($sp)
-	lw $t0, -2280($sp)
-	sw $t0, -620($sp)
 	lw $t0, -620($sp)
 	sw $t0, -2276($sp)
 	lw $t0, -4($sp)
@@ -9449,10 +9139,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2288($sp)
+	sw $v0, -624($sp)
 	lw $ra, ($sp)
-	lw $t0, -2288($sp)
-	sw $t0, -624($sp)
 	lw $t0, -624($sp)
 	sw $t0, -2284($sp)
 	lw $t0, -4($sp)
@@ -9460,10 +9148,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2296($sp)
+	sw $v0, -628($sp)
 	lw $ra, ($sp)
-	lw $t0, -2296($sp)
-	sw $t0, -628($sp)
 	lw $t0, -628($sp)
 	sw $t0, -2292($sp)
 	lw $t0, -4($sp)
@@ -9471,10 +9157,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2304($sp)
+	sw $v0, -632($sp)
 	lw $ra, ($sp)
-	lw $t0, -2304($sp)
-	sw $t0, -632($sp)
 	lw $t0, -632($sp)
 	sw $t0, -2300($sp)
 	lw $t0, -4($sp)
@@ -9482,10 +9166,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2312($sp)
+	sw $v0, -636($sp)
 	lw $ra, ($sp)
-	lw $t0, -2312($sp)
-	sw $t0, -636($sp)
 	lw $t0, -636($sp)
 	sw $t0, -2308($sp)
 	lw $t0, -4($sp)
@@ -9493,10 +9175,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2320($sp)
+	sw $v0, -640($sp)
 	lw $ra, ($sp)
-	lw $t0, -2320($sp)
-	sw $t0, -640($sp)
 	lw $t0, -640($sp)
 	sw $t0, -2316($sp)
 	lw $t0, -4($sp)
@@ -9504,10 +9184,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2328($sp)
+	sw $v0, -644($sp)
 	lw $ra, ($sp)
-	lw $t0, -2328($sp)
-	sw $t0, -644($sp)
 	lw $t0, -644($sp)
 	sw $t0, -2324($sp)
 	lw $t0, -4($sp)
@@ -9515,10 +9193,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2336($sp)
+	sw $v0, -648($sp)
 	lw $ra, ($sp)
-	lw $t0, -2336($sp)
-	sw $t0, -648($sp)
 	lw $t0, -648($sp)
 	sw $t0, -2332($sp)
 	lw $t0, -4($sp)
@@ -9526,10 +9202,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2344($sp)
+	sw $v0, -652($sp)
 	lw $ra, ($sp)
-	lw $t0, -2344($sp)
-	sw $t0, -652($sp)
 	lw $t0, -652($sp)
 	sw $t0, -2340($sp)
 	lw $t0, -4($sp)
@@ -9537,10 +9211,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2352($sp)
+	sw $v0, -656($sp)
 	lw $ra, ($sp)
-	lw $t0, -2352($sp)
-	sw $t0, -656($sp)
 	lw $t0, -656($sp)
 	sw $t0, -2348($sp)
 	lw $t0, -4($sp)
@@ -9548,10 +9220,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2360($sp)
+	sw $v0, -660($sp)
 	lw $ra, ($sp)
-	lw $t0, -2360($sp)
-	sw $t0, -660($sp)
 	lw $t0, -660($sp)
 	sw $t0, -2356($sp)
 	lw $t0, -4($sp)
@@ -9559,10 +9229,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2368($sp)
+	sw $v0, -664($sp)
 	lw $ra, ($sp)
-	lw $t0, -2368($sp)
-	sw $t0, -664($sp)
 	lw $t0, -664($sp)
 	sw $t0, -2364($sp)
 	lw $t0, -4($sp)
@@ -9570,10 +9238,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2376($sp)
+	sw $v0, -668($sp)
 	lw $ra, ($sp)
-	lw $t0, -2376($sp)
-	sw $t0, -668($sp)
 	lw $t0, -668($sp)
 	sw $t0, -2372($sp)
 	lw $t0, -4($sp)
@@ -9581,10 +9247,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2384($sp)
+	sw $v0, -672($sp)
 	lw $ra, ($sp)
-	lw $t0, -2384($sp)
-	sw $t0, -672($sp)
 	lw $t0, -672($sp)
 	sw $t0, -2380($sp)
 	lw $t0, -4($sp)
@@ -9592,10 +9256,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2392($sp)
+	sw $v0, -676($sp)
 	lw $ra, ($sp)
-	lw $t0, -2392($sp)
-	sw $t0, -676($sp)
 	lw $t0, -676($sp)
 	sw $t0, -2388($sp)
 	lw $t0, -4($sp)
@@ -9603,10 +9265,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2400($sp)
+	sw $v0, -680($sp)
 	lw $ra, ($sp)
-	lw $t0, -2400($sp)
-	sw $t0, -680($sp)
 	lw $t0, -680($sp)
 	sw $t0, -2396($sp)
 	lw $t0, -4($sp)
@@ -9614,10 +9274,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2408($sp)
+	sw $v0, -684($sp)
 	lw $ra, ($sp)
-	lw $t0, -2408($sp)
-	sw $t0, -684($sp)
 	lw $t0, -684($sp)
 	sw $t0, -2404($sp)
 	lw $t0, -4($sp)
@@ -9625,10 +9283,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2416($sp)
+	sw $v0, -688($sp)
 	lw $ra, ($sp)
-	lw $t0, -2416($sp)
-	sw $t0, -688($sp)
 	lw $t0, -688($sp)
 	sw $t0, -2412($sp)
 	lw $t0, -4($sp)
@@ -9636,10 +9292,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2424($sp)
+	sw $v0, -692($sp)
 	lw $ra, ($sp)
-	lw $t0, -2424($sp)
-	sw $t0, -692($sp)
 	lw $t0, -692($sp)
 	sw $t0, -2420($sp)
 	lw $t0, -4($sp)
@@ -9647,10 +9301,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2432($sp)
+	sw $v0, -696($sp)
 	lw $ra, ($sp)
-	lw $t0, -2432($sp)
-	sw $t0, -696($sp)
 	lw $t0, -696($sp)
 	sw $t0, -2428($sp)
 	lw $t0, -4($sp)
@@ -9658,10 +9310,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2440($sp)
+	sw $v0, -700($sp)
 	lw $ra, ($sp)
-	lw $t0, -2440($sp)
-	sw $t0, -700($sp)
 	lw $t0, -700($sp)
 	sw $t0, -2436($sp)
 	lw $t0, -4($sp)
@@ -9669,10 +9319,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2448($sp)
+	sw $v0, -704($sp)
 	lw $ra, ($sp)
-	lw $t0, -2448($sp)
-	sw $t0, -704($sp)
 	lw $t0, -704($sp)
 	sw $t0, -2444($sp)
 	lw $t0, -4($sp)
@@ -9680,10 +9328,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2456($sp)
+	sw $v0, -708($sp)
 	lw $ra, ($sp)
-	lw $t0, -2456($sp)
-	sw $t0, -708($sp)
 	lw $t0, -708($sp)
 	sw $t0, -2452($sp)
 	lw $t0, -4($sp)
@@ -9691,10 +9337,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2464($sp)
+	sw $v0, -712($sp)
 	lw $ra, ($sp)
-	lw $t0, -2464($sp)
-	sw $t0, -712($sp)
 	lw $t0, -712($sp)
 	sw $t0, -2460($sp)
 	lw $t0, -4($sp)
@@ -9702,10 +9346,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2472($sp)
+	sw $v0, -716($sp)
 	lw $ra, ($sp)
-	lw $t0, -2472($sp)
-	sw $t0, -716($sp)
 	lw $t0, -716($sp)
 	sw $t0, -2468($sp)
 	lw $t0, -4($sp)
@@ -9713,10 +9355,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2480($sp)
+	sw $v0, -720($sp)
 	lw $ra, ($sp)
-	lw $t0, -2480($sp)
-	sw $t0, -720($sp)
 	lw $t0, -720($sp)
 	sw $t0, -2476($sp)
 	lw $t0, -4($sp)
@@ -9724,10 +9364,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2488($sp)
+	sw $v0, -724($sp)
 	lw $ra, ($sp)
-	lw $t0, -2488($sp)
-	sw $t0, -724($sp)
 	lw $t0, -724($sp)
 	sw $t0, -2484($sp)
 	lw $t0, -4($sp)
@@ -9735,10 +9373,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2496($sp)
+	sw $v0, -728($sp)
 	lw $ra, ($sp)
-	lw $t0, -2496($sp)
-	sw $t0, -728($sp)
 	lw $t0, -728($sp)
 	sw $t0, -2492($sp)
 	lw $t0, -4($sp)
@@ -9746,10 +9382,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2504($sp)
+	sw $v0, -732($sp)
 	lw $ra, ($sp)
-	lw $t0, -2504($sp)
-	sw $t0, -732($sp)
 	lw $t0, -732($sp)
 	sw $t0, -2500($sp)
 	lw $t0, -4($sp)
@@ -9757,10 +9391,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2512($sp)
+	sw $v0, -736($sp)
 	lw $ra, ($sp)
-	lw $t0, -2512($sp)
-	sw $t0, -736($sp)
 	lw $t0, -736($sp)
 	sw $t0, -2508($sp)
 	lw $t0, -4($sp)
@@ -9768,10 +9400,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2520($sp)
+	sw $v0, -740($sp)
 	lw $ra, ($sp)
-	lw $t0, -2520($sp)
-	sw $t0, -740($sp)
 	lw $t0, -740($sp)
 	sw $t0, -2516($sp)
 	lw $t0, -4($sp)
@@ -9779,10 +9409,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2528($sp)
+	sw $v0, -744($sp)
 	lw $ra, ($sp)
-	lw $t0, -2528($sp)
-	sw $t0, -744($sp)
 	lw $t0, -744($sp)
 	sw $t0, -2524($sp)
 	lw $t0, -4($sp)
@@ -9790,10 +9418,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2536($sp)
+	sw $v0, -748($sp)
 	lw $ra, ($sp)
-	lw $t0, -2536($sp)
-	sw $t0, -748($sp)
 	lw $t0, -748($sp)
 	sw $t0, -2532($sp)
 	lw $t0, -4($sp)
@@ -9801,10 +9427,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2544($sp)
+	sw $v0, -752($sp)
 	lw $ra, ($sp)
-	lw $t0, -2544($sp)
-	sw $t0, -752($sp)
 	lw $t0, -752($sp)
 	sw $t0, -2540($sp)
 	lw $t0, -4($sp)
@@ -9812,10 +9436,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2552($sp)
+	sw $v0, -756($sp)
 	lw $ra, ($sp)
-	lw $t0, -2552($sp)
-	sw $t0, -756($sp)
 	lw $t0, -756($sp)
 	sw $t0, -2548($sp)
 	lw $t0, -4($sp)
@@ -9823,10 +9445,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2560($sp)
+	sw $v0, -760($sp)
 	lw $ra, ($sp)
-	lw $t0, -2560($sp)
-	sw $t0, -760($sp)
 	lw $t0, -760($sp)
 	sw $t0, -2556($sp)
 	lw $t0, -4($sp)
@@ -9834,10 +9454,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2568($sp)
+	sw $v0, -764($sp)
 	lw $ra, ($sp)
-	lw $t0, -2568($sp)
-	sw $t0, -764($sp)
 	lw $t0, -764($sp)
 	sw $t0, -2564($sp)
 	lw $t0, -4($sp)
@@ -9845,10 +9463,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2576($sp)
+	sw $v0, -768($sp)
 	lw $ra, ($sp)
-	lw $t0, -2576($sp)
-	sw $t0, -768($sp)
 	lw $t0, -768($sp)
 	sw $t0, -2572($sp)
 	lw $t0, -4($sp)
@@ -9856,10 +9472,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2584($sp)
+	sw $v0, -772($sp)
 	lw $ra, ($sp)
-	lw $t0, -2584($sp)
-	sw $t0, -772($sp)
 	lw $t0, -772($sp)
 	sw $t0, -2580($sp)
 	lw $t0, -4($sp)
@@ -9867,10 +9481,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2592($sp)
+	sw $v0, -776($sp)
 	lw $ra, ($sp)
-	lw $t0, -2592($sp)
-	sw $t0, -776($sp)
 	lw $t0, -776($sp)
 	sw $t0, -2588($sp)
 	lw $t0, -4($sp)
@@ -9878,10 +9490,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2600($sp)
+	sw $v0, -780($sp)
 	lw $ra, ($sp)
-	lw $t0, -2600($sp)
-	sw $t0, -780($sp)
 	lw $t0, -780($sp)
 	sw $t0, -2596($sp)
 	lw $t0, -4($sp)
@@ -9889,10 +9499,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2608($sp)
+	sw $v0, -784($sp)
 	lw $ra, ($sp)
-	lw $t0, -2608($sp)
-	sw $t0, -784($sp)
 	lw $t0, -784($sp)
 	sw $t0, -2604($sp)
 	lw $t0, -4($sp)
@@ -9900,10 +9508,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2616($sp)
+	sw $v0, -788($sp)
 	lw $ra, ($sp)
-	lw $t0, -2616($sp)
-	sw $t0, -788($sp)
 	lw $t0, -788($sp)
 	sw $t0, -2612($sp)
 	lw $t0, -4($sp)
@@ -9911,10 +9517,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2624($sp)
+	sw $v0, -792($sp)
 	lw $ra, ($sp)
-	lw $t0, -2624($sp)
-	sw $t0, -792($sp)
 	lw $t0, -792($sp)
 	sw $t0, -2620($sp)
 	lw $t0, -4($sp)
@@ -9922,10 +9526,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2632($sp)
+	sw $v0, -796($sp)
 	lw $ra, ($sp)
-	lw $t0, -2632($sp)
-	sw $t0, -796($sp)
 	lw $t0, -796($sp)
 	sw $t0, -2628($sp)
 	lw $t0, -4($sp)
@@ -9933,10 +9535,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2640($sp)
+	sw $v0, -800($sp)
 	lw $ra, ($sp)
-	lw $t0, -2640($sp)
-	sw $t0, -800($sp)
 	lw $t0, -800($sp)
 	sw $t0, -2636($sp)
 	lw $t0, -4($sp)
@@ -9944,10 +9544,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2648($sp)
+	sw $v0, -804($sp)
 	lw $ra, ($sp)
-	lw $t0, -2648($sp)
-	sw $t0, -804($sp)
 	lw $t0, -804($sp)
 	sw $t0, -2644($sp)
 	lw $t0, -4($sp)
@@ -9955,10 +9553,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2656($sp)
+	sw $v0, -808($sp)
 	lw $ra, ($sp)
-	lw $t0, -2656($sp)
-	sw $t0, -808($sp)
 	lw $t0, -808($sp)
 	sw $t0, -2652($sp)
 	lw $t0, -4($sp)
@@ -9966,10 +9562,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2664($sp)
+	sw $v0, -812($sp)
 	lw $ra, ($sp)
-	lw $t0, -2664($sp)
-	sw $t0, -812($sp)
 	lw $t0, -812($sp)
 	sw $t0, -2660($sp)
 	lw $t0, -4($sp)
@@ -9977,10 +9571,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2672($sp)
+	sw $v0, -816($sp)
 	lw $ra, ($sp)
-	lw $t0, -2672($sp)
-	sw $t0, -816($sp)
 	lw $t0, -816($sp)
 	sw $t0, -2668($sp)
 	lw $t0, -4($sp)
@@ -9988,10 +9580,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2680($sp)
+	sw $v0, -820($sp)
 	lw $ra, ($sp)
-	lw $t0, -2680($sp)
-	sw $t0, -820($sp)
 	lw $t0, -820($sp)
 	sw $t0, -2676($sp)
 	lw $t0, -4($sp)
@@ -9999,10 +9589,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2688($sp)
+	sw $v0, -824($sp)
 	lw $ra, ($sp)
-	lw $t0, -2688($sp)
-	sw $t0, -824($sp)
 	lw $t0, -824($sp)
 	sw $t0, -2684($sp)
 	lw $t0, -4($sp)
@@ -10010,10 +9598,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2696($sp)
+	sw $v0, -828($sp)
 	lw $ra, ($sp)
-	lw $t0, -2696($sp)
-	sw $t0, -828($sp)
 	lw $t0, -828($sp)
 	sw $t0, -2692($sp)
 	lw $t0, -4($sp)
@@ -10021,10 +9607,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2704($sp)
+	sw $v0, -832($sp)
 	lw $ra, ($sp)
-	lw $t0, -2704($sp)
-	sw $t0, -832($sp)
 	lw $t0, -832($sp)
 	sw $t0, -2700($sp)
 	lw $t0, -4($sp)
@@ -10032,10 +9616,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2712($sp)
+	sw $v0, -836($sp)
 	lw $ra, ($sp)
-	lw $t0, -2712($sp)
-	sw $t0, -836($sp)
 	lw $t0, -836($sp)
 	sw $t0, -2708($sp)
 	lw $t0, -4($sp)
@@ -10043,10 +9625,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2720($sp)
+	sw $v0, -840($sp)
 	lw $ra, ($sp)
-	lw $t0, -2720($sp)
-	sw $t0, -840($sp)
 	lw $t0, -840($sp)
 	sw $t0, -2716($sp)
 	lw $t0, -4($sp)
@@ -10054,10 +9634,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2728($sp)
+	sw $v0, -844($sp)
 	lw $ra, ($sp)
-	lw $t0, -2728($sp)
-	sw $t0, -844($sp)
 	lw $t0, -844($sp)
 	sw $t0, -2724($sp)
 	lw $t0, -4($sp)
@@ -10065,10 +9643,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2736($sp)
+	sw $v0, -848($sp)
 	lw $ra, ($sp)
-	lw $t0, -2736($sp)
-	sw $t0, -848($sp)
 	lw $t0, -848($sp)
 	sw $t0, -2732($sp)
 	lw $t0, -4($sp)
@@ -10076,10 +9652,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2744($sp)
+	sw $v0, -852($sp)
 	lw $ra, ($sp)
-	lw $t0, -2744($sp)
-	sw $t0, -852($sp)
 	lw $t0, -852($sp)
 	sw $t0, -2740($sp)
 	lw $t0, -4($sp)
@@ -10087,10 +9661,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2752($sp)
+	sw $v0, -856($sp)
 	lw $ra, ($sp)
-	lw $t0, -2752($sp)
-	sw $t0, -856($sp)
 	lw $t0, -856($sp)
 	sw $t0, -2748($sp)
 	lw $t0, -4($sp)
@@ -10098,10 +9670,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2760($sp)
+	sw $v0, -860($sp)
 	lw $ra, ($sp)
-	lw $t0, -2760($sp)
-	sw $t0, -860($sp)
 	lw $t0, -860($sp)
 	sw $t0, -2756($sp)
 	lw $t0, -4($sp)
@@ -10109,10 +9679,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2768($sp)
+	sw $v0, -864($sp)
 	lw $ra, ($sp)
-	lw $t0, -2768($sp)
-	sw $t0, -864($sp)
 	lw $t0, -864($sp)
 	sw $t0, -2764($sp)
 	lw $t0, -4($sp)
@@ -10120,10 +9688,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2776($sp)
+	sw $v0, -868($sp)
 	lw $ra, ($sp)
-	lw $t0, -2776($sp)
-	sw $t0, -868($sp)
 	lw $t0, -868($sp)
 	sw $t0, -2772($sp)
 	lw $t0, -4($sp)
@@ -10131,10 +9697,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2784($sp)
+	sw $v0, -872($sp)
 	lw $ra, ($sp)
-	lw $t0, -2784($sp)
-	sw $t0, -872($sp)
 	lw $t0, -872($sp)
 	sw $t0, -2780($sp)
 	lw $t0, -4($sp)
@@ -10142,10 +9706,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2792($sp)
+	sw $v0, -876($sp)
 	lw $ra, ($sp)
-	lw $t0, -2792($sp)
-	sw $t0, -876($sp)
 	lw $t0, -876($sp)
 	sw $t0, -2788($sp)
 	lw $t0, -4($sp)
@@ -10153,10 +9715,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2800($sp)
+	sw $v0, -880($sp)
 	lw $ra, ($sp)
-	lw $t0, -2800($sp)
-	sw $t0, -880($sp)
 	lw $t0, -880($sp)
 	sw $t0, -2796($sp)
 	lw $t0, -4($sp)
@@ -10164,10 +9724,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2808($sp)
+	sw $v0, -884($sp)
 	lw $ra, ($sp)
-	lw $t0, -2808($sp)
-	sw $t0, -884($sp)
 	lw $t0, -884($sp)
 	sw $t0, -2804($sp)
 	lw $t0, -4($sp)
@@ -10175,10 +9733,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2816($sp)
+	sw $v0, -888($sp)
 	lw $ra, ($sp)
-	lw $t0, -2816($sp)
-	sw $t0, -888($sp)
 	lw $t0, -888($sp)
 	sw $t0, -2812($sp)
 	lw $t0, -4($sp)
@@ -10186,10 +9742,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2824($sp)
+	sw $v0, -892($sp)
 	lw $ra, ($sp)
-	lw $t0, -2824($sp)
-	sw $t0, -892($sp)
 	lw $t0, -892($sp)
 	sw $t0, -2820($sp)
 	lw $t0, -4($sp)
@@ -10197,10 +9751,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2832($sp)
+	sw $v0, -896($sp)
 	lw $ra, ($sp)
-	lw $t0, -2832($sp)
-	sw $t0, -896($sp)
 	lw $t0, -896($sp)
 	sw $t0, -2828($sp)
 	lw $t0, -4($sp)
@@ -10208,10 +9760,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2840($sp)
+	sw $v0, -900($sp)
 	lw $ra, ($sp)
-	lw $t0, -2840($sp)
-	sw $t0, -900($sp)
 	lw $t0, -900($sp)
 	sw $t0, -2836($sp)
 	lw $t0, -4($sp)
@@ -10219,10 +9769,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2848($sp)
+	sw $v0, -904($sp)
 	lw $ra, ($sp)
-	lw $t0, -2848($sp)
-	sw $t0, -904($sp)
 	lw $t0, -904($sp)
 	sw $t0, -2844($sp)
 	lw $t0, -4($sp)
@@ -10230,10 +9778,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2856($sp)
+	sw $v0, -908($sp)
 	lw $ra, ($sp)
-	lw $t0, -2856($sp)
-	sw $t0, -908($sp)
 	lw $t0, -908($sp)
 	sw $t0, -2852($sp)
 	lw $t0, -4($sp)
@@ -10241,10 +9787,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2864($sp)
+	sw $v0, -912($sp)
 	lw $ra, ($sp)
-	lw $t0, -2864($sp)
-	sw $t0, -912($sp)
 	lw $t0, -912($sp)
 	sw $t0, -2860($sp)
 	lw $t0, -4($sp)
@@ -10252,10 +9796,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2872($sp)
+	sw $v0, -916($sp)
 	lw $ra, ($sp)
-	lw $t0, -2872($sp)
-	sw $t0, -916($sp)
 	lw $t0, -916($sp)
 	sw $t0, -2868($sp)
 	lw $t0, -4($sp)
@@ -10263,10 +9805,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2880($sp)
+	sw $v0, -920($sp)
 	lw $ra, ($sp)
-	lw $t0, -2880($sp)
-	sw $t0, -920($sp)
 	lw $t0, -920($sp)
 	sw $t0, -2876($sp)
 	lw $t0, -4($sp)
@@ -10274,10 +9814,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2888($sp)
+	sw $v0, -924($sp)
 	lw $ra, ($sp)
-	lw $t0, -2888($sp)
-	sw $t0, -924($sp)
 	lw $t0, -924($sp)
 	sw $t0, -2884($sp)
 	lw $t0, -4($sp)
@@ -10285,10 +9823,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2896($sp)
+	sw $v0, -928($sp)
 	lw $ra, ($sp)
-	lw $t0, -2896($sp)
-	sw $t0, -928($sp)
 	lw $t0, -928($sp)
 	sw $t0, -2892($sp)
 	lw $t0, -4($sp)
@@ -10296,10 +9832,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2904($sp)
+	sw $v0, -932($sp)
 	lw $ra, ($sp)
-	lw $t0, -2904($sp)
-	sw $t0, -932($sp)
 	lw $t0, -932($sp)
 	sw $t0, -2900($sp)
 	lw $t0, -4($sp)
@@ -10307,10 +9841,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2912($sp)
+	sw $v0, -936($sp)
 	lw $ra, ($sp)
-	lw $t0, -2912($sp)
-	sw $t0, -936($sp)
 	lw $t0, -936($sp)
 	sw $t0, -2908($sp)
 	lw $t0, -4($sp)
@@ -10318,10 +9850,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2920($sp)
+	sw $v0, -940($sp)
 	lw $ra, ($sp)
-	lw $t0, -2920($sp)
-	sw $t0, -940($sp)
 	lw $t0, -940($sp)
 	sw $t0, -2916($sp)
 	lw $t0, -4($sp)
@@ -10329,10 +9859,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2928($sp)
+	sw $v0, -944($sp)
 	lw $ra, ($sp)
-	lw $t0, -2928($sp)
-	sw $t0, -944($sp)
 	lw $t0, -944($sp)
 	sw $t0, -2924($sp)
 	lw $t0, -4($sp)
@@ -10340,10 +9868,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2936($sp)
+	sw $v0, -948($sp)
 	lw $ra, ($sp)
-	lw $t0, -2936($sp)
-	sw $t0, -948($sp)
 	lw $t0, -948($sp)
 	sw $t0, -2932($sp)
 	lw $t0, -4($sp)
@@ -10351,10 +9877,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2944($sp)
+	sw $v0, -952($sp)
 	lw $ra, ($sp)
-	lw $t0, -2944($sp)
-	sw $t0, -952($sp)
 	lw $t0, -952($sp)
 	sw $t0, -2940($sp)
 	lw $t0, -4($sp)
@@ -10362,10 +9886,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2952($sp)
+	sw $v0, -956($sp)
 	lw $ra, ($sp)
-	lw $t0, -2952($sp)
-	sw $t0, -956($sp)
 	lw $t0, -956($sp)
 	sw $t0, -2948($sp)
 	lw $t0, -4($sp)
@@ -10373,10 +9895,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2960($sp)
+	sw $v0, -960($sp)
 	lw $ra, ($sp)
-	lw $t0, -2960($sp)
-	sw $t0, -960($sp)
 	lw $t0, -960($sp)
 	sw $t0, -2956($sp)
 	lw $t0, -4($sp)
@@ -10384,10 +9904,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2968($sp)
+	sw $v0, -964($sp)
 	lw $ra, ($sp)
-	lw $t0, -2968($sp)
-	sw $t0, -964($sp)
 	lw $t0, -964($sp)
 	sw $t0, -2964($sp)
 	lw $t0, -4($sp)
@@ -10395,10 +9913,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2976($sp)
+	sw $v0, -968($sp)
 	lw $ra, ($sp)
-	lw $t0, -2976($sp)
-	sw $t0, -968($sp)
 	lw $t0, -968($sp)
 	sw $t0, -2972($sp)
 	lw $t0, -4($sp)
@@ -10406,10 +9922,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2984($sp)
+	sw $v0, -972($sp)
 	lw $ra, ($sp)
-	lw $t0, -2984($sp)
-	sw $t0, -972($sp)
 	lw $t0, -972($sp)
 	sw $t0, -2980($sp)
 	lw $t0, -4($sp)
@@ -10417,10 +9931,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -2992($sp)
+	sw $v0, -976($sp)
 	lw $ra, ($sp)
-	lw $t0, -2992($sp)
-	sw $t0, -976($sp)
 	lw $t0, -976($sp)
 	sw $t0, -2988($sp)
 	lw $t0, -4($sp)
@@ -10428,10 +9940,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -3000($sp)
+	sw $v0, -980($sp)
 	lw $ra, ($sp)
-	lw $t0, -3000($sp)
-	sw $t0, -980($sp)
 	lw $t0, -980($sp)
 	sw $t0, -2996($sp)
 	lw $t0, -4($sp)
@@ -10439,10 +9949,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -3008($sp)
+	sw $v0, -984($sp)
 	lw $ra, ($sp)
-	lw $t0, -3008($sp)
-	sw $t0, -984($sp)
 	lw $t0, -984($sp)
 	sw $t0, -3004($sp)
 	lw $t0, -4($sp)
@@ -10450,10 +9958,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -3016($sp)
+	sw $v0, -988($sp)
 	lw $ra, ($sp)
-	lw $t0, -3016($sp)
-	sw $t0, -988($sp)
 	lw $t0, -988($sp)
 	sw $t0, -3012($sp)
 	lw $t0, -4($sp)
@@ -10461,10 +9967,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -3024($sp)
+	sw $v0, -992($sp)
 	lw $ra, ($sp)
-	lw $t0, -3024($sp)
-	sw $t0, -992($sp)
 	lw $t0, -992($sp)
 	sw $t0, -3020($sp)
 	lw $t0, -4($sp)
@@ -10472,10 +9976,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -3032($sp)
+	sw $v0, -996($sp)
 	lw $ra, ($sp)
-	lw $t0, -3032($sp)
-	sw $t0, -996($sp)
 	lw $t0, -996($sp)
 	sw $t0, -3028($sp)
 	lw $t0, -4($sp)
@@ -10483,10 +9985,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -3040($sp)
+	sw $v0, -1000($sp)
 	lw $ra, ($sp)
-	lw $t0, -3040($sp)
-	sw $t0, -1000($sp)
 	lw $t0, -1000($sp)
 	sw $t0, -3036($sp)
 	lw $t0, -4($sp)
@@ -10494,10 +9994,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -3048($sp)
+	sw $v0, -1004($sp)
 	lw $ra, ($sp)
-	lw $t0, -3048($sp)
-	sw $t0, -1004($sp)
 	lw $t0, -1004($sp)
 	sw $t0, -3044($sp)
 	lw $t0, -4($sp)
@@ -10505,10 +10003,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -3056($sp)
+	sw $v0, -1008($sp)
 	lw $ra, ($sp)
-	lw $t0, -3056($sp)
-	sw $t0, -1008($sp)
 	lw $t0, -1008($sp)
 	sw $t0, -3052($sp)
 	lw $t0, -4($sp)
@@ -10516,10 +10012,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -3064($sp)
+	sw $v0, -1012($sp)
 	lw $ra, ($sp)
-	lw $t0, -3064($sp)
-	sw $t0, -1012($sp)
 	lw $t0, -1012($sp)
 	sw $t0, -3060($sp)
 	lw $t0, -4($sp)
@@ -10527,10 +10021,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -3072($sp)
+	sw $v0, -1016($sp)
 	lw $ra, ($sp)
-	lw $t0, -3072($sp)
-	sw $t0, -1016($sp)
 	lw $t0, -1016($sp)
 	sw $t0, -3068($sp)
 	lw $t0, -4($sp)
@@ -10538,10 +10030,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -3080($sp)
+	sw $v0, -1020($sp)
 	lw $ra, ($sp)
-	lw $t0, -3080($sp)
-	sw $t0, -1020($sp)
 	lw $t0, -1020($sp)
 	sw $t0, -3076($sp)
 	lw $t0, -4($sp)
@@ -10549,10 +10039,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -3088($sp)
+	sw $v0, -1024($sp)
 	lw $ra, ($sp)
-	lw $t0, -3088($sp)
-	sw $t0, -1024($sp)
 	lw $t0, -1024($sp)
 	sw $t0, -3084($sp)
 	lw $t0, -4($sp)
@@ -10560,10 +10048,8 @@ _main:
 	subu $sp, $sp, 7216
 	jal _getcount
 	addi $sp, $sp, 7216
-	sw $v0, -3096($sp)
+	sw $v0, -1028($sp)
 	lw $ra, ($sp)
-	lw $t0, -3096($sp)
-	sw $t0, -1028($sp)
 	lw $t0, -1028($sp)
 	sw $t0, -3092($sp)
 	lw $t0, -3100($sp)

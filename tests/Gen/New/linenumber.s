@@ -44,10 +44,8 @@ _getline1:
 	subu $sp, $sp, 80
 	jal _getchar
 	addi $sp, $sp, 80
-	sw $v0, -12($sp)
+	sw $v0, -4($sp)
 	lw $ra, ($sp)
-	lw $t0, -12($sp)
-	sw $t0, -4($sp)
 	lw $t0, -4($sp)
 	sw $t0, -8($sp)
 L2:
@@ -83,10 +81,8 @@ L3:
 	subu $sp, $sp, 80
 	jal _getchar
 	addi $sp, $sp, 80
-	sw $v0, -44($sp)
+	sw $v0, -4($sp)
 	lw $ra, ($sp)
-	lw $t0, -44($sp)
-	sw $t0, -4($sp)
 	lw $t0, -4($sp)
 	sw $t0, -40($sp)
 	b L2
@@ -163,10 +159,8 @@ L10:
 	subu $sp, $sp, 60
 	jal _getchar
 	addi $sp, $sp, 60
-	sw $v0, -16($sp)
+	sw $v0, -4($sp)
 	lw $ra, ($sp)
-	lw $t0, -16($sp)
-	sw $t0, -4($sp)
 	lw $t0, -4($sp)
 	sw $t0, -12($sp)
 	lw $t0, -12($sp)
@@ -195,10 +189,8 @@ L13:
 	subu $sp, $sp, 60
 	jal _getchar
 	addi $sp, $sp, 60
-	sw $v0, -36($sp)
+	sw $v0, -4($sp)
 	lw $ra, ($sp)
-	lw $t0, -36($sp)
-	sw $t0, -4($sp)
 	lw $t0, -4($sp)
 	sw $t0, -32($sp)
 	lw $t0, -32($sp)
@@ -243,10 +235,8 @@ _main:
 	subu $sp, $sp, 56
 	jal _getint
 	addi $sp, $sp, 56
-	sw $v0, -16($sp)
+	sw $v0, -4($sp)
 	lw $ra, ($sp)
-	lw $t0, -16($sp)
-	sw $t0, -4($sp)
 	lw $t0, -4($sp)
 	sw $t0, -12($sp)
 L16:
@@ -267,10 +257,8 @@ L17:
 	subu $sp, $sp, 60
 	jal _malloc
 	addi $sp, $sp, 60
-	sw $v0, -32($sp)
+	sw $v0, -24($sp)
 	lw $ra, ($sp)
-	lw $t0, -32($sp)
-	sw $t0, -24($sp)
 	lw $t0, -24($sp)
 	sw $t0, -56($sp)
 	subu $sp, $sp, 60

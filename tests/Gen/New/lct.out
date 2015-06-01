@@ -60,8 +60,7 @@ Label :1	Return BasicParam y
 
 _newNode: 
 BasicParam 20
-Temp3 = call _malloc_struct , 1
-_p = Temp3
+_p = call _malloc_struct , 1
 Temp2 = _p
 Temp8 = *_p, 20
 Temp8[8] = 0 , 4
@@ -135,8 +134,7 @@ Temp52 = *p, 20
 Temp53 = Temp52[4] , 4
 _fa = Temp53
 BasicParam p
-Temp54 = call _f , 1
-_idx = Temp54
+_idx = call _f , 1
 Temp56 = *_fa, 20
 Temp57 = Temp56[4] , 4
 Temp58 = *p, 20
@@ -352,7 +350,7 @@ Temp179 = *Temp183, 4
 Temp187 = _i ADD 1
 _i = Temp187
 Temp186 = _i
-Temp185 = Temp186 SUB 1
+Temp185 = _i SUB 1
 Goto label:35
 Label :34	_i = 1
 Temp188 = _i
@@ -395,7 +393,7 @@ Temp213 = call _access , 1
 Temp216 = _i ADD 1
 _i = Temp216
 Temp215 = _i
-Temp214 = Temp215 SUB 1
+Temp214 = _i SUB 1
 Goto label:38
 Label :37	_m = 14
 Temp217 = _m
@@ -427,7 +425,7 @@ Temp227 = _x
 Temp236 = _x ADD 1
 _x = Temp236
 Temp235 = _x
-Temp234 = Temp235 SUB 1
+Temp234 = _x SUB 1
 Temp237 = _t EQ 1
 If Not Equal to Zero Temp237 Goto Label :44	
 Goto label:45
@@ -567,7 +565,7 @@ Temp335 = call _access , 1
 Label :43	Temp338 = _i ADD 1
 _i = Temp338
 Temp337 = _i
-Temp336 = Temp337 SUB 1
+Temp336 = _i SUB 1
 Goto label:41
 Label :40	Return BasicParam 0
 

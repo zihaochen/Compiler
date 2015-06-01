@@ -38,7 +38,7 @@ Temp8 = *Temp18, 4
 Temp23 = _e[12] , 4
 Temp24 = Temp23 ADD 1
 _e[12] = Temp24 , 4
-Temp21 = Temp22 SUB 1
+Temp21 = Temp23 SUB 1
 Temp25 = _e[8] , 40
 Temp26 = 0
 Temp27 = a MUL 4
@@ -116,8 +116,7 @@ Label :1	Return BasicParam 0
 
 _getInt: 
 _x = 0
-Temp70 = call _getchar , 0
-_ch = Temp70
+_ch = call _getchar , 0
 Temp69 = _ch
 Label :10	Temp71 = _ch LT 48
 If Not Equal to Zero Temp71 Goto Label :11	
@@ -125,8 +124,7 @@ Goto label:12
 Label :12	Temp72 = _ch GT 57
 If Not Equal to Zero Temp72 Goto Label :11	
 Goto label:9
-Label :11	Temp74 = call _getchar , 0
-_ch = Temp74
+Label :11	_ch = call _getchar , 0
 Temp73 = _ch
 Goto label:10
 Label :9	Label :14	Temp75 = _ch GE 48
@@ -140,19 +138,16 @@ Temp79 = Temp78 ADD _ch
 Temp80 = Temp79 SUB 48
 _x = Temp80
 Temp77 = _x
-Temp82 = call _getchar , 0
-_ch = Temp82
+_ch = call _getchar , 0
 Temp81 = _ch
 Goto label:14
 Label :13	Return BasicParam _x
 
 _main: 
 _answer = 0
-Temp84 = call _getInt , 0
-_n = Temp84
+_n = call _getInt , 0
 Temp83 = _n
-Temp86 = call _getInt , 0
-_m = Temp86
+_m = call _getInt , 0
 Temp85 = _m
 _e[12] = 0 , 4
 _i = 0
@@ -171,18 +166,16 @@ Temp90 = *Temp94, 4
 Temp98 = _i ADD 1
 _i = Temp98
 Temp97 = _i
-Temp96 = Temp97 SUB 1
+Temp96 = _i SUB 1
 Goto label:18
 Label :17	_i = 1
 Temp99 = _i
 Label :21	Temp100 = _i LE _m
 If Not Equal to Zero Temp100 Goto Label :22	
 Goto label:20
-Label :22	Temp102 = call _getInt , 0
-_a = Temp102
+Label :22	_a = call _getInt , 0
 Temp101 = _a
-Temp104 = call _getInt , 0
-_b = Temp104
+_b = call _getInt , 0
 Temp103 = _b
 BasicParam _a
 BasicParam _b
@@ -190,7 +183,7 @@ Temp105 = call _addEdge , 2
 Temp108 = _i ADD 1
 _i = Temp108
 Temp107 = _i
-Temp106 = Temp107 SUB 1
+Temp106 = _i SUB 1
 Goto label:21
 Label :20	_i = 1
 Temp109 = _i
@@ -228,7 +221,7 @@ Temp122 = *Temp125, 4
 Temp129 = _j ADD 1
 _j = Temp129
 Temp128 = _j
-Temp127 = Temp128 SUB 1
+Temp127 = _j SUB 1
 Goto label:30
 Label :29	BasicParam _i
 Temp131 = call _dfs , 1
@@ -238,7 +231,7 @@ Temp130 = _answer
 Temp135 = _i ADD 1
 _i = Temp135
 Temp134 = _i
-Temp133 = Temp134 SUB 1
+Temp133 = _i SUB 1
 Goto label:27
 Label :26	BasicParam Temp136
 BasicParam _answer

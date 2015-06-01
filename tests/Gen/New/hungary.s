@@ -149,7 +149,7 @@ _addEdge:
 	lw $t2, -96($sp)
 	sw $t2, 12($t1)
 	li $t2, 1
-	lw $t1, -88($sp)
+	lw $t1, -92($sp)
 	sub $t0, $t1, $t2
 	sw $t0, -84($sp)
 	lw $t1, _e
@@ -383,10 +383,8 @@ _getInt:
 	subu $sp, $sp, 68
 	jal _getchar
 	addi $sp, $sp, 68
-	sw $v0, -16($sp)
+	sw $v0, -4($sp)
 	lw $ra, ($sp)
-	lw $t0, -16($sp)
-	sw $t0, -4($sp)
 	lw $t0, -4($sp)
 	sw $t0, -12($sp)
 L10:
@@ -409,10 +407,8 @@ L11:
 	subu $sp, $sp, 68
 	jal _getchar
 	addi $sp, $sp, 68
-	sw $v0, -32($sp)
+	sw $v0, -4($sp)
 	lw $ra, ($sp)
-	lw $t0, -32($sp)
-	sw $t0, -4($sp)
 	lw $t0, -4($sp)
 	sw $t0, -28($sp)
 	b L10
@@ -453,10 +449,8 @@ L15:
 	subu $sp, $sp, 68
 	jal _getchar
 	addi $sp, $sp, 68
-	sw $v0, -64($sp)
+	sw $v0, -4($sp)
 	lw $ra, ($sp)
-	lw $t0, -64($sp)
-	sw $t0, -4($sp)
 	lw $t0, -4($sp)
 	sw $t0, -60($sp)
 	b L14
@@ -474,19 +468,15 @@ _main:
 	subu $sp, $sp, 236
 	jal _getInt
 	addi $sp, $sp, 236
-	sw $v0, -20($sp)
+	sw $v0, _n
 	lw $ra, ($sp)
-	lw $t0, -20($sp)
-	sw $t0, _n
 	lw $t0, _n
 	sw $t0, -16($sp)
 	subu $sp, $sp, 236
 	jal _getInt
 	addi $sp, $sp, 236
-	sw $v0, -28($sp)
+	sw $v0, _m
 	lw $ra, ($sp)
-	lw $t0, -28($sp)
-	sw $t0, _m
 	lw $t0, _m
 	sw $t0, -24($sp)
 	lw $t1, _e
@@ -540,7 +530,7 @@ L19:
 	lw $t0, -4($sp)
 	sw $t0, -72($sp)
 	li $t2, 1
-	lw $t1, -72($sp)
+	lw $t1, -4($sp)
 	sub $t0, $t1, $t2
 	sw $t0, -68($sp)
 	b L18
@@ -561,19 +551,15 @@ L22:
 	subu $sp, $sp, 236
 	jal _getInt
 	addi $sp, $sp, 236
-	sw $v0, -92($sp)
+	sw $v0, _a
 	lw $ra, ($sp)
-	lw $t0, -92($sp)
-	sw $t0, _a
 	lw $t0, _a
 	sw $t0, -88($sp)
 	subu $sp, $sp, 236
 	jal _getInt
 	addi $sp, $sp, 236
-	sw $v0, -100($sp)
+	sw $v0, _b
 	lw $ra, ($sp)
-	lw $t0, -100($sp)
-	sw $t0, _b
 	lw $t0, _b
 	sw $t0, -96($sp)
 	lw $t0, _a
@@ -594,7 +580,7 @@ L22:
 	lw $t0, -4($sp)
 	sw $t0, -112($sp)
 	li $t2, 1
-	lw $t1, -112($sp)
+	lw $t1, -4($sp)
 	sub $t0, $t1, $t2
 	sw $t0, -108($sp)
 	b L21
@@ -703,7 +689,7 @@ L31:
 	lw $t0, -8($sp)
 	sw $t0, -196($sp)
 	li $t2, 1
-	lw $t1, -196($sp)
+	lw $t1, -8($sp)
 	sub $t0, $t1, $t2
 	sw $t0, -192($sp)
 	b L30
@@ -732,7 +718,7 @@ L29:
 	lw $t0, -4($sp)
 	sw $t0, -220($sp)
 	li $t2, 1
-	lw $t1, -220($sp)
+	lw $t1, -4($sp)
 	sub $t0, $t1, $t2
 	sw $t0, -216($sp)
 	b L27

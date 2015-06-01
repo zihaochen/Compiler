@@ -75,10 +75,8 @@ _read:
 	subu $sp, $sp, 40
 	jal _getchar
 	addi $sp, $sp, 40
-	sw $v0, -8($sp)
+	sw $v0, -4($sp)
 	lw $ra, ($sp)
-	lw $t0, -8($sp)
-	sw $t0, -4($sp)
 L2:
 	li $t2, 48
 	lw $t1, -4($sp)
@@ -99,10 +97,8 @@ L3:
 	subu $sp, $sp, 40
 	jal _getchar
 	addi $sp, $sp, 40
-	sw $v0, -28($sp)
+	sw $v0, -4($sp)
 	lw $ra, ($sp)
-	lw $t0, -28($sp)
-	sw $t0, -4($sp)
 	lw $t0, -4($sp)
 	sw $t0, -24($sp)
 	b L2
@@ -144,17 +140,13 @@ _main:
 	subu $sp, $sp, 32
 	jal _read
 	addi $sp, $sp, 32
-	sw $v0, -8($sp)
+	sw $v0, -4($sp)
 	lw $ra, ($sp)
-	lw $t0, -8($sp)
-	sw $t0, -4($sp)
 	subu $sp, $sp, 32
 	jal _read
 	addi $sp, $sp, 32
-	sw $v0, -16($sp)
+	sw $v0, -12($sp)
 	lw $ra, ($sp)
-	lw $t0, -16($sp)
-	sw $t0, -12($sp)
 	subu $sp, $sp, 32
 	jal _print
 	addi $sp, $sp, 32

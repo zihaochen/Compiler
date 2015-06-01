@@ -8,16 +8,14 @@ _getchar:
 _printf: 
 
 _read: 
-Temp1 = call _getchar , 0
-_ch = Temp1
+_ch = call _getchar , 0
 Label :2	Temp2 = _ch LT 48
 If Not Equal to Zero Temp2 Goto Label :3	
 Goto label:4
 Label :4	Temp3 = _ch GT 57
 If Not Equal to Zero Temp3 Goto Label :3	
 Goto label:1
-Label :3	Temp5 = call _getchar , 0
-_ch = Temp5
+Label :3	_ch = call _getchar , 0
 Temp4 = _ch
 Goto label:2
 Label :1	Temp7 = _ch SUB 48
@@ -33,10 +31,8 @@ _printf_cnt = 2
 Temp9 = call _printf , 2
 
 _main: 
-Temp10 = call _read , 0
-_a = Temp10
-Temp11 = call _read , 0
-_b = Temp11
+_a = call _read , 0
+_b = call _read , 0
 Temp12 = call _print , 0
 BasicParam Temp13
 BasicParam _a

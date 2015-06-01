@@ -366,15 +366,13 @@ Label :6	Return BasicParam 1
 Label :7	Return BasicParam 0
 
 _get_d: 
-Temp106 = call _getchar , 0
-_c = Temp106
+_c = call _getchar , 0
 _t = 0
 Label :10	BasicParam _c
 Temp107 = call _is_digit , 1
 If Not Equal to Zero Temp107 Goto Label :9	
 Goto label:11
-Label :11	Temp109 = call _getchar , 0
-_c = Temp109
+Label :11	_c = call _getchar , 0
 Temp108 = _c
 Goto label:10
 Label :9	Label :13	BasicParam _c
@@ -386,15 +384,13 @@ Temp113 = Temp112 ADD _c
 Temp114 = Temp113 SUB 48
 _t = Temp114
 Temp111 = _t
-Temp116 = call _getchar , 0
-_c = Temp116
+_c = call _getchar , 0
 Temp115 = _c
 Goto label:13
 Label :12	Return BasicParam _t
 
 _main: 
-Temp118 = call _get_d , 0
-_N = Temp118
+_N = call _get_d , 0
 Temp117 = _N
 _i = 0
 Temp119 = _i
@@ -402,11 +398,9 @@ Label :16	Temp120 = _N SUB 1
 Temp121 = _i LT Temp120
 If Not Equal to Zero Temp121 Goto Label :17	
 Goto label:15
-Label :17	Temp123 = call _get_d , 0
-_x = Temp123
+Label :17	_x = call _get_d , 0
 Temp122 = _x
-Temp125 = call _get_d , 0
-_y = Temp125
+_y = call _get_d , 0
 Temp124 = _y
 Temp126 = 0
 Temp127 = _x MUL 4
@@ -550,7 +544,7 @@ Temp211 = Temp211 ADD Temp212
 Temp213 = _tree ADD Temp211
 Temp214 = *Temp213, 24
 Temp214[12] = Temp210 , 4
-Temp203 = Temp204 SUB 1
+Temp203 = Temp209 SUB 1
 Temp217 = 0
 Temp218 = _x MUL 24
 Temp217 = Temp217 ADD Temp218
@@ -564,7 +558,7 @@ Temp223 = Temp223 ADD Temp224
 Temp225 = _tree ADD Temp223
 Temp226 = *Temp225, 24
 Temp226[8] = Temp222 , 4
-Temp215 = Temp216 SUB 1
+Temp215 = Temp221 SUB 1
 Temp228 = 0
 Temp229 = _y MUL 24
 Temp228 = Temp228 ADD Temp229
@@ -597,7 +591,7 @@ Temp250 = Temp250 ADD Temp251
 Temp252 = _tree ADD Temp250
 Temp253 = *Temp252, 24
 Temp253[12] = Temp249 , 4
-Temp242 = Temp243 SUB 1
+Temp242 = Temp248 SUB 1
 Temp256 = 0
 Temp257 = _y MUL 24
 Temp256 = Temp256 ADD Temp257
@@ -611,7 +605,7 @@ Temp262 = Temp262 ADD Temp263
 Temp264 = _tree ADD Temp262
 Temp265 = *Temp264, 24
 Temp265[8] = Temp261 , 4
-Temp254 = Temp255 SUB 1
+Temp254 = Temp260 SUB 1
 Temp268 = 0
 Temp269 = _y MUL 4
 Temp268 = Temp268 ADD Temp269

@@ -852,7 +852,7 @@ public class Translator implements Visitor {
       selfDecrement.address = new Temp();
       curFunction.vars.add(new Variable(selfDecrement.address, 4));
       assignExpr(binaryExpr);
-      curFunction.body.add(new ArithmeticExpr(selfDecrement.address, binaryExpr.address, ArithmeticOp.ADD, new IntegerConst(1)));
+      curFunction.body.add(new ArithmeticExpr(selfDecrement.address, selfDecrement.body.address, ArithmeticOp.ADD, new IntegerConst(1)));
       //curFunction.body.add(new Assign(selfDecrement.address, selfDecrement.body.address));
       //curFunction.body.add(new ArithmeticExpr(selfDecrement.body.address, selfDecrement.body.address, ArithmeticOp.SUB, new IntegerConst(1)));
    }
@@ -863,7 +863,7 @@ public class Translator implements Visitor {
       selfIncrement.address = new Temp();
       curFunction.vars.add(new Variable(selfIncrement.address, 4));
       assignExpr(binaryExpr);
-      curFunction.body.add(new ArithmeticExpr(selfIncrement.address, binaryExpr.address, ArithmeticOp.SUB, new IntegerConst(1)));
+      curFunction.body.add(new ArithmeticExpr(selfIncrement.address, selfIncrement.body.address, ArithmeticOp.SUB, new IntegerConst(1)));
       //curFunction.body.add(new Assign(selfIncrement.address, selfIncrement.body.address));
       //curFunction.body.add(new ArithmeticExpr(selfIncrement.body.address, selfIncrement.body.address, ArithmeticOp.ADD, new IntegerConst(1)));
    }

@@ -15,8 +15,7 @@ _iter = Temp1
 Label :2	If Not Equal to Zero _iter Goto Label :3	
 Goto label:1
 Label :3	BasicParam 12
-Temp4 = call _malloc_struct , 1
-_tmp = Temp4
+_tmp = call _malloc_struct , 1
 Temp5 = *_iter, 12
 Temp6 = Temp5[0] , 4
 Temp9 = Temp6 MUL 4
@@ -98,8 +97,7 @@ Label :9	Goto label:7
 Label :6	Return BasicParam x
 
 _get_int: 
-Temp61 = call _getchar , 0
-_ch = Temp61
+_ch = call _getchar , 0
 _res = 0
 Label :13	Temp62 = _ch LT 48
 If Not Equal to Zero Temp62 Goto Label :15	
@@ -110,8 +108,7 @@ Goto label:12
 Label :15	Temp64 = _ch NE 45
 If Not Equal to Zero Temp64 Goto Label :14	
 Goto label:12
-Label :14	Temp66 = call _getchar , 0
-_ch = Temp66
+Label :14	_ch = call _getchar , 0
 Temp65 = _ch
 Goto label:13
 Label :12	Temp67 = _ch EQ 45
@@ -131,54 +128,44 @@ Temp74 = Temp73 ADD _ch
 Temp75 = Temp74 SUB 48
 _res = Temp75
 Temp72 = _res
-Temp77 = call _getchar , 0
-_ch = Temp77
+_ch = call _getchar , 0
 Temp76 = _ch
 Goto label:20
 Label :19	Return BasicParam _res
 
 _main: 
 _flag = 1
-Temp79 = call _get_int , 0
-_n = Temp79
+_n = call _get_int , 0
 Temp78 = _n
-Temp81 = call _get_int , 0
-_m = Temp81
+_m = call _get_int , 0
 Temp80 = _m
 Temp83 = _n MUL 4
 BasicParam Temp83
-Temp84 = call _malloc , 1
-_dom = Temp84
+_dom = call _malloc , 1
 Temp82 = _dom
 Temp86 = _n MUL 4
 BasicParam Temp86
-Temp87 = call _malloc , 1
-_pre = Temp87
+_pre = call _malloc , 1
 Temp85 = _pre
 Temp89 = _n MUL 4
 BasicParam Temp89
-Temp90 = call _malloc , 1
-_stack = Temp90
+_stack = call _malloc , 1
 Temp88 = _stack
 Temp92 = _n MUL 4
 BasicParam Temp92
-Temp93 = call _malloc , 1
-_order = Temp93
+_order = call _malloc , 1
 Temp91 = _order
 Temp95 = _n MUL 4
 BasicParam Temp95
-Temp96 = call _malloc , 1
-_g = Temp96
+_g = call _malloc , 1
 Temp94 = _g
 Temp98 = _n MUL 4
 BasicParam Temp98
-Temp99 = call _malloc , 1
-_imm = Temp99
+_imm = call _malloc , 1
 Temp97 = _imm
 Temp101 = _n MUL 4
 BasicParam Temp101
-Temp102 = call _malloc , 1
-_fron = Temp102
+_fron = call _malloc , 1
 Temp100 = _fron
 _i = 0
 Temp103 = _i
@@ -210,13 +197,10 @@ Temp119 = _i
 Label :27	Temp120 = _i LT _m
 If Not Equal to Zero Temp120 Goto Label :28	
 Goto label:26
-Label :28	Temp121 = call _get_int , 0
-_u = Temp121
-Temp122 = call _get_int , 0
-_v = Temp122
+Label :28	_u = call _get_int , 0
+_v = call _get_int , 0
 BasicParam 12
-Temp123 = call _malloc_struct , 1
-_tmp = Temp123
+_tmp = call _malloc_struct , 1
 Temp125 = *_tmp, 12
 Temp125[0] = _v , 4
 Temp124 = Temp125[0] , 4
@@ -234,8 +218,7 @@ Temp135 = _i ADD 1
 _i = Temp135
 Temp134 = _i
 Goto label:27
-Label :26	Temp137 = call _get_int , 0
-_source = Temp137
+Label :26	_source = call _get_int , 0
 Temp136 = _source
 Temp141 = 4 MUL _source
 Temp140 = _pre ADD Temp141
@@ -285,8 +268,7 @@ Label :39	Temp168 = *_iter, 12
 Temp169 = Temp168[0] , 4
 BasicParam _new_dom
 BasicParam Temp169
-Temp170 = call _get_dom , 2
-_new_dom = Temp170
+_new_dom = call _get_dom , 2
 Temp167 = _new_dom
 Label :38	Temp172 = *_iter, 12
 Temp173 = Temp172[4] , 4

@@ -99,10 +99,8 @@ L3:
 	subu $sp, $sp, 196
 	jal _malloc_struct
 	addi $sp, $sp, 196
-	sw $v0, -28($sp)
+	sw $v0, -20($sp)
 	lw $ra, ($sp)
-	lw $t0, -28($sp)
-	sw $t0, -20($sp)
 	lw $t0, -4($sp)
 	lw $t1, ($t0)
 	sw $t1, -32($sp)
@@ -355,10 +353,8 @@ _get_int:
 	subu $sp, $sp, 80
 	jal _getchar
 	addi $sp, $sp, 80
-	sw $v0, -8($sp)
+	sw $v0, -4($sp)
 	lw $ra, ($sp)
-	lw $t0, -8($sp)
-	sw $t0, -4($sp)
 	li $t0, 0
 	sw $t0, -12($sp)
 L13:
@@ -389,10 +385,8 @@ L14:
 	subu $sp, $sp, 80
 	jal _getchar
 	addi $sp, $sp, 80
-	sw $v0, -32($sp)
+	sw $v0, -4($sp)
 	lw $ra, ($sp)
-	lw $t0, -32($sp)
-	sw $t0, -4($sp)
 	lw $t0, -4($sp)
 	sw $t0, -28($sp)
 	b L13
@@ -453,10 +447,8 @@ L21:
 	subu $sp, $sp, 80
 	jal _getchar
 	addi $sp, $sp, 80
-	sw $v0, -76($sp)
+	sw $v0, -4($sp)
 	lw $ra, ($sp)
-	lw $t0, -76($sp)
-	sw $t0, -4($sp)
 	lw $t0, -4($sp)
 	sw $t0, -72($sp)
 	b L20
@@ -480,19 +472,15 @@ _main:
 	subu $sp, $sp, 736
 	jal _get_int
 	addi $sp, $sp, 736
-	sw $v0, -16($sp)
+	sw $v0, _n
 	lw $ra, ($sp)
-	lw $t0, -16($sp)
-	sw $t0, _n
 	lw $t0, _n
 	sw $t0, -12($sp)
 	subu $sp, $sp, 736
 	jal _get_int
 	addi $sp, $sp, 736
-	sw $v0, -24($sp)
+	sw $v0, _m
 	lw $ra, ($sp)
-	lw $t0, -24($sp)
-	sw $t0, _m
 	lw $t0, _m
 	sw $t0, -20($sp)
 	li $t2, 4
@@ -504,10 +492,8 @@ _main:
 	subu $sp, $sp, 740
 	jal _malloc
 	addi $sp, $sp, 740
-	sw $v0, -36($sp)
+	sw $v0, _dom
 	lw $ra, ($sp)
-	lw $t0, -36($sp)
-	sw $t0, _dom
 	lw $t0, _dom
 	sw $t0, -28($sp)
 	li $t2, 4
@@ -519,10 +505,8 @@ _main:
 	subu $sp, $sp, 740
 	jal _malloc
 	addi $sp, $sp, 740
-	sw $v0, -48($sp)
+	sw $v0, _pre
 	lw $ra, ($sp)
-	lw $t0, -48($sp)
-	sw $t0, _pre
 	lw $t0, _pre
 	sw $t0, -40($sp)
 	li $t2, 4
@@ -534,10 +518,8 @@ _main:
 	subu $sp, $sp, 740
 	jal _malloc
 	addi $sp, $sp, 740
-	sw $v0, -60($sp)
+	sw $v0, _stack
 	lw $ra, ($sp)
-	lw $t0, -60($sp)
-	sw $t0, _stack
 	lw $t0, _stack
 	sw $t0, -52($sp)
 	li $t2, 4
@@ -549,10 +531,8 @@ _main:
 	subu $sp, $sp, 740
 	jal _malloc
 	addi $sp, $sp, 740
-	sw $v0, -72($sp)
+	sw $v0, _order
 	lw $ra, ($sp)
-	lw $t0, -72($sp)
-	sw $t0, _order
 	lw $t0, _order
 	sw $t0, -64($sp)
 	li $t2, 4
@@ -564,10 +544,8 @@ _main:
 	subu $sp, $sp, 740
 	jal _malloc
 	addi $sp, $sp, 740
-	sw $v0, -84($sp)
+	sw $v0, _g
 	lw $ra, ($sp)
-	lw $t0, -84($sp)
-	sw $t0, _g
 	lw $t0, _g
 	sw $t0, -76($sp)
 	li $t2, 4
@@ -579,10 +557,8 @@ _main:
 	subu $sp, $sp, 740
 	jal _malloc
 	addi $sp, $sp, 740
-	sw $v0, -96($sp)
+	sw $v0, _imm
 	lw $ra, ($sp)
-	lw $t0, -96($sp)
-	sw $t0, _imm
 	lw $t0, _imm
 	sw $t0, -88($sp)
 	li $t2, 4
@@ -594,10 +570,8 @@ _main:
 	subu $sp, $sp, 740
 	jal _malloc
 	addi $sp, $sp, 740
-	sw $v0, -108($sp)
+	sw $v0, _fron
 	lw $ra, ($sp)
-	lw $t0, -108($sp)
-	sw $t0, _fron
 	lw $t0, _fron
 	sw $t0, -100($sp)
 	li $t0, 0
@@ -695,26 +669,20 @@ L28:
 	subu $sp, $sp, 736
 	jal _get_int
 	addi $sp, $sp, 736
-	sw $v0, -188($sp)
+	sw $v0, -184($sp)
 	lw $ra, ($sp)
-	lw $t0, -188($sp)
-	sw $t0, -184($sp)
 	subu $sp, $sp, 736
 	jal _get_int
 	addi $sp, $sp, 736
-	sw $v0, -196($sp)
+	sw $v0, -192($sp)
 	lw $ra, ($sp)
-	lw $t0, -196($sp)
-	sw $t0, -192($sp)
 	li $t0, 12
 	sw $t0, -736($sp)
 	subu $sp, $sp, 740
 	jal _malloc_struct
 	addi $sp, $sp, 740
-	sw $v0, -208($sp)
+	sw $v0, -200($sp)
 	lw $ra, ($sp)
-	lw $t0, -208($sp)
-	sw $t0, -200($sp)
 	lw $t0, -200($sp)
 	lw $t1, ($t0)
 	sw $t1, -216($sp)
@@ -771,10 +739,8 @@ L26:
 	subu $sp, $sp, 736
 	jal _get_int
 	addi $sp, $sp, 736
-	sw $v0, -264($sp)
+	sw $v0, _source
 	lw $ra, ($sp)
-	lw $t0, -264($sp)
-	sw $t0, _source
 	lw $t0, _source
 	sw $t0, -260($sp)
 	lw $t2, _source
@@ -927,10 +893,8 @@ L39:
 	subu $sp, $sp, 744
 	jal _get_dom
 	addi $sp, $sp, 744
-	sw $v0, -404($sp)
+	sw $v0, -296($sp)
 	lw $ra, ($sp)
-	lw $t0, -404($sp)
-	sw $t0, -296($sp)
 	lw $t0, -296($sp)
 	sw $t0, -392($sp)
 L38:

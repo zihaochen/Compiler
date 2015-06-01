@@ -196,10 +196,8 @@ _newNode:
 	subu $sp, $sp, 80
 	jal _malloc_struct
 	addi $sp, $sp, 80
-	sw $v0, -16($sp)
+	sw $v0, -4($sp)
 	lw $ra, ($sp)
-	lw $t0, -16($sp)
-	sw $t0, -4($sp)
 	lw $t0, -4($sp)
 	sw $t0, -8($sp)
 	lw $t0, -4($sp)
@@ -411,10 +409,8 @@ _rotate:
 	subu $sp, $sp, 272
 	jal _f
 	addi $sp, $sp, 272
-	sw $v0, -20($sp)
+	sw $v0, -16($sp)
 	lw $ra, ($sp)
-	lw $t0, -20($sp)
-	sw $t0, -16($sp)
 	lw $t0, -4($sp)
 	lw $t1, ($t0)
 	sw $t1, -28($sp)
@@ -1054,7 +1050,7 @@ L36:
 	lw $t0, -4($sp)
 	sw $t0, -64($sp)
 	li $t2, 1
-	lw $t1, -64($sp)
+	lw $t1, -4($sp)
 	sub $t0, $t1, $t2
 	sw $t0, -60($sp)
 	b L35
@@ -1190,7 +1186,7 @@ L39:
 	lw $t0, -4($sp)
 	sw $t0, -180($sp)
 	li $t2, 1
-	lw $t1, -180($sp)
+	lw $t1, -4($sp)
 	sub $t0, $t1, $t2
 	sw $t0, -176($sp)
 	b L38
@@ -1287,7 +1283,7 @@ L42:
 	lw $t0, -8($sp)
 	sw $t0, -260($sp)
 	li $t2, 1
-	lw $t1, -260($sp)
+	lw $t1, -8($sp)
 	sub $t0, $t1, $t2
 	sw $t0, -256($sp)
 	li $t2, 1
@@ -1743,7 +1739,7 @@ L43:
 	lw $t0, -4($sp)
 	sw $t0, -668($sp)
 	li $t2, 1
-	lw $t1, -668($sp)
+	lw $t1, -4($sp)
 	sub $t0, $t1, $t2
 	sw $t0, -664($sp)
 	b L41

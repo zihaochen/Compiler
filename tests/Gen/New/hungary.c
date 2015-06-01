@@ -6,7 +6,7 @@ struct Eglist {
 }e;
 
 void addEdge(int a, int b) {
-	e.other[e.sum] = b; e.succ[e.sum] = e.last[a]; e.last[a] = e.sum++;
+	e.other[e.sum] = b; e.succ[e.sum] = e.last[a]; e.last[a] = e.sum++;;
 	//e.other[e.sum] = a; e.succ[e.sum] = e.last[b]; e.last[b] = e.sum++;
 }
 
