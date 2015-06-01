@@ -358,29 +358,29 @@ Goto label:20
 Label :22	Temp83 = 0
 Temp84 = _k MUL 4
 Temp83 = Temp83 ADD Temp84
-Temp85 = _next ADD Temp83
+Temp85 = _edge ADD Temp83
 Temp86 = *Temp85, 4
-BasicParam Temp82
-BasicParam _k
-BasicParam Temp86
-_printf_cnt = 3
-Temp87 = call _printf , 3
-Temp89 = 0
-Temp90 = _k MUL 4
-Temp89 = Temp89 ADD Temp90
-Temp91 = _edge ADD Temp89
-Temp92 = *Temp91, 4
-_v = Temp92
-Temp88 = _v
-Temp93 = 0
-Temp94 = _v MUL 4
-Temp93 = Temp93 ADD Temp94
-Temp95 = _dy ADD Temp93
-Temp96 = *Temp95, 4
-If Not Equal to Zero Temp96 Goto Label :24	
+_v = Temp86
+Temp82 = _v
+Temp87 = 0
+Temp88 = _v MUL 4
+Temp87 = Temp87 ADD Temp88
+Temp89 = _dy ADD Temp87
+Temp90 = *Temp89, 4
+If Not Equal to Zero Temp90 Goto Label :24	
 Goto label:23
 Label :24	Goto label:21
-Label :23	Temp98 = 0
+Label :23	Temp92 = 0
+Temp93 = _k MUL 4
+Temp92 = Temp92 ADD Temp93
+Temp94 = _next ADD Temp92
+Temp95 = *Temp94, 4
+BasicParam Temp91
+BasicParam _k
+BasicParam Temp95
+_printf_cnt = 3
+Temp96 = call _printf , 3
+Temp98 = 0
 Temp99 = _u MUL 4
 Temp98 = Temp98 ADD Temp99
 Temp100 = _dx ADD Temp98
@@ -599,38 +599,40 @@ Temp228 = Temp228 ADD Temp229
 Temp230 = _a ADD Temp228
 Temp231 = *Temp230, 12
 Temp231[0] = Temp227 , 4
-Temp233 = call _read , 0
-Temp234 = 0
-Temp235 = _i MUL 12
-Temp234 = Temp234 ADD Temp235
-Temp236 = _a ADD Temp234
-Temp237 = *Temp236, 12
-Temp237[4] = Temp233 , 4
-Temp238 = 0
-Temp239 = _i MUL 12
-Temp238 = Temp238 ADD Temp239
-Temp240 = _a ADD Temp238
-Temp241 = *Temp240, 12
-Temp242 = Temp241[0] , 4
-Temp243 = 0
-Temp244 = _i MUL 12
-Temp243 = Temp243 ADD Temp244
-Temp245 = _a ADD Temp243
-Temp246 = *Temp245, 12
-Temp247 = Temp246[4] , 4
-BasicParam Temp242
-BasicParam Temp247
-Temp248 = call _edge_add , 2
-Temp250 = _i ADD 1
-_i = Temp250
-Temp249 = _i
+Temp226 = Temp231[0] , 4
+Temp234 = call _read , 0
+Temp235 = 0
+Temp236 = _i MUL 12
+Temp235 = Temp235 ADD Temp236
+Temp237 = _a ADD Temp235
+Temp238 = *Temp237, 12
+Temp238[4] = Temp234 , 4
+Temp233 = Temp238[4] , 4
+Temp240 = 0
+Temp241 = _i MUL 12
+Temp240 = Temp240 ADD Temp241
+Temp242 = _a ADD Temp240
+Temp243 = *Temp242, 12
+Temp244 = Temp243[0] , 4
+Temp245 = 0
+Temp246 = _i MUL 12
+Temp245 = Temp245 ADD Temp246
+Temp247 = _a ADD Temp245
+Temp248 = *Temp247, 12
+Temp249 = Temp248[4] , 4
+BasicParam Temp244
+BasicParam Temp249
+Temp250 = call _edge_add , 2
+Temp252 = _i ADD 1
+_i = Temp252
+Temp251 = _i
 Goto label:46
-Label :45	BasicParam Temp251
+Label :45	BasicParam Temp253
 _printf_cnt = 1
-Temp252 = call _printf , 1
-Temp253 = call _Hopcroft_Karp , 0
-BasicParam Temp254
+Temp254 = call _printf , 1
+Temp255 = call _Hopcroft_Karp , 0
+BasicParam Temp256
 BasicParam _ans
 _printf_cnt = 2
-Temp255 = call _printf , 2
+Temp257 = call _printf , 2
 

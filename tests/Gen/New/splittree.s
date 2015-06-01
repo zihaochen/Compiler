@@ -1687,248 +1687,257 @@ L4:
 	lw $t1, -168($sp)
 	lw $t2, -116($sp)
 	sw $t2, 4($t1)
+	lw $t1, -168($sp)
+	lw $t0, 4($t1)
+	sw $t0, -96($sp)
 	li $t0, 0
-	sw $t0, -176($sp)
+	sw $t0, -180($sp)
 	li $t2, 24
 	lw $t1, 4($sp)
 	mul $t0, $t1, $t2
+	sw $t0, -184($sp)
+	lw $t2, -184($sp)
+	lw $t1, -180($sp)
+	add $t0, $t1, $t2
 	sw $t0, -180($sp)
 	lw $t2, -180($sp)
-	lw $t1, -176($sp)
-	add $t0, $t1, $t2
-	sw $t0, -176($sp)
-	lw $t2, -176($sp)
 	lw $t1, _tree
 	add $t0, $t1, $t2
-	sw $t0, -184($sp)
-	lw $t0, -184($sp)
+	sw $t0, -188($sp)
+	lw $t0, -188($sp)
 	lw $t1, ($t0)
-	sw $t1, -188($sp)
-	lw $t1, -188($sp)
+	sw $t1, -192($sp)
+	lw $t1, -192($sp)
 	lw $t0, 16($t1)
-	sw $t0, -192($sp)
-	li $t0, 0
 	sw $t0, -196($sp)
+	li $t0, 0
+	sw $t0, -200($sp)
 	li $t2, 4
 	lw $t1, -4($sp)
 	mul $t0, $t1, $t2
+	sw $t0, -204($sp)
+	lw $t2, -204($sp)
+	lw $t1, -200($sp)
+	add $t0, $t1, $t2
 	sw $t0, -200($sp)
 	lw $t2, -200($sp)
 	lw $t1, -196($sp)
 	add $t0, $t1, $t2
-	sw $t0, -196($sp)
-	lw $t2, -196($sp)
-	lw $t1, -192($sp)
-	add $t0, $t1, $t2
-	sw $t0, -204($sp)
-	lw $t0, -204($sp)
+	sw $t0, -208($sp)
+	lw $t0, -208($sp)
 	lw $t1, ($t0)
-	sw $t1, -208($sp)
+	sw $t1, -212($sp)
 	li $t0, 0
-	sw $t0, -212($sp)
+	sw $t0, -216($sp)
 	li $t2, 24
-	lw $t1, -208($sp)
+	lw $t1, -212($sp)
 	mul $t0, $t1, $t2
+	sw $t0, -220($sp)
+	lw $t2, -220($sp)
+	lw $t1, -216($sp)
+	add $t0, $t1, $t2
 	sw $t0, -216($sp)
 	lw $t2, -216($sp)
-	lw $t1, -212($sp)
-	add $t0, $t1, $t2
-	sw $t0, -212($sp)
-	lw $t2, -212($sp)
 	lw $t1, _tree
 	add $t0, $t1, $t2
-	sw $t0, -220($sp)
-	lw $t0, -220($sp)
+	sw $t0, -224($sp)
+	lw $t0, -224($sp)
 	lw $t1, ($t0)
-	sw $t1, -224($sp)
-	lw $t1, -224($sp)
-	lw $t0, 8($t1)
-	sw $t0, -228($sp)
-	li $t2, 1
+	sw $t1, -228($sp)
 	lw $t1, -228($sp)
-	sub $t0, $t1, $t2
+	lw $t0, 8($t1)
 	sw $t0, -232($sp)
-	li $t0, 0
+	li $t2, 1
+	lw $t1, -232($sp)
+	sub $t0, $t1, $t2
 	sw $t0, -236($sp)
+	li $t0, 0
+	sw $t0, -240($sp)
 	li $t2, 24
 	lw $t1, 4($sp)
 	mul $t0, $t1, $t2
+	sw $t0, -244($sp)
+	lw $t2, -244($sp)
+	lw $t1, -240($sp)
+	add $t0, $t1, $t2
 	sw $t0, -240($sp)
 	lw $t2, -240($sp)
-	lw $t1, -236($sp)
-	add $t0, $t1, $t2
-	sw $t0, -236($sp)
-	lw $t2, -236($sp)
 	lw $t1, _tree
 	add $t0, $t1, $t2
-	sw $t0, -244($sp)
-	lw $t0, -244($sp)
+	sw $t0, -248($sp)
+	lw $t0, -248($sp)
 	lw $t1, ($t0)
-	sw $t1, -248($sp)
-	lw $t1, -248($sp)
+	sw $t1, -252($sp)
+	lw $t1, -252($sp)
 	lw $t0, 16($t1)
-	sw $t0, -252($sp)
-	li $t0, 0
 	sw $t0, -256($sp)
+	li $t0, 0
+	sw $t0, -260($sp)
 	li $t2, 4
 	lw $t1, -4($sp)
 	mul $t0, $t1, $t2
+	sw $t0, -264($sp)
+	lw $t2, -264($sp)
+	lw $t1, -260($sp)
+	add $t0, $t1, $t2
 	sw $t0, -260($sp)
 	lw $t2, -260($sp)
 	lw $t1, -256($sp)
 	add $t0, $t1, $t2
-	sw $t0, -256($sp)
-	lw $t2, -256($sp)
-	lw $t1, -252($sp)
-	add $t0, $t1, $t2
-	sw $t0, -264($sp)
-	lw $t0, -264($sp)
+	sw $t0, -268($sp)
+	lw $t0, -268($sp)
 	lw $t1, ($t0)
-	sw $t1, -268($sp)
+	sw $t1, -272($sp)
 	li $t0, 0
-	sw $t0, -272($sp)
+	sw $t0, -276($sp)
 	li $t2, 24
-	lw $t1, -268($sp)
+	lw $t1, -272($sp)
 	mul $t0, $t1, $t2
+	sw $t0, -280($sp)
+	lw $t2, -280($sp)
+	lw $t1, -276($sp)
+	add $t0, $t1, $t2
 	sw $t0, -276($sp)
 	lw $t2, -276($sp)
-	lw $t1, -272($sp)
-	add $t0, $t1, $t2
-	sw $t0, -272($sp)
-	lw $t2, -272($sp)
 	lw $t1, _tree
 	add $t0, $t1, $t2
-	sw $t0, -280($sp)
-	lw $t0, -280($sp)
+	sw $t0, -284($sp)
+	lw $t0, -284($sp)
 	lw $t1, ($t0)
-	sw $t1, -284($sp)
-	lw $t1, -284($sp)
-	lw $t2, -232($sp)
+	sw $t1, -288($sp)
+	lw $t1, -288($sp)
+	lw $t2, -236($sp)
 	sw $t2, 8($t1)
+	lw $t1, -288($sp)
+	lw $t0, 8($t1)
+	sw $t0, -176($sp)
 	li $t0, 0
-	sw $t0, -292($sp)
+	sw $t0, -300($sp)
 	li $t2, 24
 	lw $t1, 4($sp)
 	mul $t0, $t1, $t2
-	sw $t0, -296($sp)
-	lw $t2, -296($sp)
-	lw $t1, -292($sp)
-	add $t0, $t1, $t2
-	sw $t0, -292($sp)
-	lw $t2, -292($sp)
-	lw $t1, _tree
+	sw $t0, -304($sp)
+	lw $t2, -304($sp)
+	lw $t1, -300($sp)
 	add $t0, $t1, $t2
 	sw $t0, -300($sp)
-	lw $t0, -300($sp)
-	lw $t1, ($t0)
-	sw $t1, -304($sp)
-	lw $t1, -304($sp)
-	lw $t0, 8($t1)
+	lw $t2, -300($sp)
+	lw $t1, _tree
+	add $t0, $t1, $t2
 	sw $t0, -308($sp)
+	lw $t0, -308($sp)
+	lw $t1, ($t0)
+	sw $t1, -312($sp)
+	lw $t1, -312($sp)
+	lw $t0, 8($t1)
+	sw $t0, -316($sp)
 	li $t0, 0
-	sw $t0, -312($sp)
+	sw $t0, -320($sp)
 	li $t2, 24
 	lw $t1, 4($sp)
 	mul $t0, $t1, $t2
-	sw $t0, -316($sp)
-	lw $t2, -316($sp)
-	lw $t1, -312($sp)
-	add $t0, $t1, $t2
-	sw $t0, -312($sp)
-	lw $t2, -312($sp)
-	lw $t1, _tree
+	sw $t0, -324($sp)
+	lw $t2, -324($sp)
+	lw $t1, -320($sp)
 	add $t0, $t1, $t2
 	sw $t0, -320($sp)
-	lw $t0, -320($sp)
-	lw $t1, ($t0)
-	sw $t1, -324($sp)
-	lw $t1, -324($sp)
-	lw $t0, 16($t1)
+	lw $t2, -320($sp)
+	lw $t1, _tree
+	add $t0, $t1, $t2
 	sw $t0, -328($sp)
+	lw $t0, -328($sp)
+	lw $t1, ($t0)
+	sw $t1, -332($sp)
+	lw $t1, -332($sp)
+	lw $t0, 16($t1)
+	sw $t0, -336($sp)
 	li $t0, 0
-	sw $t0, -332($sp)
+	sw $t0, -340($sp)
 	li $t2, 4
 	lw $t1, -4($sp)
 	mul $t0, $t1, $t2
-	sw $t0, -336($sp)
-	lw $t2, -336($sp)
-	lw $t1, -332($sp)
-	add $t0, $t1, $t2
-	sw $t0, -332($sp)
-	lw $t2, -332($sp)
-	lw $t1, -328($sp)
+	sw $t0, -344($sp)
+	lw $t2, -344($sp)
+	lw $t1, -340($sp)
 	add $t0, $t1, $t2
 	sw $t0, -340($sp)
-	lw $t0, -340($sp)
+	lw $t2, -340($sp)
+	lw $t1, -336($sp)
+	add $t0, $t1, $t2
+	sw $t0, -348($sp)
+	lw $t0, -348($sp)
 	lw $t1, ($t0)
-	sw $t1, -344($sp)
-	lw $t0, -344($sp)
-	sw $t0, -404($sp)
-	subu $sp, $sp, 408
+	sw $t1, -352($sp)
+	lw $t0, -352($sp)
+	sw $t0, -416($sp)
+	subu $sp, $sp, 420
 	jal _num_of_sub
-	addi $sp, $sp, 408
-	sw $v0, -348($sp)
+	addi $sp, $sp, 420
+	sw $v0, -356($sp)
 	lw $ra, ($sp)
 	li $t2, 1
-	lw $t1, -348($sp)
+	lw $t1, -356($sp)
 	sub $t0, $t1, $t2
-	sw $t0, -352($sp)
-	lw $t2, -352($sp)
-	lw $t1, -308($sp)
-	add $t0, $t1, $t2
-	sw $t0, -356($sp)
-	li $t0, 0
 	sw $t0, -360($sp)
+	lw $t2, -360($sp)
+	lw $t1, -316($sp)
+	add $t0, $t1, $t2
+	sw $t0, -364($sp)
+	li $t0, 0
+	sw $t0, -368($sp)
 	li $t2, 24
 	lw $t1, 4($sp)
 	mul $t0, $t1, $t2
-	sw $t0, -364($sp)
-	lw $t2, -364($sp)
-	lw $t1, -360($sp)
-	add $t0, $t1, $t2
-	sw $t0, -360($sp)
-	lw $t2, -360($sp)
-	lw $t1, _tree
+	sw $t0, -372($sp)
+	lw $t2, -372($sp)
+	lw $t1, -368($sp)
 	add $t0, $t1, $t2
 	sw $t0, -368($sp)
-	lw $t0, -368($sp)
+	lw $t2, -368($sp)
+	lw $t1, _tree
+	add $t0, $t1, $t2
+	sw $t0, -376($sp)
+	lw $t0, -376($sp)
 	lw $t1, ($t0)
-	sw $t1, -372($sp)
-	lw $t1, -372($sp)
-	lw $t2, -356($sp)
+	sw $t1, -380($sp)
+	lw $t1, -380($sp)
+	lw $t2, -364($sp)
 	sw $t2, 8($t1)
+	lw $t1, -380($sp)
+	lw $t0, 8($t1)
+	sw $t0, -296($sp)
 	li $t2, 1
 	lw $t1, -4($sp)
 	add $t0, $t1, $t2
-	sw $t0, -380($sp)
-	lw $t0, -380($sp)
+	sw $t0, -392($sp)
+	lw $t0, -392($sp)
 	sw $t0, -4($sp)
 	lw $t0, -4($sp)
-	sw $t0, -376($sp)
+	sw $t0, -388($sp)
 	b L2
 L1:
 	li $t0, 0
-	sw $t0, -384($sp)
+	sw $t0, -396($sp)
 	li $t2, 24
 	lw $t1, 4($sp)
 	mul $t0, $t1, $t2
-	sw $t0, -388($sp)
-	lw $t2, -388($sp)
-	lw $t1, -384($sp)
+	sw $t0, -400($sp)
+	lw $t2, -400($sp)
+	lw $t1, -396($sp)
 	add $t0, $t1, $t2
-	sw $t0, -384($sp)
-	lw $t2, -384($sp)
+	sw $t0, -396($sp)
+	lw $t2, -396($sp)
 	lw $t1, _tree
 	add $t0, $t1, $t2
-	sw $t0, -392($sp)
-	lw $t0, -392($sp)
+	sw $t0, -404($sp)
+	lw $t0, -404($sp)
 	lw $t1, ($t0)
-	sw $t1, -396($sp)
-	lw $t1, -396($sp)
+	sw $t1, -408($sp)
+	lw $t1, -408($sp)
 	lw $t0, 8($t1)
-	sw $t0, -400($sp)
-	lw $v0, -400($sp)
-	sw $v0, -400($sp)
+	sw $t0, -412($sp)
+	lw $v0, -412($sp)
+	sw $v0, -412($sp)
 	jr $ra
 	jr $ra
 _alloc_node:
@@ -1944,14 +1953,26 @@ _alloc_node:
 	li $t2, 1
 	sw $t2, 8($t1)
 	lw $t1, -4($sp)
+	lw $t0, 8($t1)
+	sw $t0, -12($sp)
+	lw $t1, -4($sp)
 	li $t2, 0
 	sw $t2, 4($t1)
+	lw $t1, -4($sp)
+	lw $t0, 4($t1)
+	sw $t0, -20($sp)
 	lw $t1, -4($sp)
 	lw $t2, 4($sp)
 	sw $t2, 0($t1)
 	lw $t1, -4($sp)
+	lw $t0, 0($t1)
+	sw $t0, -28($sp)
+	lw $t1, -4($sp)
 	li $t2, 0
 	sw $t2, 12($t1)
+	lw $t1, -4($sp)
+	lw $t0, 12($t1)
+	sw $t0, -36($sp)
 	lw $v0, -4($sp)
 	sw $v0, -4($sp)
 	jr $ra
@@ -2056,14 +2077,14 @@ L12:
 _main:
 	sw $ra, ($sp)
 	la $t0, ASU_215
-	sw $t0, -664($sp)
+	sw $t0, -680($sp)
 	la $t0, ASU_216
-	sw $t0, -668($sp)
+	sw $t0, -684($sp)
 	la $t0, str_1
-	sw $t0, -956($sp)
-	subu $sp, $sp, 972
+	sw $t0, -972($sp)
+	subu $sp, $sp, 988
 	jal _get_d
-	addi $sp, $sp, 972
+	addi $sp, $sp, 988
 	sw $v0, _N
 	lw $ra, ($sp)
 	lw $t0, _N
@@ -2085,16 +2106,16 @@ L16:
 	bne $t0, $0, L17
 	b L15
 L17:
-	subu $sp, $sp, 972
+	subu $sp, $sp, 988
 	jal _get_d
-	addi $sp, $sp, 972
+	addi $sp, $sp, 988
 	sw $v0, _x
 	lw $ra, ($sp)
 	lw $t0, _x
 	sw $t0, -28($sp)
-	subu $sp, $sp, 972
+	subu $sp, $sp, 988
 	jal _get_d
-	addi $sp, $sp, 972
+	addi $sp, $sp, 988
 	sw $v0, _y
 	lw $ra, ($sp)
 	lw $t0, _y
@@ -2121,10 +2142,10 @@ L17:
 	b L19
 L19:
 	lw $t0, _x
-	sw $t0, -972($sp)
-	subu $sp, $sp, 976
+	sw $t0, -988($sp)
+	subu $sp, $sp, 992
 	jal _alloc_node
-	addi $sp, $sp, 976
+	addi $sp, $sp, 992
 	sw $v0, -64($sp)
 	lw $ra, ($sp)
 	li $t0, 0
@@ -2289,10 +2310,10 @@ L18:
 	b L21
 L21:
 	lw $t0, _y
-	sw $t0, -972($sp)
-	subu $sp, $sp, 976
+	sw $t0, -988($sp)
+	subu $sp, $sp, 992
 	jal _alloc_node
-	addi $sp, $sp, 976
+	addi $sp, $sp, 992
 	sw $v0, -188($sp)
 	lw $ra, ($sp)
 	li $t0, 0
@@ -2542,244 +2563,233 @@ L20:
 	lw $t1, -396($sp)
 	lw $t2, -380($sp)
 	sw $t2, 12($t1)
+	lw $t1, -396($sp)
+	lw $t0, 12($t1)
+	sw $t0, -356($sp)
 	li $t2, 1
-	lw $t1, -376($sp)
+	lw $t1, -400($sp)
 	sub $t0, $t1, $t2
 	sw $t0, -352($sp)
 	li $t0, 0
-	sw $t0, -408($sp)
+	sw $t0, -412($sp)
 	li $t2, 24
 	lw $t1, _x
 	mul $t0, $t1, $t2
+	sw $t0, -416($sp)
+	lw $t2, -416($sp)
+	lw $t1, -412($sp)
+	add $t0, $t1, $t2
 	sw $t0, -412($sp)
 	lw $t2, -412($sp)
-	lw $t1, -408($sp)
-	add $t0, $t1, $t2
-	sw $t0, -408($sp)
-	lw $t2, -408($sp)
 	lw $t1, _tree
 	add $t0, $t1, $t2
-	sw $t0, -416($sp)
-	lw $t0, -416($sp)
+	sw $t0, -420($sp)
+	lw $t0, -420($sp)
 	lw $t1, ($t0)
-	sw $t1, -420($sp)
-	lw $t1, -420($sp)
-	lw $t0, 8($t1)
-	sw $t0, -424($sp)
-	li $t2, 1
+	sw $t1, -424($sp)
 	lw $t1, -424($sp)
-	add $t0, $t1, $t2
+	lw $t0, 8($t1)
 	sw $t0, -428($sp)
-	li $t0, 0
+	li $t2, 1
+	lw $t1, -428($sp)
+	add $t0, $t1, $t2
 	sw $t0, -432($sp)
+	li $t0, 0
+	sw $t0, -436($sp)
 	li $t2, 24
 	lw $t1, _x
 	mul $t0, $t1, $t2
+	sw $t0, -440($sp)
+	lw $t2, -440($sp)
+	lw $t1, -436($sp)
+	add $t0, $t1, $t2
 	sw $t0, -436($sp)
 	lw $t2, -436($sp)
-	lw $t1, -432($sp)
-	add $t0, $t1, $t2
-	sw $t0, -432($sp)
-	lw $t2, -432($sp)
 	lw $t1, _tree
 	add $t0, $t1, $t2
-	sw $t0, -440($sp)
-	lw $t0, -440($sp)
+	sw $t0, -444($sp)
+	lw $t0, -444($sp)
 	lw $t1, ($t0)
-	sw $t1, -444($sp)
-	lw $t1, -444($sp)
-	lw $t2, -428($sp)
+	sw $t1, -448($sp)
+	lw $t1, -448($sp)
+	lw $t2, -432($sp)
 	sw $t2, 8($t1)
+	lw $t1, -448($sp)
+	lw $t0, 8($t1)
+	sw $t0, -408($sp)
 	li $t2, 1
-	lw $t1, -424($sp)
+	lw $t1, -452($sp)
 	sub $t0, $t1, $t2
-	sw $t0, -400($sp)
+	sw $t0, -404($sp)
 	li $t0, 0
-	sw $t0, -452($sp)
+	sw $t0, -460($sp)
 	li $t2, 24
 	lw $t1, _y
 	mul $t0, $t1, $t2
-	sw $t0, -456($sp)
-	lw $t2, -456($sp)
-	lw $t1, -452($sp)
-	add $t0, $t1, $t2
-	sw $t0, -452($sp)
-	lw $t2, -452($sp)
-	lw $t1, _tree
+	sw $t0, -464($sp)
+	lw $t2, -464($sp)
+	lw $t1, -460($sp)
 	add $t0, $t1, $t2
 	sw $t0, -460($sp)
-	lw $t0, -460($sp)
-	lw $t1, ($t0)
-	sw $t1, -464($sp)
-	lw $t1, -464($sp)
-	lw $t0, 12($t1)
+	lw $t2, -460($sp)
+	lw $t1, _tree
+	add $t0, $t1, $t2
 	sw $t0, -468($sp)
+	lw $t0, -468($sp)
+	lw $t1, ($t0)
+	sw $t1, -472($sp)
+	lw $t1, -472($sp)
+	lw $t0, 12($t1)
+	sw $t0, -476($sp)
 	li $t0, 0
-	sw $t0, -472($sp)
+	sw $t0, -480($sp)
 	li $t2, 24
 	lw $t1, _y
 	mul $t0, $t1, $t2
-	sw $t0, -476($sp)
-	lw $t2, -476($sp)
-	lw $t1, -472($sp)
-	add $t0, $t1, $t2
-	sw $t0, -472($sp)
-	lw $t2, -472($sp)
-	lw $t1, _tree
+	sw $t0, -484($sp)
+	lw $t2, -484($sp)
+	lw $t1, -480($sp)
 	add $t0, $t1, $t2
 	sw $t0, -480($sp)
-	lw $t0, -480($sp)
-	lw $t1, ($t0)
-	sw $t1, -484($sp)
-	lw $t1, -484($sp)
-	lw $t0, 16($t1)
-	sw $t0, -488($sp)
-	li $t0, 0
-	sw $t0, -492($sp)
-	li $t2, 4
-	lw $t1, -468($sp)
-	mul $t0, $t1, $t2
-	sw $t0, -496($sp)
-	lw $t2, -496($sp)
-	lw $t1, -492($sp)
+	lw $t2, -480($sp)
+	lw $t1, _tree
 	add $t0, $t1, $t2
-	sw $t0, -492($sp)
-	lw $t2, -492($sp)
-	lw $t1, -488($sp)
+	sw $t0, -488($sp)
+	lw $t0, -488($sp)
+	lw $t1, ($t0)
+	sw $t1, -492($sp)
+	lw $t1, -492($sp)
+	lw $t0, 16($t1)
+	sw $t0, -496($sp)
+	li $t0, 0
+	sw $t0, -500($sp)
+	li $t2, 4
+	lw $t1, -476($sp)
+	mul $t0, $t1, $t2
+	sw $t0, -504($sp)
+	lw $t2, -504($sp)
+	lw $t1, -500($sp)
 	add $t0, $t1, $t2
 	sw $t0, -500($sp)
-	lw $t0, -500($sp)
+	lw $t2, -500($sp)
+	lw $t1, -496($sp)
+	add $t0, $t1, $t2
+	sw $t0, -508($sp)
+	lw $t0, -508($sp)
 	lw $t1, _x
 	sw $t1, ($t0)
-	lw $t0, -500($sp)
+	lw $t0, -508($sp)
 	lw $t1, ($t0)
-	sw $t1, -448($sp)
-	lw $t0, -500($sp)
+	sw $t1, -456($sp)
+	lw $t0, -508($sp)
 	lw $t1, ($t0)
-	sw $t1, -448($sp)
+	sw $t1, -456($sp)
 	li $t0, 0
-	sw $t0, -516($sp)
+	sw $t0, -524($sp)
 	li $t2, 24
 	lw $t1, _y
 	mul $t0, $t1, $t2
-	sw $t0, -520($sp)
-	lw $t2, -520($sp)
-	lw $t1, -516($sp)
-	add $t0, $t1, $t2
-	sw $t0, -516($sp)
-	lw $t2, -516($sp)
-	lw $t1, _tree
+	sw $t0, -528($sp)
+	lw $t2, -528($sp)
+	lw $t1, -524($sp)
 	add $t0, $t1, $t2
 	sw $t0, -524($sp)
-	lw $t0, -524($sp)
-	lw $t1, ($t0)
-	sw $t1, -528($sp)
-	lw $t1, -528($sp)
-	lw $t0, 12($t1)
-	sw $t0, -532($sp)
-	li $t2, 1
-	lw $t1, -532($sp)
+	lw $t2, -524($sp)
+	lw $t1, _tree
 	add $t0, $t1, $t2
-	sw $t0, -536($sp)
-	li $t0, 0
+	sw $t0, -532($sp)
+	lw $t0, -532($sp)
+	lw $t1, ($t0)
+	sw $t1, -536($sp)
+	lw $t1, -536($sp)
+	lw $t0, 12($t1)
 	sw $t0, -540($sp)
-	li $t2, 24
-	lw $t1, _y
-	mul $t0, $t1, $t2
-	sw $t0, -544($sp)
-	lw $t2, -544($sp)
+	li $t2, 1
 	lw $t1, -540($sp)
 	add $t0, $t1, $t2
-	sw $t0, -540($sp)
-	lw $t2, -540($sp)
-	lw $t1, _tree
+	sw $t0, -544($sp)
+	li $t0, 0
+	sw $t0, -548($sp)
+	li $t2, 24
+	lw $t1, _y
+	mul $t0, $t1, $t2
+	sw $t0, -552($sp)
+	lw $t2, -552($sp)
+	lw $t1, -548($sp)
 	add $t0, $t1, $t2
 	sw $t0, -548($sp)
-	lw $t0, -548($sp)
+	lw $t2, -548($sp)
+	lw $t1, _tree
+	add $t0, $t1, $t2
+	sw $t0, -556($sp)
+	lw $t0, -556($sp)
 	lw $t1, ($t0)
-	sw $t1, -552($sp)
-	lw $t1, -552($sp)
-	lw $t2, -536($sp)
+	sw $t1, -560($sp)
+	lw $t1, -560($sp)
+	lw $t2, -544($sp)
 	sw $t2, 12($t1)
+	lw $t1, -560($sp)
+	lw $t0, 12($t1)
+	sw $t0, -520($sp)
 	li $t2, 1
-	lw $t1, -532($sp)
+	lw $t1, -564($sp)
 	sub $t0, $t1, $t2
-	sw $t0, -508($sp)
+	sw $t0, -516($sp)
 	li $t0, 0
-	sw $t0, -564($sp)
+	sw $t0, -576($sp)
 	li $t2, 24
 	lw $t1, _y
 	mul $t0, $t1, $t2
-	sw $t0, -568($sp)
-	lw $t2, -568($sp)
-	lw $t1, -564($sp)
-	add $t0, $t1, $t2
-	sw $t0, -564($sp)
-	lw $t2, -564($sp)
-	lw $t1, _tree
-	add $t0, $t1, $t2
-	sw $t0, -572($sp)
-	lw $t0, -572($sp)
-	lw $t1, ($t0)
-	sw $t1, -576($sp)
-	lw $t1, -576($sp)
-	lw $t0, 8($t1)
 	sw $t0, -580($sp)
-	li $t2, 1
-	lw $t1, -580($sp)
+	lw $t2, -580($sp)
+	lw $t1, -576($sp)
+	add $t0, $t1, $t2
+	sw $t0, -576($sp)
+	lw $t2, -576($sp)
+	lw $t1, _tree
 	add $t0, $t1, $t2
 	sw $t0, -584($sp)
+	lw $t0, -584($sp)
+	lw $t1, ($t0)
+	sw $t1, -588($sp)
+	lw $t1, -588($sp)
+	lw $t0, 8($t1)
+	sw $t0, -592($sp)
+	li $t2, 1
+	lw $t1, -592($sp)
+	add $t0, $t1, $t2
+	sw $t0, -596($sp)
 	li $t0, 0
-	sw $t0, -588($sp)
+	sw $t0, -600($sp)
 	li $t2, 24
 	lw $t1, _y
 	mul $t0, $t1, $t2
-	sw $t0, -592($sp)
-	lw $t2, -592($sp)
-	lw $t1, -588($sp)
+	sw $t0, -604($sp)
+	lw $t2, -604($sp)
+	lw $t1, -600($sp)
 	add $t0, $t1, $t2
-	sw $t0, -588($sp)
-	lw $t2, -588($sp)
+	sw $t0, -600($sp)
+	lw $t2, -600($sp)
 	lw $t1, _tree
 	add $t0, $t1, $t2
-	sw $t0, -596($sp)
-	lw $t0, -596($sp)
+	sw $t0, -608($sp)
+	lw $t0, -608($sp)
 	lw $t1, ($t0)
-	sw $t1, -600($sp)
-	lw $t1, -600($sp)
-	lw $t2, -584($sp)
-	sw $t2, 8($t1)
-	li $t2, 1
-	lw $t1, -580($sp)
-	sub $t0, $t1, $t2
-	sw $t0, -556($sp)
-	li $t0, 0
-	sw $t0, -612($sp)
-	li $t2, 4
-	lw $t1, _y
-	mul $t0, $t1, $t2
-	sw $t0, -616($sp)
-	lw $t2, -616($sp)
+	sw $t1, -612($sp)
 	lw $t1, -612($sp)
-	add $t0, $t1, $t2
-	sw $t0, -612($sp)
-	lw $t2, -612($sp)
-	lw $t1, _init
-	add $t0, $t1, $t2
-	sw $t0, -620($sp)
-	lw $t0, -620($sp)
-	li $t1, 1
-	sw $t1, ($t0)
-	lw $t0, -620($sp)
-	lw $t1, ($t0)
-	sw $t1, -608($sp)
-	lw $t0, -620($sp)
-	lw $t1, ($t0)
-	sw $t1, -608($sp)
+	lw $t2, -596($sp)
+	sw $t2, 8($t1)
+	lw $t1, -612($sp)
+	lw $t0, 8($t1)
+	sw $t0, -572($sp)
+	li $t2, 1
+	lw $t1, -616($sp)
+	sub $t0, $t1, $t2
+	sw $t0, -568($sp)
 	li $t0, 0
 	sw $t0, -628($sp)
 	li $t2, 4
-	lw $t1, _x
+	lw $t1, _y
 	mul $t0, $t1, $t2
 	sw $t0, -632($sp)
 	lw $t2, -632($sp)
@@ -2791,265 +2801,271 @@ L20:
 	add $t0, $t1, $t2
 	sw $t0, -636($sp)
 	lw $t0, -636($sp)
-	lw $t1, -608($sp)
+	li $t1, 1
 	sw $t1, ($t0)
 	lw $t0, -636($sp)
 	lw $t1, ($t0)
-	sw $t1, -604($sp)
+	sw $t1, -624($sp)
 	lw $t0, -636($sp)
 	lw $t1, ($t0)
-	sw $t1, -604($sp)
+	sw $t1, -624($sp)
+	li $t0, 0
+	sw $t0, -644($sp)
+	li $t2, 4
+	lw $t1, _x
+	mul $t0, $t1, $t2
+	sw $t0, -648($sp)
+	lw $t2, -648($sp)
+	lw $t1, -644($sp)
+	add $t0, $t1, $t2
+	sw $t0, -644($sp)
+	lw $t2, -644($sp)
+	lw $t1, _init
+	add $t0, $t1, $t2
+	sw $t0, -652($sp)
+	lw $t0, -652($sp)
+	lw $t1, -624($sp)
+	sw $t1, ($t0)
+	lw $t0, -652($sp)
+	lw $t1, ($t0)
+	sw $t1, -620($sp)
+	lw $t0, -652($sp)
+	lw $t1, ($t0)
+	sw $t1, -620($sp)
 	li $t2, 1
 	lw $t1, -4($sp)
 	add $t0, $t1, $t2
-	sw $t0, -648($sp)
-	lw $t0, -648($sp)
+	sw $t0, -664($sp)
+	lw $t0, -664($sp)
 	sw $t0, -4($sp)
 	lw $t0, -4($sp)
-	sw $t0, -644($sp)
+	sw $t0, -660($sp)
 	b L16
 L15:
 	li $t0, 1
-	sw $t0, -972($sp)
-	subu $sp, $sp, 976
+	sw $t0, -988($sp)
+	subu $sp, $sp, 992
 	jal _num_of_sub
-	addi $sp, $sp, 976
-	sw $v0, -652($sp)
+	addi $sp, $sp, 992
+	sw $v0, -668($sp)
 	lw $ra, ($sp)
 	li $t0, 1
 	sw $t0, -4($sp)
 	lw $t0, -4($sp)
-	sw $t0, -656($sp)
+	sw $t0, -672($sp)
 L23:
 	lw $t2, _N
 	lw $t1, -4($sp)
 	sle $t0, $t1, $t2
-	sw $t0, -660($sp)
-	lw $t0, -660($sp)
+	sw $t0, -676($sp)
+	lw $t0, -676($sp)
 	bne $t0, $0, L24
 	b L22
 L24:
-	lw $t1, -664($sp)
-	lw $t2, -668($sp)
+	lw $t1, -680($sp)
+	lw $t2, -684($sp)
 	sw $t2, 16($t1)
 	li $t0, 0
-	sw $t0, -672($sp)
+	sw $t0, -688($sp)
 	li $t2, 24
 	lw $t1, -4($sp)
 	mul $t0, $t1, $t2
-	sw $t0, -676($sp)
-	lw $t2, -676($sp)
-	lw $t1, -672($sp)
+	sw $t0, -692($sp)
+	lw $t2, -692($sp)
+	lw $t1, -688($sp)
 	add $t0, $t1, $t2
-	sw $t0, -672($sp)
-	lw $t2, -672($sp)
+	sw $t0, -688($sp)
+	lw $t2, -688($sp)
 	lw $t1, _tree
 	add $t0, $t1, $t2
-	sw $t0, -680($sp)
-	lw $t0, -680($sp)
-	lw $t1, ($t0)
-	sw $t1, -684($sp)
-	lw $t1, -684($sp)
-	lw $t0, 0($t1)
-	sw $t0, -688($sp)
-	lw $t1, -664($sp)
-	lw $t2, -688($sp)
-	sw $t2, 0($t1)
-	lw $t1, -684($sp)
-	lw $t0, 4($t1)
-	sw $t0, -692($sp)
-	lw $t1, -664($sp)
-	lw $t2, -692($sp)
-	sw $t2, 4($t1)
-	lw $t1, -684($sp)
-	lw $t0, 8($t1)
 	sw $t0, -696($sp)
-	lw $t1, -664($sp)
-	lw $t2, -696($sp)
-	sw $t2, 8($t1)
-	lw $t1, -684($sp)
-	lw $t0, 16($t1)
-	sw $t0, -700($sp)
-	lw $t1, -664($sp)
-	lw $t0, 16($t1)
-	sw $t0, -704($sp)
+	lw $t0, -696($sp)
+	lw $t1, ($t0)
+	sw $t1, -700($sp)
 	lw $t1, -700($sp)
 	lw $t0, 0($t1)
-	sw $t0, -708($sp)
-	lw $t1, -704($sp)
-	lw $t2, -708($sp)
+	sw $t0, -704($sp)
+	lw $t1, -680($sp)
+	lw $t2, -704($sp)
 	sw $t2, 0($t1)
 	lw $t1, -700($sp)
 	lw $t0, 4($t1)
-	sw $t0, -712($sp)
-	lw $t1, -704($sp)
-	lw $t2, -712($sp)
+	sw $t0, -708($sp)
+	lw $t1, -680($sp)
+	lw $t2, -708($sp)
 	sw $t2, 4($t1)
 	lw $t1, -700($sp)
 	lw $t0, 8($t1)
-	sw $t0, -716($sp)
-	lw $t1, -704($sp)
-	lw $t2, -716($sp)
+	sw $t0, -712($sp)
+	lw $t1, -680($sp)
+	lw $t2, -712($sp)
 	sw $t2, 8($t1)
 	lw $t1, -700($sp)
-	lw $t0, 12($t1)
-	sw $t0, -720($sp)
-	lw $t1, -704($sp)
-	lw $t2, -720($sp)
-	sw $t2, 12($t1)
-	lw $t1, -700($sp)
 	lw $t0, 16($t1)
+	sw $t0, -716($sp)
+	lw $t1, -680($sp)
+	lw $t0, 16($t1)
+	sw $t0, -720($sp)
+	lw $t1, -716($sp)
+	lw $t0, 0($t1)
 	sw $t0, -724($sp)
-	lw $t1, -704($sp)
+	lw $t1, -720($sp)
 	lw $t2, -724($sp)
-	sw $t2, 16($t1)
-	lw $t1, -700($sp)
-	lw $t0, 20($t1)
+	sw $t2, 0($t1)
+	lw $t1, -716($sp)
+	lw $t0, 4($t1)
 	sw $t0, -728($sp)
-	lw $t1, -704($sp)
+	lw $t1, -720($sp)
 	lw $t2, -728($sp)
-	sw $t2, 20($t1)
-	lw $t1, -700($sp)
-	lw $t0, 24($t1)
+	sw $t2, 4($t1)
+	lw $t1, -716($sp)
+	lw $t0, 8($t1)
 	sw $t0, -732($sp)
-	lw $t1, -704($sp)
+	lw $t1, -720($sp)
 	lw $t2, -732($sp)
-	sw $t2, 24($t1)
-	lw $t1, -700($sp)
-	lw $t0, 28($t1)
-	sw $t0, -736($sp)
-	lw $t1, -704($sp)
-	lw $t2, -736($sp)
-	sw $t2, 28($t1)
-	lw $t1, -700($sp)
-	lw $t0, 32($t1)
-	sw $t0, -740($sp)
-	lw $t1, -704($sp)
-	lw $t2, -740($sp)
-	sw $t2, 32($t1)
-	lw $t1, -700($sp)
-	lw $t0, 36($t1)
-	sw $t0, -744($sp)
-	lw $t1, -704($sp)
-	lw $t2, -744($sp)
-	sw $t2, 36($t1)
-	lw $t1, -700($sp)
-	lw $t0, 40($t1)
-	sw $t0, -748($sp)
-	lw $t1, -704($sp)
-	lw $t2, -748($sp)
-	sw $t2, 40($t1)
-	lw $t1, -700($sp)
-	lw $t0, 44($t1)
-	sw $t0, -752($sp)
-	lw $t1, -704($sp)
-	lw $t2, -752($sp)
-	sw $t2, 44($t1)
-	lw $t1, -700($sp)
-	lw $t0, 48($t1)
-	sw $t0, -756($sp)
-	lw $t1, -704($sp)
-	lw $t2, -756($sp)
-	sw $t2, 48($t1)
-	lw $t1, -700($sp)
-	lw $t0, 52($t1)
-	sw $t0, -760($sp)
-	lw $t1, -704($sp)
-	lw $t2, -760($sp)
-	sw $t2, 52($t1)
-	lw $t1, -700($sp)
-	lw $t0, 56($t1)
-	sw $t0, -764($sp)
-	lw $t1, -704($sp)
-	lw $t2, -764($sp)
-	sw $t2, 56($t1)
-	lw $t1, -684($sp)
+	sw $t2, 8($t1)
+	lw $t1, -716($sp)
 	lw $t0, 12($t1)
+	sw $t0, -736($sp)
+	lw $t1, -720($sp)
+	lw $t2, -736($sp)
+	sw $t2, 12($t1)
+	lw $t1, -716($sp)
+	lw $t0, 16($t1)
+	sw $t0, -740($sp)
+	lw $t1, -720($sp)
+	lw $t2, -740($sp)
+	sw $t2, 16($t1)
+	lw $t1, -716($sp)
+	lw $t0, 20($t1)
+	sw $t0, -744($sp)
+	lw $t1, -720($sp)
+	lw $t2, -744($sp)
+	sw $t2, 20($t1)
+	lw $t1, -716($sp)
+	lw $t0, 24($t1)
+	sw $t0, -748($sp)
+	lw $t1, -720($sp)
+	lw $t2, -748($sp)
+	sw $t2, 24($t1)
+	lw $t1, -716($sp)
+	lw $t0, 28($t1)
+	sw $t0, -752($sp)
+	lw $t1, -720($sp)
+	lw $t2, -752($sp)
+	sw $t2, 28($t1)
+	lw $t1, -716($sp)
+	lw $t0, 32($t1)
+	sw $t0, -756($sp)
+	lw $t1, -720($sp)
+	lw $t2, -756($sp)
+	sw $t2, 32($t1)
+	lw $t1, -716($sp)
+	lw $t0, 36($t1)
+	sw $t0, -760($sp)
+	lw $t1, -720($sp)
+	lw $t2, -760($sp)
+	sw $t2, 36($t1)
+	lw $t1, -716($sp)
+	lw $t0, 40($t1)
+	sw $t0, -764($sp)
+	lw $t1, -720($sp)
+	lw $t2, -764($sp)
+	sw $t2, 40($t1)
+	lw $t1, -716($sp)
+	lw $t0, 44($t1)
 	sw $t0, -768($sp)
-	lw $t1, -664($sp)
+	lw $t1, -720($sp)
 	lw $t2, -768($sp)
+	sw $t2, 44($t1)
+	lw $t1, -716($sp)
+	lw $t0, 48($t1)
+	sw $t0, -772($sp)
+	lw $t1, -720($sp)
+	lw $t2, -772($sp)
+	sw $t2, 48($t1)
+	lw $t1, -716($sp)
+	lw $t0, 52($t1)
+	sw $t0, -776($sp)
+	lw $t1, -720($sp)
+	lw $t2, -776($sp)
+	sw $t2, 52($t1)
+	lw $t1, -716($sp)
+	lw $t0, 56($t1)
+	sw $t0, -780($sp)
+	lw $t1, -720($sp)
+	lw $t2, -780($sp)
+	sw $t2, 56($t1)
+	lw $t1, -700($sp)
+	lw $t0, 12($t1)
+	sw $t0, -784($sp)
+	lw $t1, -680($sp)
+	lw $t2, -784($sp)
 	sw $t2, 12($t1)
 	li $t0, 1
 	sw $t0, _flag
 	lw $t0, _flag
-	sw $t0, -776($sp)
+	sw $t0, -792($sp)
 	li $t0, 0
 	sw $t0, _num_of_p
 	lw $t0, _num_of_p
-	sw $t0, -780($sp)
+	sw $t0, -796($sp)
 	li $t0, 0
-	sw $t0, -772($sp)
-	lw $t0, -772($sp)
-	sw $t0, -784($sp)
-L26:
-	lw $t1, -664($sp)
-	lw $t0, 12($t1)
 	sw $t0, -788($sp)
-	lw $t2, -788($sp)
-	lw $t1, -772($sp)
+	lw $t0, -788($sp)
+	sw $t0, -800($sp)
+L26:
+	lw $t1, -680($sp)
+	lw $t0, 12($t1)
+	sw $t0, -804($sp)
+	lw $t2, -804($sp)
+	lw $t1, -788($sp)
 	slt $t0, $t1, $t2
-	sw $t0, -792($sp)
-	lw $t0, -792($sp)
+	sw $t0, -808($sp)
+	lw $t0, -808($sp)
 	bne $t0, $0, L27
 	b L25
 L27:
-	lw $t1, -664($sp)
+	lw $t1, -680($sp)
 	lw $t0, 16($t1)
-	sw $t0, -796($sp)
+	sw $t0, -812($sp)
 	li $t0, 0
-	sw $t0, -800($sp)
+	sw $t0, -816($sp)
 	li $t2, 4
-	lw $t1, -772($sp)
+	lw $t1, -788($sp)
 	mul $t0, $t1, $t2
-	sw $t0, -804($sp)
-	lw $t2, -804($sp)
-	lw $t1, -800($sp)
+	sw $t0, -820($sp)
+	lw $t2, -820($sp)
+	lw $t1, -816($sp)
 	add $t0, $t1, $t2
-	sw $t0, -800($sp)
-	lw $t2, -800($sp)
-	lw $t1, -796($sp)
-	add $t0, $t1, $t2
-	sw $t0, -808($sp)
-	lw $t0, -808($sp)
-	lw $t1, ($t0)
-	sw $t1, -812($sp)
-	lw $t1, -664($sp)
-	lw $t0, 4($t1)
 	sw $t0, -816($sp)
 	lw $t2, -816($sp)
 	lw $t1, -812($sp)
+	add $t0, $t1, $t2
+	sw $t0, -824($sp)
+	lw $t0, -824($sp)
+	lw $t1, ($t0)
+	sw $t1, -828($sp)
+	lw $t1, -680($sp)
+	lw $t0, 4($t1)
+	sw $t0, -832($sp)
+	lw $t2, -832($sp)
+	lw $t1, -828($sp)
 	seq $t0, $t1, $t2
-	sw $t0, -820($sp)
-	lw $t0, -820($sp)
+	sw $t0, -836($sp)
+	lw $t0, -836($sp)
 	bne $t0, $0, L29
 	b L28
 L29:
 	b L26
 L28:
-	lw $t1, -664($sp)
+	lw $t1, -680($sp)
 	lw $t0, 16($t1)
-	sw $t0, -824($sp)
-	li $t0, 0
-	sw $t0, -828($sp)
-	li $t2, 4
-	lw $t1, -772($sp)
-	mul $t0, $t1, $t2
-	sw $t0, -832($sp)
-	lw $t2, -832($sp)
-	lw $t1, -828($sp)
-	add $t0, $t1, $t2
-	sw $t0, -828($sp)
-	lw $t2, -828($sp)
-	lw $t1, -824($sp)
-	add $t0, $t1, $t2
-	sw $t0, -836($sp)
-	lw $t0, -836($sp)
-	lw $t1, ($t0)
-	sw $t1, -840($sp)
+	sw $t0, -840($sp)
 	li $t0, 0
 	sw $t0, -844($sp)
-	li $t2, 24
-	lw $t1, -840($sp)
+	li $t2, 4
+	lw $t1, -788($sp)
 	mul $t0, $t1, $t2
 	sw $t0, -848($sp)
 	lw $t2, -848($sp)
@@ -3057,57 +3073,57 @@ L28:
 	add $t0, $t1, $t2
 	sw $t0, -844($sp)
 	lw $t2, -844($sp)
-	lw $t1, _tree
+	lw $t1, -840($sp)
 	add $t0, $t1, $t2
 	sw $t0, -852($sp)
 	lw $t0, -852($sp)
 	lw $t1, ($t0)
 	sw $t1, -856($sp)
-	lw $t1, -856($sp)
-	lw $t0, 8($t1)
+	li $t0, 0
 	sw $t0, -860($sp)
-	li $t2, 2
-	lw $t1, _N
-	div $t0, $t1, $t2
+	li $t2, 24
+	lw $t1, -856($sp)
+	mul $t0, $t1, $t2
 	sw $t0, -864($sp)
 	lw $t2, -864($sp)
 	lw $t1, -860($sp)
-	sgt $t0, $t1, $t2
+	add $t0, $t1, $t2
+	sw $t0, -860($sp)
+	lw $t2, -860($sp)
+	lw $t1, _tree
+	add $t0, $t1, $t2
 	sw $t0, -868($sp)
 	lw $t0, -868($sp)
+	lw $t1, ($t0)
+	sw $t1, -872($sp)
+	lw $t1, -872($sp)
+	lw $t0, 8($t1)
+	sw $t0, -876($sp)
+	li $t2, 2
+	lw $t1, _N
+	div $t0, $t1, $t2
+	sw $t0, -880($sp)
+	lw $t2, -880($sp)
+	lw $t1, -876($sp)
+	sgt $t0, $t1, $t2
+	sw $t0, -884($sp)
+	lw $t0, -884($sp)
 	bne $t0, $0, L31
 	b L30
 L31:
 	li $t0, 0
 	sw $t0, _flag
 	lw $t0, _flag
-	sw $t0, -872($sp)
+	sw $t0, -888($sp)
 	b L25
 L30:
-	lw $t1, -664($sp)
+	lw $t1, -680($sp)
 	lw $t0, 16($t1)
-	sw $t0, -880($sp)
-	li $t0, 0
-	sw $t0, -884($sp)
-	li $t2, 4
-	lw $t1, -772($sp)
-	mul $t0, $t1, $t2
-	sw $t0, -888($sp)
-	lw $t2, -888($sp)
-	lw $t1, -884($sp)
-	add $t0, $t1, $t2
-	sw $t0, -884($sp)
-	lw $t2, -884($sp)
-	lw $t1, -880($sp)
-	add $t0, $t1, $t2
-	sw $t0, -892($sp)
-	lw $t0, -892($sp)
-	lw $t1, ($t0)
-	sw $t1, -896($sp)
+	sw $t0, -896($sp)
 	li $t0, 0
 	sw $t0, -900($sp)
-	li $t2, 24
-	lw $t1, -896($sp)
+	li $t2, 4
+	lw $t1, -788($sp)
 	mul $t0, $t1, $t2
 	sw $t0, -904($sp)
 	lw $t2, -904($sp)
@@ -3115,86 +3131,103 @@ L30:
 	add $t0, $t1, $t2
 	sw $t0, -900($sp)
 	lw $t2, -900($sp)
-	lw $t1, _tree
+	lw $t1, -896($sp)
 	add $t0, $t1, $t2
 	sw $t0, -908($sp)
 	lw $t0, -908($sp)
 	lw $t1, ($t0)
 	sw $t1, -912($sp)
+	li $t0, 0
+	sw $t0, -916($sp)
+	li $t2, 24
 	lw $t1, -912($sp)
-	lw $t0, 8($t1)
+	mul $t0, $t1, $t2
+	sw $t0, -920($sp)
+	lw $t2, -920($sp)
+	lw $t1, -916($sp)
+	add $t0, $t1, $t2
 	sw $t0, -916($sp)
 	lw $t2, -916($sp)
+	lw $t1, _tree
+	add $t0, $t1, $t2
+	sw $t0, -924($sp)
+	lw $t0, -924($sp)
+	lw $t1, ($t0)
+	sw $t1, -928($sp)
+	lw $t1, -928($sp)
+	lw $t0, 8($t1)
+	sw $t0, -932($sp)
+	lw $t2, -932($sp)
 	lw $t1, _num_of_p
 	add $t0, $t1, $t2
-	sw $t0, -920($sp)
-	lw $t0, -920($sp)
+	sw $t0, -936($sp)
+	lw $t0, -936($sp)
 	sw $t0, _num_of_p
 	lw $t0, _num_of_p
-	sw $t0, -876($sp)
+	sw $t0, -892($sp)
 	li $t2, 1
-	lw $t1, -772($sp)
+	lw $t1, -788($sp)
 	add $t0, $t1, $t2
-	sw $t0, -928($sp)
-	lw $t0, -928($sp)
-	sw $t0, -772($sp)
-	lw $t0, -772($sp)
-	sw $t0, -924($sp)
+	sw $t0, -944($sp)
+	lw $t0, -944($sp)
+	sw $t0, -788($sp)
+	lw $t0, -788($sp)
+	sw $t0, -940($sp)
 	b L26
 L25:
 	li $t2, 1
 	lw $t1, _N
 	sub $t0, $t1, $t2
-	sw $t0, -936($sp)
+	sw $t0, -952($sp)
 	lw $t2, _num_of_p
-	lw $t1, -936($sp)
+	lw $t1, -952($sp)
 	sub $t0, $t1, $t2
-	sw $t0, -940($sp)
-	lw $t0, -940($sp)
+	sw $t0, -956($sp)
+	lw $t0, -956($sp)
 	sw $t0, _num_of_p
 	lw $t0, _num_of_p
-	sw $t0, -932($sp)
+	sw $t0, -948($sp)
 	li $t2, 2
 	lw $t1, _N
 	div $t0, $t1, $t2
-	sw $t0, -944($sp)
-	lw $t2, -944($sp)
+	sw $t0, -960($sp)
+	lw $t2, -960($sp)
 	lw $t1, _num_of_p
 	sgt $t0, $t1, $t2
-	sw $t0, -948($sp)
-	lw $t0, -948($sp)
+	sw $t0, -964($sp)
+	lw $t0, -964($sp)
 	bne $t0, $0, L33
 	b L32
 L33:
 	li $t0, 0
 	sw $t0, _flag
 	lw $t0, _flag
-	sw $t0, -952($sp)
+	sw $t0, -968($sp)
 L32:
 	lw $t0, _flag
 	bne $t0, $0, L35
 	b L34
 L35:
-	lw $t0, -956($sp)
-	sw $t0, -972($sp)
+	lw $t0, -972($sp)
+	sw $t0, -988($sp)
 	lw $t0, -4($sp)
-	sw $t0, -976($sp)
+	sw $t0, -992($sp)
 	li $t0, 2
 	sw $t0, _printf_cnt
-	subu $sp, $sp, 980
+	subu $sp, $sp, 996
 	jal _printf
-	addi $sp, $sp, 980
-	sw $v0, -960($sp)
+	addi $sp, $sp, 996
+	sw $v0, -976($sp)
 	lw $ra, ($sp)
 L34:
 	li $t2, 1
 	lw $t1, -4($sp)
 	add $t0, $t1, $t2
-	sw $t0, -968($sp)
-	lw $t0, -968($sp)
+	sw $t0, -984($sp)
+	lw $t0, -984($sp)
 	sw $t0, -4($sp)
 	lw $t0, -4($sp)
-	sw $t0, -964($sp)
+	sw $t0, -980($sp)
 	b L23
 L22:
 	jr $ra

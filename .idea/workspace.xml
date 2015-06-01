@@ -5,22 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef921a38-bb99-415c-8ed8-767f2b738347" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/Gen/New/New-InputSet/FILE.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/IR/Translator.java" afterPath="$PROJECT_DIR$/src/compiler/IR/Translator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/arraysum.out" afterPath="$PROJECT_DIR$/tests/IR/arraysum.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/arraysum.s" afterPath="$PROJECT_DIR$/tests/IR/arraysum.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.properties" afterPath="$PROJECT_DIR$/build.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/compiler/CodeGen/genTester.java" afterPath="$PROJECT_DIR$/src/compiler/CodeGen/genTester.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/hk.c" afterPath="$PROJECT_DIR$/tests/Gen/New/hk.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/hk.out" afterPath="$PROJECT_DIR$/tests/Gen/New/hk.out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/hk.s" afterPath="$PROJECT_DIR$/tests/Gen/New/hk.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/hungary.c" afterPath="$PROJECT_DIR$/tests/Gen/New/hungary.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/hungary.out" afterPath="$PROJECT_DIR$/tests/Gen/New/hungary.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/hungary.s" afterPath="$PROJECT_DIR$/tests/Gen/New/hungary.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/iterative.out" afterPath="$PROJECT_DIR$/tests/Gen/New/iterative.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/iterative.s" afterPath="$PROJECT_DIR$/tests/Gen/New/iterative.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/lct.out" afterPath="$PROJECT_DIR$/tests/Gen/New/lct.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/lct.s" afterPath="$PROJECT_DIR$/tests/Gen/New/lct.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/linenumber.out" afterPath="$PROJECT_DIR$/tests/Gen/New/linenumber.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/linenumber.s" afterPath="$PROJECT_DIR$/tests/Gen/New/linenumber.s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/spill2-5100379110-daibo.out" afterPath="$PROJECT_DIR$/tests/IR/spill2-5100379110-daibo.out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/IR/spill2-5100379110-daibo.s" afterPath="$PROJECT_DIR$/tests/IR/spill2-5100379110-daibo.s" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/splittree.out" afterPath="$PROJECT_DIR$/tests/Gen/New/splittree.out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Gen/New/splittree.s" afterPath="$PROJECT_DIR$/tests/Gen/New/splittree.s" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -58,7 +49,10 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="492" column="0" selection-start-line="492" selection-start-column="0" selection-end-line="492" selection-end-column="0" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <element signature="docComment;class#BrutalGen#0" expanded="false" />
+                <element signature="e#789#790#0" expanded="false" />
+                <element signature="e#843#844#0" expanded="false" />
                 <element signature="method#BrutalGen#0;class#BrutalGen#0" expanded="false" />
                 <element signature="e#2076#2117#0" expanded="false" />
                 <element signature="e#2674#2744#0" expanded="false" />
@@ -108,11 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SemanticCheck.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SemanticCheck.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/compiler/semantic/SemanticCheck.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="464" column="39" selection-start-line="464" selection-start-column="39" selection-end-line="464" selection-end-column="39" />
+            <state vertical-scroll-proportion="4.4599357">
+              <caret line="1018" column="41" selection-start-line="1018" selection-start-column="41" selection-end-line="1018" selection-end-column="41" />
               <folding>
                 <element signature="docComment;class#SemanticCheck#0" expanded="false" />
                 <element signature="method#SemanticCheck#0;class#SemanticCheck#0" expanded="false" />
@@ -174,7 +168,7 @@
         <entry file="file://$PROJECT_DIR$/src/compiler/CodeGen/genTester.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="100" column="30" selection-start-line="100" selection-start-column="30" selection-end-line="100" selection-end-column="30" />
+              <caret line="94" column="54" selection-start-line="94" selection-start-column="54" selection-end-line="94" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -185,9 +179,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -197,7 +189,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -207,16 +201,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Translator.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Translator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/compiler/IR/Translator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26444444">
-              <caret line="852" column="54" selection-start-line="852" selection-start-column="54" selection-end-line="852" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="727" column="4" selection-start-line="727" selection-start-column="4" selection-end-line="727" selection-end-column="4" />
               <folding>
                 <element signature="docComment;class#Translator#0" expanded="false" />
                 <element signature="method#Translator#0;class#Translator#0" expanded="false" />
@@ -252,11 +248,9 @@
                 <element signature="method#visit#19;class#Translator#0" expanded="false" />
                 <element signature="method#visit#20;class#Translator#0" expanded="false" />
                 <element signature="method#visit#21;class#Translator#0" expanded="false" />
-                <element signature="method#visit#22;class#Translator#0" expanded="false" />
-                <element signature="method#visit#23;class#Translator#0" expanded="false" />
                 <element signature="method#visit#24;class#Translator#0" expanded="false" />
-                <element signature="e#34517#34603#0" expanded="false" />
-                <element signature="e#35236#35322#0" expanded="false" />
+                <element signature="e#34747#34833#0" expanded="false" />
+                <element signature="e#35466#35552#0" expanded="false" />
                 <element signature="method#digArrayAccessBaseReturnType#0;class#Translator#0" expanded="false" />
                 <element signature="method#calArrayAccess#0;class#Translator#0" expanded="false" />
                 <element signature="method#visit#27;class#Translator#0" expanded="false" />
@@ -433,20 +427,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -473,159 +453,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PrettyPrinter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Optimize" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nodes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Root" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nodes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="compiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Nodes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Address" />
+              <option name="myItemId" value="semantic" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1111,7 +939,7 @@
       <workItem from="1433108030026" duration="2284000" />
       <workItem from="1433110835231" duration="1633000" />
       <workItem from="1433113031470" duration="3932000" />
-      <workItem from="1433119992364" duration="1620000" />
+      <workItem from="1433119992364" duration="6019000" />
     </task>
     <task id="LOCAL-00001" summary="First commit, most files finished, but not compiled yet.">
       <created>1429098593928</created>
@@ -1281,11 +1109,17 @@
       <option name="project" value="LOCAL" />
       <updated>1433118985348</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="fix a bug">
+      <created>1433121890837</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1433121890837</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="680457000" />
+    <option name="totallyTimeSpent" value="684856000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1308,10 +1142,10 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32771823" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26646248" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24349158" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32618684" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46822995" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2806354" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1375,9 +1209,9 @@
     <MESSAGE value="PHASE 4 almost done, passed all last year's tests." />
     <MESSAGE value="fix a few bugs" />
     <MESSAGE value="fix a bug, add peephole optimization" />
-    <MESSAGE value="fix a bug" />
     <MESSAGE value="fix peephole" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix peephole" />
+    <MESSAGE value="fix a bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix a bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1678,7 +1512,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="492" column="0" selection-start-line="492" selection-start-column="0" selection-end-line="492" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="docComment;class#BrutalGen#0" expanded="false" />
+            <element signature="e#789#790#0" expanded="false" />
+            <element signature="e#843#844#0" expanded="false" />
             <element signature="method#BrutalGen#0;class#BrutalGen#0" expanded="false" />
             <element signature="e#2076#2117#0" expanded="false" />
             <element signature="e#2674#2744#0" expanded="false" />
@@ -1741,10 +1578,141 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/semantic/SemanticCheck.java">
+    <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Function/Call.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1588785">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Address/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43691587">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Address/Temp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35747662">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/Optimize/PeepHole.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="464" column="39" selection-start-line="464" selection-start-column="39" selection-end-line="464" selection-end-column="39" />
+          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/PrettyPrinter/prettyPrinter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23717949">
+          <caret line="519" column="24" selection-start-line="519" selection-start-column="24" selection-end-line="519" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Expression/Assign.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/IR/Translator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="727" column="4" selection-start-line="727" selection-start-column="4" selection-end-line="727" selection-end-column="4" />
+          <folding>
+            <element signature="docComment;class#Translator#0" expanded="false" />
+            <element signature="method#Translator#0;class#Translator#0" expanded="false" />
+            <element signature="class#Pair#0;class#Translator#0" expanded="false" />
+            <element signature="method#Pair#0;class#Pair#0;class#Translator#0" expanded="false" />
+            <element signature="method#Pair#1;class#Pair#0;class#Translator#0" expanded="false" />
+            <element signature="class#StringPair#0;class#Translator#0" expanded="false" />
+            <element signature="method#StringPair#0;class#StringPair#0;class#Translator#0" expanded="false" />
+            <element signature="method#loadSTL#0;class#Translator#0" expanded="false" />
+            <element signature="method#pushFunction#0;class#Translator#0" expanded="false" />
+            <element signature="method#popFunction#0;class#Translator#0" expanded="false" />
+            <element signature="method#defineFunction#0;class#Translator#0" expanded="false" />
+            <element signature="method#checkASU#0;class#Translator#0" expanded="false" />
+            <element signature="method#dealWithCondition#0;class#Translator#0" expanded="false" />
+            <element signature="method#visit#0;class#Translator#0" expanded="false" />
+            <element signature="method#visit#1;class#Translator#0" expanded="false" />
+            <element signature="method#arrayInitAssign#0;class#Translator#0" expanded="false" />
+            <element signature="method#initAssign#0;class#Translator#0" expanded="false" />
+            <element signature="method#visit#2;class#Translator#0" expanded="false" />
+            <element signature="method#visit#7;class#Translator#0" expanded="false" />
+            <element signature="method#visit#15;class#Translator#0" expanded="false" />
+            <element signature="docComment;method#visit#17;class#Translator#0" expanded="false" />
+            <element signature="method#visit#17;class#Translator#0" expanded="false" />
+            <element signature="method#isRelationOp#0;class#Translator#0" expanded="false" />
+            <element signature="method#isAssignOp#0;class#Translator#0" expanded="false" />
+            <element signature="method#isArithOp#0;class#Translator#0" expanded="false" />
+            <element signature="method#visit#18;class#Translator#0" expanded="false" />
+            <element signature="method#isBoolExpr#0;class#Translator#0" expanded="false" />
+            <element signature="method#andOrExpr#0;class#Translator#0" expanded="false" />
+            <element signature="method#relationExpr#0;class#Translator#0" expanded="false" />
+            <element signature="method#arithmeticExpr#0;class#Translator#0" expanded="false" />
+            <element signature="method#commaExpr#0;class#Translator#0" expanded="false" />
+            <element signature="method#visit#19;class#Translator#0" expanded="false" />
+            <element signature="method#visit#20;class#Translator#0" expanded="false" />
+            <element signature="method#visit#21;class#Translator#0" expanded="false" />
+            <element signature="method#visit#24;class#Translator#0" expanded="false" />
+            <element signature="e#34747#34833#0" expanded="false" />
+            <element signature="e#35466#35552#0" expanded="false" />
+            <element signature="method#digArrayAccessBaseReturnType#0;class#Translator#0" expanded="false" />
+            <element signature="method#calArrayAccess#0;class#Translator#0" expanded="false" />
+            <element signature="method#visit#27;class#Translator#0" expanded="false" />
+            <element signature="method#pointerArrayAccess#0;class#Translator#0" expanded="false" />
+            <element signature="method#SUAssign#0;class#Translator#0" expanded="false" />
+            <element signature="method#visit#28;class#Translator#0" expanded="false" />
+            <element signature="method#visit#29;class#Translator#0" expanded="false" />
+            <element signature="method#visit#32;class#Translator#0" expanded="false" />
+            <element signature="method#visit#33;class#Translator#0" expanded="false" />
+            <element signature="method#visit#34;class#Translator#0" expanded="false" />
+            <element signature="method#visit#35;class#Translator#0" expanded="false" />
+            <element signature="method#visit#38;class#Translator#0" expanded="false" />
+            <element signature="method#visit#39;class#Translator#0" expanded="false" />
+            <element signature="method#visit#40;class#Translator#0" expanded="false" />
+            <element signature="method#visit#41;class#Translator#0" expanded="false" />
+            <element signature="method#newStruct#0;class#Translator#0" expanded="false" />
+            <element signature="method#print#0;class#Translator#0" expanded="false" />
+            <element signature="method#merger#0;class#Translator#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/CodeGen/genTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="94" column="54" selection-start-line="94" selection-start-column="54" selection-end-line="94" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/compiler/semantic/SemanticCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.4599357">
+          <caret line="1018" column="41" selection-start-line="1018" selection-start-column="41" selection-end-line="1018" selection-end-column="41" />
           <folding>
             <element signature="docComment;class#SemanticCheck#0" expanded="false" />
             <element signature="method#SemanticCheck#0;class#SemanticCheck#0" expanded="false" />
@@ -1797,137 +1765,6 @@
             <element signature="method#visit#41;class#SemanticCheck#0" expanded="false" />
             <element signature="e#44436#44466#0" expanded="false" />
             <element signature="e#44584#44611#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Function/Call.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1588785">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Address/Address.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43691587">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Address/Temp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35747662">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/Optimize/PeepHole.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/PrettyPrinter/prettyPrinter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23717949">
-          <caret line="519" column="24" selection-start-line="519" selection-start-column="24" selection-end-line="519" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/IR/Nodes/Expression/Assign.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/CodeGen/genTester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="100" column="30" selection-start-line="100" selection-start-column="30" selection-end-line="100" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/compiler/IR/Translator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26444444">
-          <caret line="852" column="54" selection-start-line="852" selection-start-column="54" selection-end-line="852" selection-end-column="54" />
-          <folding>
-            <element signature="docComment;class#Translator#0" expanded="false" />
-            <element signature="method#Translator#0;class#Translator#0" expanded="false" />
-            <element signature="class#Pair#0;class#Translator#0" expanded="false" />
-            <element signature="method#Pair#0;class#Pair#0;class#Translator#0" expanded="false" />
-            <element signature="method#Pair#1;class#Pair#0;class#Translator#0" expanded="false" />
-            <element signature="class#StringPair#0;class#Translator#0" expanded="false" />
-            <element signature="method#StringPair#0;class#StringPair#0;class#Translator#0" expanded="false" />
-            <element signature="method#loadSTL#0;class#Translator#0" expanded="false" />
-            <element signature="method#pushFunction#0;class#Translator#0" expanded="false" />
-            <element signature="method#popFunction#0;class#Translator#0" expanded="false" />
-            <element signature="method#defineFunction#0;class#Translator#0" expanded="false" />
-            <element signature="method#checkASU#0;class#Translator#0" expanded="false" />
-            <element signature="method#dealWithCondition#0;class#Translator#0" expanded="false" />
-            <element signature="method#visit#0;class#Translator#0" expanded="false" />
-            <element signature="method#visit#1;class#Translator#0" expanded="false" />
-            <element signature="method#arrayInitAssign#0;class#Translator#0" expanded="false" />
-            <element signature="method#initAssign#0;class#Translator#0" expanded="false" />
-            <element signature="method#visit#2;class#Translator#0" expanded="false" />
-            <element signature="method#visit#7;class#Translator#0" expanded="false" />
-            <element signature="method#visit#15;class#Translator#0" expanded="false" />
-            <element signature="docComment;method#visit#17;class#Translator#0" expanded="false" />
-            <element signature="method#visit#17;class#Translator#0" expanded="false" />
-            <element signature="method#isRelationOp#0;class#Translator#0" expanded="false" />
-            <element signature="method#isAssignOp#0;class#Translator#0" expanded="false" />
-            <element signature="method#isArithOp#0;class#Translator#0" expanded="false" />
-            <element signature="method#visit#18;class#Translator#0" expanded="false" />
-            <element signature="method#isBoolExpr#0;class#Translator#0" expanded="false" />
-            <element signature="method#andOrExpr#0;class#Translator#0" expanded="false" />
-            <element signature="method#relationExpr#0;class#Translator#0" expanded="false" />
-            <element signature="method#arithmeticExpr#0;class#Translator#0" expanded="false" />
-            <element signature="method#commaExpr#0;class#Translator#0" expanded="false" />
-            <element signature="method#visit#19;class#Translator#0" expanded="false" />
-            <element signature="method#visit#20;class#Translator#0" expanded="false" />
-            <element signature="method#visit#21;class#Translator#0" expanded="false" />
-            <element signature="method#visit#22;class#Translator#0" expanded="false" />
-            <element signature="method#visit#23;class#Translator#0" expanded="false" />
-            <element signature="method#visit#24;class#Translator#0" expanded="false" />
-            <element signature="e#34517#34603#0" expanded="false" />
-            <element signature="e#35236#35322#0" expanded="false" />
-            <element signature="method#digArrayAccessBaseReturnType#0;class#Translator#0" expanded="false" />
-            <element signature="method#calArrayAccess#0;class#Translator#0" expanded="false" />
-            <element signature="method#visit#27;class#Translator#0" expanded="false" />
-            <element signature="method#pointerArrayAccess#0;class#Translator#0" expanded="false" />
-            <element signature="method#SUAssign#0;class#Translator#0" expanded="false" />
-            <element signature="method#visit#28;class#Translator#0" expanded="false" />
-            <element signature="method#visit#29;class#Translator#0" expanded="false" />
-            <element signature="method#visit#32;class#Translator#0" expanded="false" />
-            <element signature="method#visit#33;class#Translator#0" expanded="false" />
-            <element signature="method#visit#34;class#Translator#0" expanded="false" />
-            <element signature="method#visit#35;class#Translator#0" expanded="false" />
-            <element signature="method#visit#38;class#Translator#0" expanded="false" />
-            <element signature="method#visit#39;class#Translator#0" expanded="false" />
-            <element signature="method#visit#40;class#Translator#0" expanded="false" />
-            <element signature="method#visit#41;class#Translator#0" expanded="false" />
-            <element signature="method#newStruct#0;class#Translator#0" expanded="false" />
-            <element signature="method#print#0;class#Translator#0" expanded="false" />
-            <element signature="method#merger#0;class#Translator#0" expanded="false" />
           </folding>
         </state>
       </provider>

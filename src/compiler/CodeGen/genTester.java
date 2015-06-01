@@ -107,7 +107,7 @@ public class genTester {
 //        names.add("extkmp");
 //        names.add("fishtank");
         names.add("hk");
-        names.add("hungary");
+//        names.add("hungary");
         names.add("iterative");
 //        names.add("joseph");
 //        names.add("kmp");

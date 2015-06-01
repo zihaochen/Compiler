@@ -38,15 +38,16 @@ int search() {
 	for(; head <= tail; ++head) {
 		u = queue[head];
 		for (k = first[u]; k; k = next[k]){
-		printf("k = %d, next[k] = %d\n", k, next[k]);
 			v = edge[k];
 			if (dy[v])
 				continue;
+		printf("k = %d, next[k] = %d\n", k, next[k]);
 			dy[v] = dx[u] + 1;
 			if(!match[v])
 					flag = 1;
 				else 
 					dx[queue[++tail] = match[v]] = dy[v] + 1;
+//		printf("k = %d, next[k] = %d\n", k, next[k]);
 		}
 	}
 	return flag;

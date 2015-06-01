@@ -678,6 +678,9 @@ public class Translator implements Visitor {
             int offset = ((RecordType)recordAccess.body.returnType).members.getOffset(recordAccess.attribute.num);
             int size = ((RecordType) recordAccess.body.returnType).members.getType(recordAccess.attribute.num).size;
             curFunction.body.add(new ArrayWrite(recordAccess.body.address, offset, source.address, size));
+            recordAccess.address = new Temp();
+            curFunction.vars.add(new Variable(recordAccess.address, 4));
+            curFunction.body.add(new ArrayRead(binaryExpr.address, recordAccess.body.address, offset, size));
          }
          if (binaryExpr.left instanceof ArrayAccess) {
             ArrayAccess arrayAccess = (ArrayAccess) binaryExpr.left;
